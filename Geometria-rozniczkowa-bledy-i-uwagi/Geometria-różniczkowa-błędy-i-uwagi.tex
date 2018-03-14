@@ -1,1 +1,344 @@
-Coś
+% Autor: Kamil Ziemian
+
+% --------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% --------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern} % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ----------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ----------------------------
+\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
+\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
+\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+% wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ----------------------------
+% MARGINS
+% ----------------------------
+\setmarginsrb
+{ 0.7in} % left margin
+{ 0.6in} % top margin
+{ 0.7in} % right margin
+{ 0.8in} % bottom margin
+{  20pt} % head height
+{0.25in} % head sep
+{   9pt} % foot height
+{ 0.3in} % foot sep
+
+
+
+% ------------------------------
+% Często przydatne pakiety
+% ------------------------------
+\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+% ------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ------------------------------
+\let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
+% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
+% \usepackage{siunitx} % Do prostszego pisania jednostek fizycznych
+\usepackage{upgreek} % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+\usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
+\usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
+% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% nie wiem.
+
+
+
+% ##########
+% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
+\newtheorem{twr}{Twierdzenie} % Komenda wprowadzająca otoczenie
+% ,,twr'' do pisania twierdzeń matematycznych
+\newtheorem{defin}{Definicja} % Analogicznie jak powyżej
+\newtheorem{wni}{Wniosek}
+
+
+
+% ----------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ----------------------------
+\usepackage{latexshortcuts}
+\usepackage{mathshortcuts}
+
+
+
+% --------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% --------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ----------------------------
+% Ustawienia różnych parametrów tekstu
+% ----------------------------
+\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
+
+
+
+% ----------------------------
+% Pakiet "hyperref"
+% Polecano by umieszczać go na końcu preambuły.
+% ----------------------------
+\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################## Tytuł całego tekstu
+\Main{Geometria różniczkowa --~błędy i~uwagi}
+% ########################################
+
+
+
+
+,,P\ldots'' oznacza, że w wydaniu ,,\ldots'' błąd został poprawiony.\\
+
+
+
+
+% ##################
+\Work{ % Tytuł i autor dzieła
+  William M. Boothby \\
+  ,,An~Introduction to~Differentiable Manifolds and~Riemannian
+  Geomertry'', \cite{BooyhbyIntroductionToDifferentiableManifolds86} }
+
+
+\CenterTB{Uwagi}
+
+\start \StrWd{233}{3} Zamiast $dy/dx$ powinno być $d g( x )/dx$.
+To~mogłoby ograniczyć nieporozumienia związane z~tym wzorem.
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu &  &  \\ \hline
+    233 &  6 & & $\{\rho, \theta, \vp)$ & $\{ ( \rho, \theta, \vp )$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ##################
+\Work{ % Tytuł i autor dzieła
+  J. Gancarzewicz, B. Opozda \\
+  ,,Wstęp do geometrii różniczkowej'', \cite{GO03} }
+
+
+\CenterTB{Uwagi}
+
+\start \Str{17} Nazwa \emph{płaszczyzna styczna} pochodzi stąd,
+że~zawiera ona wektor styczny do krzywej $\mb{t}$, ponadto jeśli dana
+krzywa bez punktów wyprostowania jest płaska, to zawiera~się właśnie
+w~tej płaszczyźnie. \emph{Płaszczyzna prostopadła} jest natomiast
+prostopadła do~wektora stycznego do krzywej. Nie potrafię jednak
+wyjaśnić skąd~się wzięła nazwa \emph{płaszczyzna prostująca}.
+
+\vspace{\spaceFour}
+
+
+\start \Str{31} \tb{Twierdzenie 3.7.} W~dowodzie faktu, że~z~równości
+typu $\mb{t} \cdot \mb{t}' = 0$ wynik, iż~moduł $\mb{t}$ jest stały,
+oprócz wzorów (3.5) przyjmowano chyba milcząco, że~dla każdej wartości
+parametru $s$ wektory $\mb{t}$, $\mb{n}$ i~$\mb{b}$ są ortogonalne, co
+jednak nie jest udowodnione. Z~dowodem relacji ortogonalności sprawa
+wygląda chyba podobnie. \Dok
+
+\vspace{\spaceFour}
+
+
+\start \Str{35} W~żadnym z~podanych tu przykładów, nie udowodniono,
+że~budowane mapy, jako odwzorowania,~są homomorfizmami między
+odpowiednimi przestrzeniami topologicznymi. Pokazanie tego nie~może
+być jednak trudne. \Dok
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu &  &  \\ \hline
+    19 & 16 & & $\gamma'''( s_{ 0 } )$ & $\gamma^{ (4) }( s_{ 0 } )$ \\
+    31 &  3 & & $x_{ o }$ & $x_{ 0 }$ \\
+    37 & & 7 & $\left( \frac{ 4 r u_{ 1 } }{ \norm{ u }^{ 2 } }, \ldots,
+               \frac{ 4 r u_{ n } }{ \norm{ u }^{ 2 } } \right)$
+           & $\left( \frac{ 4 r^{ 2 } u_{ 1 } }{ \norm{ u }^{ 2 } },
+             \ldots, \frac{ 4 r^{ 2 } u_{ n } }{ \norm{ u }^{ 2 } }
+             \right)$ \\
+    41 & & 14 & oraz$( 1, \bar{ z } )$ & oraz $( 1, \bar{ z } )$ \\
+    44 & 17 & & $( ( \varphi( x ) )$ & $( \varphi( x ) )$ \\
+    49 & &  4 & $\frac{ \partial ( \varphi^{ i } \circ \varphi ) }
+                { u^{ j } }$
+           & $\pd{}{ ( \varphi^{ i } \circ \varphi ) }{ u^{ j } }$ \\
+           % & & & & \\
+           % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\noi
+\StrWd{40}{3} \\
+\Jest
+$( \fr{ v_{ 1 } }{ u_{ i } }, \ld, \fr{ v_{ i - 1 } }{ u_{ i } },
+\fr{ v_{ i + 1 } }{ u_{ i } }, \ld, \fr{ v_{ n + 1 } }{ u_{ i } } )$ \\
+\Pow $( \fr{ v_{ 1 } }{ v_{ i } }, \ld, \fr{ v_{ i - 1 } }{ v_{ i } },
+\fr{ v_{ i + 1 } }{ v_{ i } }, \ld, \fr{ v_{ n + 1 } }{ v_{ i } } )$ \\
+
+
+
+
+
+\Work{
+  Wojciech Wojtyński \\
+  ,,Grupy i algebry Liego'',\\ wydanie \romannumeral1, GL.}
+
+
+Uwagi:\\
+\begin{itemize}
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\item
+\end{itemize}
+
+Powinno być:
+\begin{itemize}
+\item[--] Str. 8. \ldots$( m, n )$\ldots
+\item[--] Str. 8. \ldots$m \in M$ jest $f( m ) \in N$\ldots
+\item[--] Str. 8. \ldots$M \ni m \rightarrow f( m ) \in N$\ldots
+\item[--] Str. 9. \ldots$x_{ 1 }, \, x_{ 2 } \in X$\ldots
+\item[--] Str. 15.
+  $$\omega( \lambda x_{ 1 } + \mu x_{ 2 }, y ) = \lambda \, \omega(
+  x_{ 1 }, y ) + \mu \, \omega( x_{ 2 }, y )$$
+\item[--] Str. 20. \ldots tj. $F$ jest formą dwuliniową na $X$ (jako
+  przestrzeni nad $\mathbb{R}$)\ldots
+\item[--] Str. 25. \ldots$i_{ x_{ 0 } }( t ) = x_{ 0 }$\ldots
+\item[--] Str. 30.
+  $$\mathfrak{so}_{ + }( n, \mathbb{C} ) = \mathfrak{sl}( n,
+  \mathbb{C} ) \cap \mathfrak{o}_{ + }( n, \mathbb{C} ) \textrm{.}$$
+\item[--] Str.
+\item[--] Str.
+\item[--] Str. 99. \ldots także $[ a, b ] \in M$\ldots
+\item[--] Str. 99. \ldots $[ a, b ] \in M$ jest równoważne warunkowi
+  $[ b, a ] \in M$\ldots
+\item[--] Str. 100. \ldots$N \leq L_{ 2 }$, \emph{to}
+  $f^{ -1 }( N ) \leq L_{ 1 }$\ldots
+\item[--] Str. 100. \ldots$a_{ i } \in f^{ -1 }( b_{ i } )$\ldots
+\end{itemize}
+
+
+
+\Work{
+  B. Gdowski \\
+  ,,Elementy geometrii różniczkowej z~zadaniami'', \cite{Gdo99} }
+
+%
+% Uwagi:
+% \begin{itemize}
+% \item
+%% \item
+%% \item
+%% \item
+%% \item
+%% \item
+%% \item
+% \end{itemize}
+
+Błędy:\\
+\begin{tabular}{|c|c|c|c|c|}
+  \hline
+  & \multicolumn{2}{c|}{} & & \\
+  Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+  & Od góry & Od dołu &  &  \\ \hline
+  6 & 17 & & $X \in E_{ 3 }$ & $X \subset E_{ 3 }$ \\
+  % & & & & \\
+  % & & & & \\
+  \hline
+\end{tabular}
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+% Bibliografia
+\bibliographystyle{alpha} \bibliography{Bibliography}{}
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
