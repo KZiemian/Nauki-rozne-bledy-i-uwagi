@@ -1,0 +1,2528 @@
+% Autor: Kamil Ziemian
+
+% --------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% --------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern} % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ----------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ----------------------------
+\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
+\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
+\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+% wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ----------------------------
+% MARGINS
+% ----------------------------
+\setmarginsrb
+{ 0.7in} % left margin
+{ 0.6in} % top margin
+{ 0.7in} % right margin
+{ 0.8in} % bottom margin
+{  20pt} % head height
+{0.25in} % head sep
+{   9pt} % foot height
+{ 0.3in} % foot sep
+
+
+
+% ------------------------------
+% Często używane pakiety
+% ------------------------------
+\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+% ------------------------------
+% Często używane pakiety
+% ------------------------------
+\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+% ----------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ----------------------------
+\usepackage{latexshortcuts}
+
+
+
+% --------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% --------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ----------------------------
+% Ustawienia różnych parametrów tekstu
+% ----------------------------
+\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
+
+
+
+
+
+
+% Koniec komend
+% ############################
+
+
+
+
+
+% ----------------------------
+% Pakiet "hyperref"
+% Polecano by umieszczać go na końcu preambuły.
+% ----------------------------
+\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+% ######################################
+\Main{Historia, błędy i~uwagi} % Tytuł całego tekstu
+
+\vspace{\spaceTwo} \vspace{\spaceThree}
+% ######################################
+
+
+
+% ############################
+\Field{Historia świętej wiary} % Nazwa dziedziny
+
+\vspace{\spaceTwo} % \vspace{\spaceThree}
+% ############################
+
+
+
+% ##################
+\Work{ % Autor i tytuł dzieła
+  Richard Butterwick \\
+  ,,Polska Rewolucja a~Kościół Katolicki 1788--1792'',
+  \cite{ButterwickPolskaRewolucjaAKosciolKatolicki12} }
+
+
+
+\CenterTB{Uwagi}
+
+\start \Str{28} Euzebiusz \\
+
+
+% \CenterTB{Błędy}
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu &  &  \\ \hline
+%     & & & & \\
+%     & & & & \\
+%     & & & & \\
+%     & & & & \\
+%     %     \hline
+%   \end{tabular}
+
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ##################
+\newpage
+\Work{ % Autor i tytuł dzieła
+  Warren H.~Carroll \\
+  ,,Historia Chrześcijaństwa. Tom~I: Narodziny Chrześcijaństwa'',
+  \cite{CarrollHistoriaChrzecijanstwaTomI09} }
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    561 & & 19 & \emph{Bible, a~Historical}
+           & \emph{Bible: A~Historical} \\
+    562 & 11 & & \emph{Desert, a~History} & \emph{Desert: A~History} \\
+    562 & 15 & & \emph{Canaan: the~Ras} & \emph{Canaan: The~Ras} \\
+    562 & & 14 & \emph{Judaea} & \emph{Judea} \\
+    562 & & 13 & \emph{Israel, from} & \emph{Israel: From} \\
+    562 & &  4 & \emph{Covenant, a~Study} & \emph{Covenant: A~Study} \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ##################
+\Work{ % Autor i tytuł dzieła
+  Warren H.~Carroll \\
+  ,,Historia Chrześcijaństwa. Tom~II: Budowanie Chrześcijaństwa'',
+  \cite{CarrollHistoriaChrzecijanstwaTomII10} }
+
+
+\CenterTB{Uwagi}
+
+\start Tłumaczenie podtytułu tego tomu ,,Budowanie Chrześcijaństwa''
+jest wyjątkowo niezręczne. Należy zwrócić uwagę, że~Carroll nadał
+swojemu cyklowi tytuł ,,History~of Christendom'' nie ,,History~of
+Christianity''. ,,Chrisitianity'' tłumaczy się prosto jako
+,,chrześcijaństwo'', ,,Chistendom'' nie ma chyba odpowiednika w~języku
+polski, w~tym przypadku zaś można jego sens chyba wyjaśnić, jako
+wspólnotę ludzi, której sposób życia definiuje chrześcijaństwo.
+W~szczególności ,,Christendom'' oznacza również sens polityczny, jako
+zbioru państw, które~są połączone wspólną wiarą chrześcijańską i~tym
+samym powinny działać jak różne członki jednego ciała.
+
+Jakkolwiek więc tłumaczenie tytułu całego cyklu jako ,,Historia
+Chrześcijaństwa'' ma~sens, to tego podtytułu jako ,,Budowanie
+Chrześcijaństwa'' już nie. Sugeruje bowiem, że~religia chrześcijańska
+była budowana, podczas gdy ona została już wzniesiona przez Chrystusa,
+zaś budowane było właśnie ,,Christendom'', wspólnota ludzka żyjąca jej
+prawami.
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    585 & &  7 & London. & London \\
+    586 &  5 & & Struggle & \emph{Struggle} \\
+    586 & 15 & & \emph{Chalcedon} & \emph{Chalcedon} \\
+    586 & & 15 & \emph{1} & \emph{the~First} \\
+    586 & & 10 & Danielou, Jean & Danielou Jean \\
+    586 & & 10 & Henri Marrou & Marrou Henri \\
+    587 & 13 & & \emph{A.D.} & \emph{A.D.}, \\
+    587 & & 17 & \emph{Jerome,} & \emph{Jerome:} \\
+    587 & &  8 & London, & London \\
+    587 & &  2 & \emph{Moesia, a~History} & \emph{Moesia: History} \\
+    588 &  2 & & \emph{Arthur, a~History} & \emph{Arthur: A~History} \\
+    588 &  4 & & \emph{Invasion; the Making}
+           & \emph{Invasion: The making} \\
+    588 & 15 & & \emph{God; the Life} & \emph{God: The Life} \\
+    588 & & 18 & \emph{Britain s} & \emph{Britain's} \\
+    588 & & 17 & \emph{Chalcedon, a~Historical}
+           & \emph{Chalcedon: A~Historical} \\
+    590 & 14 & & \emph{Constantinople; Ecclesiastical}
+           & \emph{Constantinople: Ecclesiastical} \\
+    591 & & 12 & London, & London \\
+    592 & 16 & & \emph{Lyons, Churchman} & \emph{Lyons: Churchman} \\
+    592 & &  9 & \emph{Great, the~King} & \emph{Great: The~King} \\
+    592 & &  8 & \emph{Canterbury; a~Study} & \emph{Canterbury: A~Study} \\
+    592 & &  3 & \emph{Slavs; Saints} & \emph{Slavs: Saints} \\
+    593 &  7 & & \emph{Empire; the~Arabs} & \emph{Empire: The~Arabs} \\
+    593 & 12 & & \emph{Byzantium: the~Imperial}
+           & \emph{Byzantium: The~Imperial} \\
+    593 & 14 & & \emph{Kings; Their} & \emph{Kings: Their} \\
+    593 & 16 & & \emph{England; a~History} & \emph{England: A~History} \\
+    593 & 20 & & \emph{Great: the~Truth} & \emph{Great: The~Truth} \\
+    593 & & 14 & \emph{State; the~Period} & \emph{State: The~Period} \\
+    593 & & 12 & \emph{Dragon; Alfred} & \emph{Dragon: Alfred} \\
+    593 & &  5 & \emph{St.~Peter; the~Birth}
+           & \emph{St.~Peter: The~Birth} \\
+    594 & 12 & & \emph{Dublin: the~History} & \emph{Dublin: The~History} \\
+    594 & &  9 & \emph{Desiderius; Montecassino}
+           & \emph{Desiderius: Montecassino} \\
+    594 & &  1 & \emph{Empire; the~Arabs} & \emph{Empire: The~Arabs} \\
+    595 &  1 & & \emph{Rufus; an~Investigation}
+           & \emph{Rufus: An~Investigation} \\
+    595 &  6 & & \emph{Byzantium: the~Imperial}
+           & \emph{Byzantium: The~Imperial} \\
+    595 &  8 & & \emph{England; a~History} & \emph{England: A~History} \\
+    595 & 11 & & \emph{Kings; Their} & \emph{Kings: Their} \\
+    \hline
+  \end{tabular}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu &  &  \\ \hline
+    595 & 16 & & \emph{State: the~Period} & \emph{State: The~Period} \\
+    595 & 19 & & \emph{Tancred: a~Study} & \emph{Tancred: A~Study} \\
+    595 & & 10 & \emph{Saint Peter; the~Reception}
+           & \emph{Saint Peter: The~Reception} \\
+    596 &  6 & & \emph{440} & 440 \\
+    % Popraw dalsze błędy w indeksie
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+\noi
+\StrWd{3}{4} \\
+\Jest www. WydawnictwoWektory.pl \\
+\Pow  www.WydawnictwoWektory.pl \\
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ##################
+\Work{ % Autor i tytuł dzieła
+  Warren H.~Carroll \\
+  ,,Historia Chrześcijaństwa. Tom~IV: Podział Chrześcijaństwa'',
+  \cite{CarrollHistoriaChrzecijanstwaTomIV11} }
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    817 & 12 & & Hilaire. & Hilaire, \\
+    817 & &  7 & Henrich. & Henrich, \\
+    817 & &  2 & Anthony. & Anthony, \\
+    818 & &  4 & E.H. & E.H., \\
+    818 & &  1 & Philippe. & Philippe, \\
+    819 & &  9 & 1913 & 1913. \\
+    820 & &  1 & 1992.. & 1992. \\
+    823 &  2 & & \emph{1621--9} & \emph{1621--1629} \\
+    823 &  6 & & \emph{1520--21} & \emph{1520--1521} \\
+    823 & 17 & & (red.). & (red.), \\
+    825 &  5 & & Charles. & Charles, \\
+    825 & 11 & & John., & John, \\
+    825 & & 15 & \emph{World; Our} & \emph{World: Our} \\
+    825 & & 14 & \emph{the~Sea; the~Treasure} & \emph{the~Sea:
+                                                The~Treasure} \\
+    825 & &  5 & Carlos. & Carlos, \\
+    825 & &  2 & Parkman, Francis. & Parkman Francis, \\
+    825 & &  1 & Francis. & Francis, \\
+    826 &  7 & & \emph{Letters} & \emph{Times} \\
+    826 & 12 & & St.~Louis. & St.~Louis \\
+    826 & &  8 & \emph{leyasu} & \emph{Ieyasu} \\
+    826 & &  4 & R.S. & R.S., \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ##################
+\Work{ % Autor i tytuł dzieła
+  Warren H.~Carroll, Anne W. Carroll \\
+  ,,Historia Chrześcijaństwa. Tom~VI: Kryzys Chrześcijaństwa'',
+  \cite{CarrollHistoriaChrzecijanstwaTomVI14} }
+
+
+\CenterTB{Uwagi}
+
+\start \Str{12} Wcięcia wszystkich akapitów poza pierwszy~są zbyt
+duże.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{31}{4--2} Zdanie ,,Jestem zobowiązany Jamesowi
+H.~Billingtonowi, \emph{Fire In the~Minds~of Man}, wielkiemu
+historykowi myśli rewolucyjnej'' po polsku brzmi źle i~jest trochę bez
+sensu. Nie wiem jednak jak je~poprawić.
+
+\vspace{\spaceFour}
+
+
+\start \Str{33} Jest dziwne, że~Lamennais jest tu nazwany ,,wielkim,
+choć czasami błądzącym, francuskim duchownym'', skoro sama ta książka
+podaje na~43 stronie, że~odrzuci on najpierw wiarę katolicką, potem
+zaś chrześcijaństwo. Możliwe, że~ta nielogiczność jest wyniki
+pośmiertnej edycji i~uzupełniania tego dzieła oraz pracy tłumacza.
+
+\vspace{\spaceFour}
+
+
+\start \Str{54} Pisze tu, że~bitwa pod Nowym Orleanem była decydującym
+momentem w~Wojnie~1812 roku, powołując~się na książkę Paula Johnsona
+\emph{Birth~of the~Modern}. Jednak w~tej pozycji Johnson przedstawia
+zupełnie inną wersję wydarzeń. Bitwa ta rozegrała~się już po zawarciu
+pokoju w~Londynie \red{Sprawdź miasto}, ale~przed tym jak statek
+z~informacją o~tym dotarła do~USA, jej przebieg nie doprowadził jednak
+do~kontynuacji działań wojennych. Tym samym, konkluduje Johnson, nie
+wpłynęła na zawarcie pokój, ale~bardzo na~jego recepcję. Amerykanie
+mogli~się bowiem czuć zwycięzcami wojny jako, że~wygrali ostatnią jej
+bitwę.
+
+\vspace{\spaceFour}
+
+
+\start \Str{63} Możliwe, że~informacje podane na tej i~na następnych
+stronach dotyczące Ameryki Łacińskiej są poprawne, jednak napisane są
+w~sposób pełen luk i~niejasności. Na~przykład na dole tej strony jest
+podane, że~Martin skapitulował przed Monteverdim i~wyjechał
+z~Wenezueli, zaraz potem zaś~został zdradzony, aresztowany i~wysłany
+przez Bolivara do~Hiszpanii w~zamian za paszport, który umożliwi mu
+przyjazd do~Starego Kraju. Wydaje~się mało prawdopodobne, by~Bolivar
+mógł aresztować Martina, gdyby ten opuścił już Wenezuelę.
+
+Poza tym, nie ma żadnego jasnego stwierdzenia, że~Bolivar wykorzystał
+paszport i~udał~się do~Hiszpanii. Zaraz po~informacji, że~zdobył ten
+dokument przenosimy~się do Trujillo dnia 15~czerwca 1813, co może
+oznaczać miasto w~Hiszpania, ale~też jedno z~wielu o~takiej nazwie
+w~Ameryce Południowej. Pierwszym pewnym miejsce w~którym go potem
+widzimy, jest wenezuelska Barcelona.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{67}{8} Po~tej linii powinien nastąpić odstęp między
+przypisami.
+
+\vspace{\spaceFour}
+
+
+\start \Str{76} Następcą zmarłego w~1820~roku Jerzego~III
+Hanowerskiego był jego najstarszy syn Jerzy~IV Hanowerski panujący
+w~latach 1820--1830. Dopiero po~nim panował w~latach 1830--1837
+panował Wilhelm~IV, który był młodszym synem Jerzego~III, a~nie jego
+dalekim krewnym. Z~tego tej karygodnej pomyłki wszelkie dalsze
+odniesienia do~działań tego monarchy mogą być błędnie przypisanymi mu
+aktami Jerzego~IV, bądź źle umieszczone w~czasie.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{83}{20--17} Zdanie ,,Tak samo było w~przypadku Lenina,
+kolejnego wielkiego przywódcy rewolucji, który wychował~się w~pobożnej
+chrześcijańskiej rodzinie, a~fakt, że~wedle jego własnego świadectwa,
+utracił wiarę w~wieku szesnastu lat, nie miał na~to żadnego wpływu.''
+źle brzmi i~bardzo trudno zrozumieć myśl jaką w~tym kontekście miało
+przekazywać.
+
+\vspace{\spaceFour}
+
+
+\start \Str{110} Na~tej stronie jest podane, że~gdy~w~1914 roku
+zamordowano arcyksięcia Franciszka Ferdynanda i~jego żonę Zofię,
+Franciszkowi Józefowi wyrwał~się raz jedyny okrzyk ,,Nie oszczędzono
+mi niczego!'', podczas gdy na~stronie~115 jest napisane, iż~wykrzyknął
+on ,,Nie oszczędzono mi niczego na~tej ziemni'' w~momencie,
+gdy~dowiedział~się o~zamordowaniu swojej żony Elżbiety. Te~dwa
+fragmenty zdają~się sobie przeczyć.
+
+\vspace{\spaceFour}
+
+
+\start \Str{125} W~drugim paragrafie na~tej stronie jest trochę
+zamieszani. Na~początku jest mowa o~zebraniu 87 osób szwajcarskim
+Vevey. Na~samym jego końcu jest mowa o~głosowaniu w~kortezach i~ilości
+głosów jaka tam padła, co~nie ma chyba nic wspólnego z~tym zebraniem
+i~ilością osób która na nim była, nie~pamiętam zaś aby w~tej książce
+była podana ilość osób zasiadających w~kortezach.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{126}{8} Nie wiem czemu w~tej linii umieszczono słowa
+\emph{Dios! Patria! Fueros! Rey!}
+
+\vspace{\spaceFour}
+
+
+\start \Str{135} Fragment utworu poety Grillparzera o~marszałku
+Radetzkim jest tu cytowany z~innego źródła niż na~następnej stronie.
+Nie jest to żaden błąd, jedynie trochę to dziwne.
+
+\vspace{\spaceFour}
+
+
+\start \Str{145} Dwa ostatnie paragrafy nie~mają wcięcia w~tekście.
+
+\vspace{\spaceFour}
+
+
+\start \Str{147} Stwierdzenie, że~to święty Piotr ustanowił papiestwo
+i~, ten błąd jest szczególnie karygodny, Kościół jest sprzeczne
+z~wiarą katolicką. Zapewne jest to herezja, lecz nie jestem na tyle
+kompetentny by~stwierdzić to na 100\%. Jeśli jest to herezja, to
+wątpię by obarczała sumienie Carrolla, który zapewne po prostu
+popełnił głupi błąd pisząc te słowa.
+
+\vspace{\spaceFour}
+
+
+\start \Str{151} Przynajmniej w~mojej opinii na~tej stronie panuje
+pewne zamieszanie. Nie potrafię na~przykład z~całą pewnością
+stwierdzić, które z~wydarzeń opisanych w~ostatnim paragrafie
+odnoszą~się do~pierwszego synodu, a~które do drugiego.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{165}{14--12} Sens zdania ,,Wielu opuszczało ojczyznę,
+wypływając do~USA z~niewielkich portów, a~ich nazwiska przetrwały
+tylko w~lokalnej tradycji.'' jest następujący. Pamięć o~tym, kto
+wówczas wypłynął do~Stanów Zjednoczonych zachowała~się w~lokalnej
+tradycji ustnej, ale~nie w~dokumentach z~tamtej epoki. W~tym sensie
+ich nazwiska nie przetrwały w~źródłach, nie należy jednak przez to
+rozumieć, że~ich nazwiska zniknęły z~użycia, co taka forma tego zdania
+może sugerować.
+
+\vspace{\spaceFour}
+
+
+\start \Str{173} Mam problem ze zrozumieniem opisanych tu powodów
+wybuchu wojny francusko\dywiz pruskiej. Dlaczego niby informacja
+o~tym, że~Niemcy obrażają Francuzów wysłana do~króla Prus Wilhelma
+miała spowodować wypowiedzenie wojny przez Napoleona~III.
+
+\vspace{\spaceFour}
+
+
+\start \Str{218} Na~dole strony pozostawiono puste miejsce, które
+powinien zajmować tekst z~następnej strony.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{225}{3} Po tej linii następuje za~duży odstęp.
+
+\vspace{\spaceFour}
+
+
+\start \Str{264} Dwa pierwsze paragrafy są źle sformatowane.
+
+\vspace{\spaceFour}
+
+
+\start \Str{274} Na~dole strony pozostawiono puste miejsce, które
+powinien zajmować tekst z~następnej strony.
+
+\vspace{\spaceFour}
+
+
+\start \Str{277} Należy sprawdzić, czy w~czasie Powstania Tajpingów
+nie zginęło na~polach bitew więcej osób, niż podczas I~Wojny
+Światowej. Uwaga którą tu poczynił Carroll\footnote{Myślę, że~Anne
+  W.~Carroll zgodziłaby~się na~przyznanie autorstwa jej mężowi
+  Warrenowi.}, należy mieć na uwadze czytając to~co pisze
+on~o~I~Wojnie Światowej na~stronach 867 i~873.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{299}{1} Czcionka w~tej linii jest za~duża.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{305}{4} Imię ojca Rasputina Efima, na~str.~313 jest
+pisane ,,Jefim''.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{352}{1} Czcionka w~tej linii jest za~duża.
+
+\vspace{\spaceFour}
+
+
+\start \Str{355} W~pierwszym paragrafie jest mowa o~głosowaniu które
+zakończyło się wynikiem siedem do~pięciu, później zaś, że~decyzja
+o~pokoju z~Niemcami przeszła stosunkiem siedem do~czterech. Najpewniej
+w~obu przypadkach mowa jest o~tym samym głosowaniu i~jeden z~podanych
+wyników jest błędny.
+
+\vspace{\spaceFour}
+
+
+\start \Str{383} Jeśli niczego nie przeoczyłem, to w~tym miejscu
+ostatni raz jest mowa o~Denikinie i~jego armii, gdy wycofują~się
+na~Kubań i~Krym. Nie dowiadujemy~się tym samym jakie były ich dalsze
+losy.
+
+\vspace{\spaceFour}
+
+
+\start \Str{397} Ponieważ Polska, zapewne tak samo, jak kraje
+nadbałtyckie, nie istniała w~1914~r., jest nieprawdopodobne, by
+w~memorandum Erzberga była mowa o~nich jako o~sąsiadujących
+z~Niemcami. Należy~się domyślać, że~Erzberg chciał włączenia
+wszystkich ziem które można było uznać za w~jakimś sensie polskie,
+analogicznie dla~państw nadbałtyckich, do~Cesarskich Niemiec po
+wygranej wojnie.
+
+\vspace{\spaceFour}
+
+
+\start \StrWg{416}{22} Po tej linii powinien być większy odstęp.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{432}{8} Na~podstawie wcześniejszej części książki nie
+jestem w~stanie powiedzieć o~co chodziło w~sprawie nadużyć w~Gruzji.
+
+\vspace{\spaceFour}
+
+
+\start \Str{435} Na~dole strony pozostawiono puste miejsce, które
+powinien zajmować tekst z~następnej strony.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{437}{8} Wydaje mi~się, że~spotkałem~się z~wersją,
+iż~Trocki został zabity ciosem czekanem. Należy to sprawdzić jeszcze
+w~jakiejś innej pracy.
+
+\vspace{\spaceFour}
+
+
+\start \StrWg{441}{1--2} Szacunki Carrollów, że~w~Chinach żyła jedna
+trzecia ludności świata, budzą pewne moje wątpliwości. Po~pierwsze
+należałoby ustalić o~jakim okresie czasu mowa, po~drugie należałoby
+sprawdzić, jak rzeczywiście przedstawiał~się stosunek ludności Chin do
+ludności świata.
+
+\vspace{\spaceFour}
+
+
+\start \StrWg{445}{17} Deng Xiaoping żył w~latach 1904--1997, zaś za
+moment przejęcia jego władzy po~Mao Zedongu, który zmarł w~1976 roku,
+należy chyba przyjąć rok~1978. Xiaoping miał więc wtedy nie
+dziewięćdziesiąt lecz siedemdziesiąt cztery lata.
+
+\vspace{\spaceFour}
+
+
+\start \StrWg{451}{8} Tu~można powtórzyć wątpliwości odnośnie podanej
+ludności~Chin i~jej udziału w~ludności świata, które~są w~komentarzu
+do~strony~441.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{451}{6} Ten wiersz jest źle wcięty.
+
+\vspace{\spaceFour}
+
+
+\start \Str{456} Na~dole strony pozostawiono puste miejsce, które
+powinien chyba zajmować tekst z~następnej strony. Choć w~tym wypadku
+możliwe jest, że~obecny wybór jest lepszy.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{456}{11} Znak ,,*'' jest w~tej linii za mały.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{466}{18} Ponieważ ten cytata zaczyna~się z~małej litery,
+do~tego zaraz następuje znak~,,\ld'', co sugeruje, że~ten cytat został
+błędnie przytoczony. Jednak nie wiem jak go~poprawić.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{466}{1} To~odwołanie bibliograficzne jest niedokończone.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{478}{5--6} W~mojej opinii te~dwie linie~są źle sformatowane.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{867}{17} Linia jest źle zedytowana. Drugie zdanie w~tej
+linii jest początkiem następnej pozycji w~bibliografii, powinna więc
+być zgodnie z~tym sformatowana.
+
+\vspace{\spaceFour}
+
+
+
+\newpage
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    7   & &  4 & wszystko$^{ * }$ & wszystko \\
+    7   & &  3 & Rekonkwiście$^{ * }$ & Rekonkwiście \\
+    23  & & 10 & \emph{Vhutch} & \emph{Church} \\
+    24  & & 25 & Zbawiciela$^{ *^{ * } }$ & Zbawiciela$^{ ** }$ \\
+    25  & &  9 & 1919 & 1819 \\
+    32  & 11 & & dostosowania & do~stosowania \\
+    50  & & 12 & za~panowania & rozpoczęta za~panowania \\
+    55  & & 12 & piętnstu & piętnastu \\
+    55  & &  7 & interesy & interesy Południa \\
+    67  & 17 & & bezbożności'')$^{ 31 }$ & bezbożności''$^{ 31 }$) \\
+    67  &  8 & & północy & południa \\
+    68  & 21 & & siom & siłom \\
+    85  &  1 & & Herald'' Tribune'' & Herald'' \\
+    96  & &  2 & W.H. Warren & W.H. Carroll \\
+    97  & &  7 & ,,tak uważamy'' & ,,Tak uważamy'' \\
+    104 & & 17 & i~związku & i~w~związku \\
+    104 & &  2 & W.H.~Warren & W.H.~Carroll \\
+    105 & & 11 & Counter-Revolution & Counter-Revolution'' \\
+    105 & &  5 & W.H.~Warren & W.H.~Carroll \\
+    116 & & 15 & stał~się był & stał~się \\
+    117 & & 23 & wyd.3,Boston & wyd.~3, Boston \\
+    121 &  3 & & tonizowały & uspokajały \\
+    126 & &  4 & Pampelunie. & Pampelunie). \\
+    127 & 10 & & aż~przez & potem aż~przez \\
+    135 & & 12 & doskonalej & doskonałej \\
+    137 &  6 & & go & je \\
+    139 & &  5 & \emph{1833} & \emph{1883} \\
+    141 & &  8 & tom~VI, rozdział~XIV & rozdział~VIII, \\
+    141 & &  7 & P\emph{olitical} & \emph{Political} \\
+    141 & &  5 & rozdział zatytułowany & rozdział~II, \\
+    150 &  5 & & dogmatach; & dogmatach, \\
+    151 & &  8 & torturom... & torturom. \\
+    151 & &  7 & miasta.. & miasta. \\
+    152 & 22 & & i~i & i \\
+    165 & &  7 & 2003) & 2003 \\
+    170 & 16 & & potomek & bratanek \\
+    170 & & 10 & potomka, ,,F\"{u}hrera & potomka ,,F\"{u}hrera \\
+    \hline
+  \end{tabular}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    171 & &  7 & skrajnym wręcz & wręcz skrajnym \\
+    177 &  3 & & ,,byliście & ,,Byliście \\
+    187 & 21 & & roku~Na & roku. Na \\
+    190 & &  1 & Karl Marx & \emph{Karl Marx} \\
+    194 & 12 & & etc.. & etc. \\
+    194 & &  8 & spikerze & mówcy \\
+    197 & &  7 & 1987) & 1987 \\
+    198 & 16 & & wojny; & wojny \\
+    199 & &  2 & 210 & 210. \\
+    208 &  7 & & jest & jest natomiast \\
+    208 & &  5 & wschodni, wschodni & zachodni, wschodni \\
+    210 & &  6 & Pratt,, & Pratt, \\
+    210 & &  5 & Carrol & Carroll \\
+    223 & & 20 & dna & dnia \\
+    228 & &  4 & 2005) & 2005 \\
+    229 & & 14 & \emph{Westrn} & \emph{Western} \\
+    233 & & 11 & piaty & piąty \\
+    235 & 16 & & rzecz & Rzecz \\
+    235 & & 15 & Uranu & Urana \\
+    237 & &  1 & 1954) & 1954 \\
+    239 & 12 & & wyrazili & nie~wyrazili \\
+    239 & 15 & & z~zatem & a~zatem \\
+    243 &  5 & & uczony; & uczony. \\
+    243 &  5 & & roku1743 & roku 1743 \\
+    248 & &  1 & 2008) & 2008 \\
+    265 & & 13 & si & się \\
+    267 & &  3 & (1944 ) & (1944) \\
+    270 & &  1 & \emph{s.} & s. \\
+    273 & &  3 & 1944 & 1994 \\
+    294 &  7 & & % ,,
+                 światu''... & światu... \\
+    299 & & 11 & Kołłnotaj & Kołłontaj \\
+    299 & &  1 & 1988) & 1988 \\
+    303 & &  4 & % ,,
+                 \emph{opończa}'' & \emph{opończa} \\
+    308 & & 19 & niszczysz & Niszczysz \\
+    309 & 22 & & warstw & wszystkich warstw \\
+    317 & &  3 & \emph{Kerensky; the} & \emph{Kerensky: The} \\
+    320 & &  3 & Habsburg & \emph{Habsburg} \\
+    324 & &  8 & eserowcow & eserowców \\
+    \hline
+  \end{tabular}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    327 &  7 & & w~coraz & ludzie w~coraz \\
+    330 & &  1 & \emph{Wtnesses} & \emph{Witnesses} \\
+    332 & & & Piotrogrodu,. & Piotrogrodu. \\ % Popraw tą linię
+    338 & 22 & & roboty!, & roboty! \\
+    349 & &  1 & \emph{s.} & s. \\
+    351 &  4 & & 1917--1921 & 1914--1922 \\
+    365 & &  5 & miasta ; & miasta; \\
+    373 & 19 & & rok & rok. \\
+    379 & &  2 & 1989) & 1989 \\
+    380 &  7 & & zlej & złej \\
+    380 & &  6 & destruktywna & destruktywną \\
+    381 & &  1 & 1951) & 1951 \\
+    385 & 10 & & dopływem & odpływem \\
+    387 &  4 & & 1915--1922 & 1914--1922 \\
+    387 & &  2 & 1989) & 1989 \\
+    392 & &  3 & \emph{s.} & s. \\
+    393 & &  6 & \emph{s.} & s. \\
+    393 & &  2 & \emph{s.} & s. \\
+    394 &  7 & & z & z~dala \\
+    394 & &  1 & \emph{XV} , & \emph{XV}, \\
+    396 & & 19 & Leonowi XII & Leonowi XIII \\
+    408 & &  2 & London1971 & London 1971 \\
+    409 & &  1 & \emph{Glory; Poland} & \emph{Glory: Poland} \\
+    421 & & 17 & terroru\ld. & terroru\ld \\
+    424 & &  5 & Radzieckiej.Trzon & Radzieckiej. Trzon \\
+    431 & &  2 & \emph{s.} & s. \\
+    432 & &  1 & \emph{s.} & s. \\
+    433 & &  2 & \emph{s.} & s. \\
+    435 &  2 & & krajem.. & krajem. \\
+    436 & &  1 & \emph{s.} & s. \\
+    442 &  6 & & imperium & imperium Czang \\
+    443 &  7 & & doobra & dobra \\
+    446 & 10 & & Baun & Braun \\
+    448 & 15 & & Hunan Jiangxi. & Huan i~Jangxi \\
+    457 & &  3 & \emph{war} & \emph{War} \\
+    457 & &  2 & \emph{war} & \emph{War} \\
+    459 & &  2 & \emph{s.} & s. \\
+    460 & &  2 & \emph{s.} & s. \\
+    \hline
+  \end{tabular}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    461 & & 11 & \emph{s.} & s. \\
+    462 & &  4 & \emph{Pro; Modern} & \emph{Pro. Modern} \\
+    463 & &  7 & \emph{s.} & s. \\
+    464 & &  8 & \emph{s.} & s. \\
+    464 & &  3 & \emph{s.} & s. \\
+    465 & &  9 & ,,Viva Cristo Rey'' & \emph{Viva Cristo Rey} \\
+    465 & &  8 & 194. 199. & 194, 199. \\
+    468 &  6 & & \emph{Altars; Baltimore's} & \emph{Altars. Baltimore's} \\
+    473 & 14 & & klepsydrze & klepsydrze. \\
+    479 & &  6 & \emph{s.} & s. \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    487 & & 14 & John a.~Ryan & John A.~Ryan \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    553 & &  3 & \emph{1939--1940} , & \emph{1939--1940}, \\
+    575 & &  3 & 1997) & 1997 \\
+    % & & & & \\
+    % & & & & \\
+    858 &  5 & & Pio Non (bł.~Pius~IX): & \emph{Pio Non (bł.~Pius~IX):} \\
+    858 & 19 & & \emph{ofCatholic} & \emph{of Catholic} \\
+    858 & 19 & & \emph{History,}(St.~Louis & \emph{History} (St.~Louis \\
+    % Sprawdź czy poprzedni wers jest poprawny
+    859 & 13 & & portugalskiej & portugalskiej. \\
+    860 &  5 & & DuffDavid. & Duff David \\
+    861 &  7 & & państwa.. & państwa. \\
+    861 & 18 & & wyd.. & wyd. \\
+    862 &  6 & & S. John Brown & S., \emph{John Brown} \\
+    862 & &  2 & Jen. & Jen, \\
+    864 &  5 & & York, & York \\
+    864 & 21 & & York, & York \\
+    866 & &  2 & FDR & \emph{FDR} \\
+    867 & 15 & & York, & York \\
+    867 & &  2 & York, & York \\
+    868 &  3 & & 2004.. & 2004. \\
+    868 & 15 & & York, & York \\
+    868 & 23 & & York, & York \\
+    869 & 24 & & \emph{Denikin} & \emph{Denikin.} \\
+    869 & & 12 & wojskowości.. & wojskowości \\
+    870 &  8 & & 1937) & 1937). \\
+    871 & 13 & & 1939 1961 & 1939, 1961 \\
+    871 & 17 & & jedneaj & jednej \\
+    873 &  1 & & York, & York \\
+    873 &  9 & & York, & York \\
+    873 & 10 & & York, & York \\
+    873 & &  5 & 1958 1966 & 1958, 1966 \\
+    874 & &  6 & Najlepsze I~najbardziej & Najlepsze i~najbardziej \\
+    \hline
+  \end{tabular}
+\end{center}
+\noi
+\StrWg{103}{5} \\
+\Jest mianem krucjaty (\emph{la~cruzada} ) określali \\
+\Pow  określali mianem krucjaty (\emph{la~cruzada}) \\
+\StrWd{170}{10} \\
+\Jest ,,F\"{u}hrera z~Poczdamu'', ojca Fryderyka Wielkiego \\
+\Pow ,,F\"{u}hrera z~Poczdamu'', Fryderyka Williama~I, ojca Fryderyka
+Wielkiego \\
+\StrWd{228}{5} \\
+\Jest The~Victory~of Reason: How Christianity Led to Freedom,
+Capitalism and~Western Success \\
+\Pow \emph{The~Victory~of Reason: How Christianity Led to Freedom,
+  Capitalism and~Western Success} \\
+\StrWg{234}{18} \\
+\Jest zapoczątkowujących teorię indukcji elektromagnetycznej \\
+\Pow  które doprowadziły do~powstania teorii indukcji elektromagnetycznej \\
+\StrWd{237}{1} \\
+\Jest Ford: The~Times, the~Man, and~the~Company \\
+\Pow  \emph{Ford: The~Times, the~Man, and~the~Company} \\
+\StrWd{246}{9} \\
+\Jest Alexander Graham Bell and~the~Passion for~Invention \\
+\Pow  \emph{Alexander Graham Bell and~the~Passion for~Invention} \\
+\StrWd{299}{2} \\
+\Jest Three Who Made a~Revolution \\
+\Pow  \emph{Three Who Made a~Revolution} \\
+\StrWd{383}{18} \\
+\Jest Kołczak \\
+\Pow  Kołczak doszedł do wniosku \\
+
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ##################
+\Work{ % Autor i tytuł dzieła
+  Łukasz Czarnecki \\
+  ,,Konstantynopol~626'', \cite{CzarneckiKonstantynopol17} }
+
+
+\CenterTB{Uwagi}
+
+\start \StrWg{58}{18} Mam wątpliwość czy~wszystkie słowa wyróżnione
+tu~kursywą~są częścią cytowanego fragmentu.
+
+% \vspace{\spaceFour}
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    19  &  6 & & w~legła gruzach & legła w~gruzach \\
+    19  & &  5 & \emph{TheChronicle} & \emph{The~Chronicle} \\
+    22  & & 16 & na~bizantyńską & bizantyńską \\
+    32  & &  2 & \emph{wiary, islam} & \emph{wiary. Islam} \\
+    68  & &  1 & Dzieje Bizancjum & \emph{Dzieje Bizancjum} \\
+    121 & & 13 & przed & przed nim \\
+    126 & &  2 & The~Armenian & \emph{The~Armenian} \\
+    143 & &  4 & wroga$^{ \textrm{\emph{20}} }$. & wroga$^{ 20 }$. \\
+    178 &  5 & & tylko & ma~tylko \\
+    202 & & 15 & \emph{wiary, islam} & \emph{wiary. Islam} \\
+    203 &  3 & & \emph{history} & \emph{History} \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ##################
+\Work{ % Autor i tytuł książki
+  Red. E. Guerriero, M. Impagliazzo \\
+  ,,Najnowsza historia Kościoła. Katolicy i~kościoły chrześcijańskie
+  w~czasie pontyfikatu Jana Pawła II (1978--2005)'',
+  \cite{GuerrieroImpagliazzoNajnowszaHistoriaKosciola06} }
+
+
+% \CenterTB{Uwagi.}
+
+% \start \StrWd{9}{6} Zamieszczony tu komentarz odnośnie słowa
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    6  & 10 & & religia miały & nauka miały \\
+    6  & & 10 & do & od \\
+    7  & & 11 & dużo & duże \\
+    14 & &  3 & zgodne & zgadzające~się \\
+    30 & &  4 & Afryki & Ameryki Południowej \\
+    51 & & 17 & śś. & św. \\
+    63 & 9 & & 1987 & 1986 \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ##################
+\Work{ % Autor i tytuł dzieła
+  Ks. Bogusław Kumor \\
+  ,,Historia Kościoła. Tom~I: Starożytność chrześcijańska'',
+  \cite{KumorHistoriaKosciolaTomI03} }
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    14 & 11 & & rzeciwieństwie & przeciwieństwie \\
+    14 & 15 & & jednej formy & jedną formę \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ########################################
+% \newpage
+% \Field{Historia świecka}
+
+% \vspace{\spaceThree}
+
+
+
+
+
+
+
+
+
+% ########################################
+\newpage
+\Field{Dzieje lat 1789--1914} % Nazwa dziedziny
+
+\vspace{\spaceTwo} \vspace{\spaceThree}
+% ########################################
+
+
+
+% ##################
+\Work{ % Autor i tytuł dzieła
+  James M. McPherson \\
+  ,,Battle Cry~of Freedom. Historia Wojny Secesyjnej'',
+  \cite{McPhersonBattleCryOfFreedom16} }
+
+
+\CenterTB{Uwagi}
+
+\start W~książce angielskie określenie ,,Civil War'' zostało
+przełożone jako Wojna Secesyjna, jednak znacznie lepszym tłumaczeniem
+jest ,,Wojna Domowa'' i~jej będę w~razie potrzeby używał.
+
+\vspace{\spaceFour}
+
+
+\start W~języku częściej mówi~się o~,,American Revolution''
+niż~,,American War~of Independence'', jednak w~Polsce przyjęło~się
+błędnie przekładać oba te określenia jako ,,Wojna o~Niepodległość''.
+Należałoby dosłownie tłumaczyć pierwsze określenie jako ,,Amerykańską
+Rewolucję'', bądź ,,Rewolucję Amerykańską'' i~tej wersji będę w razie
+potrzeby używał.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{23}{4} Podane tu~stwierdzenie, że~Amerykanie w~1850~r.
+zapełnili imperium nabyte w~1803 od~Napoleona wydaje~się mocno
+przesadzone. Zauważmy, że~zgodnie z~tym co pisze dalej McPherson
+populacja Stanów Zjednoczonych dopiero w~kilka lat później
+prześcignęła Wielką Brytanię, której powierzchnia jest mniejsza niż
+dzisiejszego stanu Michigan, i~tylko dwa i~pół razy większa od~tej
+stanu Luiziany. Zakładając, że~mowa jest o~liczebności ludności
+mieszkającej w~samej Wielkiej Brytanii, nie zaś liczonej razem
+z~koloniami, pokazuje to jak małe było wtedy zaludnienie ogromnych
+terenów Ameryki Północnej. Ciężko więc twierdzić, że~ziemie te zostały
+zapełnione, trafniej byłoby powiedzieć, iż~zostały zaludnione.
+
+% \vspace{\spaceFour}
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    8   & &  2 & rally ,round & rally, round \\
+    14  & & 21 & Stowarzyszeń & ,,Stowarzyszeń  % ''
+    \\
+    17  & &  6 & sprzeczności.. & sprzeczności. \\
+    23  & & 11 & niewolnictwo jednak & jednak niewolnictwo \\
+    25  & & 13 & \emph{Encclopedia~od} & \emph{Encyclopedia~of} \\
+    26  & 17 & & 1960~r. & 1860~r. \\
+    30  &  7 & & 1854~r. & w~1854~r. \\
+    33  & & 19 & codzienne & ,,codzienne  % ''
+    \\
+    40  & & 15 & społeczeństwie. & społeczeństwie''. \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+\noi
+\StrWd{31}{22} \\
+\Jest Podczas gdy nie odrzucali tezy \\
+\Pow  Nie~odrzucając tezy \\
+\StrWg{35}{13} \\
+\Jest i~okresami bezrobocia, spowodowanymi recesją \\
+\Pow  i~okresów bezrobocia, spowodowanych recesją \\
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ########################################
+\newpage
+\Field{Świat po~1914~r.}
+
+\vspace{\spaceTwo} \vspace{\spaceThree}
+% ########################################
+
+
+
+% ##################
+\Work{ % Autor i tytuł dzieła
+  Martin Gilbert \\
+  ,,Pierwsza wojna światowa'', \cite{GilbertPierwszaWojnaSwiatowa03} }
+
+
+\CenterTB{Uwagi}
+
+\start \StrWg{21}{1} Ponieważ książka ta został pierwotnie wydania
+w~1994 roku, przynajmniej prawa autorskie Martina Gilberta zostały
+wtedy zatwierdzone, a~data powstania ,,Wstępu'' to~20~czerwca
+1994~roku, pojawia~się problem. Przytaczana wypowiedź z~wojny
+na~terenie Bośni, nie mogła pochodzić z~26 grudnia 1996~roku.
+Najpewniej chodzi tu~o~26~grudnia 1993 roku, ale~pewności mieć
+nie~mogę.
+
+\vspace{\spaceFour}
+
+
+\start \StrWg{70}{2} Nie wiem kto popełnił błąd, żołnierz, autor
+czy~tłumacz, ale to zdanie o~martwym doboszu jest bez sensu.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{70}{5} To zdanie jest na~pewno źle przetłumaczone,
+ale~nie~wiem jakie je poprawić.
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    68  & &  2 & Wielka Brytania & Rosja \\
+    69  &  2 & & kulturowo & kulturowo'' \\
+    69  & 16 & & 1 sierpnia & 12 sierpnia \\
+    70  &  8 & & Pułk Feuchtingera, kiedy & Kiedy pułk Feuchtingera \\
+    70  & &  4 & Sir Edward Gray, kiedy & Kiedy sir Edward Gray \\
+    122 & & 10 & dal & dał \\
+    177 & 15 & & ,,Walcie, aż lufy pękną''.
+           & <<Walcie, aż lufy pękną>>''. \\
+           % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ##################
+\Work{ % Autor i tytuł dzieła
+  Paul Johnson \\
+  ,,Historia świata XX wieku, od~Rewolucji Październikowej \\
+  do~<<Solidarności>>. Tom~I'',
+  \cite{JohnsonHistoriaSwiataXXWiekuTomI09} }
+
+
+\CenterTB{Uwagi}
+
+\start \Str{17--18} Terminy id, ego, superego nie zostały wprowadzone
+przez Freuda, lecz przez jego tłumacza, bądź tłumaczy, na~język
+angielski. Sam Freud używał zwykłych słów z~języka niemieckiego:
+das~Es, Ich, Uberich. (Powinno to być omówione w książce Burzyńskiej
+i~Markowskiego \cite{BM09}).
+
+\vspace{\spaceFour}
+
+
+\start \Str{56} Książka Keynesa \emph{Ekonomiczne konsekwencje
+  pokoju}, nie mogła ukazać~się pod koniec 1917 roku.
+Najprawdopodobniej chodzi tu o~koniec roku 1919. Powinno~się tu też
+znaleźć obszerniejsze omówienie treści tej książki.
+
+\vspace{\spaceFour}
+
+
+\start \Str{63} Głosowanie nad traktatem o~którym tu mowa
+nie~odbyło~się w~marcu 1919 roku, lecz w~marcu 1920 r.
+
+\vspace{\spaceFour}
+
+
+\start \Str{72} Wyrażoną tu opinię, że~Polska skorzystała z~obawy
+Wielkiej Brytanii przed zalewem bolszewizmu, warto skonfrontować z~tym
+co wielokrotnie mówił
+\href{https://www.youtube.com/watch?v=yfQ7rpq_irA}{Andrzej Nowak} i~co
+opisał w~,,Pierwszej zdradzie zachodu''.
+
+\vspace{\spaceFour}
+
+
+\start \Str{90} Wydaje~się, że~opisany tu~ciąg przemówień Lenina
+i~relacja Krupskiej o~tym jak położył~się spać bez słowa, dotyczą
+wydarzeń z~jednego dnia, tego którego Lenin wrócił on do Rosji. Jeśli
+to prawda powinno to zostać lepiej zaznaczone w~tekście, w~chwili
+obecnej, nie jest to w~pełni jasne.
+
+\vspace{\spaceFour}
+
+
+\start \Str{189} Opis udziału niemieckich wojskowych w~zawieszeniu
+przez Niemcy broni w~I~Wojnie Światowej, powinien być bardziej
+wyczerpujący, w~tym momencie jest zbyt zwięzły, aby był jasny.
+
+\vspace{\spaceFour}
+
+
+\start \Str{189} W~tym miejscu po~raz pierwszy zostaje użyte
+określenie ,,Alianci'' na~członków Ententy. Jest to~chyba anachronizm,
+którego nie powinno~się stosować jako, że~nazwa ,,Aliantów'' jest
+powszechnie przyjęta dla~sojuszu z~II, a~nie z~I, Wojny Światowej.
+
+\vspace{\spaceFour}
+
+
+\start \Str{223} Drugie zdanie drugiego paragrafu na~tej stronie jest
+źle skonstruowane, nie wiem jednak jak je poprawić. Mimo tego, tego
+jego sens jest jasny.
+
+\vspace{\spaceFour}
+
+
+\start \Str{232} Ludendorff spada tu jak z~nieba, aby zostać naczelnym
+wodzem w~rządzie Hitlera, powołanym podczas puczu monachijskiego.
+Warto byłoby napisać skąd on~się w~ogóle w~tym miejscu wziął.
+
+\vspace{\spaceFour}
+
+
+\start \Str{237--238} Tekst byłby znacznie bardziej logiczny, gdy
+zamiast zdania ,,Poincar\'{e} manifestował arystokratyczną pogardę
+dla~wulgarności klasy średniej i~francuskiego braku równowagi
+emocjonalnej'', było ,,Poincar\'{e} manifestował arystokratyczną
+pogardę dla~wulgarności klasy średniej i~francuski brak równowagi
+emocjonalnej''.
+
+\vspace{\spaceFour}
+
+
+\start \Str{241} Stwierdzenie o~kurczącej~się populacji Francji jest
+mało udane, bowiem jak zaraz potem Johnson wskazuje, populacja ta
+w~rzeczywistości rosła. Problemem jest to, że~rosła ona bardzo słabo
+w~porównaniu z~innymi państwami i~tym samym malał stosunek liczby
+mieszkańców Francji do mieszkańców innych krajów w~Europie.
+
+\vspace{\spaceFour}
+
+
+\start \Str{262} Na tej stronie pojawia~się po~raz pierwszy
+sformułowanie ,,teoria spisku'', którą lepiej byłoby zastąpić
+przyjętym w~języku polskim terminem ,,teoria spiskowa''. Użycie
+takiego słownictwa wynika zapewne z~tego, że~jeśli dobrze rozumiem,
+książkę przetłumaczono jeszcze w~latach 80 XX~w., kiedy nie było
+jeszcze w~języku polskim ustalonej nazwy na~to~zjawisko.
+
+\vspace{\spaceFour}
+
+
+\start \Str{288}
+
+\vspace{\spaceFour}
+
+
+\start \Str{304} W~2016~r. byłem na wykładzie na~temat chrześcijaństwa
+w~Japonii w~XVI~wieku. Choć sam prowadzący przyznawał, że~w~tej
+historii pewne kluczowe punkty są do~dziś niezrozumiałe, to
+jednocześnie w~świetle wszystkich rzeczy o~jakich mówił, stwierdzenie,
+że~chrześcijaństwo zostało odrzucone w~skutek kłótni misjonarzy, jest
+gigantycznym uproszczeniem, a~może nawet wypaczeniem, historii.
+
+\vspace{\spaceFour}
+
+
+\start \Str{303} Czytając ten fragment odniosłem wrażenie, że~cesarz
+Meiji był stary człowiekiem, gdy sprawował swą władzę,
+w~rzeczywistości jednak objął formalnie panowanie, gdy miał 15 lat,
+zmarł zaś w~wieku 60 lat. Jego następca cesarz Yoshihito urodził~się,
+gdy miał on 27 lat, więc można wykluczyć wpływ wieku Meiji na stan
+zdrowia jego następcy, co ten fragment mógł sugerować.
+
+\vspace{\spaceFour}
+
+
+\start \Str{305}
+
+\vspace{\spaceFour}
+
+
+\start \Str{310} Rok 1944 jako data przystąpienia Japonii do II~Wojny
+Światowej jest błędny, od 1937~r. prowadziła już drugą wojnę
+chińsko\dywiz japońską, zaś w~grudniu 1941 roku dokonała ataku na
+Stany Zjednoczone. Jest to zapewne kolejna w~tej książce literówka,
+nie wiem jednak jak~ją poprawić.
+
+\vspace{\spaceFour}
+
+
+\start \Str{345} Brak numeru strony w~prawy górnym rogu.
+
+\vspace{\spaceFour}
+
+
+\start \Str{345} Opisane tu wydarzenia, okupacja Korei przez
+Japończyków i~ich reakcja na~sytuację w~Chinach powinny być
+przedstawione szerzej. W~obecnej chwili przez swoją zwięzłość jest to
+dosyć niejasne i~chaotyczne.
+
+\vspace{\spaceFour}
+
+
+\start \Str{454} Nie rozumiem dlaczego Stalin chował za~plecy prawą
+rękę, skoro jego lewa była uszkodzona. Czy to dlatego, że~nie był
+w~stanie schować lewej ręki za~plecami?
+
+\vspace{\spaceFour}
+
+
+\start \Str{457} W~tekście brak odwołania do~przypisu 11.
+
+\vspace{\spaceFour}
+
+
+\start \Str{459}
+
+\vspace{\spaceFour}
+
+
+\start \Str{465}
+
+\vspace{\spaceFour}
+
+
+\start \Str{477--478}
+
+\newpage
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    15  & 17 & & Mendla & prac Mendla \\
+    28  &  8 & & cywilizacyjne & cywilizowane \\
+    36  & 10 & & zastąpić & zaspokoić \\
+    51  & & & Jedyny & Jeden \\ % Dokończ.
+    54  & 11 & & [dotyczących planu) & [dotyczących planu] \\
+    & & & ] & \\
+    55  & &  1 & M. Keynes & J. M. Keynes \\
+    64  &  2 & & kształt ów & ów kształt \\
+    65  & & 14 & późniejszy doradca & doradca \\
+    68  &  5 & & szśćdziesiątych & sześćdziesiątych \\
+    82  &  6 & & Ghandi: & Ghandi. \\
+    89  &  5 & & odbyć & przebiegać \\
+    111 & 12 & & Ogó1norosyjski & Ogólnorosyjski \\
+    138 & & 10 & socjalrewolucjonistom & socjalrewolucjoniści \\
+    142 & &  8 & poszczegó1nymi & poszczególnymi \\
+    154 & 11 & & spadl & spadł \\
+    155 & & 15 & przemysł kluczowy & kluczowe gałęzie przemysłu \\
+    160 & 14 & & ,,wolność pracy'' & <<wolność pracy>>'' \\
+    161 & &  5 & upijać'' & upijać''. \\
+    185 & & 16 & można & nie~można \\
+    190 & 17 & & więc równe & równe \\
+    221 &  3 & & był & nie był \\
+    243 &  8 & & nie & nie została \\
+    248 & &  3 & 1853 & 1853 -- przy. red.] \\
+    252 & &  4 & Enqu\'{e}te sur la~monarchie
+           & \emph{Enqu\'{e}te sur la~monarchie} \\
+    259 & 14 & & Algierczyków & Algierczykom \\
+    281 & &  2 & red. & red.] \\
+    292 & 15 & & Jesteśmy & ,,Jesteśmy %''
+    \\
+    314 & &  6 & Korupcja & korupcja \\
+    336 &  6 & & wiec & więc \\
+    351 &  5 & & podejrzanego & ,,podejrzanego %''
+    \\
+    382 & 11 & & wzrosty & wzrosły \\
+    392 & 10 & & dały & dawały \\
+    393 & &  2 & Steffens,{ }{ }\emph{Individualism}
+           & Steffens, \emph{Individualism} \\
+    408 & & 13 & problem6w & problemów \\
+    423 &  9 & & ulega kwestii & podlega dyskusji \\
+    426 & &  7 & zalegle & zaległe \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    427 &  4 & & Ministerstwa. Zdrowia & Ministerstwa Zdrowia \\
+    436 &  1 & & wielkim & ,,wielkim % ''
+    \\
+    436 & & 13 & to jedynie & jedynie \\
+    444 &  5 & & zaspokoić & uspokoić \\
+    445 & & 10 & nie żądające & żądające \\
+    449 &  9 & & Białym. Domu & Biały Domu \\
+    457 &  9 & & Problemy & ,,Problemy % ''
+    \\
+    461 & & 10 & miłosierny!$^{ 20 }$ & miłosierny!''$^{ 20 }$. \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+\noi \\
+\tb{Okładka} \\
+\Jest ''Solidarności'' \\
+\Pow  ,,Solidarności'' \\
+\Str{1} \\
+\Jest \tb{Historia świata} \\
+\Pow  \tb{Historia świata XX wieku} \\
+\Str{3} \\
+\Jest \tb{Historia świata} \\
+\Pow  \tb{Historia świata XX wieku} \\
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ######################################
+\newpage
+\Field{Świat po~1945~r.}
+
+\vspace{\spaceTwo} \vspace{\spaceThree}
+% ######################################
+
+
+
+% ##################
+\Work{
+  Tony Judt \\
+  ,,Powojnie. Historia Europy od~roku 1945'', \cite{JudtPowojnie16} }
+
+
+\CenterTB{Uwagi}
+
+\start \Str{28} Stwierdzenie, że~aż do lat trzydziestych~XIX~w. babcie
+hiszpańskie straszyły dzieci Napoleonem, jest trochę niezręczne. Wojny
+napoleońskie skończyły~się dopiero w~1815 roku, więc chodzi tu
+o~wydarzenia sprzed 25--40 lat, co nie wydaje~się obecnie zbyt długim
+czasem, choć możliwe, że~w~XIX wieku taka długa pamięć była czymś
+niezwykłym. Jeśli to właśnie Judy chciał przekazać, to można było
+to~zdanie sformułować lepiej.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{102}{8} Nie potrafię zrozumieć co~w~tym kontekście miało
+znaczyć zdanie ,,co~wyjątkowo miało~się okazać nieskuteczne''.
+
+\vspace{\spaceFour}
+
+
+\start \Str{111} Warto byłoby podać trochę więcej informacji o~zimie
+roku 1947, aby~pozwolić czytelnikom poczuć jej siłę. Kilka zadań
+podających dokładnie temperaturę panującą wtedy w~Europie i~czas przez
+jaki~się utrzymywała, byłoby zupełnie wystarczające.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{125}{7} Należałoby podać, w~jakiej walucie~są wyrażone,
+przedstawione tu wydatki.
+
+\vspace{\spaceFour}
+
+
+\start \Str{131} W~ostatnim akapicie na~tej stronie jest mowa
+o~frontach ludowych i~narodowych w~taki sposób, że~nie można zrozumieć
+o~co tak naprawdę chodzi.
+
+\vspace{\spaceFour}
+
+
+\start \StrWg{150}{20} Zdanie ,,zbliża~się czas wielkich zawirowań
+--~a~tym samym konieczność określenia przez Związek Radziecki
+wynikających z~tego korzyści'' nie jest zbyt dobrze skonstruowane
+i~trochę niezrozumiałe.
+
+\vspace{\spaceFour}
+
+
+\start \StrWg{159}{20} Zdanie ,,pozwoli Niemcom gnić, dopóki owoce
+niemieckiej urazy i~beznadziei nie wpadną mu do~koszyka'' nie jest
+ani~zbyt jasne, ani~nie brzmi zbyt dobrze w~języku polskim.
+
+\vspace{\spaceFour}
+
+
+\start \StrWg{174}{18} Słowa Milovana Dżilasa warto byłoby opatrzyć
+komentarzem. W~tym momencie ich brzmienie jest trochę dziwne, a~sens
+niepewny.
+
+\vspace{\spaceFour}
+
+
+\start \StrWg{197}{8} W~tym wierszu jest mowa o~przeżyciu przez
+Brytyjczyków Pierwszej~Wojny Światowej, ale bardzo możliwe, że~jest
+to~błąd i~tak naprawdę chodzi o~Drugą.
+
+\vspace{\spaceFour}
+
+
+\start \Str{204} Przypis konsultanta wydania polskiego, który obecnie
+znajduje~się na~końcu zdania w~wierszu 21 od~góry, powinienem
+znajdować~się na końcu zdania w~wierszy drugim od~góry.
+
+\vspace{\spaceFour}
+
+
+\start \StrWg{258}{17} Z~kontekstu ciężko wywnioskować, kim było
+,,dwóch lewicowych członków ruchu oporu''. Ten fragment powinien być
+poprawiony.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{282}{3} Na~końcu książki nie ma odniesienia do przypisu
+z~tej linii.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{417}{19--18} O~Luckym Luku, czyli na polski Mającym
+Szczęście Łukaszu, można stwierdzić wiele, ale~nie to,
+że~jest~,,nieszczęsny''. Również uznanie tego komiksu za belgijski,
+jest dla mnie kontrowersyjne.
+
+\vspace{\spaceFour}
+
+
+\start \Str{474} Raymond Aron był zapewne całe życie antykomunistą,
+ale~ponieważ w~jednym z~wydań \emph{Opium dla~intelektualistów}
+napisał, że~książkę można traktować jako marksistowską krytykę pewnych
+zjawisk, jego stosunek do~intelektualnego dziedzictwa marksizmu,
+pozostaje sprawą otwartą.
+
+\vspace{\spaceFour}
+
+
+\start \Str{510} Choć ,,Dziady. Część III'' zostały napisane po
+Powstaniu Listopadowym, to jednak jego akcja rozgrywa~się kilka lat
+przed tym wydarzeniem i~nie dotyczy losów powstańców, lecz losów ludzi
+uciskanych przez władzę cara. Co~zresztą w~1968 roku również brzmiało
+bardzo współcześnie. Należy zaznaczyć, że~trzeciej części ,,Dziadów''
+nie można sprowadzić tylko do tego wątku, choć jest on jednym
+z~najważniejszych.
+
+\vspace{\spaceFour}
+
+
+\start \StrWg{513}{7} W~1970 roku protesty o~szczególnych
+konsekwencjach miały miejsce w~Szczecinie, nie można więc ich
+ograniczać tylko do Gdańska.
+
+\vspace{\spaceFour}
+
+
+\start \StrWg{526}{14} Wydaje mi~się, że rozumiem sens zdania
+o~optymistycznym zapatrzeniu w~postindustrialne wyobcowanie
+i~bezduszność, ale według mnie nie powinno~się pisać w~taki przewrotny
+i~skomplikowany sposób, aby czytelnik nie zgubił~się.
+
+\vspace{\spaceFour}
+
+
+\start \StrWg{556}{8} Nie rozumiem co miały znaczyć słowa
+,,dla~obojętnych skrajów ruchu robotniczego''.
+
+\vspace{\spaceFour}
+
+
+\start \Str{561} Nie wiem czy mogę~się w~pełni zgodzić ze
+stwierdzeniem, że~Foucault był w~głębi duszy racjonalistą. Możliwe,
+lecz zapewne była to specyficzna odmiana racjonalizmu.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{585}{18} Panków to dzielnica Berlina, gdzie
+w~początkowym okresie istnienia NRD~znajdowały się rezydencje władz
+tego kraju.
+
+\vspace{\spaceFour}
+
+
+\start \StrWg{602}{13} Na~końcu książki nie ma odniesienia do przypisu
+z~tej linii.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{655}{16--14} Zdanie ,,przeczyć fundamentalnemu
+powinowactwu demokratycznego państwa opiekuńczego (bez względu na~to,
+jak bardzo niewystarczająco) z~kolektywistycznym planem komunizmu''
+jest napisane w~niezrozumiały sposób.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{681}{4--3} Nie rozumiem co miało dokładnie znaczyć
+zdanie ,,Epoka zastoju Leonida Breżniewa (Michaił Gorbaczow)
+żywiła~się wieloma złudzeniami''.
+
+\vspace{\spaceFour}
+
+\start \StrWd{681}{2} W~Polsce przyjęła~się pisonia tego nazwiska
+,,Potiomkin'' nie jak w~krajach anglojęzycznych ,,Potemkin''.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{693}{16} Na~końcu książki nie ma odniesienia do przypisu
+z~tej linii.
+
+\vspace{\spaceFour}
+
+
+\start \Str{694} Bill Clinton miał 46 lat, gdy został prezydentem USA
+w~1993 roku, był więc młodszy od Michaił Gorbaczow który miał 54, gdy
+został w~1985 roku Sekretarzem Generalnym KPZR. Jednak nie można
+twierdzić, że~Gorbaczow był młodszy od każdego prezydenta USA do
+Clintona, bowiem najmłodszym prezydentem do roku 2017, jest Theodore
+Roosevelt który miał tylko 42 lata, gdy~objął ten urząd w~1901 roku.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{703}{18} Słowo ,,niezrównany'' brzmi trochę dziwnie
+w~tym kontekście. Może powinno być ,,nierówny''.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{718}{2} Zwrot ,,bezwarunkowe niezrozumienie'' jest
+dziwny i~ciężki do zrozumienia. Po~angielsku brzmiał zapewne
+,,unconditional misunderstanding'', warto się zastanowić nad jego
+lepszym tłumaczeniem.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{734}{19} NRD pojawia~się w~tym wersie dość
+niespodziewanie, może chodziło o~Czechosłowację?
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{742}{10} Na~końcu książki nie ma odniesienia do przypisu
+z~tej linii.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{757}{6--5} Zdanie ,,którego rządzący byli
+komunistycznymi satrapami, przejęli kontrolę nad tym obszarem'', brzmi
+jakoś niezręcznie. Może dałoby~się je sformułować lepiej?
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{782}{15} Powinno tu być wyjaśnione czym~są prawa
+ciągnięcia.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{805}{9} Na~końcu książki nie ma odniesienia do przypisu
+z~tej linii.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{823}{12-10} Zdanie ,,W~kraju było teraz więcej osób
+mówiących po~holendersku niż~francusku (w~stosunku trzy do~dwóch),
+które produkowały na~głowę mieszkańca i~zarabiał więcej.'' źle brzmi
+i~nie od razu zrozumiałe.
+
+\vspace{\spaceFour}
+
+
+\start \tb{Wkładka~1, str.~6, u~góry.} Dla ułatwienia czytelnikom
+orientacji, warto byłoby napisać, o~jaki akt stworzenia tu chodzi.
+
+\vspace{\spaceFour}
+
+
+\start \tb{Wkładka~1, str.~6, u~dołu.} Cytowane są tu te same słowa
+Clementa Attlee co na stronie~127, jednak te dwie wersje nie są
+identyczne.
+
+
+\CenterTB{Błędy}
+
+\nopagebreak
+
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    22  & 16 & & w~nich żyli & żyli w~nich \\
+    34  & 10 & & --supermani & --~supermani \\
+    35  & & 17 & prądu & braku prądu \\
+    35  & & 16 & dość & lecz dość \\
+    58  & &  7 & postępującą & postępującej \\
+    58  & &  6 & degeneracją & degeneracji \\
+    99  & 10 & & to & za~to \\
+    127 & 11 & & \emph{metody} & \emph{metody dozwolone} \\
+    131 & 13 & & radziecką & bolszewicką \\
+    185 & 19 & & być może & może \\
+    199 & 11 & & przeregulowanej prawnie & prawnie przeregulowanej \\
+    199 & 18 & & miastem & miasto \\
+    203 & &  4 & Europy Środkowej & na~Europę Środkową \\
+    264 & 13 & & Odstawiliśmy & ,,Odstawiliśmy % ''
+    \\
+    356 & 16 & & męża & ojca \\
+    380 & 12 & & k~o~n~t~r~rewolucji & k~o~n~t~r~r~e~w~o~l~u~c~j~i \\
+    393 & 23 & & zwyczajowo tradycyjnie & zwyczajowo i~tradycyjnie \\
+    409 & & 12 & manipulować. & manipulować''. \\
+    409 & & 11 & dziesięcioleciu''. & dziesięcioleciu. \\
+    430 & &  3 & specjalnością.: & specjalnością: \\
+    457 & 15 & & (czy & czy \\
+    457 & &  2 & wino. & wino''. \\
+    478 & &  9 & dziewięćdziesiątych & sześćdziesiątych \\
+    490 & & 14 & je! & je!'' \\
+    509 & & 18 & uczeni & uczelni \\
+    526 & &  5 & polityka & że~polityka \\
+    555 & &  8 & się wydaje & wydaje~się \\
+    564 &  9 & & and & i \\
+    565 &  8 & & przeglądzie & w~przeglądzie \\
+    582 & & 11 & Nemiec & Niemiec \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    596 & &  4 & Andreas) & Andreas \\
+    611 &  5 & & 1976 & 1975 \\
+    676 &  1 & & zresztą nie była & nie była zresztą \\
+    682 & 12 & & zawłaszczenie odśrodkowego & odśrodkowe zawłaszczenie \\
+    691 & &  3 & a~nawet & nawet \\
+    707 &  2 & & na nowo & nowe \\
+    710 & 12 & & pierwszy hotel & hotel \\
+    711 & 19 & & był & nie~był \\
+    718 &  2 & & działania & pracy \\
+    793 &  7 & & przez & wobec \\
+    793 & &  8 & międzynarodową... & międzynarodową. \\
+    793 & &  3 & nawet & on nawet \\
+    798 & &  6 & walczyć & wlec~się \\
+    815 & 15 & & \emph{Beatrice Webb (1925)} & Beatrice Webb (1925) \\
+    838 &  3 & & w~związku z~tym & w~tym czasie \\
+    937 & & 13 & Tabu & Różne tabu \\
+    967 & & 11 & góry(Schuman & góry (Schuman \\
+    976 &  6 & & praktycznie & w~praktyce \\
+    977 & &  7 & wpław & wpłat \\
+    \hline
+  \end{tabular}
+\end{center}
+\noi
+\StrWd{110}{6} \\
+\Jest na~samą perspektywę pokoju \\
+\Pow  na~samą myśl o~perspektywie pokoju \\
+\StrWg{417}{15} \\
+\Jest którymi~się w~nich chwalono \\
+\Pow  w~których~się nimi chwalono \\
+\StrWg{555}{4} \\
+\Jest ,,nowy patriotyzm'' za~granicą \\
+\Pow  ,,nowy patriotyzm'' \\
+\StrWd{617}{2} \\
+\Jest w~hiszpańskich przedsiębiorstwach \\
+\Pow  hiszpańskich przedsiębiorstw \\
+\StrWd{698}{4} \\
+\Jest który rozpada~się w~wartości 37~miliardów rozpadów na~sekundę \\
+\Pow  w~którym dochodzi do~37~miliardów rozpadów na~sekundę \\
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ######################################
+\newpage
+\Field{Świat po~1989~r.}
+
+\vspace{\spaceTwo} \vspace{\spaceThree}
+% ######################################
+
+
+
+% ##################
+\Work{
+  J. Kofman, W. Roszkowski \\
+  ,,Transformacja i postkomunizm'', \cite{KR99} }
+
+
+\CenterTB{Błędy}
+
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    10 & & 17 & jedynie & jedynej \\
+    13 & &  4 & o ekspansji & do ekspansji \\
+    16 &  9 & & marntrawstwem & marnotrawstwem \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ##################
+\Work{
+  Philipp Ther \\
+  ,,Nowy ład na starym kontynencie. Historia neoliberalnej \\
+  Europy'', \cite{TherNowyLad15} }
+
+
+\CenterTB{Uwagi}
+
+\start \Str{120} Jest tu mowa, że~Lech Wałęsa był pierwszym
+prezydentem demokratycznej polski. Trzeba sprawdzić, czy ten tytuł nie
+powinien przypaść gen.~Wojciechowi Jaruzelskiemu.
+
+% \vspace{\spaceFour}
+
+
+\CenterTB{Błędy} \nopagebreak
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    13  & &  5 & Federalnej, & Federalnej. \\
+    14  & 16 & & ,,ruskich'' & o~,,ruskich'' \\
+    16  &  6 & & o & jako \\
+    30  & 12 & & wschodniego & zachodniego \\
+    33  &  2 & & \emph{prospects}'' & \emph{prospects} \\
+    41  & 13 & & po1917 & po~1917 \\
+    43  &  3 & & po1918 & po~1918 \\
+    49  & &  2 & \emph{1989},, % ''
+           & \emph{1989}, \\
+    50  & & 13 & doprowadziło & nie~doprowadziło \\
+    51  & &  1 & 61-65,71 & 61--65, 71 \\
+    57  & &  2 & 1985--1988 & \emph{1985--1988} \\
+    60  & &  7 & NRD.nCi & NRD. Ci \\
+    60  & &  1 & \emph{War},: & \emph{War}, \\
+    % & & & & \\
+    62  & &  9 & przypieczętowa & przypieczętowano \\
+    71  & &  8 & Niemczami~i & Niemcami~niż \\
+    80  & & 17 & z~Lewobrzeżną & Lewobrzeżną \\
+    85  & & 11 & w & o \\
+    88  & &  6 & \tb{\emph{Anders}} & Anders \\
+    109 &  1 & & & Tilly'emu \\
+    124 & 11 & & 5) & 5). \\
+    146 &  1 & & ( ang. & (ang. \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+\noi
+\StrWd{30}{22} \\
+\Jest metropolii''$^{ 14 }$. Natomiast w~regionalnej \\
+\Pow  metropolii''$^{ 14 }$, w~regionalnej \\
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ############################
+\newpage
+\Field{Różne dzieła historyczne}
+
+\vspace{\spaceTwo} \vspace{\spaceThree}
+% ############################
+
+
+
+% ####################
+\Work{
+  Christopher A. Ferrara \\
+  ,,Liberty: The God That Failed'', \cite{Ferrara12} }
+
+
+\CenterTB{Błędy}
+
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    23  &  3 & & in & in an other \\
+    40  & &  1 & \emph{St. Saint} & \emph{Saint} \\
+    207 & &  2 & Government & \emph{Government} \\
+    227 & 11 & & doing-not & doing--not \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ##################
+\newpage
+
+\Work{
+  Andrew Gordon \\
+  ,,Nowożytna historia Japonii'',
+  \cite{GordonNowozytnaHistoriaJaponii10} }
+
+
+\CenterTB{Uwagi}
+
+\start \StrWg{46}{3} Jest tu podana ilość mieszkańców Tokio w~1720~r.,
+ale~do 1868~r. to miasto nosiło nazwę~Edo.
+
+\vspace{\spaceFour}
+
+
+\start \Str{83} Nie rozumiem na czym polegała dewaluacja złotych monet
+przeprowadzona przez \emph{bakufu}, ani czemu wywołało to zwiększenie
+podaży pieniądza i~inflację.
+
+\vspace{\spaceFour}
+
+
+\start \StrWg{85}{10} Nie jest napisane kim jest ten potężny
+reformator i~wróg cudzoziemców.
+
+\vspace{\spaceFour}
+
+
+\start \Str{88} Powinno zostać tu dokładniej opisany zamach na Iiego
+oraz jawnie napisane, czy zginął on w~tym zamachu, bądź w~skutek
+niego. Z~kontekstu wynika, że~Iiego zginął.
+
+\vspace{\spaceFour}
+
+
+\start \Str{91}{15} Sens tego zdania miał być chyba następujący. Gdyby
+rząd \emph{bakufu} przetrwał, to w~skutek jego reform powstałby system
+zbliżony do tego, który stworzyła restauracja Meiji.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{134}{13--11} Nie jest wyjaśnione która grupa
+z~wymienionych grup odziedziczyła z~okresu Tokugawów zachowania
+ksenofobiczne.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{424}{11} Zgodnie z~tym co było napisane na~stronie~417
+kobieta ta raczej nie fałszowała banknotów, lecz~potwierdzenia
+depozytu z~lokalnej agencji kredytowej.
+
+\vspace{\spaceFour}
+
+
+\start \StrWg{425}{5} W~tym miejscu jest mowa o~sytuacji gospodarczej
+Japonii na przełomie lat osiemdziesiątych i~dziewięćdziesiątych XX
+wieku, należy więc zwrócić uwagę, że~Unia Europejska istnieje w~sensie
+formalnym od~1~listopada 1993~roku. Może~się więc zdarzyć, że~podana
+tu nadwyżka handlowa odnosi~się do~czasu, gdy Unia Europejska jeszcze
+formalnie nie istniał i~użycie jej nazwy jest formą skrótu myślowego.
+
+\vspace{\spaceFour}
+
+
+\start \Str{432} Podany tu średni czas czas trwania kadencji premierów
+Japonii są błędne bądź problematyczne. Według nich w~latach 1955--1989
+było 12 premierów, przyjmując więc, że~pierwszym z~tej dwunastki jest
+Hatoyama Ichir\^{o}\footnote{Hatoyama został premierem jeszcze w~1954
+  roku, ale~ponieważ urzędował cały 1955 rok, uznałem, że~należy go
+  wliczyć do tej listy. Do~obliczeń włączyłem pełen czas jego
+  kadencji, co wydaje~się rozsądne, bo~powinno to dać mniej powodów
+  do~zamieszania.}, a~ostatnim Takeshita Noboru, średni czas ich
+kadencji to 2.9 roku, podczas, gdy mediana to tylko 2.2 roku. Jeśli
+zaś rozważymy kwartyl górny $3/4$ to wynosi\footnote{Kwartyl górny
+  wybrałem w~ten sposób, że~powyżej niego jest 25\% populacji, jego
+  samego zaś umieszczam pośród pozostałych 75\%.} on~3.4. Wszystkie te
+liczby są niższe od~podanej tu~średniej~3.7 roku.
+
+Zauważmy jednak, że~gdyby przyjąć tak jak w~książce pisze, że~między
+1955 a~1989 rokiem upłynęły 44 lata, jawny błąd, to średnia czasu
+urzędowania rzeczywiście wychodzi 3.7 roku. Ja~przyjąłem, że~skoro
+$1989 - 1955 = 34$ to taką długość należy przypisać temu okresowi,
+oznacza to bowiem tylko kilkumiesięczny błąd w~sumie długości
+kadencji.
+
+Co do czasu urzędowania premierów w~latach 1989--2000, to aby uzyskać
+liczbę 10 premierów, należy liczyć od~Takeshita Noboru, który zaczął
+kadencję jeszcze w~1987~r., do~Mori Yoshir\^{o}, który zakończył ją
+w~2001~r. Przyjęcie więc, że~dziesięciu premierów, sprawowało urząd
+dwanaście lat, jest po~prostu bardzo niedokładnym postawieniem sprawy,
+by~nie powiedzieć niechlujnym.
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    7   & 17 & & 398 & 298 \\
+    29  &  5 & & nstąpiły & nastąpiły \\
+    \hline
+  \end{tabular}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    7   & 17 & & 398 & 298 \\
+    29  &  5 & & nstąpiły & nastąpiły \\
+    50  & 11 & & przepychały & przepychało \\
+    50  & 19 & & sześć & sześćdziesiąt \\
+    67  &  3 & & Kaitokud\^{o} & nad Kaitokud\^{o} \\
+    77  &  4 & & prądów & tych prądów \\
+    95  &  6 & & zamach & zamachem \\
+    116 & & 12 & 1887 & 1867 \\
+    123 & 17 & & ich właśnie & ich \\
+    123 & & 10 & to & o~tym to \\
+    146 &  4 & & 23~6475 & 236~475 \\
+    156 &  1 & & osiemnastowieczni & dziewiętnastowieczni \\
+    160 & 12 & & temat & łamach \\
+    166 & 10 & & legacji & delegacji \\
+    168 & & 5 & 265 & 264 \\
+    190 & 11 & & kich & ich \\
+    199 & & 7 & ,,kastowości % ''
+           & ,,kastowości'' \\
+    220 & &  4 & dawały & dodawały \\
+    323 & 22 & & ojczyzny & Japonii \\
+    326 & & 21 & główną & jednak główną \\
+    368 & &  7 & wstrzymywania & utrzymywania \\
+    380 & 25 & & pracy kluby & pracy, kluby \\
+    432 & 16 & & czterdzieści cztery & trzydzieści cztery \\
+    465 &  8 & & 56 & 256 \\
+    465 & & 18 & Tokyo1963 & Tokyo 1963 \\
+    \hline
+  \end{tabular}
+\end{center}
+\noi
+\StrWd{240}{7} \\
+\Jest gospodarczej i~militarnej przewagi \\
+\Pow  o~gospodarczą i~militarną przewagę \\
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ##################
+\Work{
+  Paul Johnson \\
+  ,,Narodziny nowoczesności'', \cite{JohnsonNarodzinyNowoczesnoci95} }
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    29  &  2 & & cali, członie & cali, o członie \\
+    142 &  1 & & Barbaji & Barbajowi \\
+    142 & & 14 & w nową operą & z nową operą \\
+    345 & 15 & & XIX & XVIII \\
+    345 & 18 & & od & na od \\
+    409 &  8 & & sposób & nie sposób \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ############################
+\newpage
+\Field{Biografie}
+
+\vspace{\spaceTwo} \vspace{\spaceThree}
+% ############################
+
+
+
+% ##################
+\Work{
+  Sławomir Cenckiewicz \\
+  ,,Anna Solidarność'', \cite{CenckiewiczAnnaSolidarnosc10} }
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    21 & 10 & & zajęłam & zajęła \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ##################
+\Work{
+  Masha Gessen \\
+  ,,Putin. Człowiek bez twarzy'',
+  \cite{GessenPutinCzlowiekBezTwarzy12} }
+
+
+\CenterTB{Uwagi}
+
+\start \StrWd{9}{6} Zamieszczony tu komentarz odnośnie słowa
+,,lustracja'', które ma wedle niego pochodzić z~greki, jest zapewne
+wynikiem niedbałości tłumacza. Polskie słowo ,,lustracja'', pochodzi
+najpewniej od słowa ,,lustro'', które wydaje~się w~ogóle nie związane
+z~greką. Prawdopodobnie ten fragment został przetłumaczony
+mechanicznie, bez~refleksji, że~w~języku polskim, w~przeciwieństwie
+do~oryginału, ten związek etymologiczny nie zachodzi.
+
+\vspace{\spaceFour}
+
+
+\start \Str{75--76} W~przedstawionej tu opowieści jest pewna
+niekonsekwencja. Na~75 stronie pisze, że~Putin był w~tłumie
+drezdeńczyków nacierających na budynek Stasi, czyli musiał
+znajdować~się na zewnątrz. Jednak na~następnej stronie pisze,
+że~wyszedł do owego tłumu na zewnątrz, więc musiał znajdować~się
+w~środku budynku. Nigdzie nie jest napisane, jak i~dlaczego opuścił
+tłum i~wszedł do siedziby Stasi.
+
+\vspace{\spaceFour}
+
+
+\start \Str{93} Sacharow urodził~się w~1921 r., Gorbaczow zaś w~1931,
+w~1989 mięli więc odpowiednio 68 i~58 lat. Nazwanie Gorbaczowa młody
+to pewne nadużycie, wynikające zapewne z~kontrastu między schorowany,
+bliski śmierci Sacharowem, a~pełnym energii Michaiłem.
+
+\vspace{\spaceFour}
+
+
+\start \Str{101} \tb{Akapit trzeci.} Powinno tu być jawniej napisane,
+że~wracamy do historii Putina.
+
+\vspace{\spaceFour}
+
+
+\start \tb{Tylna okładka, wiersz 5 (od dołu).} Masha Gessen
+urodziła~się w~1967~r. więc w~latach 1981--1991 miła od~14 do~24 lat,
+jest więc wysoce nieprawdopodobne, by~w~tym okresie pracowała
+w~Stanach Zjednoczonych. Zapewne chodziło o~to, że~wówczas tam
+mieszkała.
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    32 &  2 & & zdawali się nie & nie zdawali się \\
+    48 &  7 & & przed wyznaczeniem & po wyznaczeniu \\
+    59 & & 11 & założyciela & twórcy \\
+    63 &  4 & & karierze$^{ 34 }$ & karierze \\
+    63 &  6 & & n i c h''. & n i c h''$^{ 34 }$. \\
+    63 &  9 & & twarze$^{ 35 }$ & twarze \\
+    63 & 10 & & znaczenie''. & znaczenie''$^{ 35 }$. \\
+    63 & & 17 & ważnego$^{ 36 }$ & ważnego \\
+    63 & & 13 & KGB''. & KGB''$^{ 36 }$. \\
+    64 &  2 & & międzyludzkich<<$^{ 37 }$ & międzyludzkich<< \\
+    64 &  5 & & międzyludzkich'' & międzyludzkich''$^{ 37 }$ \\
+    65 &  4 & & przyjaciółko$^{ 40 }$ & przyjaciółko \\
+    78 &  5 & & robić$^{ 68 }$ & \\
+    78 &  7 & & błędy?'' & błędy?''$^{ 68 }$ \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ############################
+\newpage
+\Field{Eseje i~publicystyka}
+
+\vspace{\spaceTwo} \vspace{\spaceThree}
+% ############################
+
+
+
+% ##################
+\Work{ % Autor i tytuł dzieła
+  Andrzej Nowak \\
+  ,,Strachy i lachy. Przemiany polskiej pamięci 1982-2012'',
+  \cite{Nowak12} }
+
+
+\CenterTB{Uwagi}
+
+\start \Str{47} T.~S.~Eliot jest na tej stronie nazwany ,,wielkim
+poetą katolickim'', acz z~tego co wiem do Kościoła nigdy nie
+przyszedł, zamiast tego dołączył do jakiegoś wyznania
+anglokatolickiego. Zaś użycie przymiotnika ,,wielki'' w~odniesieniu to
+tego poety, którego twórczości nie da~się czytać, jest już na~pewno
+błędem.
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ##################
+\Work{ % Autor i tytuł dzieła
+  Andrzej Nowak \\
+  ,,Intelektualna historia III~RP. Rozmowy z~lat 1990--2012'',
+  \cite{NowakIntelektualnaHistoriaIIIRP13} }
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    195 &  6 & & pomocą & pomocy \\
+    579 & &  3 & osób. & osób, \\
+    580 & & 10 & od & do \\
+    665 &  7 & & The National Interest'' & ,,The National Interest'' \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+\noi \\
+\tb{Przednia okładka, wiersz 14.} \\
+\Jest \emph{ImperologicalStudies.APolishPerspective}(2011);
+\emph{Czaswalki} \\
+\Pow \emph{Imperological Studies. A Polish Perspective} (2011);
+\emph{Czas walki} \\
+\tb{Przednia okładka, wiersz 10 (od dołu).} \\
+\Jest \ldots w~Brnie \\
+\Pow  w~Brnie \\
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ##################
+\Work{ % Autor i tytuł dzieła
+  Andrzej Nowak \\
+  ,,Historia i~polityka'', \cite{NowakHistoriaIPolityka16} }
+
+
+\CenterTB{Uwagi}
+
+\start \Str{} Nowak popełni tu pewien błąd pisząc o~grze komputerowej
+,,Dzikie Pola'', jest to standardowa stołowa gra RPG i~nie ma nic
+wspólnego z~komputerem.
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    6   &  2 & & 448 & 484 \\
+    18  & 18 & & ,, kult & ,,kult \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    99  & &  2 & (1918--1920) & (1918--2008) \\
+    133 & & 23 & 1981 & 1918 \\
+    135 & &  5 & 361 (przytoczony & 361. Przytoczony \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+% Bibliografia
+\bibliographystyle{alpha} \bibliography{Bibliography}{}
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}

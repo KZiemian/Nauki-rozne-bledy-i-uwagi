@@ -1,0 +1,63 @@
+% ####################################################################
+% Pakiet z skrótami różnych komend LaTeXa.
+
+% Na razie większych problemów nie stwierdzono
+% ####################################################################
+
+
+% --------------------------------------------------------------------
+% Ogólne komendy zdefiniowane dla ułatwienia pracy z LaTeXem
+% --------------------------------------------------------------------
+
+% ##########
+% Definicje odstępów w tekście
+\newcommand{\spaceOne}{3em}
+\newcommand{\spaceTwo}{2em}
+\newcommand{\spaceThree}{1em}
+\newcommand{\spaceFour}{0.5em}
+
+% ##########
+% Skróty do często używanych komend
+\newcommand{\ld}{\ldots}
+\newcommand{\tbs}{\textbackslash} % Backslash w tekście
+
+% ##########
+% Podstawowa komendy do edycja tekstu
+\newcommand{\tb}{\textbf}
+\newcommand{\noi}{\noindent}
+
+% Numeracja stron i rozdziałów
+\newcommand{\Str}[1]{\tb{Str. #1.}}
+\newcommand{\StrWg}[2]{\tb{Str. #1, wiersz #2.}}
+\newcommand{\StrWd}[2]{\tb{Str. #1, wiersz #2 (od dołu).}}
+
+% Do poprawiania błędów
+\newcommand{\start}{\noi \tb{--} {}}
+\newcommand{\Dow}{\tb{Dowód}} % To niezbyt pasuje do opisu POPRAW
+\newcommand{\Jest}{\tb{Jest: }}
+\newcommand{\Pow}{\tb{Powinno być: }}
+
+% Do wyróżniania miejsca w tekście
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\Dok}{{\color{red} Dokończ.}}
+\newcommand{\Pop}{{\color{red} Popraw.}}
+\newcommand{\Prob}{{\color{red} Problem.}}
+
+\newcommand{\Pyt}{{\color{red} Pytanie.}}
+\newcommand{\Prze}{{\color{red} Przemyśl.}}
+
+% Nagłówki
+\newcommand{\Center}[1]{\begin{center} #1 \end{center}}
+\newcommand{\CenterTB}[1]{\Center{\tb{#1}}}
+
+\newcommand{\Main}[1]{ \begin{center} {\LARGE \tb{#1} } \end{center} }
+\newcommand{\Field}[1]{ \begin{center} {\Large \tb{#1} } \end{center} }
+\newcommand{\Work}[1]{ \begin{center} {\large \tb{#1}} \end{center} }
+
+
+
+
+
+% ##########
+% Do hyperlinków
+\newcommand{\colorlink}[1]{\href{#1}{\color{orange} link}}
