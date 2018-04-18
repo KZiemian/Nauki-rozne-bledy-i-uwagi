@@ -1,0 +1,475 @@
+% Autor: Kamil Ziemian
+
+% --------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% --------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern} % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ----------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ----------------------------
+\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
+\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
+\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+% wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ----------------------------
+% MARGINS
+% ----------------------------
+\setmarginsrb
+{ 0.7in} % left margin
+{ 0.6in} % top margin
+{ 0.7in} % right margin
+{ 0.8in} % bottom margin
+{  20pt} % head height
+{0.25in} % head sep
+{   9pt} % foot height
+{ 0.3in} % foot sep
+
+
+
+% ----------------------------
+% Często używane pakiety
+% ----------------------------
+\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+
+
+% --------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% --------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ----------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ----------------------------
+\usepackage{latexshortcuts}
+
+
+
+% ----------------------------
+% Ustawienia różnych parametrów tekstu
+% ----------------------------
+\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
+
+
+
+% ----------------------------
+% Pakiet "hyperref"
+% Polecano by umieszczać go na końcu preambuły.
+% ----------------------------
+\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+% ######################################
+\Main{Kultura ogólna --~błędy i~uwagi}
+
+\vspace{\spaceTwo} \vspace{\spaceThree}
+% ######################################
+
+
+
+% ##################
+\Work{ % Autor i tytuł dzieła
+  E. Michael Jones \\
+  ,,Zdeprawowani moderniści'',
+  \cite{EMichaelJonesZdeprawowaniModernisci14} }
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    16  & & 19 & Claya & Gaya \\
+    24  &  4 & & człowieczeństwa & człowieczeństwa'' \\
+    25  & 11 & & Samoa & ,,Samoa  % ''
+    \\
+    25  & & 14 & wyłączności & Wyłączności \\
+    27  & &  1 & beztroskich>> & beztroskich>>'' \\
+    29  & 12 & & roku & roku. \\
+    30  & &  9 & <<młodej studentki''  % >>
+           & <<młodej studentki>> \\
+    30  & &  8 & bawełniane sukienki>> & <<bawełniane sukienki>> \\
+    37  & 11 & & wówczas'' & wówczas \\
+    37  & & 16 & niego & z~niego \\
+    38  & &  2 & zbagatelizowałaś, & zbagatelizowałaś. \\
+    49  & 12 & & za & z \\
+    56  & 17 & & którym & których \\
+    56  &  3 & & Wilberforce'a** & Wilberforce'a* \\
+    67  & & 13 & \emph{Whay} & \emph{What} \\
+    71  & 14 & & ,, Wartości  % ''
+           & ,,Wartości  % ''
+    \\
+    85  & & 13 & \emph{lalek} & \emph{lalek}'' \\
+    91  & &  4 & a oni & ,,a oni  % ''
+    \\
+    99  &  9 & & maja & mają \\
+    101 & & 11 & naukowym & z naukowym \\
+    103 & & 13 & ATA & ATS \\
+    105 & 19 & & mniej silna & silniejsza \\
+    107 & 19 & & Voris & Vorisem \\
+    108 &  2 & & rzeczywistości & o rzeczywistości \\
+    111 & 21 & & Indiana, & Indiana. \\
+    111 & & 20 & w na & na \\
+    119 & & 11 & oszukiwałam''$^{ 2 }$.W & oszukiwałam''$^{ 2 }$. W \\
+    122 & 20 & & od & do \\
+    161 & &  2 & wyraźn0e & wyraźne \\
+    165 & &  3 & ktrego & którego \\
+    \hline
+  \end{tabular}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    171 & 12 & & zajmującysię & zajmujący~się \\
+    186 & &  5 & umożliwiła & uniemożliwiła \\
+    199 & & 15 & wiary & utraty wiary \\
+    200 & &  1 & Mogło & Mogła \\
+    201 & & 14 & roku & roku. \\
+    205 & & 19 & Laetesa & Klaudiusza \\
+    207 &  7 & & taka & taką \\
+    211 & & 18 & ,,Szczyt  % ''
+           & Szczyt \\
+    214 &  5 & & [ w~nagrodę] & [w~nagrodę] \\
+    214 &  6 & & najwyraźniej .. & najwyraźniej\ld \\
+    217 & 22 & & Fread & Freuda \\
+    218 & &  2 & od~z & z \\
+    226 & 10 & & Mannung & Manning \\
+    228 & & 17 & pytanie:, & pytanie: \\
+    230 & 12 & & 1963 roku & 1963 roku. \\
+    230 & 13 & & 1425 & 1525 \\
+    237 & &  4 & 560 & 1560 \\ \hline
+  \end{tabular}
+\end{center}
+\noi \\
+\StrWd{17}{10} \\
+\Jest nieczystości pierworodnej córki jest ślepotą ducha. \\
+\Pow pierworodną córką nieczystości jest ślepota ducha. \\
+\StrWg{201}{8} \\
+\Jest otorbił~się w~kokonie psychoanalizy samego siebie\ldots \\
+\Pow otorbił samego siebie w~kokonie psychoanalizy\ldots \\
+\StrWg{209}{20} \\
+\Jest \emph{Gdyby potrafił być perwersyjny, byłby zdrowy, podobnie jak
+  ojciec$^{ 202 }$}. \\
+\Pow ,,Gdyby potrafił być perwersyjny, byłby zdrowy,
+podobnie jak ojciec''$^{ 202 }$. \\
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ##################
+\Work{ % Redaktor i tytuł dzieła
+  Red. Piotr Kletowski \\
+  ,,Europejskie kino gatunków'',
+  \cite{RedKletowskiEuropejskieKinoGatunkow16} }
+
+
+\CenterTB{Uwagi}
+
+\start \StrWd{129}{1} W~filmie templariuszom nie wyłupiono oczu, lecz
+stracono i~powieszono na drzewach. Tam dzikie ptaki wyjadły ich oczy.
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    87 & 11 & & wybraną & jedną wybraną \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+\noi
+\StrWg{160}{12} \\
+\Jest \emph{Za kilka dolarów więcej} Monco \\
+\Pow filmu \emph{Dobry, zły i~brzydki} Blondie \\
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ####################
+\Work{
+  Zdzisław Krasnodębski \\
+  ,,Zwycięzca po~przejściach. Zebrane eseje i~szkice~V'',
+  \cite{KrasnodebskiZwyciezkaPoPrzejsciach12} }
+
+
+\CenterTB{Uwagi}
+
+\start \Str{317} Pominięto miejsce i~datę pierwszej publikacji
+artykułu \emph{Nie udawaj Greka, Polsko!}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ####################
+\Work{ % Autor i tytuł dzieła
+  Jan Sowa \\
+  ,,Fantomowe ciało króla. Peryferyjne zmagania z~nowoczesną formą'',
+  \cite{SowaFantomoweCialoKrola11} }
+
+
+\CenterTB{Uwagi}
+
+\start \StrWg{36}{15} Zdanie ,,jego aktywność ściśle wiąże~się
+związana ze społeczną\ldots'', powinno brzmieć ,,jego aktywność ściśle
+wiąże~się ze społeczną\ldots'' lub ,,jego aktywność jest ściśle
+związana ze społeczną\ldots''. Choć na podstawie tekstu, nie można
+wybrać wersji zamierzonej przez autora, nie~jest to jednak problemem,
+bo obie przekazują tą samą treść.
+
+\vspace{\spaceFour}
+
+
+\start \StrWg{63}{5--9} Zawarty tu tekst, jest źle skonstruowany
+gramatycznie.
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    92  & &  6 & 1140 & 1440 \\
+    102 & 11 & & a bo & bo \\
+    118 &  8 & & dawały & nie dawały \\
+    300 & 17 & & mogły & mogło \\
+    362 & 12 & & torrusa & torusa \\
+    367 & 15 & & c\tb{oś} & \tb{coś} \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% \Work{
+% Paul Johnson\\
+% ,,Narodziny nowoczesności'', \cite{Joh95}.}
+
+
+% \CenterTB{Błędy}
+
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu &  &  \\ \hline
+%     & & & & \\
+%     29 & 2 & & cali, członie & cali, o członie \\
+%     142 & 1 & & Barbaji & Barbajowi \\
+%     142 & & 14 & w nową operą & z nową operą \\
+%     345 & 15 & & XIX & XVIII \\
+%     345 & 18 & & od & na od \\
+%     409 & 8 & & sposób & nie sposób \\ \hline
+%   \end{tabular}
+% \end{center}
+
+
+
+
+
+
+% \Work{
+% J. Kofman, W. Roszkowski \\
+% ,,Transformacja i postkomunizm'', \cite{KR99}.}
+
+
+% \CenterTB{Błędy}
+
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu &  &  \\ \hline
+%     & & & & \\
+%     10 & & 17 & jedynie & jedynej \\
+%     13 & & 4 & o ekspansji & do ekspansji \\
+%     16 & 9 & & marntrawstwem & marnotrawstwem \\
+%     & & & & \\
+%     & & & &  \\ \hline
+%   \end{tabular}
+% \end{center}
+
+
+
+
+
+% \Work{
+% Red. A. Nowak \\
+% ,,Historie Polski w~XIX wieku. Tom I: Kominy, ludzie i~obłoki:
+% modernizacja i~kultura.'', \cite{HPXIX1}.}
+
+% % Uwagi:
+% % \begin{itemize}
+% % \item[--] \Str{45} T.~S.~ Eliot jest na tej stronie nazwany
+% %   ,,wielkim poetą katolickim'', acz z~tego co wiem do Kościoła
+% %   nigdy
+% %   nie przyszedł, zamiast tego dołączył do jakiegoś wyznania
+% %   anglokatolickiego. Zaś przymiotnik ,,wielki'' w~odniesieniu to
+% %   tego poety, którego twórczości nie da~się czytać, jest już
+% %   na~pewno błędny.
+% % \end{itemize}
+
+% \CenterTB{Błędy}
+
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz}& Jest & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu &  &  \\ \hline
+%     & & & & \\
+%     16 & & 15 & równości równość & równości \\ \hline
+%   \end{tabular}
+% \end{center}
+
+
+
+
+
+
+% \Work{
+% A. K. Wróblewski \\
+% ,,Historia fizyki'', \cite{Wro06}.}
+
+
+% Błędy:\\
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     %     & \multicolumn{2}{c|}{} & & \\
+%       & \multicolumn{2}{c|}{Wiersz} & & \\ \cline{2-3}
+%       %       Strona & Od góry & Od dołu & Jest & Powinno być \\
+%       & (kolumna) & (kolumna) & & \\ \hline
+%       & & & & \\
+%       %       203 & 3 (2) & & Jacob 'sGravesande'a & Jacob's
+%       %       Gravesande'a \\
+%       & & & & \\ \hline
+%   \end{tabular}
+% \end{center}
+
+
+
+
+% ########################################
+\newpage
+\Field{Kino, film -- błędy i~uwagi}
+
+\vspace{\spaceThree}
+% ########################################
+
+
+% ####################
+\Work{ % Autor i tytuł dzieła
+   Tadeusz Szczepański \\
+  ,,Zwierciadło Bergmana'', \cite{SzczepanskiZwierciadloBergmana07} }
+
+
+% \CenterTB{Uwagi}
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    31  & & 15 & zamiłowania ch & zamiłowaniach \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% #####################################################################
+% #####################################################################
+% Bibliografia
+\bibliographystyle{alpha} \bibliography{Bibliography}{}
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
