@@ -3,29 +3,29 @@
 % --------------------------------------------------------------------
 % Podstawowe ustawienia i pakiety
 % --------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
+\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
 % sposoby używania LaTeXa. Więcej jest w l2tabu English version.
 \documentclass[a4paper,11pt]{article}
 % {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
 % w języku angielskim.
-\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, co daje dostęp
 % do polskich znaków.
-\usepackage{lmodern} % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
 
 
 
 % ----------------------------
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
 % ----------------------------
-\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
-\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
+\usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
 % grafiki.
-\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
-\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+\usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
+\usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
 % wprowadzane bezpośrednio w tekście.
-\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
+\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
 % ----------------------------
 % MARGINS
@@ -45,8 +45,8 @@
 % ----------------------------
 % Często używane pakiety
 % ----------------------------
-\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+\usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
 % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
@@ -74,7 +74,7 @@
 % ----------------------------
 % Ustawienia różnych parametrów tekstu
 % ----------------------------
-\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
+\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
 % wierszami w tabelach.
 
 
@@ -83,7 +83,7 @@
 % Pakiet "hyperref"
 % Polecano by umieszczać go na końcu preambuły.
 % ----------------------------
-\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
 % do bibliografii na hiperlinki.
 
 
@@ -206,17 +206,25 @@ podobnie jak ojciec''$^{ 202 }$. \\
 
 
 
+% ######################################
+\newpage
+\Field{Kultura japońska}
+
+\vspace{\spaceThree}
+% ######################################
+
+
 % ##################
-\Work{ % Redaktor i tytuł dzieła
-  Red. Piotr Kletowski \\
-  ,,Europejskie kino gatunków'',
-  \cite{RedKletowskiEuropejskieKinoGatunkow16} }
+\Work{ % Autor i tytuł dzieła
+  Renata Iwicka \\
+  ,,Źródła klasycznej demonologii japońskiej'',
+  \cite{IwickaZrodlaKlasycznejDemonologiJaponskiej17} }
 
 
-\CenterTB{Uwagi}
+% \CenterTB{Uwagi}
 
-\start \StrWd{129}{1} W~filmie templariuszom nie wyłupiono oczu, lecz
-stracono i~powieszono na drzewach. Tam dzikie ptaki wyjadły ich oczy.
+% \vspace{\spaceFour}
+
 
 \CenterTB{Błędy}
 \begin{center}
@@ -227,18 +235,15 @@ stracono i~powieszono na drzewach. Tam dzikie ptaki wyjadły ich oczy.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    87 & 11 & & wybraną & jedną wybraną \\
     % & & & & \\
+    13  & & 6 & \emph{Yokai} Database: & \emph{Yokai Database}: \\
+    % Nad ,,o'' w ,,Yokai'' powinna być kreska akcentu.
     % & & & & \\
     % & & & & \\
     % & & & & \\
     \hline
   \end{tabular}
 \end{center}
-\noi
-\StrWg{160}{12} \\
-\Jest \emph{Za kilka dolarów więcej} Monco \\
-\Pow filmu \emph{Dobry, zły i~brzydki} Blondie \\
 
 \vspace{\spaceTwo}
 
@@ -264,7 +269,7 @@ artykułu \emph{Nie udawaj Greka, Polsko!}
 
 
 
-% ####################
+% ##################
 \Work{ % Autor i tytuł dzieła
   Jan Sowa \\
   ,,Fantomowe ciało króla. Peryferyjne zmagania z~nowoczesną formą'',
@@ -435,6 +440,46 @@ gramatycznie.
 
 \vspace{\spaceThree}
 % ########################################
+
+
+% ##################
+\Work{ % Redaktor i tytuł dzieła
+  Red. Piotr Kletowski \\
+  ,,Europejskie kino gatunków'',
+  \cite{RedKletowskiEuropejskieKinoGatunkow16} }
+
+
+\CenterTB{Uwagi}
+
+\start \StrWd{129}{1} W~filmie templariuszom nie wyłupiono oczu, lecz
+stracono i~powieszono na drzewach. Tam dzikie ptaki wyjadły ich oczy.
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    87 & 11 & & wybraną & jedną wybraną \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+\noi
+\StrWg{160}{12} \\
+\Jest \emph{Za kilka dolarów więcej} Monco \\
+\Pow filmu \emph{Dobry, zły i~brzydki} Blondie \\
+
+\vspace{\spaceTwo}
+
+
+
 
 
 % ####################
