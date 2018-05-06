@@ -64,7 +64,7 @@
 \usepackage{upgreek}  % Ładniejsze greckie litery
 % Przykładowa składnia: pi = \uppi
 \usepackage{slashed}  % Pozwala w prosty sposób pisać slash Feynmana.
-\usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
+% \usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
 % na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
 % nie wiem.
 
@@ -1034,7 +1034,7 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     215 &  2 & & $R$ & $\R$ \\
     215 &  3 & & $R$ & $\R$ \\
     215 & 15 & & $i_{ G }$ & $i_{ G }^{ -1 }$ \\
-    215 & 16 & & $\X( M )$ & $\X( G )$ \\
+    215 & 16 & & $\Xc( M )$ & $\Xc( G )$ \\
     216 &  1 & & $h_{ 2 }h_{ 2 }$ & $h_{ 1 }h_{ 2 }$ \\
     216 &  5 & & $i_{ G }$ & $i^{ -1 }_{ G }$ \\
     216 &  6 & & $i_{ G }$ & $i^{ -1 }_{ G }$ \\
@@ -1051,10 +1051,8 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     219 &  9 & & $j_{ o }^{ r } \ga_{ 0 }$ & $j_{ 0 }^{ r } \ga$ \\
     219 & & 13 & $j_{ 0 }^{ r } \ga_{ 1 } = j_{ 0 }^{ r } \ga_{ 2 }$
            & $\pi^{ r } ( \ga_{ 1 } ) = \pi^{ r }( \ga_{ 2 } )$ \\
-    219 & & 12 & $j^{ r }_{ o } \ga_{ 2 } = j^{ r }_{ o } \ga_{ 1 }
-                 \cdot j^{ r } \xi$
-           & $j^{ r }_{ 0 } \ga_{ 2 } = j^{ r }_{ 0 } \ga_{ 1 } \cdot
-             j^{ r }_{ 0 } \xi$ \\
+    219 & & 12 & $j^{ r }_{ o } \ga_{ 2 } = j^{ r }_{ o } \ga_{ 1 } \cdot j^{ r } \xi$
+           & $j^{ r }_{ 0 } \ga_{ 2 } = j^{ r }_{ 0 } \ga_{ 1 } \cdot j^{ r }_{ 0 } \xi$ \\
     219 & &  7 & $\wt{ \vp }$ & $\wt{ \vp }^{ r }$ \\
     220 &  4 & & $j^{ r } \xi$ & $j^{ r }_{ 0 } \xi$ \\
     220 &  5 & & $j^{ r } \xi$ & $j^{ r }_{ 0 } \xi$ \\
@@ -1093,28 +1091,29 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     225 & &  7 & $p_{ 1 } : U \ti G$ & $p_{ 1 } : U \ti \wt{ G }$ \\
     225 & &  7 & $p_{ 2 } : U \ti G$ & $p_{ 2 } : U \ti \wt{ G }$ \\
     227 & & 15 & $( p. f )$ & $( p, f )$ \\
-    227 & &  6 & $( \s( x ), f ) )$ & $( \s( x ), f )$ \\
-    227 & &  6 & $( \s( x ), f' ) )$ & $( \s( x ), f' )$ \\
+    227 & &  6 & $( \sigma( x ), f ) )$ & $( \sigma( x ), f )$ \\
+    227 & &  6 & $( \sigma( x ), f' ) )$ & $( \sigma( x ), f' )$ \\
     227 & &  5 & $\la_{ \xi }( f )$ & $\la_{ \xi^{ -1 } }( f )$ \\
-    228 &  2 & & $\wt{ \s }^{ -1 }$ & $\wt{ \s }'^{ -1 }$ \\
-    228 &  3 & & $\wt{ \s' }^{ -1 }$ & $\wt{ \s }'^{ -1 }$ \\
+    228 &  2 & & $\wt{ \sigma }^{ -1 }$ & $\wt{ \sigma }'^{ -1 }$ \\
+    228 &  3 & & $\wt{ \sigma' }^{ -1 }$ & $\wt{ \sigma }'^{ -1 }$ \\
     228 & & 10 & $\pi( y )$ & $\pi_{ E }( y )$ \\
     229 & & 16 & $L( M 4 )$ & $L( M )$ \\
     229 & & 10 & $\Phi( p, f' )$ & $\Phi( p', f' )$ \\
-    229 & &  8 & $f'^{ i } = f^{ j } A^{ i }_{ j }$ & $f^{ i } = f'^{ j }
-                                                      A^{ i }_{ j }$ \\
+    229 & &  8 & $f'^{ i } = f^{ j } A^{ i }_{ j }$
+           & $f^{ i } = f'^{ j } A^{ i }_{ j }$ \\
     231 &  8 & & grupy liniowej $G$ & grupy $G$ \\
-    231 & 12 & & $\Phi^{ -1 }_{ p }( \s( \pi( p ) )$
-           & $\Phi^{ -1 }_{ p }( \s( \pi( p ) ) )$ \\
-    231 & & 17 & $\Phi^{ -1 }_{ p \cdot \xi }( \s( \pi( p \cdot \xi ) )$
-           & $\Phi^{ -1 }_{ p \cdot \xi }( \s( \pi( p \cdot \xi ) ) )$ \\
-    231 & & 17 & $\Phi^{ -1 }_{ p \cdot \xi }( \s( \pi( p ) )$
-           & $\Phi^{ -1 }_{ p \cdot \xi }( \s( \pi( p ) ) )$ \\
-    231 & & 16 & $\Phi^{ -1 }_{ p \cdot \xi }( \s( \pi( p ) )$
-           & $\Phi^{ -1 }_{ p \cdot \xi }( \s( \pi( p ) ) )$ \\
-    231 & & 15 & $\Phi^{ -1 }_{ p }( \s( \pi( p ) )$
-           & $\Phi^{ -1 }_{ p }( \s( \pi( p ) ) )$ \\
-    231 & & 15 & $A_{ \s } \circ A_{ \xi }$ & $A_{ \s } \circ R_{ \xi }$ \\
+    231 & 12 & & $\Phi^{ -1 }_{ p }( \sigma( \pi( p ) )$
+           & $\Phi^{ -1 }_{ p }( \sigma( \pi( p ) ) )$ \\
+    231 & & 17 & $\Phi^{ -1 }_{ p \cdot \xi }( \sigma( \pi( p \cdot \xi ) )$
+           & $\Phi^{ -1 }_{ p \cdot \xi }( \sigma( \pi( p \cdot \xi ) ) )$ \\
+    231 & & 17 & $\Phi^{ -1 }_{ p \cdot \xi }( \sigma( \pi( p ) )$
+           & $\Phi^{ -1 }_{ p \cdot \xi }( \sigma( \pi( p ) ) )$ \\
+    231 & & 16 & $\Phi^{ -1 }_{ p \cdot \xi }( \sigma( \pi( p ) )$
+           & $\Phi^{ -1 }_{ p \cdot \xi }( \sigma( \pi( p ) ) )$ \\
+    231 & & 15 & $\Phi^{ -1 }_{ p }( \sigma( \pi( p ) )$
+           & $\Phi^{ -1 }_{ p }( \sigma( \pi( p ) ) )$ \\
+    231 & & 15 & $A_{ \sigma } \circ A_{ \xi }$
+           & $A_{ \sigma } \circ R_{ \xi }$ \\
     231 & & 10 & \emph{grupy liniowej $G$} & \emph{grupy $G$} \\
     231 & &  5 & $\Psi$ & $\Phi$ \\
     231 & &  1 & $\Psi$ & $\Phi$ \\
@@ -1143,10 +1142,10 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     234 & 14 & & $\GL( g, \R )$ & $\GL( q, \R )$ \\
     236 & 21 & & $i_{ g }( x )$ & $i_{ g }( v )$ \\
     236 & 10 & & $A A^{ * }$ & $A^{ * } A$ \\
-    236 & & 1 & $A J_{ q } A^{ * }$ & $A^{ * } J_{ q } A$ \\
-    237 & & 8 & $L^{ + }( M )$ & $L^{ + }M$ \\
-    237 & & 3 & $L^{ + }( M )$ & $L^{ + }M$ \\
-    238 &  3 & & $\A^{ * }$ & $A^{ * }$ \\
+    236 & &  1 & $A J_{ q } A^{ * }$ & $A^{ * } J_{ q } A$ \\
+    237 & &  8 & $L^{ + }( M )$ & $L^{ + }M$ \\
+    237 & &  3 & $L^{ + }( M )$ & $L^{ + }M$ \\
+    238 &  3 & & $\Ac^{ * }$ & $Ac^{ * }$ \\
     239 & 15 & & $\GL( n, \C )$ & $\GL( n, \C )$ \\
     239 & 20 & & $\GL( n, \C )$ & $\GL( n, \C )$ \\
     240 & & 12 & $( M. G )$ & $( M, G )$ \\
@@ -1155,7 +1154,7 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     240 & &  8 & $( M. G' )$ & $( M, G' )$ \\
     243 & &  3 & włókna & przestrzeni \\
     244 & 15 & & o o jednym & to o jednym \\
-    244 & & 6 & $i_{ G }$ & $i^{ -1 }_{ G }$ \\
+    244 & &  6 & $i_{ G }$ & $i^{ -1 }_{ G }$ \\
     245 &  3 & & $\Ad_{ xi^{ -1 } }$ & $\Ad_{ \xi^{ -1 } }$ \\
     245 & 12 & & $d_{ p } \xi$ & $d_{ p } R_{ \xi }$ \\
     245 & 12 & & $i_{ G }$ & $i_{ G }^{ -1 }$ \\
@@ -1166,11 +1165,11 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     245 & & 16 & $i_{ G }$ & $i_{ G }^{ -1 }$ \\
     245 & &  2 & $\vp_{ * } \om$ & $\vp^{ * } \om$ \\
     245 & &  2 & $U \ti G$ & $M \ti G$ \\
-    246 &  9 & & $\sup \la_{ \io }$ & $U_{ \io }$ \\
+    246 &  9 & & $\sup \la_{ \iota }$ & $U_{ \iota }$ \\
     246 & 10 & & $\sup$ & $\supp$ \\
     246 & 19 & & $\sup$ & $\supp$ \\
-    247 & & 16 & $\om )_{ \s( x ) }$ & $\om_{ \s( x ) }$ \\
-    247 & & 15 & $\om )_{ \s }$ & $\om_{ \s }$ \\
+    247 & & 16 & $\om )_{ \sigma( x ) }$ & $\om_{ \sigma( x ) }$ \\
+    247 & & 15 & $\om )_{ \sigma }$ & $\om_{ \sigma }$ \\
     \hline
   \end{tabular}
 
@@ -1184,13 +1183,13 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     247 & & 12 & $i_{ G }$ & $i_{ G }^{ -1 }$ \\
     247 & &  4 & $h^{ x }$ & $h^{ * }$ \\
     247 & &  4 & $, .$ & $.$ \\
-    248 & 14 & & $( i_{ G } \circ ( \rho_{ \s( x ) } )^{ -1 }$
-           & $i_{ G }^{ -1 } \circ ( d_{ e }\rho_{ \s( x ) } )^{ -1 }$ \\
+    248 & 14 & & $( i_{ G } \circ ( \rho_{ \sigma( x ) } )^{ -1 }$
+           & $i_{ G }^{ -1 } \circ ( d_{ e }\rho_{ \sigma( x ) } )^{ -1 }$ \\
     248 & 15 & & $( M, g )$ & $( M, G )$ \\
     248 & 17 & & $( M, g )$ & $( M, G )$ \\
     248 & 18 & & $( M, g )$ & $( M, G )$ \\
-    249 &  5 & & $TP.\L(G)$ & $TP, \L(G)$ \\
-    250 & & 6 & $R_{ \xi }^{ * }$ & $( R_{ \xi } )_{ * }$ \\
+    249 &  5 & & $TP.\Lc(G)$ & $TP, \Lc(G)$ \\
+    250 & &  6 & $R_{ \xi }^{ * }$ & $( R_{ \xi } )_{ * }$ \\
     251 & 15 & & \emph{Lie} & \emph{Liego} \\
     251 & 18 & & $t = o$ & $t = 0$ \\
     251 & &  9 & $M.G$ & $M, G$ \\
@@ -1198,11 +1197,11 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     252 & 12 & & $G):$ & $G).$ \\
     252 & 14 & & $G)$ & $G).$ \\
     252 & 15 & & $G)$ & $G).$ \\
-    252 & 18 & & $\rho( \xi^{ -1 } \circ \om$ & $\rho( \xi^{ -1 } )
-                                                \circ \om$ \\
-    252 & & 4 & $( LM 0$ & $( LM )$ \\
-    253 & 3 & & $T_{ X }$ & $T_{ x }M$ \\
-    253 & 6 & & $d_{ p } \pi( v_{ i } ) = X_ { i }$
+    252 & 18 & & $\rho( \xi^{ -1 } \circ \om$
+           & $\rho( \xi^{ -1 } ) \circ \om$ \\
+    252 & &  4 & $( LM 0$ & $( LM )$ \\
+    253 &  3 & & $T_{ X }$ & $T_{ x }M$ \\
+    253 &  6 & & $d_{ p } \pi( v_{ i } ) = X_ { i }$
            & $d_{ p } \pi( X_{ i }) = v_ { i }$ \\
     253 & 15 & & $( LM 0$ & $( LM )$ \\
     253 & & 18 & $T_{ X }$ & $T_{ x }M$ \\
@@ -1212,14 +1211,14 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     253 & &  2 & $( 1, k + 1 )$. & $( 1, k + 1 )$, \\
     254 &  3 & & $ij$ & $i, j$ \\
     254 & 10 & & $T_{ X }$ & $T_{ x }M$ \\
-    254 & 14 & & $d_{ p }\pi( V_{ i } ) = X_{ i }$ & $d_{ p }\pi( X_{ i } )
-                                                     = V_{ i }$ \\
-    254 & & 10 & $K_{ x }( v_{ 1 }, \ld, v_{ k } )$ & $K_{ x }( V_{ 1 },
-                                                      \ld, V_{ k } )$ \\
-    254 & &  9 & $d_{ p }\pi( X_{ i } ) = v_{ i }$ & $d_{ p }\pi( X_{ i } )
-                                                     = V_{ i }$ \\
-    254 & &  2 & $K_{ x }( v_{ 1 }, \ld, v_{ k } )$ & $K_{ x }( V_{ 1 },
-                                                      \ld, V_{ k } )$ \\
+    254 & 14 & & $d_{ p }\pi( V_{ i } ) = X_{ i }$
+           & $d_{ p }\pi( X_{ i } ) = V_{ i }$ \\
+    254 & & 10 & $K_{ x }( v_{ 1 }, \ld, v_{ k } )$
+           & $K_{ x }( V_{ 1 }, \ld, V_{ k } )$ \\
+    254 & &  9 & $d_{ p }\pi( X_{ i } ) = v_{ i }$
+           & $d_{ p }\pi( X_{ i } ) = V_{ i }$ \\
+    254 & &  2 & $K_{ x }( v_{ 1 }, \ld, v_{ k } )$
+           & $K_{ x }( V_{ 1 }, \ld, V_{ k } )$ \\
     254 & & 15 & $) )^{ i }_{ j }$ & $)^{ i }_{ j }$ \\
     254 & & 14 & $) )^{ i }_{ j }$ & $)^{ i }_{ j }$ \\
     254 & &  9 & $Ad_{ \xi^{ -1 } }$ & $\Ad_{ \xi^{ -1 } }$ \\
@@ -1240,36 +1239,36 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
            & $( ( R_{ a_{ t } } )_{ * } \psi( X^{ H } ) )_{ p }$ \\
     259 & & 14 & $( M. G )$ & $( M, G )$ \\
     260 & &  7 & many & mamy \\
-    261 &  8 & & $\wt{ \s' }$ & $\wt{ \s }'$ \\
+    261 &  8 & & $\wt{ \sigma' }$ & $\wt{ \sigma }'$ \\
     262 & 11 & & $\Phi'( p. f' )$ & $\Phi'( p, f' )$ \\
     262 & 11 & & $\Phi''( p. f'' )$ & $\Phi''( p, f'' )$ \\
     262 & & 17 & $\ul{ E' }$ & $\ul{ E }'$ \\
     262 & & 17 & $\ul{ E'' }$ & $\ul{ E }''$ \\
-    262 & & 16 & $( \s', \s'' )_{ = }$
-           & $( \s', \s'' ) ) =$ \\
+    262 & & 16 & $( \sigma', \sigma'' )_{ = }$
+           & $( \sigma', \sigma'' ) ) =$ \\
     262 & &  8 & $\ul{ E' }$ & $\ul{ E }'$ \\
     262 & &  8 & $\ul{ E'' }$ & $\ul{ E }''$ \\
-    261 & &  7 & $( \s'. \s'' )$ & $( \s', \s'' )$ \\
-    262 & &  6 & $( \wt{ \s' }, \wt{ \s'' ) }$
-           & $( \wt{ \s }', \wt{ \s }'' )$ \\
-    262 & &  6 & $\wt{ \s' }$ & $\wt{ \s }'$ \\
-    262 & &  6 & $\wt{ \s'' }$ & $\wt{ \s }''$ \\
+    261 & &  7 & $( \sigma'. \sigma'' )$ & $( \sigma', \sigma'' )$ \\
+    262 & &  6 & $( \wt{ \sigma' }, \wt{ \sigma'' ) }$
+           & $( \wt{ \sigma }', \wt{ \sigma }'' )$ \\
+    262 & &  6 & $\wt{ \sigma' }$ & $\wt{ \sigma }'$ \\
+    262 & &  6 & $\wt{ \sigma'' }$ & $\wt{ \sigma }''$ \\
     266 & 19 & & $[ 0. 1 ]$ & $[ 0, 1 ]$ \\
     266 & 20 & & $[ 0. 1 ]$ & $[ 0, 1 ]$ \\
     266 & & 20 & $[ 0. 1 ]$ & $[ 0, 1 ]$ \\
     267 & 8 & & $ad_{ \xi^{ -1 } }$ & $\ad_{ \xi^{ -1 } }$ \\
     267 & & 17 & $\xi_{ \ga^{ - 1 } \cdot \xi_{ \om } \cdot \xi_{ \ga } }$
            & $\xi_{ \ga^{ - 1 } \cdot \om \cdot \ga }$ \\
-    267 & &  9 & $\Psi( p ) / \Psi_{ 0 }( p )$ & $\Phi( p ) /
-                                                 \Phi_{ 0 }( p )$ \\
+    267 & &  9 & $\Psi( p ) / \Psi_{ 0 }( p )$
+           & $\Phi( p ) / \Phi_{ 0 }( p )$ \\
     267 & &  7 & $\Psi_{ 0 }( p )$ & $\Phi_{ 0 }( p )$ \\
-    267 & &  6 & $\Psi( p ) / \Psi_{ 0 }( p )$ & $\Phi( p ) /
-                                                 \Phi_{ 0 }( p )$ \\
-    267 & &  5 & $\Psi( p ) / \Psi_{ 0 }( p )$ & $\Phi( p ) /
-                                                 \Phi_{ 0 }( p )$ \\
+    267 & &  6 & $\Psi( p ) / \Psi_{ 0 }( p )$
+           & $\Phi( p ) / \Phi_{ 0 }( p )$ \\
+    267 & &  5 & $\Psi( p ) / \Psi_{ 0 }( p )$
+           & $\Phi( p ) / \Phi_{ 0 }( p )$ \\
     267 & &  2 & $\Psi_{ 0 }( p )$ & $\Phi_{ 0 }( p )$ \\
-    267 & &  1 & $\Psi( p ) / \Psi_{ 0 }( p )$ & $\Phi( p ) /
-                                                 \Phi_{ 0 }( p )$ \\
+    267 & &  1 & $\Psi( p ) / \Psi_{ 0 }( p )$
+           & $\Phi( p ) / \Phi_{ 0 }( p )$ \\
     162 & 13 & & i pozostawiamy & pozostawiamy \\
     518 &  3 & & 1762 & 1962 \\
     519 & 14 & & )1977) & (1977) \\
