@@ -1,0 +1,305 @@
+% Autor: Kamil Ziemian
+
+% --------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% --------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern} % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ----------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ----------------------------
+\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
+\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
+\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+% wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ----------------------------
+% MARGINS
+% ----------------------------
+\setmarginsrb
+{ 0.7in} % left margin
+{ 0.6in} % top margin
+{ 0.7in} % right margin
+{ 0.8in} % bottom margin
+{  20pt} % head height
+{0.25in} % head sep
+{   9pt} % foot height
+{ 0.3in} % foot sep
+
+
+
+% ------------------------------
+% Często używane pakiety
+% ------------------------------
+\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+% ------------------------------
+% Często używane pakiety
+% ------------------------------
+\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+% ----------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ----------------------------
+\usepackage{latexshortcuts}
+
+
+
+% --------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% --------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ----------------------------
+% Ustawienia różnych parametrów tekstu
+% ----------------------------
+\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
+
+
+
+
+
+
+% Koniec komend
+% ############################
+
+
+
+
+
+% ----------------------------
+% Pakiet "hyperref"
+% Polecano by umieszczać go na końcu preambuły.
+% ----------------------------
+\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+% ########################################
+\Main{Historia nauki, błędy i~uwagi} % Tytuł całego tekstu
+
+\vspace{\spaceTwo} \vspace{\spaceThree}
+% ########################################
+
+
+
+% ##################
+\Work{ % Autor i tytuł dzieła
+  Nicolas Bourbaki \\
+  ,,Elementy historii matematyki'', \cite{NBEHM} }
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    8  & 11 & & metodzie '' & metodzie'' \\
+    82 & &  9 & \emph{metafizycznego}''; & \emph{metafizycznego}''); \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ##################
+\Work{ % Autor i tytuł dzieła
+  C. B. Boyer \\
+  ,,Historia rachunku różniczkowego i~całkowego \\
+  i~rozwój jego pojęć'',
+  \cite{BoyerHistoriaRachunkuRozniczkowegoICalkowego64} }
+
+
+\CenterTB{Uwagi}
+
+\start W~całej książce angielskie zwarte i~treściwe słowo ,,calculus''
+jest zastąpione długim polskim terminem ,,rachunek różniczkowy
+i~całkowy'', co często prowadzi do bardzo niezgrabnych stylistycznie
+zdań. Lepiej byłoby wprowadzi do książki, obok powyższego, termin
+,,analiza matematyczna'', który można ładnie skrócić do ,,analizy''.
+
+\vspace{\spaceThree}
+
+
+
+% ##########
+\tb{Konkretne strony}
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{18}{2} Umieszczenie w~tym samym zdaniu stwierdzenia
+o~ścisłym sformułowaniu analizy już u~jej początków oraz faktu,
+że~matematycy byli niewrażliwi na pewne subtelności, jest dość
+karkołomne. Nie wspominając już o~tym, że~te ,,subtelności'' były
+często bardzo poważne.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{19}{18} Użyte tu określenie ,,mistycyzm imaginacyjnej
+spekulacji'' jest wyraźnie niesprawiedliwe w~stosunku do metafizyki,
+najważniejszego działu filozofii. Nie~zmienia tego fakt, że~Boyer mógł
+mieć na myśli tylko transcendentalną metafizykę ze~szkoły Kanta.
+
+\vspace{\spaceFour}
+
+
+\start \Str{23} Stwierdzenie, że pewne podstawowe idea zostały
+usunięte z~analizy matematycznej, szerzej zaś, z~matematyki, są~mocno
+wątpliwe.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{26}{6} Nazwanie podanych wyżej pojęć ,,sztucznymi'',
+ciężko jest mi nazwać czymś innym, niż nieczułością na piękno
+matematyki.
+
+\vspace{\spaceFour}
+
+
+\start \Str{28} Ponieważ drugie wydanie tej książki ukazało~się w~1949
+r., autor nie mógł wiedzieć, że~w~latach 60 XX w., głównie za sprawą
+prac Abrahama Robinsona zostanie sformułowana analiza niestandardowa,
+oparta na ścisły pojęciu nieskończenie małych liczb.
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    29 & & 4 & [(376] & ([376] \\
+    42 & 13 & & [402 & [402] \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ##################
+\Work{ % Autor i tytuł dzieła
+  R. Rhodes \\
+  ,,Jak powstała bomba atomowa'', \cite{Rhodes00} }
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    719 & &  6 & 1993 & 1933 \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ##################
+\Work{ % Autor i tytuł dzieła
+  A. K. Wróblewski \\
+  ,,Historia fizyki'', \cite{Wroblewski06} }
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{Wiersz} & & \\ \cline{2-3}
+    Strona & Od góry & Od dołu & Jest & Powinno być \\
+    & (kolumna) & (kolumna) & & \\
+    \hline
+    203 & 3 (2) & & Jacob 'sGravesande'a & Jacob's Gravesande'a \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+% Bibliografia
+\bibliographystyle{alpha} \bibliography{Bibliography}{}
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
