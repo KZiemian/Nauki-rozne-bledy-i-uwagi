@@ -3,29 +3,29 @@
 % --------------------------------------------------------------------
 % Podstawowe ustawienia i pakiety
 % --------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
+\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
 % sposoby używania LaTeXa. Więcej jest w l2tabu English version.
 \documentclass[a4paper,11pt]{article}
 % {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
 % w języku angielskim.
-\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, co daje dostęp
 % do polskich znaków.
-\usepackage{lmodern} % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
 
 
 
 % ----------------------------
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
 % ----------------------------
-\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
-\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
+\usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
 % grafiki.
-\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
-\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+\usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
+\usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
 % wprowadzane bezpośrednio w tekście.
-\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
+\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
 % ----------------------------
 % MARGINS
@@ -45,8 +45,8 @@
 % ------------------------------
 % Często używane pakiety
 % ------------------------------
-\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+\usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
 % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
@@ -72,7 +72,7 @@
 % ----------------------------
 % Ustawienia różnych parametrów tekstu
 % ----------------------------
-\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
+\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
 % wierszami w tabelach.
 
 
@@ -83,7 +83,7 @@
 % Pakiet "hyperref"
 % Polecano by umieszczać go na końcu preambuły.
 % ----------------------------
-\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
 % do bibliografii na hiperlinki.
 
 
@@ -108,24 +108,68 @@
 % ##################
 \Work{ % Tytuł i autor dzieła
   Norman Davies \\
+  ,,Boże igrzysko. Historia Polski'', \cite{DaviesBozeIgrzysko10} }
+
+
+\CenterTB{Uwagi}
+
+\start \StrWg{4}{20} Treść tego wersu ,,[uzupełnić na~ozalidzie]'',
+to~musi być wynik naprawdę okropnego błędu edytorskiego.
+
+% \vspace{\spaceFour}
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    4   &  4 & & Volume~I & Volume~II \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+% ##################
+\Work{ % Tytuł i autor dzieła
+  Norman Davies \\
   ,,Serce Europy'', \cite{DaviesSerceEuropy14} }
 
 
 \CenterTB{Uwagi}
 
-\start \Str{16} Davies pisze tu o~tym, że~rzut trójwymiarowej Ziemi na
-dwuwymiarową mapę musi pociągać za sobą zniekształcenia, jednak
-mnie~się wydaje, że~pomieszał dwie rzeczy. Powierzchnię Ziemi można
-uważać za dwuwymiarową, tak jak mapę i~to raczej nie jest problemem
-w~kartografii.
+\start \Str{16} Davies pisze tu o~tym, że~rzut trójwymiarowej Ziemi
+na~dwuwymiarową mapę musi pociągać za sobą zniekształcenia
+odwzorowywanego terenu, jednak mnie~się wydaje, że~źle zrozumiał,
+gdzie leży problem. Powierzchnię Ziemi można uważać za dwuwymiarową,
+tak jak mapę i~to raczej nie jest problemem w~kartografii.
 
-Jednak jak wiadomo na mapie albo kąty albo kształt lądów nie mogą być
-wiernie oddane. Jest to jednak związane z~Theorema Egregium Gaussa.
-Jako szczególny przypadek wynika z~niego, że~takie zniekształcenia
-przy przekształcaniu dwuwymiarowej powierzchni w~inną dwuwymiarową
-powierzchnię muszą się pojawić, jeśli mają one różne krzywizny Gaussa,
-dla~płaszczyzny zaś jest ona równa 0, a~dla sfery
-$\frac{ 1 }{ r^{ 2 } }$.
+Jednocześnie wiadomo na mapie albo kąty albo kształt lądów nie mogą
+być wiernie oddane. Jest to jednak związane z~czymś innym niż wymiar,
+mianowicie z~Theorema Egregium Gaussa. Jako szczególny przypadek
+wynika z~niego, że~takie zniekształcenia przy przekształcaniu
+dwuwymiarowej powierzchni w~inną dwuwymiarową powierzchnię muszą się
+pojawić, jeśli mają one różne krzywizny Gaussa, dla~płaszczyzny zaś
+jest ona równa 0, a~dla sfery $\frac{ 1 }{ r^{ 2 } }$.
 
 \vspace{\spaceFour}
 
@@ -153,8 +197,9 @@ i~piętnującym.
 \start \StrWg{52}{10} Zostawienie w~tym wersie słowa ,,Batman''
 pisanego z~dużej litery, jest chyba błędem tłumacza. Sugeruje to,
 że~chodzi o~Człowieka\dywiz Nietoperza, jednanego z~najbardziej
-znanych superbohaterów amerykańskich, bardzo prawdopodobne jednak,
-że~chodziło o~angielskie słowo ,,batman'' oznaczające ordynansa.
+znanych superbohaterów amerykańskich, jednak jest bardziej
+prawdopodobne, że~angielskie słowo ,,batman'' występuje to~w~znaczeniu
+,,ordynans''.
 
 % \CenterTB{Błędy}
 % \begin{center}
@@ -162,9 +207,9 @@ znanych superbohaterów amerykańskich, bardzo prawdopodobne jednak,
 %     \hline
 %     & \multicolumn{2}{c|}{} & & \\
 %     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-% & Powinno być \\ \cline{2-3}
-% & Od góry & Od dołu & & \\
-% \hline
+%     %     & Powinno być \\ \cline{2-3}
+%     %     & Od góry & Od dołu & & \\
+%     %     \hline
 %     & & & & \\
 %     & & & & \\ \hline
 %   \end{tabular}
@@ -719,10 +764,10 @@ tu~narady sztabowej.
 %   \begin{tabular}{|c|c|c|c|c|}
 %     \hline
 %     & \multicolumn{2}{c|}{} & & \\
-      %       Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-% & Powinno być \\ \cline{2-3}
-      %       & Od góry & Od dołu & & \\
-% \hline
+%           %     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%     %     & Powinno być \\ \cline{2-3}
+%           %     & Od góry & Od dołu & & \\
+%     %     \hline
 %     & & & & \\
 %     & & & & \\ \hline
 %   \end{tabular}
@@ -785,10 +830,10 @@ tu~narady sztabowej.
 %   \begin{tabular}{|c|c|c|c|c|}
 %     \hline
 %     & \multicolumn{2}{c|}{} & & \\
-      %       Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-% & Powinno być \\ \cline{2-3}
-      %       & od góry & Od dołu & & \\
-% \hline
+%           %     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%     %     & Powinno być \\ \cline{2-3}
+%           %     & od góry & Od dołu & & \\
+%     %     \hline
 %     & & & & \\
 %     & & & & \\ \hline
 %   \end{tabular}
