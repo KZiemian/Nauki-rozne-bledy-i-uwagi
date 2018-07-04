@@ -13,6 +13,9 @@
 % --------------------------------------
 
 
+% #############
+% Podstawy
+
 % Ładniejszy zbiór pusty
 \let\oldemptyset\emptyset
 \let\emptyset\varnothing
@@ -46,6 +49,9 @@
 
 \newcommand{\ul}{\underline}
 \newcommand{\ol}{\overline}
+
+\newcommand{\ub}{\underbrace}
+
 \newcommand{\us}{\underset}
 \newcommand{\os}{\overset}
 
@@ -76,8 +82,7 @@
 % Wartość bezwzględna i normy
 \newcommand{\abso}[1]{\left| \, #1 \, \right|}
 \newcommand{\abst}[1]{\left| #1 \right|}
-\providecommand{\absj}[1]{\lvert #1 \rvert}
-\providecommand{\absd}[1]{\left| #1 \right|}
+% \providecommand{\absd}[1]{\left| #1 \right|}
 % Zupełnie nie wiem, czemu to jest \providecommand
 \newcommand{\norm}[1]{\left|\left| #1 \right|\right|}
 
@@ -145,7 +150,7 @@
 
 
 
-% ##########
+% #############
 % Teoria mnogości
 \newcommand{\es}{\emptyset}
 \newcommand{\subs}{\subset}
@@ -159,17 +164,19 @@
 
 
 
-% ##########
+% #############
 % Algebra
 \newcommand{\Real}{\mf{Re}}
 \newcommand{\Imag}{\mf{Im}}
 \newcommand{\ot}{\otimes}
+\newcommand{\we}{\wedge}
 \newcommand{\Tr}{\mr{Tr}}
 
 
 
 
-% ##########
+
+% #############
 % Algebra liniowa
 
 % Wektory
@@ -194,13 +201,31 @@
 \newcommand{\nhat}{\wh{n}}
 
 
+% Przestrzenie macierzy
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SU}{\mathrm{SU}}
 
 
 
-% ##################
+
+
+
+
+% #############
+% Funkcje
+
+\newcommand{\sgn}{\textrm{sgn}}
+
+
+
+
+
+% #############
 % Analiza matematyczna
 
-% ##########
+% #####
 % Oznaczenia do teorii funkcji
 \newcommand{\supp}{\mr{supp}\,}
 
@@ -264,43 +289,78 @@
 
 
 
-% ##########
+% #############
 % Całki i całkowanie
 \newcommand{\dx}{\de x}
 \newcommand{\dk}{\, d}  % Różniczka Kończąca całkę
 
-% Całki i całkowanie
-\newcommand{\Int}{\int\limits}
-\newcommand{\IntLo}[3]{\Int_{ { #1 } }^{ { #2 } } \de#3 \,}  % One
-\newcommand{\IntLt}[4]{\Int_{ { #1 } }^{ { #2 } }  #3 \, \de#4}  % Two
 
-\newcommand{\IntCao}[2]{\Int #1 \, \de#2}  % Juz z calkowaniem
+
+% ########
+% Całki i całkowanie anglosaskie (czyli ogólne i światowe)
+\newcommand{\Int}{\int\limits}
+\newcommand{\IntLo}[3]{\Int_{ { #1 } }^{ { #2 } } d#3 \,}  % One
+\newcommand{\IntLt}[4]{\Int_{ { #1 } }^{ { #2 } }  #3 \, d#4}  % Two
+
+\newcommand{\IntCao}[2]{\Int #1 \, d#2}  % Juz z calkowaniem
 % Całka Jeden
 \newcommand{\IntCat}[2]{\Int #1 \, d#2}  % Całka dwa
-\newcommand{\IntFi}[2]{\Int \de#1 \, #2}  % Bardziej Fizyczna notacja;)
-\newcommand{\IntWie}[3]{\Int_{ #1 } \de^{ #2 } #3 \,}  % Wielowymiarowa
-\newcommand{\IntTro}[1]{\Int \de^{ 3 }#1 \,}  % Trójwymiarowa
-\newcommand{\IntDo}[5]{\Int_{ #1 } \de^{ #2 }#3\, \de^{ #4 } #5 \;}
+\newcommand{\IntFi}[2]{\Int d#1 \, #2}  % Bardziej Fizyczna notacja;)
+\newcommand{\IntWie}[3]{\Int_{ #1 } d^{ #2 } #3 \,}  % Wielowymiarowa
+\newcommand{\IntTro}[1]{\Int d^{ 3 }#1 \,}  % Trójwymiarowa
+\newcommand{\IntDo}[5]{\Int_{ #1 } d^{ #2 }#3\, d^{ #4 }#5 \;}
 
 \newcommand{\IntSeto}[3]{\Int_{ #1 } #2 \, d#3}  % Całka po zbiorze.
 \newcommand{\IntSett}[1]{\Int_{ #1 }}
 
 
 
-% ##########
+% #####
 % Całki w określonych granicach
-\newcommand{\IntMPInf}[1]{\Int_{ -\infty }^{ +\infty } \de #1 \;}
-\newcommand{\IntA}[1]{\Int_{ -\infty }^{ +\infty } \de #1 \;}
-\newcommand{\IntB}[1]{\int_{ \R } \de #1 \;}
-\newcommand{\IntOvRo}[1]{\int_{ \R } \de #1 \;}
-\newcommand{\IntC}[2]{\int_{ \R } #1 \, \de #2}
-\newcommand{\IntOvRt}[2]{\int_{ \R } #1 \, \de #2}
-\newcommand{\IntOInf}[1]{\Int_{ 0 }^{ +\infty } \de #1 \;}
+\newcommand{\IntMPInf}[1]{\Int_{ -\infty }^{ +\infty } d #1 \;}
+\newcommand{\IntA}[1]{\Int_{ -\infty }^{ +\infty } d #1 \;}
+\newcommand{\IntB}[1]{\int_{ \R } d #1 \;}
+\newcommand{\IntOvRo}[1]{\int_{ \R } d #1 \;}  % Integral over R version one
+\newcommand{\IntC}[2]{\int_{ \R } #1 \, d #2}
+\newcommand{\IntOvRt}[2]{\int_{ \R } #1 \, d #2}
+% Integral over R version two
+\newcommand{\IntOInf}[1]{\Int_{ 0 }^{ +\infty } d #1 \;}
+
+
+
+% ########
+% Całki i całkowanie, polski standard
+\newcommand{\IntLoPL}[3]{\Int_{ { #1 } }^{ { #2 } } \de#3 \,}  % One
+\newcommand{\IntLtPL}[4]{\Int_{ { #1 } }^{ { #2 } }  #3 \, \de#4}  % Two
+
+\newcommand{\IntCaoPL}[2]{\Int #1 \, \de#2}  % Juz z calkowaniem
+% Całka Jeden
+\newcommand{\IntCatPL}[2]{\Int #1 \, d#2}  % Całka dwa
+\newcommand{\IntPhyPL}[2]{\Int \de#1 \, #2}  % Bardziej Fizyczna notacja;)
+\newcommand{\IntWiePL}[3]{\Int_{ #1 } \de^{ #2 } #3 \,}  % Wielowymiarowa
+\newcommand{\IntTroPL}[1]{\Int \de^{ 3 }#1 \,}  % Trójwymiarowa
+\newcommand{\IntDoPL}[5]{\Int_{ #1 } \de^{ #2 }#3\, \de^{ #4 } #5 \;}
+
+\newcommand{\IntSetoPL}[3]{\Int_{ #1 } #2 \, d#3}  % Całka po zbiorze.
+% Set (o) PL
+\newcommand{\IntSettPL}[1]{\Int_{ #1 }}
+
+
+
+% #####
+% Całki w określonych granicach
+\newcommand{\IntMPInfPL}[1]{\Int_{ -\infty }^{ +\infty } \de #1 \;}
+\newcommand{\IntOInfPL}[1]{\Int_{ 0 }^{ +\infty } \de #1 \;}
+\newcommand{\IntAPL}[1]{\Int_{ -\infty }^{ +\infty } \de #1 \;}
+\newcommand{\IntBPL}[1]{\int_{ \R } \de #1 \;}
+\newcommand{\IntOvRoPL}[1]{\int_{ \R } \de #1 \;}
+\newcommand{\IntCPL}[2]{\int_{ \R } #1 \, \de #2}
+\newcommand{\IntOvRtPL}[2]{\int_{ \R } #1 \, \de #2}
 
 
 
 
-% ##########
+% #############
 % Analiza funkcjonalna
 \newcommand{\da}{\dagger}
 
@@ -318,9 +378,9 @@
 \newcommand{\Lp}{L^{ p }}
 \newcommand{\LIo}{\Lc^{ 1 }}
 \newcommand{\LIp}{\Lc^{ p }}
-\newcommand{\LdO}{\Ld( \R, \de \mu )}
-\newcommand{\LdT}{\Ld( \R^{ 3 }, \de \mu )}
-\newcommand{\LdLim}{L^{ 2 }-\Lim}
+\newcommand{\LtO}{\Lt( \R, \de \mu )}
+\newcommand{\LtT}{\Lt( \R^{ 3 }, \de \mu )}
+\newcommand{\LtLim}{L^{ 2 }-\Lim}
 
 
 
