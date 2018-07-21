@@ -42,13 +42,6 @@
 
 
 
-% ------------------------------
-% Często używane pakiety
-% ------------------------------
-\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
-
 
 
 % ------------------------------
@@ -57,6 +50,25 @@
 \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
 \usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
 % więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+% ------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ------------------------------
+\let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
+% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
+% \usepackage{siunitx} % Do prostszego pisania jednostek fizycznych
+\usepackage{upgreek} % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+\usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
+\usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
+% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% nie wiem.
 
 
 
@@ -195,7 +207,7 @@ Najprawdopodobniej jednak rachmistrzowie sami byli Grekami.
     \hline
   \end{tabular}
 
-    \begin{tabular}{|c|c|c|c|c|}
+  \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
@@ -222,10 +234,52 @@ Najprawdopodobniej jednak rachmistrzowie sami byli Grekami.
     106 & 12 & & koła ($^{ 2 }$) & koła($^{ 2 }$) \\
     106 & & 12 & zespolonych ($^{ 3 }$) & zespolonych($^{ 3 }$) \\
     107 & & 13 & 23) ($^{ 2 }$) & 23)($^{ 2 }$) \\
-    109 & & & & \\
-    & & & & \\
-    & & & & \\
-    & & & & \\
+    109 & 12 & & Euklidesa'' ($^{ 1 }$) & Euklidesa''($^{ 1 }$) \\
+    110 & 15 & & całkowitej ($^{ 1 }$) & całkowitej($^{ 1 }$) \\
+    111 & 18 & & kwadratem) ($^{ 2 }$) & kwadratem)($^{ 2 }$) \\
+    112 &  7 & & niewiadomych~~($^{ 1 }$) & niewiadomych($^{ 1 }$) \\
+    113 & 11 & & $p$\dywiz grup ($^{ 2 }$) & $p$\dywiz grup($^{ 2 }$) \\
+    114 & 18 & & 174) ($^{ 1 }$) & 174)($^{ 1 }$) \\
+    115 &  9 & & rzędu~~($^{ 1 }$) & rzędu($^{ 1 }$) \\
+    115 & 18 & & później ($^{ 2 }$) & później($^{ 2 }$) \\
+    116 &  1 & & wieku ($^{ 1 }$) & wieku($^{ 1 }$) \\
+    116 & 15 & & jedności ($^{ 2 }$) & jedności($^{ 2 }$) \\
+    117 &  2 & & [150b] ($^{ 1 }$) & [150b]($^{ 1 }$) \\
+    118 & &  9 & algebrze ($^{ 1 }$) & algebrze($^{ 1 }$) \\
+    118 & &  7 & topologia ($^{ 2 }$) & topologia($^{ 2 }$) \\
+    120 & & 13 & 488) ($^{ 1 }$) & 488)($^{ 1 }$) \\
+    121 &  5 & & algebraiczne ($^{ 1 }$) & algebraiczne($^{ 1 }$) \\
+    122 &  3 & & Gaussa ($^{ 1 }$) & Gaussa($^{ 1 }$) \\
+    124 & & 10 & \emph{skończona} ($^{ 1 }$) & \emph{skończona}($^{ 1 }$) \\
+    125 &  6 & & podstawowe''~~($^{ 1 }$) & podstawowe''($^{ 1 }$) \\
+    \hline
+  \end{tabular}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    126 & 18 & & 1880 ($^{ 1 }$) & 1880($^{ 1 }$) \\
+    127 & &  6 & $\mathbb{Z}[ \sqrt{ -3 } ]$) ($^{ 1 }$)
+           & $\mathbb{Z}[ \sqrt{ -3 } ]$)($^{ 1 }$) \\
+    128 &  1 & & $\mathbb{Z}[ \theta, \theta' ]$ ($^{ 1 }$)
+           & $\mathbb{Z}[ \theta, \theta' ]$($^{ 1 }$) \\
+    129 &  8 & & postacią ($^{ 1 }$) & postacią($^{ 1 }$) \\
+    135 &  2 & & topologicznych ($^{ 1 }$) & topologicznych($^{ 1 }$) \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
     % & & & & \\
     % & & & & \\
     252 & & 12 & Euler czasem nawet & nawet Euler czasem \\
