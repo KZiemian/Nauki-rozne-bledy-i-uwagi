@@ -258,12 +258,28 @@
 % Iloczyny
 \newcommand{\Prod}{\prod\limits}
 
+
+
+% ########
 % Różniczkowanie i pochodne
 \newcommand{\de}{\mr{d}}
-\newcommand{\dd}[3]{\fr{ \de^{ #1 } { #2 } }{ \de { #3 }^{ #1 } }}
+
+
+% #####
+% Różniczkowanie i pochodne anglosaskie (czyli ogólne i światowe)
+\newcommand{\dd}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
 % Zwykła pochodna - pierwszy argument rząd pochodnej, drugi funkcja,
 % trzeci zmienna
 
+
+
+% #####
+% Różniczkowanie i pochodne, polskie standardy
+\newcommand{\ddPL}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
+
+
+
+% Pochodne cząstkowe
 \newcommand{\pr}{\partial}
 \newcommand{\pd}[3]{\fr{ \pr^{ #1 } { #2 } }{ \pr { #3 }^{ #1 } }}
 % Jw tylko dla pochodnej cząstkowej
@@ -272,6 +288,8 @@
 \newcommand{\pdt}[1]{\pr_{ x^{ #1 } }} % PD two - po x z indeksem "#1"
 \newcommand{\pdth}[3]{\fr{ \pr^{ 2 } #1 }{ { \pr x^{ #2 } }
     { \pr x^{ #3 } } }}  % PD three - po zmiennych x z indeksami "#1" "#2"
+
+
 
 % Klasy różniczkowalności
 \newcommand{\Cj}{\Cc^{ j }}
