@@ -86,22 +86,24 @@
 
 
 
-
-
-
-% Koniec komend
-% ############################
-
-
-
-
-
 % ----------------------------
 % Pakiet "hyperref"
 % Polecano by umieszczać go na końcu preambuły.
 % ----------------------------
 \usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
 % do bibliografii na hiperlinki.
+
+
+
+
+
+% --------------------------------------------------------------------
+% Tytuł, autor, data
+\title{Historia, błędy i~uwagi}
+
+% \author{}
+% \date{}
+% --------------------------------------------------------------------
 
 
 
@@ -115,18 +117,17 @@
 
 
 % ######################################
-\Main{Historia, błędy i~uwagi} % Tytuł całego tekstu
-
-\vspace{\spaceTwo} \vspace{\spaceThree}
+\maketitle  % Tytuł całego tekstu
 % ######################################
 
 
 
-% ############################
-\Field{Historia świętej wiary} % Nazwa dziedziny
+% ######################################
+\section{Historia świętej wiary}
 
-\vspace{\spaceTwo} % \vspace{\spaceThree}
-% ############################
+\vspace{\spaceTwo}
+% ######################################
+
 
 
 
@@ -406,7 +407,7 @@ liniach~są zbyt małe.
     391 & & 11 & \emph{Doctor} & \emph{A~Doctor} \\
     391 & & 10 & \emph{Doctor} & \emph{A~Doctor} \\
     392 & &  3 & \emph{Doctor} & \emph{A~Doctor} \\
-    393 & &  8 & \eamph{Doctor} & \emph{A~Doctor} \\
+    393 & &  8 & \emph{Doctor} & \emph{A~Doctor} \\
     % & & & \emph{Doctor} & \emph{A~Doctor} \\
     402 & &  9 & \emph{Antipas, a} & \emph{Antipas: A }\\
     407 & &  6 & \emph{Greek, a} & \emph{Greek: A} \\
@@ -1877,10 +1878,9 @@ tu~kursywą~są częścią cytowanego fragmentu.
 
 
 % ######################################
-\newpage
-\Field{Syntezy historyczne} % Nazwa dziedziny
+\section{Syntezy historyczne}
 
-\vspace{\spaceTwo} \vspace{\spaceThree}
+\vspace{\spaceTwo}
 % ######################################
 
 
@@ -1949,10 +1949,9 @@ z~regionami Kinki i~Shikoku.
 
 
 % ######################################
-\newpage
-\Field{Dzieje lat 1789--1914} % Nazwa dziedziny
+\section{Dzieje lat 1789--1914}
 
-\vspace{\spaceTwo} \vspace{\spaceThree}
+\vspace{\spaceTwo}
 % ######################################
 
 
