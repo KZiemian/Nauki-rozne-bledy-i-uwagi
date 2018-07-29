@@ -118,6 +118,18 @@
 
 
 
+% --------------------------------------------------------------------
+% Tytuł, autor, data
+\title{Algebra, błędy i~uwagi}
+
+% \author{}
+% \date{}
+% --------------------------------------------------------------------
+
+
+
+
+
 % ####################################################################
 % Początek dokumentu
 \begin{document}
@@ -126,9 +138,7 @@
 
 
 % ######################################
-\Main{Algebra, błędy i~uwagi}  % Tytuł całego tekstu
-
-\vspace{\spaceTwo} \vspace{\spaceThree}
+\maketitle  % Tytuł całego tekstu
 % ######################################
 
 % ,,P\ldots'' oznacza, że w wydaniu ,,\ldots'' błąd został poprawiony.\\
@@ -170,15 +180,15 @@ system Peano tak, by liczby naturalne uwzględniały 0.
     & Od góry & Od dołu & & \\
     \hline
     % & & & & \\
-    14 & 14 & & $A^{ 2 } \quad A$ & $A^{ 2 } \ra A$ \\
+    14 & 14 & & $A^{ 2 } \quad A$ & $A^{ 2 } \to A$ \\
     15 & 3 & & $( a^{ 1 } )^{ -1 }$ & $( a^{ -1 } )^{ -1 }$ \\
     16 & 13 & & \emph{lącznym} & \emph{łącznym} \\
     24 & 9 & & $if\big( \vp( a_{ 1 }, \ld, a_{ n } ) \big)$
-           & $i \ci f\big( \vp( a_{ 1 }, \ld, a_{ n } ) \big)$ \\
+           & $i \circ f\big( \vp( a_{ 1 }, \ld, a_{ n } ) \big)$ \\
     24 & 10 & & $if\big( \vp( a_{ 1 }, \ld, a_{ n } ) \big)$
-           & $i \ci f\big( \vp( a_{ 1 }, \ld, a_{ n } ) \big)$ \\
+           & $i \circ f\big( \vp( a_{ 1 }, \ld, a_{ n } ) \big)$ \\
     25 & & 1 & $s( a )$ & $[ s( a ) ]$ \\
-    31 & & 4 & $\pi_{ t }( i' \ci i )$ & $\pi_{ t } \ci ( i' \ci i )$ \\
+    31 & & 4 & $\pi_{ t }( i' \circ i )$ & $\pi_{ t } \circ ( i' \circ i )$ \\
     33 & 21 & & \S{} 2 & \S{} 4 \\
     % & & & & \\
     % & & & & \\
@@ -232,7 +242,7 @@ Powinno być:
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    8 & 6 & & $p$ ; & $p$; \\
+    8   & 6 & & $p$ ; & $p$; \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
