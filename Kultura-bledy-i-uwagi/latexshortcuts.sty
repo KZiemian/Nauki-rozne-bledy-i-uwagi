@@ -9,6 +9,8 @@
 % Ogólne komendy zdefiniowane dla ułatwienia pracy z LaTeXem
 % --------------------------------------------------------------------
 
+
+
 % ##########
 % Definicje odstępów w tekście
 \newcommand{\spaceOne}{3em}
@@ -16,10 +18,16 @@
 \newcommand{\spaceThree}{1em}
 \newcommand{\spaceFour}{0.5em}
 
+
+
 % ##########
-% Skróty do często używanych komend
+% Skróty do często używanych, bądź bardzo podstawowych, komend
 \newcommand{\ld}{\ldots}
-\newcommand{\tbs}{\textbackslash} % Backslash w tekście
+\newcommand{\tbs}{\textbackslash}  % Backslash w tekście
+\newcommand{\chm}{\checkmark}  % CHeckMark
+\newcommand{\bs}{\backslash}
+
+
 
 % ##########
 % Podstawowa komendy do edycja tekstu
@@ -27,9 +35,9 @@
 \newcommand{\noi}{\noindent}
 
 % Numeracja stron i rozdziałów
-\newcommand{\Str}[1]{\tb{Str. #1.}}
-\newcommand{\StrWg}[2]{\tb{Str. #1, wiersz #2.}}
-\newcommand{\StrWd}[2]{\tb{Str. #1, wiersz #2 (od dołu).}}
+\newcommand{\Str}[1]{\tb{Str.~#1.}}
+\newcommand{\StrWg}[2]{\tb{Str.~#1, wiersz~#2.}}
+\newcommand{\StrWd}[2]{\tb{Str.~#1, wiersz~#2 (od dołu).}}
 
 % Do poprawiania błędów
 \newcommand{\start}{\noi \tb{--} {}}
@@ -55,6 +63,10 @@
 \newcommand{\Work}[1]{ \begin{center} {\large \tb{#1}} \end{center} }
 
 
+
+% ##########
+% Liczby rzymskie
+\newcommand{\rmnumd}[1]{\tb{\romannumeral#1.}}  % RoMan NUMeral Dot
 
 
 
