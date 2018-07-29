@@ -130,7 +130,7 @@
 \newcommand{\lc}{\mc{l}}
 \newcommand{\Lc}{\mc{L}}
 \newcommand{\Oc}{\mc{O}}
-% \newcommand{\Rn}{\R^{ n }}
+\newcommand{\Rn}{\R^{ n }}
 \newcommand{\Rc}{\mc{R}}
 
 \newcommand{\Rp}{\R_{ + }}
@@ -258,12 +258,28 @@
 % Iloczyny
 \newcommand{\Prod}{\prod\limits}
 
+
+
+% ########
 % Różniczkowanie i pochodne
 \newcommand{\de}{\mr{d}}
-\newcommand{\dd}[3]{\fr{ \de^{ #1 } { #2 } }{ \de { #3 }^{ #1 } }}
+
+
+% #####
+% Różniczkowanie i pochodne anglosaskie (czyli ogólne i światowe)
+\newcommand{\dd}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
 % Zwykła pochodna - pierwszy argument rząd pochodnej, drugi funkcja,
 % trzeci zmienna
 
+
+
+% #####
+% Różniczkowanie i pochodne, polskie standardy
+\newcommand{\ddPL}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
+
+
+
+% Pochodne cząstkowe
 \newcommand{\pr}{\partial}
 \newcommand{\pd}[3]{\fr{ \pr^{ #1 } { #2 } }{ \pr { #3 }^{ #1 } }}
 % Jw tylko dla pochodnej cząstkowej
@@ -272,6 +288,8 @@
 \newcommand{\pdt}[1]{\pr_{ x^{ #1 } }} % PD two - po x z indeksem "#1"
 \newcommand{\pdth}[3]{\fr{ \pr^{ 2 } #1 }{ { \pr x^{ #2 } }
     { \pr x^{ #3 } } }}  % PD three - po zmiennych x z indeksami "#1" "#2"
+
+
 
 % Klasy różniczkowalności
 \newcommand{\Cj}{\Cc^{ j }}
@@ -302,9 +320,7 @@
 \newcommand{\IntLo}[3]{\Int_{ { #1 } }^{ { #2 } } d#3 \,}  % One
 \newcommand{\IntLt}[4]{\Int_{ { #1 } }^{ { #2 } }  #3 \, d#4}  % Two
 
-\newcommand{\IntCao}[2]{\Int #1 \, d#2}  % Juz z calkowaniem
-% Całka Jeden
-\newcommand{\IntCat}[2]{\Int #1 \, d#2}  % Całka dwa
+\newcommand{\IntM}[2]{\Int #1 \, d#2}  % Integral Measure
 \newcommand{\IntFi}[2]{\Int d#1 \, #2}  % Bardziej Fizyczna notacja;)
 \newcommand{\IntWie}[3]{\Int_{ #1 } d^{ #2 } #3 \,}  % Wielowymiarowa
 \newcommand{\IntTro}[1]{\Int d^{ 3 }#1 \,}  % Trójwymiarowa
@@ -333,9 +349,7 @@
 \newcommand{\IntLoPL}[3]{\Int_{ { #1 } }^{ { #2 } } \de#3 \,}  % One
 \newcommand{\IntLtPL}[4]{\Int_{ { #1 } }^{ { #2 } }  #3 \, \de#4}  % Two
 
-\newcommand{\IntCaoPL}[2]{\Int #1 \, \de#2}  % Juz z calkowaniem
-% Całka Jeden
-\newcommand{\IntCatPL}[2]{\Int #1 \, d#2}  % Całka dwa
+\newcommand{\IntMPL}[2]{\Int #1 \, \de#2}  % Integral Measure
 \newcommand{\IntPhyPL}[2]{\Int \de#1 \, #2}  % Bardziej Fizyczna notacja;)
 \newcommand{\IntWiePL}[3]{\Int_{ #1 } \de^{ #2 } #3 \,}  % Wielowymiarowa
 \newcommand{\IntTroPL}[1]{\Int \de^{ 3 }#1 \,}  % Trójwymiarowa
