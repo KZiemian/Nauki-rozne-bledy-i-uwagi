@@ -79,10 +79,10 @@
 
 
 
-% ----------------------------
+% --------------------------------------
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
-% ----------------------------
+% --------------------------------------
 \usepackage{geometriarozniczkowa}  % Pakiet napisany konkretnie dla tego
 % pliku.
 \usepackage{latexshortcuts}
@@ -90,9 +90,9 @@
 
 
 
-% --------------------------------------------------------------------
+% --------------------------------------
 % Dodatkowe ustawienia dla języka polskiego
-% --------------------------------------------------------------------
+% --------------------------------------
 \renewcommand{\thesection}{\arabic{section}.}
 % Kropki po numerach rozdziału (polski zwyczaj topograficzny)
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}}
@@ -122,7 +122,7 @@
 % --------------------------------------------------------------------
 \title{ % Tytuł, autor, data
   Jacek Gancarzewicz \\
-  ,,Zarys współczesnej geometrii różniczkowej'', błędy i~uwagi}
+  ,,Zarys współczesnej geometrii różniczkowej'' --~błędy i~uwagi}
 
 % \author{}
 % \date{}
@@ -223,7 +223,7 @@ $\pi^{ r }_{ s }$.
 
 
 \start \Str{61} Drugi akapit można napisać bardziej elegancko. Po
-pierwsze zauważmy, że aby zbiór\linebreak
+pierwsze zauważmy, że aby zbiór \linebreak
 $\{ x \in D_{ f } : f( x ) \in D_{ g } \}$ jest po prostu równy
 $f^{ -1 }( D_{ g } )$ i jest otwarty o ile tylko $g$ jest
 odwzorowaniem lokalnym, a $f$ odwzorowaniem ciągłym. Wtedy bowiem
@@ -305,6 +305,11 @@ zdefiniowane. Podejrzewam, że jest to topologia obrazowa pochodząca od
 rzutowania kanonicznego
 $\Pi_{ M } : [ 0,1 ] \times \mathbb{ R } \to W$. Należy to jednak
 sprawdzić w dobrej książce do~topologii.
+
+\vspace{\spaceFour}
+
+
+\start \Str{69} Podana dziedzina $\vp \circ \psi^{ -1 }$ jest błędna \red{popraw!!!}
 
 \vspace{\spaceFour}
 
@@ -778,6 +783,11 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
                  \fr{ 4 r u_{ n } }{ \norm{ u } } \big),$
            & $\left( \fr{ 4 r^{ 2 } u_{ 1 } }{ \norm{ u } }, \ld,
              \fr{ 4 r^{ 2 } u_{ n } }{ \norm{ u } } \right)\! ,$ \\
+    69  &  4 & & $[ t, x ]$ & $[ ( t, x ) ]$ \\
+    69  &  5 & & $[ t, x ]$ & $[ ( t, x ) ]$ \\
+    69  & 14 & & $\vp \circ \psi^{ -1 }( t, x )$
+           & $\vp \circ \psi^{ -1 }( [ ( t, x ) ] )$ \\
+    69  & 14 & & $( t - 1, -x )$ & $( t + 1, -x )$ \\
     70  &  2 & & oraz$( 1, \bar{ z } )$ & oraz $( 1, \bar{ z } )$ \\
     70  & & 15 & $\la \circ f$ & $f \circ \la$ \\
     70  & & 15 & $M( q, p + q; Q)$ & $M( q, p + q; q)$ \\
@@ -1574,7 +1584,7 @@ Str. 135. Teraz omówimy\ld \\
 % ####################################################################
 % ####################################################################
 % Bibliografia
-\bibliographystyle{alpha} \bibliography{Bibliography}{}
+\bibliographystyle{plalpha} \bibliography{LibMathInfo}{}
 
 
 % ############################
