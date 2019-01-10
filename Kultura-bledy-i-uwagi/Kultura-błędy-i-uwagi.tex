@@ -20,9 +20,9 @@
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
 % ----------------------------
 \usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
-\usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
-% grafiki.
-\usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
+% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
+% % grafiki.
+% \usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
 \usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
 % wprowadzane bezpośrednio w tekście.
 \usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
@@ -45,9 +45,9 @@
 % ----------------------------
 % Często używane pakiety
 % ----------------------------
-\usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+% \usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
+% % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
 
@@ -116,10 +116,18 @@
 
 
 % ######################################
-\section{Zagadnienia kultury XX i~XXI wieku}
+\section{Kultura od~XVII wieku do~dziś}
 
 \vspace{\spaceTwo}
 % ######################################
+
+
+
+% ############################
+\subsection{Kultura XIX i~XX wieku}
+
+\vspace{\spaceThree}
+% ############################
 
 
 
@@ -218,6 +226,9 @@
 podobnie jak ojciec''$^{ 202 }$. \\
 
 \vspace{\spaceTwo}
+
+
+
 
 
 
@@ -633,7 +644,7 @@ nie ,,Kiusiu''.
 
 % ######################################
 \newpage
-\Field{Kino, film --~błędy i~uwagi}
+\Field{Kino --~błędy i~uwagi}
 
 \vspace{\spaceThree}
 % ######################################
@@ -751,10 +762,93 @@ pod~ręką, która prowadzi koński zaprzęg.
 
 
 
+% ######################################
+\newpage
+\section{Malarstwo}
+
+\vspace{\spaceTwo}
+% ######################################
+
+
+
+% ##################
+\Work{ % Autor i tytuł dzieła
+  Władysław Strzemiński \\
+  ,,Teoria widzenia'', \cite{StrzeminskiTeoriaWidzenia2016} }
+
+
+\CenterTB{Uwagi}
+
+\start \StrWg{33}{13} Cudzysłów wystający na~lewy margines wygląd mało
+estetycznie. W~przypadku dłuższych cytatów, których lewy margines jest
+większy, nie~jest to problem.
+
+\vspace{\spaceFour}
+
+
+\start \StrWd{39}{19} Cudzysłów wystający na~lewy margines wygląd mało
+estetycznie.
+
+\vspace{\spaceFour}
+
+
+% \start \Str{146} Ponieważ Monika nie tylko udało~się uciec
+% z~mieszczańskiej willi, bez żadnych konsekwencji dla jej dalszego
+% życia, ale także zdobyć pieczeń po~którą tam poszła,
+% uważam~że~nazwanie jej działań ,,sromotnie nieudanymi'', jest
+% co~najmniej nietrafne.
+
+% \vspace{\spaceFour}
+
+
+% \start \Str{220} W~samym filmie \emph{Siódma pieczęć} nie znalazłem
+% niczego co~podtrzymywałoby przedstawioną tu interpretację,
+% że~końcowa scena z~rodziną kuglarzy rozgrywa~się w~czyjejś
+% wyobraźni. Wręcz przeciwnie, cała narracja filmu przekonuje mnie,
+% że~wydarzyło~się to~naprawdę.
+
+% \vspace{\spaceFour}
+
+
+% \start \Str{247} Na~tym zdjęciu bardzo ciężko dojrzeć, że~malowidło
+% na~ścianie przedstawie Śmierć z~szachami. Na~szczęście na~następnej
+% stronie jest wyjaśnione, iż~przedstawia ono Śmierć z~szachami
+% pod~ręką, która prowadzi koński zaprzęg.
+
+% \vspace{\spaceFour}
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & od góry & od dołu & & \\
+    \hline
+    15  & & 12 & 1709 & 1709) \\
+    15  & &  3 & na & nad \\
+    16  & & 16 & \emph{Teoria widzenia:} & \emph{Teoria widzenia}: \\
+    44  &  3 & & rewolucyjny radykalizm & rewolucyjnego radykalizmu \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
 % ####################################################################
 % ####################################################################
 % Bibliografia
-\bibliographystyle{plalpha} \bibliography{LibPhilQuVar}{}
+\bibliographystyle{plalpha} \bibliography{LibCultura}{}
 
 
 % ############################
