@@ -1,0 +1,712 @@
+% ######################################
+% Zakomentowane tylko po to by kompilator się tym nie przejmował.
+% ######################################
+
+% % ##################
+% \Work{ % Autor i tytuł dzieła
+%   Stanisław Łojasiewicz \\
+%   ,,Wstęp do~teorii funkcji rzeczywistych'',
+%   \cite{LojasiewiczWstepDoFunkcjiRzeczywistych1976} }
+
+% \CenterTB{Uwagi}
+
+% % \textbf{Konkretne strony.}
+
+% % \vspace{\spaceFour}
+
+% \start \Str{7} Dla pełniejszego wykładu, warto tu przytoczyć pozostałe
+% operacje z~udziałem $\pm \infty$.
+% \begin{equation}
+%   \label{eq:Lojasiewicz-01}
+%   \begin{split}
+%     &a + ( \pm \infty ) = ( \pm \infty ) + a = \pm \infty, \\
+%     &a \cdot ( \pm \infty ) = ( \pm \infty ) \cdot a = \pm \infty,
+%     \quad a > 0, \\
+%     &a \cdot ( \pm \infty ) = ( \pm \infty ) \cdot a = \mp \infty,
+%     \quad a < 0, \\
+%     &( +\infty ) \cdot ( +\infty ) = ( -\infty ) \cdot ( -\infty )
+%     = +\infty, \\
+%     &( +\infty ) \cdot ( -\infty ) = -\infty.
+%   \end{split}
+% \end{equation}
+
+% \vspace{\spaceFour}
+
+
+% \start \Str{7} Iloczyn w~$\overline{ \R }$ nie jest ciągły
+% dla~$x = \pm \infty$ i~$y = 0$ (odpowiednio $x = 0$
+% i~$y = \pm \infty$), bo jeśli weźmiemy $x_{ n } = n$, $y_{ n } = 1/n$,
+% to
+% \begin{equation}
+%   \label{eq:Lojasiewicz-02}
+%   \Lim_{ \nToInfty } x_{ n } y_{ n } = \Lim_{ \nToInfty } 1 = 1 \neq 0
+%   = ( +\infty ) \cdot 0.
+% \end{equation}
+% Suma nie jest ciągła dla~$x = +\infty$ i~$y = -\infty$ (odpowiednio
+% $x = -\infty$ i~$y = +\infty$), bo~jeśli weźmiemy $x_{ n } = 1 + n$
+% i~$y_{ n } = -n$, to
+% \begin{equation}
+%   \label{eq:Lojasiewicz-03}
+%   \begin{split}
+%     \Lim_{ \nToInfty } ( x_{ n } + y_{ n } ) = \Lim_{ \nToInfty } 1 =
+%     1 \neq 0 = +\infty - \infty.
+%   \end{split}
+% \end{equation}
+% Mnożenie nie jest łączne, bo
+% \begin{equation}
+%   \label{eq:Lojasiewicz-04}
+%   \begin{split}
+%     &( a + \infty ) - \infty = \infty - \infty = 0, \\
+%     &a + ( \infty - \infty ) = a + 0 = a.
+%   \end{split}
+% \end{equation}
+% Mnożenie nie jest rozłączne względem dodawania, bo
+% \begin{equation}
+%   \label{eq:Lojasiewicz-05}
+%   \begin{split}
+%     &( +\infty ) \cdot ( a - \infty ) = ( +\infty \cdot a ) - \infty
+%     = +\infty - \infty = 0, \\
+%     &( +\infty ) \cdot ( a - \infty ) = ( +\infty ) \cdot ( -\infty )
+%     = -\infty.
+%   \end{split}
+% \end{equation}
+
+% \vspace{\spaceFour}
+
+
+% \start \Str{7} Stwierdzenie, że~przez brak łączności dodawania nie
+% możemy przenosić wyrazów z~jednej strony równania na drugą, może
+% wydawać~się nieoczywiste, dlatego tutaj wyjaśnimy to na przykładzie.
+% Rozpatrzmy równość
+% \begin{equation}
+%   \label{eq:Lojasiewicz-06}
+%   1 + \infty = \infty.
+% \end{equation}
+% Teraz chcielibyśmy odjąć od~obu stron $\infty$ i~wykonać obliczenia
+% w~następujący sposób
+% \begin{equation}
+%   \label{eq:Lojasiewicz-07}
+%   \begin{split}
+%     &\tr{L} = 1 + \infty - \infty = 1 + 0 = 1, \\
+%     &\tr{P} = \infty - \infty = 0.
+%   \end{split}
+% \end{equation}
+% Błąd wynika z~tego, że~tak naprawdę wyrażenie po~lewej stronie ma
+% następującą postać
+% \begin{equation}
+%   \label{eq:Lojasiewicz-08}
+%   \tr{L} = ( 1 + \infty ) - \infty.
+% \end{equation}
+% Chcielibyśmy przekształcić ten wzór w~następujący sposób
+% \begin{equation}
+%   \label{eq:Lojasiewicz-09}
+%   1 + ( \infty - \infty ) = 1 + 0 = 1.
+% \end{equation}
+% Tego jednak zrobić nie możemy ze~względu na~brak łączności dodawania.
+% Zignorowanie tego prowadzi do~błędnych wyników powyżej.
+
+% \vspace{\spaceFour}
+
+
+
+% \CenterTB{Błędy}
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     9   & 15 & & $\abso{ \al }$ $\abso{ \be }$
+%            & $\abso{ \al }$, $\abso{ \be }$ \\
+%     11  & &  5 & $\set{ \alpha_{ n } }$ & $\set{ x_{ n } }$ \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+% \end{center}
+
+% \vspace{\spaceTwo}
+
+% % \vspace{\spaceFour}
+
+
+
+
+
+% % ####################
+% \Work{ % Autor i tytuł dzieła
+%   Grigorij Michajłowicz Fichtenholz \\
+%   ,,Rachunek różniczkowy i~całkowy. Tom~I'',
+%   \cite{FichtenholzRachunekRiCTomI2005} }
+
+
+% % Uwagi:
+% % \begin{itemize}
+% % \item
+% % \item
+% % \item
+% % \item
+% % \end{itemize}
+
+
+% Powinno być:
+% \begin{itemize}
+% \item[--] Str. 303.
+%   \[\sum_{ i = 1 }^{ n } a_{ i }^{2} \sum_{ i = 1 }^{ n } b_{ i }^{ 2
+%     } - \{ \sum_{ i = 1 }^{ n } a_{ i } b_{ i } \}^{ 2 } \geq 0
+%     \textrm{,}\]
+% \item[--] Str. 371.
+%   \[z'_{ x } = \frac{ x }{ p } \textrm{,} \quad z'_{ y } = \frac{ y }{
+%       q } \textrm{.}\]
+% \item[--] Str. 376. \ldots ale równa jest 0, gdy\ldots
+% \item[--] Str.
+% \end{itemize}
+
+% \vspace{\spaceTwo}
+
+
+
+
+
+% % ##################
+% \Work{ % Autor i tytuł dzieła
+%   Grigorij Michajłowicz Fichtenholz \\
+%   ,,Rachunek różniczkowy i całkowy. Tom~II'',
+%   \cite{FichtenholzRachunekRiCTomII2004} }
+
+
+% \CenterTB{Uwagi}
+
+% % \tb{Konkretne strony.}
+
+% % \vspace{\spaceFour}
+
+% \start \Str{6} Stwierdzenie, że~wszystkie funkcje pierwotne różnią~się
+% o~stałą, można zinterpretować w~błędny, acz bez~ustanku powtarzany,
+% sposób. Dwie funkcje pierwotne różnią~się o~stałą dowolną na każdym
+% przedziale spójnym, jednak jeśli dziedzina funkcji składa~się z~dwóch
+% lub więcej przedziałów spójnych, na każdym z~nich można wybrać inną
+% stałą dowolną.
+
+% \vspace{\spaceFour}
+
+
+% \start \Str{34} Nie jestem w~stanie zrozumieć, dlaczego największym
+% wspólnym dzielnikiem wielomianów $Q$ i~$Q'$ jest $Q_{ 1 }$. Może to
+% jakiś znany fakt z~algebry? \Dok
+
+% \CenterTB{Błędy}
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     8   & & 11 & $< | \Del P | <$ & $\leq | \Del P | \leq$ \\
+%     8   & &  7 & $< \fr{ | \Del P | }{ \Del x } <$
+%            & $\leq \frac{ | \Del P | }{ \Del x } \leq$ \\
+%     12  & &  5 & $a^{ n }$ & $a_{ n }$ \\
+%     13  &  7 & & $( x - a )^{ k }\, dx$ & $\int ( x - a )^{ -k }\, dx$ \\
+%     18  & &  4 & $\fr{ 1 }{ 3 }$ & $\fr{ 1 }{ 2 }$ \\
+%     18  & &  1 & więc$\cdot t$ & więc $t$ \\
+%     23  & 16 & & $n \_ 1$ & $n - 1$ \\
+%     23  & 17 & & $n \_ 2$ & $n - 2$ \\
+%     23  & & 16 & otrzvmujemy & otrzymujemy \\
+%     25  &  1 & & $e^{ \cdot (k + 1) t}$ & $e^{ (k + 1) t}$ \\
+%     28  & &  5 & z$\cdot$algebry & z~algebry \\
+%     29  & & 11 & $\fr{ P(x) }{ (x - a)^{k - 1} Q_{ 1 }(x) }$
+%            & $\fr{ P_{ 1 }(x) }{ (x - a)^{k - 1} Q_{ 1 }(x) }$ \\
+%     34  &  3 & & [lub (6) & [lub (6)] \\
+%     34  &  4 & & lub (6)] & [lub (6)] \\
+%     35  & & 17 & $\left[ \fr{ a x^{ 2 } + b x + c }
+%                  { x^{ 3 } + x^{ 2 } + x + 1 } \right]$
+%            & $\left[ \fr{ a x^{ 2 } + b x + c }
+%              { x^{ 3 } + x^{ 2 } + x + 1 } \right]'$ \\
+%     35  & & 12 & $x^{ 2 } + x^{ 2 } + x + 1$
+%            & $x^{ 3 } + x^{ 2 } + x + 1$ \\
+%     36  & 14 & & $x^{ \dot{ 2 } }$ & $x^{ 2 }$ \\
+%     39  &  3 & & $\sqrt[ m ]{ \fr{ \al x + \be }{ \ga x + \del } } dx$
+%            & $\sqrt[ m ]{ \fr{ \al x + \be }{ \ga x + \del } }$ \\
+%     40  &  2 & & $\fr{ 2t - 1 }{ \sqrt{ 3 } }$
+%            & $\fr{ 2t + 1 }{ \sqrt{ 3 } }$ \\
+%     40  & & 12 & ${ m + 1 \atop n }$ & $\fr{ m + 1 }{ n }$ \\
+%     44  & &  4 & $\sqrt{ ax }$ & $\sqrt{ a } x$ \\
+%     \hline
+%   \end{tabular}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     44  & &  1 & $\sqrt{ ax }$ & $\sqrt{ a } x$ \\
+%     45  & & 13 & $2 \sqrt{ a } t - b$ & $2 \sqrt{ c } t - b$ \\
+%     46  & &  8 & $( 2 ax + b^{ 2 } )$ & $( 2 ax + b )^{ 2 }$ \\
+%     % 479 & 2 & & $\IntL_{ 0 }^{ +\infty }$
+%     % & $\IntL_{ a }^{ +\infty }$ \\
+%     % 479 & 4 & & $\IntL_{ a }^{ A } \fr{ dx }{ x }$
+%     % & $\IntL_{ a }^{ A } \fr{ dx }{ x^{ \la } }$ \\
+%     % 483 & 4 & & $I^{ 3 }$ & $I^{ 2 }$ \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+% \end{center}
+% \noi
+% \StrWd{34}{3} \\
+% \tb{Jest:} Zróżniczkujmy (10) obustronnie\ld \\
+% \tb{Powinno być:} Wykonując jawnie różniczkowanie w~(10)\ld \\
+% \StrWd{71}{16} \Jest
+% $R\left( x, \sqrt{ ax^{ 4 } + bx^{ 3 } + cx^{ 2 } + dx + e }
+% \right.$ \\
+% \Pow $R\left( x, \sqrt{ ax^{ 4 } + bx^{ 3 } + cx^{ 2 } + dx + e }
+% \right)$ \\
+
+% \vspace{\spaceTwo}
+
+
+
+
+
+% % ##################
+% \Work{
+%   Włodzimierz Krysicki, L. Włodarski \\
+%   ,,Analiza matematyczna w zadaniach. Tom~I'',
+%   \cite{KrysickiWlodarskiAnalizaWZadaniachTomI2005}}
+
+
+% \CenterTB{Uwagi}
+
+% \start \Str{89} Problemy takie jak policzenie granicy
+% $\Lim_{ \xToZero } \fr{ \sin 3 x }{ x }$, sugerują następujące
+% postępowanie. Wiemy, że~$\Lim_{ \xToZero } 3x = 0$ oraz
+% że~$\Lim_{ \xToZero } \fr{ \sin x }{ x } = 1$, chcielibyśmy
+% przekształcić wyrażenie do postaci $3 \fr{ \sin 3x }{ 3x }$
+% i~skorzystać z~tego, że~$\Lim_{ \xToZero } \fr{ \sin 3x }{ 3x } = 0$,
+% pytanie jedna czy ta ostania równość zachodzi? Pozytywną odpowiedź
+% na~to~pytanie daje poniższe twierdzenie.
+
+% % Funkcje tu użyte wciąż nie są zdefiniowane \start \Str{96} Można
+% % zauważyć, że~funkcje $\artanh$ i~$\arcoth$ mają taką samą pochodną,
+% % więc powinny różnią~się o~stałą, co~jest nonsensem. Wyjaśnieniem
+% % problemu jest fakt, że~te dwie funkcje~są określone na rozłącznych
+% % dziedzinach.
+
+% \vspace{\spaceFour}
+
+
+% \start \Str{125} Warto przedyskutować, dlaczego tak ważnej jest
+% założenie o~tym, że~$\dd{}{ x }{ t } \neq 0$. Jeżeli mamy dane dwie
+% funkcje $y( t )$ i~$x( t )$, to~nie musi istnieć funkcja $y( x )$.
+% Jeżeli jednak dla jakiegoś $t_{ 0 }$ mamy
+% $\dd{}{ x }{ t }( t_{ 0 } ) \neq 0$ to~na mocy twierdzenie
+% o~odwracaniu funkcji klasy $\Cj$ istnieje\footnote{Nie wiem czy
+%   założenie o~klasie różniczkowalności jest konieczne, bowiem
+%   w~przypadku funkcji rzeczywistej jednej zmiennej istnieje wiele
+%   wariantów twierdzenia o~funkcji uwikłanej i~funkcji odwrotnej, więc
+%   może~się okazać, iż~jeden z~nich pozwala osłabić ten warunek.
+%   Szeroką dyskusję tych twierdzeń można znaleźć w~książce Fichtenholza
+%   \cite{FichtenholzRachunekRiCTomI2005}.} funkcja $t( x )$ w~pewnym
+% otoczeniu $t_{ 0 }$ i~w~tym otoczeniu $y( x ) = y( t( x ) )$.
+
+% Co~jednak dzieje~się, gdy~$\dd{}{ x }{ t }( t_{ 0 } ) = 0$, czy
+% funkcja $y( x )$ wówczas nie istnieje? Następujący przypadek pokazuje,
+% że~tak nie musi być. Rozpatrzmy funkcje $x( t ) = t^{ 3 }$,
+% $y( t ) = t$. Pomimo, że~$\dd{}{ x }{ t }( 0 ) = 0$~to, można to
+% zauważyć np. rysując wykresy obu funkcji, można odwikłać $t( x )$
+% i~wówczas
+% \begin{equation*}
+%   y( x ) =
+%   \begin{cases}
+%     \sqrt[1 / 3]{ x } & x \geq 0, \\
+%     -\sqrt[1 / 3]{ x } & x < 0.
+%   \end{cases}
+% \end{equation*}
+% Funkcja ta jednak nie jest różniczkowalna dla $x = 0$. Nie potrafię
+% stwierdzić, czy znikanie pochodnej $\dd{}{ x }{ t }( t_{ 0 } )$ musi
+% pociągać za sobą, że~jeśli funkcja $y( x )$ istnieje to jest
+% nieróżniczkowalna po $x$ w~punkcie $x( t_{ 0 } )$. Wątpię jednak,
+% aby~tak było.
+
+% \vspace{\spaceFour}
+
+
+% \start \Str{130} Autorzy popełnili tu błąd przyjmując, że~moduł
+% pochodnej równy jest pochodnej modułu:
+% \begin{equation*}
+%   \left| \dd{}{ f }{ t } \right| = \dd{}{ \abso{ f } }{ t }.
+% \end{equation*}
+% Że~jest inaczej można~się przekonać rozważając znany przykłady ruchu
+% jednostajnego po okręgu, gdzie prędkość ma stałą długość, a~jednak
+% moduł przyśpieszenia nie jest równy 0, lecz $\fr{ v^{ 2 } }{ \rho }$,
+% gdzie $\rho$ to promień krzywizny.
+
+% Przeprowadzając proste obliczenia dostajemy poprawne wzory na składowe
+% i~moduł przyśpieszenia:
+% \begin{align*}
+%   a_{ x } &= 50 ( \cos 5t^{ 2 } - 100 t^{ 2 } \sin 5t^{ 2 } ), \\
+%   a_{ y } &= -50 ( \sin 5t^{ 2 } + 100 t^{ 2 } \cos 5t^{ 2 } ), \\
+%   a &= 50 \sqrt{ 1 + 100 t^{ 4 } }.
+% \end{align*}
+% Widzimy więc, że~moduł rośnie w~czasie. Należało~się tego spodziewać,
+% bowiem przyśpieszenie normalne do toru dane jest wzorem
+% $\fr{ v^{ 2 } }{ \rho }$, więc jeśli prędkość rośnie liniowo, to ta
+% składowa przyśpieszenia również musi rosnąć.
+
+% % Uwagi:
+% % \begin{itemize}
+% % \item
+% % \item
+% % \item
+% % \item
+% % \end{itemize}
+
+% \CenterTB{Błędy}
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     46  &  8 & & $\sqrt[n]{ u_{ n } } < p$ & $\sqrt[n]{ u_{ n } } \leq p$ \\
+%     79  & &  8 & $-b \, a$ & $-b / a$ \\
+%     80  & 10 & & $= 2$ & $x = 2$ \\
+%     88  & &  2 & $\fr{ x^{ 2 } - 1 }{ x - 2 }$ & $\fr{ x^{ 2 } - 4 }
+%                                                  { x - 2 }$ \\
+%     89  &  5 & & $\fr{ ( x - 3 )( -1 )^{ [ x ] } }{ x^{ 2 } - 9 }$
+%            & $\fr{ ( x + 3 )( -1 )^{ [ x ] } }{ x^{ 2 } - 9 }$ \\
+%     96  & &  3 & $\fr{ -1 }{ 1 - x^{ 2 } }$
+%            & $\fr{ 1 }{ 1 - x^{ 2 } }$ \\
+%     116 &  2 & & $\left[ 2 \tan \fr{ x }{ 3 } + 1 \right)$
+%            & $ \left( 2 \tan \fr{ x }{ 3 } + 1 \right)$ \\
+%     129 & &  5 & $a = 796$ & $a = 7.96$ \\
+%     231 & 11 & & $\bigg| \Sum_{ k = 0 }^{ n } u( x ) - S( x ) < \bigg|
+%                  \veps$
+%            & $\bigg| \Sum_{ k = 0 }^{ n } u( x )
+%              - S( x ) \bigg| < \veps$ \\
+%     234 & & 11 & $\sin{ 1 \atop n }$ & $\sin \fr{ 1 }{ n }$ \\
+%     241 & &  6 & $f( 0 )$ & $f'( 0 )$ \\
+%     241 & &  4 & $2^{ 3 }$ & $2^{ 2 }$ \\
+%     256 & &  4 & $\fr{ f'( x ) }{ {}'( x ) }$ & $\fr{ f'( x ) }
+%                                                 { g'( x ) }$ \\
+%     258 & &  4 & ${ 1 \atop t^{ 2 } }$ & $\fr{ 1 }{ t^{ 2 } }$ \\
+%     259 &  8 & & oraz \emph{istnieje} & \emph{ale istnieje} \\
+%     441 & &  7 & $\arctan^{ 3 }x$ & $\arctan x^{ 3 }$ \\
+%     442 & &  6 & $\fr{ 1 }{ ( 1 - x ) \sqrt{ x } }$
+%            & $\fr{ 1 }{ x \ln x \ln( \ln x ) }$ \\
+%     436 & &  6 & $-4$ & $-2$ \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+% \end{center}
+
+% \begin{itemize}
+
+% \item[--] Str. 325. 16.32.
+%   $\int \frac{ 6 x - 13 }{ x^{ 2 } - \frac{ 7 }{ 2 } x + \frac{ 3 }{ 2
+%     } } dx$.
+
+% \item[--] Str. 378. 19.15.
+%   $\int \limits_{ 0 }^{ a } 3x \sqrt{ x^{ 2 } + 4 a^{ 2 } } dx, a > 0
+%   \textrm{.}$
+
+% \item[--] Str. 436. 5.38. $\frac{ 2 }{ 3 }$.
+
+% \item[--] Str. 438. 6.50.
+%   $y' = 7 x^{ 4 / 3 } - 13 x^{ 9 / 4 } - \frac{ 2 }{ 7 } x^{ -3 / 2 }
+%   \textrm{.}$
+
+% \item[--] Str. 438. 6.53.
+%   $y' = x^{ -2 / 3 } - 3 x^{ 2 } + \frac{ 1 }{ 2 } \frac{ 1 }{ \sqrt[
+%     4 ]{ x } }$.
+
+% \item[--] Str. 438. 6.56. \ldots
+%   $y' = \frac{ -5 }{ 7 \sqrt[ 7 ]{ x^{ 8 } } } - 14 x^{ 6 } - \frac{ 3
+%   }{ 4 \sqrt{ x^{ 3 } } }$.
+
+% \item[--] Str. 438. 6.89. \ldots
+%   $z' = \frac{ -2 a x }{ ( a^{ 2 } + x^{ 2 } ) \sqrt{ a^{ 4 } - x^{ 4
+%       } } }$.
+
+% \item[--] Str. 440. 6.113. $\cos x \neq 0$,
+%   $y' = \frac{ 7 \sin^{ 3 } x }{ \cos^{ 8 } x }$.
+
+% \item[--] Str. 441. 6.129. $x > 1$,
+%   $y' = \frac{ x \ln x }{ \sqrt{ ( x^{ 2 } - 1 )^{ 3 } } }$.
+
+% \item[--] Str. 441. 6.131.
+%   $y' = x^{ 4 } \arctan x + \frac{ x^{ 5 } - x }{ 5 ( 1 + x^{ 2 } ) }
+%   - \frac{ 1 }{ 5 } x^{ 3 } + \frac{ 1 }{ 5 } x$.
+% \item[--] Str. 478. \ldots
+%   $I = \frac{ 1 }{ 3 } \ln | a^{ 3 } + x^{ 3 } |$.
+
+% \item[--] Str. 480. 16.26. $I = \frac{ 1 }{ 8 } ( 2 x + 1 )^{ 4 }$.
+
+% \item[--] Str. 480. 16.27. $x \neq \frac{ 2 }{ 3 }$;
+%   $I = \frac{ -1 }{ 9 ( 3 x - 2 )^{ 3 } }$.
+
+% \item[--] Str. 480. 16.37. $x \neq \frac{ 2 }{ 3 }$,
+%   $x \neq \frac{ 3 }{ 2 }$;
+%   $I = \frac{ 1 }{ 5 } \ln | \frac{ 2 x - 3 }{ 3 x - 2 } |$.
+
+% \end{itemize}
+
+% \vspace{\spaceTwo}
+
+
+
+
+
+% % ##################
+% \Work{ % Autorzy i tytuł dzieła
+%   Włodzimierz Krysicki, L. Włodarski \\
+%   ,,Analiza matematyczna w~zadaniach. Tom~II'',
+%   \cite{KrysickiWlodarskiAnalizaWZadaniachTomII2004} }
+
+
+% \CenterTB{Uwagi}
+
+% \start \Str{199} \tb{Zadanie 7.2.} Rozwiązanie tego zadania jest
+% niepełne, w~następujący sensie. Równanie numer (2) w~tym zadaniu,
+% po~spierwiastkowaniu sprowadza~się do~równania:
+% \begin{equation*}
+%   \left| \dd{}{ y }{ x } \right| = \abso{ \cos x }.
+% \end{equation*}
+% Równania tego nie da~się przedstawić w~postaci Newtona, zaś poza
+% równaniami (3) z~tego zadania, można uzyskać z~niego nieskończoną
+% ilość innych, np. ograniczając~się do przedziału
+% $( -\fr{ \pi }{ 2 }, \frac{ 3 \pi }{ 2 } )$ możemy rozpatrzyć:
+% \begin{equation*}
+%   \dd{}{ y }{ x } =
+%   \begin{cases}
+%     -\cos x, & x \in ( -\fr{ \pi }{ 2 }, \fr{ \pi }{ 2 } ), \\
+%     \cos x, & x \in ( \fr{ \pi }{ 2 }, \fr{ 3 \pi }{ 2 } ).
+%   \end{cases}
+% \end{equation*}
+% Dla dowolnych warunków początkowych w~rozpatrywanym przedziale, można
+% znaleźć rozwiązania tego równania różniczkowalne w~całym przedziale.
+% Na przykład dla $x_{ 0 } = \fr{ \pi }{ 2 }, y_{ 0 } = 0$, takim
+% rozwiązaniem jest:
+% \begin{equation*}
+%   y( x )
+%   \begin{cases}
+%     -\sin x + 1, & x \in ( -\fr{ \pi }{ 2 }, \fr{ \pi }{ 2 } ), \\
+%     \sin x - 1, & x \in ( \fr{ \pi }{ 2 }, \fr{ 3 \pi }{ 2 } ).
+%   \end{cases}
+% \end{equation*}
+
+% \vspace{\spaceFour}
+
+
+% \start \Str{200} \tb{Zadanie 7.3.} Również tutaj problem znalezienia
+% wszystkich rozwiązań równania różniczkowego nie został w~pełni
+% rozwiązany. Ograniczając~się do przedziału $( 0, 2 \pi )$ możemy
+% zauważyć, że~funkcja:
+% \begin{equation*}
+%   y( x ) =
+%   \begin{cases}
+%     C_{ 1 } \sin x,& x \in ( 0, \pi ), \\
+%     0, & x = \pi, \\
+%     C_{ 2 } \sin x,& x \in ( \pi, 2 \pi ),
+%   \end{cases}
+% \end{equation*}
+% jest rozwiązaniem równania (1) z~tego zadania w~całym badanym
+% przedziale, choć nie jest różniczkowalne w~0.
+
+
+% \CenterTB{Błędy}
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     25  & &  7 & $( \sin z )^{ \tan z }$ & $( \sin x )^{ \tan z }$ \\
+%     26  & 10 & & $3 \cdot 3$ & $9$ \\
+%     26  & &  4 & $|\, \mr{n}$ & $\ln$ \\
+%     26  &  2 & & $e^{ x^{ 2 } \sin(x - y^{ 2 }) }$
+%            & $\sin^{ x^{ 2 } }(x - y^{ 2 })$ \\
+%     26  &  1 & & $e^{ x^{ 2 } \sin(x - y^{ 2 }) }$
+%            & $\sin^{ x^{ 2 } }(x - y^{ 2 })$ \\
+%            % & & & & \\
+%            % & & & & \\
+%     201 & &  1 & $+$ & $=$ \\
+%     203 &  7 & & $\fr{ a y }{ d x }$ & $\dd{}{ y }{ x }$ \\
+%     203 &  7 & & sprawdzają & spełniają \\
+%     207 &  2 & & $1 \fr{ 1 + \tfr{ 1 }{ C_{ 2 }^{ 2 } } }
+%                  { x^{ 2 } + 1 }$
+%            & $1 - \fr{ 1 + \fr{ 1 }{ C_{ 2 }^{ 2 } } }
+%              { x^{ 2 } + 1 }$ \\
+%              % & & & & \\
+%     431 & &  3 & $x^{ \fr{ 1 }{ y - 1 } }$ & $x^{ \fr{ 1 }{ y } - 1 }$ \\
+%     432 & &  9 & $\fr{\uppi R^{ 3 } }{ 3 }$ & $\fr{\uppi R^{ 2 } }{ 3 }$ \\
+%     449 & &  9 & $C - e^{ \fr{ 1 }{ x } }$ & $C e^{ -\fr{ 1 }{ x } }$ \\
+%     449 & &  9 & $c$ & $C$ \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+% \end{center}
+
+% \begin{itemize}
+% \item[--] Str. 432.
+%   $\fr{ \pr^{ 2 } u }{ \pr x \pr y } = \fr{ \pr^{ 2 } u }{ \pr y \pr x
+%   } = 6 x^{ 2 } - 30 x y^{ 2 } - 2 \sin 2y$.
+
+% \item[--] Str. 454. 9.5. $y = C \frac{ x - 2 }{ x + 2 }$.
+
+% \item[--] Str. 454. 9.5. $y = C x$.
+
+%   % \item[--] Str.
+%   % \item[--] Str.
+%   % \item[--] Str.
+%   % \item[--] Str.
+%   % \item[--] Str.
+% \end{itemize}
+
+% \vspace{\spaceTwo}
+
+
+
+
+
+% % ####################
+% \Work{ % Autor i tytuł dzieła
+%   P. J. Nahin \\
+%   ,,Inside Interesting Integrals'',
+%   \cite{NahinInterestingIntegrals2015} }
+
+
+
+% \CenterTB{Błędy}
+% % \begin{center}
+% %   \begin{tabular}{|c|c|c|c|c|}
+% %     \hline
+% %     & \multicolumn{2}{c|}{} & & \\
+% %     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+% %                               & Powinno być \\ \cline{2-3}
+% %     & Od góry & Od dołu & & \\
+% %     \hline
+% %     %     & & & & \\
+% %     %     & & & & \\
+% %     \hline
+% %   \end{tabular}
+% % \end{center}
+% \noi
+% \StrWg{vi}{3} \\
+% \Jest \textbf{immediatly know they have encountered a~most interesting
+%   character}: \\
+% \Pow \textbf{\emph{immediatly know they have encountered a~most
+%     interesting
+%     character}:} \\
+% % \newpage
+
+
+
+
+
+
+
+
+
+
+% % ####################
+% \Work{
+%   W. Żakowski, W. Lesiński \\
+%   ,,Matematyka. Część IV'' % \cite{ZL78}
+% }
+
+
+% \CenterTB{Uwagi}
+
+
+% \noi \tb{Część~I.}
+
+% \vspace{\spaceFour}
+
+
+% \start Często w~tej części książki pojawia~się następująca sytuacja.
+% W~wyniku rachunków otrzymaliśmy całkę ogólną pewnego równania
+% różniczkowego $\vp( x, C ) = 0$, przy czym
+% $C \in ( a, b ) \sum ( b, c )$. W~każdym rozważanym przypadku
+% okazywało~się, że~funkcję $\vp( x, C )$ można w~naturalny sposób
+% przedłużyć do~$C = b$ i~$\vp( x, b ) = $ również jest rozwiązaniem
+% tego równania. Czy to jest zbieg okoliczności, czy~też przy pewnych
+% warunkach musi to zachodzić? \Prze
+
+% \vspace{\spaceThree}
+
+
+
+% \noi \tb{Konkretne strony.}
+
+% \vspace{\spaceFour}
+
+
+% \start \Str{23} \Dok
+
+% \start \Str{26} Rachunki prowadzące do równania (I.62) dowodzą,
+% że~przedstawia ono rozwiązanie wyjściowego równania różniczkowego
+% dla~każdej stałej $C_{ 2 }$ różnej od~zera. Aby~zasadnie twierdzić,
+% że~jest to rozwiązanie tego równania dla~każdej stałej rzeczywistej
+% $C_{ 2 }$ należy podstawić\footnote{W~tym momencie nie znam prostszego
+%   rozwiązania tego problemu, ale~w~uwagach do części~I tej książki,
+%   jest zawarta sugestia innego podejścia.} $C_{ 2 } = 0$, co prowadzi
+% do~$u = 1 \pm \sqrt{2}$, i~sprawdzić, że~otrzymana w~ten sposób
+% funkcja jest rozwiązaniem zadanego równania. Jak~się okazuje, tak
+% w~istocie jest.
+
+% % \CenterTB{Błędy}
+% % \begin{center}
+% %   \begin{tabular}{|c|c|c|c|c|}
+% %     \hline
+% %     & \multicolumn{2}{c|}{} & & \\
+% %     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+% %                               & Powinno być \\ \cline{2-3}
+% %     & Od góry & Od dołu & & \\
+% %     \hline
+% %     %     & & & & \\
+% %     %     & & & & \\
+% %     %     & & & & \\
+% %     \hline
+% %   \end{tabular}
+% % \end{center}
+
+
+
+% % ####################
+% \Work{ % Autor i tytuł dzieła
+% B. W. Szabat \\
+% ,,Wstęp do analizy zespolonej'',
+% \cite{SzabatWstepDoAnalizyZespolonej1974} }
+
+
+% \CenterTB{Błędy}
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     17  &  5 & & dal & dal\dywiz \\
+%     25  & & 11 & $z_{ 2 }( t )$ & $z_{ 2 }( \tau( t ) )$ \\
+%     %     & & & & \\
+%     \hline
+%   \end{tabular}
+% \end{center}
+
+% \vspace{\spaceTwo}
