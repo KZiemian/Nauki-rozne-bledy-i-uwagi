@@ -1,0 +1,95 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[polish]{babel}% Tłumaczy na polski teksty automatyczne LaTeXa i pomaga z typografią.
+\usepackage[plmath,OT4,MeX]{polski}% Polska notacja we wzorach matematycznych. Ładne polskie
+\usepackage[T1]{fontenc}% Pozwala pisać znaki diakrytyczne z języków innych niż polski.
+\usepackage[utf8]{inputenc}% Pozwala pisać polskie znaki bezpośrednio.
+\usepackage{indentfirst}% Sprawia, że jest wcięcie w pierwszym akapicie.
+\frenchspacing% Wyłącza duże odstępy na końcu zdania. Pakiet babel polski robi to samo, ale to jest %zabezpieczenie jakibym chciał przestać go używać.
+\usepackage{amsfonts}% Czcionki matematyczne od American Mathematic Society.
+\usepackage{amsmath}% Dalsze wsparcie od AMS. Więc tego, co najlepsze w LaTeX, czyli trybu matematycznego.
+\let\lll\undefined
+\usepackage{amssymb}
+\usepackage{amscd}% Jeszcze wsparcie od AMS.
+\usepackage{latexsym}% Więcej symboli.
+\usepackage{textcomp}% Pakiet z dziwnymi symbolami.
+%\usepackage{slashed}% Pozwala pisać slash Feynmana.
+\usepackage{xy}% Pozwala rysować grafy.
+\usepackage{tensor}% Pozwala prosto używać notacji tensorowej. Albo nawet pięknej notacji
+%tensorowej:).
+\usepackage{graphicx}% Pozwala wstawiać grafikę.
+\usepackage{vmargin}
+%----------------------------------------------------------------------------------------
+%	MARGINS
+%----------------------------------------------------------------------------------------
+\setmarginsrb           { 0.7in}  % left margin
+                        { 0.6in}  % top margin
+                        { 0.7in}  % right margin
+                        { 0.8in}  % bottom margin
+                        {  20pt}  % head height
+                        {0.25in}  % head sep
+                        {   9pt}  % foot height
+                        { 0.3in}  % foot sep
+%\usepackage{url}% Pozwala pisać ładnie znak ~.
+\newcommand{\vt}{$(x_1,x_{2}, \ldots, x_n)$}
+\newcommand{\vet}{(x_1,x_{2}, \ldots, x_n)}
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\de}{\mathrm{d}}
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\supp}{\mathrm{supp}}
+\newcommand{\dd}[3]{\frac{ d^{ #1 } #2 }{ d #3^{ #1 } }}
+\newcommand{\pd}[3]{\frac{ \partial^{ #1 } #2 }{ \partial #3^{ #1 } }}
+\newcommand{\Prz}{\textbf{Przemyśl.}}
+\newcommand{\Dok}{\textbf{Dokończ.}}
+
+
+\begin{document}
+
+
+%% \begin{center}
+%%   \begin{Large}
+%%     \textbf{Równania różniczkowe zwyczajne, błędy i~uwagi.}
+%%   \end{Large}
+%% \end{center}
+
+
+\begin{center}
+  W. Feller \\
+  ,,Wstęp do rachunku prawdopodobieństwa. Tom I.'', \cite{Fel06}.
+\end{center}
+
+Błędy:\\
+\begin{tabular}{|c|c|c|c|c|}
+  \hline
+  & \multicolumn{2}{c|}{} & & \\
+  Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                            & Powinno być \\ \cline{2-3}
+  & Od góry & Od dołu & & \\
+  \hline
+  % & & & & \\
+  28 & & 9 & wielu sposobami & na wiele sposobów \\
+  % & & & & \\
+  % & & & & \\
+  % & & & & \\
+  \hline
+\end{tabular}
+
+%% \noindent\\
+%% \textbf{Str. 15, wiersz 13.}\\
+%% \textbf{Jest:} w~sensie ustępu\ldots \\
+%% \textbf{Powinno być:} w~sensie zdefiniowanym w~ustępie\ldots \\
+
+
+
+% ####################################################################
+% ####################################################################
+% Bibliografia
+\bibliographystyle{alpha} \bibliography{Bibliography}{}
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}

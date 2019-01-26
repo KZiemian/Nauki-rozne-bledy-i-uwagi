@@ -1,0 +1,72 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[polish]{babel}% Tłumaczy na polski teksty automatyczne LaTeXa i pomaga z typografią.
+\usepackage[plmath,OT4,MeX]{polski}% Polska notacja we wzorach matematycznych. Ładne polskie
+\usepackage[T1]{fontenc}% Pozwala pisać znaki diakrytyczne z języków innych niż polski.
+\usepackage[utf8]{inputenc}% Pozwala pisać polskie znaki bezpośrednio.
+\usepackage{indentfirst}% Sprawia, że jest wcięcie w pierwszym akapicie.
+\frenchspacing% Wyłącza duże odstępy na końcu zdania. Pakiet babel polski robi to samo, ale to jest %zabezpieczenie jakibym chciał przestać go używać.
+\usepackage{fullpage}% Mniejszse marginesy.
+\usepackage{amsfonts}% Czcionki matematyczne od American Mathematic Society.
+\usepackage{amsmath}% Dalsze wsparcie od AMS. Więc tego, co najlepsze w LaTeX, czyli trybu
+% matematycznego.
+\usepackage{upgreek}%Lepsze greckie czcionki. Przyklad skladni: pi = \uppi
+% \usepackage{txfonts}%Inne ulepszenie greckich liter. Przyklad skladni: pi = \piup
+\usepackage{amscd}% Jeszcze wsparcie od AMS.
+\usepackage{latexsym}% Więcej symboli.
+\usepackage{textcomp}% Pakiet z dziwnymi symbolami.
+\usepackage{slashed}% Pozwala pisać slash Feynmana.
+\usepackage{xy}% Pozwala rysować grafy.
+\usepackage{tensor}% Pozwala prosto używać notacji tensorowej. Albo nawet pięknej notacji
+% tensorowej:).
+\usepackage{vmargin}
+
+% ----------------------------------------------------------------------------------------
+% MARGINS
+% ----------------------------------------------------------------------------------------
+\setmarginsrb { 0.7in} % left margin
+{ 0.6in} % top margin
+{ 0.7in} % right margin
+{ 0.8in} % bottom margin
+{ 20pt} % head height
+{0.25in} % head sep
+{ 9pt} % foot height
+{ 0.3in} % foot sep
+\usepackage{graphicx}% Pozwala wstawiać grafikę.
+% \usepackage{url}% Pozwala pisać ładnie znak ~.
+\def\mathbi#1{\textbf{\em #1}} \newcommand{\vt}{$(x_1,x_{2}, \ldots,
+  x_n)$} \newcommand{\vet}{(x_1,x_{2}, \ldots, x_n)}
+\newcommand{\e}{\mathrm{e}} \newcommand{\ii}{\mathrm{i}}
+\newcommand{\de}{\mathrm{d}} \newcommand{\dd}[3]{\frac{ \de^{ #1 } #2
+  }{ \de #3^{ #1 } }} \newcommand{\pd}[3]{\frac{ \partial^{ #1 } #2
+  }{ \partial #3^{ #1 } }} \newcommand{\Str}[1]{\textbf{Str. #1.}}
+\newcommand{\StrWg}[2]{\textbf{Str. #1, wiersz #2.}}
+\newcommand{\StrWd}[2]{\textbf{Str. #1, wiersz #2 (od dołu).}}
+\newcommand{\Jest}{\textbf{Jest: }} \newcommand{\Pow}{\textbf{Powinno
+    być: }} \newcommand{\Prze}{\textbf{Przemyśl.}}
+\newcommand{\Dok}{\textbf{Dokończ.}}
+
+
+
+\begin{document}
+
+
+
+\begin{itemize}
+\item[--] Page 29. In equation (1.196) is:
+\begin{displaymath}
+\sum_{ n = -N }^{ N } \langle p | x_{ n } \rangle \langle x_{ n } | p' \rangle = \sum_{ n = -N }^{ N } \langle p | x_{ n } \rangle \langle x_{ n } | p' \rangle = \sum_{ n = -N }^{ N } e^{ i( p - p' ) na / \hbar },
+\end{displaymath}
+should be:
+\begin{displaymath}
+\sum_{ n = -N }^{ N } \langle p | x_{ n } \rangle \langle x_{ n } | p' \rangle = \sum_{ n = -N }^{ N } e^{ i( p - p' ) na / \hbar },
+\end{displaymath}
+\end{itemize}
+
+
+
+\bibliographystyle{ieeetr}
+\bibliography{BibliographySBPL}{}
+
+
+
+\end{document}

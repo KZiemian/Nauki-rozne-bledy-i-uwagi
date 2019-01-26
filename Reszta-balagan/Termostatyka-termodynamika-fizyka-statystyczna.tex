@@ -1,0 +1,365 @@
+\RequirePackage[l2tabu, orthodox]{nag}
+% Autor: Kamil Ziemian
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc} % Pozwala pisać polskie znaki bezpośrednio.
+\usepackage[polish]{babel} % Tłumaczy na polski teksty automatyczne LaTeXa
+% i pomaga z typografią.
+\usepackage[MeX]{polski} % Polska notacja we wzorach matematycznych.
+% Ładne polskie
+\usepackage{microtype}
+\let\lll\undefined
+\usepackage[intlimits]{amsmath}
+\usepackage{amsfonts, amssymb, amscd, amsthm}
+\usepackage{latexsym} % Więcej symboli.
+\usepackage{upgreek} %Lepsze greckie czcionki. Przyklad skladni: pi = \uppi
+\usepackage{textcomp} % Pakiet z dziwnymi symbolami.
+% \usepackage{slashed} % Pozwala pisać slash Feynmana.
+\usepackage{tensor} % Pozwala prosto używać notacji tensorowej.
+% Albo nawet pięknej notacji tensorowej:).
+\usepackage{graphicx} % Pozwala wstawiać grafikę.
+\usepackage{xcolor}
+\usepackage{calrsfs} % Lepsze kaligrafowane litery.
+% \DeclareMathAlphabet{\pazocal}{OMS}{zplm}{m}{n}
+\usepackage{vmargin}
+%---------------------------------------------------------------------
+% MARGINS
+%---------------------------------------------------------------------
+\setmarginsrb
+{ 0.7in} % left margin
+{ 0.6in} % top margin
+{ 0.7in} % right margin
+{ 0.8in} % bottom margin
+{  20pt} % head height
+{0.25in} % head sep
+{   9pt} % foot height
+{ 0.3in} % foot sep
+\usepackage{hyperref}
+
+% ####################
+% Rozmiar odstępów w tabelach
+\renewcommand{\arraystretch}{1.2}
+
+% #####################################################################
+
+
+\newtheorem{twr}{Twierdzenie}
+\newtheorem{defin}{Definicja}
+\newtheorem{wni}{Wniosek}
+
+
+% #####################################################################
+
+\newcommand{\spaceOne}{2em}
+\newcommand{\spaceTwo}{1em}
+\newcommand{\spaceThree}{0.5em}
+
+% Ładniejszy zbiór pusty
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+
+
+% ####################
+% Uproszczenia w pisaniu tekstu
+\newcommand{\ld}{\ldots}
+
+% Slashe w tekście
+\newcommand{\tbs}{\textbackslash}
+
+% Podstawowe oznaczenia matematyczne
+\newcommand{\fr}{\frac}
+\newcommand{\tfr}{\tfrac}
+\newcommand{\tr}{\textrm}
+
+% Oznaczenia ,,nad i pod''. Wymyśl lepszą nazwę
+\newcommand{\til}{\tilde}
+\newcommand{\ul}{\underline}
+\newcommand{\ol}{\overline}
+\newcommand{\wh}{\widehat}
+\newcommand{\wt}{\widetilde}
+
+% Trzcionki matematyczne
+\newcommand{\mr}{\mathrm}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\bsym}{\boldsymbol}
+
+% Strzałki
+\newcommand{\ra}{\rightarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\xra}{\xrightarrow}
+
+\newcommand{\wtw}{wtedy i~tylko wtedy}
+
+
+% ####################
+% Litery greckie
+\newcommand{\al}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\del}{\delta}
+\newcommand{\Del}{\Delta}
+\newcommand{\la}{\uplambda}
+\newcommand{\eps}{\epsilon}
+\newcommand{\veps}{\varepsilon}
+\newcommand{\vp}{\varphi}
+\newcommand{\om}{\omega}
+\newcommand{\Om}{\Omega}
+\newcommand{\si}{\sigma}
+\newcommand{\Si}{\Sigma}
+\newcommand{\tet}{\theta}
+
+% Standardowe oznaczenia literowe
+\newcommand{\N}{\mb{N}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\D}{\mc{D}}
+\let\H\undefined
+\newcommand{\H}{\mc{H}}
+\let\L\undefined
+\newcommand{\L}{\mc{L}}
+\newcommand{\Rn}{\R^{ n }}
+\newcommand{\Rc}{\mc{R}}
+\newcommand{\Cc}{\mc{C}}
+
+% Mniej używane oznaczenia literowe
+\newcommand{\B}{\mc{B}}
+\newcommand{\Oc}{\mc{O}}
+\newcommand{\Rp}{\R_{ + }}
+
+% ####################
+% Standardowe matematyczne symbole literowe
+% Mathbb
+% \newcommand{\C}{\mb{C}}
+% \newcommand{\N}{\mb{N}}
+% \newcommand{\R}{\mb{R}}
+% \newcommand{\Rn}{\R^{ n }}
+% \newcommand{\Rp}{\R_{ + }}
+
+% % Mathcal
+% \newcommand{\B}{\mc{B}}
+% \newcommand{\D}{\mc{D}}
+% \newcommand{\Fc}{\mc{F}}
+% \let\H\undefined
+% \newcommand{\H}{\mc{H}}
+% \let\L\undefined
+% \newcommand{\L}{\mc{L}}
+% \newcommand{\M}{\mc{M}}
+% \newcommand{\Rc}{\mc{R}}
+% \newcommand{\Cc}{\mc{C}}
+% \newcommand{\Oc}{\mc{O}}
+% \newcommand{\T}{\mc{T}}
+
+
+% ####################
+% Teoria mnogości
+\newcommand{\es}{\emptyset}
+\newcommand{\set}[1]{\{ #1 \}}
+\newcommand{\subs}{\subset}
+\newcommand{\setm}{\setminus}
+\newcommand{\com}{\complement}
+\newcommand{\ti}{\times}
+
+
+% ####################
+% Algebra
+\newcommand{\Real}{\mf{Re}}
+\newcommand{\Imag}{\mf{Im}}
+\newcommand{\ot}{\otimes}
+\newcommand{\Tr}{\mr{Tr}}
+
+
+% ####################
+% Analiza matematyczna
+
+% Granice
+\newcommand{\Lim}{\lim\limits}
+\newcommand{\Liminf}{\ul{\lim}}
+\newcommand{\Limsup}{\ol{\lim}}
+
+% Sumy
+\newcommand{\Sum}{\sum\limits}
+
+% Różniczkowanie i pochodne
+\newcommand{\pr}{\partial}
+\newcommand{\de}{\mr{d}}
+\newcommand{\dd}[3]{\fr{ \de^{ #1 } { #2 } }{ \de { #3 }^{ #1 } }}
+\newcommand{\pd}[3]{\fr{ \pr^{ #1 } { #2 } }{ \pr { #3 }^{ #1 } }}
+
+% Powszechnie używane symbole
+\newcommand{\Cinfty}{\Cc^{ \infty }}
+
+% Całki i całkowanie
+\newcommand{\dx}{\de x}
+\newcommand{\Int}{\int\limits}
+\newcommand{\IntL}[3]{ \Int_{ { #1 } }^{ { #2 } } \de#3 \; }
+\newcommand{\IntCa}[2]{ \Int #1 \, \de#2 } % Juz z calkowaniem
+\newcommand{\IntFi}[2]{ \Int \de#1 \, #2 } % Bardziej Fizyczna notacja;)
+\newcommand{\IntWie}[3]{ \Int_{ #1 } \de^{ #2 }#3 \; } % Wielowymiarowa
+\newcommand{\IntDo}[5]{ \Int_{ #1 } \de^{ #2 }#3\, \de^{ #4 } #5 \; }
+
+% ####################
+% Całki w określonych granicach
+\newcommand{\IntA}[1]{\Int_{ -\infty }^{ +\infty } \de #1 \;}
+\newcommand{\IntB}[1]{\int_{ \R } \de #1 \;}
+\newcommand{\IntC}[2]{\int_{ \R } #1 \, \de #2}
+\newcommand{\IntD}[1]{\Int_{ 0 }^{ +\infty } \de #1 \;}
+
+
+% ####################
+% Analiza funkcjonalna
+\newcommand{\da}{\dagger}
+
+% Brakety
+% W analizie funkcjonalnej też często się je stosuje
+\newcommand{\lket}{\langle}
+\newcommand{\rket}{\rangle}
+
+% Przestrzenie L^{ p }
+\newcommand{\Lj}{L^{ 1 }}
+\newcommand{\Ld}{L^{ 2 }}
+\newcommand{\Lp}{L^{ p }}
+\newcommand{\LIj}{\L^{ 1 }}
+\newcommand{\LIp}{\L^{ p }}
+\newcommand{\LdJ}{\Ld( \R, \de \mu )}
+\newcommand{\LdT}{\Ld( \R^{ 3 }, \de \mu )}
+\newcommand{\Ldlim}{L^{ 2 }-\Lim}
+
+
+% ####################
+% Wartość bezwzględna i normy
+\providecommand{\absj}[1]{\lvert #1 \rvert}
+\providecommand{\absd}[1]{\left| #1 \right|}
+\newcommand{\norm}[1]{\left|\left| #1 \right|\right|}
+
+
+% ####################
+% Edycja tekstu
+\newcommand{\tb}{\textbf}
+\newcommand{\noi}{\noindent}
+\newcommand{\start}{\noi \tb{--} {}}
+\newcommand{\Str}[1]{\tb{Str. #1.}}
+\newcommand{\StrWg}[2]{\tb{Str. #1, wiersz #2.}}
+\newcommand{\StrWd}[2]{\tb{Str. #1, wiersz #2 (od dołu).}}
+\newcommand{\Dow}{\tb{Dowód}}
+\newcommand{\Center}[1]{\begin{center} #1 \end{center}}
+\newcommand{\CenterTB}[1]{\Center{\tb{#1}}}
+\newcommand{\Jest}{\tb{Jest: }}
+\newcommand{\Pow}{\tb{Powinno być: }}
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\Prze}{{\color{red} Przemyśl.}}
+\newcommand{\Pop}{{\color{red} Popraw.}}
+\newcommand{\Prob}{{\color{red} Problem.}}
+\newcommand{\Dok}{{\color{red} Dokończ.}}
+\newcommand{\Pyt}{{\color{red} Pytanie.}}
+\newcommand{\Main}[1]{ \begin{center} {\LARGE \tb{#1} } \end{center} }
+\newcommand{\Field}[1]{ \begin{center} {\Large \tb{#1} } \end{center} }
+\newcommand{\Work}[1]{ \begin{center} {\large \tb{#1}} \end{center} }
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+% ####################################################################
+\Field{Termostatyka --~błędy i~uwagi}
+
+\vspace{\spaceOne}
+
+
+
+% ####################
+\Work{
+  Józef Werle ,,Termodynamika fenomenologiczna'', \cite{Werle57} }
+
+
+\CenterTB{Uwagi}
+
+\noi \tb{Konkretne strony}
+
+\vspace{\spaceThree}
+
+\start \Str{15} Werle wprowadza jak strasznie zamieszanie pojęciowe,
+twierdząc na tej samej stronie, że~objętość jest zarówno parametrem
+wewnętrzny jak i~zewnętrznym. Powinno~się jawnie stwierdzić, że~mogą
+istnieć parametry zarówno wewnętrzne, jak i~zewnętrzne układu,
+albo~że~są to wykluczające~się kategorie i~nigdy nie wprowadzać
+jednej wielkości do~nich obu.
+
+Dobrego wyjaśnienie podał Kacper Zalewski. Zmienne zewnętrzne to takie na którymi mamy kontrolę. \red{A czy nad objętością metalu mamy kontrolę i tym podobne rozterki? Dokończ.}
+
+\start \Str{17}
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    5   & &  2 & odwracalnych & nieodwracalnych \\
+    15  & & 13 & lśedzenia & śledzenia \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+% \begin{itemize}
+% \item[--] Str. 20. Zdanie na dole strony jest mętne. Popraw to.?????
+% \item[--] Str. 26. \ldots tylko wtedy, gdy $| V \rangle = 0$\ldots
+% \item[--] Str. 78.
+%   $$\ldots = \ii \int_{a}^{b} \dd{}{ g^{ * } }{ x } f( x ) \de x \,
+%   .$$
+% \item[--] Str. 81.
+  %   $$\langle k' | X | k \rangle = \frac{ 1 }{ 2 \uppi } \int_{
+  %   -\infty }^{ \infty } \e^{ -\ii k' x } x \e^{ \ii k x } \de x =
+  %   -\ii \dd{}{}{ k } \bigg( \frac{ 1 }{ 2 \uppi } \int_{ -\infty
+  % }^{ \infty } \e^{ \ii ( k - k' ) x } \bigg) = -\ii \delta'( k - k'
+  %   ) \, .$$
+  %   Wobec tego, jeśli $| g( k ) \rangle$ jest wektorem, którym w
+  %   bazie $K$ odpowiada funkcja $g( k )$, to
+% $$X| g( k ) \rangle = \bigg| \frac{ -\ii \de g( k ) }{ \de k } \bigg\rangle \, .$$
+% Podsumujmy: w bazie $X$ operator $X$ działa jak $x$, a operator $K$
+% jak $-\ii \de / \de x$ (na funkcje $f( x )$), a w bazie $K$ działa
+% jak $k$, a operator $X$ jak $-\ii \de / \de k$\ldots
+% \item[--]
+% \item[--]
+% \item[--]
+% \end{itemize}
+
+
+
+
+% ####################################################################
+% ####################################################################
+% Bibliografia
+\bibliographystyle{alpha} \bibliography{Bibliography}{}
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
