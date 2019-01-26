@@ -147,33 +147,34 @@
 
 
 
+% ##################
+\Work{ % Autorzy i tytuł dzieła
+  Ramamurti Shankar \\
+  ,,Mechanika kwantowa'', \cite{ShankarMechanikaKwantowa2006} }
+
+
+\CenterTB{Uwagi}
+
+\start \Str{74} Na rysunku 1.8 b) aby otrzymać poprawny wykres
+pochodnej funkci Gaussa należy odbić wykres przedstawiony względem osi
+$y = 0$.
+
+\CenterTB{Błędy}
 \begin{center}
-  Ramamurti Shankar\\
-  ,,Mechanika kwantowa'', \cite{RSMK}.
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % & & & & \\
+    23  & 19 & & antyrównoległą & równoległą \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
 \end{center}
-
-Uwagi:
-\begin{itemize}
-\item Str. 74. Na rysunku 1.8 b) aby otrzymać poprawny wykres
-  pochodnej funkci Gaussa należy odbić wykres przedstawiony względem
-  osi $y = 0$.
-\item
-\end{itemize}
-
-Błędy:\\
-\begin{tabular}{|c|c|c|c|c|}
-  \hline
-  & \multicolumn{2}{c|}{} & & \\
-  Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                            & Powinno być \\ \cline{2-3}
-  & Od góry & Od dołu & & \\
-  \hline
-  % & & & & \\
-  23  & 19 & & antyrównoległą & równoległą \\
-  % & & & & \\
-  % & & & & \\
-  \hline
-\end{tabular}
 
 Błędy:\\
 \begin{itemize}
@@ -198,11 +199,13 @@ $k$, a operator $X$ jak $-\ii \de / \de k$\ldots
 
 
 
-\begin{center}
-  Marian Grabowski, Roman S. Ingarden\\
-  ,,Mechanika kwantowa. Ujęcie w przestrzeni Hilberta'',
-  \cite{MGRIMKUPH}.
-\end{center}
+
+
+% ##################
+\Work{ % Autorzy i tytuł dzieła
+  Marian Grabowski, Roman S.~Ingarden \\
+  ,,Mechanika kwantowa. Ujęcie w~przestrzeni Hilberta'',
+  \cite{GrabowskiIngardenMechanikaKwantowa1987} }
 
 Uwagi:
 \begin{itemize}
@@ -280,34 +283,39 @@ Uwagi:
   brakuje założenia o zbieżności rozważanego ciągu funkcji.
 \end{itemize}
 
-Błędy:\\
-\begin{tabular}{|c|c|c|c|c|}
-  \hline
-  & \multicolumn{2}{c|}{} & & \\
-  Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                            & Powinno być \\ \cline{2-3}
-  & Od góry & Od dołu & & \\
-  \hline
-  % & & & & \\
-  21 & 1 & & $\mu( \{ x ,\! |\psi( x ) - \varphi( x )| > 0  \} ) \ldots$ & $\mu( \{ x ; |\psi( x ) - \varphi( x )| > 0  \} ) \ldots$ \\
-  27 & 12 & & $\mathcal{H}_{ 1 } \otimes \mathcal{H}_{ 2 }$ & $\mathcal{H}_{ 1 } \oplus \mathcal{H}_{ 2 }$ \\
-  27 & 13 & & $\mathcal{R} \otimes \mathcal{R}^{ \bot }$ & $\mathcal{R} \oplus \mathcal{R}^{ \bot }$ \\
-  30 & & 18 & $\xi - \varphi_{ k } ||$ & $|| \xi - \varphi_{ k } ||$ \\
-  32 & & 11 & Teraz$f( a ) = g( 0 )$,$f( b )$ & Teraz $f( a ) = g( 0 )$, $f( b )$ \\
-  34 & & 15 & & $[ a, b ]$ \\
-  101 & & 4 & $Px )$ & $P( x )$ \\
-  311 & 10 & & $i$.Jeżeli & $i$. Jeżeli \\
-  311 & 15 & & $X$ spełniającą & $X$, spełniającą \\
-  312 & & 10 & $\mu$ skończona & $\mu$\dywiz skończona \\
-  313 & 6 & & $\{ x ;\! f( x ) > a \}$ & $\{ x ; f( x ) > a \}$ \\
-  313 & 15 & & $0 = a_{ 0 }$ & $0 \leq a_{ 0 }$ \\
-  313 & 15 & & $x,$ & $x;$ \\
-  313 & 16 & & $A_{ 0 } \ldots \cup A_{ n }$ & $A_{ 0 } \cup \ldots \cup A_{ n }$ \\
-  315 & 3 & & $A^{ 0 } \leq f_{ 1 }( x )$ & $A$: $0 \leq f_{ 1 }( x )$ \\
-  318 & & 7 & Caucy'ego & Cauchy'ego \\
-  % & & & & \\
-  \hline
-\end{tabular}
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % & & & & \\
+    21 & 1 & & $\{ x ,\! \abso{ \psi( x ) - \varphi( x ) } > 0 \}$
+           & $\{ x ;\, | \psi( x ) - \varphi( x )| > 0 \}$ \\
+    27 & 12 & & $\Hc_{ 1 } \ot \Hc_{ 2 }$ & $\Hc_{ 1 } \oplus \Hc_{ 2 }$ \\
+    27 & 13 & & $\Rc \otimes \mathcal{R}^{ \bot }$ & $\mathcal{R} \oplus \mathcal{R}^{ \bot }$ \\
+    30 & & 18 & $\xi - \varphi_{ k } ||$ & $|| \xi - \varphi_{ k } ||$ \\
+    32 & & 11 & Teraz$f( a ) = g( 0 )$,$f( b )$ & Teraz $f( a ) = g( 0 )$, $f( b )$ \\
+    34 & & 15 & & $[ a, b ]$ \\
+    101 & & 4 & $Px )$ & $P( x )$ \\
+    311 & 10 & & $i$.Jeżeli & $i$. Jeżeli \\
+    311 & 15 & & $X$ spełniającą & $X$, spełniającą \\
+    312 & & 10 & $\mu$ skończona & $\mu$\dywiz skończona \\
+    313 & 6 & & $\{ x ;\! f( x ) > a \}$ & $\{ x ; f( x ) > a \}$ \\
+    313 & 15 & & $0 = a_{ 0 }$ & $0 \leq a_{ 0 }$ \\
+    313 & 15 & & $x,$ & $x;$ \\
+    313 & 16 & & $A_{ 0 } \ldots \cup A_{ n }$ & $A_{ 0 } \cup \ldots \cup A_{ n }$ \\
+    315 & 3 & & $A^{ 0 } \leq f_{ 1 }( x )$ & $A$: $0 \leq f_{ 1 }( x )$ \\
+    318 & & 7 & Caucy'ego & Cauchy'ego \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
 
 \begin{itemize}
 \item[--] Str. 27. Niech $\varphi \bot [ \mathcal{ P } ]$. Wówczas
