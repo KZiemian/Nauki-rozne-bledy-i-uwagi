@@ -20,11 +20,11 @@
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
 % ----------------------------
 \usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
-\usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
-% grafiki.
-\usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
-\usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
-% wprowadzane bezpośrednio w tekście.
+% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
+% % grafiki.
+% \usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
+% \usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
+% % wprowadzane bezpośrednio w tekście.
 \usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
 % ----------------------------
@@ -223,6 +223,167 @@ Powinno być:
 
 
 
+% ######################################
+\newpage
+\section{Algebra liniowa}
+
+\vspace{\spaceTwo}
+% ######################################
+
+
+
+% ####################
+\Work{ % Autor i tytuł dzieła
+  Jacek Gancarzewicz \\
+  ,,Algebra liniowa i jej zastosowania'', \cite{Gan04} }
+
+
+Uwagi:
+\begin{itemize}
+\item[--] \Str{34} Aby udowodnić punkt (2) twierdzenia 3.7, wystarczy
+  przyjąć, że~$x \neq 0$ i~pomnożyć równość $xy = 0$ z~lewej strony
+  przez $x^{ -1 }$.
+\item W pierwszym rozdziale nie określono znaku permutacji
+  \\identycznościowej.
+\item Nie określono operacji odejmowania wektorów. Z definicji jest
+  to:$$x - y := x + ( -y ) \, .$$
+\item Problem sumowania po pustym zbiorze wskaźników nie został
+  omówiony. Powinno oczywiście być
+  $\sum_{ \substack{ \iota \in \emptyset } } v_{ \iota } = 0 \, .$
+\item Str. 40. Jest pewna luka w dowodzie drugiej wersji zasadniczego
+  twierdzenia algebry. Procedura dzielenia pokazuje bowiem, że po n
+  krokach wielomian jest stopnia 0, czyli musi być stałą, nie pokazano
+  jednak, że stała ta wynosi $a_{ n }$. Aby to pokazać należy
+  stwierdzić, co można pokazać indukcyjnie, że w iloczynach typu
+  $( z - z_{ 1 } )^{ \alpha_{ 1 } } \ldots( z - z_{ j } )^{ \alpha_{ j
+    } }$ wyraz przy najniższej potędze wynosi 1 i następnie skorzystać
+  z twierdzenia, że dwa wielomiany w ciele liczb zespolonych są równe
+  wtedy i tylko wtedy gdy wszystkie ich współczynniki są równe.
+\item Str. 60. W ostatniej permutacji trzeba jedną 7 zastąpić 4.
+\item Str. 76. Błąd w numeracji podpunktów twierdzenia.
+  % \item Str.
+\item Str. 341. W twierdzeniu 45.1 powinno być $n \geq 1 \, .$ Dla n =
+  0 istnieje 0 punktów afinicznie niezależnych.
+\end{itemize}
+
+Błędy:\\
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % & & & & \\
+    28  & & 13 & $x \neq 0$ & $x \neq y$ \\
+    34  & & 12 & $x( y y^{ -1 } x^{ -1 }$ & $x( y y^{ -1 } ) x^{ -1 }$ \\
+    59  & 16 & & $x_{ 3 }$ & $x_{ 1 }$ \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+Powinno być:
+\begin{itemize}
+\item[--] Str. 41. \ldots to funkcja kwadratowa $z^2+az+b$\ldots
+\item[--] Str. 44.
+  $$\overline{ \xi } = \overline{ z_{ 1 } } - z_{ 2 } j \, .$$
+\item[--] Str. 59.
+  $( x_{ 1 }, \ldots, x_{ k } ) \leq (y_{ 1 }, \ldots, y_{ k } ) \, .$
+\item[--] Str. 62. \ldots i skalara $a \in F$\ldots
+\item[--] Str. 64.
+  $$x = 1 x = ( a^{ -1 } a ) x = a^{ -1 }( a x ) = a^{ -1 } 0 = 0 \,
+  .$$
+\item[--] Str. 66. Wymieniając w twierdzeniu 8.8 równoważne warunki,
+  otrzymujemy\ldots
+\item[--] Str. 75. \ldots otrzymujemy
+  $f( a f^{ -1 }( y ) + b f^{ -1 } ( y' ) ) = a y + b y'$\ldots
+\item[--] Str. 76. Na podstawie twierdzenia 1.2 punkt 1.
+\item[--] Str. 86. \ldots z zasady kontrapozycji.
+\item[--] Str. 110. $( a_{ 0 }, a_{ 1 }, a_{ 2 }, \ldots )$.
+\item[--] Str. 121. \ldots otrzymujemy
+  $\alpha = \sum_{ i = 1 }^{ n } \lambda_{ i } e^{ * }_{ i } .$
+\item[--] Str. 134. \ldots nie występują one w tezie twierdzenia.
+\item[--] Str. 143. \ldots bo jeżeli dla $\alpha \in U^{ * }$\ldots
+\item[--] Str. 143.
+  $$f( e_{ i } ) = \sum_{ j = 1 }^{ m } a_{ j i } \overline{ { e } }_{
+    j } \, , \qquad f'( e'_{ i } ) = \sum_{ j = 1 }^{ m } a_{ j i }
+  \overline{ { e }' }_{ j } \, ,$$
+\item[--] Str. 147.
+  $$f : M( m, 1; F ) = F^{ m } \ni x \longrightarrow A x \in M( n, 1 ;
+  F ) = F^{ n } \, ,$$
+\item[--] Str. 195.
+  \ldots$\mathcal{ J }_{ 1 } : F \otimes X \rightarrow X$ \emph{oraz}
+  $\mathcal{ J }_{ 2 } : X \otimes F \rightarrow X$\ldots
+\item[--] Str. 223. \ldots\emph{gdzie $K \in M( p; F )$ oraz}\ldots
+\item[--] Str. 238. Niech $x_{ 1 }, \ldots, x_{ n } \in F ,$
+  będzie\ldots
+\item[--] Str. 238. \ldots przez punkty $x_{ 1 }$,\ldots,$x_{ n }$
+  nazywamy wyznacznik
+$$\mathcal{ V }_{ x_{ 1 }, \ldots, x_{ n } } = \ldots$$
+\item[--] Str. 238. Jeżeli wśród punktów
+  $x_{ 1 },\ldots, x_{ n }$\ldots
+\item[--] Str. 238. \ldots że
+  $\mathcal{ V }_{ x_{ 1 }, \ldots, x_{ n } } \neq 0 .$
+\item[--] Str. 238.
+  $$\mathcal{ V }_{ x_{ 1 }, \ldots, x_{ n } } = \prod_{ 1 \leq i < j
+    \leq n - 1 }( x_{ j } - x_{ i } ) \neq 0 \, .$$
+\item[--] Str. 238. \ldots pierwiastków
+  $x_{ 1 }, \ldots, x_{ n - 1 }$\ldots
+\item[--] Str. 253. \ldots \emph{nieujemnych} $p, q, p', q'$\ldots
+\item[--] Str. 269. \ldots liniowe
+  $\rho_{ V }^{ p } : \Lambda^{ p } V^{ * } \rightarrow L^{ p }_{ a }
+  ( V )$\ldots
+\item[--] Str. 269. \begin{displaymath}
+    \begin{split}
+      (\rho_{ V }^{ p } \circ \Lambda^{ p }( f^{ * } ) ) ( \beta_{ 1 } \wedge \ldots \wedge \beta_{ p } ) &= \rho_{ V }^{ p } ( f^{ * }( \beta_{ 1 } ) \wedge \ldots \wedge f^{ * } ( \beta_{ p } ) ) \\
+      &= \rho_{ V }^{ p } (\beta_{ 1 } \circ f \wedge \ldots \wedge \beta_{ p } \circ f )\\
+      &= u_{ V }^{ p } ( \beta_{ 1 } \circ f, \ldots, \beta_{ p }
+      \circ f ) \, .
+    \end{split}
+  \end{displaymath}
+\item[--] Str. 272. \ldots że lewa strona równości\ldots
+\item[--] Str. 272. Obliczmy prawą stronę równości\ldots
+\item[--] Str. 272. $$P = \frac{ 1 }{ ( p + q )! p! q! } \ldots$$
+\item[--] Str. 272. \begin{displaymath}
+    \begin{split}
+      P \quad =& \quad \frac{ 1 }{ ( p + q )! p! q! } \sum_{ \sigma \in S_{ p + q } } \sum_{ \rho \in  S_{ p } } \sum_{ \tau \in S_{ q } } \textrm{sgn} \, \sigma \, \textrm{sgn} \, \rho \, \textrm{sgn} \, \tau \\
+      & \quad \qquad \alpha_{ 1 } ( v_{ \sigma( 1 ) } ) \ldots \alpha_{ p } ( v_{ \sigma ( p ) } ) \alpha_{ p + 1 } ( v_{ \sigma( p + 1 ) } ) \ldots \alpha_{ p + q } ( v_{ \sigma ( p + q ) } ) \\
+      = & \quad \frac{ p! q! }{ ( p + q )! p! q! } \sum_{ \sigma \in S_{ p + q } } \textrm{sgn} \, \sigma \\
+      & \quad \qquad \alpha_{ 1 } ( v_{ \sigma( 1 ) } ) \ldots
+      \alpha_{ p } ( v_{ \sigma ( p ) } ) \alpha_{ p + 1 } ( v_{
+        \sigma( p + 1 ) } ) \ldots \alpha_{ p + q } ( v_{ \sigma ( p +
+        q ) } ) \, .
+    \end{split}
+  \end{displaymath}
+\item[--] Str. 276. \ldots gdyż macierz $A$\ldots
+\item[--] Str. 304. \ldots indukowane
+  $T^{ p } ( f ) : T^{ p } ( V ) \rightarrow T^{ p } (W)$\ldots
+\item[--] Str. 322. \ldots element
+  $\omega \in L( X_{ 1 } ,\ldots, X_{ k }; Y )$ \ldots
+\item[--] Str. 324. \ldots w przypadku
+  $X_{ 1 } = \ldots = X_{ k } = X$\ldots
+\item[--] Str. 328. Odwzorowanie
+  $A_{ X } : \bigotimes^{ k } X \rightarrow \Lambda^{ k } X$\ldots
+\item[--] Str. 328. \ldots dla rodziny $\{ A_{ X } \} \, .$
+\item[--] Str. 329. \ldots $k$-liniowe
+  $u^{ a }_{ X } : X \times \ldots \times X \rightarrow \bigotimes^{ k
+  } X$ i
+  $u^{ s }_{ X } : X \times \ldots \times X \rightarrow \bigotimes^{ k
+  } X$\ldots
+  % \item[--] Str. 354. Zadanie \romannumeral6.7a zostało rozwiązane w
+  %   twierdzeniu 44.11.
+\item[--] Str. 363. \ldots należą do $M( 0; F )$\ldots
+\item[--] Str. 364. \ldots oraz
+  $v = p( f |_{ U } ) ( v ) \in U_{ 1 }$\ldots
+\end{itemize}
+
+
+
+
+
 % ####################
 \Work{ % Autor i tytuł dzieła
   Andrzej Herdegen \\
@@ -250,6 +411,75 @@ Powinno być:
     \hline
   \end{tabular}
 \end{center}
+
+
+
+
+
+\begin{center}
+  Andrzej Staruszkiewicz \\
+  ,,Algebra i geometria. Wykłady dla fizyków. Tom I'', \cite{ASAG}.
+\end{center}
+
+
+Powinno być:
+\begin{itemize}
+\item[--] Str. 14. \ldots $\det A \neq 0$, to
+  $\textrm{rz} ( AB ) = \textrm{rz} ( B ) \, .$
+  % \item[--] Str.
+  % \item[--] Str.
+  % \item[--] Str.
+  % \item[--] Str.
+  % \item[--] Str.
+  % \item[--] Str.
+  % \item[--] Str.
+  % \item[--] Str.
+\end{itemize}
+
+
+\begin{center}
+  Henryk Arodź, Krzysztof Rościszewski\\
+  ,,Algebra i geometria analityczna w zadaniach'', \cite{AR}.
+\end{center}
+
+
+Uwagi:
+\begin{itemize}
+\item Str. 64. Brakuje macierzy $\bd{I} \, .$
+  % \item
+  % \item
+  % \item
+  % \item
+  % \item
+  % \item
+\end{itemize}
+
+Błędy:\\
+\begin{tabular}{|c|c|c|c|c|}
+  \hline
+  & \multicolumn{2}{c|}{} & & \\
+  Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                            & Powinno być \\ \cline{2-3}
+  & Od góry & Od dołu & & \\ 
+  \hline
+  & & & & \\
+  & & & & \\
+  & & & & \\
+  & & & & \\
+  \hline
+\end{tabular}
+
+Powinno być:
+\begin{itemize}
+\item[--] Str. 15.
+  $$\sqrt[ n ]{ z } = \sqrt[ n ]{ | z | } \exp( i \frac{ \varphi + 2 k
+    \pi }{ n } ) \, .$$
+\item[--] Str. 15. \ldots $Re \; z = a$\ldots
+  % \item[--] Str.
+  % \item[--] Str.
+\item[--] Str. 74. (14) $6 \boldsymbol{ \gamma } \, ,$
+\end{itemize}
+
 
 
 
