@@ -61,7 +61,7 @@
 % Mathematical Society (w skrócie AMS)
 \usepackage{amsfonts, amssymb, amscd, amsthm}  % Dalsze wsparcie od AMS
 % \usepackage{siunitx}  % Do prostszego pisania jednostek fizycznych
-% \usepackage{upgreek}  % Ładniejsze greckie litery
+\usepackage{upgreek}  % Ładniejsze greckie litery
 % Przykładowa składnia: pi = \uppi
 % \usepackage{slashed}  % Pozwala w prosty sposób pisać slash Feynmana.
 \usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
@@ -294,22 +294,24 @@ Uwagi:
     & Od góry & Od dołu & & \\
     \hline
     % & & & & \\
-    21 & 1 & & $\{ x ,\! \abso{ \psi( x ) - \varphi( x ) } > 0 \}$
+    21  &  1 & & $\{ x ,\! \abso{ \psi( x ) - \varphi( x ) } > 0 \}$
            & $\{ x ;\, | \psi( x ) - \varphi( x )| > 0 \}$ \\
-    27 & 12 & & $\Hc_{ 1 } \ot \Hc_{ 2 }$ & $\Hc_{ 1 } \oplus \Hc_{ 2 }$ \\
-    27 & 13 & & $\Rc \otimes \mathcal{R}^{ \bot }$ & $\mathcal{R} \oplus \mathcal{R}^{ \bot }$ \\
-    30 & & 18 & $\xi - \varphi_{ k } ||$ & $|| \xi - \varphi_{ k } ||$ \\
-    32 & & 11 & Teraz$f( a ) = g( 0 )$,$f( b )$ & Teraz $f( a ) = g( 0 )$, $f( b )$ \\
-    34 & & 15 & & $[ a, b ]$ \\
-    101 & & 4 & $Px )$ & $P( x )$ \\
+    27  & 12 & & $\Hc_{ 1 } \ot \Hc_{ 2 }$ & $\Hc_{ 1 } \oplus \Hc_{ 2 }$ \\
+    27  & 13 & & $\Rc \ot \Rc^{ \bot }$ & $\Rc \oplus \Rc^{ \bot }$ \\
+    30  & & 18 & $\xi - \varphi_{ k } ||$ & $|| \xi - \varphi_{ k } ||$ \\
+    32  & & 11 & Teraz$f( a ) = g( 0 )$,$f( b )$
+           & Teraz $f( a ) = g( 0 )$, $f( b )$ \\
+    34  & & 15 & & $[ a, b ]$ \\
+    101 & &  4 & $Px )$ & $P( x )$ \\
     311 & 10 & & $i$.Jeżeli & $i$. Jeżeli \\
     311 & 15 & & $X$ spełniającą & $X$, spełniającą \\
-    312 & & 10 & $\mu$ skończona & $\mu$\dywiz skończona \\
-    313 & 6 & & $\{ x ;\! f( x ) > a \}$ & $\{ x ; f( x ) > a \}$ \\
+    312 & & 10 & $\mu$ skończona & $\mu$-skończona \\
+    313 &  6 & & $\{ x ;\! f( x ) > a \}$ & $\{ x ;\, f( x ) > a \}$ \\
     313 & 15 & & $0 = a_{ 0 }$ & $0 \leq a_{ 0 }$ \\
     313 & 15 & & $x,$ & $x;$ \\
-    313 & 16 & & $A_{ 0 } \ldots \cup A_{ n }$ & $A_{ 0 } \cup \ldots \cup A_{ n }$ \\
-    315 & 3 & & $A^{ 0 } \leq f_{ 1 }( x )$ & $A$: $0 \leq f_{ 1 }( x )$ \\
+    313 & 16 & & $A_{ 0 } \ldots \cup A_{ n }$
+           & $A_{ 0 } \cup \ldots \cup A_{ n }$ \\
+    315 & 3 & & $A^{ 0 } \leq f_{ 1 }( x )$ & $A: 0 \leq f_{ 1 }( x )$ \\
     318 & & 7 & Caucy'ego & Cauchy'ego \\
     % & & & & \\
     \hline
@@ -349,6 +351,7 @@ Uwagi:
 
 
 % ######################################
+\newpage
 \section{Informatyka kwantowa}
 
 \vspace{\spaceTwo}
