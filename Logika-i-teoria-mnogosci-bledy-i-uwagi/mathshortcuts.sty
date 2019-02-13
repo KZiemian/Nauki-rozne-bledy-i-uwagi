@@ -36,8 +36,11 @@
 
 
 % Ułamki
-\newcommand{\ovOne}[1]{\fr{ 1 }{ #1 }}
+\newcommand{\ovOne}[1]{\fr{ 1 }{ #1 }} % Trzeba to usunąć
+\newcommand{\oneOv}[1]{\fr{ 1 }{ #1 }}
 \newcommand{\ovTwo}[1]{\fr{ #1 }{ 2 }}
+\newcommand{\twoOv}[1]{\fr{ #1 }{ 2 }}
+
 
 
 % Do umieszczania ,,nad'' i ,,pod'' symbolami matematycznymi.
@@ -280,12 +283,12 @@
 
 % ########
 % Różniczkowanie i pochodne
-\newcommand{\de}{\mathrm{d}}
+\newcommand{\difPL}{\mathrm{d}}  % differential PL
 
 
 % #####
 % Różniczkowanie i pochodne anglosaskie (czyli ogólne i światowe)
-\newcommand{\dd}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
+\newcommand{\de}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
 % Zwykła pochodna - pierwszy argument rząd pochodnej, drugi funkcja,
 % trzeci zmienna
 
@@ -293,7 +296,7 @@
 
 % #####
 % Różniczkowanie i pochodne, polskie standardy
-\newcommand{\ddPL}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
+\newcommand{\dePL}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
 
 
 
@@ -366,6 +369,7 @@
 % Całki w określonych granicach
 \newcommand{\IntMPInf}[1]{\Int_{ -\infty }^{ +\infty } d#1 \,}
 \newcommand{\IntOInf}[1]{\Int_{ 0 }^{ +\infty } d #1 \;}
+\newcommand{\IntMInfO}[1]{\Int_{ -\infty }^{ 0 } d #1 \;}
 % \newcommand{\IntA}[1]{\Int_{ -\infty }^{ +\infty } d #1 \;}
 % \newcommand{\IntB}[1]{\int_{ \R } d #1 \;}
 % \newcommand{\IntC}[2]{\int_{ \R } #1 \, d #2}
@@ -405,6 +409,15 @@
 % #############
 % Analiza wektorowa
 \newcommand{\divergence}{\textrm{div}}
+
+
+
+
+% #############
+% Analiza zespolona
+\newcommand{\Res}{\textrm{Res}}
+
+\newcommand{\Pier}{\textrm{Pier}}  % Pierścień kołowy
 
 
 
