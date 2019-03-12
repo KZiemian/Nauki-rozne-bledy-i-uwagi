@@ -36,8 +36,11 @@
 
 
 % Ułamki
-\newcommand{\ovOne}[1]{\fr{ 1 }{ #1 }}
+\newcommand{\ovOne}[1]{\fr{ 1 }{ #1 }} % Trzeba to usunąć
+\newcommand{\oneOv}[1]{\fr{ 1 }{ #1 }}
 \newcommand{\ovTwo}[1]{\fr{ #1 }{ 2 }}
+\newcommand{\twoOv}[1]{\fr{ #1 }{ 2 }}
+
 
 
 % Do umieszczania ,,nad'' i ,,pod'' symbolami matematycznymi.
@@ -122,6 +125,15 @@
 
 \newcommand{\Lb}{\mathbb{L}}
 
+\newcommand{\Rp}{\R_{ + }}
+\newcommand{\Rn}{\mathbb{ R }^{ n }}
+\newcommand{\Rd}{\mathbb{ R }^{ d }}
+
+\newcommand{\Rtwo}{\mathbb{R}^{ 2 }}
+\newcommand{\Rth}{\mathbb{R}^{ 3 }}
+
+
+
 
 % \mc = \mathcal
 \newcommand{\Cc}{\mathcal{C}}
@@ -130,11 +142,8 @@
 \newcommand{\lc}{\mathcal{l}}
 \newcommand{\Lc}{\mathcal{L}}
 \newcommand{\Oc}{\mathcal{O}}
-\newcommand{\Rn}{\mathbb{ R }^{ n }}
-\newcommand{\Rd}{\mathbb{ R }^{ d }}
 \newcommand{\Rc}{\mathcal{R}}
 
-\newcommand{\Rp}{\R_{ + }}
 
 
 % Rzadziej używane oznaczenia literowe
@@ -147,7 +156,6 @@
 \newcommand{\Tc}{\mathcal{T}}
 \newcommand{\Pc}{\mathcal{P}}
 
-\newcommand{\Rt}{\mathbb{R}^{ 3 }}
 
 
 
@@ -181,6 +189,9 @@
 
 % #############
 % Algebra liniowa
+
+% Podprzestrzenie i odwzorowania liniowe
+\newcommand{\im}{\textrm{im}}
 
 % Wektory
 \newcommand{\vecr}{\vec{ r }}
@@ -259,6 +270,9 @@
 \newcommand{\DelToZero}{\Delta t \to 0}
 
 
+\newcommand{\RToInf}{R \to \infty} % Przydatne w analizie zespolonej
+
+
 % Sumy
 \newcommand{\Sum}{\sum\limits}
 
@@ -269,12 +283,12 @@
 
 % ########
 % Różniczkowanie i pochodne
-\newcommand{\de}{\mathrm{d}}
+\newcommand{\difPL}{\mathrm{d}}  % differential PL
 
 
 % #####
 % Różniczkowanie i pochodne anglosaskie (czyli ogólne i światowe)
-\newcommand{\dd}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
+\newcommand{\de}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
 % Zwykła pochodna - pierwszy argument rząd pochodnej, drugi funkcja,
 % trzeci zmienna
 
@@ -282,7 +296,7 @@
 
 % #####
 % Różniczkowanie i pochodne, polskie standardy
-\newcommand{\ddPL}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
+\newcommand{\dePL}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
 
 
 
@@ -299,16 +313,24 @@
 
 
 % Klasy różniczkowalności
-\newcommand{\Cn}{\Cc^{ n }}
+\newcommand{\Cone}{\Cc^{ 1 }}
+\newcommand{\Ctwo}{\Cc^{ 2 }}
+
 \newcommand{\Cj}{\Cc^{ j }}
-\newcommand{\Ck}[1]{\Cc^{ #1 }}
+\newcommand{\Ck}{\Cc^{ k }}
+\newcommand{\Cn}{\Cc^{ n }}
 
 \newcommand{\Cinfty}{\Cc^{ \infty }}
-\newcommand{\CinftyR}{\Cc^{ \infty }( \R )}
-\newcommand{\CinftyRn}{\Cc^{ \infty }( \R^{ n } )}
 
-\newcommand{\CinftyRt}{\Cinfty( \R^{ 3 } )}
-\newcommand{\CinftyRf}{\Cinfty( \R^{ 4 } )}
+\newcommand{\Cvar}[1]{\Cc^{ #1 }}
+
+\newcommand{\CinftyR}{\Cc^{ \infty }( \R )}
+
+\newcommand{\CinftyRtwo}{\Cinfty( \R^{ 2 } )}
+\newcommand{\CinftyRth}{\Cinfty( \R^{ 3 } )}
+\newcommand{\CinftyRfo}{\Cinfty( \R^{ 4 } )}
+
+\newcommand{\CinftyRn}{\Cc^{ \infty }( \R^{ n } )}
 
 
 
@@ -347,6 +369,7 @@
 % Całki w określonych granicach
 \newcommand{\IntMPInf}[1]{\Int_{ -\infty }^{ +\infty } d#1 \,}
 \newcommand{\IntOInf}[1]{\Int_{ 0 }^{ +\infty } d #1 \;}
+\newcommand{\IntMInfO}[1]{\Int_{ -\infty }^{ 0 } d #1 \;}
 % \newcommand{\IntA}[1]{\Int_{ -\infty }^{ +\infty } d #1 \;}
 % \newcommand{\IntB}[1]{\int_{ \R } d #1 \;}
 % \newcommand{\IntC}[2]{\int_{ \R } #1 \, d #2}
@@ -386,6 +409,15 @@
 % #############
 % Analiza wektorowa
 \newcommand{\divergence}{\textrm{div}}
+
+
+
+
+% #############
+% Analiza zespolona
+\newcommand{\Res}{\textrm{Res}}
+
+\newcommand{\Pier}{\textrm{Pier}}  % Pierścień kołowy
 
 
 

@@ -149,7 +149,7 @@
 
 % ##################
 \Work{ % Autor i tytuł dzieła
-  Andrzej Białynicki\dywiz Birula \\
+  Andrzej Białynicki-Birula \\
   ,,Zarys algebry'', \cite{BialynickiBirulaZarysAlgebry87} }
 
 
@@ -179,7 +179,6 @@ system Peano tak, by liczby naturalne uwzględniały 0.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    % & & & & \\
     14 & 14 & & $A^{ 2 } \quad A$ & $A^{ 2 } \to A$ \\
     15 & 3 & & $( a^{ 1 } )^{ -1 }$ & $( a^{ -1 } )^{ -1 }$ \\
     16 & 13 & & \emph{lącznym} & \emph{łącznym} \\
@@ -188,7 +187,8 @@ system Peano tak, by liczby naturalne uwzględniały 0.
     24 & 10 & & $if\big( \vp( a_{ 1 }, \ld, a_{ n } ) \big)$
            & $i \circ f\big( \vp( a_{ 1 }, \ld, a_{ n } ) \big)$ \\
     25 & & 1 & $s( a )$ & $[ s( a ) ]$ \\
-    31 & & 4 & $\pi_{ t }( i' \circ i )$ & $\pi_{ t } \circ ( i' \circ i )$ \\
+    31 & & 4 & $\pi_{ t }( i' \circ i )$
+           & $\pi_{ t } \circ ( i' \circ i )$ \\
     33 & 21 & & \S{} 2 & \S{} 4 \\
     % & & & & \\
     % & & & & \\
@@ -203,6 +203,7 @@ system Peano tak, by liczby naturalne uwzględniały 0.
 
 Powinno być:
 \begin{itemize}
+  \item str. 11 ,,w zbiorze liczb naturalnych''.
 \item[--] Str. 37. \ldots$j k = -k j$\ldots
 \item[--] Str. 80. \ldots więc $g h_{ 1 } g^{ -1 } \in G_{ y }$\ldots
 \item[--] Str. 80. Istotnie, $h \in \varphi_{ x }^{ -1 }( g x )$\ldots
@@ -235,10 +236,11 @@ Powinno być:
 % ####################
 \Work{ % Autor i tytuł dzieła
   Jacek Gancarzewicz \\
-  ,,Algebra liniowa i jej zastosowania'', \cite{Gan04} }
+  ,,Algebra liniowa i jej zastosowania'',
+  \cite{GancarzewiczAlgebraLiniowa2004} }
 
 
-Uwagi:
+\CenterTB{Uwagi}
 \begin{itemize}
 \item[--] \Str{34} Aby udowodnić punkt (2) twierdzenia 3.7, wystarczy
   przyjąć, że~$x \neq 0$ i~pomnożyć równość $xy = 0$ z~lewej strony
@@ -266,7 +268,7 @@ Uwagi:
   0 istnieje 0 punktów afinicznie niezależnych.
 \end{itemize}
 
-Błędy:\\
+\CenterTB{Błędy}
 \begin{center}
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -278,12 +280,53 @@ Błędy:\\
     % & & & & \\
     28  & & 13 & $x \neq 0$ & $x \neq y$ \\
     34  & & 12 & $x( y y^{ -1 } x^{ -1 }$ & $x( y y^{ -1 } ) x^{ -1 }$ \\
+    53  &  6 & & $\mathfrak{Re}((\eta \eta')\eta''))$
+           & $\mathfrak{Re}((\eta \eta')\eta'')$ \\
     59  & 16 & & $x_{ 3 }$ & $x_{ 1 }$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
     % & & & & \\
     % & & & & \\
     \hline
   \end{tabular}
 \end{center}
+\noi
+\StrWd{420}{15} \\
+\Jest
+\begin{equation*}
+  k_{ f }
+  =
+  \begin{cases}
+    \dim Z_{ f }, & gdy\:\, Z_{ f } \neq \oldemptyset, \\
+    \quad \quad \quad \quad \quad -1, & gdy\:\, Z_{ f } = \oldemptyset, 
+  \end{cases}
+\end{equation*}
+\Pow 
+\begin{equation*}
+  k_{ f }
+  =
+  \begin{cases}
+    \dim Z_{ f }, & \textrm{gdy}\:\, Z_{ f } \neq \oldemptyset, \\
+    -1, & \textrm{gdy}\:\, Z_{ f } = \oldemptyset, 
+  \end{cases}
+\end{equation*}
+% \Pow  Wykonując jawnie różniczkowanie w~(10) \\
+% \StrWd{71}{16} \\
+% \Jest $R\left( x, \sqrt{ a x^{ 4 } + b x^{ 3 } + c x^{ 2 } + d x + e }
+% \right.$ \\
+% \Pow $R\left( x, \sqrt{ a x^{ 4 } + b x^{ 3 } + c x^{ 2 } + d x + e }
+% \right)$ \\
+
+\vspace{\spaceTwo}
+
 
 Powinno być:
 \begin{itemize}
@@ -445,7 +488,7 @@ Powinno być:
 
 Uwagi:
 \begin{itemize}
-\item Str. 64. Brakuje macierzy $\bd{I} \, .$
+\item Str. 64. Brakuje macierzy $\bsym{I} \, .$
   % \item
   % \item
   % \item
@@ -475,11 +518,36 @@ Powinno być:
   $$\sqrt[ n ]{ z } = \sqrt[ n ]{ | z | } \exp( i \frac{ \varphi + 2 k
     \pi }{ n } ) \, .$$
 \item[--] Str. 15. \ldots $Re \; z = a$\ldots
-  % \item[--] Str.
-  % \item[--] Str.
 \item[--] Str. 74. (14) $6 \boldsymbol{ \gamma } \, ,$
 \end{itemize}
 
+
+
+\begin{center}
+  M. Hamermesh\\
+  ,,Teoria grup w zastosowaniu do zagadnień fizycznych'', ABB.
+\end{center}
+
+% Uwagi:
+% \begin{itemize}
+% \item Str. 35. Może właściwszym byłoby zdefiniowanie podgrupy
+%   właściwej jako podgrupy różnej od $G$ i $e$?
+%% \item
+%% \item
+%% \item
+%% \item
+%% \item
+%% \item
+%% \item
+%% \item
+%% \item
+% \end{itemize}
+
+Powinno być:
+\begin{itemize}
+\item[--] Str. 14. $$ \mathbf{ x } = \mathbf{ a }^{ -1 } \mathbf{ x }'
+  \, ,$$
+\end{itemize}
 
 
 
