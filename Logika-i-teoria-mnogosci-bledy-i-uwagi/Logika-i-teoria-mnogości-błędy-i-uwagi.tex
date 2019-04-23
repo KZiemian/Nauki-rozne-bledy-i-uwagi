@@ -156,6 +156,13 @@
   ,,Wprowadzenie do~logiki'', \cite{BremerWprowadzenieDoLogiki2004} }
 
 
+\CenterTB{Uwagi}
+
+\start \StrWg{132}{1} Zdanie
+,,$p \vee q (( p \land q ) \to ( p \land q))$'' nie ma żadnego sensu
+logicznego, musiał zostać zgubiony spójnik logiczny po~pierwszym~$q$.
+Niestety nie wiem który należy tam umieścić.
+
 \CenterTB{Błędy}
 \begin{center}
   \begin{tabular}{|c|c|c|c|c|}
@@ -171,7 +178,7 @@
     21  & 14 & & Współczesnych & współczesnych \\
     26  & &  2 & \emph{Lwowsko-\! Warszawska} & \emph{Lwowsko-Warszawska} \\
     45  & & 10 & konkretna & konkretną \\
-    86  & 10 & & przypadku.. & przypadku. \\n
+    86  & 10 & & przypadku.. & przypadku. \\
     88  & 11 & & średniego & pośredniego \\  % ???
     98  & &  9 & $P \ul{ e } S$ & $S \ul{ e } P$ \\
     114 &  9 & & zwane\emph{prawo} & zwane \emph{prawo} \\
@@ -181,17 +188,27 @@
     125 & & 14 & ,,nie-analityczne  % ''
            & ,,nie-analityczne'' \\
     131 &  6 & & ,,$\neg p \vee \neg q''$ & ,,$\neg p \vee \neg q$'' \\
-    131 &  6 & & $\equiv$,\hspace{2pt},$\neg ( p \wedge q )$''  
-           & $\equiv$ ,,$\neg ( p \wedge q )$'' \\
-           % & & & & \\
-           % & & & & \\
-           % & & & & \\
-           % & & & & \\
+    131 &  6 & & $\equiv$,\hspace{2pt},$\neg ( p \land q )$''
+           & $\equiv$ ,,$\neg ( p \land q )$'' \\
+    132 &  8 & & $\neg( \neg p\;\;\; \land\; \neg q ) $
+           & $\neg( \neg p \land \neg q ) $ \\
+    132 & 17 & & $p\quad \to \quad q$ & $p \to q$ \\
+    132 & & 16 & $p\quad \to \quad q$ & $p \to q$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
     \hline
   \end{tabular}
 \end{center}
 
 \vspace{\spaceTwo}
+
+
+
+
+
 
 
 
@@ -256,15 +273,17 @@
 
 \CenterTB{Uwagi}
 
-\start \Str{10} Należy uwzględnić dwa typy dowodu używające negacji. Pierwszy to~dowód przez \textbf{kontrapozycję}, opierający~się na~tożsamości
+\start \Str{10} Należy uwzględnić dwa typy dowodu używające negacji.
+Pierwszy to~dowód przez \textbf{kontrapozycję}, opierający~się
+na~tożsamości
 \begin{equation}
   \label{eq:Kuratowski-01}
-  ( \alpha \Ra \beta ) \equiv ( \neg \beta \Ra \neg \alpha).
+  ( \alpha \Rightarrow \beta ) \equiv ( \neg \beta \Rightarrow \neg \alpha).
 \end{equation}
 Drugi to~dowód \textbf{nie wprost}, opierający~się na~tożsamości
 \begin{equation}
   \label{eq:Kuratowski-02}
-  ( \alpha \Ra \beta ) \equiv \neg ( \alpha \land \neg \beta ).
+  ( \alpha \Rightarrow \beta ) \equiv \neg ( \alpha \land \neg \beta ).
 \end{equation}
 
 \vspace{\spaceFour}

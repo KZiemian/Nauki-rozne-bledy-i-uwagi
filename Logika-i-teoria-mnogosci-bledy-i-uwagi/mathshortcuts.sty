@@ -36,9 +36,9 @@
 
 
 % Ułamki
-\newcommand{\ovOne}[1]{\fr{ 1 }{ #1 }} % Trzeba to usunąć
+% \newcommand{\ovOne}[1]{\fr{ 1 }{ #1 }} % Trzeba to usunąć
 \newcommand{\oneOv}[1]{\fr{ 1 }{ #1 }}
-\newcommand{\ovTwo}[1]{\fr{ #1 }{ 2 }}
+% \newcommand{\ovTwo}[1]{\fr{ #1 }{ 2 }}
 \newcommand{\twoOv}[1]{\fr{ #1 }{ 2 }}
 
 
@@ -96,17 +96,24 @@
 
 % ##########
 % Litery greckie
-\newcommand{\al}{\alpha}
-\newcommand{\be}{\beta}
-\newcommand{\ga}{\gamma}
-\newcommand{\Ga}{\Gamma}
-\newcommand{\del}{\delta}
-\newcommand{\Del}{\Delta}
+% \newcommand{\al}{\alpha}
+% \newcommand{\be}{\beta}
+% \newcommand{\ga}{\gamma}
+% \newcommand{\Ga}{\Gamma}
+% \newcommand{\del}{\delta}
+% \newcommand{\Del}{\Delta}
+% By \lambda była wyświetlana jako Unicode, a dawał znak \uplambda
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
 \newcommand{\la}{\uplambda}
-\newcommand{\La}{\Lambda}
-\newcommand{\eps}{\epsilon}
+\newcommand{\Lam}{\Lambda}
+
+% By \epsilon był wyświetlany jako Unicode, a dawał znak \varepsilon
+\let\oldepsilon\epsilon
+\renewcommand{\epsilon}{\varepsilon}
+
 \newcommand{\veps}{\varepsilon}
-\newcommand{\vp}{\varphi}
+% \newcommand{\vp}{\varphi}
 \newcommand{\om}{\omega}
 \newcommand{\Om}{\Omega}
 \newcommand{\Si}{\Sigma}
@@ -118,19 +125,19 @@
 % ##########
 % Standardowe używane w oznaczeniach litery o specjalnej czcionce
 % \mb = \mathbb
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
+\newcommand{\Nb}{\mathbb{N}}
+\newcommand{\Zb}{\mathbb{Z}}
+\newcommand{\Rb}{\mathbb{R}}
+\newcommand{\Cb}{\mathbb{C}}
 
 \newcommand{\Lb}{\mathbb{L}}
 
-\newcommand{\Rp}{\R_{ + }}
+\newcommand{\Rbp}{\Rb_{ + }}
 \newcommand{\Rn}{\mathbb{ R }^{ n }}
 \newcommand{\Rd}{\mathbb{ R }^{ d }}
 
-\newcommand{\Rtwo}{\mathbb{R}^{ 2 }}
-\newcommand{\Rth}{\mathbb{R}^{ 3 }}
+\newcommand{\Rbtwo}{\mathbb{R}^{ 2 }}
+\newcommand{\Rbth}{\mathbb{R}^{ 3 }}
 
 
 
@@ -155,7 +162,7 @@
 \newcommand{\Nc}{\mathcal{N}}
 \newcommand{\Tc}{\mathcal{T}}
 \newcommand{\Pc}{\mathcal{P}}
-
+\newcommand{\Zc}{\mathcal{Z}}
 
 
 
@@ -429,8 +436,8 @@
 
 % Brakety
 % W analizie funkcjonalnej też często się je stosuje
-\newcommand{\lket}{\langle}
-\newcommand{\rket}{\rangle}
+% \newcommand{\lket}{\langle}
+% \newcommand{\rket}{\rangle}
 \newcommand{\dketo}[2]{\langle #1 | #2 \rangle}  % Dirac ket one
 % Jak będziesz mógł to usuń komendę powyżej
 \newcommand{\DKeto}[2]{\langle #1 \, | \, #2 \rangle}  % Dirac Ket One
@@ -443,15 +450,15 @@
 \newcommand{\Lp}{L^{ p }}
 \newcommand{\LIo}{\Lc^{ 1 }}
 \newcommand{\LIp}{\Lc^{ p }}
-\newcommand{\LtO}{\Lt( \R, d \mu )}
-\newcommand{\LtT}{\Lt( \R^{ 3 }, d \mu )}
+\newcommand{\LtO}{\Lt( \Rb, d \mu )}
+\newcommand{\LtT}{\Lt( \Rb^{ 3 }, d \mu )}
 \newcommand{\LtLim}{L^{ 2 }-\Lim}
 
 
 
 % Wersja polska
-\newcommand{\LtOPL}{\Lt( \R, \de \mu )}
-\newcommand{\LtTPL}{\Lt( \R^{ 3 }, \de \mu )}
+\newcommand{\LtOPL}{\Lt( \Rb, \de \mu )}
+\newcommand{\LtTPL}{\Lt( \Rb^{ 3 }, \de \mu )}
 
 
 
