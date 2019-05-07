@@ -36,8 +36,11 @@
 
 
 % Ułamki
-\newcommand{\ovOne}[1]{\fr{ 1 }{ #1 }}
-\newcommand{\ovTwo}[1]{\fr{ #1 }{ 2 }}
+% \newcommand{\ovOne}[1]{\fr{ 1 }{ #1 }} % Trzeba to usunąć
+\newcommand{\oneOv}[1]{\fr{ 1 }{ #1 }}
+% \newcommand{\ovTwo}[1]{\fr{ #1 }{ 2 }}
+\newcommand{\twoOv}[1]{\fr{ #1 }{ 2 }}
+
 
 
 % Do umieszczania ,,nad'' i ,,pod'' symbolami matematycznymi.
@@ -93,17 +96,23 @@
 
 % ##########
 % Litery greckie
-\newcommand{\al}{\alpha}
-\newcommand{\be}{\beta}
-\newcommand{\ga}{\gamma}
-\newcommand{\Ga}{\Gamma}
-\newcommand{\del}{\delta}
-\newcommand{\Del}{\Delta}
+% \newcommand{\al}{\alpha}
+% \newcommand{\be}{\beta}
+% \newcommand{\ga}{\gamma}
+% \newcommand{\Ga}{\Gamma}
+% \newcommand{\del}{\delta}
+% \newcommand{\Del}{\Delta}
+% By \lambda była wyświetlana jako Unicode, a dawał znak \uplambda
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
 \newcommand{\la}{\uplambda}
-\newcommand{\La}{\Lambda}
-\newcommand{\eps}{\epsilon}
-\newcommand{\veps}{\varepsilon}
-\newcommand{\vp}{\varphi}
+\newcommand{\Lam}{\Lambda}
+
+% By \epsilon był wyświetlany jako Unicode, a dawał znak \varepsilon
+\let\oldepsilon\epsilon
+\renewcommand{\epsilon}{\varepsilon}
+
+% \newcommand{\vp}{\varphi}
 \newcommand{\om}{\omega}
 \newcommand{\Om}{\Omega}
 \newcommand{\Si}{\Sigma}
@@ -115,12 +124,22 @@
 % ##########
 % Standardowe używane w oznaczeniach litery o specjalnej czcionce
 % \mb = \mathbb
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
+% \newcommand{\Hb}{\mathbb{H}}
+\newcommand{\Nb}{\mathbb{N}}
+\newcommand{\Zb}{\mathbb{Z}}
+\newcommand{\Rb}{\mathbb{R}}
+\newcommand{\Cb}{\mathbb{C}}
 
 \newcommand{\Lb}{\mathbb{L}}
+
+\newcommand{\Rbp}{\Rb_{ + }}
+\newcommand{\Rn}{\mathbb{ R }^{ n }}
+\newcommand{\Rd}{\mathbb{ R }^{ d }}
+
+\newcommand{\Rbtwo}{\mathbb{R}^{ 2 }}
+\newcommand{\Rbth}{\mathbb{R}^{ 3 }}
+
+
 
 
 % \mc = \mathcal
@@ -130,11 +149,8 @@
 \newcommand{\lc}{\mathcal{l}}
 \newcommand{\Lc}{\mathcal{L}}
 \newcommand{\Oc}{\mathcal{O}}
-\newcommand{\Rn}{\mathbb{ R }^{ n }}
-\newcommand{\Rd}{\mathbb{ R }^{ d }}
 \newcommand{\Rc}{\mathcal{R}}
 
-\newcommand{\Rp}{\R_{ + }}
 
 
 % Rzadziej używane oznaczenia literowe
@@ -146,8 +162,7 @@
 \newcommand{\Nc}{\mathcal{N}}
 \newcommand{\Tc}{\mathcal{T}}
 \newcommand{\Pc}{\mathcal{P}}
-
-\newcommand{\Rt}{\mathbb{R}^{ 3 }}
+\newcommand{\Zc}{\mathcal{Z}}
 
 
 
@@ -158,7 +173,7 @@
 \newcommand{\es}{\emptyset}
 \newcommand{\subs}{\subset}
 \newcommand{\setm}{\setminus}
-\newcommand{\ti}{\times}
+
 \newcommand{\com}{\complement}
 
 \newcommand{\set}[1]{\{ #1 \}}
@@ -181,6 +196,9 @@
 
 % #############
 % Algebra liniowa
+
+% Podprzestrzenie i odwzorowania liniowe
+\newcommand{\image}{\textrm{im}}
 
 % Wektory
 \newcommand{\vecr}{\vec{ r }}
@@ -259,6 +277,9 @@
 \newcommand{\DelToZero}{\Delta t \to 0}
 
 
+\newcommand{\RToInf}{R \to \infty} % Przydatne w analizie zespolonej
+
+
 % Sumy
 \newcommand{\Sum}{\sum\limits}
 
@@ -269,12 +290,12 @@
 
 % ########
 % Różniczkowanie i pochodne
-\newcommand{\de}{\mathrm{d}}
+\newcommand{\difPL}{\mathrm{d}}  % differential PL
 
 
 % #####
 % Różniczkowanie i pochodne anglosaskie (czyli ogólne i światowe)
-\newcommand{\dd}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
+\newcommand{\de}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
 % Zwykła pochodna - pierwszy argument rząd pochodnej, drugi funkcja,
 % trzeci zmienna
 
@@ -282,7 +303,7 @@
 
 % #####
 % Różniczkowanie i pochodne, polskie standardy
-\newcommand{\ddPL}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
+\newcommand{\dePL}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
 
 
 
@@ -299,16 +320,24 @@
 
 
 % Klasy różniczkowalności
-\newcommand{\Cn}{\Cc^{ n }}
+\newcommand{\Cone}{\Cc^{ 1 }}
+\newcommand{\Ctwo}{\Cc^{ 2 }}
+
 \newcommand{\Cj}{\Cc^{ j }}
-\newcommand{\Ck}[1]{\Cc^{ #1 }}
+\newcommand{\Ck}{\Cc^{ k }}
+\newcommand{\Cn}{\Cc^{ n }}
 
 \newcommand{\Cinfty}{\Cc^{ \infty }}
-\newcommand{\CinftyR}{\Cc^{ \infty }( \R )}
-\newcommand{\CinftyRn}{\Cc^{ \infty }( \R^{ n } )}
 
-\newcommand{\CinftyRt}{\Cinfty( \R^{ 3 } )}
-\newcommand{\CinftyRf}{\Cinfty( \R^{ 4 } )}
+\newcommand{\Cvar}[1]{\Cc^{ #1 }}
+
+\newcommand{\CinftyR}{\Cc^{ \infty }( \R )}
+
+\newcommand{\CinftyRtwo}{\Cinfty( \R^{ 2 } )}
+\newcommand{\CinftyRth}{\Cinfty( \R^{ 3 } )}
+\newcommand{\CinftyRfo}{\Cinfty( \R^{ 4 } )}
+
+\newcommand{\CinftyRn}{\Cc^{ \infty }( \R^{ n } )}
 
 
 
@@ -347,6 +376,7 @@
 % Całki w określonych granicach
 \newcommand{\IntMPInf}[1]{\Int_{ -\infty }^{ +\infty } d#1 \,}
 \newcommand{\IntOInf}[1]{\Int_{ 0 }^{ +\infty } d #1 \;}
+\newcommand{\IntMInfO}[1]{\Int_{ -\infty }^{ 0 } d #1 \;}
 % \newcommand{\IntA}[1]{\Int_{ -\infty }^{ +\infty } d #1 \;}
 % \newcommand{\IntB}[1]{\int_{ \R } d #1 \;}
 % \newcommand{\IntC}[2]{\int_{ \R } #1 \, d #2}
@@ -390,6 +420,15 @@
 
 
 
+% #############
+% Analiza zespolona
+\newcommand{\Res}{\textrm{Res}}
+
+\newcommand{\Pier}{\textrm{Pier}}  % Pierścień kołowy
+
+
+
+
 
 % #############
 % Analiza funkcjonalna
@@ -397,8 +436,8 @@
 
 % Brakety
 % W analizie funkcjonalnej też często się je stosuje
-\newcommand{\lket}{\langle}
-\newcommand{\rket}{\rangle}
+% \newcommand{\lket}{\langle}
+% \newcommand{\rket}{\rangle}
 \newcommand{\dketo}[2]{\langle #1 | #2 \rangle}  % Dirac ket one
 % Jak będziesz mógł to usuń komendę powyżej
 \newcommand{\DKeto}[2]{\langle #1 \, | \, #2 \rangle}  % Dirac Ket One
@@ -411,15 +450,15 @@
 \newcommand{\Lp}{L^{ p }}
 \newcommand{\LIo}{\Lc^{ 1 }}
 \newcommand{\LIp}{\Lc^{ p }}
-\newcommand{\LtO}{\Lt( \R, d \mu )}
-\newcommand{\LtT}{\Lt( \R^{ 3 }, d \mu )}
+\newcommand{\LtO}{\Lt( \Rb, d \mu )}
+\newcommand{\LtT}{\Lt( \Rb^{ 3 }, d \mu )}
 \newcommand{\LtLim}{L^{ 2 }-\Lim}
 
 
 
 % Wersja polska
-\newcommand{\LtOPL}{\Lt( \R, \de \mu )}
-\newcommand{\LtTPL}{\Lt( \R^{ 3 }, \de \mu )}
+\newcommand{\LtOPL}{\Lt( \Rb, \de \mu )}
+\newcommand{\LtTPL}{\Lt( \Rb^{ 3 }, \de \mu )}
 
 
 

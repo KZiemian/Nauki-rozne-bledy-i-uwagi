@@ -139,7 +139,7 @@
 
 
 % ######################################
-\maketitle  % Tytuł całego tekstu
+\maketitle % Tytuł całego tekstu
 % ######################################
 
 
@@ -274,8 +274,8 @@ powinna zostać usunięta.
 \vspace{\spaceFour}
 
 
-Fragment poświęcony zależności pojęć $\Gamma$-struktury i rozmaitości,
-oraz wpływowi tego na układ część książki można by napisać dokładniej.
+Fragment poświęcony zależności pojęć $\Gamma$-struktury i rozmaitości, oraz
+wpływowi tego na układ część książki można by napisać dokładniej.
 Spróbuj samemu to zrobić.
 \\Próba:\\
 Niech $\Gamma_{ 1 } \subset \Gamma_{ 2 }$ i ustalmy atlas
@@ -309,7 +309,8 @@ sprawdzić w dobrej książce do~topologii.
 \vspace{\spaceFour}
 
 
-\start \Str{69} Podana dziedzina $\vp \circ \psi^{ -1 }$ jest błędna \red{popraw!!!}
+\start \Str{69} Podana dziedzina $\varphi \circ \psi^{ -1 }$ jest błędna
+\red{popraw!!!}
 
 \vspace{\spaceFour}
 
@@ -323,11 +324,15 @@ przestrzeni parazwartych lub normalnych jest udowodniona.
 \start \Str{78} Brak definicji krzywej. Krzywa na rozmaitości $M$ jest
 to odwzorowanie gładkie $\gamma : ( - \epsilon, + \epsilon ) \to M$.
 
-\start \Str{81} Zgodnie za cite{ESTA} suma rozłączna to:
-\begin{equation*}
+\vspace{\spaceFour}
+
+
+\start \Str{81} Zgodnie za \cite{ESTA} suma rozłączna to:
+\begin{equation}
+  \label{eq:}
   \bigvee_{ \substack{ x \in M } } T_{ x } M
   = \bigcup_{ \substack{ x \in M } }( x \times T_{ x } M ) \, .
-\end{equation*}
+\end{equation}
 Ta definicja wprowadza pewne zmiany w~tekście np.
 $\pi^{ -1 }( x ) = x \times T_{ x }M$. Są to jednak nieistotne dla
 teorii kwestie formalne.
@@ -364,9 +369,9 @@ przykładu 11.9.\\
 Dlaczego więc w omawianych zagadnieniach ten problem się nie
 pojawia?\\ We wszystkich występujących przypadkach (czyli wiązek
 lokalnie trywialnych) $T_{ \iota }$ jest postaci
-$\mc{ U }_{ \iota } \ti F$, gdzie $\mc{ U }$ jest otwartym podzbiorem
-rozmaitości, zaś rzutowanie kanoniczne gwarantuje, że jeżeli
-$\mc{ U }_{ \iota } \cap \mc{ U }_{ \kappa } = \emptyset$ to
+$\mc{ U }_{ \iota } \times F$, gdzie $\mc{ U }$ jest otwartym
+podzbiorem rozmaitości, zaś rzutowanie kanoniczne gwarantuje, że
+jeżeli $\mc{ U }_{ \iota } \cap \mc{ U }_{ \kappa } = \emptyset$ to
 $f_{ \iota } (T_{ \iota }) \cap f_{ \kappa }(T_{ \kappa }) =
 \emptyset$. Z tego, że rozmaitość jest przestrzenią Hausdorffa dla
 dowolnych $x \neq y$ zawsze możemy znaleźć takie zbiory będące
@@ -575,9 +580,9 @@ Leibniza ze strony 88?
 
 
 \start Warto byłoby udowodnić, że różniczka dyfeomorfizmu
-$f : M \to N$ jest izomorfizmem między $TM$ i $TN$. Tak samo
-warto zaznaczyć, że jest ona izomorfizmem liniowym przestrzeni
-$T_{ x }M$ i $T_{ f( x ) }N$.
+$f : M \to N$ jest izomorfizmem między $TM$ i $TN$. Tak samo warto
+zaznaczyć, że jest ona izomorfizmem liniowym przestrzeni $T_{ x }M$ i
+$T_{ f( x ) }N$.
 
 \vspace{\spaceFour}
 
@@ -650,19 +655,19 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
            & $\pi_{ 1 }( x ), \ld, u_{ k }$ \\
     18  & 12 & & $( 0, \ld, 0, x, 0, \, 0d )$
            & $( 0, \ld, 0, \ub{ x }_{ j }, 0, \ld, 0 )$ \\
-    18  & &  1 & $f_{ 1 } \ti \ld \ti f_{ k }$
+    18  & &  1 & $f_{ 1 } \times \ld \times f_{ k }$
            & $( f_{ 1 }, \ld, f_{ k } )$ \\
-    19  & & 16 & $f : X \ti \ld X \to Y$ & $f : X \ti \ld \ti X \to Y$ \\
+    19  & & 16 & $f : X \times \ld X \to Y$ & $f : X \times \ld \times X \to Y$ \\
     19  & & 13 & $sgn\, \sigma$ & $\sgm\, \sigma$ \\
-    19  & &  9 & $X \ti \ld X$ & $X \ti \ld \ti X$ \\
+    19  & &  9 & $X \times \ld X$ & $X \times \ld \times X$ \\
     19  & &  5 & $L^{ k }_{ s } ( X; Y ) = \, L^{ k }_{ s } ( X )$
            & $\dim \, L^{ k }_{ s } ( X; Y ) = \dim \, L^{ k }_{ s } ( X )$ \\
     19  & &  4 & $L^{ k }_{ a } ( X; Y ) = \, L^{ k }_{ a } ( X )$
            & $\dim \, L^{ k }_{ a } ( X; Y ) = \dim \, L^{ k }_{ a } ( X )$ \\
     20  &  7 & & $L_{ a }^{ k }( X )$ & $\dim \, L_{ a }^{ k }( X )$ \\
-    24  &  8 & & $X \ot \cdots \ot X$ & $X \ot \ld \ot X$ \\
+    24  &  8 & & $X \otimes \cdots \otimes X$ & $X \otimes \ld \otimes X$ \\
     24  &  9 & & $R$ & $F$ \\
-    24  & 10 & & $X \ot \cdots \ot X$ & $X \ot \ld \ot X$ \\
+    24  & 10 & & $X \otimes \cdots \otimes X$ & $X \otimes \ld \otimes X$ \\
     26  & &  5 & w twierdzeniu 2.10 & w twierdzeniu 2.9 \\
     27  & 17 & & $v_{ 1 }, \ld v_{ p }$. & $v_{ 1 }, \ld, v_{ p }$. \\
     27  & & 11 & $\la^{ i. k - i }$ & $\la^{ i,\, k - i }$ \\
@@ -674,18 +679,18 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     33  & & 11 & $v$ & $\Vc$ \\
     33  & &  8 & $T_{ 0 }^{ q }( W )$ & $T_{ 0 }^{ p }( W )$ \\
     33  & &  6 & $q = 0$ & $p = 0$ \\
-    33  & &  2 & $f^{ * } \ti \ld \ot f^{ * }$
-           & $f^{ * } \ot \ld \ot f^{ * }$ \\
-    34  & 13 & & $\Kc_{ 1 } \ti \ld \Kc_{ p } \ti \ld$
-           & $\Kc_{ 1 } \ti \ld \ti \Kc_{ p } \ti \ld$ \\
+    33  & &  2 & $f^{ * } \times \ld \otimes f^{ * }$
+           & $f^{ * } \otimes \ld \otimes f^{ * }$ \\
+    34  & 13 & & $\Kc_{ 1 } \times \ld \Kc_{ p } \times \ld$
+           & $\Kc_{ 1 } \times \ld \times \Kc_{ p } \times \ld$ \\
     37  & & 19 & $X_{ 1 }, \ld\, , f_{ k }$ & $X_{ 1 }, \ld , f_{ k }$ \\
-    38  & &  6 & $( \La^{ k } X )^{ * }$ & $\La^{ k }( X^{ * } )$ \\
+    38  & &  6 & $( \Lc^{ k } X )^{ * }$ & $\Lc^{ k }( X^{ * } )$ \\
     38  & &  1 & $x_{ k }$ & $x_{ k } )$ \\
     40  &  1 & & $X_{ 1 }, \! \ld , f_{ k }$ & $X_{ 1 }, \ld , f_{ k }$ \\
     40  &  4 & & $\Fc( X_{ 1 }, \ld, X_{ k }, Y )( u )$
            & $F( f_{ 1 }, \ld, f_{ k }, g )( u )$ \\
-    40  &  6 & & $\Gc( X_{ 1 }, \ld, X_{ k }, Y )( u \ot v )$
-           & $\Gc( f_{ 1 }, \ld, f_{ k }, g )( u \ot v )$ \\
+    40  &  6 & & $\Gc( X_{ 1 }, \ld, X_{ k }, Y )( u \otimes v )$
+           & $\Gc( f_{ 1 }, \ld, f_{ k }, g )( u \otimes v )$ \\
     \hline
   \end{tabular}
 
@@ -697,15 +702,15 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     & Od góry & Od dołu & & \\
     \hline
     41  & 14 & & \emph{wymiaru i~ich izomorfizmów} & \emph{wymiaru} \\
-    41  & 15 & & $X \ti \ld X$ & $X \ti \ld \ti X$ \\
-    41  & & 12 & $\be_{ 1 } : B_{ q }$ & $\be_{ q } : B_{ q }$ \\
+    41  & 15 & & $X \times \ld X$ & $X \times \ld \times X$ \\
+    41  & & 12 & $\beta_{ 1 } : B_{ q }$ & $\beta_{ q } : B_{ q }$ \\
     41  & &  4 & $X_{ 1 } = \ld X_{ p }$ & $X_{ 1 } = \ld = X_{ p }$ \\
     41  & &  1 & $( 0. k )$ & $( 0, k )$ \\
-    42  &  1 & & $TM \ti_{ M } \ld \ti_{ M } TM$ & $X \ti \ld \ti X$ \\
-    42  & &  5 & $R$ & $\R$ \\
+    42  &  1 & & $TM \times_{ M } \ld \times_{ M } TM$ & $X \times \ld \times X$ \\
+    42  & &  5 & $R$ & $\Rb$ \\
     43  &  3 & & \emph{otoczemiem} & \emph{otoczeniem} \\
     43  &  6 & & $1 . \ld, n$ & $1, \ld, n$ \\
-    43  &  8 & & $\al. \be$ & $\al, \be$ \\
+    43  &  8 & & $\alpha. \beta$ & $\alpha, \beta$ \\
     46  & 14 & & $\pi_{ k }^{ r } \circ \pi^{ r }_{ s }$
            & $\pi_{ s }^{ r } \circ \pi^{ k }_{ r }$ \\
     48  & &  3 & defin9cję & definicję \\
@@ -730,7 +735,7 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     54  & &  9 & $j z_{ 2 }$ & $z_{ 2 } j$ \\
     54  & &  6 & $\ol{ z_{ 1 } }$ & $\ol{ z }_{ 1 }$ \\
     55  &  5 & & $\Ac$ & $\Ab$ \\
-    55  &  5 & & $\Hc \ti \Hc$ & $\Hb \ti \Hb$ \\
+    55  &  5 & & $\Hc \times \Hc$ & $\Hb \times \Hb$ \\
     55  &  8 & & $\Ac$ & $\Ab$ \\
     55  & 15 & & $\Ac$ & $\Ab$ \\
     55  & 17 & & $\Ac$ & $\Ab$ \\
@@ -765,9 +770,9 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     61  & & 15 & dopuścić do & dopuścić je do \\
     61  & & 11 & homeomorfizm & homeomorfizmem \\
     61  & &  6 & $\Ga$, & $\Ga$; \\
-    62  &  3 & & $\id_{ U } \circ \vp$ & $\vp \circ \id_{ U }$ \\
-    62  & 20 & & bijekcją & bijekcją klasy $\C^{ \infty }$ \\
-    62  & 21 & & różniczkowalne & klasy $\C^{ \infty }$ \\
+    62  &  3 & & $\id_{ U } \circ \varphi$ & $\varphi \circ \id_{ U }$ \\
+    62  & 20 & & bijekcją & bijekcją klasy $\Cc^{ \infty }$ \\
+    62  & 21 & & różniczkowalne & klasy $\Cc^{ \infty }$ \\
     63  &  5 & & $i > p$ i $j \leq q$ & $i \leq p$ i $j > p$ \\
     64  & & 21 & przestrzeni & niepustej przestrzeni \\
     64  & &  7 & $\Ga^{ \infty }( n )$-strukturą
@@ -785,20 +790,20 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
              \fr{ 4 r^{ 2 } u_{ n } }{ \norm{ u } } \right)\! ,$ \\
     69  &  4 & & $[ t, x ]$ & $[ ( t, x ) ]$ \\
     69  &  5 & & $[ t, x ]$ & $[ ( t, x ) ]$ \\
-    69  & 14 & & $\vp \circ \psi^{ -1 }( t, x )$
-           & $\vp \circ \psi^{ -1 }( [ ( t, x ) ] )$ \\
+    69  & 14 & & $\varphi \circ \psi^{ -1 }( t, x )$
+           & $\varphi \circ \psi^{ -1 }( [ ( t, x ) ] )$ \\
     69  & 14 & & $( t - 1, -x )$ & $( t + 1, -x )$ \\
     70  &  2 & & oraz$( 1, \bar{ z } )$ & oraz $( 1, \bar{ z } )$ \\
-    70  & & 15 & $\la \circ f$ & $f \circ \la$ \\
-    70  & & 15 & $M( q, p + q; Q)$ & $M( q, p + q; q)$ \\
+    70  & & 15 & $\lambda \circ f$ & $f \circ \lambda$ \\
+    70  & & 15 & $M( q, p + q; Q )$ & $M( q, p + q; q )$ \\
     70  & &  1 & $a$ & $A$ \\
     71  & 21 & & $P.q$ & $P, Q$ \\
     71  & 21 & & $p_{ ) }$ & $p )$ \\
     71  & 18 & & $P' Q'$ & $P', Q'$ \\
     71  & & 16 & $G_{ pq }$ & $G_{ p, q }$ \\
-    71  & & 15 & $\P_{ n }[ \R )$ & $\P_{ n }( \R )$ \\
+    71  & & 15 & $\P_{ n }[ \Rb )$ & $\P_{ n }( \Rb )$ \\
     71  & &  5 & więc topologia na & więc \\
-    71  & &  5 & $P_{ n }( \R )$ & $\P_{ n }( \R )$ \\ 
+    71  & &  5 & $P_{ n }( \Rb )$ & $\P_{ n }( \Rb )$ \\
     \hline
   \end{tabular}
 
@@ -811,34 +816,34 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     \hline
     72  &  2 & & $\fr{ u_{ 1 } }{ u_{ i } }, \ld. \fr{ u_{ i - 1 } }{ u_{ i } }$
            & $\fr{ u_{ 1 } }{ u_{ i } }, \ld, \fr{ u_{ i - 1 } }{ u_{ i } }$ \\
-    72  & & 15 & $\R^{ n }$ & $\R^{ m }$ \\
+    72  & & 15 & $\Rb^{ n }$ & $\Rb^{ m }$ \\
     72  & &  1 & w & w tym opracowaniu \\
     72  & &  1 & będziemy & będziemy się \\
     74  & &  8 & \emph{klasy klasy} & \emph{klasy} \\
     75  &  9 & & izomorficzna & dyfeomorficzna \\
-    76  & 14 & & $\vp^{ -1 }( \supp \, \wt{ \la } )$ & $U$ \\
+    76  & 14 & & $\varphi^{ -1 }( \supp \, \wt{ \lambda } )$ & $U$ \\
     76  & &  4 & $\ol{ \, V }$ & $\ol{ V }$ \\
-    77  &  3 & & $\ol{\, V}_{ i }$ & $\ol{ V }_{ i }$ \\
-    77  &  8 & & $\vp^{ -1 }( \supp \, \la_{ i } )$ & $U_{ i }$ \\
-    77  & 20 & & $\supp \, \la$ & $U$ \\
+    77  &  3 & & $\ol{\, V }_{ i }$ & $\ol{ V }_{ i }$ \\
+    77  &  8 & & $\varphi^{ -1 }( \supp \, \lambda_{ i } )$ & $U_{ i }$ \\
+    77  & 20 & & $\supp \, \lambda$ & $U$ \\
     78  &  2 & & $\ol{ V_{ \kappa } }$ & $\ol{ V }_{ \kappa }$ \\
     78  &  4 & & $\ol{ \wt{ U }_{ \tilde{ \iota } } }$
            & $\ol{ \wt{ U } }_{ \tilde{ \iota } }$ \\
-    78  &  6 & & $\wt{ \la_{ \kappa } }$ & $\wt{ \la }_{ \kappa }$ \\
-    78  &  7 & & $\wt{ \la_{ \kappa } }$ & $\wt{ \la }_{ \kappa }$ \\
+    78  &  6 & & $\wt{ \lambda_{ \kappa } }$ & $\wt{ \lambda }_{ \kappa }$ \\
+    78  &  7 & & $\wt{ \lambda_{ \kappa } }$ & $\wt{ \lambda }_{ \kappa }$ \\
     78  &  7 & & $\ol{ \, V_{ x } }$ & $\ol{ V }_{ x }$ \\
-    79  &  5 & & $( ( \vp( x ) )$ & $( \vp( x ) )$ \\
+    79  &  5 & & $( ( \varphi( x ) )$ & $( \varphi( x ) )$ \\
     82  & 10 & & $\wt{ \psi }'_{ x }$
-           & $\wt{ \vp }'_{ x }$ \\
-    82  & 10 & & $\psi$ & $\vp'$ \\
+           & $\wt{ \varphi }'_{ x }$ \\
+    82  & 10 & & $\psi$ & $\varphi'$ \\
     82  & & 12 & $f_{ \iota }( U_{ \iota } )$ & $f_{ \iota }( T_{ \iota } )$ \\
     82  & &  1 & dyfeorficzności & dyfeomorficzności \\
     84  &  3 & & $( 0. \fr{ 1 }{ 2 } )$ & $( 0, \fr{ 1 }{ 2 } )$ \\
     84  & & 10 & $FF\Ic$ & $\Ic$ \\
-    86  &  5 & & $( ( \vp( x ) )$ & $( \vp( x ) )$ \\
-    86  & &  3 & $\R^{ n + 2 }$ & $\R^{ n_{ 2 } }$ \\
+    86  &  5 & & $( ( \varphi( x ) )$ & $( \varphi( x ) )$ \\
+    86  & &  3 & $\Rb^{ n + 2 }$ & $\Rb^{ n_{ 2 } }$ \\
     87  &  4 & & ,. & . \\
-    88  & &  9 & $( \pr_{ j }|_{ x }$ & $( \pr_{ j }|_{ x } )$ \\
+    88  & &  9 & $( \partial_{ j }|_{ x }$ & $( \partial_{ j }|_{ x } )$ \\
     89  &  7 & & $f_{ x_{ 2 } }^{ 2 }$ & $f_{ x_{ 2 } }^{ ( 2 ) }$ \\
     89  &  7 & & $f_{ x_{ 1 } }^{ 1 }$ & $f_{ x_{ 1 } }^{ ( 1 ) }$ \\
     89  &  7 & & $d f_{ x_{ 2 } }^{ 2 }$ & $d f_{ x_{ 2 } }^{ ( 2 ) }$ \\
@@ -847,12 +852,12 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     90  & 12 & & $\Cc^{ \infty }( M, x )$
            & $\Cc^{ \infty }( M, x_{ 0 } )$ \\
     90  & 13 & & (11.20) & (11.21) \\
-    90  & & 11 & $\fr{ \pr ( \vp^{ i } \circ \vp^{ -1 } ) }{ u^{ j } }$
-           & $\fr{ \pr ( \vp^{ i } \circ \vp^{ -1 } ) }{ \pr u^{ j } }$ \\
+    90  & & 11 & $\fr{ \partial ( \varphi^{ i } \circ \varphi^{ -1 } ) }{ u^{ j } }$
+           & $\fr{ \partial ( \varphi^{ i } \circ \varphi^{ -1 } ) }{ \partial u^{ j } }$ \\
     90  & &  3 & $\Cc^{ \infty }( M, x )$
            & $\Cc^{ \infty }( M, x_{ 0 } )$ \\
     92  & 13 & & $\xi^{ 1 }(x) \ld$ & $\xi^{ 1 }(x), \ld$ \\
-    96  & &  6 & $( f ( \vp^{ -1 }$ & $( f \circ \vp^{ -1 } )$ \\ 
+    96  & &  6 & $( f ( \varphi^{ -1 }$ & $( f \circ \varphi^{ -1 } )$ \\
     \hline
   \end{tabular}
 
@@ -866,40 +871,40 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     96  & &  6 & $t e_{ i } ))$ & $t e_{ i } )$ \\
     103 &  8 & & $\Lim_{ \substack{ t \to 0 } }$
            & $-\Lim_{ \substack{ t \to 0 } }$ \\
-    103 & 10 & & $d \vp_{ t }$ & $d_{ \vp_{ -t }( x_{ 0 } ) } \vp_{ t }$ \\
+    103 & 10 & & $d \varphi_{ t }$ & $d_{ \varphi_{ -t }( x_{ 0 } ) } \varphi_{ t }$ \\
     103 & & 6 & $g_{ -t }$ & $g_{ t }$ \\
-    104 &  8 & & $d_{ \vp_{ -t }( x ) } \vp_{ s }$
-           & $d_{ \vp_{ -s }( x ) } \vp_{ s }$ \\
-    104 &  9 & & $( \big( \vp_{ t } )_{*} Y \big)_{ x }$.
-           & $( ( \vp_{ t } )_{ * } Y )_{ x }$ \\
+    104 &  8 & & $d_{ \varphi_{ -t }( x ) } \varphi_{ s }$
+           & $d_{ \varphi_{ -s }( x ) } \varphi_{ s }$ \\
+    104 &  9 & & $( \big( \varphi_{ t } )_{*} Y \big)_{ x }$.
+           & $( ( \varphi_{ t } )_{ * } Y )_{ x }$ \\
     104 & &  6 & $_{ | t = s }$ & $|_{ t = s }$ \\
     105 & & 12 & $( - \eps, + \eps^{ n } )$ & $( -\eps, +\eps )^{ n }$ \\
     106 &  5 & & $0\ld, 0$ & $0, \ld, 0$ \\
     106 &  6 & & $0\ld, 0$ & $0, \ld, 0$ \\
-    107 & 10 & & $( f( \vp_{ t }( x ) )$ & $( f( \vp_{ t }( x ) ) )$ \\
+    107 & 10 & & $( f( \varphi_{ t }( x ) )$ & $( f( \varphi_{ t }( x ) ) )$ \\
     107 & 10 & & $( \psi_{ t } ( f( x ) )$ & $( \psi_{ t } ( f( x ) ) )$ \\
     107 & 12 & & $f( x ) = \psi_{ t } ( f( x ) )$
            & $\psi_{ t } ( f( x ) )$ \\
     109 & & 15 & $t \to$ & $s \to$ \\
-    110 & 13 & & $\dd{}{ c }{ t }( t )$ & $\dd{}{ c }{ t }( 0 )$ \\
-    110 & 13 & & $\pd{}{ a }{ t }( t, b( t ) )$
-           & $\pd{}{ a }{ t }( 0, b( 0 ) )$ \\
-    110 & 13 & & $\pd{}{ a }{ { u^{ i } } }( t, b( t ) )
-                 \dd{}{ { b^{ i } } }{ t }( t )$
-           & $\pd{}{ a }{ { u^{ i } } }( 0, b( 0 ) )
-             \dd{}{ { b^{ i } } }{ t }( 0 )$ \\
+    110 & 13 & & $\de{ }{ c }{ t }( t )$ & $\de{ }{ c }{ t }( 0 )$ \\
+    110 & 13 & & $\pd{ }{ a }{ t }( t, b( t ) )$
+           & $\pd{ }{ a }{ t }( 0, b( 0 ) )$ \\
+    110 & 13 & & $\pd{ }{ a }{ { u^{ i } } }( t, b( t ) )
+                 \de{ }{ { b^{ i } } }{ t }( t )$
+           & $\pd{ }{ a }{ { u^{ i } } }( 0, b( 0 ) )
+             \de{ }{ { b^{ i } } }{ t }( 0 )$ \\
     111 &  3 & & $b^{ I }$ & $b^{ i }$ \\
     111 &  4 & & $b^{ I }$ & $b^{ i }$ \\
-    111 & &  8 & $\dd{}{ c }{ t }$ & $\dd{}{ g }{ t }$ \\
-    111 & &  7 & $\dd{ 2 }{ c }{ t }$ & $\dd{ 2 }{ g }{ t }$ \\
+    111 & &  8 & $\de{ }{ c }{ t }$ & $\de{ }{ g }{ t }$ \\
+    111 & &  7 & $\de{ 2 }{ c }{ t }$ & $\de{ 2 }{ g }{ t }$ \\
     111 & &  7 & $\wt{ b }$ & $\wt{ b }^{ i }$ \\
-    111 & &  6 & $\dd{}{ \wt{ b } }{ t }$
-           & $\dd{}{ \wt{ b }^{ i } }{ t }$ \\
-    112 & &  5 & $\dd{}{ c }{ t }$ & $\dd{}{ g }{ t }$ \\
-    112 & &  6 & $\dd{ 2 }{ c }{ t }$ & $\dd{ 2 }{ g }{ t }$ \\
-    118 & & 16 & $(T$ & $T$ \\
-    119 &  2 & & $\al\be$ & $\al, \be$ \\
-    119 &  4 & & $\al\be$ & $\al, \be$ \\
+    111 & &  6 & $\de{ }{ \wt{ b } }{ t }$
+           & $\de{ }{ \wt{ b }^{ i } }{ t }$ \\
+    112 & &  5 & $\de{ }{ c }{ t }$ & $\de{ }{ g }{ t }$ \\
+    112 & &  6 & $\de{ 2 }{ c }{ t }$ & $\de{ 2 }{ g }{ t }$ \\
+    118 & & 16 & $( T$ & $T$ \\
+    119 &  2 & & $\alpha\beta$ & $\alpha, \beta$ \\
+    119 &  4 & & $\alpha\beta$ & $\alpha, \beta$ \\
     120 & 12 & & $( 0. \ld, 0 )$ & $( 0, \ld, 0 )$ \\
     121 & &  5 & $E -$ & $E =$ \\
     122 & 19 & & skończonej & trywialnej \\
@@ -909,8 +914,8 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     123 &  6 & & $p$ & $p_{ 1 }$ \\
     123 & 20 & & \emph{homomorizmami} & \emph{homomorfizmami} \\
     124 &  6 & & $p_{ 2 }( F( w ) )$ & $p_{ 2 }( w )$ \\
-    124 & 14 & & $p_{ 1 }$ & $\vp_{ 1 }$ \\
-    124 & 14 & & $p_{ 2 }$ & $\vp_{ 2 }$ \\
+    124 & 14 & & $p_{ 1 }$ & $\varphi_{ 1 }$ \\
+    124 & 14 & & $p_{ 2 }$ & $\varphi_{ 2 }$ \\
     \hline
   \end{tabular}
 
@@ -927,16 +932,16 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     127 & &  3 & $\ker F_{ t }$ & $\im \, F_{ t }$ \\
     129 & 12 & & $F$ & $\Fc$ \\
     129 & 15 & & $T^{ * }X$ & $X^{ * }$ \\
-    129 & 20 & & $X \ti \cdot \ti X$ & $X \ti \ld \ti X$ \\
-    129 & 22 & & $X \ti \cdot \ti X$ & $X \ti \ld \ti X$ \\
-    129 & 24 & & $X \ti \cdot \ti X$ & $X \ti \ld \ti X$ \\
+    129 & 20 & & $X \times \cdot \times X$ & $X \times \ld \times X$ \\
+    129 & 22 & & $X \times \cdot \times X$ & $X \times \ld \times X$ \\
+    129 & 24 & & $X \times \cdot \times X$ & $X \times \ld \times X$ \\
     129 & 25 & & $( 0, 2 )$ & $( 2, 0 )$ \\
     130 & 17 & & $( \psi_{ 2 } )_{ \pi( w ) })$
            & $( \psi_{ 2 } )_{ \pi( w ) }) \big)$ \\
-    131 & 11 & & $( \vp \ti J )$ & $( ( \vp \ti J )$ \\
-    131 & 11 & & $R^{ n_{ 1 } }$ & $\R^{ n_{ 1 } }$ \\
-    131 & 12 & & $R^{ n_{ 1 } }$ & $\R^{ n_{ 1 } }$ \\
-    131 & 13 & & $R^{ n_{ 1 } }$ & $\R^{ n_{ 1 } }$ \\
+    131 & 11 & & $( \varphi \times J )$ & $( ( \varphi \times J )$ \\
+    131 & 11 & & $R^{ n_{ 1 } }$ & $\Rb^{ n_{ 1 } }$ \\
+    131 & 12 & & $R^{ n_{ 1 } }$ & $\Rb^{ n_{ 1 } }$ \\
+    131 & 13 & & $R^{ n_{ 1 } }$ & $\Rb^{ n_{ 1 } }$ \\
     131 & 14 & & $E_{ ! }$ & $E_{ 1 }$ \\
     134 &  9 & & $\leftrightsquigarrow$ & $\rightsquigarrow$ \\
     136 &  3 & & contrawariantny & kontrawariantny \\
@@ -950,19 +955,19 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     136 & 10 & & $\Vc_{ 0 }$ & $\Vc_{ 0 }$. \\
     137 & 16 & & $T^{ * }_{ x }M$ & $T_{ x }M$ \\
     137 & & 11 & $X^{ ! }$ & $X^{ 1 }$ \\
-    140 & & 11 & $\om^{ ! }$ & $\om^{ 1 }$ \\
+    140 & & 11 & $\omega^{ ! }$ & $\omega^{ 1 }$ \\
     140 & &  8 & $M$. & $M$, \\
     141 & 11 & & $X^{ * } M$ & $\Xc^{ * }( M )$ \\
-    141 & &  2 & $\al^{ q }$ & $\al^{ p }$ \\
+    141 & &  2 & $\alpha^{ q }$ & $\alpha^{ p }$ \\
     142 & &  5 & $C^{ I }_{ j } t$ & $C^{ i }_{ j } t$ \\
-    143 & 10 & & $t \ot \om^{ 1 } \ld \ot_{ p } \ot \ld$
-           & $t \ot \om^{ 1 } \ot \ld \ot \om^{ p } \ot \ld$ \\
-    143 & 12 & & $t \ot \om^{ 1 } \ld \ot_{ p } \ot \ld$
-           & $t \ot \om^{ 1 } \ot \ld \ot \om^{ p } \ot \ld$ \\
+    143 & 10 & & $t \otimes \omega^{ 1 } \ld \otimes_{ p } \otimes \ld$
+           & $t \otimes \omega^{ 1 } \otimes \ld \otimes \omega^{ p } \otimes \ld$ \\
+    143 & 12 & & $t \otimes \omega^{ 1 } \ld \otimes_{ p } \otimes \ld$
+           & $t \otimes \omega^{ 1 } \otimes \ld \otimes \omega^{ p } \otimes \ld$ \\
     145 & & 13 & ewentualnie innych & innych \\
-    148 &  4 & & $\pr_{ 1 }.\pr_{ 2 }$ & $\pr_{ 1 }, \pr_{ 2 }$ \\
-    148 & &  6 & $\supp\, \la_{ \iota }$ & $U_{ \iota }$ \\
-    149 & 16 & & $\R^{ q }$ & $\R^{ p }$ \\
+    148 &  4 & & $\partial_{ 1 }.\partial_{ 2 }$ & $\partial_{ 1 }, \partial_{ 2 }$ \\
+    148 & &  6 & $\supp\, \lambda_{ \iota }$ & $U_{ \iota }$ \\
+    149 & 16 & & $\Rb^{ q }$ & $\Rb^{ p }$ \\
     \hline
   \end{tabular}
 
@@ -973,7 +978,7 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    149 & 17 & & $\R^{ n - q }$ & $\R^{ n - p }$ \\
+    149 & 17 & & $\Rb^{ n - q }$ & $\Rb^{ n - p }$ \\
     149 & & 17 & $R^{ 2k }$ & $\R^{ 2k }$ \\
     150 & & 12 & twierdzenie 18.6 & lemat 18.5 \\
     151 & 20 & & $\Fc( f ) \circ f^{ -1 }$
@@ -982,45 +987,46 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     151 & &  8 & $\ul{ F( M ) }$ & $\ul{ \Fc( M ) }$ \\
     151 & &  7 & $\ul{ F( M ) }$ & $\ul{ \Fc( M ) }$ \\
     152 & 13 & & $\ul{ F( M ) }$ & $\ul{ \Fc( M ) }$ \\
-    152 & &  5 & $-\vp_{ a t }$ & $= \vp_{ a t }$ \\
-    153 & 10 & & $( ( \vp_{ t } )_{ * } \sigma \bigg|_{ t = 0 }$
-           & $( ( \vp_{ t } )_{ * } \sigma )\bigg|_{ t = 0 }$ \\
+    152 & &  5 & $-\varphi_{ a t }$ & $= \varphi_{ a t }$ \\
+    153 & 10 & & $( ( \varphi_{ t } )_{ * } \sigma \bigg|_{ t = 0 }$
+           & $( ( \varphi_{ t } )_{ * } \sigma )\bigg|_{ t = 0 }$ \\
     155 &  3 & & $( \sigma_{ 1 }, \sigma_{ 2 } )$
            & $( \sigma_{ 1 }, \sigma_{ 2 } ) )$ \\
     155 & & 12 & \emph{R} & \emph{$\R$} \\
-    155 &  6 & & $\Om$ & $\Om_{ M }$ \\
-    155 &  7 & & $( ( \vp_{ t } )_{ * } \sigma_{ 1 } \bigg|_{ t = 0 } )$
-           & $( ( \vp_{ t } )_{ * } \sigma_{ 1 } )\bigg|_{ t = 0 }$ \\
-    155 &  7 & & $( ( \vp_{ t } )_{ * } \sigma_{ 2 } \bigg|_{ t = 0 } )$
-           & $( ( \vp_{ t } )_{ * } \sigma_{ 2 } )\bigg|_{ t = 0 }$ \\
-    155 & &  2 & $\Om$ & $\Om_{ M }$ \\
+    155 &  6 & & $\Omega$ & $\Omega_{ M }$ \\
+    155 &  7 & & $( ( \varphi_{ t } )_{ * } \sigma_{ 1 } \bigg|_{ t = 0 } )$
+           & $( ( \varphi_{ t } )_{ * } \sigma_{ 1 } )\bigg|_{ t = 0 }$ \\
+    155 &  7 & & $( ( \varphi_{ t } )_{ * } \sigma_{ 2 } \bigg|_{ t = 0 } )$
+           & $( ( \varphi_{ t } )_{ * } \sigma_{ 2 } )\bigg|_{ t = 0 }$ \\
+    155 & &  2 & $\Omega$ & $\Omega_{ M }$ \\
     156 &  9 & & $\Tc( X )$ & $\Tc( M )$ \\
-    156 & & 13 & $\om( x )$ & $\om( X )$ \\
-    156 & & 13 & $\Lc( C^{ 1 }_{ 1 }( \om \ot X )$
-           & $\Lc( C^{ 1 }_{ 1 }( \om \ot X ) )$ \\
+    156 & & 13 & $\omega( x )$ & $\omega( X )$ \\
+    156 & & 13 & $\Lc( C^{ 1 }_{ 1 }( \omega \otimes X )$
+           & $\Lc( C^{ 1 }_{ 1 }( \omega \otimes X ) )$ \\
     156 & & 12 & $( p, g )$ & $( p, q )$ \\
     156 & &  4 & 18.7(1) & 18.3 \\
-    157 & 15 & & $\Xc( M ) \ti \ld \Xc( M )$
-           & $\Xc( M ) \ti \ld \ti \Xc( M )$ \\
-    157 & &  4 & $X_{ 1 } \ot \ld \ot X_{ n }$ & $X_{ 1 }, \ld, X_{ k }$ \\
-    158 &  7 & & $\Xc( M ) \ti \ld \Xc( M )$
-           & $\Xc( M ) \ti \ld \ti \Xc( M )$ \\
+    157 & 15 & & $\Xc( M ) \times \ld \Xc( M )$
+           & $\Xc( M ) \times \ld \times \Xc( M )$ \\
+    157 & &  4 & $X_{ 1 } \otimes \ld \otimes X_{ n }$ & $X_{ 1 }, \ld, X_{ k }$ \\
+    158 &  7 & & $\Xc( M ) \times \ld \Xc( M )$
+           & $\Xc( M ) \times \ld \times \Xc( M )$ \\
     158 &  8 & & $( t( X_{ 1 }, \ld, X_{ k } )$
            & $( t( X_{ 1 }, \ld, X_{ k } ) )$ \\
-    158 & & 12 & R & $\R$ \\
-    161 &  5 & & $\pr_{ i_{ \sigma( 1 ) } } d( g_{ 1 } \ld, \pr_{ i_{ \sigma( \al ) } } g_{ \al } \ld$
-           & $d( \pr_{ i_{ \sigma( 1 ) } } g_{ 1 } \ld \pr_{ i_{ \sigma( \al ) } } g_{ \al } \ld$ \\
-    161 &  7 & & $\pr_{ i_{ \sigma( 1 ) } } g_{ 1 } \ld, \pr_{ j }\ld$
-           & $\pr_{ i_{ \sigma( 1 ) } } g_{ 1 } \ld \pr_{ j }\ld$ \\
-    162 & & 10 & $\L\om |_{ U }$ & $\L_{ X }\om|_{ U } $ \\
+    158 & & 12 & R & $\Rb$ \\
+    161 &  5 & & $\partial_{ i_{ \sigma( 1 ) } } d( g_{ 1 } \ld,
+                 \partial_{ i_{ \sigma( \alpha ) } } g_{ \alpha } \ld$
+           & $d( \partial_{ i_{ \sigma( 1 ) } } g_{ 1 } \ld
+             \partial_{ i_{ \sigma( \al ) } } g_{ \alpha } \ld$ \\
+    161 &  7 & & $\partial_{ i_{ \sigma( 1 ) } } g_{ 1 } \ld, \partial_{ j }\ld$
+           & $\partial_{ i_{ \sigma( 1 ) } } g_{ 1 } \ld \partial_{ j }\ld$ \\
+    162 & & 10 & $\L\omega |_{ U }$ & $\L_{ X }\omega|_{ U } $ \\
     163 &  7 & & 18.14, punkty (2) oraz (4) & 18.14(4) oraz 18.16(3) \\
-    163 & 16 & & $R$ & $\R$ \\
+    163 & 16 & & $R$ & $\Rb$ \\
     163 & &  9 & $\Fc_{ 0 }( M )$ & $\Fc^{ 0 }( M )$ \\
     163 & &  8 & $\Fc_{ 0 }( M )$ & $\Fc^{ 0 }( M )$ \\
     163 & &  7 & (3) & (4) \\
     \hline
   \end{tabular}
-
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -1464,12 +1470,12 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
 \Jest % ?????????
 \begin{equation*}
   ( \fr{ v_{ 1 } }{ u_{ i } }, \ld, \fr{ v_{ i - 1 } }{ u_{ i } },
-  \fr{ v_{ i + 1 } }{ u_{ i } }, \ld, \fr{ v_{ n } }{ u_{ i } } )  
+  \fr{ v_{ i + 1 } }{ u_{ i } }, \ld, \fr{ v_{ n } }{ u_{ i } } )
 \end{equation*}
 \Pow
 \begin{equation*}
   \left( \fr{ v_{ 1 } }{ v_{ i } }, \ld, \fr{ v_{ i - 1 } }{ v_{ i } },
-    \fr{ v_{ i + 1 } }{ v_{ i } }, \ld, \fr{ v_{ n } }{ v_{ i } } \right)  
+    \fr{ v_{ i + 1 } }{ v_{ i } }, \ld, \fr{ v_{ n } }{ v_{ i } } \right)
 \end{equation*}
 \StrWg{103}{9} \\
 \Jest szybkością\ldots \\
