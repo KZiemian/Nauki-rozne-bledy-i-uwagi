@@ -250,7 +250,7 @@
 
 % #####
 % Oznaczenia do teorii funkcji
-\newcommand{\supp}{\mr{supp}\,}
+\newcommand{\supp}{\mathrm{supp}\,}
 
 
 % Ciąg
@@ -259,7 +259,7 @@
 
 
 % Delty
-\newcommand{\Delt}{\Del t}
+\newcommand{\Delt}{\Delta t}
 
 % Granice
 \newcommand{\Lim}{\lim\limits}
@@ -272,9 +272,9 @@
 \newcommand{\xToPInf}{x \to +\infty}
 \newcommand{\xToMInf}{x \to -\infty}
 
-\newcommand{\epsToZero}{\varepsilon \to 0}
-\newcommand{\epsToPZero}{\varepsilon \to 0^{ + }}
-\newcommand{\epsToMZero}{\varepsilon \to 0^{ + }}
+\newcommand{\epsToZero}{\epsilon \to 0}
+\newcommand{\epsToPZero}{\epsilon \to 0^{ + }}
+\newcommand{\epsToMZero}{\epsilon \to 0^{ + }}
 
 \newcommand{\DelToZero}{\Delta t \to 0}
 
@@ -311,13 +311,13 @@
 
 % Pochodne cząstkowe
 \newcommand{\pr}{\partial}
-\newcommand{\pd}[3]{\fr{ \pr^{ #1 } { #2 } }{ \pr { #3 }^{ #1 } }}
+\newcommand{\pd}[3]{\fr{ \partial^{ #1 } { #2 } }{ \partial { #3 }^{ #1 } }}
 % Jw tylko dla pochodnej cząstkowej
-\newcommand{\pdo}[1]{\pr_{ #1 }}  % Partial derivative one - notacja
+\newcommand{\pdo}[1]{\partial_{ #1 }}  % Partial derivative one - notacja
 % pochodnej cząstkowej bez ułamka
-\newcommand{\pdt}[1]{\pr_{ x^{ #1 } }} % PD two - po x z indeksem "#1"
-\newcommand{\pdth}[3]{\fr{ \pr^{ 2 } #1 }{ { \pr x^{ #2 } }
-    { \pr x^{ #3 } } }}  % PD three - po zmiennych x z indeksami "#1" "#2"
+\newcommand{\pdtwo}[1]{\partial_{ x^{ #1 } }} % PD two - po x z indeksem "#1"
+\newcommand{\pdth}[3]{\fr{ \partial^{ 2 } #1 }{ { \partial x^{ #2 } }
+    { \partial x^{ #3 } } }}  % PD three - po zmiennych x z indeksami "#1" "#2"
 
 
 
@@ -347,15 +347,15 @@
 
 % #############
 % Całki i całkowanie
-\newcommand{\dx}{\de x}
-\newcommand{\dk}{\, d}  % Różniczka Kończąca całkę
+\newcommand{\dx}{\difPL x}
+\newcommand{\dend}{\, d}  % Różniczka kończąca (ang. end) całkę
 
 
 
 % ########
 % Całki i całkowanie anglosaskie (czyli ogólne i światowe)
 \newcommand{\Int}{\int\limits}
-\newcommand{\IntLo}[3]{\Int_{ { #1 } }^{ { #2 } } d#3 \,}  % One
+\newcommand{\IntLo}[3]{\int\limits_{ { #1 } }^{ { #2 } } d#3 \,}  % One
 \newcommand{\IntLt}[4]{\Int_{ { #1 } }^{ { #2 } }  #3 \, d#4}  % Two
 
 \newcommand{\IntMo}[2]{\Int #1 \, d#2}  % Integral Measure One
@@ -390,27 +390,29 @@
 
 % ########
 % Całki i całkowanie, polski standard
-\newcommand{\IntLoPL}[3]{\Int_{ { #1 } }^{ { #2 } } \de#3 \,}  % One
-\newcommand{\IntLtPL}[4]{\Int_{ { #1 } }^{ { #2 } }  #3 \, \de#4}  % Two
+\newcommand{\IntLoPL}[3]{\int\limits_{ { #1 } }^{ { #2 } } \difPL#3 \,}  % One
+\newcommand{\IntLtPL}[4]{\int\limits_{ { #1 } }^{ { #2 } }  #3 \, \difPL#4}
+% Two
 
-\newcommand{\IntMPL}[2]{\Int #1 \, \de#2}  % Integral Measure
-\newcommand{\IntPhyPL}[2]{\Int \de#1 \, #2}  % Bardziej Fizyczna notacja;)
-\newcommand{\IntWiePL}[3]{\Int_{ #1 } \de^{ #2 } #3 \,}  % Wielowymiarowa
-\newcommand{\IntTroPL}[1]{\Int \de^{ 3 }#1 \,}  % Trójwymiarowa
-\newcommand{\IntDoPL}[5]{\Int_{ #1 } \de^{ #2 }#3\, \de^{ #4 } #5 \;}
+\newcommand{\IntMPL}[2]{\int #1 \, \difPL#2}  % Integral Measure
+\newcommand{\IntPhyPL}[2]{\int \difPL#1 \, #2}  % Bardziej Fizyczna notacja;)
+\newcommand{\IntWiePL}[3]{\int\limits_{ #1 } \difPL^{ #2 } #3 \,}  % Wielowymiarowa
+\newcommand{\IntTroPL}[1]{\int \difPL^{ 3 }#1 \,}  % Trójwymiarowa
+\newcommand{\IntDoPL}[5]{\int\limits_{ #1 } \difPL^{ #2 }#3\, \difPL^{ #4 }\,
+  #5 \;}
 
-\newcommand{\IntSetoPL}[3]{\Int_{ #1 } #2 \, d#3}  % Całka po zbiorze.
-% Set (o) PL
-\newcommand{\IntSettPL}[1]{\Int_{ #1 }}
+\newcommand{\IntSetOPL}[3]{\int\limits_{ #1 } #2 \, d#3}  % Całka po zbiorze.
+% Set (one) PL
+\newcommand{\IntSetTwPL}[1]{\int\limits_{ #1 }}  % TWo
 
 
 
 % #####
 % Całki w określonych granicach
-\newcommand{\IntMPInfPL}[1]{\Int_{ -\infty }^{ +\infty } \de #1 \;}
-\newcommand{\IntOInfPL}[1]{\Int_{ 0 }^{ +\infty } \de #1 \;}
-\newcommand{\IntOvRoPL}[1]{\int_{ \R } \de #1 \;}  % R One
-\newcommand{\IntOvRtPL}[2]{\int_{ \R } #1 \, \de #2}  % R Two
+\newcommand{\IntMPInfPL}[1]{\int\limits_{ -\infty }^{ +\infty } \difPL #1 \;}
+\newcommand{\IntOInfPL}[1]{\int\limits_{ 0 }^{ +\infty } \difPL #1 \;}
+\newcommand{\IntOvRoPL}[1]{\int\limits_{ \Rb } \difPL #1 \;}  % R One
+\newcommand{\IntOvRtPL}[2]{\int\limits_{ \Rb } #1 \, \difPL #2}  % R Two
 
 
 
@@ -426,7 +428,7 @@
 % Analiza zespolona
 \newcommand{\Res}{\textrm{Res}}
 
-\newcommand{\Pier}{\textrm{Pier}}  % Pierścień kołowy
+\newcommand{\Pier}{\textrm{Pier}}  % Otoczenie pierścieniowe
 
 
 
@@ -434,7 +436,7 @@
 
 % #############
 % Analiza funkcjonalna
-\newcommand{\da}{\dagger}
+% \newcommand{\da}{\dagger}
 
 % Brakety
 % W analizie funkcjonalnej też często się je stosuje
@@ -459,8 +461,8 @@
 
 
 % Wersja polska
-\newcommand{\LtOPL}{\Lt( \Rb, \de \mu )}
-\newcommand{\LtTPL}{\Lt( \Rb^{ 3 }, \de \mu )}
+\newcommand{\LtOPL}{\Lt( \Rb, \difPL \mu )}
+\newcommand{\LtTPL}{\Lt( \Rb^{ 3 }, \difPL \mu )}
 
 
 
