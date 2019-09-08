@@ -83,13 +83,14 @@
 
 
 % Wartość bezwzględna i normy
+\providecommand{\abs}[1]{\lvert{ #1 }\rvert}
 \newcommand{\abso}[1]{|\, { #1 } \,|}  % ABSolute value One
 \newcommand{\abstw}[1]{\left| \, { #1 } \, \right|}
 \newcommand{\absth}[1]{\left| { #1 } \right|}
 \newcommand{\absf}[1]{| { #1 } |}
 % \providecommand{\absd}[1]{\left| #1 \right|}
 % Zupełnie nie wiem, czemu to jest \providecommand
-\newcommand{\norm}[1]{\Vert #1 \Vert}
+\providecommand{\norm}{\lVert{ #1 }\rVert}
 
 
 
