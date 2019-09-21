@@ -36,7 +36,6 @@
 
 
 % Ułamki
-% \newcommand{\ovOne}[1]{\fr{ 1 }{ #1 }} % Trzeba to usunąć
 \newcommand{\oneOv}[1]{\fr{ 1 }{ #1 }}
 % \newcommand{\ovTwo}[1]{\fr{ #1 }{ 2 }}
 \newcommand{\twoOv}[1]{\fr{ #1 }{ 2 }}
@@ -65,7 +64,7 @@
 \newcommand{\mc}{\mathcal}
 \newcommand{\mf}{\mathfrak}
 \newcommand{\mbf}{\mathbf}
-\newcommand{\bsym}{\boldsymbol}
+% \newcommand{\bsym}{\boldsymbol}
 
 
 % Strzałki
@@ -84,11 +83,14 @@
 
 
 % Wartość bezwzględna i normy
-\newcommand{\abso}[1]{\left| \, #1 \, \right|}
-\newcommand{\abst}[1]{\left| #1 \right|}
+\providecommand{\abs}[1]{\lvert{ #1 }\rvert}
+\newcommand{\abso}[1]{|\, { #1 } \,|}  % ABSolute value One
+\newcommand{\abstw}[1]{\left| \, { #1 } \, \right|}
+\newcommand{\absth}[1]{\left| { #1 } \right|}
+\newcommand{\absf}[1]{| { #1 } |}
 % \providecommand{\absd}[1]{\left| #1 \right|}
 % Zupełnie nie wiem, czemu to jest \providecommand
-\newcommand{\norm}[1]{\left|\left| #1 \right|\right|}
+\providecommand{\norm}[1]{\lVert{ #1 }\rVert}
 
 
 
@@ -109,13 +111,13 @@
 \newcommand{\Lam}{\Lambda}
 
 % By \epsilon był wyświetlany jako Unicode, a dawał znak \varepsilon
-\let\oldepsilon\epsilon
-\renewcommand{\epsilon}{\varepsilon}
+% \let\oldepsilon\epsilon
+% \renewcommand{\epsilon}{\varepsilon}
 
 % \newcommand{\vp}{\varphi}
-\newcommand{\om}{\omega}
-\newcommand{\Om}{\Omega}
-\newcommand{\Si}{\Sigma}
+% \newcommand{\om}{\omega}
+% \newcommand{\Om}{\Omega}
+% \newcommand{\Si}{\Sigma}
 
 
 
@@ -124,7 +126,6 @@
 % ##########
 % Standardowe używane w oznaczeniach litery o specjalnej czcionce
 % \mb = \mathbb
-% \newcommand{\Hb}{\mathbb{H}}
 \newcommand{\Nb}{\mathbb{N}}
 \newcommand{\Zb}{\mathbb{Z}}
 \newcommand{\Rb}{\mathbb{R}}
@@ -145,6 +146,7 @@
 % \mc = \mathcal
 \newcommand{\Cc}{\mathcal{C}}
 \newcommand{\Dc}{\mathcal{D}}
+\newcommand{\Ec}{\mathcal{E}}
 \newcommand{\Hc}{\mathcal{H}} % A co z \ell
 \newcommand{\lc}{\mathcal{l}}
 \newcommand{\Lc}{\mathcal{L}}
@@ -161,6 +163,7 @@
 \newcommand{\Mc}{\mathcal{M}}
 \newcommand{\Nc}{\mathcal{N}}
 \newcommand{\Tc}{\mathcal{T}}
+\newcommand{\Uc}{\mathcal{U}}
 \newcommand{\Pc}{\mathcal{P}}
 \newcommand{\Zc}{\mathcal{Z}}
 
@@ -173,7 +176,7 @@
 \newcommand{\es}{\emptyset}
 \newcommand{\subs}{\subset}
 \newcommand{\setm}{\setminus}
-
+\newcommand{\ti}{\times}
 \newcommand{\com}{\complement}
 
 \newcommand{\set}[1]{\{ #1 \}}
@@ -198,7 +201,7 @@
 % Algebra liniowa
 
 % Podprzestrzenie i odwzorowania liniowe
-\newcommand{\image}{\textrm{im}}
+\newcommand{\im}{\textrm{im}}
 
 % Wektory
 \newcommand{\vecr}{\vec{ r }}
@@ -248,7 +251,7 @@
 
 % #####
 % Oznaczenia do teorii funkcji
-\newcommand{\supp}{\mr{supp}\,}
+\newcommand{\supp}{\mathrm{supp}\,}
 
 
 % Ciąg
@@ -257,7 +260,7 @@
 
 
 % Delty
-\newcommand{\Delt}{\Del t}
+\newcommand{\Delt}{\Delta t}
 
 % Granice
 \newcommand{\Lim}{\lim\limits}
@@ -270,9 +273,9 @@
 \newcommand{\xToPInf}{x \to +\infty}
 \newcommand{\xToMInf}{x \to -\infty}
 
-\newcommand{\epsToZero}{\varepsilon \to 0}
-\newcommand{\epsToPZero}{\varepsilon \to 0^{ + }}
-\newcommand{\epsToMZero}{\varepsilon \to 0^{ + }}
+\newcommand{\epsToZero}{\epsilon \to 0}
+\newcommand{\epsToPZero}{\epsilon \to 0^{ + }}
+\newcommand{\epsToMZero}{\epsilon \to 0^{ + }}
 
 \newcommand{\DelToZero}{\Delta t \to 0}
 
@@ -309,13 +312,13 @@
 
 % Pochodne cząstkowe
 \newcommand{\pr}{\partial}
-\newcommand{\pd}[3]{\fr{ \pr^{ #1 } { #2 } }{ \pr { #3 }^{ #1 } }}
+\newcommand{\pd}[3]{\fr{ \partial^{ #1 } { #2 } }{ \partial { #3 }^{ #1 } }}
 % Jw tylko dla pochodnej cząstkowej
-\newcommand{\pdo}[1]{\pr_{ #1 }}  % Partial derivative one - notacja
+\newcommand{\pdo}[1]{\partial_{ #1 }}  % Partial derivative one - notacja
 % pochodnej cząstkowej bez ułamka
-\newcommand{\pdt}[1]{\pr_{ x^{ #1 } }} % PD two - po x z indeksem "#1"
-\newcommand{\pdth}[3]{\fr{ \pr^{ 2 } #1 }{ { \pr x^{ #2 } }
-    { \pr x^{ #3 } } }}  % PD three - po zmiennych x z indeksami "#1" "#2"
+\newcommand{\pdtwo}[1]{\partial_{ x^{ #1 } }} % PD two - po x z indeksem "#1"
+\newcommand{\pdth}[3]{\fr{ \partial^{ 2 } #1 }{ { \partial x^{ #2 } }
+    { \partial x^{ #3 } } }}  % PD three - po zmiennych x z indeksami "#1" "#2"
 
 
 
@@ -345,15 +348,15 @@
 
 % #############
 % Całki i całkowanie
-\newcommand{\dx}{\de x}
-\newcommand{\dk}{\, d}  % Różniczka Kończąca całkę
+\newcommand{\dx}{\difPL x}
+\newcommand{\dend}{\, d}  % Różniczka kończąca (ang. end) całkę
 
 
 
 % ########
 % Całki i całkowanie anglosaskie (czyli ogólne i światowe)
 \newcommand{\Int}{\int\limits}
-\newcommand{\IntLo}[3]{\Int_{ { #1 } }^{ { #2 } } d#3 \,}  % One
+\newcommand{\IntLo}[3]{\int\limits_{ { #1 } }^{ { #2 } } d#3 \,}  % One
 \newcommand{\IntLt}[4]{\Int_{ { #1 } }^{ { #2 } }  #3 \, d#4}  % Two
 
 \newcommand{\IntMo}[2]{\Int #1 \, d#2}  % Integral Measure One
@@ -388,27 +391,29 @@
 
 % ########
 % Całki i całkowanie, polski standard
-\newcommand{\IntLoPL}[3]{\Int_{ { #1 } }^{ { #2 } } \de#3 \,}  % One
-\newcommand{\IntLtPL}[4]{\Int_{ { #1 } }^{ { #2 } }  #3 \, \de#4}  % Two
+\newcommand{\IntLoPL}[3]{\int\limits_{ { #1 } }^{ { #2 } } \difPL#3 \,}  % One
+\newcommand{\IntLtPL}[4]{\int\limits_{ { #1 } }^{ { #2 } }  #3 \, \difPL#4}
+% Two
 
-\newcommand{\IntMPL}[2]{\Int #1 \, \de#2}  % Integral Measure
-\newcommand{\IntPhyPL}[2]{\Int \de#1 \, #2}  % Bardziej Fizyczna notacja;)
-\newcommand{\IntWiePL}[3]{\Int_{ #1 } \de^{ #2 } #3 \,}  % Wielowymiarowa
-\newcommand{\IntTroPL}[1]{\Int \de^{ 3 }#1 \,}  % Trójwymiarowa
-\newcommand{\IntDoPL}[5]{\Int_{ #1 } \de^{ #2 }#3\, \de^{ #4 } #5 \;}
+\newcommand{\IntMPL}[2]{\int #1 \, \difPL#2}  % Integral Measure
+\newcommand{\IntPhyPL}[2]{\int \difPL#1 \, #2}  % Bardziej Fizyczna notacja;)
+\newcommand{\IntWiePL}[3]{\int\limits_{ #1 } \difPL^{ #2 } #3 \,}  % Wielowymiarowa
+\newcommand{\IntTroPL}[1]{\int \difPL^{ 3 }#1 \,}  % Trójwymiarowa
+\newcommand{\IntDoPL}[5]{\int\limits_{ #1 } \difPL^{ #2 }#3\, \difPL^{ #4 }\,
+  #5 \;}
 
-\newcommand{\IntSetoPL}[3]{\Int_{ #1 } #2 \, d#3}  % Całka po zbiorze.
-% Set (o) PL
-\newcommand{\IntSettPL}[1]{\Int_{ #1 }}
+\newcommand{\IntSetOPL}[3]{\int\limits_{ #1 } #2 \, d#3}  % Całka po zbiorze.
+% Set (one) PL
+\newcommand{\IntSetTwPL}[1]{\int\limits_{ #1 }}  % TWo
 
 
 
 % #####
 % Całki w określonych granicach
-\newcommand{\IntMPInfPL}[1]{\Int_{ -\infty }^{ +\infty } \de #1 \;}
-\newcommand{\IntOInfPL}[1]{\Int_{ 0 }^{ +\infty } \de #1 \;}
-\newcommand{\IntOvRoPL}[1]{\int_{ \R } \de #1 \;}  % R One
-\newcommand{\IntOvRtPL}[2]{\int_{ \R } #1 \, \de #2}  % R Two
+\newcommand{\IntMPInfPL}[1]{\int\limits_{ -\infty }^{ +\infty } \difPL #1 \;}
+\newcommand{\IntOInfPL}[1]{\int\limits_{ 0 }^{ +\infty } \difPL #1 \;}
+\newcommand{\IntOvRoPL}[1]{\int\limits_{ \Rb } \difPL #1 \;}  % R One
+\newcommand{\IntOvRtPL}[2]{\int\limits_{ \Rb } #1 \, \difPL #2}  % R Two
 
 
 
@@ -424,7 +429,7 @@
 % Analiza zespolona
 \newcommand{\Res}{\textrm{Res}}
 
-\newcommand{\Pier}{\textrm{Pier}}  % Pierścień kołowy
+\newcommand{\Pier}{\textrm{Pier}}  % Otoczenie pierścieniowe
 
 
 
@@ -432,7 +437,7 @@
 
 % #############
 % Analiza funkcjonalna
-\newcommand{\da}{\dagger}
+% \newcommand{\da}{\dagger}
 
 % Brakety
 % W analizie funkcjonalnej też często się je stosuje
@@ -457,8 +462,8 @@
 
 
 % Wersja polska
-\newcommand{\LtOPL}{\Lt( \Rb, \de \mu )}
-\newcommand{\LtTPL}{\Lt( \Rb^{ 3 }, \de \mu )}
+\newcommand{\LtOPL}{\Lt( \Rb, \difPL \mu )}
+\newcommand{\LtTPL}{\Lt( \Rb^{ 3 }, \difPL \mu )}
 
 
 

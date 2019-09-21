@@ -1,8 +1,8 @@
 % Autor: Kamil Ziemian
 
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Podstawowe ustawienia i pakiety
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 \RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
 % sposoby używania LaTeXa. Więcej jest w l2tabu English version.
 \documentclass[a4paper,11pt]{article}
@@ -16,9 +16,9 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ----------------------------
+% ------------------------------
 \usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
 \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
 % grafiki.
@@ -27,9 +27,9 @@
 % wprowadzane bezpośrednio w tekście.
 \usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ----------------------------
+% ------------------------------
 % MARGINS
-% ----------------------------
+% ------------------------------
 \setmarginsrb
 { 0.7in} % left margin
 { 0.6in} % top margin
@@ -42,18 +42,18 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Często przydatne pakiety
-% ----------------------------
+% ------------------------------
 \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
 \usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
 % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
 
-% ----------------------------
+% ------------------------------
 % Pakiety do tekstów z nauk przyrodniczych
-% ----------------------------
+% ------------------------------
 \let\lll\undefined  % Amsmath gryzie się z językiem pakietami do języka
 % polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
 % oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
@@ -67,6 +67,7 @@
 % \usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
 % na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
 % nie wiem.
+\usepackage{tikz-cd}  % Do rysowania grafów przemiennych
 
 
 
@@ -79,10 +80,10 @@
 
 
 
-% --------------------------------------
+% ---------------------------------------
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
-% --------------------------------------
+% ---------------------------------------
 \usepackage{geometriarozniczkowa}  % Pakiet napisany konkretnie dla tego
 % pliku.
 \usepackage{latexshortcuts}
@@ -90,9 +91,9 @@
 
 
 
-% --------------------------------------
+% ---------------------------------------
 % Dodatkowe ustawienia dla języka polskiego
-% --------------------------------------
+% ---------------------------------------
 \renewcommand{\thesection}{\arabic{section}.}
 % Kropki po numerach rozdziału (polski zwyczaj topograficzny)
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}}
@@ -100,18 +101,18 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Ustawienia różnych parametrów tekstu
-% ----------------------------
+% ------------------------------
 \renewcommand{\arraystretch}{1.25}  % Ustawienie szerokości odstępów między
 % wierszami w tabelach.
 
 
 
-% ----------------------------
+% ------------------------------
 % Pakiet "hyperref"
 % Polecano by umieszczać go na końcu preambuły.
-% ----------------------------
+% ------------------------------
 \usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
 % do bibliografii na hiperlinki.
 
@@ -119,14 +120,14 @@
 
 
 
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 \title{ % Tytuł, autor, data
   Jacek Gancarzewicz \\
   ,,Zarys współczesnej geometrii różniczkowej'' --~błędy i~uwagi}
 
 % \author{}
 % \date{}
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 
 
 
@@ -165,8 +166,7 @@ otoczeniu.???
 
 \start Brak definicji krzywej całkowej pola wektorowego $X$. Jeżeli
 $\varphi_{ t }$ jest lokalny przepływem generującym $X$ na $U$, to
-krzywą $\varphi_{ t }( x )$, $x \in U$ nazywamy krzywą całkową pola
-$X$.
+krzywą $\varphi_{ t }( x )$, $x \in U$ nazywamy krzywą całkową pola $X$.
 
 \vspace{\spaceFour}
 
@@ -182,10 +182,10 @@ przemienne, muszą z~tego względu być liniowe.
 
 \start \Str{19} Przedstawiony tu diagram jest błędny. Zamiast strzałki
 odpowiadającej odwzorowaniu $\pi_{ i }$ wskazującej
-od~$X_{ 1 } \oplus \ldots \oplus X_{ k }$ do~$X_{ i }$, powinna być ta
-odpowiadająca odwzorowaniu $i_{ i }$ idąca od~$X_{ i }$
-do~$X_{ 1 } \oplus \ldots \oplus X_{ k }$ (z tego względu lepiej jest
-zmienić tu indeks na $j$).
+od~$X_{ 1 } \oplus \ldots \oplus X_{ k }$ do~$X_{ i }$, powinna być ta odpowiadająca
+odwzorowaniu $i_{ i }$ idąca od~$X_{ i }$
+do~$X_{ 1 } \oplus \ldots \oplus X_{ k }$ (z tego względu lepiej jest zmienić tu
+indeks na $j$).
 
 \vspace{\spaceFour}
 
@@ -274,8 +274,8 @@ powinna zostać usunięta.
 \vspace{\spaceFour}
 
 
-Fragment poświęcony zależności pojęć $\Gamma$-struktury i rozmaitości, oraz
-wpływowi tego na układ część książki można by napisać dokładniej.
+Fragment poświęcony zależności pojęć $\Gamma$-struktury i rozmaitości,
+oraz wpływowi tego na układ część książki można by napisać dokładniej.
 Spróbuj samemu to zrobić.
 \\Próba:\\
 Niech $\Gamma_{ 1 } \subset \Gamma_{ 2 }$ i ustalmy atlas
@@ -309,8 +309,8 @@ sprawdzić w dobrej książce do~topologii.
 \vspace{\spaceFour}
 
 
-\start \Str{69} Podana dziedzina $\varphi \circ \psi^{ -1 }$ jest błędna
-\red{popraw!!!}
+\start \Str{69} Podana dziedzina $\varphi \circ \psi^{ -1 }$ jest
+błędna \red{popraw!!!}
 
 \vspace{\spaceFour}
 
@@ -1094,7 +1094,7 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
            & $\varphi_{ t_{ 1 } }^{ 1 } \circ \ld \circ \varphi_{ t_{ K } }^{ K }$ \\
     176 & & 12 & $D$\dywiz pola & $\Dc$\dywiz pola \\
     176 & & 10 & $[ 0. 1 ]$ & $[ 0, 1 ]$ \\
-    177 &  9 & & $\varphi_{ \al }( \gamma ( \tau_{ \alpha - 1 } )$
+    177 &  9 & & $\varphi_{ \alpha }( \gamma ( \tau_{ \alpha - 1 } )$
            & $\varphi_{ \alpha }( \gamma ( \tau_{ \alpha - 1 } ) )$ \\
     177 & & 11 & $D$ & $\Dc$ \\
     178 & 13 & & $D$ & $\Dc$ \\
@@ -1120,20 +1120,20 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     185 & 10 & & od 1 do $r$ & od 0 do $r$ \\
     186 & & 12 & $\beta^{ s } = \beta^{ r } \circ \pi^{ r }_{ s }$
            & $\beta^{ r } = \beta^{ s } \circ \pi^{ r }_{ s }$ \\
-    187 & & 11 & $R^{ n }$ & $\R^{ n }$ \\
-    187 & &  8 & $\R^{ y }$ & $\R^{ m }$ \\
-    187 & &  3 & $\R^{ y }$ & $\R^{ m }$ \\
-    188 & 13 & & $( ( \vp( x ) )$ & $( \vp( x ) )$ \\
+    187 & & 11 & $R^{ n }$ & $\Rc^{ n }$ \\
+    187 & &  8 & $\Rc^{ y }$ & $\Rc^{ m }$ \\
+    187 & &  3 & $\Rc^{ y }$ & $\Rc^{ m }$ \\
+    188 & 13 & & $( ( \varphi( x ) )$ & $( \varphi( x ) )$ \\
     188 & 18 & & $\psi \circ \circ f$ & $\psi \circ f$ \\
     188 & & 18 & $\psi \circ \circ f$ & $\psi \circ f$ \\
-    188 & & 17 & $| \ga$ & $| \ga |$ \\
+    188 & & 17 & $| \gamma$ & $| \gamma |$ \\
     194 & & 11 & $r^{ r }_{ 0 }f$ & $j^{ r }_{ 0 }f$ \\
-    195 & & 16 & $S^{ 1 } \ti \ld S^{ 1 }$ & $S^{ 1 } \ti \ld \ti S^{ 1 }$ \\
+    195 & & 16 & $S^{ 1 } \times \ldots S^{ 1 }$ & $S^{ 1 } \times \ldots \times S^{ 1 }$ \\
     196 & 15 & & 1,3 & 1, 3 \\
     196 & 18 & & jest wewnętrzne & jest działanie wewnętrznym \\
     196 & 18 & & ale nie jest łączne & jednak nie jest łączne \\
     196 & & 15 & $i_{ G }$ & $i_{ G }^{ -1 }$ \\
-    196 & &  7 & $\vp$ & $\vp_{ t }$ \\
+    196 & &  7 & $\varphi$ & $\varphi_{ t }$ \\
     198 &  8 & & $\Lc( A )$ & $\Lc( f )A$ \\
     \hline
   \end{tabular}
@@ -1150,11 +1150,12 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
            & $\big( d_{ e }( f \circ \ad_{ a_{ t } } )( Y ) \big)$ \\
     199 & 2 & & $\L( f )( Y )$ & $\L( f )( X )$ \\
     199 & & 13 & $a_{ -t } B a_{ t }$ & $a_{ t } B a_{ -t }$ \\
-    199 & &  8 & $R^{ n }$ & $\R^{ n }$ \\
-    199 & &  6 & $R^{ n }$ & $\R^{ n }$ \\
+    199 & &  8 & $R^{ n }$ & $\Rc^{ n }$ \\
+    199 & &  6 & $R^{ n }$ & $\Rc^{ n }$ \\
     200 & 9 & & $( d_{ e }\ad_{ a_{ t } }( j^{ r }_{ 0 }Y ) ) )$
            & $( d_{ e }\ad_{ a_{ t } }( j^{ r }_{ 0 }Y ) )$ \\
-    200 & 10 & & $( \vp_{ t } )_{ * }Y )$ & $( ( \vp_{ t } )_{ * }Y )$ \\
+    200 & 10 & & $( \varphi_{ t } )_{ * }Y )$
+           & $( ( \varphi_{ t } )_{ * }Y )$ \\
     200 & 16 & & $a_{ 1 }$ , & $a_{ 1 }$, \\
     201 & & 11 & $d \exp_{ G }$ & $d_{ 0 } \exp_{ G }$ \\
     201 & &  7 & $d \exp_{ G }$ & $d_{ 0 } \exp_{ G }$ \\
@@ -1163,9 +1164,9 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     205 &  6 & & $d_{ o }\Phi$ & $d_{ 0 }\Phi$ \\
     205 &  7 & & $1.2$ & $1, 2$ \\
     205 &  9 & & $i_{ G }$ & $i_{ G }|_{ V_{ i } }$ \\
-    205 & 13 & & $\fr{ O( \norm{ \vp( x ), \vp( y ) } ) }
-                 { \norm{ \vp( x ), \vp( y ) } }$
-           & $O( \norm{ \vp( x ), \vp( y ) } )$ \\
+    205 & 13 & & $\fr{ O( \norm{ \varphi( x ), \varphi( y ) } ) }
+                 { \norm{ \varphi( x ), \varphi( y ) } }$
+           & $O( \norm{ \varphi( x ), \varphi( y ) } )$ \\
     205 & & 11 & $\fr{ \eta^{ i } }{ u^{ j } }$
            & $\pd{}{ { \eta^{ i } } }{ { u^{ j } } }$ \\
     205 & & 11 & $\fr{ \eta^{ i } }{ v^{ j } }$
@@ -1179,17 +1180,17 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     207 & 20 & & $w_{ n } \neq 0$ & $w'_{ n } \neq 0$ \\
     208 & & 12 & $( a^{ * }_{ s } a^{ * }_{ t } a_{ t } a_{ s } |$
            & $( a^{ * }_{ s } a^{ * }_{ t } a_{ t } a_{ s } )$ \\
-    208 & &  6 & $\SL( n )$ & $\SL( n, \R )$ \\
-    209 &  3 & & $a_{ n \sigma( n ) }$ & $\del_{ n \sigma( n ) }$ \\
-    209 & 11 & & $\SO( n )$ & $\SO( n, \R )$ \\
+    208 & &  6 & $\SL( n )$ & $\SL( n, \Rc )$ \\
+    209 &  3 & & $a_{ n \sigma( n ) }$ & $\delta_{ n \sigma( n ) }$ \\
+    209 & 11 & & $\SO( n )$ & $\SO( n, \Rc )$ \\
     209 & &  2 & $K$ & $M$ \\
     211 & 14 & & $U$ & $U_{ 0 }$ \\
     211 & 17 & & $W \! \cap \! O_{ 0 }$ & $W \! \cap \! U_{ 0 }$ \\
     211 & & 16 & $L_{ \xi } \circ \psi_{ \xi }^{ -1 }$
-           & $\vp_{ \xi } \circ i_{ 0 } \circ \psi_{ \xi }^{ -1 }$ \\
+           & $\varphi_{ \xi } \circ i_{ 0 } \circ \psi_{ \xi }^{ -1 }$ \\
     211 & & 15 & $\id_{ \wt{ V }_{ \xi } }$ & $\id_{ W_{ \xi } }$ \\
     211 & & 11 & $\pi \circ f$ & $f \circ \pi$ \\
-    212 &  1 & & $\Z$ & $\R$ \\
+    212 &  1 & & $\Z$ & $\Rc$ \\
     \hline
   \end{tabular}
 
@@ -1221,17 +1222,17 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     216 & &  4 & powolnego & dowolnego \\
     216 &  2 & & $\pi_{ 2 }$ & $p_{ 2 }$ \\
     217 & & 18 & takim. że & takim, że \\
-    218 & 11 & & $\wh{ \vp }$ & $\wt{ \vp }$ \\
+    218 & 11 & & $\wh{ \varphi }$ & $\wt{ \varphi }$ \\
     219 &  5 & & $j^{ r }_{ 0 } \ga_{ 0 }$ & $j^{ r }_{ 0 } \ga$ \\
     219 &  8 & & $.\be^{ -1 }( U )$ & $\be^{ -1 }( U )$ \\
-    219 &  8 & & $\fr{ \pr ( \vp^{ i } \circ \ga ) }{ u^{ j } }$
-           & $\pd{}{ ( { \vp^{ i } } \circ \ga ) }{ { u^{ j } } }$ \\
+    219 &  8 & & $\fr{ \pr ( \varphi^{ i } \circ \ga ) }{ u^{ j } }$
+           & $\pd{}{ ( { \varphi^{ i } } \circ \ga ) }{ { u^{ j } } }$ \\
     219 &  9 & & $j_{ o }^{ r } \ga_{ 0 }$ & $j_{ 0 }^{ r } \ga$ \\
     219 & & 13 & $j_{ 0 }^{ r } \ga_{ 1 } = j_{ 0 }^{ r } \ga_{ 2 }$
            & $\pi^{ r } ( \ga_{ 1 } ) = \pi^{ r }( \ga_{ 2 } )$ \\
     219 & & 12 & $j^{ r }_{ o } \ga_{ 2 } = j^{ r }_{ o } \ga_{ 1 } \cdot j^{ r } \xi$
            & $j^{ r }_{ 0 } \ga_{ 2 } = j^{ r }_{ 0 } \ga_{ 1 } \cdot j^{ r }_{ 0 } \xi$ \\
-    219 & &  7 & $\wt{ \vp }$ & $\wt{ \vp }^{ r }$ \\
+    219 & &  7 & $\wt{ \varphi }$ & $\wt{ \varphi }^{ r }$ \\
     220 &  4 & & $j^{ r } \xi$ & $j^{ r }_{ 0 } \xi$ \\
     220 &  5 & & $j^{ r } \xi$ & $j^{ r }_{ 0 } \xi$ \\
     220 &  6 & & główną & włóknistą główną \\
@@ -1341,7 +1342,7 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
     245 & & 17 & $i_{ G }$ & $i_{ G }^{ -1 }$ \\
     245 & & 17 & $ad_{ \xi^{ -1 } }$ & $\ad_{ \xi^{ -1 } }$ \\
     245 & & 16 & $i_{ G }$ & $i_{ G }^{ -1 }$ \\
-    245 & &  2 & $\vp_{ * } \om$ & $\vp^{ * } \om$ \\
+    245 & &  2 & $\varphi_{ * } \om$ & $\varphi^{ * } \om$ \\
     245 & &  2 & $U \ti G$ & $M \ti G$ \\
     246 &  9 & & $\sup \la_{ \iota }$ & $U_{ \iota }$ \\
     246 & 10 & & $\sup$ & $\supp$ \\
@@ -1549,8 +1550,8 @@ $f, \lambda_{ 1 }, \ld, \lambda_{ k }$~są funkcjami na $N$\ld \\
 \Jest $U \times J^{ r }_{ 0 }( \Rb^{ n }, F ) \pi^{ -1 }( U )$ \\
 \Powin $U \times J^{ r }_{ 0 }( \Rb^{ n }, F )$ \\
 \StrWg{227}{6} \\
-\Jest $( \vp^{ -1 }( y, \rho \circ \tau_{ -\psi( y ) } \circ \psi ) )$ \\
-\Powin $\vp^{ -1 }( y, \rho \circ \tau_{ -\psi( y ) } \circ \psi )$ \\
+\Jest $( \varphi^{ -1 }( y, \rho \circ \tau_{ -\psi( y ) } \circ \psi ) )$ \\
+\Powin $\varphi^{ -1 }( y, \rho \circ \tau_{ -\psi( y ) } \circ \psi )$ \\
 \StrWg{231}{3} \\
 \Jest $v_{ i_{ 1 } } \otimes \ld v_{ i - p } \otimes { e* }^{ j_{ 1 } } \otimes
 \ld \otimes { e* }^{ j_{ p } }$ \\
@@ -1583,6 +1584,12 @@ Str. 135. Teraz omówimy\ld \\
 Str. 136. \ldots polega na tym\ld \\
 Str. 135. Teraz omówimy\ld \\
 
+\textbf{Str. 15, pierwszy graf} \\
+\Jest
+\begin{tikzcd}
+  X \arrow[r, "f"] \arrow[d, "\pi"] & Y \arrow[d, "\pi'"] \\
+  X / U \arrow[r, "F"] & Y / V
+\end{tikzcd}
 
 
 
