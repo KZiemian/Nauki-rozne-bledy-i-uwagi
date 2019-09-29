@@ -1,8 +1,8 @@
 % Autor: Kamil Ziemian
 
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Podstawowe ustawienia i pakiety
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 \RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
 % sposoby używania LaTeXa. Więcej jest w l2tabu English version.
 \documentclass[a4paper,11pt]{article}
@@ -16,9 +16,9 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ----------------------------
+% ------------------------------
 \usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
 % \usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
 % % grafiki.
@@ -27,9 +27,9 @@
 % wprowadzane bezpośrednio w tekście.
 \usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ----------------------------
+% ------------------------------
 % MARGINS
-% ----------------------------
+% ------------------------------
 \setmarginsrb
 { 0.7in} % left margin
 { 0.6in} % top margin
@@ -46,16 +46,16 @@
 % Często używane pakiety
 % ------------------------------
 % \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-% \usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
 % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
 
 
 
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Dodatkowe ustawienia dla języka polskiego
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 \renewcommand{\thesection}{\arabic{section}.}
 % Kropki po numerach rozdziału (polski zwyczaj topograficzny)
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}}
@@ -63,26 +63,26 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
-% ----------------------------
+% ------------------------------
 \usepackage{latexshortcuts}
 
 
 
-% ----------------------------
+% ------------------------------
 % Ustawienia różnych parametrów tekstu
-% ----------------------------
+% ------------------------------
 \renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
 % wierszami w tabelach.
 
 
 
-% ----------------------------
+% ------------------------------
 % Pakiet "hyperref"
 % Polecano by umieszczać go na końcu preambuły.
-% ----------------------------
+% ------------------------------
 \usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
 % do bibliografii na hiperlinki.
 
@@ -90,13 +90,13 @@
 
 
 
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Tytuł, autor, data
 \title{DEUS --~błędy i~uwagi}
 
 % \author{}
 % \date{}
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 
 
 
@@ -239,22 +239,36 @@ drugą konwencję.
     & Od góry & Od dołu & & \\
     \hline
     28  &  3 & & ( 1 & (1 \\
+    31  & &  7 & \emph{WIEDZĄ~?} & \emph{WIEDZĄ?} \\
+    32  & & 13 & \emph{WIEDZĄ~?} & \emph{WIEDZĄ?} \\
     32  & &  3 & bo\dywiz wiem & bowiem \\
     32  & &  2 & [Mądrość]dała & [Mądrość] dała \\
     33  & 12 & & n~i~ż~s~z~e~~władze & n~i~ż~s~z~e\, władze \\
     33  & 14 & & n~a~d~r~z~ę~d~n~e~j~~władzy
            & n~a~d~r~z~ę~d~n~e~j\, władzy \\
+    33  & & 11 & \emph{PRAKTYCZNĄ~?} & \emph{PRAKTYCZNĄ?} \\
     34  & &  1 & za & ta \\
     35  & 13 & & ludzkiego''. & ludzkiego. \\
+    35  & &  9 & \emph{MĄDROŚCIĄ~?} & \emph{MĄDROŚCIĄ?} \\
     36  &  3 & & jest & nie jest \\
+    37  & 19 & & \emph{BÓG~?} & \emph{BÓG?} \\
     37  & & 14 & jest$^{ 2 }$ & jest''$^{ 2 }$ \\
     37  &  9 & & n & na \\
-    38  & &  3 & biskupie & o biskupie \\
+    38  & & 15 & \emph{UZASADNIAĆ~?} & \emph{UZASADNIAĆ~?} \\
     38  & & 13 & Gdzie & ,,Gdzie  %''
     \\
-    39  & &  1 & teologii ! & teologii! \\
-    41  & 15 & & niewykształconych''$^{ 5 }$ & niewykształconych''$^{ 5 }$) \\
+    38  & &  3 & biskupie & o biskupie \\
+    39  & &  1 & teologii~! & teologii! \\
+    40  & & 16 & \emph{PRZENOŚNI~?} & \emph{PRZENOŚNI?} \\
+    41  & 15 & & niewykształconych''$^{ 5 }$
+           & niewykształconych''$^{ 5 }$) \\
+    41  & 20 & & i~~d~l~a & i{}\, d~l~a \\
+    42  &  5 & & \emph{ZNACZEŃ~?} & \emph{ZNACZEŃ?} \\
+    44  &  1 & & \emph{JEST~?} & \emph{JEST~?} \\
+    44  & 17 & & \emph{SIEBIE~?} & \emph{SIEBIE?} \\
     45  & &  6 & pond & ponad \\
+    46  & 10 & & \emph{BOGA~?} & \emph{BOGA?} \\
+    47  & & 13 & \emph{ISTNIEJE~?} & \emph{ISTNIEJ?} \\
     48  & & 16 & druga & Druga \\
     49  & & 14 & poznania,{ }, & poznania, \\
     60  & & 16 & zak & tak \\
