@@ -64,8 +64,7 @@
 
 
 % ------------------------------
-% Pakiety napisane przez użytkownika.
-% Mają być w tym samym katalogu to ten plik .tex
+% Pakiety których pliki *.sty mają być w tym samym katalogu co ten plik
 % ------------------------------
 \usepackage{latexshortcuts}
 
@@ -75,16 +74,21 @@
 % Ustawienia różnych parametrów tekstu
 % ------------------------------
 \renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+% wierszami w tabelach
 
 
 
 % ------------------------------
-% Pakiet "hyperref"
-% Polecano by umieszczać go na końcu preambuły.
+% Pakiet „hyperref”
+% Polecano by umieszczać go na końcu preambuły
 % ------------------------------
 \usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki.
+% do bibliografii na hiperlinki
+
+
+
+
+
 
 
 
@@ -97,6 +101,11 @@
 % \author{}
 % \date{}
 % ---------------------------------------------------------------------
+
+
+
+
+
 
 
 
@@ -126,7 +135,7 @@
 % ##################
 \Work{
   Sanctae Jan Chryzostom \\
-  ,,Homilie na~Księgę Rodzaju (seria pierwsza: Rdz 1--3)'',
+  „Homilie na~Księgę Rodzaju (seria pierwsza: Rdz 1--3)”,
   \cite{SancteJanChryzostomHomKsiegaRodzaju2008} }
 
 
@@ -146,6 +155,7 @@ Należałoby~by sprawdzić, czy~został poprawnie przetłumaczony.
 
 \CenterTB{Błędy}
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -158,6 +168,7 @@ Należałoby~by sprawdzić, czy~został poprawnie przetłumaczony.
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
 
 \vspace{\spaceTwo}
@@ -166,10 +177,12 @@ Należałoby~by sprawdzić, czy~został poprawnie przetłumaczony.
 
 
 
+
+
 % ##################
-\Work{
+\Work{ % Autor i tytuł dzieła
   Sanctae Jak Klimak \\
-  ,,Drabina raju'', \cite{SancteJanKlimakDrabinaRaju2011} }
+  „Drabina raju”, \cite{SancteJanKlimakDrabinaRaju2011} }
 
 
 \CenterTB{Uwagi}
@@ -177,7 +190,7 @@ Należałoby~by sprawdzić, czy~został poprawnie przetłumaczony.
 \start W~tym wydaniu przyjęto dziwną regułę, że~liczba odsyłająca
 do~przypisu nie jest zaraz przy wyrazie, \\
 lecz znajduje~się między nimi odstęp. Na~przykład na stronie~101 jest
-,,głowo $^{ 1 }$'', a~nie ,,głowo$^{ 1 }$''. Zdecydowanie wolę tę
+„głowo $^{ 1 }$”, a~nie „głowo$^{ 1 }$”. Zdecydowanie wolę tę
 drugą konwencję.
 
 \vspace{\spaceTwo}
@@ -186,10 +199,12 @@ drugą konwencję.
 
 
 
+
+
 % ####################
 \Work{
   Sanctae Augustyn z~Hippony \\
-  ,,Państw Boże'', \cite{} }
+  „Państw Boże”, \cite{} }
 
 
 % \CenterTB{Uwagi}
@@ -198,6 +213,7 @@ drugą konwencję.
 
 \CenterTB{Błędy}
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -205,15 +221,15 @@ drugą konwencję.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    51  &  8 & & zostawia'' & zostawia \\
-    92  & 16 & & Od & ,,Od  % ''
-    \\
-    122 &  9 & & punicka. & punicka.'' \\
+    51  &  8 & & zostawia” & zostawia \\
+    92  & 16 & & Od & „Od \\
+    122 &  9 & & punicka. & punicka.” \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
 
 \vspace{\spaceTwo}
@@ -222,15 +238,18 @@ drugą konwencję.
 
 
 
+
+
 % ####################
 \Work{ % Autor i tytuł dzieła
   Sanctae Tomasz z Akwinu \\
-  ,,Suma Teologiczna. Tom~I'',
+  „Suma Teologiczna. Tom~I”,
   \cite{SancteTomaszZAkwinuSumaTeologicznaTomI1960} }
 
 
 \CenterTB{Błędy}
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -248,20 +267,19 @@ drugą konwencję.
            & n~a~d~r~z~ę~d~n~e~j\, władzy \\
     33  & & 11 & \emph{PRAKTYCZNĄ~?} & \emph{PRAKTYCZNĄ?} \\
     34  & &  1 & za & ta \\
-    35  & 13 & & ludzkiego''. & ludzkiego. \\
+    35  & 13 & & ludzkiego”. & ludzkiego. \\
     35  & &  9 & \emph{MĄDROŚCIĄ~?} & \emph{MĄDROŚCIĄ?} \\
     36  &  3 & & jest & nie jest \\
     37  & 19 & & \emph{BÓG~?} & \emph{BÓG?} \\
     37  & & 14 & jest$^{ 2 }$ & jest''$^{ 2 }$ \\
     37  &  9 & & n & na \\
     38  & & 15 & \emph{UZASADNIAĆ~?} & \emph{UZASADNIAĆ~?} \\
-    38  & & 13 & Gdzie & ,,Gdzie  %''
-    \\
-    38  & &  3 & biskupie & o biskupie \\
+    38  & & 13 & Gdzie & „Gdzie \\
+    38  & &  3 & biskupie & o~biskupie \\
     39  & &  1 & teologii~! & teologii! \\
     40  & & 16 & \emph{PRZENOŚNI~?} & \emph{PRZENOŚNI?} \\
-    41  & 15 & & niewykształconych''$^{ 5 }$
-           & niewykształconych''$^{ 5 }$) \\
+    41  & 15 & & niewykształconych”$^{ 5 }$
+           & niewykształconych”$^{ 5 }$) \\
     41  & 20 & & i~~d~l~a & i{}\, d~l~a \\
     42  &  5 & & \emph{ZNACZEŃ~?} & \emph{ZNACZEŃ?} \\
     44  &  1 & & \emph{JEST~?} & \emph{JEST~?} \\
@@ -279,6 +297,7 @@ drugą konwencję.
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
 
 \vspace{\spaceTwo}
@@ -287,10 +306,12 @@ drugą konwencję.
 
 
 
+
+
 % ####################
 \Work{ % Autor i tytuł dzieła
   Sanctae Tomasz z Akwinu \\
-  ,,O~królowaniu --~królowi Cypru'',
+  „O~królowaniu --~królowi Cypru”,
   \cite{SancteTomaszZAkwinuOKrolowaniu2006} }
 
 
@@ -317,11 +338,11 @@ błędem składu.
 \vspace{\spaceFour}
 
 
-\start \StrWg{49}{1} Zdanie ,,Dalej: rzeczy zgodne z~naturą mają
+\start \StrWg{49}{1} Zdanie „Dalej: rzeczy zgodne z~naturą mają
 w~sobie doskonałość, bowiem natura posługuje~się jednostkami --~i~tak
-jest najlepiej'' powinno według mnie brzmieć raczej ,,Rzeczy zgodne
+jest najlepiej” powinno według mnie brzmieć raczej „Rzeczy zgodne
 z~naturą mają w~sobie doskonałość: natura posługuje~się jednostkami
-i~tak jest najlepiej''. Jednak bez~znajomości łaciny, nie da~się tego
+i~tak jest najlepiej”. Jednak bez~znajomości łaciny, nie da~się tego
 problemu rozstrzyganą w~sposób merytoryczny. To~samo odnosi~się
 do~wszystkich następnych uwaga o~sposobie tłumaczenie tekstu, chyba
 że~powiedziano inaczej.
@@ -330,15 +351,15 @@ do~wszystkich następnych uwaga o~sposobie tłumaczenie tekstu, chyba
 
 
 \start \Str{63} Treść tej~strony sprawia dużo problemów. Po~pierwsze
-w~punkcie~6.2 jest mowa o~,,dobre tyranii'', a~zgodnie z prowadzoną
+w~punkcie~6.2 jest mowa o~„dobre tyranii”, a~zgodnie z prowadzoną
 klasyfikacją, nie może być czegoś takiego jak tyrania, która jest
-dobra. Po~drugie, w~tym samym punkcie jest mowa, że~,,dobra tyrania''
+dobra. Po~drugie, w~tym samym punkcie jest mowa, że~„dobra tyrania”
 nie unicestwia pokoju jaki panuje w~społeczności. Jednak w~punkcie
 4.9~na~stronie~55, pisze św.~Tomasz, że~tyrani dla zachowania władzy
 zasiewają między poddanymi niezgodę, a~tą która już istnieje
 podsycają.
 
-Jak wspomina tłumacz we~,,Wstępie'', św.~Tomasz nie ukończył, a~tym
+Jak wspomina tłumacz we~„Wstępie”, św.~Tomasz nie ukończył, a~tym
 bardziej nie poprawił dzieła, stąd błędy te mogą być tego wynikiem.
 Inna możliwość jest taka, że~św.~Tomasz wyłożył tu~błędną, wzajemnie
 sprzeczną doktrynę. W~tej sprawie zobacz również uwagi tłumacza
@@ -347,25 +368,25 @@ na~stronie~180.
 \vspace{\spaceFour}
 
 
-\start \StrWd{89}{3} Wydaj mi~się, że~zamiast ,,jeśli jest cnotliwe''
-powinno być ,,jeśli jest własnością cnoty''.
+\start \StrWd{89}{3} Wydaj mi~się, że~zamiast „jeśli jest cnotliwe”
+powinno być „jeśli jest własnością cnoty”.
 
 \vspace{\spaceFour}
 
 
 \start \StrWd{91}{7} Popierając~się pobieżną i~niefachową analizą
-tekstu łacińskiego, doszedłem do~wniosku, że~zamiast ,,ten sam porzuca
-zwyczaj czynienia dobrze'' powinno być bardziej sensowne w~tym
-kontekście zdanie ,,ten sam porzuca zwyczaj czynienia dobrze w~czasie
-zamętu''.
+tekstu łacińskiego, doszedłem do~wniosku, że~zamiast „ten sam porzuca
+zwyczaj czynienia dobrze” powinno być bardziej sensowne w~tym
+kontekście zdanie „ten sam porzuca zwyczaj czynienia dobrze w~czasie
+zamętu”.
 
 \vspace{\spaceFour}
 
 
 \start \StrWd{101}{13} Jestem słaby z~interpunkcji, mimo tego wydaje
-mi~się, że~zamiast ,,a~kiedy już potrzeba więcej, oni dają królom
-z~własnej woli'' powinno być ,,a~kiedy już potrzeba, więcej oni dają
-królom z~własnej woli''.
+mi~się, że~zamiast „a~kiedy już potrzeba więcej, oni dają królom
+z~własnej woli” powinno być „a~kiedy już potrzeba, więcej oni dają
+królom z~własnej woli”.
 
 \vspace{\spaceFour}
 
@@ -416,6 +437,7 @@ odstęp.
 
 \CenterTB{Błędy}
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -459,6 +481,7 @@ odstęp.
     317 & 14 & & Granice & granice \\
     \hline
   \end{tabular}
+
 \end{center}
 
 \vspace{\spaceTwo}
@@ -470,11 +493,12 @@ odstęp.
 % ####################
 \Work{ % Autor i tytuł dzieła
   Sancte Franciszek Salezy \\
-  ,,Filotea'', \cite{SFSF} }
+  „Filotea”, \cite{SFSF} }
 
 
 \Center{Błędy}
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -496,9 +520,13 @@ odstęp.
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
 
 \vspace{\spaceTwo}
+
+
+
 
 
 
@@ -520,7 +548,7 @@ odstęp.
 % ####################
 \Work{ % Autor i tytuł dzieła
   Bł. John Henry Newman \\
-  ,,Apologia pro vita sua'', \cite{NewmanApologia2009} }
+  „Apologia pro vita sua”, \cite{NewmanApologia2009} }
 
 \CenterTB{Uwagi}
 
@@ -533,18 +561,18 @@ określany jako święty.
 \vspace{\spaceFour}
 
 
-\start \StrWd{49}{1} Przez ,,straszydło na~wróble'' to~pewnie
-tłumaczenie angielskiego ,,straw man''. Jeśli tak należy pamiętać,
-że~w~języku angielskim funkcjonuje ,,straw man argument'', choć nie
+\start \StrWd{49}{1} Przez „straszydło na~wróble” to~pewnie
+tłumaczenie angielskiego „straw man”. Jeśli tak należy pamiętać,
+że~w~języku angielskim funkcjonuje „straw man argument”, choć nie
 wiem, czy był już wtedy znany pod tą~nazwą.
 
 \vspace{\spaceFour}
 
 
 \start \Str{127} Nie jestem w~stanie stwierdzić, co miało znaczyć
-zdanie ,,I~przez tak długi czas nie było możliwe złamanie go w~tym
+zdanie „I~przez tak długi czas nie było możliwe złamanie go w~tym
 stanie rzeczy, gdyby wielka zmiana nie zaszła w~warunkach ruchu
-przeciwnego, który już~się rozpoczął, aby~mu~stawić opór.''.
+przeciwnego, który już~się rozpoczął, aby~mu~stawić opór.”
 
 \vspace{\spaceFour}
 
@@ -558,6 +586,7 @@ Tu~musi być jakiś błąd.
 
 \CenterTB{Błędy}
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -572,47 +601,42 @@ Tu~musi być jakiś błąd.
     88  & &  8 & pomagającymi & wspomagającymi \\
     117 & 13 & & 3) A~dalej & A~dalej \\
     119 & & 12 & 4) & 3) \\
-    122 & & 11 & świat?'' & świat? \\
-    122 & & 11 & ,,Ten  % ''
-           & >>Ten \\
-    122 & & 10 & godzien'' & godzien<<  % >>
+    122 & & 11 & świat?” & świat? \\
+    122 & & 11 & „Ten & >>Ten \\
+    122 & & 10 & godzien” & godzien<<  % >>
     \\
-    122 & & 10 & ,,nauczyć  % ''
-           & >>nauczyć \\
-    122 & &  9 & wyrok''
-           & wyrok<<  % >>
+    122 & & 10 & „nauczyć & >>nauczyć \\
+    122 & &  9 & wyrok” & wyrok<<  % >>
     \\
     130 & &  1 & ukazały, dopóty & ukazały, \\
     134 & 15 & & działo~się & było \\
-    139 & & 10 & ,,Mądrości Bożej'' & >>Mądrości Bożej<<''  % >>
+    139 & & 10 & „Mądrości Bożej” & >>Mądrości Bożej<<”  % >>
     \\
     145 &  1 & & fakt; & fakt \\
     160 & & 11 & co~innego & coś~innego \\
     160 & &  9 & znajdziemy & znajdziemy tam \\
     167 &  2 & & ustępowałem; & ustępowałem, \\
     174 & 12 & & uważa & uważam \\
-    176 &  3 & & praktycznego''\ld ,,Bogate  % ''
-           & praktycznego'', ,,Bogate  % ''
-    \\
+    176 &  3 & & praktycznego”\ldots „Bogate & praktycznego”, „Bogate \\
     176 & &  5 & przeciwnik & czynnik \\
     178 & &  8 & tak & tak~to \\
     182 &  9 & & intuicje & intuicje odnośnie \\
     182 & 13 & & znosić & zaprzeczać \\
     182 & & 11 & przeciwieństwo & przeciwieństwa \\
-    182 & &  1 & ,,tak'' & >>tak<<  % >>
+    182 & &  1 & „tak” & >>tak<<  % >>
     \\
-    182 & &  1 & ,,nie'' & >>nie<<''  % >>
+    182 & &  1 & „nie” & >>nie<<”  % >>
     \\
     183 & 10 & & życzący & nie życzący \\
-    193 & & 11 & dzieciństwem'' & dzieciństwem \\
+    193 & & 11 & dzieciństwem” & dzieciństwem \\
     194 & &  8 & punkt & argument \\
     194 & &  7 & punktem & argumentem \\
     194 & &  7 & punktem & argumentem \\
     195 &  3 & & pewien punkt & pewne rzeczy \\
     199 & 11 & & 1156 & 1556 \\
     203 & &  2 & stale & stałe \\
-    221 & &  5 & puseyizmu''. & puseyizmu. \\
-    224 & & 12 & wnioskiem. & wnioskiem''. \\
+    221 & &  5 & puseyizmu”. & puseyizmu. \\
+    224 & & 12 & wnioskiem. & wnioskiem”. \\
     227 & & 11 & Liście & liście \\
     % & & & & \\
     % & & & & \\
@@ -623,6 +647,8 @@ Tu~musi być jakiś błąd.
     \hline
   \end{tabular}
 
+
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -632,10 +658,8 @@ Tu~musi być jakiś błąd.
     \hline
     250 &  5 & & nieistniejącego & istniejącego \\
     254 &  9 & & więzieniu. & więzieniu.'' \\
-    254 & 10 & & Boże & ,,Boże  % ''
-    \\
-    254 & 10 & & ,,Śniłem  % ''
-           & Śniłem \\
+    254 & 10 & & Boże & „Boże \\
+    254 & 10 & & „Śniłem & Śniłem \\
     259 & &  3 & mnie & niej \\
     % & & & & \\
     % & & & & \\
@@ -651,6 +675,7 @@ Tu~musi być jakiś błąd.
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
 \noi
 \StrWg{39}{7--8} \\
@@ -679,9 +704,9 @@ Tu~musi być jakiś błąd.
 
 
 % ####################
-\Work{
+\Work{ % Autor i tytuł dzieła
   Dante \\
-  ,,Komedia'', \cite{DAK} }
+  „Komedia”, \cite{DAK} }
 
 
 \CenterTB{Błędy}
@@ -694,7 +719,7 @@ Tu~musi być jakiś błąd.
     & Od góry & Od dołu & & \\
     \hline
     % 347 & 21 & & ,,Jestem & Jestem \\
-    350 & & 9 & jed\dywiz nak & jednak \\
+    350 & & 9 & jed- nak & jednak \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -737,7 +762,7 @@ was z tej nocy\ldots
 % ##################
 \Work{ % Autor i tytuł dzieła
   Michael Davies \\
-  ,,Zniszczenie Mszy Świętej czyli~Godly Order Cranmera'',
+  „Zniszczenie Mszy Świętej czyli~Godly Order Cranmera”,
   \cite{DaviesZniszczenieMszySwietej2016} }
 
 
@@ -755,6 +780,7 @@ bibliografia i~indeks skrótów.
 
 \CenterTB{Błędy}
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -764,7 +790,7 @@ bibliografia i~indeks skrótów.
     \hline
     15  &  2 & & z~zbiorach & w~zbiorach \\
     24  & &  6 & stad & stąd \\
-    24  &  2 & & woli'' & woli \\
+    24  &  2 & & woli” & woli \\
     33  &  9 & & ja & ją \\
     37  &  5 & & zapomniało waszym & zapomniał o~waszym \\
     % & & & & \\
@@ -772,10 +798,11 @@ bibliografia i~indeks skrótów.
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
 \noindent\\
 \tb{Tylna okładka.} \\
-\Jest  \emph{arcydziełem}''. \\
+\Jest  \emph{arcydziełem}”. \\
 \Powin \emph{arcydziełem} \\
 
 \vspace{\spaceTwo}
@@ -784,13 +811,16 @@ bibliografia i~indeks skrótów.
 
 
 
+
+
 % ##################
 \Work{
-  M. Davies \\
-  ,,Sobór Papieża Jana. Rewolucja liturgiczna.'', \cite{} }
+  Michael Davies \\
+  „Sobór Papieża Jana. Rewolucja liturgiczna”, \cite{} }
 
 \CenterTB{Błędy}
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -799,40 +829,36 @@ bibliografia i~indeks skrótów.
     & Od góry & Od dołu & & \\
     \hline
     11 & & 2 & \emph{musimocna} & \emph{musi mocno} \\
-    41 & 10 & & ,,Patrząc & Patrząc  % ''
-    \\
+    41 & 10 & & „Patrząc & Patrząc \\
     46 & & 2 & Westminster & Westminster. \\
     % 81 & & 17 & ,,wyczuwalny & ,,Wyczuwalny \\
-    97 & & 3 & wprowadzen\dywiz ia & wprowadzenia \\
-    176 & & 9 & presji.,,Czy  % ''
-           & presji. ,,Czy  % ''
-    \\
+    97 & & 3 & wprowadzen- ia & wprowadzenia \\
+    176 & & 9 & presji.„Czy & presji. „Czy \\
     178 & 7 & & \emph{Novost}i & \emph{Novosti} \\
     183 & 5 & & protestanckich & prawosławnych \\
     188 & 14 & & wary & wiary \\
-    203 & 14 & & podporządkować. & podporządkować.'' \\
-    204 & & 15 & małżeństwa. & małżeństwa.'' \\
-    209 & 3 & & zarazić. & zarazić.'' \\
-    209 & 6 & & pracę.'' & pracę. \\
+    203 & 14 & & podporządkować. & podporządkować.” \\
+    204 & & 15 & małżeństwa. & małżeństwa.” \\
+    209 & 3 & & zarazić. & zarazić.” \\
+    209 & 6 & & pracę.” & pracę. \\
     243 & & 17 & pominiecie & pominięcie \\
-    245 & 7 & & dokumentu. & dokumentu.'' \\
+    245 & 7 & & dokumentu. & dokumentu.” \\
     250 & 17 & & nie byłaby & byłaby \\
-    263 & 8 & & ,,<<Wzorcowa>>'' & ,,<<Wzorcowa>>  % ''
-    \\
+    263 & 8 & & „<<Wzorcowa>>” & ”<<Wzorcowa>> \\
     265 & 13 & & tam, że & tam \\
     265 & 15 & & ewolucji, & ewolucji. \\
     310 & 5 & & obór & Sobór \\
     323 & 3 & & wyobrazili & wyobrażali \\
     323 & 11 & & nieuzasadnionym & nie uzasadnionym \\
-    325 & & 8 & Nie & ,,Nie  % ''
-    \\
-    326 & 7 & & władzę. & władzę.'' \\
+    325 & & 8 & Nie & „Nie \\
+    326 & 7 & & władzę. & władzę.” \\
     327 & 3 & & 272 & 322 \\
     330 & 12 & & Podam -- nawet & Podam nawet \\
     330 & 13 & & to & jest \\
     359 & 3 & & 59\% & 41\% \\
     \hline
   \end{tabular}
+
 \end{center}
 \noindent \\
 \StrWg{44}{16} \\
@@ -852,12 +878,13 @@ bibliografia i~indeks skrótów.
 
 % ####################
 \Work{ M. Davies \\
-  ,,Sobór Watykański II a~wolność religijna'',
+  „Sobór Watykański II a~wolność religijna”,
   \cite{DaviesSoborAWolnoscReligina2002} }
 
 
 \CenterTB{Błędy}
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -865,7 +892,7 @@ bibliografia i~indeks skrótów.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    84  &  2 & & społeczeństwie'' & ,,społeczeństwie'' \\
+    84  &  2 & & społeczeństwie” & „społeczeństwie” \\
     109 & & 15 & nacjonalizmu & racjonalizmu \\
     118 & & 10 & był & został \\
     155 &  9 & & nie & się \\
@@ -878,6 +905,7 @@ bibliografia i~indeks skrótów.
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
 
 \vspace{\spaceTwo}
@@ -886,10 +914,12 @@ bibliografia i~indeks skrótów.
 
 
 
+
+
 % ####################
 \Work{
   Tracey Rowland \\
-  ,,Wiara Ratzingera, teologia Benedykta XVI'',
+  „Wiara Ratzingera, teologia Benedykta XVI”,
   \cite{RowlandWiaraRatzingera2010} }
 
 
@@ -920,8 +950,10 @@ wyrosła jego pasja do~teodramatyki.
 wydaje mi~się bardzo wątpliwym stwierdzeniem określenie go mianem
 teologa. Osobną sprawą jest jego związek z~tradycją tomistyczną.
 
+
 \CenterTB{Błędy}
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -932,12 +964,12 @@ teologa. Osobną sprawą jest jego związek z~tradycją tomistyczną.
     21  & 16 & & 1844--1970 & 1844--1900 \\
     27  & &  9 & transcendentalne piękno & transcendentalnym pięknem \\
     46  & & 13 & 1947 & 1847 \\
-    71  & & 11 & ,,przyjścia  % ''
-           & >>przyjścia \\
-    71  & &  7 & domu'' & domu<< \\
+    71  & & 11 & „przyjścia & >>przyjścia \\
+    71  & &  7 & domu” & domu<< \\
     78  & 12 & & ona z~tego & z~niej \\
     \hline
   \end{tabular}
+
 \end{center}
 
 \vspace{\spaceTwo}
@@ -946,10 +978,12 @@ teologa. Osobną sprawą jest jego związek z~tradycją tomistyczną.
 
 
 
+
+
 % ####################
 \Work{
   R. M. Wiltgen \\
-  ,,Ren wpada do Tybru'', \cite{WiltgenRenWpadaDoTybru2010} }
+  „Ren wpada do Tybru”, \cite{WiltgenRenWpadaDoTybru2010} }
 
 
 % Uwagi:\\
@@ -963,6 +997,7 @@ teologa. Osobną sprawą jest jego związek z~tradycją tomistyczną.
 
 \CenterTB{Błędy}
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -980,6 +1015,7 @@ teologa. Osobną sprawą jest jego związek z~tradycją tomistyczną.
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
 
 
@@ -1012,14 +1048,14 @@ teologa. Osobną sprawą jest jego związek z~tradycją tomistyczną.
 % ##################
 \Work{ % Autor i tytuł dzieła
   Tomasz Herbich \\
-  ,,Pragnienie Królestwa. August Cieszkowski, Mikołaj Bierdiajew \\
-  i~dwa oblicza mesjanizmu'', \cite{HerbichPragnienieKrolestwa2018} }
+  „Pragnienie Królestwa. August Cieszkowski, Mikołaj Bierdiajew \\
+  i~dwa oblicza mesjanizmu”, \cite{HerbichPragnienieKrolestwa2018} }
 
 
 \CenterTB{Uwagi}
 
-\start \StrWg{54}{9} Nie wiem czy zadanie,,Pierwotnie jednak
-Chrześcijaństwo zostało pojęte czysto zaprzeczenie.'' zawiera błąd,
+\start \StrWg{54}{9} Nie wiem czy zadanie „Pierwotnie jednak
+Chrześcijaństwo zostało pojęte czysto zaprzeczenie.” zawiera błąd,
 czy też wtedy pisało~się w~takim stylu.
 
 \vspace{\spaceFour}
@@ -1030,6 +1066,7 @@ czy też wtedy pisało~się w~takim stylu.
 
 \CenterTB{Błędy}
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -1053,6 +1090,7 @@ czy też wtedy pisało~się w~takim stylu.
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
 % \noindent\\
 % \tb{Tylna okładka.} \\
@@ -1082,15 +1120,15 @@ czy też wtedy pisało~się w~takim stylu.
 % \newpage
 \Work{ % Autor i tytuł dzieła
   Romano Amerio \\
-  ,,Iota unum. Analiza zmian w~Kościele Katolickim'',
+  „Iota unum. Analiza zmian w~Kościele Katolickim”,
   \cite{AmerioIotaUnum} }
 
 
 \CenterTB{Uwagi}
 
 \start W~tej książce sposób podawania tytułów przywoływanych dzieł
-jest niejednolity. Zamiennie używane~są trzy konwencje: ,,Tytuł'',
-\emph{Tytuł}, ,,\emph{Tytuł}''.
+jest niejednolity. Zamiennie używane~są trzy konwencje: „Tytuł”,
+\emph{Tytuł}, „\emph{Tytuł}”.
 
 \vspace{\spaceFour}
 
@@ -1113,15 +1151,15 @@ w~zaczynającym~się tu cytacie jest błędem czy nie?
 \vspace{\spaceFour}
 
 
-\start \StrWg{310}{5} Użyte tu obraźliwe słowo ,,lewactwo'' tak nie
+\start \StrWg{310}{5} Użyte tu obraźliwe słowo „lewactwo” tak nie
 pasuje do stylu reszty książki, że~zapewne jest to efekt
 niedopuszczalnej swobody tłumacza.
 
 \vspace{\spaceFour}
 
 
-\start \StrWg{331}{1} Zdanie ,,Idea \emph{socjalizmu
-  chrześcijańskiego} ma~niewątpliwie swoją rację bytu'', brzmi jakoś
+\start \StrWg{331}{1} Zdanie „Idea \emph{socjalizmu
+  chrześcijańskiego} ma~niewątpliwie swoją rację bytu”, brzmi jakoś
 dziwnie. Może jego obecna forma jest wynikiem pomyłki edytorskiej?
 
 \vspace{\spaceFour}
@@ -1169,7 +1207,7 @@ duże.
 \vspace{\spaceFour}
 
 
-\start \StrWd{496}{4} Ponownie, użyte tu obraźliwe słowo ,,lewactwo''
+\start \StrWd{496}{4} Ponownie, użyte tu obraźliwe słowo „lewactwo”
 tak nie pasuje do stylu reszty książki, że~zapewne jest to efekt
 niedopuszczalnej swobody tłumacza.
 
@@ -1201,50 +1239,52 @@ Alessandro Manzoniego za~największego filozofa i~poetę XVII~wieku.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    30  & &  8 & ,,franciszkanie'' & ,,franciszkanów'' \\
-    42  & & 10 & ,,\emph{O~Rewolucji Francuskiej}''
-           & ,,\emph{O~Rewolucji Francuskiej} \\
+    30  & &  8 & „franciszkanie” & „franciszkanów” \\
+    42  & & 10 & „\emph{O~Rewolucji Francuskiej}”
+           & „\emph{O~Rewolucji Francuskiej} \\
     89  & & 10 & SoboruWatykańskiego & Soboru Watykańskiego \\
-    92  &  5 & & Bożych & Bożych'' \\
-    94  &  9 & & lat$^{ 62 }$'' & lat''$^{ 62 }$ \\
+    92  &  5 & & Bożych & Bożych” \\
+    94  &  9 & & lat$^{ 62 }$” & lat”$^{ 62 }$ \\
     103 & &  2 & tytułrm & tytułem \\
     110 & &  4 & P. & R. \\
     112 &  7 & & Liturgii & liturgii \\
     133 & &  9 & (=\emph{ale}) & (= \emph{ale}) \\
-    144 &  8 & & Chrystusa$^{ 94 }$'' & Chrystusa''$^{ 94 }$\\
-    161 & &  4 & [Kościoła]$^{ 114 }$?'' & [Kościoła]?''$^{ 114 }$ \\
-    166 & &  6 & katolicyzmu$^{ 116 }$'' & katolicyzmu''$^{ 116 }$ \\
+    144 &  8 & & Chrystusa$^{ 94 }$” & Chrystusa”$^{ 94 }$\\
+    161 & &  4 & [Kościoła]$^{ 114 }$?” & [Kościoła]?”$^{ 114 }$ \\
+    166 & &  6 & katolicyzmu$^{ 116 }$” & katolicyzmu”$^{ 116 }$ \\
     170 & & 15 & Rady & rady \\
-    172 & &  1 & Bogiem$^{ 121 }$'' & Bogiem''$^{ 121 }$ \\
-    175 & & 10 & Papieża$^{ 122 }$'' & Papieża''$^{ 122 }$ \\
-    175 & &  8 & sensu$^{ 123 }$'' & sensu''$^{ 123 }$ \\
-    183 & &  9 & niegodni$^{ 129 }$'' & niegodni''$^{ 129 }$ \\
-    232 &  1 & & suos.$^{ 156 }$'' & suos.''$^{ 156 }$ \\
-    233 & 12 & & regułą$^{ 157 }$'' & regułą''$^{ 157 }$ \\
-    239 & &  7 & \emph{flecti}$^{ 160 }$'' & \emph{flecti}''$^{ 160 }$ \\
-    242 &  1 & & \emph{alsit}$^{ 162 }$'' & \emph{alsit}''$^{ 162 }$ \\
-    242 & & 13 & \emph{sbarro}$^{ 163 }$'' & \emph{sbarro}''$^{ 163 }$ \\
-    254 & &  6 & \emph{domem}$^{ 165 }$ & \emph{domem}''$^{ 165 }$ \\
-    255 &  2 & & \emph{rozwijac się}$^{ 166 }$''
-           & \emph{rozwijac się}''$^{ 166 }$ \\
-    256 &  1 & & pracy$^{ 168 }$'' & pracy''$^{ 168 }$ \\
-    283 & 16 & & rasy'' & rasy''$^{ 186 }$ \\
+    172 & &  1 & Bogiem$^{ 121 }$” & Bogiem”$^{ 121 }$ \\
+    175 & & 10 & Papieża$^{ 122 }$” & Papieża”$^{ 122 }$ \\
+    175 & &  8 & sensu$^{ 123 }$” & sensu”$^{ 123 }$ \\
+    183 & &  9 & niegodni$^{ 129 }$” & niegodni”$^{ 129 }$ \\
+    232 &  1 & & suos.$^{ 156 }$” & suos.”$^{ 156 }$ \\
+    233 & 12 & & regułą$^{ 157 }$” & regułą”$^{ 157 }$ \\
+    239 & &  7 & \emph{flecti}$^{ 160 }$” & \emph{flecti}”$^{ 160 }$ \\
+    242 &  1 & & \emph{alsit}$^{ 162 }$” & \emph{alsit}”$^{ 162 }$ \\
+    242 & & 13 & \emph{sbarro}$^{ 163 }$” & \emph{sbarro}”$^{ 163 }$ \\
+    254 & &  6 & \emph{domem}$^{ 165 }$ & \emph{domem}”$^{ 165 }$ \\
+    255 &  2 & & \emph{rozwijac się}$^{ 166 }$”
+           & \emph{rozwijac się}”$^{ 166 }$ \\
+    256 &  1 & & pracy$^{ 168 }$” & pracy”$^{ 168 }$ \\
+    283 & 16 & & rasy” & rasy”$^{ 186 }$ \\
     283 & 16 & & 99)$^{ 186 }$ & 99) \\
-    293 & 10 & & nagrodę$^{ 191 }$'' & nagrodę''$^{ 191 }$ \\
-    293 & 15 & & \emph{ciała}$^{ 192 }$'' & \emph{ciała}''$^{ 192 }$ \\
-    293 & & 10 & duszy$^{ 193 }$'' & duszy''$^{ 193 }$ \\
+    293 & 10 & & nagrodę$^{ 191 }$” & nagrodę”$^{ 191 }$ \\
+    293 & 15 & & \emph{ciała}$^{ 192 }$” & \emph{ciała}”$^{ 192 }$ \\
+    293 & & 10 & duszy$^{ 193 }$” & duszy”$^{ 193 }$ \\
     297 & 10 & & skażona~$^{ 196 }$ & skażona$^{ 196 }$ \\
-    301 &  5 & & zaniedbać$^{ 197 }$'' & zaniedbać''$^{ 197 }$ \\
-    318 & & 14 & socjalistyczną$^{ 202 }$'' & socjalistyczną''$^{ 202 }$ \\
-    319 & 14 & & Ducha$^{ 203 }$'' & Ducha''$^{ 203 }$ \\
-    339 & & 10 & absolutnych? & absolutnych?'' \\
+    301 &  5 & & zaniedbać$^{ 197 }$” & zaniedbać”$^{ 197 }$ \\
+    318 & & 14 & socjalistyczną$^{ 202 }$” & socjalistyczną”$^{ 202 }$ \\
+    319 & 14 & & Ducha$^{ 203 }$” & Ducha”$^{ 203 }$ \\
+    339 & & 10 & absolutnych? & absolutnych?” \\
     363 & &  6 & wydaw\textbf{n}. & wydawn. \\
     381 &  2 & & Notre- Dame & Notre-Dame \\
-    382 &  2 & & Świętym$^{ 236 }$'' & Świętym''$^{ 236 }$ \\
-    382 & & 12 & Pana$^{ 237 }$'' & Pana''$^{ 237 }$ \\
+    382 &  2 & & Świętym$^{ 236 }$” & Świętym”$^{ 236 }$ \\
+    382 & & 12 & Pana$^{ 237 }$” & Pana”$^{ 237 }$ \\
     % & & & & \\
     \hline
   \end{tabular}
+
+
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -1253,30 +1293,30 @@ Alessandro Manzoniego za~największego filozofa i~poetę XVII~wieku.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    382 &  2 & & Świętym$^{ 236 }$'' & Świętym''$^{ 236 }$ \\
-    382 & & 12 & Pana$^{ 237 }$'' & Pana''$^{ 237 }$ \\
-    383 & 12 & & płaszczyźnie$^{ 240 }$'' & płaszczyźnie''$^{ 240 }$ \\
+    382 &  2 & & Świętym$^{ 236 }$” & Świętym”$^{ 236 }$ \\
+    382 & & 12 & Pana$^{ 237 }$” & Pana”$^{ 237 }$ \\
+    383 & 12 & & płaszczyźnie$^{ 240 }$” & płaszczyźnie”$^{ 240 }$ \\
     385 & &  8 & bezpośredni$^{ 243 }$ & bezpośredni \\
-    385 & &  7 & Dogmatów'' & Dogmatów''$^{ 243 }$ \\
-    388 &  8 & & katolika$^{ 245 }$'' & katolika''$^{ 245 }$ \\
+    385 & &  7 & Dogmatów” & Dogmatów”$^{ 243 }$ \\
+    388 &  8 & & katolika$^{ 245 }$” & katolika”$^{ 245 }$ \\
     394 &  6 & & 190$^{ 251 }$) & 190)$^{ 251 }$ \\
     394 & &  1 & stosowany\ldots & stosowany. \\
     % 395?
-    406 & 12 & & przekonany''\ldots & przekonany''. \\
-    408 &  3 & & wolę$^{ 261 }$'' & wolę''$^{ 261 }$ \\
-    413 & &  9 & prawdy$^{ 263 }$'' & prawdy''$^{ 263 }$ \\
-    415 & &  8 & miejscu$^{ 266 }$ & miejscu'' \\
-    415 & &  8 & 610).'' & 610). \\
+    406 & 12 & & przekonany”\ldots & przekonany”. \\
+    408 &  3 & & wolę$^{ 261 }$” & wolę”$^{ 261 }$ \\
+    413 & &  9 & prawdy$^{ 263 }$” & prawdy”$^{ 263 }$ \\
+    415 & &  8 & miejscu$^{ 266 }$ & miejscu” \\
+    415 & &  8 & 610).” & 610). \\
     % 423
-    425 &  5 & & człowieka & człowieka'' \\
+    425 &  5 & & człowieka & człowieka” \\
     % 425?????
-    442 & &  9 & kocha$^{ 280 }$'' & kocha''$^{ 280 }$ \\
+    442 & &  9 & kocha$^{ 280 }$” & kocha”$^{ 280 }$ \\
     % 443??????
-    451 & & 14 & widzialne$^{ 283 }$'' & widzialne''$^{ 283 }$ \\
-    475 & 17 & & \emph{bezpodstawne}$^{ 295 }$''
-           & \emph{bezpodstawne}''$^{ 295 }$ \\
+    451 & & 14 & widzialne$^{ 283 }$” & widzialne”$^{ 283 }$ \\
+    475 & 17 & & \emph{bezpodstawne}$^{ 295 }$”
+           & \emph{bezpodstawne}”$^{ 295 }$ \\
            %
-    495 & & 11 & człowiek & człowiek'' \\
+    495 & & 11 & człowiek & człowiek” \\
     % 495??????
     505 & &  6 & \emph{Osservatore} & \emph{L'Osservatore} \\
     517 & & 10 & szkodę\ldots & szkodę \\
@@ -1290,6 +1330,7 @@ Alessandro Manzoniego za~największego filozofa i~poetę XVII~wieku.
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
 \noindent
 \StrWg{460}{14} \\
@@ -1307,7 +1348,7 @@ Alessandro Manzoniego za~największego filozofa i~poetę XVII~wieku.
 % ##################
 \Work{ % Autor i tytuł dzieła
   Dietrich von~Hildebrand \\
-  ,,Koń trojański w~Mieście Boga'', \cite{HildebrandKonTrojanski2006}
+  „Koń trojański w~Mieście Boga”, \cite{HildebrandKonTrojanski2006}
 }
 
 
@@ -1326,9 +1367,9 @@ dobrze.
 \vspace{\spaceFour}
 
 
-\start \Str{140} ,,Jednakże prawda o~istnieniu Boga powinna to
+\start \Str{140} „Jednakże prawda o~istnieniu Boga powinna to
 panowanie zdobyć, a~gdy je~zdobędzie, wówczas jej realność społeczna
-uzyskuje zupełnie nowych charakter.'' Hildebrandowi chodziło chyba
+uzyskuje zupełnie nowych charakter.” Hildebrandowi chodziło chyba
 o~to, że~jeśli prawda o~istnieniu Boga zapanuje w~sferze
 międzyludzkiej, wówczas to społeczność uzyskuje zupełnie nową jakość
 bycia.
@@ -1337,10 +1378,10 @@ bycia.
 
 
 \start \Str{187} Nie potrafię zrozumieć jaki sens miał mieć fragment:
-,,Liczni spośród tych, co~przenoszą liturgię nad modlitwę prywatną,
+„Liczni spośród tych, co~przenoszą liturgię nad modlitwę prywatną,
 ponieważ ta~ostatnia nie sprzyja rzekomo wspólnocie między ludźmi,
 sprawiają wrażenie, że~stracili z~pola widzenia ten głęboko
-wspólnotowy aspekt modlitwy liturgicznej''.
+wspólnotowy aspekt modlitwy liturgicznej”.
 
 
 \CenterTB{Błędy}
@@ -1389,42 +1430,42 @@ wspólnotowy aspekt modlitwy liturgicznej''.
 % ##################
 \Work{ % Autor i tytuł dzieła
   Dietrich von~Hildebrand \\
-  ,,Spustoszona winnica'', \cite{HildebrandSpustoszonaWinnica2006} }
+  „Spustoszona winnica”, \cite{HildebrandSpustoszonaWinnica2006} }
 
 
 \CenterTB{Uwagi}
 
-\start \StrWd{99}{7} Zdanie ,,Wytrwanie w~miłości do~innego człowieka
-w~stanie wiecznej niedojrzałości'', nie jest najprostsze
-do~zrozumienia. Możliwe, że~powinno ono brzmieć ,,Wytrwanie w~miłości
-do~innego człowieka, będącego w~stanie wiecznej niedojrzałości''.
+\start \StrWd{99}{7} Zdanie „Wytrwanie w~miłości do~innego człowieka
+w~stanie wiecznej niedojrzałości”, nie jest najprostsze
+do~zrozumienia. Możliwe, że~powinno ono brzmieć „Wytrwanie w~miłości
+do~innego człowieka, będącego w~stanie wiecznej niedojrzałości”.
 
 \vspace{\spaceFour}
 
 
-\start \Str{114} Stwierdzenie ,,o~ile Stary Testament uznaje~się
-za~prawdziwe objawienie Boga'' bardzo odstaje od~treści tej książki.
+\start \Str{114} Stwierdzenie „o~ile Stary Testament uznaje~się
+za~prawdziwe objawienie Boga” bardzo odstaje od~treści tej książki.
 Hildebrand ciężko posądzać o~podważanie tego, iż~Stary Testament jest
 objawieniem Boga, a~to zdanie sprawia wrażenie, że~jest to
-dopuszczalne. Prawdopodobnie miało ono brzmieć ,,o~ile Stary Testament
-uznają za~prawdziwe objawienie Boga'', są~bowiem żydzi, którzy
+dopuszczalne. Prawdopodobnie miało ono brzmieć „o~ile Stary Testament
+uznają za~prawdziwe objawienie Boga”, są~bowiem żydzi, którzy
 odrzucają Boga oraz~Stary Testament.
 
 \vspace{\spaceFour}
 
 
-\start \Str{152} Zdanie ,,Dochodzi do~tego jeszcze jeden problem:
+\start \Str{152} Zdanie „Dochodzi do~tego jeszcze jeden problem:
 hasło \emph{totus homo} bynajmniej nie znaczy, iż~pozycja Chrystusa
 --~Jego posłannictwo, Jego święte kapłaństwo, Jego święty urząd
 nauczycielki, Jego charakter jako Króla królów --~odróżnia Go w~sposób
 szczególny od~wszystkich ludzi, którzy są tylko ludźmi i~wynosi
-Go~ponad nich.'' brzmi bardzo dziwnie w~zestawieniu z~resztą książki.
+Go~ponad nich.” brzmi bardzo dziwnie w~zestawieniu z~resztą książki.
 Zapewne został tu~popełniony jakiś błąd.
 
 \vspace{\spaceFour}
 
 
-\start \Str{177} Użycie słów ,,odnajdywanie'' oraz~,,znajdowanie''
+\start \Str{177} Użycie słów „odnajdywanie” oraz~„znajdowanie”
 w~prowadzonej analizie, jest odrobinę mylące i~należałoby je zmienić
 w~taki sposób, by~stała~się ona jaśniejsza.
 
@@ -1438,8 +1479,8 @@ Możliwie, że~to wynik pomyłki tłumacza.
 \vspace{\spaceFour}
 
 
-\start \Str{216} Możliwe, że~zamiast ,,w~połączeniu w~jedną jedyną
-substancję'' powinno być ,,połączonych w~jedną jedyną substancję''.
+\start \Str{216} Możliwe, że~zamiast „w~połączeniu w~jedną jedyną
+substancję” powinno być „połączonych w~jedną jedyną substancję”.
 Nie potrafię jednak rozstrzygnąć, która wersja jest poprawna.
 
 \vspace{\spaceFour}
@@ -1466,16 +1507,15 @@ Nie potrafię jednak rozstrzygnąć, która wersja jest poprawna.
     271 &  6 & & et & \emph{et} \\
     273 & &  5 & zwraca & zwracamy \\
     282 & &  5 & wydaje~się zmian & zmian wydaje~się \\
-    283 & &  8 & Bądźcie & ,,Bądźcie  % ''
-    \\
+    283 & &  8 & Bądźcie & „Bądźcie \\
     % & & & & \\
     \hline
   \end{tabular}
 \end{center}
 \noindent
 \textbf{Grzbiet.} \\
-\Jest Hildebrand,,Spustoszona \\ % ''
-\Powin Hildebrand ,,Spustoszona \\ % ''
+\Jest Hildebrand„Spustoszona \\
+\Powin Hildebrand „Spustoszona \\
 \StrWd{215}{3} \\
 \Jest  Tegoż,\emph{Journuals},TorchBooks/Harper{\&}Row,NewYork(b.d.w.),s.187. \\
 \Powin Tegoż, \emph{Journuals}, Torch Books/Harper \& Row, New York
@@ -1513,8 +1553,8 @@ Nie potrafię jednak rozstrzygnąć, która wersja jest poprawna.
 % ##################
 \Work{ % Autor i tytuł dzieła
   Jacques Maritain \\
-  ,,Wieśniak znad Garonny. Stary świecki chrześcijanin snuje refleksje
-  \emph{\`{a}~propos} czasów współczesnych'',
+  „Wieśniak znad Garonny. Stary świecki chrześcijanin snuje refleksje
+  \emph{\`{a}~propos} czasów współczesnych”,
   \cite{MaritainWiesniakZnadGaronny2017} }
 
 
@@ -1585,6 +1625,9 @@ Nie potrafię jednak rozstrzygnąć, która wersja jest poprawna.
 
 
 
+
+
+
 % ######################################
 \newpage
 \section{Historia świętej wiary}
@@ -1605,21 +1648,21 @@ Nie potrafię jednak rozstrzygnąć, która wersja jest poprawna.
 % ##################
 \Work{ % Autor i tytuł dzieła
   Wojciech Roszkowski \\
-  ,,Świat Chrystusa. Tom~I'', \cite{RoszkowskiSwiatChrystusTomI2016} }
+  „Świat Chrystusa. Tom~I”, \cite{RoszkowskiSwiatChrystusTomI2016} }
 
 
 \CenterTB{Uwagi}
 
 \start \StrWg{63}{24} Wydaje mi się, że~zaraz przed zdaniem
-,,Oskarżycielem Mariammy\ldots'' powinien znajdować~się tekst mówiący
+„Oskarżycielem Mariammy\ldots” powinien znajdować~się tekst mówiący
 o~tym, że~Herodes postawił ją przed sądem. Prawdopodobnie został on
 zgubiony w~trakcie składania książki.
 
 \vspace{\spaceFour}
 
 
-\start \StrWg{81}{4} Zdanie ,,miłość skupia i~uruchamia wszystkie
-cząstki\ldots'' brzmi bardzo niezręcznie i~powinno być jakoś
+\start \StrWg{81}{4} Zdanie „miłość skupia i~uruchamia wszystkie
+cząstki\ldots” brzmi bardzo niezręcznie i~powinno być jakoś
 poprawione.
 
 \vspace{\spaceFour}
@@ -1636,15 +1679,15 @@ bardzo ważnym odkryciem.
 \vspace{\spaceFour}
 
 
-\start \StrWg{85}{10} Zdanie ,,przez pomiar kierunków, w~których punkt
-ten jest widziany z~dwóch punktów o~znanych odległościach'' brzmi
+\start \StrWg{85}{10} Zdanie „przez pomiar kierunków, w~których punkt
+ten jest widziany z~dwóch punktów o~znanych odległościach” brzmi
 niezręcznie i~chyba warto byłoby je poprawione.
 
 \vspace{\spaceFour}
 
 
 \start \StrWd{95}{5} Nie rozumiem co oznacza przytoczone słowo
-,,kpy''. Może jest to błędne zapisane słowo ,,kiepy''?
+„kpy”. Może jest to błędne zapisane słowo „kiepy”?
 
 \vspace{\spaceFour}
 
@@ -1687,7 +1730,7 @@ niezręcznie i~chyba warto byłoby je poprawione.
     44  & &  7 & part\textbf{1} & part1 \\
     45  & &  4 & \emph{H.Dubs} & \emph{H.~Dubs} \\
     % 47 Ware: Hertfordshire: Wordsworth?????
-    49  & &  9 & Obyczajów & Obyczajów'' \\
+    49  & &  9 & Obyczajów & Obyczajów” \\
     58  & &  5 & Wojna żydowska & \emph{Wojna żydowska} \\
     58  & &  2 & J.Harrington & J. Harrington \\
     62  & &  2 & Życie Jezusa Chrystusa & \emph{Życie Jezusa Chrystusa} \\
@@ -1716,6 +1759,8 @@ niezręcznie i~chyba warto byłoby je poprawione.
     112 & &  2 & Mówią wykopaliska & \emph{Mówią wykopaliska} \\
     \hline
   \end{tabular}
+
+
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -1767,9 +1812,11 @@ niezręcznie i~chyba warto byłoby je poprawione.
     332 & &  2 & prośba & prośba'' \\
     333 & &  4 & W.Malandra & W. Malandra \\
     346 & &  3 & Pieśni & \emph{Pieśni} \\
-    346 & &  3 & Commentary on~Catullus & ,,Commentary on~Catullus'' \\
+    346 & &  3 & Commentary on~Catullus & „Commentary on~Catullus” \\
     \hline
   \end{tabular}
+
+
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -1786,7 +1833,7 @@ niezręcznie i~chyba warto byłoby je poprawione.
     387 & &  1 & O~wróżbiarstwie & \emph{O~wróżbiarstwie} \\
     387 & &  1 & Słowo jest cieniem & \emph{Słowo jest cieniem} \\
     394 & &  4 & A.Bard & A. Bard \\
-    395 & &  2 & Poznaj Świat & ,,Poznaj Świat'' \\
+    395 & &  2 & Poznaj Świat & „Poznaj Świat” \\
     % 396, PMich ????
     398 & &  6 & A.Bard & A. Bard \\
     408 & &  2 & 2010 & 2010) \\
@@ -2139,6 +2186,10 @@ basenu Morza Śródziemnego w~okresie od~Augusta do~Sewerów
 
 
 \vspace{\spaceTwo}
+
+
+
+
 
 
 
