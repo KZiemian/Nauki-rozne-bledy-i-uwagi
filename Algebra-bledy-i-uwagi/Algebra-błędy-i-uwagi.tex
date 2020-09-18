@@ -1,8 +1,8 @@
 % Autor: Kamil Ziemian
 
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Podstawowe ustawienia i pakiety
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 \RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
 % sposoby używania LaTeXa. Więcej jest w l2tabu English version.
 \documentclass[a4paper,11pt]{article}
@@ -16,9 +16,9 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ----------------------------
+% ------------------------------
 \usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
 % \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
 % % grafiki.
@@ -27,9 +27,9 @@
 % % wprowadzane bezpośrednio w tekście.
 \usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ----------------------------
+% ------------------------------
 % MARGINS
-% ----------------------------
+% ------------------------------
 \setmarginsrb
 { 0.7in} % left margin
 { 0.6in} % top margin
@@ -42,16 +42,16 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Często przydatne pakiety
-% ----------------------------
+% ------------------------------
 \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
 \usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
 % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
 
-% ----------------------------
+% ------------------------------
 % Pakiety do tekstów z nauk przyrodniczych
 % ----------------------------
 \let\lll\undefined  % Amsmath gryzie się z pakietami do języka
@@ -150,7 +150,7 @@
 % ##################
 \Work{ % Autor i tytuł dzieła
   Andrzej Białynicki-Birula \\
-  ,,Zarys algebry'', \cite{BialynickiBirulaZarysAlgebry87} }
+  „Zarys algebry”, \cite{BialynickiBirulaZarysAlgebry87} }
 
 
 \CenterTB{Uwagi}
@@ -203,7 +203,7 @@ system Peano tak, by liczby naturalne uwzględniały 0.
 
 Powinno być:
 \begin{itemize}
-  \item str. 11 ,,w zbiorze liczb naturalnych''.
+  \item str. 11 „w~zbiorze liczb naturalnych”.
 \item[--] Str. 37. \ldots$j k = -k j$\ldots
 \item[--] Str. 80. \ldots więc $g h_{ 1 } g^{ -1 } \in G_{ y }$\ldots
 \item[--] Str. 80. Istotnie, $h \in \varphi_{ x }^{ -1 }( g x )$\ldots
@@ -238,10 +238,10 @@ Powinno być:
 
 
 
-% ####################
+% ############################
 \Work{ % Autor i tytuł dzieła
   Jacek Gancarzewicz \\
-  ,,Algebra liniowa i jej zastosowania'',
+  „Algebra liniowa i~jej zastosowania”,
   \cite{GancarzewiczAlgebraLiniowa2004} }
 
 
@@ -263,11 +263,14 @@ z~lewej strony przez $x^{ -1 }$.
 \begin{itemize}
 \item W pierwszym rozdziale nie określono znaku permutacji
   \\identycznościowej.
+
 \item Nie określono operacji odejmowania wektorów. Z definicji jest
   to:$$x - y := x + ( -y ) \, .$$
+
 \item Problem sumowania po pustym zbiorze wskaźników nie został
   omówiony. Powinno oczywiście być
   $\sum_{ \substack{ \iota \in \emptyset } } v_{ \iota } = 0 \, .$
+
 \item Str. 40. Jest pewna luka w dowodzie drugiej wersji zasadniczego
   twierdzenia algebry. Procedura dzielenia pokazuje bowiem, że po n
   krokach wielomian jest stopnia 0, czyli musi być stałą, nie pokazano
@@ -277,15 +280,26 @@ z~lewej strony przez $x^{ -1 }$.
   przy najniższej potędze wynosi 1 i następnie skorzystać z
   twierdzenia, że dwa wielomiany w ciele liczb zespolonych są równe
   wtedy i tylko wtedy gdy wszystkie ich współczynniki są równe.
+
 \item Str. 60. W ostatniej permutacji trzeba jedną 7 zastąpić 4.
+
 \item Str. 76. Błąd w numeracji podpunktów twierdzenia.
   % \item Str.
+
 \item Str. 341. W twierdzeniu 45.1 powinno być $n \geq 1 \, .$ Dla n = 0
   istnieje 0 punktów afonicznie niezależnych.
+
 \end{itemize}
 
+
+
+
+
+% ##################
 \CenterTB{Błędy}
+
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -313,8 +327,15 @@ z~lewej strony przez $x^{ -1 }$.
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
-\noi
+% ##################
+
+
+
+
+
+\noindent
 \StrWg{420}{15} \\
 \Jest
 \begin{equation*}
@@ -349,8 +370,10 @@ z~lewej strony przez $x^{ -1 }$.
 Powinno być:
 \begin{itemize}
 \item[--] Str. 41. \ldots to funkcja kwadratowa $z^2+az+b$\ldots
+
 \item[--] Str. 44.
   $$\overline{ \xi } = \overline{ z_{ 1 } } - z_{ 2 } j \, .$$
+
 \item[--] Str. 59.
   $( x_{ 1 }, \ldots, x_{ k } ) \leq (y_{ 1 }, \ldots, y_{ k } ) \, .$
 \item[--] Str. 62. \ldots i skalara $a \in F$\ldots
@@ -433,16 +456,24 @@ $$\mathcal{ V }_{ x_{ 1 }, \ldots, x_{ n } } = \ldots$$
 
 
 
+
+
+
+
+
 % ####################
 \Work{ % Autor i tytuł dzieła
   Andrzej Herdegen \\
-  ,,Algebra liniowa i~geometria'',
+  „Algebra liniowa i~geometria”,
   \cite{HerdegenAlgebraLiniowaIGeometria10} }
 
 
 \CenterTB{Uwagi}
 
 
+
+
+% ##################
 \CenterTB{Błędy}
 \begin{center}
   \begin{tabular}{|c|c|c|c|c|}
@@ -460,6 +491,12 @@ $$\mathcal{ V }_{ x_{ 1 }, \ldots, x_{ n } } = \ldots$$
     \hline
   \end{tabular}
 \end{center}
+% ##################
+
+
+
+
+
 
 
 
