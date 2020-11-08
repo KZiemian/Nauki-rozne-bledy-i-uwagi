@@ -1,8 +1,8 @@
 % Autor: Kamil Ziemian
 
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Podstawowe ustawienia i pakiety
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 \RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
 % sposoby używania LaTeXa. Więcej jest w l2tabu English version.
 \documentclass[a4paper,11pt]{article}
@@ -16,9 +16,9 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ----------------------------
+% ------------------------------
 \usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
 % \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
 % % grafiki.
@@ -27,9 +27,9 @@
 % wprowadzane bezpośrednio w tekście.
 \usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ----------------------------
+% ------------------------------
 % MARGINS
-% ----------------------------
+% ------------------------------
 \setmarginsrb
 { 0.7in} % left margin
 { 0.6in} % top margin
@@ -42,20 +42,20 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Często używane pakiety
-% ----------------------------
+% ------------------------------
 % \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-% \usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
-% % więcej, ale ja nie potrafię nic o tym powiedzieć).
+\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
 
 
 
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Dodatkowe ustawienia dla języka polskiego
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 \renewcommand{\thesection}{\arabic{section}.}
 % Kropki po numerach rozdziału (polski zwyczaj topograficzny)
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}}
@@ -63,26 +63,26 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
-% ----------------------------
+% ------------------------------
 \usepackage{latexshortcuts}
 
 
 
-% ----------------------------
+% ------------------------------
 % Ustawienia różnych parametrów tekstu
-% ----------------------------
+% ------------------------------
 \renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
 % wierszami w tabelach.
 
 
 
-% ----------------------------
+% ------------------------------
 % Pakiet "hyperref"
 % Polecano by umieszczać go na końcu preambuły.
-% ----------------------------
+% ------------------------------
 \usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
 % do bibliografii na hiperlinki.
 
@@ -90,13 +90,13 @@
 
 
 
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Tytuł, autor, data
 \title{Kultura --~błędy i~uwagi}
 
 % \author{}
 % \date{}
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 
 
 
@@ -123,6 +123,13 @@
 
 
 
+
+
+
+
+
+
+
 % ############################
 \subsection{Kultura XIX i~XX wieku}
 
@@ -134,7 +141,7 @@
 % ##################
 \Work{ % Autor i tytuł dzieła
   E. Michael Jones \\
-  ,,Zdeprawowani moderniści'',
+  „Zdeprawowani moderniści”,
   \cite{EMichaelJonesZdeprawowaniModernisci14} }
 
 
@@ -149,27 +156,23 @@
     \hline
     16  & & 19 & Claya & Gaya \\
     24  &  4 & & człowieczeństwa & człowieczeństwa'' \\
-    25  & 11 & & Samoa & ,,Samoa  % ''
-    \\
+    25  & 11 & & Samoa & „Samoa \\
     25  & & 14 & wyłączności & Wyłączności \\
-    27  & &  1 & beztroskich>> & beztroskich>>'' \\
+    27  & &  1 & beztroskich>> & beztroskich>>” \\
     29  & 12 & & roku & roku. \\
-    30  & &  9 & <<młodej studentki''  % >>
+    30  & &  9 & <<młodej studentki” % >>
            & <<młodej studentki>> \\
     30  & &  8 & bawełniane sukienki>> & <<bawełniane sukienki>> \\
-    37  & 11 & & wówczas'' & wówczas \\
+    37  & 11 & & wówczas” & wówczas \\
     37  & & 16 & niego & z~niego \\
     38  & &  2 & zbagatelizowałaś, & zbagatelizowałaś. \\
     49  & 12 & & za & z \\
     56  & 17 & & którym & których \\
     56  &  3 & & Wilberforce'a** & Wilberforce'a* \\
     67  & & 13 & \emph{Whay} & \emph{What} \\
-    71  & 14 & & ,, Wartości  % ''
-           & ,,Wartości  % ''
-    \\
-    85  & & 13 & \emph{lalek} & \emph{lalek}'' \\
-    91  & &  4 & a oni & ,,a oni  % ''
-    \\
+    71  & 14 & & „ Wartości & „Wartości \\
+    85  & & 13 & \emph{lalek} & \emph{lalek}” \\
+    91  & &  4 & a oni & „a oni \\
     99  &  9 & & maja & mają \\
     101 & & 11 & naukowym & z naukowym \\
     103 & & 13 & ATA & ATS \\
@@ -178,12 +181,14 @@
     108 &  2 & & rzeczywistości & o rzeczywistości \\
     111 & 21 & & Indiana, & Indiana. \\
     111 & & 20 & w na & na \\
-    119 & & 11 & oszukiwałam''$^{ 2 }$.W & oszukiwałam''$^{ 2 }$. W \\
+    119 & & 11 & oszukiwałam”$^{ 2 }$.W & oszukiwałam”$^{ 2 }$. W \\
     122 & 20 & & od & do \\
     161 & &  2 & wyraźn0e & wyraźne \\
     165 & &  3 & ktrego & którego \\
     \hline
   \end{tabular}
+
+
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -199,8 +204,7 @@
     201 & & 14 & roku & roku. \\
     205 & & 19 & Laetesa & Klaudiusza \\
     207 &  7 & & taka & taką \\
-    211 & & 18 & ,,Szczyt  % ''
-           & Szczyt \\
+    211 & & 18 & „Szczyt & Szczyt \\
     214 &  5 & & [ w~nagrodę] & [w~nagrodę] \\
     214 &  6 & & najwyraźniej .. & najwyraźniej\ld \\
     217 & 22 & & Fread & Freuda \\
@@ -209,21 +213,22 @@
     228 & & 17 & pytanie:, & pytanie: \\
     230 & 12 & & 1963 roku & 1963 roku. \\
     230 & 13 & & 1425 & 1525 \\
-    237 & &  4 & 560 & 1560 \\ \hline
+    237 & &  4 & 560 & 1560 \\
+    \hline
   \end{tabular}
 \end{center}
 \noi \\
 \StrWd{17}{10} \\
 \Jest nieczystości pierworodnej córki jest ślepotą ducha. \\
-\Pow pierworodną córką nieczystości jest ślepota ducha. \\
+\Powin pierworodną córką nieczystości jest ślepota ducha. \\
 \StrWg{201}{8} \\
 \Jest otorbił~się w~kokonie psychoanalizy samego siebie\ldots \\
-\Pow otorbił samego siebie w~kokonie psychoanalizy\ldots \\
+\Powin otorbił samego siebie w~kokonie psychoanalizy\ldots \\
 \StrWg{209}{20} \\
 \Jest \emph{Gdyby potrafił być perwersyjny, byłby zdrowy, podobnie jak
   ojciec$^{ 202 }$}. \\
-\Pow ,,Gdyby potrafił być perwersyjny, byłby zdrowy,
-podobnie jak ojciec''$^{ 202 }$. \\
+\Powin „Gdyby potrafił być perwersyjny, byłby zdrowy,
+podobnie jak ojciec”$^{ 202 }$. \\
 
 \vspace{\spaceTwo}
 
@@ -253,7 +258,7 @@ podobnie jak ojciec''$^{ 202 }$. \\
 % ##################
 \Work{ % Autor i tytuł dzieła
   Zdzisław Krasnodębski \\
-  ,,Drzemka rozsądnych. Zebrane eseje i~szkice'',
+  „Drzemka rozsądnych. Zebrane eseje i~szkice”,
   \cite{KrasnodebskiDrzemkaRozsadnych06} }
 
 
@@ -282,10 +287,10 @@ podobnie jak ojciec''$^{ 202 }$. \\
     \hline
   \end{tabular}
 \end{center}
-\noi 
+\noi
 \StrWd{72}{2} \\
 \Jest Frankreich 1871, Deutschland 1918 \\
-\Pow  \emph{Frankreich 1871, Deutschland 1918} \\
+\Powin  \emph{Frankreich 1871, Deutschland 1918} \\
 
 \vspace{\spaceTwo}
 
@@ -296,7 +301,7 @@ podobnie jak ojciec''$^{ 202 }$. \\
 % ##################
 \Work{
   Zdzisław Krasnodębski \\
-  ,,Zwycięzca po~przejściach. Zebrane eseje i~szkice~V'',
+  „Zwycięzca po~przejściach. Zebrane eseje i~szkice~V”,
   \cite{KrasnodebskiZwyciezcaPoPrzejsciach2012} }
 
 
@@ -320,7 +325,7 @@ artykułu \emph{Nie udawaj Greka, Polsko!}
 % ##################
 \Work{ % Autor i tytuł dzieła
   Maria Janion \\
-  ,,Niesamowita Słowiańszczyzna. Fantazmaty literatury'',
+  „Niesamowita Słowiańszczyzna. Fantazmaty literatury”,
    \cite{JanionNiesamowitaSlowianszczyzna2006} }
 
 
@@ -349,7 +354,7 @@ artykułu \emph{Nie udawaj Greka, Polsko!}
     \hline
   \end{tabular}
 \end{center}
-% \noi 
+% \noi
 % \StrWd{72}{2} \\
 % \Jest Frankreich 1871, Deutschland 1918 \\
 % \Pow  \emph{Frankreich 1871, Deutschland 1918} \\
@@ -363,16 +368,16 @@ artykułu \emph{Nie udawaj Greka, Polsko!}
 % ##################
 \Work{ % Autor i tytuł dzieła
   Jan Sowa \\
-  ,,Fantomowe ciało króla. Peryferyjne zmagania z~nowoczesną formą'',
+  „Fantomowe ciało króla. Peryferyjne zmagania z~nowoczesną formą”,
   \cite{SowaFantomoweCialoKrola11} }
 
 
 \CenterTB{Uwagi}
 
-\start \StrWg{36}{15} Zdanie ,,jego aktywność ściśle wiąże~się
-związana ze społeczną\ldots'', powinno brzmieć ,,jego aktywność ściśle
-wiąże~się ze społeczną\ldots'' lub ,,jego aktywność jest ściśle
-związana ze społeczną\ldots''. Choć na podstawie tekstu, nie można
+\start \StrWg{36}{15} Zdanie „jego aktywność ściśle wiąże~się
+związana ze społeczną\ldots”, powinno brzmieć „jego aktywność ściśle
+wiąże~się ze społeczną\ldots” lub „jego aktywność jest ściśle
+związana ze społeczną\ldots”. Choć na podstawie tekstu, nie można
 wybrać wersji zamierzonej przez autora, nie~jest to jednak problemem,
 bo obie przekazują tą samą treść.
 
@@ -384,6 +389,7 @@ gramatycznie.
 
 \CenterTB{Błędy}
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -400,6 +406,7 @@ gramatycznie.
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
 
 \vspace{\spaceTwo}
@@ -419,7 +426,7 @@ gramatycznie.
 % ##################
 \Work{ % Autor i tytuł dzieła
   Renata Iwicka \\
-  ,,Źródła klasycznej demonologii japońskiej'',
+  „Źródła klasycznej demonologii japońskiej”,
   \cite{IwickaZrodlaKlasycznejDemonologiJaponskiej2017} }
 
 
@@ -430,7 +437,7 @@ gramatycznie.
 \vspace{\spaceFour}
 
 
-\start \Str{49} Użyto tu przydomka ,,Raiko'' % Raik\={o}
+\start \Str{49} Użyto tu przydomka „Raiko” % Raik\={o}
 by odnieść~się do~postaci Minamoto no~Yorumitsu jednak~to, że~ten przydomek odnosi~się do~niego stanie~się jasne dopiero na~stronie~52.
 
 \vspace{\spaceFour}
@@ -448,7 +455,7 @@ nie jest całkiem proste.
 
 
 \start \StrWd{95}{3} W~tej książce normalnie zapisuje~się nazwę tej
-wyspy jako ,,Kyushu''. % Ky\={u}sh\={u}
+wyspy jako „Kyushu”. % Ky\={u}sh\={u}
 
 \vspace{\spaceFour}
 
@@ -463,8 +470,8 @@ nazywają~się leżące na~niej bramy.
 \start \StrWg{129}{12--16} Fragment ten jest napisany w~taki sposób,
 że~nie byłem w~stanie zrozumieć z~niego, która pisownia nazwy bramy
 jest pierwotna, a~która powstała później. Z~reszty książki wynika,
-że~pierwotna nazwa to ,,Rajomon'', % Raj\={o}mon
-późniejsza zaś~to ,,Rashomon''. % Rash\={o}mon
+że~pierwotna nazwa to „Rajomon”, % Raj\={o}mon
+późniejsza zaś~to „Rashomon”. % Rash\={o}mon
 
 \vspace{\spaceFour}
 
@@ -476,7 +483,7 @@ dotarli do jakiejś rezydencji.
 \vspace{\spaceFour}
 
 
-\start \tb{Str. 148, przypis 441.} Jestem przekonany, że~ten przypis
+\start \textbf{Str. 148, przypis 441.} Jestem przekonany, że~ten przypis
 zamiast mówić jak obecnie, iż~\emph{Rituale Romanum} było używane prze
 niektórych egzorcystów od~1999, miał stwierdzać, że~był używany
 do~tego roku.
@@ -484,8 +491,8 @@ do~tego roku.
 \vspace{\spaceFour}
 
 
-\start \StrWd{169}{10} Całkiem możliwe, że~zamiast ,,wykryto dużo
-wcześniej'' powinno pisać ,,wykryto bardzo wcześnie''.
+\start \StrWd{169}{10} Całkiem możliwe, że~zamiast „wykryto dużo
+wcześniej” powinno pisać „wykryto bardzo wcześnie”.
 
 \vspace{\spaceFour}
 
@@ -497,10 +504,10 @@ czy też o~\emph{on'yodo}? % on'y\={o}d\={o}
 \vspace{\spaceFour}
 
 
-\start \Str{181} Podtytuł rozdziału jest zapisany tu jako ,,\emph{Tabu
-  w}~shinto'', % shint\={o}
-podczas gdy~w~spisie treści na~stronie~6 jako ,,Tabu
-w~\emph{shinto}''. % shint\={o}
+\start \Str{181} Podtytuł rozdziału jest zapisany tu jako „\emph{Tabu
+  w}~shinto”, % shint\={o}
+podczas gdy~w~spisie treści na~stronie~6 jako „Tabu
+w~\emph{shinto}”. % shint\={o}
 Warto byłoby ten zapis ujednolicić, choć może to~być sprzeczne
 z~konwencją zapisu tytułów odpowiednich części tekstu.
 
@@ -521,8 +528,8 @@ wyglądałby inaczej niż ten~który~się przyjął.
 \vspace{\spaceFour}
 
 
-\start \StrWd{222}{9} Może zamiast ,,użył znaku oznaczającego
-kobietę'' powinno być ,,stworzył znak oznaczający kobietę''?
+\start \StrWd{222}{9} Może zamiast „użył znaku oznaczającego
+kobietę” powinno być „stworzył znak oznaczający kobietę”?
 
 \vspace{\spaceFour}
 
@@ -538,12 +545,13 @@ i~\emph{ayakashi}.
 
 
 \start \Str{223} W~książce tej zwykle zapisuje~się nazwę przywoływanej
-tu~wyspy jako ,,Kyushu'', % Ky\={u}sh\={u}
-nie ,,Kiusiu''.
+tu~wyspy jako „Kyushu”, % Ky\={u}sh\={u}
+nie „Kiusiu”.
 
 
 \CenterTB{Błędy}
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -557,7 +565,7 @@ nie ,,Kiusiu''.
     13  & &  6 & \emph{Yokai} Database: & \emph{Yokai Database}: \\
     % Nad ,,o'' w ,,Yokai'' powinna być kreska akcentu.
     17  & 17 & & Samą przestrzeń & O~samej przestrzeni \\
-    63  & 13 & & ,,późniejszym światem & ,,późniejszym światem'' \\
+    63  & 13 & & „późniejszym światem & „późniejszym światem” \\
     64  & 18 & & rezydencja obok & rezydencja \\
     72  & &  4 & narodzin & narodzonej \\
     125 & &  6 & spostrzegania & postrzegania \\
@@ -574,17 +582,18 @@ nie ,,Kiusiu''.
     231 & & 17 & pewną & pewnymi \\
     \hline
   \end{tabular}
+
 \end{center}
 \noi
 \StrWg{169}{19} \\
-\Jest: a~zwłaszcza \\
-\Pow których szczególnym uosobieniem w~tym kontekście jest \\
+\Jest  a~zwłaszcza \\
+\Powin których szczególnym uosobieniem w~tym kontekście jest \\
 \StrWg{189}{6} \\
-\Jest zarysowaną postać \\
-\Pow zarysowanie tej postaci \\
+\Jest  zarysowaną postać \\
+\Powin zarysowanie tej postaci \\
 \StrWg{198}{10} \\
-\Jest obejmują dokładnie tę~samą kategorię \\
-\Pow są objęte tą~samą kategorią \\
+\Jest  obejmują dokładnie tę~samą kategorię \\
+\Powin są objęte tą~samą kategorią \\
 
 \vspace{\spaceTwo}
 
@@ -649,10 +658,11 @@ nie ,,Kiusiu''.
 % ######################################
 
 
+
 % ##################
 \Work{ % Redaktor i tytuł dzieła
   Red. Piotr Kletowski \\
-  ,,Europejskie kino gatunków'',
+  „Europejskie kino gatunków”,
   \cite{RedKletowskiEuropejskieKinoGatunkow16} }
 
 
@@ -660,6 +670,7 @@ nie ,,Kiusiu''.
 
 \start \StrWd{129}{1} W~filmie templariuszom nie wyłupiono oczu, lecz
 stracono i~powieszono na drzewach. Tam dzikie ptaki wyjadły ich oczy.
+
 
 \CenterTB{Błędy}
 \begin{center}
@@ -680,10 +691,15 @@ stracono i~powieszono na drzewach. Tam dzikie ptaki wyjadły ich oczy.
 \end{center}
 \noi
 \StrWg{160}{12} \\
-\Jest \emph{Za kilka dolarów więcej} Monco \\
-\Pow filmu \emph{Dobry, zły i~brzydki} Blondie \\
+\Jest  \emph{Za kilka dolarów więcej} Monco \\
+\Powin filmu \emph{Dobry, zły i~brzydki} Blondie \\
 
 \vspace{\spaceTwo}
+
+
+
+
+
 
 
 
@@ -692,7 +708,7 @@ stracono i~powieszono na drzewach. Tam dzikie ptaki wyjadły ich oczy.
 % ##################
 \Work{ % Autor i tytuł dzieła
   Tadeusz Szczepański \\
-  ,,Zwierciadło Bergmana'', \cite{SzczepanskiZwierciadloBergmana07} }
+  „Zwierciadło Bergmana”, \cite{SzczepanskiZwierciadloBergmana2007} }
 
 
 \CenterTB{Uwagi}
@@ -711,7 +727,7 @@ to~jeden z~bohaterów filmu Bergmana \emph{Fanny i~Aleksander}.
 \start \Str{146} Ponieważ Monika nie tylko udało~się uciec
 z~mieszczańskiej willi, bez żadnych konsekwencji dla jej dalszego
 życia, ale także zdobyć pieczeń po~którą tam poszła,
-uważam~że~nazwanie jej działań ,,sromotnie nieudanymi'', jest
+uważam~że~nazwanie jej działań „sromotnie nieudanymi”, jest
 co~najmniej nietrafne.
 
 \vspace{\spaceFour}
@@ -761,6 +777,83 @@ pod~ręką, która prowadzi koński zaprzęg.
 
 
 
+
+
+
+
+
+% ######################################
+\newpage
+\section{Literatura}
+
+\vspace{\spaceTwo}
+% ######################################
+
+
+
+% ##################
+\Work{ % Autor i tytuł dzieła
+  Teodor Parnicki \\
+  „Szkice literackie”, \cite{ParnickiSzkiceLiterackie1979} }
+
+
+\CenterTB{Uwagi}
+
+\start \Str{88, 220} Na stronie 88 tytuł tej części to „O~humanizmie
+katolicyzmu”, zaś na 220 to „O~humanizmie katolickim”. Sens tych dwóch
+tytułów jest oczywiście diametralnie różny. Wydaje się, że~poprawny to
+„O~humanizmie katolickim” bo takie słowa są użyte w~tytule szkicu
+o~Zofii Kossak.
+
+\vspace{\spaceFour}
+
+
+\start \Str{69} W~zaczynającym się tu szkicu „Aleksander Puszkin
+(w~stulecie śmierci)” wyróżniona jest część pierwsza i~trzecia, ale
+nigdzie nie ma drugiej.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & od góry & od dołu & & \\
+    \hline
+    XXI &  6 & & \emph{Juliana}\ldots$^{ 26 }$
+           & \emph{Juliana}\ldots”$^{ 26 }$ \\
+    91  &  9 & & upadku; & upadku. \\
+    92  & 23 & & XX & XIX \\
+    119 & & 7 & stałe & całe \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+
+
+
+
+
 % ######################################
 \newpage
 \section{Malarstwo}
@@ -773,7 +866,7 @@ pod~ręką, która prowadzi koński zaprzęg.
 % ##################
 \Work{ % Autor i tytuł dzieła
   Władysław Strzemiński \\
-  ,,Teoria widzenia'', \cite{StrzeminskiTeoriaWidzenia2016} }
+  „Teoria widzenia”, \cite{StrzeminskiTeoriaWidzenia2016} }
 
 
 \CenterTB{Uwagi}
@@ -842,6 +935,14 @@ estetycznie.
 \vspace{\spaceTwo}
 
 
+
+
+
+
+
+
+
+
 % ######################################
 \newpage
 \section{Muzyka}
@@ -854,7 +955,7 @@ estetycznie.
 % ##################
 \Work{ % Autor i tytuł dzieła
    Franciszek Wesołowski \\
-  ,,Zasady muzyki'',
+  „Zasady muzyki”,
   \cite{WesolowskiZasadyMuzyki2017} }
 
 
@@ -883,17 +984,24 @@ estetycznie.
 \end{center}
 \noi
 \StrWg{160}{12} \\
-\Jest \emph{Za kilka dolarów więcej} Monco \\
-\Pow filmu \emph{Dobry, zły i~brzydki} Blondie \\
+\Jest  \emph{Za kilka dolarów więcej} Monco \\
+\Powin filmu \emph{Dobry, zły i~brzydki} Blondie \\
 
 \vspace{\spaceTwo}
+
+
+
+
+
+
+
 
 
 
 % ####################################################################
 % ####################################################################
 % Bibliografia
-\bibliographystyle{plalpha} \bibliography{LibCultura}{}
+\bibliographystyle{plalpha} \bibliography{LibCivilizationCultura}{}
 
 
 % ############################
