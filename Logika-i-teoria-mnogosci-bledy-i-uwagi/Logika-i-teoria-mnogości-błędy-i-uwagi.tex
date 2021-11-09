@@ -16,9 +16,9 @@
 
 
 
-% ------------------------------
+% ---------------------------------------
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ------------------------------
+% ---------------------------------------
 \usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
 % \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
 % % grafiki.
@@ -27,9 +27,9 @@
 % % wprowadzane bezpośrednio w tekście.
 \usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ------------------------------
+% ---------------------------------------
 % MARGINS
-% ------------------------------
+% ---------------------------------------
 \setmarginsrb
 { 0.7in} % left margin
 { 0.6in} % top margin
@@ -42,18 +42,18 @@
 
 
 
-% ------------------------------
+% ---------------------------------------
 % Często przydatne pakiety
-% ------------------------------
+% ---------------------------------------
 % \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
 \usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
 % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
 
-% ------------------------------
+% ---------------------------------------
 % Pakiety do tekstów z nauk przyrodniczych
-% ------------------------------
+% ---------------------------------------
 \let\lll\undefined  % Amsmath gryzie się z pakietami do języka
 % polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
 % oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
@@ -70,7 +70,7 @@
 
 
 
-% ##########
+% #############
 % Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
 \newtheorem{twr}{Twierdzenie}  % Komenda wprowadzająca otoczenie
 % „twr” do pisania twierdzeń matematycznych
@@ -79,10 +79,10 @@
 
 
 
-% ------------------------------
+% ---------------------------------------
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
-% ------------------------------
+% ---------------------------------------
 \usepackage{latexshortcuts}
 \usepackage{mathshortcuts}
 
@@ -98,9 +98,9 @@
 
 
 
-% ------------------------------
+% ---------------------------------------
 % Ustawienia różnych parametrów tekstu
-% ------------------------------
+% ---------------------------------------
 \renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
 % wierszami w tabelach.
 
@@ -159,7 +159,7 @@
 \CenterTB{Uwagi}
 
 \start \StrWg{132}{1} Zdanie
-,,$p \vee q ( ( p \land q ) \to ( p \land q ) )$'' nie ma żadnego sensu
+„$p \vee q ( ( p \land q ) \to ( p \land q ) )$” nie ma żadnego sensu
 logicznego, musiał zostać zgubiony spójnik logiczny po~pierwszym~$q$.
 Niestety nie wiem który należy tam umieścić.
 
@@ -233,6 +233,7 @@ Niestety nie wiem który należy tam umieścić.
   \cite{GrzegorczykZarysLogikiMatematycznej1975} }
 
 
+% ##################
 \CenterTB{Błędy}
 
 \begin{center}
@@ -244,6 +245,9 @@ Niestety nie wiem który należy tam umieścić.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
+    18  & 20 & & (dla & \big(dla \\
+    20  & 21 & & \big($f \in Y$)\big) & \big($f \in Y$\big)\big) \\
+    20  & &  6 & liczby{ } $\neq 0$ & liczby $\neq 0$ \\
     22  & & 11 & zwrotność & samozwrotność \\
     29  & & 13 & $\forall x W$ & $\forall x \exists W$ \\
     34  &  1 & & (23) & (23') \\
@@ -271,12 +275,13 @@ Niestety nie wiem który należy tam umieścić.
 
 
 
-% ##################
+% ############################
 \Work{ % Autor i tytuł dzieła
   Willard Van Orman Quine \\
-  ,,Logika matematyczna'', \cite{QuineLogikaMatematyczna1974} }
+  „Logika matematyczna”, \cite{QuineLogikaMatematyczna1974} }
 
 
+% ##################
 \CenterTB{Błędy}
 
 \begin{center}
@@ -302,7 +307,7 @@ Niestety nie wiem który należy tam umieścić.
 \end{center}
 
 \vspace{\spaceTwo}
-% ##################
+% ############################
 
 
 
@@ -325,7 +330,7 @@ Niestety nie wiem który należy tam umieścić.
 % ##################
 \Work{ % Autor i tytuł dzieła
   Kazimierz Kuratowski \\
-  ,,Wstęp do~teorii mnogości i~topologii'',
+  „Wstęp do~teorii mnogości i~topologii”,
   \cite{KuratowskiWstepTeoriiMnogosciITopologii2004} }
 
 
@@ -419,7 +424,7 @@ Drugi to~dowód \textbf{nie wprost}, opierający~się na~tożsamości
 % ####################################################################
 % ####################################################################
 % Bibliografia
-\bibliographystyle{plalpha} \bibliography{LibMathInfo}{}
+\bibliographystyle{plalpha} \bibliography{MathCompScienceBooks}{}
 
 
 % ############################
