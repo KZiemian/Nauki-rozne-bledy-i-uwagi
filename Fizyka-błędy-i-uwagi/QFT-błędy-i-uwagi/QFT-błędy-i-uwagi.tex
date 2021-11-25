@@ -1,1 +1,419 @@
-Tekst
+% Autor: Kamil Ziemian
+
+% ---------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ------------------------------
+\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
+% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
+% % grafiki.
+% \usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
+% \usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
+% % wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ------------------------------
+% MARGINS
+% ------------------------------
+\setmarginsrb
+{ 0.7in} % left margin
+{ 0.6in} % top margin
+{ 0.7in} % right margin
+{ 0.8in} % bottom margin
+{  20pt} % head height
+{0.25in} % head sep
+{   9pt} % foot height
+{ 0.3in} % foot sep
+
+
+
+% ------------------------------
+% Często używane pakiety
+% ------------------------------
+% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+% ------------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ------------------------------
+\usepackage{latexshortcuts}
+
+
+
+% ---------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% ---------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ------------------------------
+% Ustawienia różnych parametrów tekstu
+% ------------------------------
+\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
+
+
+
+
+
+% ------------------------------
+% Pakiet „hyperref”
+% Polecano by umieszczać go na końcu preambuły.
+% ------------------------------
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł, autor, data
+\title{QFT (kwantowa teoria pola)~-- błędy i~uwagi}
+
+% \author{}
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+% % ######################################
+% \section{Syntezy historii Polski}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+
+
+
+
+% ############################
+\Work{
+  Steven Weinberg \\
+  ,,Teoria pól kwantowych. Podstawy.'', \cite{Wei12}.}
+
+
+\CenterTB{Uwagi}
+\begin{itemize}
+\item Str. 79. Z faktu, że istnieje macierz odwrotna do
+  $\eta_{ \mu \nu } \La^{ \mu }_{ \rho }$????!!!!!
+\item
+\end{itemize}
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu &  &  \\ \hline
+    31 & 4 & & $-c^{ 2 } \hbar^{ 2 }$ & $+c^{ 2 } \hbar^{ 2 }$ \\
+    52 & 14 & & $b^{ \da }( \bd{ k } ) \exp( i \om_{ \bd{ k } } t )$
+           & $b^{ \da }( \bd{ k } ) \exp( +i \om_{ \bd{ k } } t )$ \\
+    59 & & 4 & Heinsenberg [72[ & Heinsenberg [72] \\ % Zła pisownia.
+    60 & 5 & & przyspieszone & przyśpieszone \\
+    70 & 2 & & 1961. & 1961). \\
+    79 & 3 & & $\eta_{ \mu \nu } dx^{ ' \mu } dx^{ ' \nu }$
+           & $\eta_{ \mu \nu } dx'^{ \mu } dx'^{ \nu }$ \\
+    79 & 5 & & $\eta_{ \mu \nu } \pd{}{ x^{ ' \mu } }{ x^{ \rho } }
+               \pd{}{ x^{ ' \nu } }{ x^{ \sigma } }$
+           & $\eta_{ \mu \nu } \pd{}{ x'^{ \mu } }{ x^{ \rho } }
+             \pd{}{ x'^{ \nu } }{ x^{ \s } }$ \\
+    86 & & 2 & $\La_{ \rho }^{ -1 \mu } P^{ \rho }$
+           & $\ten[]{ ( \La^{ -1 } ) }{ ^\mu_\rho } P^{ \rho }$ \\
+    282 & 1 & & $S_{ \bd{ p }_{ 1 }', \s_{ 1 }', n_{ 1 }'; \,
+                \bd{ p }_{ 2 }', \s_{ 2 }', n_{ 2 }';\; \cdots, \;
+                \bd{ p }_{ 1 }, \s_{ 1 }, n_{ 1 } ; \, \ld{ p }_{ 2 },
+                \s_{ 2 }, n_{ 2 }; \, \cdots }$
+           & $S_{ \bd{ p }_{ 1 }', \s_{ 1 }', n_{ 1 }'; \, \bd{ p }_{ 2 }',
+             \s_{ 2 }', n_{ 2 }';\; \cdots; \; \bd{ p }_{ 1 }, \s_{ 1 },
+             n_{ 1 } ; \, \bd{ p }_{ 2 }, \s_{ 2 }, n_{ 2 }; \, \cdots }$ \\
+    & & & & \\ \hline
+  \end{tabular}
+\end{center}
+
+\begin{itemize}
+\item[--] Str. 85. \ldots
+\item[--] Str. 86. Równania (2.5.1) i\ldots
+\item[--] Str. 86. równanie na dole
+\end{itemize}
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Steven Weinberg \\
+  „Teoria pól kwantowych. Tom II: Nowoczesne zastosowanie”, \cite{} }
+
+
+% \CenterTB{Uwagi}
+
+% \start
+
+
+% % \vspace{\spaceFour}
+
+
+
+
+
+% ##################
+\CenterTB{Błędy}
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    142 & & 14 & powloce & powłoce \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+
+  % \begin{tabular}{|c|c|c|c|c|}
+  %   \hline
+  %   & \multicolumn{2}{c|}{} & & \\
+  %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+  %   & Powinno być \\ \cline{2-3}
+  %   & Od góry & Od dołu & & \\
+  %   \hline
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   \hline
+  % \end{tabular}
+
+
+  % \begin{tabular}{|c|c|c|c|c|}
+  %   \hline
+  %   & \multicolumn{2}{c|}{} & & \\
+  %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+  %   & Powinno być \\ \cline{2-3}
+  %   & Od góry & Od dołu & & \\
+  %   \hline
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   \hline
+  % \end{tabular}
+
+\end{center}
+
+
+\noindent
+\Jest  Selected Writings~of Alexandra Kollontai \\
+\Powin \emph{Selected Writings~of Alexandra Kollontai} \\
+
+% \StrWd{11}{16} \\
+% \Jest  Amerian Seafarers Union \\
+% \Powin \emph{Amerian Seafarers Union} \\
+
+
+
+% \StrWd{11}{5} \\
+% \Jest  Council~of Economic Advisers \\
+% \Powin \emph{Council~of Economic Advisers} \\
+% \StrWd{11}{1} \\
+% \Jest  Council on~Foregin Relations \\
+% \Powin \emph{Council on~Foregin Relations} \\
+% \StrWg{12}{11} \\
+% \Jest \emph{Congress}) --~Kanadyjski Kongres Związków Zawodowych \\
+% \Powin  \emph{Congress} --~Kanadyjski Kongres Związków Zawodowych) \\
+% \StrWd{12}{18} \\
+% \Jest Emergency Committe for~Aid to~Poland \\
+% \Powin  \emph{Emergency Committe for~Aid to~Poland} \\
+% \StrWd{12}{8} \\
+% \Jest (\emph{Froce Ouvri\'{e}re} ) \\
+% \Powin (\emph{Froce Ouvri\'{e}re} --~Główna Konfederacja Pracy
+% --~Siły
+% Pracy) \\
+% \StrWg{13}{10} \\
+% \Jest Generalized System~of Preferences \\
+% \Powin  \emph{Generalized System~of Preferences} \\
+% \StrWd{13}{4} \\
+% \Jest \emph{Leuven}) \\
+% \Powin \emph{Leuven} --~Kotlicki Ośrodek Dokumentacyjny i~Badań
+% Katolickich Uniwersytetu Leuven \\
+% \StrWg{15}{1} \\
+% \Jest Polish American Congress Charitable Foundation \\
+% \Powin  \emph{Polish American Congress Charitable Foundation} \\
+% \StrWg{15}{3} \\
+% \Jest Polish-American Enterprise Fund \\
+% \Powin  \emph{Polish-American Enterprise Fund} \\
+% \StrWg{15}{10} \\
+% \Jest Postal, Telegraph and~Telephone International \\
+% \Powin  \emph{Postal, Telegraph and~Telephone International} \\
+% \StrWg{43}{2} \\
+% \Jest \emph{Univeristy~of Illinois at~Urbana Champaign, 1998} \\
+% \Powin  Univeristy~of Illinois at~Urbana-Champaign, 1998 \\
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+% Bibliografia
+\bibliographystyle{plalpha}
+
+\bibliography{}{}
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
