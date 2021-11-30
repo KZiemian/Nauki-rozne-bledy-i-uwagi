@@ -1,23 +1,53 @@
 % Autor: Kamil Ziemian
 
 % ---------------------------------------------------------------------
-% Podstawowe ustawienia i pakiety
+% Basic configuraton of LaTeX document and Polish language
 % ---------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
-% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}  % Find out deprecated part of LaTeX.
+% More information in l2tabu English version.
+
+
 \documentclass[a4paper,11pt]{article}
 % {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
-\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, co daje dostęp
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
 % do polskich znaków.
-\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
+\usepackage{lmodern} % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+
+\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+
+
+
+
+
+
 
 
 
 % ---------------------------------------
-% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% MARGINS
+% ---------------------------------------
+\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+\setmarginsrb
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
+
+
+
+
+
+
+
+% ---------------------------------------
+% Basic packages
 % ---------------------------------------
 \usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
 % \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
@@ -25,34 +55,23 @@
 % \usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
 % \usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
 % % wprowadzane bezpośrednio w tekście.
-\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
-% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ---------------------------------------
-% MARGINS
-% ---------------------------------------
-\setmarginsrb
-{ 0.7in} % left margin
-{ 0.6in} % top margin
-{ 0.7in} % right margin
-{ 0.8in} % bottom margin
-{  20pt} % head height
-{0.25in} % head sep
-{   9pt} % foot height
-{ 0.3in} % foot sep
 
 
 
 % ---------------------------------------
-% Często przydatne pakiety
+% Often used packages
 % ---------------------------------------
-% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
 \usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
 % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
 
+
+
+
+
 % ---------------------------------------
-% Pakiety do tekstów z nauk przyrodniczych
+% Packages for scientific writing
 % ---------------------------------------
 \let\lll\undefined  % Amsmath gryzie się z pakietami do języka
 % polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
@@ -70,7 +89,6 @@
 
 
 
-% #############
 % Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
 \newtheorem{twr}{Twierdzenie}  % Komenda wprowadzająca otoczenie
 % „twr” do pisania twierdzeń matematycznych
@@ -79,17 +97,36 @@
 
 
 
+
+
+
+
 % ---------------------------------------
-% Pakiety napisane przez użytkownika.
-% Mają być w tym samym katalogu to ten plik .tex
+% Various setting for this document
+% ---------------------------------------
+\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
+
+
+
+
+
+
+
+% ---------------------------------------
+% Packages written by us
 % ---------------------------------------
 \usepackage{latexshortcuts}
 \usepackage{mathshortcuts}
 
 
 
+
+
+
+
 % ---------------------------------------------------------------------
-% Dodatkowe ustawienia dla języka polskiego
+% Additional setting for Polish language
 % ---------------------------------------------------------------------
 \renewcommand{\thesection}{\arabic{section}.}
 % Kropki po numerach rozdziału (polski zwyczaj topograficzny)
@@ -98,17 +135,15 @@
 
 
 
-% ---------------------------------------
-% Ustawienia różnych parametrów tekstu
-% ---------------------------------------
-\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+
+
+
+
 
 
 
 % ------------------------------
-% Pakiet "hyperref"
-% Polecano by umieszczać go na końcu preambuły.
+
 % ------------------------------
 \usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
 % do bibliografii na hiperlinki.
@@ -299,6 +334,7 @@ co zostało powyżej napisane.
     & Od góry & Od dołu & & \\
     \hline
     12  &  3 & & \emph{ciałem} & \emph{ciałem uporządkowanym} \\
+    16  & 12 & & str. 12 & str. 10 \\
     18  & 20 & & (dla & \big(dla \\
     20  & 21 & & \big($f \in Y$)\big) & \big($f \in Y$\big)\big) \\
     20  & &  6 & liczby{ } $\neq 0$ & liczby $\neq 0$ \\
