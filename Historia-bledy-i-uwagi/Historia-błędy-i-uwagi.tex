@@ -16,18 +16,18 @@
 
 
 
-% ------------------------------
+% ---------------------------------------
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ------------------------------
+% ---------------------------------------
 \usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
 \usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
 % wprowadzane bezpośrednio w tekście.
 
 
 
-% ------------------------------
+% ---------------------------------------
 % MARGINS
-% ------------------------------
+% ---------------------------------------
 \usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
 \setmarginsrb
@@ -42,9 +42,9 @@
 
 
 
-% ------------------------------
+% ---------------------------------------
 % Często używane pakiety
-% ------------------------------
+% ---------------------------------------
 % \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
 \usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
 % więcej, ale ja nie potrafię nic o tym powiedzieć).
@@ -68,18 +68,18 @@
 
 
 
-% ------------------------------
+% ---------------------------------------
 % Ustawienia różnych parametrów tekstu
-% ------------------------------
+% ---------------------------------------
 \renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
 % wierszami w tabelach.
 
 
 
-% ------------------------------
+% ---------------------------------------
 % Pakiet „hyperref”
 % Polecano by umieszczać go na końcu preambuły
-% ------------------------------
+% ---------------------------------------
 \usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
 % do bibliografii na hiperlinki
 
@@ -113,6 +113,8 @@
 % Początek dokumentu
 \begin{document}
 % ####################################################################
+
+
 
 
 
@@ -1574,7 +1576,10 @@ by~nie powiedzieć niechlujnym.
 
 
 
-% ##################
+
+
+
+% ############################
 \newpage
 \Work{ % Autor i tytuł dzieła
   Jakub Polit \\
@@ -1587,8 +1592,7 @@ by~nie powiedzieć niechlujnym.
 \start \Str{28} Wedle tej pracy wojska japońskie wkroczyły na Syberię
 w~1918~r., zaś wycofały~się w~1922, interwencja wojskowa trwała więc
 cztery lata nie siedem. Siedem lat upłynęło między wkroczeniem wojsk,
-a~podpisaniem pekińskiego traktatu japońsko-rosyjskiego
-w~1925~r.
+a~podpisaniem pekińskiego traktatu japońsko-rosyjskiego w~1925~r.
 
 \vspace{\spaceFour}
 
@@ -1609,16 +1613,14 @@ samoloty dwóch statków na Yangzi, zostało określone jako atak piracki.
 \vspace{\spaceFour}
 
 
-\start \StrWd{100}{21} „Jan Baptysta” to po polsku „Jan
-Chrzciciel”.
+\start \StrWd{100}{21} „Jan Baptysta” to po polsku „Jan Chrzciciel”.
 
 \vspace{\spaceFour}
 
 
 \start \Str{151} Nagłówek występujący na~nieparzystych stronach tego
-artykułu to~„Douglas MacArthur,Dalekowschodni Generał\ldots”,
-podczas gdy powinien mieć postaci „Douglas MacArthur, Dalekowschodni
-Generał\ldots”.
+artykułu to~„Douglas MacArthur,Dalekowschodni Generał\ldots”, podczas gdy
+powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 
 \vspace{\spaceFour}
 
@@ -1655,6 +1657,7 @@ Generał\ldots”.
     49  & &  4 & historia) , & historia), \\
     \hline
   \end{tabular}
+
 
 
   \begin{tabular}{|c|c|c|c|c|}
@@ -1814,6 +1817,7 @@ Generał\ldots”.
   \end{tabular}
 
 
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -1859,9 +1863,113 @@ Generał\ldots”.
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
 
-% \vspace{\spaceTwo}
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Jakub Polit \\
+  „Smutny kontynent. Epizody i~sylwetki z~dziejów Azji Wschodniej
+  w~XX~w.”, \cite{PolitSmutnyKontynent2021} }
+
+
+% \CenterTB{Uwagi}
+
+
+
+
+
+% ##################
+\CenterTB{Błędy}
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    7 &  4 & & \emph{spoglądać{ } na} & \emph{spoglądać na} \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+    & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    403 & &  6 & \emph{Ally.} & \emph{Ally:} \\
+    408 & &  8 & wespół & wespół~z \\
+    409 & &  3 & \emph{Snows. A~History} & \emph{Snows: A~History} \\
+    417 & &  2 & \emph{Generalissimo. Chiang}
+           & \emph{The Generalissimo: Chiang} \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\vspace{\spaceTwo}
+% ############################
+
 
 
 
@@ -2236,7 +2344,7 @@ wspólnego z~komputerem.
 % ####################################################################
 % ####################################################################
 % Bibliografia
-\bibliographystyle{plalpha} \bibliography{LibHistoria}{}
+\bibliographystyle{plalpha} \bibliography{HistoryBooks}{}
 
 
 % ############################
