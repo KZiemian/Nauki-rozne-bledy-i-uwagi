@@ -91,7 +91,7 @@
 % Wartość bezwzględna i normy
 \providecommand{\abs}[1]{\lvert{ #1 }\rvert}
 
-\newcommand{\abso}[1]{|\, { #1 } \,|}  % ABSolute value One
+\newcommand{\absOne}[1]{|\, { #1 } \,|}  % ABSolute value One
 \newcommand{\abstw}[1]{\left| \, { #1 } \, \right|}
 \newcommand{\absth}[1]{\left| { #1 } \right|}
 \newcommand{\absf}[1]{| { #1 } |}
@@ -160,7 +160,7 @@
 
 
 
-% ##########
+% ##################
 % Calligraphy letters
 \newcommand{\Acal}{\mathcal{A}}
 \newcommand{\Ccal}{\mathcal{C}}
@@ -194,8 +194,18 @@
 
 
 
+% ##################
+% Functions
+\DeclareMathOperator{\Log}{Log}
+
+
+% Complex analysis
+\DeclareMathOperator{\Real}{\mathfrak{Re}}
+\DeclareMathOperator{\Imag}{\mathfrak{Im}}
+
+
+
 % #############
-% Teoria mnogości
 % \newcommand{\es}{\emptyset}
 % \newcommand{\subs}{\subset}
 % \newcommand{\setm}{\setminus}
@@ -210,8 +220,8 @@
 
 % #############
 % Algebra
-\newcommand{\Real}{\mf{Re}}
-\newcommand{\Imag}{\mf{Im}}
+% \newcommand{\Real}{\mf{Re}}
+% \newcommand{\Imag}{\mf{Im}}
 % \newcommand{\ot}{\otimes}
 % \newcommand{\we}{\wedge}
 \newcommand{\Tr}{\mr{Tr}}
@@ -540,13 +550,14 @@
 
 
 
+
 % ############################
 % Sprawdź czy się nie powtarzają
 
 
 
 
-% \DeclareMathOperator{\sech}{sech}
+
 % \DeclareMathOperator{\csch}{csch}
 % \DeclareMathOperator{\arcsec}{arcsec}
 % \DeclareMathOperator{\arccsc}{arcCsc}
