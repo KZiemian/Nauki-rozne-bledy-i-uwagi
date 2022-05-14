@@ -31,14 +31,14 @@
 % MARGINS
 % ------------------------------
 \setmarginsrb
-{ 0.7in} % left margin
-{ 0.6in} % top margin
-{ 0.7in} % right margin
-{ 0.8in} % bottom margin
-{  20pt} % head height
-{0.25in} % head sep
-{   9pt} % foot height
-{ 0.3in} % foot sep
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
 
 
 
@@ -67,7 +67,7 @@
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
 % ------------------------------
-\usepackage{latexshortcuts}
+\usepackage{latexgeneralcommands}
 
 
 
@@ -144,11 +144,14 @@
   \cite{CarrollHistoriaChrzecijanstwaTomI2009} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
 
 \start \StrWd{17}{4} Gwiazdka w~tej linii jest za~mała.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{41}{13} W~tej linii użyto złego rodzaju gwiazdki
@@ -157,14 +160,17 @@ i~umieszczono ją trochę krzywo.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{61}{20} Gwiazdka w~tej linii jest za~mała.
 
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{65}{6} W~tej linii użyto złego rodzaju gwiazdki.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{73}{12} Gwiazdka w~tej linii jest trochę za~mała
@@ -173,9 +179,11 @@ i~odrobinę krzywo umieszczona.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{75}{4} Gwiazdka w~tej linii jest za mała.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{112}{2} Gwiazdka w~tej linii jest za mała.
@@ -183,21 +191,24 @@ i~odrobinę krzywo umieszczona.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{182}{2} Gwiazdka w~tej linii jest za mała.
 
 \vspace{\spaceFour}
 
 
-\start \tb{Str.~199, wiersze 9, 8 (od~dołu).} Gwiazdki w~tych
+
+\start \textbf{Str.~199, wiersze 9, 8 (od~dołu).} Gwiazdki w~tych
 liniach~są zbyt małe.
 
 \vspace{\spaceFour}
 
 
-\start \tb{Str.~200, wiersze 2, 1 (od~dołu).} Gwiazdki w~tych
+\start \textbf{Str.~200, wiersze 2, 1 (od~dołu).} Gwiazdki w~tych
 liniach~są zbyt małe.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{249}{1} Gwiazdka w~tej linii jest za mała.
@@ -205,9 +216,11 @@ liniach~są zbyt małe.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{265}{2} Gwiazdka w~tej linii jest za mała.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{271}{1} Gwiazdka w~tej linii jest za mała.
@@ -215,9 +228,11 @@ liniach~są zbyt małe.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{282}{14} Gwiazdka w~tej linii jest za mała.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{286}{4} Gwiazdka w~tej linii jest za mała.
@@ -225,7 +240,8 @@ liniach~są zbyt małe.
 \vspace{\spaceFour}
 
 
-\start \tb{Str.~290, wiersze 4, 3 (od~dołu).} Gwiazdki w~tych
+
+\start \textbf{Str.~290, wiersze 4, 3 (od~dołu).} Gwiazdki w~tych
 liniach~są zbyt małe.
 
 \vspace{\spaceFour}
@@ -236,9 +252,11 @@ liniach~są zbyt małe.
 \vspace{\spaceFour}
 
 
+
 \start \StrWg{378}{20} Gwiazdka w~tej linii jest za mała.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{495}{1} Gwiazdka w~tej linii jest za mała.
@@ -246,15 +264,18 @@ liniach~są zbyt małe.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{538}{38} Gwiazdka w~tej linii jest za mała.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{562}{20} W~tej linii nie podano autorów publikacji. Nie
 wiem czy to~błąd, czy~dla tej publikacji nie~trzeba podawać autorów.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWg{575}{4~od~góry i~1 od~dołu} Słowo „męczennik” jest
@@ -270,9 +291,11 @@ w~bardzo brzydki sposób podzielone między te dwie linie.
 
 
 % ##################
-\CenterTB{Błędy}
+\CenterBoldFont{Błędy}
+
 
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -318,53 +341,7 @@ w~bardzo brzydki sposób podzielone między te dwie linie.
   \end{tabular}
 
 
-  % \begin{tabular}{|c|c|c|c|c|}
-  %   \hline
-  %   & \multicolumn{2}{c|}{} & & \\
-  %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-  %   & Powinno być \\ \cline{2-3}
-  %   & Od góry & Od dołu & & \\
-  %   \hline
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   \hline
-  % \end{tabular}
+
 
 
   % \begin{tabular}{|c|c|c|c|c|}
@@ -414,6 +391,61 @@ w~bardzo brzydki sposób podzielone między te dwie linie.
   %   %   & & & & \\
   %   \hline
   % \end{tabular}
+
+
+
+
+
+  % \begin{tabular}{|c|c|c|c|c|}
+  %   \hline
+  %   & \multicolumn{2}{c|}{} & & \\
+  %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+  %   & Powinno być \\ \cline{2-3}
+  %   & Od góry & Od dołu & & \\
+  %   \hline
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   \hline
+  % \end{tabular}
+
+
+
 
 
   \begin{tabular}{|c|c|c|c|c|}
@@ -467,6 +499,9 @@ w~bardzo brzydki sposób podzielone między te dwie linie.
   \end{tabular}
 
 
+
+
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -515,6 +550,9 @@ w~bardzo brzydki sposób podzielone między te dwie linie.
     459 & &  3 & \emph{Religion; the} & \emph{Religin: The} \\
     \hline
   \end{tabular}
+
+
+
 
 
   \begin{tabular}{|c|c|c|c|c|}
@@ -569,6 +607,9 @@ w~bardzo brzydki sposób podzielone między te dwie linie.
   \end{tabular}
 
 
+
+
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -618,6 +659,9 @@ w~bardzo brzydki sposób podzielone między te dwie linie.
   \end{tabular}
 
 
+
+
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -665,6 +709,9 @@ w~bardzo brzydki sposób podzielone między te dwie linie.
     % & & & & \\
     \hline
   \end{tabular}
+
+
+
 
 
   % \begin{tabular}{|c|c|c|c|c|}
@@ -742,7 +789,9 @@ w~bardzo brzydki sposób podzielone między te dwie linie.
   \cite{CarrollHistoriaChrzecijanstwaTomII2010} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \start Tłumaczenie podtytułu tego tomu „Budowanie Chrześcijaństwa”
 jest wyjątkowo niezręczne. Należy zwrócić uwagę, że~Carroll nadał
@@ -765,13 +814,19 @@ prawami.
 \vspace{\spaceFour}
 
 
-\start \StrWd{272}{???}
+
+
+
+% % ##################
+% \CenterBoldFont{Uwagi do konkretnych stron}
+
 
 
 
 
 % ##################
-\CenterTB{Błędy}
+\CenterBoldFont{Błędy}
+
 
 \begin{center}
 
@@ -782,47 +837,50 @@ prawami.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    14  & 10 & & \emph{Eusebius}. & \emph{Eusebius}, \\
-    14  & 11 & & \emph{A.D.324-344} & \emph{A.D. 324-344} \\
-    14  & 11 & & \emph{problems} & \emph{Problems} \\
-    14  & 12 & & \emph{cordoba} & \emph{Cordoba} \\
-    14  & 12 & & \emph{council} & \emph{Council} \\
+    14  & 10 & & \textit{Eusebius}. & \textit{Eusebius}, \\
+    14  & 11 & & \textit{A.D.324-344} & \textit{A.D. 324-344} \\
+    14  & 11 & & \textit{problems} & \textit{Problems} \\
+    14  & 12 & & \textit{cordoba} & \textit{Cordoba} \\
+    14  & 12 & & \textit{council} & \textit{Council} \\
     14  & 13 & & studies & Studies \\
-    14  & & 18 & \emph{church} & \emph{Church} \\
+    14  & & 18 & \textit{church} & \textit{Church} \\
     15  & &  5 & s.90-91 & s.~90-91 \\
     15  & &  4 & s.117 & s.~117 \\
     15  & &  1 & 1971) & 1971 \\
-    16  & &  5 & \emph{fourth} & \emph{Fourth} \\
-    19  & &  7 & \emph{A.D} & \emph{A.D.} \\
-    19  & &  2 & „Jerusalem” & \emph{Jerusalem} \\
-    27  & & 17 & \emph{Egipt; the} & \emph{Egipt: The} \\
+    16  & &  5 & \textit{fourth} & \textit{Fourth} \\
+    19  & &  7 & \textit{A.D} & \textit{A.D.} \\
+    19  & &  2 & „Jerusalem” & \textit{Jerusalem} \\
+    27  & & 17 & \textit{Egipt; the} & \textit{Egipt: The} \\
     27  & & 14 & s.126 & s.~126 \\
     29  & &  2 & 346;Smith & 346; Smith\\
     30  & & 10 & s.285 & s.~285 \\
     31  & &  4 & 341 (Kidd & 341; Kidd \\
     31  & &  3 & 67,71 & 67, 71 \\
     32  & &  6 & s.65 & s.~65 \\
-    32  & &  5 & \emph{Antoniego}. & \emph{Antoniego}, \\
+    32  & &  5 & \textit{Antoniego}. & \textit{Antoniego}, \\
     32  & &  4 & 1987) & 1987). \\
     35  & &  5 & 82,380 & 82, 380 \\
-    38  & &  1 & \emph{church} & \emph{Church} \\
+    38  & &  1 & \textit{church} & \textit{Church} \\
     45  & & 10 & s.454 & s.~454 \\
     45  & &  9 & 30,52 & 30, 52 \\
     45  & &  9 & 68,76 & 68, 76 \\
-    57  & &  7 & \emph{chrześcijaństwie}. & \emph{chrześcijaństwie}, \\
-    66  & & 17 & \emph{Jerome, His} & \emph{Jerome: His} \\
-    72  & &  4 & \emph{Chrysostom} & \emph{Chryzostom} \\
-    74  & &  6 & \emph{saint} & \emph{Saint} \\
-    76  & &  6 & Popes & \emph{Popes} \\
-    76  & &  6 & Church & \emph{Church} \\
-    79  & &  5 & \emph{Claudian; Poetry} & \emph{Claudian: Poetry} \\
-    93  & &  6 & \emph{Jerome, His} & \emph{Jerome: His} \\
-    106 & &  9 & \emph{Eusebius, bishop} & \emph{Eusebius: Bishop} \\
-    114 & &  9 & \emph{Chalcedon, a~Historical}
-           & \emph{Chalcedon: A~Historical} \\
-    116 & &  4 & \emph{Arthur, a~History} & \emph{Arthur: A~History} \\
+    57  & &  7 & \textit{chrześcijaństwie}. & \textit{chrześcijaństwie}, \\
+    66  & & 17 & \textit{Jerome, His} & \textit{Jerome: His} \\
+    72  & &  4 & \textit{Chrysostom} & \textit{Chryzostom} \\
+    74  & &  6 & \textit{saint} & \textit{Saint} \\
+    76  & &  6 & Popes & \textit{Popes} \\
+    76  & &  6 & Church & \textit{Church} \\
+    79  & &  5 & \textit{Claudian; Poetry} & \textit{Claudian: Poetry} \\
+    93  & &  6 & \textit{Jerome, His} & \textit{Jerome: His} \\
+    106 & &  9 & \textit{Eusebius, bishop} & \textit{Eusebius: Bishop} \\
+    114 & &  9 & \textit{Chalcedon, a~Historical}
+           & \textit{Chalcedon: A~Historical} \\
+    116 & &  4 & \textit{Arthur, a~History} & \textit{Arthur: A~History} \\
     \hline
   \end{tabular}
+
+
+
 
 
   \begin{tabular}{|c|c|c|c|c|}
@@ -832,48 +890,52 @@ prawami.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    116 & &  4 & \emph{350-} & \emph{350} \\
+    116 & &  4 & \textit{350-} & \textit{350} \\
     116 & &  2 & 254---257 & 254-257 \\
     124 & &  8 & 266,277,294 & 266, 277, 294 \\
-    124 & &  3 & \emph{Populi; Popular} & \emph{Populi: Popular} \\
-    124 & &  2 & \emph{ontroversies} & \emph{Controversies} \\
-    141 & & 12 & \emph{history} & \emph{History} \\
+    124 & &  3 & \textit{Populi; Popular} & \textit{Populi: Popular} \\
+    124 & &  2 & \textit{ontroversies} & \textit{Controversies} \\
+    141 & & 12 & \textit{history} & \textit{History} \\
     141 & & 12 & Stevens. & Stevens, \\
     141 & &  8 & Stevens. & Stevens, \\
-    154 & &  3 & \emph{Moddle} & \emph{Middle} \\
-    155 & &  6 & \emph{Moddle} & \emph{Middle} \\
-    156 & & 16 & \emph{Invasions; the} & \emph{Invasions: The} \\
-    160 & &  4 & \emph{I, an~introduction} & \emph{I: An~Introduction} \\
-    161 & &  8 & \emph{sixth} & \emph{Sixth} \\
-    167 & 13 & & \emph{History}. & \emph{History}, \\
-    168 & &  9 & \emph{I, an} & \emph{I:~An} \\
+    154 & &  3 & \textit{Moddle} & \textit{Middle} \\
+    155 & &  6 & \textitf{Moddle} & \textit{Middle} \\
+    156 & & 16 & \textit{Invasions; the} & \textit{Invasions: The} \\
+    160 & &  4 & \textit{I, an~introduction}
+           & \textit{I: An~Introduction} \\
+    161 & &  8 & \textit{sixth} & \textit{Sixth} \\
+    167 & 13 & & \textit{History}. & \textit{History}, \\
+    168 & &  9 & \textit{I, an} & \textit{I:~An} \\
     % & & & & \\
     % & & & & \\
-    197 & &  1 & \emph{Great, His} & \emph{Great: His} \\
-    201 & & 21 & \emph{God; the} & \emph{God: The} \\
+    197 & &  1 & \textit{Great, His} & \textit{Great: His} \\
+    201 & & 21 & \textit{God; the} & \textit{God: The} \\
     235 & &  4 & Mann , & Mann, \\
     236 & &  7 & Mann , & Mann, \\
-    238 & & 23 & \emph{conquests} & \emph{Conquests} \\
-    249 & &  3 & \emph{before} & \emph{Before} \\
+    238 & & 23 & \textit{conquests} & \textit{Conquests} \\
+    249 & &  3 & \textit{before} & \textit{Before} \\
     254 & &  2 & V & t.~V \\
     270 & &  3 & 343-344 [ & 343-344. \\
-    294 & &  4 & \emph{papal} & \emph{Papal} \\
-    308 & &  4 & \emph{Century: a~Study} & \emph{Century: A~Study} \\
-    310 & &  6 & \emph{continent} & \emph{Continent} \\
-    314 & &  4 & \emph{is.} & s. \\
-    315 & & 11 & \emph{during} & \emph{During} \\
-    315 & &  3 & \emph{during} & \emph{During} \\
+    294 & &  4 & \textit{papal} & \textit{Papal} \\
+    308 & &  4 & \textit{Century: a~Study} & \textit{Century: A~Study} \\
+    310 & &  6 & \textit{continent} & \textit{Continent} \\
+    314 & &  4 & \textit{is.} & s. \\
+    315 & & 11 & \textit{during} & \textit{During} \\
+    315 & &  3 & \textit{during} & \textit{During} \\
     % & & & & \\
     % & & & & \\
-    388 & & 21 & \emph{Great, the} & \emph{Great: The} \\
-    388 & & 19 & \emph{Dragon, Alfred} & \emph{Dragon: Alfred} \\
+    388 & & 21 & \textit{Great, the} & \textit{Great: The} \\
+    388 & & 19 & \textit{Dragon, Alfred} & \textit{Dragon: Alfred} \\
     388 & & 15 & A.Cotarelo & A.~Cotarelo \\
-    388 & &  3 & \emph{Magno}) & \emph{Magno} \\
-    388 & &  2 & \emph{Great: the} & \emph{Great: The} \\
+    388 & &  3 & \textit{Magno}) & \textit{Magno} \\
+    388 & &  2 & \textit{Great: the} & \textit{Great: The} \\
     \hline
   \end{tabular}
 
 
+
+
+
   % \begin{tabular}{|c|c|c|c|c|}
   %   \hline
   %   & \multicolumn{2}{c|}{} & & \\
@@ -943,6 +1005,10 @@ prawami.
   %   %   & & & & \\
   %   \hline
   % \end{tabular}
+
+
+
+
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -954,51 +1020,58 @@ prawami.
     % & & & & \\
     % & & & & \\
     585 & &  7 & London. & London \\
-    586 &  5 & & Struggle & \emph{Struggle} \\
-    586 & 15 & & \emph{Chalcedon} & \emph{Chalcedon} \\
-    586 & & 15 & \emph{1} & \emph{the~First} \\
+    586 &  5 & & Struggle & \textit{Struggle} \\
+    586 & 15 & & \textit{Chalcedon} & \textit{Chalcedon} \\
+    586 & & 15 & \textit{1} & \textit{the~First} \\
     586 & & 10 & Danielou, Jean & Danielou Jean \\
     586 & & 10 & Henri Marrou & Marrou Henri \\
-    587 & 13 & & \emph{A.D.} & \emph{A.D.}, \\
-    587 & & 17 & \emph{Jerome,} & \emph{Jerome:} \\
+    587 & 13 & & \textit{A.D.} & \textit{A.D.}, \\
+    587 & & 17 & \textit{Jerome,} & \textit{Jerome:} \\
     587 & &  8 & London, & London \\
-    587 & &  2 & \emph{Moesia, a~History} & \emph{Moesia: History} \\
-    588 &  2 & & \emph{Arthur, a~History} & \emph{Arthur: A~History} \\
-    588 &  4 & & \emph{Invasion; the Making}
-           & \emph{Invasion: The making} \\
-    588 & 15 & & \emph{God; the Life} & \emph{God: The Life} \\
-    588 & & 18 & \emph{Britain s} & \emph{Britain's} \\
-    588 & & 17 & \emph{Chalcedon, a~Historical}
-           & \emph{Chalcedon: A~Historical} \\
-    590 & 14 & & \emph{Constantinople; Ecclesiastical}
-           & \emph{Constantinople: Ecclesiastical} \\
+    587 & &  2 & \textit{Moesia, a~History} & \textit{Moesia: History} \\
+    588 &  2 & & \textit{Arthur, a~History} & \textit{Arthur: A~History} \\
+    588 &  4 & & \textit{Invasion; the Making}
+           & \textit{Invasion: The making} \\
+    588 & 15 & & \textit{God; the Life} & \textit{God: The Life} \\
+    588 & & 18 & \textit{Britain s} & \textit{Britain's} \\
+    588 & & 17 & \textit{Chalcedon, a~Historical}
+           & \textit{Chalcedon: A~Historical} \\
+    590 & 14 & & \textit{Constantinople; Ecclesiastical}
+           & \textit{Constantinople: Ecclesiastical} \\
     591 & & 12 & London, & London \\
-    592 & 16 & & \emph{Lyons, Churchman} & \emph{Lyons: Churchman} \\
-    592 & &  9 & \emph{Great, the~King} & \emph{Great: The~King} \\
-    592 & &  8 & \emph{Canterbury; a~Study} & \emph{Canterbury: A~Study} \\
-    592 & &  3 & \emph{Slavs; Saints} & \emph{Slavs: Saints} \\
-    593 &  7 & & \emph{Empire; the~Arabs} & \emph{Empire: The~Arabs} \\
-    593 & 12 & & \emph{Byzantium: the~Imperial}
-           & \emph{Byzantium: The~Imperial} \\
-    593 & 14 & & \emph{Kings; Their} & \emph{Kings: Their} \\
-    593 & 16 & & \emph{England; a~History} & \emph{England: A~History} \\
-    593 & 20 & & \emph{Great: the~Truth} & \emph{Great: The~Truth} \\
-    593 & & 14 & \emph{State; the~Period} & \emph{State: The~Period} \\
-    593 & & 12 & \emph{Dragon; Alfred} & \emph{Dragon: Alfred} \\
-    593 & &  5 & \emph{St.~Peter; the~Birth}
-           & \emph{St.~Peter: The~Birth} \\
-    594 & 12 & & \emph{Dublin: the~History} & \emph{Dublin: The~History} \\
-    594 & &  9 & \emph{Desiderius; Montecassino}
-           & \emph{Desiderius: Montecassino} \\
-    594 & &  1 & \emph{Empire; the~Arabs} & \emph{Empire: The~Arabs} \\
-    595 &  1 & & \emph{Rufus; an~Investigation}
-           & \emph{Rufus: An~Investigation} \\
-    595 &  6 & & \emph{Byzantium: the~Imperial}
-           & \emph{Byzantium: The~Imperial} \\
-    595 &  8 & & \emph{England; a~History} & \emph{England: A~History} \\
-    595 & 11 & & \emph{Kings; Their} & \emph{Kings: Their} \\
+    592 & 16 & & \textit{Lyons, Churchman} & \textit{Lyons: Churchman} \\
+    592 & &  9 & \textit{Great, the~King} & \textit{Great: The~King} \\
+    592 & &  8 & \textit{Canterbury; a~Study}
+           & \textit{Canterbury: A~Study} \\
+    592 & &  3 & \textit{Slavs; Saints} & \textit{Slavs: Saints} \\
+    593 &  7 & & \textit{Empire; the~Arabs} & \textit{Empire: The~Arabs} \\
+    593 & 12 & & \textit{Byzantium: the~Imperial}
+           & \textit{Byzantium: The~Imperial} \\
+    593 & 14 & & \textit{Kings; Their} & \textit{Kings: Their} \\
+    593 & 16 & & \textit{England; a~History}
+           & \textit{England: A~History} \\
+    593 & 20 & & \textit{Great: the~Truth} & \textit{Great: The~Truth} \\
+    593 & & 14 & \textit{State; the~Period} & \textit{State: The~Period} \\
+    593 & & 12 & \textit{Dragon; Alfred} & \textit{Dragon: Alfred} \\
+    593 & &  5 & \textit{St.~Peter; the~Birth}
+           & \textit{St.~Peter: The~Birth} \\
+    594 & 12 & & \textit{Dublin: the~History}
+           & \textit{Dublin: The~History} \\
+    594 & &  9 & \textit{Desiderius; Montecassino}
+           & \textit{Desiderius: Montecassino} \\
+    594 & &  1 & \textit{Empire; the~Arabs} & \textit{Empire: The~Arabs} \\
+    595 &  1 & & \textit{Rufus; an~Investigation}
+           & \textit{Rufus: An~Investigation} \\
+    595 &  6 & & \textit{Byzantium: the~Imperial}
+           & \textit{Byzantium: The~Imperial} \\
+    595 &  8 & & \textit{England; a~History}
+           & \textit{England: A~History} \\
+    595 & 11 & & \textit{Kings; Their} & \textit{Kings: Their} \\
     \hline
   \end{tabular}
+
+
+
 
 
   \begin{tabular}{|c|c|c|c|c|}
@@ -1008,11 +1081,11 @@ prawami.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    595 & 16 & & \emph{State: the~Period} & \emph{State: The~Period} \\
-    595 & 19 & & \emph{Tancred: a~Study} & \emph{Tancred: A~Study} \\
-    595 & & 10 & \emph{Saint Peter; the~Reception}
-           & \emph{Saint Peter: The~Reception} \\
-    596 &  6 & & \emph{440} & 440 \\
+    595 & 16 & & \textit{State: the~Period} & \textit{State: The~Period} \\
+    595 & 19 & & \textit{Tancred: a~Study} & \textit{Tancred: A~Study} \\
+    595 & & 10 & \textit{Saint Peter; the~Reception}
+           & \textit{Saint Peter: The~Reception} \\
+    596 &  6 & & \textit{440} & 440 \\
     % Popraw dalsze błędy w indeksie
     % & & & & \\
     % & & & & \\
@@ -1049,6 +1122,7 @@ prawami.
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
 
 
@@ -1058,7 +1132,7 @@ prawami.
 \Powin www.WydawnictwoWektory.pl \\
 \StrWd{13}{6} \\
 \Jest „Alexander~of Alexandria” \\
-\Powin \emph{Alexander~of Alexandria} \\
+\Powin \textit{Alexander~of Alexandria} \\
 
 
 \vspace{\spaceTwo}
@@ -1100,42 +1174,46 @@ prawami.
     \hline
     % & & & & \\
     % & & & & \\
-    26  & &  2 & \emph{war} & \emph{War} \\
-    31  & &  6 & \emph{Blood; a} & \emph{Blood: A} \\
+    26  & &  2 & \textit{war} & \textit{War} \\
+    31  & &  6 & \textit{Blood; a} & \textit{Blood: A} \\
     33  & &  5 & 122=124 & 122-124 \\
-    38  & &  2 & \emph{Conquistadors; First-Person}
-           & \emph{Conquistadors; First-Person} \\
+    38  & &  2 & \textit{Conquistadors; First-Person}
+           & \textit{Conquistadors; First-Person} \\
     39  & &  5 & (cytat) ; & (cytat); \\
-    40  & &  2 & \emph{America; the} & \emph{America: The} \\
+    40  & &  2 & \textit{America; the} & \textit{America: The} \\
     41  & &  2 & s.384 & s.~384 \\
     48  & &  3 & 309; Zob. & 309; zob. \\
     49  & &  2 & s.99 & s.~99 \\
     67  & &  3 & s.84 & s.~84 \\
     78  & &  3 & & \\
-    97  & &  2 & Marriman,\emph{Suleiman} & Marriman, \emph{Suleiman} \\
+    97  & &  2 & Marriman,\textit{Suleiman} & Marriman, \textit{Suleiman} \\
     97  & &  2 & 94;von & 94; von\\
     97  & &  2 & X,s.& X, s. \\
-    110 & &  2 & \emph{Won; the} & \emph{Won: The} \\
-    111 & &  5 & \emph{Cross. A} & \emph{Cross: A} \\
-    112 & &  7 & \emph{Enemies. The} & \emph{Enemies: The} \\
-    115 & &  5 & \emph{Master. A} & \emph{Master: A} \\
+    110 & &  2 & \textit{Won; the} & \textit{Won: The} \\
+    111 & &  5 & \textit{Cross. A} & \textit{Cross: A} \\
+    112 & &  7 & \textit{Enemies. The} & \textit{Enemies: The} \\
+    115 & &  5 & \textit{Master. A} & \textit{Master: A} \\
     130 & &  9 & s.278 & s.~278 \\
     139 & &  3 & s.31 & s.~31 \\
-    149 & &  3 & \emph{Vasas. A} & \emph{Vasas: A} \\
-    160 & &  5 & \emph{America. The} & \emph{America: The} \\
-    163 & &  4 & \emph{is} & \emph{Is} \\
-    176 & &  1 & Pastor,\emph{History} & Pastor, \emph{History} \\
-    180 & &  2 & \emph{Towns. A} & \emph{Towns: A} \\
-    181 & &  2 & \emph{Altars. Traditional} & \emph{Altars: Traditional} \\
-    217 & & 14 & \emph{Calvin. The} & \emph{Calvin: The} \\
-    217 & &  6 & \emph{Calvin, the} & \emph{Calvin: The} \\
-    229 & &  1 & \emph{V, King} & \emph{V: King} \\
-    230 & &  2 & \emph{V, King} & \emph{V: King} \\
-    234 & &  5 & \emph{VI, the} & \emph{VI: The} \\
-    236 & &  7 & \emph{VI, the} & \emph{VI: The} \\
-    236 & &  5 & \emph{VI, the} & \emph{VI: The} \\
+    149 & &  3 & \textitf{Vasas. A} & \textit{Vasas: A} \\
+    160 & &  5 & \textit{America. The} & \textit{America: The} \\
+    163 & &  4 & \textit{is} & \textit{Is} \\
+    176 & &  1 & Pastor,\textit{History} & Pastor, \textit{History} \\
+    180 & &  2 & \textit{Towns. A} & \textit{Towns: A} \\
+    181 & &  2 & \textit{Altars. Traditional}
+           & \textit{Altars: Traditional} \\
+    217 & & 14 & \textit{Calvin. The} & \textit{Calvin: The} \\
+    217 & &  6 & \textit{Calvin, the} & \textit{Calvin: The} \\
+    229 & &  1 & \textit{V, King} & \textit{V: King} \\
+    230 & &  2 & \textit{V, King} & \textit{V: King} \\
+    234 & &  5 & \textit{VI, the} & \textit{VI: The} \\
+    236 & &  7 & \textit{VI, the} & \textit{VI: The} \\
+    236 & &  5 & \textit{VI, the} & \textit{VI: The} \\
     \hline
   \end{tabular}
+
+
+
 
 
   \begin{tabular}{|c|c|c|c|c|}
@@ -1145,15 +1223,15 @@ prawami.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    236 & &  3 & \emph{VI, the} & \emph{VI: The} \\
-    237 & &  6 & \emph{VI, the} & \emph{VI: The} \\
-    237 & &  5 & \emph{and} & \emph{and the} \\
-    238 & &  5 & \emph{VI, the} & \emph{VI: The} \\
-    238 & &  3 & \emph{VI, the} & \emph{VI: The} \\
-    239 & &  5 & \emph{VI, the} & \emph{VI: The} \\
-    239 & &  3 & \emph{VI, the} & \emph{VI: The} \\
+    236 & &  3 & \textit{VI, the} & \textit{VI: The} \\
+    237 & &  6 & \textit{VI, the} & \textit{VI: The} \\
+    237 & &  5 & \textit{and} & \textit{and the} \\
+    238 & &  5 & \textit{VI, the} & \textit{VI: The} \\
+    238 & &  3 & \textit{VI, the} & \textit{VI: The} \\
+    239 & &  5 & \textit{VI, the} & \textit{VI: The} \\
+    239 & &  3 & \textit{VI, the} & \textit{VI: The} \\
     % & & & & \\
-    249 & &  1 & \emph{Mass, and} & \emph{Mass and} \\
+    249 & &  1 & \textit{Mass, and} & \textit{Mass and} \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -1186,53 +1264,9 @@ prawami.
     \hline
   \end{tabular}
 
-  % \begin{tabular}{|c|c|c|c|c|}
-  %   \hline
-  %   & \multicolumn{2}{c|}{} & & \\
-  %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-  %                             & Powinno być \\ \cline{2-3}
-  %   & Od góry & Od dołu & & \\
-  %   \hline
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   \hline
-  % \end{tabular}
+
+
+
 
   % \begin{tabular}{|c|c|c|c|c|}
   %   \hline
@@ -1281,6 +1315,62 @@ prawami.
   %   %   & & & & \\
   %   \hline
   % \end{tabular}
+
+
+
+
+
+  % \begin{tabular}{|c|c|c|c|c|}
+  %   \hline
+  %   & \multicolumn{2}{c|}{} & & \\
+  %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+  %                             & Powinno być \\ \cline{2-3}
+  %   & Od góry & Od dołu & & \\
+  %   \hline
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   \hline
+  % \end{tabular}
+
+
+
+
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -1290,25 +1380,27 @@ prawami.
     & Od góry & Od dołu & & \\
     \hline
     816 & &  2 & 223- & 223, \\
-    817 &  4 & & \emph{Towns; a} & \emph{Towns: The} \\
-    817 &  7 & & \emph{II, King} & \emph{II: King} \\
-    817 & 10 & & \emph{Northumberland; the} & \emph{Northumberland: The} \\
+    817 &  4 & & \textit{Towns; a} & \textit{Towns: The} \\
+    817 &  7 & & \textit{II, King} & \textit{II: King} \\
+    817 & 10 & & \textit{Northumberland; the}
+           & \textit{Northumberland: The} \\
     817 & 12 & & Hilaire. & Hilaire, \\
-    817 & 13 & & \emph{during} & \emph{During} \\
-    817 & 14 & & \emph{Absolutism. A} & \emph{Absolutism: A} \\
-    817 & & 11 & \emph{V, King} & \emph{V: King} \\
+    817 & 13 & & \textit{during} & \textit{During} \\
+    817 & 14 & & \textit{Absolutism. A} & \textit{Absolutism: A} \\
+    817 & & 11 & \textit{V, King} & \textit{V: King} \\
     817 & &  7 & Henrich. & Henrich, \\
     817 & &  5 & Bradford, & Bradford \\
     817 & &  2 & Anthony. & Anthony, \\
-    817 & &  2 & \emph{Magnificent, Scourge}
-           & \emph{Magnificent: Scourge} \\
-    818 &  3 & & \emph{Bellarmine, Saint} & \emph{Bellarmine: Saint} \\
-    818 &  4 & & \emph{Loyola; the} & \emph{Loyola: The} \\
-    818 &  8 & & \emph{Darts. The} & \emph{Darts: The} \\
-    818 & & 18 & A~\emph{History} & \emph{A~History} \\
-    818 & & 12 & \emph{Playground. A} & \emph{Playground: A} \\
-    818 & &  6 & \emph{Altars; Traditional} & \emph{Altars: Traditional} \\
-    818 & &  6 & \emph{c.~1400-c. 1580} & \emph{1400-1580} \\
+    817 & &  2 & \textit{Magnificent, Scourge}
+           & \textit{Magnificent: Scourge} \\
+    818 &  3 & & \textit{Bellarmine, Saint} & \textit{Bellarmine: Saint} \\
+    818 &  4 & & \textit{Loyola; the} & \textit{Loyola: The} \\
+    818 &  8 & & \textit{Darts. The} & \textit{Darts: The} \\
+    818 & & 18 & A~\textit{History} & \textit{A~History} \\
+    818 & & 12 & \textit{Playground. A} & \textit{Playground: A} \\
+    818 & &  6 & \textit{Altars; Traditional}
+           & \textit{Altars: Traditional} \\
+    818 & &  6 & \textit{c.~1400-c. 1580} & \textit{1400-1580} \\
     818 & &  4 & E.H. & E.H., \\
     818 & &  1 & Philippe. & Philippe, \\
     % Popraw dalszą część bibliografii
@@ -1318,19 +1410,22 @@ prawami.
     % & & & & \\
     % & & & & \\
     820 & &  1 & 1992.. & 1992. \\
-    823 &  2 & & \emph{1621--9} & \emph{1621--1629} \\
-    823 &  6 & & \emph{1520--21} & \emph{1520--1521} \\
+    823 &  2 & & \textit{1621--9} & \textit{1621--1629} \\
+    823 &  6 & & \textit{1520--21} & \textit{1520--1521} \\
     823 & 17 & & (red.). & (red.), \\
     825 &  5 & & Charles. & Charles, \\
     825 & 11 & & John., & John, \\
-    825 & & 15 & \emph{World; Our} & \emph{World: Our} \\
-    825 & & 14 & \emph{the~Sea; the~Treasure} & \emph{the~Sea:
-                                                The~Treasure} \\
+    825 & & 15 & \textit{World; Our} & \textit{World: Our} \\
+    825 & & 14 & \textit{the~Sea; the~Treasure}
+           & \textit{the~Sea: The~Treasure} \\
     825 & &  5 & Carlos. & Carlos, \\
     825 & &  2 & Parkman, Francis. & Parkman Francis, \\
     825 & &  1 & Francis. & Francis, \\
     \hline
   \end{tabular}
+
+
+
 
 
   \begin{tabular}{|c|c|c|c|c|}
@@ -1340,9 +1435,9 @@ prawami.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    826 &  7 & & \emph{Letters} & \emph{Times} \\
+    826 &  7 & & \textit{Letters} & \textit{Times} \\
     826 & 12 & & St.~Louis. & St.~Louis \\
-    826 & &  8 & \emph{leyasu} & \emph{Ieyasu} \\
+    826 & &  8 & \textit{leyasu} & \textit{Ieyasu} \\
     826 & &  4 & R.S. & R.S., \\
     % & & & & \\
     % & & & & \\
@@ -1386,12 +1481,13 @@ prawami.
 
 \noindent
 \StrWd{165}{7} \\
-\Jest Bruce,\emph{AnneBoleyn},s.293,299-307,313-333;Scarisbrick,\emph{HenryVIII},s.349-350;Ridley,\emph{Cran-} \\
-\Powin Bruce, \emph{Anne Boleyn}, s.~293, 299-307, 313-333; Scarisbrick, \emph{Henry VIII}, s.~349-350; Ridley, \emph{Cran-} \\
+\Jest Bruce,\textit{AnneBoleyn},s.293,299-307,313-333;Scarisbrick,\emph{HenryVIII},s.349-350;Ridley,\emph{Cran-} \\
+\Powin Bruce, \textit{Anne Boleyn}, s.~293, 299-307, 313-333; Scarisbrick,
+\textit{Henry VIII}, s.~349-350; Ridley, \emph{Cran-} \\
 \StrWd{165}{6} \\
 \Jest
-\emph{mer},s.106-111.AnnęBoleynstracono19maja1536roku.Miałazaledwiedwadzieściaosiemlat. \\
-\Powin \emph{mer}, s.~106-111. Annę Boleyn stracono 19~maja 1536 roku.
+\textit{mer},s.106-111.AnnęBoleynstracono19maja1536roku.Miałazaledwiedwadzieściaosiemlat. \\
+\Powin \textit{mer}, s.~106-111. Annę Boleyn stracono 19~maja 1536 roku.
 Miała zaledwie dwadzieścia osiem lat. \\
 
 \vspace{\spaceTwo}
@@ -1413,7 +1509,9 @@ Miała zaledwie dwadzieścia osiem lat. \\
   \cite{CarrollHistoriaChrzecijanstwaTomVI2014} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
 
 \start \Str{12} Wcięcia wszystkich akapitów poza pierwszy~są zbyt
 duże.
@@ -1421,12 +1519,14 @@ duże.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{31}{4--2} Zdanie „Jestem zobowiązany Jamesowi
-H.~Billingtonowi, \emph{Fire In the~Minds~of Man}, wielkiemu
+H.~Billingtonowi, \textit{Fire In the~Minds~of Man}, wielkiemu
 historykowi myśli rewolucyjnej” po polsku brzmi źle i~jest trochę bez
 sensu. Nie wiem jednak jak je~poprawić.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{33} Jest dziwne, że~Lamennais jest tu nazwany „wielkim,
@@ -1438,9 +1538,10 @@ pośmiertnej edycji i~uzupełniania tego dzieła oraz pracy tłumacza.
 \vspace{\spaceFour}
 
 
+
 \start \Str{54} Pisze tu, że~bitwa pod Nowym Orleanem była decydującym
 momentem w~Wojnie~1812 roku, powołując~się na książkę Paula Johnsona
-\emph{Birth~of the~Modern}. Jednak w~tej pozycji Johnson przedstawia
+\textit{Birth~of the~Modern}. Jednak w~tej pozycji Johnson przedstawia
 zupełnie inną wersję wydarzeń. Bitwa ta rozegrała~się już po zawarciu
 pokoju w~Londynie \red{Sprawdź miasto}, ale~przed tym jak statek
 z~informacją o~tym dotarła do~USA, jej przebieg nie doprowadził jednak
@@ -1450,6 +1551,7 @@ mogli~się bowiem czuć zwycięzcami wojny jako, że~wygrali ostatnią jej
 bitwę.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{63} Możliwe, że~informacje podane na tej i~na następnych
@@ -1471,10 +1573,12 @@ widzimy, jest wenezuelska Barcelona.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{67}{8} Po~tej linii powinien nastąpić odstęp między
 przypisami.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{76} Następcą zmarłego w~1820~roku Jerzego~III
@@ -1488,6 +1592,7 @@ Jerzego~IV, bądź źle umieszczone w~czasie.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{83}{20--17} Zdanie „Tak samo było w~przypadku Lenina,
 kolejnego wielkiego przywódcy rewolucji, który wychował~się w~pobożnej
 chrześcijańskiej rodzinie, a~fakt, że~wedle jego własnego świadectwa,
@@ -1498,9 +1603,11 @@ przekazywać.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{85}{11} Gwiazdka w~tej linii jest za~mała.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{110} Na~tej stronie jest podane, że~gdy~w~1914 roku
@@ -1514,6 +1621,7 @@ fragmenty zdają~się sobie przeczyć.
 \vspace{\spaceFour}
 
 
+
 \start \Str{125} W~drugim paragrafie na~tej stronie jest trochę
 zamieszani. Na~początku jest mowa o~zebraniu 87 osób szwajcarskim
 Vevey. Na~samym jego końcu jest mowa o~głosowaniu w~kortezach i~ilości
@@ -1524,10 +1632,12 @@ była podana ilość osób zasiadających w~kortezach.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{126}{8} Nie wiem czemu w~tej linii umieszczono słowa
-\emph{Dios! Patria! Fueros! Rey!}
+\textit{Dios! Patria! Fueros! Rey!}
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{135} Fragment utworu poety Grillparzera o~marszałku
@@ -1537,13 +1647,15 @@ Nie jest to żaden błąd, jedynie trochę to dziwne.
 \vspace{\spaceFour}
 
 
+
 \start \Str{145} Dwa ostatnie paragrafy nie~mają wcięcia w~tekście.
 
 \vspace{\spaceFour}
 
 
+
 \start \Str{147} Stwierdzenie, że~to święty Piotr ustanowił papiestwo
-i~, ten błąd jest szczególnie karygodny, Kościół jest sprzeczne
+i~Kościół, ten błąd jest szczególnie karygodny, jest sprzeczne
 z~wiarą katolicką. Zapewne jest to herezja, lecz nie jestem na tyle
 kompetentny by~stwierdzić to na 100\%. Jeśli jest to herezja, to
 wątpię by obarczała sumienie Carrolla, który zapewne po prostu
@@ -1552,12 +1664,14 @@ popełnił głupi błąd pisząc te słowa.
 \vspace{\spaceFour}
 
 
+
 \start \Str{151} Przynajmniej w~mojej opinii na~tej stronie panuje
 pewne zamieszanie. Nie potrafię na~przykład z~całą pewnością
 stwierdzić, które z~wydarzeń opisanych w~ostatnim paragrafie
 odnoszą~się do~pierwszego synodu, a~które do drugiego.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{165}{14--12} Sens zdania „Wielu opuszczało ojczyznę,
@@ -1572,6 +1686,7 @@ może sugerować.
 \vspace{\spaceFour}
 
 
+
 \start \Str{173} Mam problem ze zrozumieniem opisanych tu powodów
 wybuchu wojny francusko-pruskiej. Dlaczego niby informacja o~tym,
 że~Niemcy obrażają Francuzów wysłana do~króla Prus Wilhelma miała
@@ -1580,10 +1695,12 @@ spowodować wypowiedzenie wojny przez Napoleona~III.
 \vspace{\spaceFour}
 
 
+
 \start \Str{218} Na~dole strony pozostawiono puste miejsce, które
 powinien zajmować tekst z~następnej strony.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{225}{3} Po tej linii następuje za~duży odstęp.
@@ -1591,15 +1708,18 @@ powinien zajmować tekst z~następnej strony.
 \vspace{\spaceFour}
 
 
+
 \start \Str{264} Dwa pierwsze paragrafy są źle sformatowane.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{274} Na~dole strony pozostawiono puste miejsce, które
 powinien zajmować tekst z~następnej strony.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{277} Należy sprawdzić, czy w~czasie Powstania Tajpingów
@@ -1612,9 +1732,11 @@ on~o~I~Wojnie Światowej na~stronach 867 i~873.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{299}{1} Czcionka w~tej linii jest za~duża.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{305}{4} Imię ojca Rasputina Efima, na~str.~313 jest
@@ -1623,9 +1745,11 @@ pisane „Jefim”.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{352}{1} Czcionka w~tej linii jest za~duża.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{355} W~pierwszym paragrafie jest mowa o~głosowaniu które
@@ -1637,12 +1761,14 @@ wyników jest błędny.
 \vspace{\spaceFour}
 
 
+
 \start \Str{383} Jeśli niczego nie przeoczyłem, to w~tym miejscu
 ostatni raz jest mowa o~Denikinie i~jego armii, gdy wycofują~się
 na~Kubań i~Krym. Nie dowiadujemy~się tym samym jakie były ich dalsze
 losy.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{397} Ponieważ Polska, zapewne tak samo, jak kraje
@@ -1656,9 +1782,11 @@ wygranej wojnie.
 \vspace{\spaceFour}
 
 
+
 \start \StrWg{416}{22} Po tej linii powinien być większy odstęp.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{432}{8} Na~podstawie wcześniejszej części książki nie
@@ -1667,10 +1795,12 @@ jestem w~stanie powiedzieć o~co chodziło w~sprawie nadużyć w~Gruzji.
 \vspace{\spaceFour}
 
 
+
 \start \Str{435} Na~dole strony pozostawiono puste miejsce, które
 powinien zajmować tekst z~następnej strony.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{437}{8} Wydaje mi~się, że~spotkałem~się z~wersją,
@@ -1678,6 +1808,7 @@ iż~Trocki został zabity ciosem czekanem. Należy to sprawdzić jeszcze
 w~jakiejś innej pracy.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWg{441}{1--2} Szacunki Carrollów, że~w~Chinach żyła jedna
@@ -1689,12 +1820,14 @@ ludności świata.
 \vspace{\spaceFour}
 
 
+
 \start \StrWg{445}{17} Deng Xiaoping żył w~latach 1904--1997, zaś za
 moment przejęcia jego władzy po~Mao Zedongu, który zmarł w~1976 roku,
 należy chyba przyjąć rok~1978. Xiaoping miał więc wtedy nie
 dziewięćdziesiąt lecz siedemdziesiąt cztery lata.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWg{451}{8} Tu~można powtórzyć wątpliwości odnośnie podanej
@@ -1704,9 +1837,11 @@ do~strony~441.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{451}{6} Ten wiersz jest źle wcięty.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{456} Na~dole strony pozostawiono puste miejsce, które
@@ -1716,9 +1851,11 @@ możliwe jest, że~obecny wybór jest lepszy.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{456}{11} Znak „*” jest w~tej linii za mały.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{466}{18} Ponieważ ten cytata zaczyna~się z~małej litery,
@@ -1728,15 +1865,18 @@ błędnie przytoczony. Jednak nie wiem jak go~poprawić.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{466}{1} To~odwołanie bibliograficzne jest niedokończone.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{478}{5--6} W~mojej opinii te~dwie linie~są źle
 sformatowane.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{494} Stwierdzenie, że~Hitler i~Stalin byli w~owym czasie
@@ -1749,10 +1889,12 @@ nie byli równie potężni\footnote{Nie jestem pewien, czy w~owym czasie
 \vspace{\spaceFour}
 
 
+
 \start \Str{497} Należy sprawdzić, czy~rzeczywiście największą grupą
 etniczną w~Związku Radzieckim byli Ukraińcy.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{497} Należy sprawdzić, jakie naprawdę temperatury~są, czy
@@ -1764,6 +1906,7 @@ Carrollom chodziło o~-90 stopni Fahrenheita, to~oznaczałoby około
 \vspace{\spaceFour}
 
 
+
 \start{499} Gdyby na~31 milinów Ukraińców przypadało 11~milionów ton
 zboża to na głowę przypadałoby nie jak piszą Carrollowie
 123~kilogramy, lecz~355~kilogramów zboża. Jeśli zaś byłoby to 10
@@ -1773,11 +1916,13 @@ zboża. Ktoś wyraźnie coś pomylił w~rachunkach.
 \vspace{\spaceFour}
 
 
+
 \start \StrWg{503}{16} W~tym wersie znajduje~się malutkie wcięcie,
 którego nie~powinno być. Osobiście uważam też, że~lepiej brzmiałby
 w~następującej postaci: „Nadejdzie rok czarny, rok krwi i~pożarów”.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{503}{2} Znajdujące~się na~końcu tej linii~„w:”, wygląda
@@ -1786,9 +1931,11 @@ bardzo źle. Należałoby je przenieść na~początek następnej linii.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{507}{4} Ponad tą~linią powinien znajdować~się odstęp.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{516}{6} W~tej linii jest wcięcie, którego według mnie
@@ -1797,18 +1944,21 @@ nie~powinno tu~być.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{526}{6} Ciężko jest zrozumieć od~razu, kim był
 przywoływany w~tej linii Jakub. Jest to zapewne karlistowski następca
-tronu, o~którym była mowa w~rozdziale \emph{Zwycięstwo i~klęska
+tronu, o~którym była mowa w~rozdziale \textit{Zwycięstwo i~klęska
   tradycjonalistów}. \red{Sprawdź kiedyś jak~się on~dokładnie
   nazywał.}
 
 \vspace{\spaceFour}
 
 
+
 \start \StrWg{527}{17} Wcięcie tego akapitu jest zbyt duże.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{530} Według podany tu liczb prawica i~centrum zdobyły
@@ -1819,10 +1969,12 @@ liczby zostały źle podane.
 \vspace{\spaceFour}
 
 
+
 \start \StrWg{537}{6} Skala śmierci w Hiszpańskiej Wojnie Domowej jest
 zbyt mała, by~można ją było nazwać holokaustem.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWg{537}{6} Powinno tu~się znaleźć jawne potępienie zbrodni
@@ -1831,16 +1983,19 @@ nacjonalistów. Popełnienie ich w~reakcji nie znosi winy.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{540}{7} Wcięcie tego akapitu jest zbyt duże.
 
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{543}{1} Do~formy całego przypisu niezbyt pasuje linia
-„Rafael Casa de~la~Vega, \emph{Franco, żołnierz},
+„Rafael Casa de~la~Vega, \textit{Franco, żołnierz},
 tłum.~J.~Chodorowski.”.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{547} Byłoby dziwne, gdyby Churchill ostrzegał Wielką
@@ -1849,6 +2004,7 @@ czasu był on człowiekiem zupełnie pozbawionym wpływów. Jednak
 w~historii zdarzały~się już dziwniejsze rzeczy.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{565} Tekst przypisów~69 i~70 trochę~się ze~sobą nie
@@ -1860,10 +2016,12 @@ temacie to~ta autorstwa Samuela Eliota Morisona.
 \vspace{\spaceFour}
 
 
+
 \start \Str{566} Przypisy od~tłumacza~są źle ponumerowane ilością
 gwiazdek.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWg{572}{12} Gwiazdka w~tej linii jest zbyt mała.
@@ -1871,9 +2029,11 @@ gwiazdek.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{585}{17--15} Te~linie~są źle sformatowane.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{609}{8} Gwiazdka w~tej linii jest za~mała.
@@ -1881,9 +2041,11 @@ gwiazdek.
 \vspace{\spaceFour}
 
 
+
 \start \StrWg{623}{10} Gwiazdka w~tej linii jest zbyt mała.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{778}{4--3} Te dwie linie, łącznie z~„251.” służącym
@@ -1892,6 +2054,7 @@ Samo oznaczenie „251.” jest częścią urwanych w~poprzedniej linii
 numerów stron: 250-251.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{867}{17} Linia jest źle zedytowana. Drugie zdanie w~tej
@@ -1907,7 +2070,8 @@ być zgodnie z~tym sformatowana.
 % ##################
 \newpage
 
-\CenterTB{Błędy}
+\CenterBoldFont{Błędy}
+
 
 \begin{center}
 
@@ -1921,7 +2085,7 @@ być zgodnie z~tym sformatowana.
     7   & &  4 & wszystko$^{ * }$ & wszystko \\
     7   & &  4 & 827 & 837 \\
     7   & &  3 & Rekonkwiście$^{ * }$ & Rekonkwiście \\
-    23  & & 10 & \emph{Vhutch} & \emph{Church} \\
+    23  & & 10 & \textit{Vhutch} & \textit{Church} \\
     24  & & 25 & Zbawiciela$^{ *^{ * } }$ & Zbawiciela$^{ ** }$ \\
     25  & &  9 & 1919 & 1819 \\
     32  & 11 & & dostosowania & do~stosowania \\
@@ -1945,9 +2109,9 @@ być zgodnie z~tym sformatowana.
     127 & 10 & & aż~przez & potem aż~przez \\
     135 & & 12 & doskonalej & doskonałej \\
     137 &  6 & & go & je \\
-    139 & &  5 & \emph{1833} & \emph{1883} \\
+    139 & &  5 & \textit{1833} & \textit{1883} \\
     141 & &  8 & tom~VI, rozdział~XIV & rozdział~VIII, \\
-    141 & &  7 & P\emph{olitical} & \emph{Political} \\
+    141 & &  7 & P\textit{olitical} & \textit{Political} \\
     141 & &  5 & rozdział zatytułowany & rozdział~II, \\
     150 &  5 & & dogmatach; & dogmatach, \\
     151 & &  8 & torturom... & torturom. \\
@@ -1957,6 +2121,9 @@ być zgodnie z~tym sformatowana.
     170 & 16 & & potomek & bratanek \\
     \hline
   \end{tabular}
+
+
+
 
 
   \begin{tabular}{|c|c|c|c|c|}
@@ -1970,7 +2137,7 @@ być zgodnie z~tym sformatowana.
     171 & &  7 & skrajnym wręcz & wręcz skrajnym \\
     177 &  3 & & „byliście & „Byliście \\
     187 & 21 & & roku~Na & roku. Na \\
-    190 & &  1 & Karl Marx & \emph{Karl Marx} \\
+    190 & &  1 & Karl Marx & \textit{Karl Marx} \\
     194 & 12 & & etc.. & etc. \\
     194 & &  8 & spikerze & mówcy \\
     197 & &  7 & 1987) & 1987 \\
@@ -1982,7 +2149,7 @@ być zgodnie z~tym sformatowana.
     210 & &  5 & Carrol & Carroll \\
     223 & & 20 & dna & dnia \\
     228 & &  4 & 2005) & 2005 \\
-    229 & & 14 & \emph{Westrn} & \emph{Western} \\
+    229 & & 14 & \textit{Westrn} & \textit{Western} \\
     233 & & 11 & piaty & piąty \\
     235 & 16 & & rzecz & Rzecz \\
     235 & & 15 & Uranu & Urana \\
@@ -1994,16 +2161,16 @@ być zgodnie z~tym sformatowana.
     248 & &  1 & 2008) & 2008 \\
     265 & & 13 & si & się \\
     267 & &  3 & (1944 ) & (1944) \\
-    269 & &  5 & \emph{Germany, and} & \emph{Germany and} \\
-    270 & &  1 & \emph{s.} & s. \\
+    269 & &  5 & \textit{Germany, and} & \textit{Germany and} \\
+    270 & &  1 & \textit{s.} & s. \\
     273 & &  3 & 1944 & 1994 \\
     294 &  7 & & światu”... & światu... \\
     299 & & 11 & Kołłnotaj & Kołłontaj \\
     299 & &  1 & 1988) & 1988 \\
-    303 & &  4 & \emph{opończa}” & \emph{opończa} \\
+    303 & &  4 & \textit{opończa}” & \textit{opończa} \\
     308 & & 19 & niszczysz & Niszczysz \\
     309 & 22 & & warstw & wszystkich warstw \\
-    317 & &  3 & \emph{Kerensky; the} & \emph{Kerensky: The} \\
+    317 & &  3 & \textit{Kerensky; the} & \textit{Kerensky: The} \\
     \hline
   \end{tabular}
 
