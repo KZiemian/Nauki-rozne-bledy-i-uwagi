@@ -50,12 +50,31 @@
 % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
+% ------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ------------------------------
+\let\lll\undefined  % Amsmath gryzie się z językiem pakietami do języka
+% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm}  % Dalsze wsparcie od AMS
+% \usepackage{siunitx}  % Do prostszego pisania jednostek fizycznych
+\usepackage{upgreek}  % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+% \usepackage{slashed}  % Pozwala w prosty sposób pisać slash Feynmana.
+\usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
+% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% nie wiem.
+
+
 
 % ------------------------------
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
 % ------------------------------
-\usepackage{latexshortcuts}
+\usepackage{latexgeneralcommands}
+\usepackage{mathcommands}
 
 
 
@@ -97,7 +116,7 @@
 
 % ---------------------------------------------------------------------
 % Tytuł, autor, data
-\title{QFT (kwantowa teoria pola)~-- błędy i~uwagi}
+\title{QFT~-- błędy i~uwagi}
 
 % \author{}
 % \date{}
@@ -143,20 +162,23 @@
 % ############################
 \Work{
   Steven Weinberg \\
-  ,,Teoria pól kwantowych. Podstawy.'', \cite{Wei12}.}
+  „Teoria pól kwantowych. Podstawy”, \cite{Wei12}.}
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
 \begin{itemize}
 \item Str. 79. Z faktu, że istnieje macierz odwrotna do
-  $\eta_{ \mu \nu } \La^{ \mu }_{ \rho }$????!!!!!
+  $\eta_{ \mu \nu } \Lcal^{ \mu }_{ \rho }$????!!!!!
 \item
 \end{itemize}
 
 
 
 % ##################
-\CenterTB{Błędy}
+\CenterBoldFont{Błędy}
+
 
 \begin{center}
 
@@ -168,30 +190,32 @@
     & Od góry & Od dołu & & \\
     \hline
     31 & 4 & & $-c^{ 2 } \hbar^{ 2 }$ & $+c^{ 2 } \hbar^{ 2 }$ \\
-    52 & 14 & & $b^{ \da }( \bd{ k } ) \exp( i \om_{ \bd{ k } } t )$
-           & $b^{ \da }( \bd{ k } ) \exp( +i \om_{ \bd{ k } } t )$ \\
-    59 & & 4 & Heinsenberg [72[ & Heinsenberg [72] \\ % Zła pisownia.
-    60 & 5 & & przyspieszone & przyśpieszone \\
-    70 & 2 & & 1961. & 1961). \\
-    79 & 3 & & $\eta_{ \mu \nu } dx^{ ' \mu } dx^{ ' \nu }$
-           & $\eta_{ \mu \nu } dx'^{ \mu } dx'^{ \nu }$ \\
-    79 & 5 & & $\eta_{ \mu \nu } \pd{}{ x^{ ' \mu } }{ x^{ \rho } }
-               \pd{}{ x^{ ' \nu } }{ x^{ \sigma } }$
-           & $\eta_{ \mu \nu } \pd{}{ x'^{ \mu } }{ x^{ \rho } }
-             \pd{}{ x'^{ \nu } }{ x^{ \s } }$ \\
-    86 & & 2 & $\La_{ \rho }^{ -1 \mu } P^{ \rho }$
-           & $\ten[]{ ( \La^{ -1 } ) }{ ^\mu_\rho } P^{ \rho }$ \\
-    282 & 1 & & $S_{ \bd{ p }_{ 1 }', \s_{ 1 }', n_{ 1 }'; \,
-                \bd{ p }_{ 2 }', \s_{ 2 }', n_{ 2 }';\; \cdots, \;
-                \bd{ p }_{ 1 }, \s_{ 1 }, n_{ 1 } ; \, \ld{ p }_{ 2 },
-                \s_{ 2 }, n_{ 2 }; \, \cdots }$
-           & $S_{ \bd{ p }_{ 1 }', \s_{ 1 }', n_{ 1 }'; \, \bd{ p }_{ 2 }',
-             \s_{ 2 }', n_{ 2 }';\; \cdots; \; \bd{ p }_{ 1 }, \s_{ 1 },
-             n_{ 1 } ; \, \bd{ p }_{ 2 }, \s_{ 2 }, n_{ 2 }; \, \cdots }$ \\
-    & & & & \\ \hline
+    % 52 & 14 & & $b^{ \da }( \bd{ k } ) \exp( i \om_{ \bd{ k } } t )$
+    %        & $b^{ \da }( \bd{ k } ) \exp( +i \om_{ \bd{ k } } t )$ \\
+    % 59 & & 4 & Heinsenberg [72[ & Heinsenberg [72] \\ % Zła pisownia.
+    % 60 & 5 & & przyspieszone & przyśpieszone \\
+    % 70 & 2 & & 1961. & 1961). \\
+    % 79 & 3 & & $\eta_{ \mu \nu } dx^{ ' \mu } dx^{ ' \nu }$
+    %        & $\eta_{ \mu \nu } dx'^{ \mu } dx'^{ \nu }$ \\
+    % 79 & 5 & & $\eta_{ \mu \nu } \pd{}{ x^{ ' \mu } }{ x^{ \rho } }
+    %            \pd{}{ x^{ ' \nu } }{ x^{ \sigma } }$
+    %        & $\eta_{ \mu \nu } \pd{}{ x'^{ \mu } }{ x^{ \rho } }
+    %          \pd{}{ x'^{ \nu } }{ x^{ \s } }$ \\
+    % 86 & & 2 & $\La_{ \rho }^{ -1 \mu } P^{ \rho }$
+    %        & $\ten[]{ ( \La^{ -1 } ) }{ ^\mu_\rho } P^{ \rho }$ \\
+    % 282 & 1 & & $S_{ \bd{ p }_{ 1 }', \s_{ 1 }', n_{ 1 }'; \,
+    %             \bd{ p }_{ 2 }', \s_{ 2 }', n_{ 2 }';\; \cdots, \;
+    %             \bd{ p }_{ 1 }, \s_{ 1 }, n_{ 1 } ; \, \ld{ p }_{ 2 },
+    %             \s_{ 2 }, n_{ 2 }; \, \cdots }$
+    %        & $S_{ \bd{ p }_{ 1 }', \s_{ 1 }', n_{ 1 }'; \, \bd{ p }_{ 2 }',
+    %          \s_{ 2 }', n_{ 2 }';\; \cdots; \; \bd{ p }_{ 1 }, \s_{ 1 },
+    %          n_{ 1 } ; \, \bd{ p }_{ 2 }, \s_{ 2 }, n_{ 2 }; \, \cdots }$ \\
+    % & & & & \\
+    \hline
   \end{tabular}
 
 \end{center}
+
 
 \begin{itemize}
 \item[--] Str. 85. \ldots
@@ -199,204 +223,6 @@
 \item[--] Str. 86. równanie na dole
 \end{itemize}
 
-\vspace{\spaceTwo}
-% ############################
-
-
-
-
-
-
-
-
-
-
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Steven Weinberg \\
-  „Teoria pól kwantowych. Tom II: Nowoczesne zastosowanie”, \cite{} }
-
-
-% \CenterTB{Uwagi}
-
-% \start
-
-
-% % \vspace{\spaceFour}
-
-
-
-
-
-% ##################
-\CenterTB{Błędy}
-
-\begin{center}
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    142 & & 14 & powloce & powłoce \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-
-
-  % \begin{tabular}{|c|c|c|c|c|}
-  %   \hline
-  %   & \multicolumn{2}{c|}{} & & \\
-  %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-  %   & Powinno być \\ \cline{2-3}
-  %   & Od góry & Od dołu & & \\
-  %   \hline
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   \hline
-  % \end{tabular}
-
-
-  % \begin{tabular}{|c|c|c|c|c|}
-  %   \hline
-  %   & \multicolumn{2}{c|}{} & & \\
-  %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-  %   & Powinno być \\ \cline{2-3}
-  %   & Od góry & Od dołu & & \\
-  %   \hline
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   %   & & & & \\
-  %   \hline
-  % \end{tabular}
-
-\end{center}
-
-
-% \noindent
-% \Jest  Selected Writings~of Alexandra Kollontai \\
-% \Powin \emph{Selected Writings~of Alexandra Kollontai} \\
-
-% \StrWd{11}{16} \\
-% \Jest  Amerian Seafarers Union \\
-% \Powin \emph{Amerian Seafarers Union} \\
-
-
-
-% \StrWd{11}{5} \\
-% \Jest  Council~of Economic Advisers \\
-% \Powin \emph{Council~of Economic Advisers} \\
-% \StrWd{11}{1} \\
-% \Jest  Council on~Foregin Relations \\
-% \Powin \emph{Council on~Foregin Relations} \\
-% \StrWg{12}{11} \\
-% \Jest \emph{Congress}) --~Kanadyjski Kongres Związków Zawodowych \\
-% \Powin  \emph{Congress} --~Kanadyjski Kongres Związków Zawodowych) \\
-% \StrWd{12}{18} \\
-% \Jest Emergency Committe for~Aid to~Poland \\
-% \Powin  \emph{Emergency Committe for~Aid to~Poland} \\
-% \StrWd{12}{8} \\
-% \Jest (\emph{Froce Ouvri\'{e}re} ) \\
-% \Powin (\emph{Froce Ouvri\'{e}re} --~Główna Konfederacja Pracy
-% --~Siły
-% Pracy) \\
-% \StrWg{13}{10} \\
-% \Jest Generalized System~of Preferences \\
-% \Powin  \emph{Generalized System~of Preferences} \\
-% \StrWd{13}{4} \\
-% \Jest \emph{Leuven}) \\
-% \Powin \emph{Leuven} --~Kotlicki Ośrodek Dokumentacyjny i~Badań
-% Katolickich Uniwersytetu Leuven \\
-% \StrWg{15}{1} \\
-% \Jest Polish American Congress Charitable Foundation \\
-% \Powin  \emph{Polish American Congress Charitable Foundation} \\
-% \StrWg{15}{3} \\
-% \Jest Polish-American Enterprise Fund \\
-% \Powin  \emph{Polish-American Enterprise Fund} \\
-% \StrWg{15}{10} \\
-% \Jest Postal, Telegraph and~Telephone International \\
-% \Powin  \emph{Postal, Telegraph and~Telephone International} \\
-% \StrWg{43}{2} \\
-% \Jest \emph{Univeristy~of Illinois at~Urbana Champaign, 1998} \\
-% \Powin  Univeristy~of Illinois at~Urbana-Champaign, 1998 \\
 
 \vspace{\spaceTwo}
 % ############################
@@ -404,6 +230,385 @@
 
 
 
+
+
+
+
+
+
+% % ############################
+% \Work{ % Autor i tytuł dzieła
+%   Steven Weinberg \\
+%   „Teoria pól kwantowych. Tom II: Nowoczesne zastosowanie”, \cite{} }
+
+
+% % \CenterTB{Uwagi}
+
+% % \start
+
+
+% % % \vspace{\spaceFour}
+
+
+
+
+
+% % ##################
+% \CenterTB{Błędy}
+
+% \begin{center}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     142 & & 14 & powloce & powłoce \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+
+
+%   % \begin{tabular}{|c|c|c|c|c|}
+%   %   \hline
+%   %   & \multicolumn{2}{c|}{} & & \\
+%   %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%   %   & Powinno być \\ \cline{2-3}
+%   %   & Od góry & Od dołu & & \\
+%   %   \hline
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   \hline
+%   % \end{tabular}
+
+
+%   % \begin{tabular}{|c|c|c|c|c|}
+%   %   \hline
+%   %   & \multicolumn{2}{c|}{} & & \\
+%   %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%   %   & Powinno być \\ \cline{2-3}
+%   %   & Od góry & Od dołu & & \\
+%   %   \hline
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   %   & & & & \\
+%   %   \hline
+%   % \end{tabular}
+
+% \end{center}
+
+
+% % \noindent
+% % \Jest  Selected Writings~of Alexandra Kollontai \\
+% % \Powin \emph{Selected Writings~of Alexandra Kollontai} \\
+
+% % \StrWd{11}{16} \\
+% % \Jest  Amerian Seafarers Union \\
+% % \Powin \emph{Amerian Seafarers Union} \\
+
+
+
+% % \StrWd{11}{5} \\
+% % \Jest  Council~of Economic Advisers \\
+% % \Powin \emph{Council~of Economic Advisers} \\
+% % \StrWd{11}{1} \\
+% % \Jest  Council on~Foregin Relations \\
+% % \Powin \emph{Council on~Foregin Relations} \\
+% % \StrWg{12}{11} \\
+% % \Jest \emph{Congress}) --~Kanadyjski Kongres Związków Zawodowych \\
+% % \Powin  \emph{Congress} --~Kanadyjski Kongres Związków Zawodowych) \\
+% % \StrWd{12}{18} \\
+% % \Jest Emergency Committe for~Aid to~Poland \\
+% % \Powin  \emph{Emergency Committe for~Aid to~Poland} \\
+% % \StrWd{12}{8} \\
+% % \Jest (\emph{Froce Ouvri\'{e}re} ) \\
+% % \Powin (\emph{Froce Ouvri\'{e}re} --~Główna Konfederacja Pracy
+% % --~Siły
+% % Pracy) \\
+% % \StrWg{13}{10} \\
+% % \Jest Generalized System~of Preferences \\
+% % \Powin  \emph{Generalized System~of Preferences} \\
+% % \StrWd{13}{4} \\
+% % \Jest \emph{Leuven}) \\
+% % \Powin \emph{Leuven} --~Kotlicki Ośrodek Dokumentacyjny i~Badań
+% % Katolickich Uniwersytetu Leuven \\
+% % \StrWg{15}{1} \\
+% % \Jest Polish American Congress Charitable Foundation \\
+% % \Powin  \emph{Polish American Congress Charitable Foundation} \\
+% % \StrWg{15}{3} \\
+% % \Jest Polish-American Enterprise Fund \\
+% % \Powin  \emph{Polish-American Enterprise Fund} \\
+% % \StrWg{15}{10} \\
+% % \Jest Postal, Telegraph and~Telephone International \\
+% % \Powin  \emph{Postal, Telegraph and~Telephone International} \\
+% % \StrWg{43}{2} \\
+% % \Jest \emph{Univeristy~of Illinois at~Urbana Champaign, 1998} \\
+% % \Powin  Univeristy~of Illinois at~Urbana-Champaign, 1998 \\
+
+% \vspace{\spaceTwo}
+% % ############################
+
+
+
+% % % ####################
+% % \Work{
+% %   Silvan S. Schweber \\
+% %   ,,An~Introduction to~Relativistic Quantum Field Theory'',
+% %   \cite{Sch05} }
+
+
+% % \CenterTB{Uwagi}
+
+% % \start \Str{4} Dyskusja roli pomiaru w~mechanice kwantowej jest
+% % niesatysfakcjonująca, jednak nigdzie jeszcze nie znalazłem dobrej
+% % dyskusji tego problemu, zaś~Schwebera należy pochwalić za zwięzłość
+% % i~klarowność wywodu oraz~jasne stwierdzenie, że~pojęcie pomiaru jest
+% % fundamentalne zarówno dla sformułowania jak i~interpretacji mechaniki
+% % kwantowej.
+
+% % Jednak problem tego czym jest pomiar nie jest w~ogóle postawiony.
+% % Dlaczego niektóre oddziaływania z~układem wywołują kolaps wektora
+% % stanu, inne nie? Dlaczego w~konsekwencji tego niektóre
+% % oddziaływania~są pomiarem, a~inne nie? Dlaczego, w~końcu, układ
+% % zaburzony przez pomiar który dał wartość obserwabli $a'$, skolapsuje
+% % do wektora $| a' \rket \lket a' | \Psi \rket$, a~nie do jakiegoś
+% % innego? Na to pytanie mechanika kwantowa nie udziela odpowiedzi
+% % i~dopóki rozwiązanie tego problemu nie zostanie znalezione, mechanika
+% % kwantowa nie będzie satysfakcjonującą teorią.
+
+% % Drugim, mniej znaczącym problemem, jest to czy prawie wszystkie
+% % pomiary można na poziomie podstawowym opisać jako zderzenie cząstek?
+% % Których w~takim razie nie można do takiego procesu sprowadzić? Czy na
+% % przykład kiedy czytam ten tekst, to pomiarem jaki wykonałem było
+% % rozproszenie fotonu na cząstkach w~mojej siatkówce? Moja skromna
+% % wiedza z~biologii sugeruje, że~jednak coś jeszcze.
+
+% % \start \Str{5} Muszę~się stanowczo nie~zgodzić z~twierdzeniem,
+% % że~znaczenie procesów rozpraszania dla fizyki teoretycznej polega na
+% % tym, że~nie jest konieczne rozumienie sensu fizycznego (lub jak kto
+% % woli, interpretacja) funkcji falowej, gdy cząstki są~blisko siebie
+% % i~silnie oddziałują. Głównym celem nauki jest zrozumienie przyrody,
+% % więc poznanie fizycznego znaczenia funkcji falowej w~takiej procesie
+% % jest jednym z~głównych problemów kwantowej teorii pola.
+
+% % Stwierdzenie, że~nie musimy tego robić dla procesów rozpraszania
+% % i~dlatego są one ważne, jest tylko dowodem na to, iż~jako fizycy
+% % ponieśliśmy porażkę i~uznaliśmy ją za sukces.
+
+% % \start \Str{9}
+
+% % \start \Str{10} Ciągłe używane notacji Diraca, które zaczyna~się
+% % na~tej stronie bardzie zaciemnia mi, niż rozjaśnia, zrozumienie
+% % działania operatorów położenia i~pędu w~konkretnej reprezentacji.
+
+% % \start \Str{13}
+
+% % \CenterTB{Błędy}
+% % \begin{center}
+% %   \begin{tabular}{|c|c|c|c|c|}
+% %     \hline
+% %     & \multicolumn{2}{c|}{} & & \\
+% %     Strona & \multicolumn{2}{c|}{Wiersz} & Jest & Powinno być \\ \cline{2-3}
+% %     & Od góry & Od dołu &  &  \\ \hline
+% %     7 & 13 & & $| \; t_{ 0 } )$ & $\Rket{ t_{ 0 } }$ \\
+% %     7 & & 8 & $U^{ -1 }( t_{ 1 }, t_{ 0 } )$ & $U^{ -1 }( t_{ 0 }, t_{ 1 } )$ \\
+% %     7 & & 9 & (8\tb{)} & (8) \\
+% %     8 & & 4 & $V( t ) H_{ S } V( t ) \cdot V^{ -1 }( t )$
+% %            & $V( t ) H_{ S }$ \\
+% %     10 & & 8 & $\del^{ ( 3 ) }( \bd{ q }' - \bd{ q }'' )$
+% %            & $\del^{ ( 3 ) }( \bd{ q }'' - \bd{ q }' )$ \\
+% %     73 & 10 & & $\eps_{ i j }{}^{ 4 } \Ga_{ k }{}' F \Ga_{ k }$
+% %            & $\eps_{ i j }{}^{ 4 } \Ga_{ i }{}' F \Ga_{ i }$ \\
+% %     & & & & \\
+% %     & & & & \\
+% %     & & & & \\
+% %     & & & & \\ \hline
+% %   \end{tabular}
+% % \end{center}
+% % %
+% % % Powinno być:
+% % \begin{itemize}
+% % \item[--] Str. 22. \ldots ($i = 1, 2,\cdots n$)\ldots
+% % \end{itemize}
+
+% % \vspace{\spaceOne}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% % \newpage
+
+% % \CenterTB{Błędy}
+% % \begin{center}
+% %   \begin{tabular}{|c|c|c|c|c|}
+% %     \hline
+% %     & \multicolumn{2}{c|}{} & & \\
+% %     Strona & \multicolumn{2}{c|}{Wiersz} & Jest & Powinno być \\ \cline{2-3}
+% %     & Od góry & Od dołu &  &  \\ \hline
+% %     % & & & & \\
+% %     % & & & & \\
+% %     % & & & & \\
+% %     % & & & & \\
+% %     % & & & & \\
+% %     % & & & & \\
+% %     % & & & & \\
+% %     % & & & & \\
+% %     % & & & & \\
+% %     \hline
+% %   \end{tabular}
+% % \end{center}
+
+% % \vspace{\spaceTwo}
+
+
+
+
+
+% % % ####################
+% % \Work{
+% %   Steven Weinberg \\
+% %   ,,Teoria pól kwantowych. Podstawy.'', \cite{Wei12}.}
+
+
+% % \CenterTB{Uwagi}
+% % \begin{itemize}
+% % \item Str. 79. Z faktu, że istnieje macierz odwrotna do
+% %   $\eta_{ \mu \nu } \La^{ \mu }_{ \rho }$????!!!!!
+% % \item
+% % \end{itemize}
+
+
+% % \CenterTB{Błędy}
+% % \begin{center}
+% %   \begin{tabular}{|c|c|c|c|c|}
+% %     \hline
+% %     & \multicolumn{2}{c|}{} & & \\
+% %     Strona & \multicolumn{2}{c|}{Wiersz} & Jest & Powinno być \\ \cline{2-3}
+% %     & Od góry & Od dołu &  &  \\ \hline
+% %     31 & 4 & & $-c^{ 2 } \hbar^{ 2 }$ & $+c^{ 2 } \hbar^{ 2 }$ \\
+% %     52 & 14 & & $b^{ \da }( \bd{ k } ) \exp( i \om_{ \bd{ k } } t )$
+% %            & $b^{ \da }( \bd{ k } ) \exp( +i \om_{ \bd{ k } } t )$ \\
+% %     59 & & 4 & Heinsenberg [72[ & Heinsenberg [72] \\ % Zła pisownia.
+% %     60 & 5 & & przyspieszone & przyśpieszone \\
+% %     70 & 2 & & 1961. & 1961). \\
+% %     79 & 3 & & $\eta_{ \mu \nu } dx^{ ' \mu } dx^{ ' \nu }$
+% %            & $\eta_{ \mu \nu } dx'^{ \mu } dx'^{ \nu }$ \\
+% %     79 & 5 & & $\eta_{ \mu \nu } \pd{}{ x^{ ' \mu } }{ x^{ \rho } }
+% %                \pd{}{ x^{ ' \nu } }{ x^{ \sigma } }$
+% %            & $\eta_{ \mu \nu } \pd{}{ x'^{ \mu } }{ x^{ \rho } }
+% %              \pd{}{ x'^{ \nu } }{ x^{ \s } }$ \\
+% %     86 & & 2 & $\La_{ \rho }^{ -1 \mu } P^{ \rho }$
+% %            & $\ten[]{ ( \La^{ -1 } ) }{ ^\mu_\rho } P^{ \rho }$ \\
+% %     282 & 1 & & $S_{ \bd{ p }_{ 1 }', \s_{ 1 }', n_{ 1 }'; \,
+% %                 \bd{ p }_{ 2 }', \s_{ 2 }', n_{ 2 }';\; \cdots, \;
+% %                 \bd{ p }_{ 1 }, \s_{ 1 }, n_{ 1 } ; \, \ld{ p }_{ 2 },
+% %                 \s_{ 2 }, n_{ 2 }; \, \cdots }$
+% %            & $S_{ \bd{ p }_{ 1 }', \s_{ 1 }', n_{ 1 }'; \, \bd{ p }_{ 2 }',
+% %              \s_{ 2 }', n_{ 2 }';\; \cdots; \; \bd{ p }_{ 1 }, \s_{ 1 },
+% %              n_{ 1 } ; \, \bd{ p }_{ 2 }, \s_{ 2 }, n_{ 2 }; \, \cdots }$ \\
+% %     & & & & \\ \hline
+% %   \end{tabular}
+% % \end{center}
+
+% % \begin{itemize}
+% % \item[--] Str. 85. \ldots
+% % \item[--] Str. 86. Równania (2.5.1) i\ldots
+% % \item[--] Str. 86. równanie na dole
+% % \end{itemize}
 
 
 
@@ -414,7 +619,7 @@
 % Bibliografia
 \bibliographystyle{plalpha}
 
-\bibliography{}{}
+\bibliography{PhilNaturBooks}{}
 
 
 
