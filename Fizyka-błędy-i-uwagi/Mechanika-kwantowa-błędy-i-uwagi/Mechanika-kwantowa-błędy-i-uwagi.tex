@@ -1,0 +1,797 @@
+% Autor: Kamil Ziemian
+
+% ---------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ------------------------------
+\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
+% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+% \usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
+% \usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
+% wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ------------------------------
+% MARGINS
+% ------------------------------
+\setmarginsrb
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
+
+
+
+% ------------------------------
+% Często przydatne pakiety
+% ------------------------------
+% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+% ------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ------------------------------
+\let\lll\undefined  % Amsmath gryzie się z językiem pakietami do języka
+% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm}  % Dalsze wsparcie od AMS
+% \usepackage{siunitx}  % Do prostszego pisania jednostek fizycznych
+\usepackage{upgreek}  % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+% \usepackage{slashed}  % Pozwala w prosty sposób pisać slash Feynmana.
+\usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
+% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% nie wiem.
+
+
+
+% ##########
+% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
+\newtheorem{twr}{Twierdzenie}  % Komenda wprowadzająca otoczenie
+% ,,twr'' do pisania twierdzeń matematycznych
+\newtheorem{defin}{Definicja}  % Analogicznie jak powyżej
+\newtheorem{wni}{Wniosek}
+
+
+
+% ------------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ------------------------------
+\usepackage{mechanikakwantowa}  % Pakiet napisany konkretnie dla tego pliku.
+\usepackage{latexgeneralcommands}
+\usepackage{mathcommands}
+
+
+
+% ---------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% ---------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ------------------------------
+% Ustawienia różnych parametrów tekstu
+% ------------------------------
+\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
+
+
+
+% ------------------------------
+% Pakiet "hyperref"
+% Polecano by umieszczać go na końcu preambuły.
+% ------------------------------
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł, autor, data
+\title{Mechanika kwantowa --~błędy i~uwagi}
+
+% \author{}
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+% ######################################
+\section{Mechanika kwantowa}
+
+\vspace{\spaceTwo}
+% ######################################
+
+
+
+% ############################
+\Work{ % Autorzy i tytuł dzieła
+  Ramamurti Shankar \\
+  „Mechanika kwantowa”, \cite{ShankarMechanikaKwantowa2006} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+\start \Str{74} Na rysunku 1.8 b) aby otrzymać poprawny wykres
+pochodnej funkcji Gaussa należy odbić wykres przedstawiony względem osi
+$y = 0$.
+
+\vspace{\spaceFour}
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % & & & & \\
+    23  & 19 & & antyrównoległą & równoległą \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\noindent
+
+Str. 20. Zdanie na dole strony jest mętne. Popraw to.?????
+
+Str. 26. \ldots tylko wtedy, gdy $| V \rangle = 0$\ldots
+
+Str. 78. % \ii czy i?
+$$\ldots = i \int_{a}^{b} \frac{ dg^{ * } }{ dx } f( x ) \dPL x \, .$$
+
+Str. 81.
+  $$\langle k' | X | k \rangle = \frac{ 1 }{ 2 \pi } \int_{ -\infty
+  }^{ \infty } \e^{ -i k' x } x \e^{ i k x } \dPL x = -i \frac{ d }{ dk } \bigg( \frac{ 1 }{ 2 \pi } \int_{ -\infty }^{ \infty } \e^{ i ( k - k' ) x } \bigg) = -i \delta'( k - k' ) \, .$$ Wobec
+  tego, jeśli $| g( k ) \rangle$ jest wektorem, którym w bazie $K$
+  odpowiada funkcja $g( k )$, to
+$$X| g( k ) \rangle = \bigg| \frac{ -\ii \dPL g( k ) }{ \dPL k } \bigg\rangle \, .$$
+Podsumujmy: w bazie $X$ operator $X$ działa jak $x$, a operator $K$
+jak $-i d / d x$ (na funkcje $f( x )$), a w bazie $K$ działa jak
+$k$, a operator $X$ jak $-i d / d k$\ldots
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Autorzy i tytuł dzieła
+  R. Shankar \\
+  „Mechanika kwantowa”, \cite{Sha06}.}
+
+% \newcommand{\ii}{\mathrm{i}}  % Shankar się burzy bez tego
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu &  &  \\
+    \hline
+    23 & 19 & & antyrównoległą & równoległą \\
+    % & & & & \\
+    224 & & 6 & $\left\{ -\frac{ 1 }{ i } [ ( y_{ 2  } - y_{ 1 } )^{ 2 }
+                + ( y_{ 1 } - y_{ 0 } )^{ 2 } ] \right\}$
+           & $\exp\left\{ -\frac{ 1 }{ i } [ ( y_{ 2  } - y_{ 1 } )^{ 2 }
+             + ( y_{ 1 } - y_{ 0 } )^{ 2 } ] \right\}$ \\
+    225 & 9 & & $N \varepsilon \to t_{ n } - t_{ 0 }$
+           & $N \varepsilon = t_{ n } - t_{ 0 }$ \\
+    228 & & 8 & $m$ & $\frac{ 1 }{ 2 } m$ \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+ Str. 20. Zdanie na dole strony jest mętne. Popraw to.?????
+
+ Str. 26. \ldots tylko wtedy, gdy $| V \rangle = 0$\ldots
+
+ Str. 78.
+  $$\ldots = i \int_{a}^{b} \frac{ dg^{ * } }{ dx } f( x ) \dPL x \, .$$
+
+  Str. 81.
+    $$\langle k' | X | k \rangle = \frac{ 1 }{ 2 \uppi } \int_{
+    -\infty }^{ \infty } \e^{ -i k' x } x \e^{ i k x } \dPL x =
+    -i \frac{ d }{ dk } \bigg( \frac{ 1 }{ 2 \pi } \int_{ -\infty
+  }^{ \infty } \e^{ i ( k - k' ) x } \bigg) = -i \delta'( k - k'
+    ) \, .$$
+  Wobec tego, jeśli $| g( k ) \rangle$ jest wektorem, którym w bazie
+  $K$ odpowiada funkcja $g( k )$, to
+$$X| g( k ) \rangle = \bigg| \frac{ -i d g( k ) }{ dk } \bigg\rangle \, .$$
+Podsumujmy: w bazie $X$ operator $X$ działa jak $x$, a operator $K$
+jak $-i d / dx$ (na funkcje $f( x )$), a w bazie $K$ działa jak
+$k$, a operator $X$ jak $-i d / dk$\ldots
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Autorzy i tytuł dzieła
+  L. I. Schiff \\
+  „Mechanika kwantowa”, \cite{Sch87}.}
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+Nie rozumiem, i~chyba nie~powinienem rozumieć, eksperymentów
+  ilustrujących zasadę nieoznaczoności i~kolaps funkcji falowej
+  (słynny eksperyment z~dwoma szczelinami). We wszystkich tych
+  zagadnieniach centralną rolę odgrywa foton, który z~natury swojej
+  jest cząstką relatywistyczną i~nie~można go opisać w~ramach
+  nierelatywistycznej mechaniki kwantowej której poświęcona jest
+  większa część książki. Co prawda eksperyment dyfrakcji na dwóch
+  szczelinach można przeprowadzić dla~cząstek nierelatywistycznych, to
+  przy pozostałych należy~się chwilę zastanowić. Podejrzewam jednak,
+  że można znaleźć ich nierelatywistyczne odpowiedniki. Jednak w~samej
+  nierelatywistycznej mechanice kwantowej foton nie występuje, żadna
+  też inna cząstka nie~jest~potrzeba, by~relacje
+  nieoznaczoności~wynikały~z~jej formalizmu matematycznego. Jak
+  zauważył to Konrad Szymański, wynika to po~prostu z~rozciągłości,
+  w~szczególnym przypadku, przestrzennej paczki falowej.
+
+  \textbf{Str 21.} Jak zauważył Paweł Duch, nierówność (3.2)
+  nie~może być prawdziwa, bo istnieją stany własne $J_{ z }$.
+
+ \textbf{Str 59.} Choć odległość między dwoma sąsiednimi
+  wektorami $\mathbf{k}$ wynosi $\frac{ 2 \pi }{ L }$ i~można ją
+  uczynić dowolnie małą przez odpowiedni dobór $L$, to analogiczne
+  stwierdzenie odnośnie energii jest błędne. Przyjmując wektory
+  sąsiednie jako
+  $\mathbf{k}_{ 1 } = \frac{ 2 \pi }{ L } [ n_{ x }, n_{ y }, n_{ z }
+  ]$
+  i~$\mathbf{k}_{ 1 } = \frac{ 2 \pi }{ L } [ n_{ x } + 1, n_{ y },
+  n_{ z } ]$ różnica ich energii kinetycznej wynosi:
+  \begin{displaymath}
+    \frac{ \hbar^{ 2 } \mathbf{k}_{ 2 }^{ 2 } }{ 2 m } - \frac{ \hbar^{ 2 } \mathbf{k}_{ 1 }^{ 2 } }{ 2 m } = \frac{ \hbar^{ 2 } }{ 2 m } \frac{ ( 2 n_{ x } + 1 ) }{ L^{ 2 } }.
+  \end{displaymath}
+  Przy ustalonym $L$ ta wielkość jest dowolnie duża dla odpowiednio
+  wysokiego $n_{ x }$. Odległości między sąsiednimi stanami można
+  uważać, za małe tylko jeśli mamy górne ograniczenie na energię,
+  mówiąc inaczej jeśli w~układzie mamy energię Fermiego.
+
+
+
+% ##################
+  \CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    & & & & \\
+    17 & 12 & & 1904 & 1905 \\
+    31 & & 4 & jakakolwiek & taka \\
+    35 & 9 & & $| \psi( \mathbf{r}, t |^{ 2 }$ & $| \psi( \mathbf{r}, t ) |^{ 2 }$ \\
+    42 & 2 & & ograniczone & zlokalizowane \\
+    54 & 16 & & wartości & dyskretne wartości \\
+    54 & & 2 & dwom & dwóm \\
+    62 & & 8 & $z + z'$ & $z - z'$ \\
+    & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\noindent
+\textbf{Str. 21, wiersz 16.} \\
+\textbf{Jest:} orbity**.Równanie(3.3)implikuje\ldots \\
+\textbf{Powinno być:} orbity**. Równanie (3.3) implikuje\ldots \\
+\textbf{Str. 54, wiersz 18.} \\
+\textbf{Jest:} w~odpowiadających im punktach\ldots  \\
+\textbf{Powinno być:} w~obszarze przez te ścianki zajętym\ldots \\
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Autorzy i tytuł dzieła
+  Marian Grabowski, Roman S.~Ingarden \\
+  „Mechanika kwantowa. Ujęcie w~przestrzeni Hilberta”,
+  \cite{GrabowskiIngardenMechanikaKwantowa1987} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+Powinna być zamieszczona uwaga, że każda skończenie wymiarowa
+  podprzestrzeń przestrzeni Hilberta (ogólniej: unormowanej), jest
+  domknięta. Wynika to, choćby z tego, że każda podprzestrzeń
+  skończenie wymiarowa jest lokalnie zwarta.
+
+ Str. Jest tu przykład rozumowania z ogromną dziurą. Nie mozemy
+  kożytać z własności przetrzeni Hilberta dopóki nie udowodnimy, że
+  jest to przestrzeń Hilberta.
+
+ Str. 27. Jest tu pewne zamieszanie odnośnie jednoznaczności
+  rozkładu. Rozkład na element najbliższy w danej podprzestrzeni i
+  część ortogonalą musi być jednoznaczny, jeśli istnieje, ze względu
+  na jednoznaczność rzutu. Nie mniej, nie rozstrzyga to problmu, czy
+  istnieje alternatywny rzut na te poprzestrzenie. Negatwyną odpowiedź
+  daje nam fakt iż:
+  $\mathcal{ M } \cup \mathcal{ M }^{ \bot } = \{ \emptyset \}$.
+
+ Str. 27. Przedstawione tu pojęcie zupełności jest trochę
+  myslące. Podana tu definicja zupełności odpowiada pojęciu
+  \emph{totalności} omówionej w książce Waltera Thirring ,,Fizyka
+  matematyczna. Tom 3''. Przedewszystkim z podanej definicji zbioru
+  zupełnego nie wynika, że każdy wektor z $\mathcal{ H }$ można
+  przedstawić jako szereg elementów tego zbioru. Stąd właśnie Thirring
+  rozróżnia pojęcie totalności i zupełności.
+
+ Str. 27. W dowodach Wniosków I i II, jest dwa razy użyte
+  twierdzenie, że wektor ortogonalny do danego zbioru jest też
+  ortogonalny do jego domknięcia, w dowodzie pierwszego wniosku
+  wyrażone słownie, w drugim za pomocą wzorów. Warto byłoby zrobić to
+  bardzie elegancko.
+
+ Str. 28. W dowodzie wniosku I.2. jest coś dziwnego. Uwaga, że
+  należy przyjrzeć się uzyskanym sumom prostym i wywnioskować z nich,
+  iż $[ \mathcal{ M } ]=( \mathcal{ M }^{ \bot } )^{ \bot }$,równe
+  dobrze prowadzi od razu do wniosku
+  $[ \mathcal{ M } ]^{ \bot } = \mathcal{ M }^{ \bot }$. Zachodzi
+  bowiem twierdzenie: jeżeli
+  $A_{ 1 } \oplus A_{ 2 } = B_{ 1 } \oplus B_{ 2 } = X$ i
+  $B_{ i } \subset A_{ i }$ to $B_{ i } = A_{ i }$. Załóżmy,że tak nie
+  jest. Wtedy istnieje
+  $( x_{ 1 }, x_{ 2 } ) \in A_{ 1 } \oplus A_{ 2 }$, taka że
+  $( x_{ 1 }, x_{ 2 } ) \notin B_{ 1 } \oplus B_{ 2 }$. Teraz istnieje
+  taki $( y_{ 1 }, y_{ 2 } ) \in B_{ 1 } \oplus B_{ 2 }$, że
+  $x_{ 1 } + x_{ 2 } = y_{ 1 } + y_{ 2 }$, czyli
+  $A_{ 1 } \oplus A_{ 2 }$ niejest sumą prostą.
+
+ Str. 38. Pojawia się tu pojęcie operatora ograniczonego, które
+  jest wprowadzone dopiero na stronie 39.
+
+ Str. 40. W dowodzie lematu II.1, gdy mowa jest o udowodnieniu
+  pierwszej równości w punkcie a), w istocie udowodniono równość:
+  $$|| A || = \sup_{ || \varphi || = 1 } || A \varphi || \, .$$
+
+ Str. 46. Punkty twierdzenia są ustawione w dziwnej kolejności,
+  biorąc pod uwagę logikę dowodu.
+
+ Str. 48. Z tego, że dana liczba nie należy do widma, nie wynika
+  że nie istnieje dla niej rezolwenta.
+
+ Str. 49. Drugie stwierdzenie z punktu (\romannumeral4), jest już
+  zawarte w punkcie (\romannumeral2).
+
+ Str. 52. Użyte tu pojęcie funkcji charakterystycznej, nie jest
+  chyba nigdzie w książce przedstawione.
+
+ Str. 57. Warto byłoby omówić szerszej pojęcie domkniętego
+  rozszerzenia operatora, domykalności operatora i jego domknięcia. W
+  szczególności z twierdzenia o wykresie domkniętym wynika, że
+  domknięcie opratora jest zawsze operatorem ograniczonym.
+
+ Str. 58. Uwaga o twierdzeniu II (\romannumeral3) jest zupełnie
+  niezrozumiała.
+
+ Str. 58. Zdefiniowaniu rezolwenty i widma operatora
+  nieograniczonego powinno zostać poświęcone więcej miejsca.
+
+ Str. 58. Nie dodano, że widmo nieograniczonego operatora
+  domykalnego, definiujemy jako widmo jego domknięcia.
+
+ Str. 58. Jedyność wektora $\eta$ wynika już z lematu Riesza.
+
+ Str. 80. Ustalenie takiej wartości stałej $C$, ani w ogóle
+  ustalenie jej wartości, nie jest potrzebne w rozważanym zagadnieniu.
+
+ Str. 313. Nie wspomniano tu w jakim sensie dane ciągi funkcji
+  mają być zbieżne. Osoba znająca teorię całki Lebesgue'a wie, że
+  wystarczy założyć zbieżność punktową, a nawet tylko zbieżność
+  punktową prawie wszędzie.
+
+ Str. 315. W twierdzeniu Lebesgue'a o zbieżności majoryzowanej
+  brakuje założenia o zbieżności rozważanego ciągu funkcji.
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % & & & & \\
+    21  &  1 & & $\{ x ,\! \absOne{ \psi( x ) - \varphi( x ) } > 0 \}$
+           & $\{ x ;\, | \psi( x ) - \varphi( x )| > 0 \}$ \\
+    27  & 12 & & $\Hcal_{ 1 } \otimes \Hcal_{ 2 }$ & $\Hcal_{ 1 } \oplus \Hcal_{ 2 }$ \\
+    27  & 13 & & $\Rcal \otimes \Rcal^{ \bot }$ & $\Rcal \oplus \Rcal^{ \bot }$ \\
+    30  & & 18 & $\xi - \varphi_{ k } ||$ & $|| \xi - \varphi_{ k } ||$ \\
+    32  & & 11 & Teraz$f( a ) = g( 0 )$,$f( b )$
+           & Teraz $f( a ) = g( 0 )$, $f( b )$ \\
+    34  & & 15 & & $[ a, b ]$ \\
+    101 & &  4 & $Px )$ & $P( x )$ \\
+    311 & 10 & & $i$.Jeżeli & $i$. Jeżeli \\
+    311 & 15 & & $X$ spełniającą & $X$, spełniającą \\
+    312 & & 10 & $\mu$ skończona & $\mu$-skończona \\
+    313 &  6 & & $\{ x ;\! f( x ) > a \}$ & $\{ x ;\, f( x ) > a \}$ \\
+    313 & 15 & & $0 = a_{ 0 }$ & $0 \leq a_{ 0 }$ \\
+    313 & 15 & & $x,$ & $x;$ \\
+    313 & 16 & & $A_{ 0 } \ldots \cup A_{ n }$
+           & $A_{ 0 } \cup \ldots \cup A_{ n }$ \\
+    315 & 3 & & $A^{ 0 } \leq f_{ 1 }( x )$ & $A: 0 \leq f_{ 1 }( x )$ \\
+    318 & & 7 & Caucy'ego & Cauchy'ego \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\begin{itemize}
+\item[--] Str. 27. Niech $\varphi \bot [ \mathcal{ P } ]$. Wówczas
+  $\varphi \bot \mathcal{ P }$ i $\varphi = 0$.
+\item[--] Str. 37.
+  \ldots$\psi = \frac{ \overline{ l ( \varphi_{ 0 } ) } }{ ||
+    \varphi_{ 0 } ||^{ 2 } } \varphi_{ 0 } \, .$
+\item[--] Str. 40. \ldots punkcie $D( A )$\ldots
+\item[--] Str. 40. \ldots określone na $D( A )$\ldots
+\item[--] Str. 41. \ldots dużych $n$ mamy
+  $|| A_{ n } - A_{ m } || < 2 \epsilon$.
+\item[--] Str. 47. \ldots wynika, że
+  $S_{ \lambda } = ( \lambda I - A )^{ -1 } \in B( \mathcal{ H } )$.
+\item[--] \ldots być równo zbiorowi $\{ 0 \}$ \ldots
+\item[--] Str. 54 \ldots może być równa zbiorowi $\{ 0 \}$\ldots
+\item[--] Str. 71. \ldots$A^{ * } A = S U^{ * } U S = S E S$\ldots
+\item[--] Str. 74. \ldots interpretacją. Teraz\ldots
+\item[--] Str. 85.
+  $$\ldots = -i \frac{ d }{ dx } \frac{ 1 }{ \sqrt{ 2 \pi } }
+  \int\limits_{ -\infty }^{ +\infty } ( \e^{ i x s } - 1 ) \varphi( s ) \dPL s \textrm{.}$$
+\item[--] Str. 86.
+  $$F^{ -1 } Q \varphi = -i \frac{ d }{ dx } \frac{ 1 }{ \sqrt{ 2 \pi }
+  } \int\limits_{ -\infty }^{ +\infty } ( \e^{ i x s } - 1 )
+  \varphi( s ) \dPL s = \frac{ 1 }{ \hbar } P F^{ -1 } \varphi$$
+\item[--] Str. 311. \ldots dla każdego $i$. Jeżeli\ldots
+\end{itemize}
+
+\Work{
+  Marian Grabowski, Roman S. Ingarden \\
+  ,,Mechanika kwantowa. Ujęcie w przestrzeni Hilberta'', \cite{GI87}.}
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+\begin{itemize}
+\item Powinna być zamieszczona uwaga, że każda skończenie wymiarowa
+  podprzestrzeń przestrzeni Hilberta (ogólniej: unormowanej), jest
+  domknięta. Wynika to, choćby z tego, że każda podprzestrzeń
+  skończenie wymiarowa jest lokalnie zwarta.
+\item Str. Jest tu przykład rozumowania z ogromną dziurą. Nie mozemy
+  kożytać z własności przetrzeni Hilberta dopóki nie udowodnimy, że
+  jest to przestrzeń Hilberta.
+\item Str. 27. Jest tu pewne zamieszanie odnośnie jednoznaczności
+  rozkładu. Rozkład na element najbliższy w danej podprzestrzeni i
+  część ortogonalą musi być jednoznaczny, jeśli istnieje, ze względu
+  na jednoznaczność rzutu. Nie mniej, nie rozstrzyga to problmu, czy
+  istnieje alternatywny rzut na te poprzestrzenie. Negatwyną odpowiedź
+  v daje nam fakt iż:
+  $\mathcal{ M } \cup \mathcal{ M }^{ \bot } = \{ \emptyset \}$.
+\item Str. 27. Przedstawione tu pojęcie zupełności jest trochę
+  myslące. Podana tu definicja zupełności odpowiada pojęciu
+  \emph{totalności} omówionej w książce Waltera Thirring ,,Fizyka
+  matematyczna. Tom 3''. Przedewszystkim z podanej definicji zbioru
+  zupełnego nie wynika, że każdy wektor z $\mathcal{ H }$ można
+  przedstawić jako szereg elementów tego zbioru. Stąd właśnie Thirring
+  rozróżnia pojęcie totalności i zupełności.
+\item Str. 27. W dowodach Wniosków I i II, jest dwa razy użyte
+  twierdzenie, że wektor ortogonalny do danego zbioru jest też
+  ortogonalny do jego domknięcia, w dowodzie pierwszego wniosku
+  wyrażone słownie, w drugim za pomocą wzorów. Warto byłoby zrobić to
+  bardzie elegancko.
+\item Str. 28. W dowodzie wniosku I.2. jest coś dziwnego. Uwaga, że
+  należy przyjrzeć się uzyskanym sumom prostym i wywnioskować z nich,
+  iż $[ \mathcal{ M } ]=( \mathcal{ M }^{ \bot } )^{ \bot }$,równe
+  dobrze prowadzi od razu do wniosku
+  $[ \mathcal{ M } ]^{ \bot } = \mathcal{ M }^{ \bot }$.  Zachodzi
+  bowiem twierdzenie: jeżeli
+  $A_{ 1 } \oplus A_{ 2 } = B_{ 1 } \oplus B_{ 2 } = X$ i
+  $B_{ i } \subset A_{ i }$ to $B_{ i } = A_{ i }$.  Załóżmy,że tak
+  nie jest. Wtedy istnieje
+  $( x_{ 1 }, x_{ 2 } ) \in A_{ 1 } \oplus A_{ 2 }$, taka że
+  $( x_{ 1 }, x_{ 2 } ) \notin B_{ 1 } \oplus B_{ 2 }$.  Teraz
+  istnieje taki $( y_{ 1 }, y_{ 2 } ) \in B_{ 1 } \oplus B_{ 2 }$, że
+  $x_{ 1 } + x_{ 2 } = y_{ 1 } + y_{ 2 }$, czyli
+  $A_{ 1 } \oplus A_{ 2 }$ niejest sumą prostą.
+\item Str. 38. Pojawia się tu pojęcie operatora ograniczonego, które
+  jest wprowadzone dopiero na stronie 39.
+\item Str. 40. W dowodzie lematu II.1, gdy mowa jest o udowodnieniu
+  pierwszej równości w punkcie a), w istocie udowodniono równość:
+  $$|| A || = \sup_{ || \varphi || = 1 } || A \varphi || \, .$$
+\item Str. 46. Punkty twierdzenia są ustawione w dziwnej kolejności,
+  biorąc pod uwagę logikę dowodu.
+\item Str. 48. Z tego, że dana liczba nie należy do widma, nie wynika
+  że nie istnieje dla niej resolwenta.
+\item Str. 49. Drugie stwierdzenie z punktu (\romannumeral4), jest już
+  zawarte w punkcie (\romannumeral2).
+\item Str. 52. Użyte tu pojęcie funkcji charakterystycznej, nie jest
+  chyba nigdzie w książce przedstawione.
+\item Str. 57. Warto byłoby omówić szerszej pojęcie domkniętego
+  rozszerzenia operatora, domykalność operatora i jego domknięcia. W
+  szczególności z twierdzenia o wykresie domkniętym wynika, że
+  domknięcie operatora jest zawsze operatorem ograniczonym.
+\item Str. 58. Uwaga o twierdzeniu II (\romannumeral3) jest zupełnie
+  niezrozumiała.
+\item Str. 58. Zdefiniowaniu resolwenty i widma operatora
+  nieograniczonego powinno zostać poświęcone więcej miejsca.
+\item Str. 58. Nie dodano, że widmo nieograniczonego operatora
+  domykalnego, definiujemy jako widmo jego domknięcia.
+\item Str. 58. Jedyność wektora $\eta$ wynika już z lematu Riesza.
+\item Str. 80. Ustalenie takiej wartości stałej $C$, ani w ogóle
+  ustalenie jej wartości, nie jest potrzebne w rozważanym zagadnieniu.
+\item Str. 313. Nie wspomniano tu w jakim sensie dane ciągi funkcji
+  mają być zbieżne. Osoba znająca teorię całki Lebesgue'a wie, że
+  wystarczy założyć zbieżność punktową, a nawet tylko zbieżność
+  punktową prawie wszędzie.
+\item Str. 315. W twierdzeniu Lebesgue'a o zbieżności majoryzowanej
+  brakuje założenia o zbieżności rozważanego ciągu funkcji.
+\end{itemize}
+
+% ##################
+\CenterBoldFont{Błędy}
+
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu &  &  \\ \hline
+    & & & & \\
+    21 & 1 & & $\mu( \{ x ,\! |\psi( x ) - \varphi( x )| > 0  \} ) \ldots$ & $\mu( \{ x ; |\psi( x ) - \varphi( x )| > 0  \} ) \ldots$ \\
+    27 & 12 & & $\mathcal{H}_{ 1 } \otimes \mathcal{H}_{ 2 }$ & $\mathcal{H}_{ 1 } \oplus \mathcal{H}_{ 2 }$ \\
+    27 & 13 & & $\mathcal{R} \otimes \mathcal{R}^{ \bot }$ & $\mathcal{R} \oplus \mathcal{R}^{ \bot }$ \\
+    30 & & 18 & $\xi - \varphi_{ k } ||$ & $|| \xi - \varphi_{ k } ||$ \\
+    32 & & 11 & Teraz$f( a ) = g( 0 )$,$f( b )$ & Teraz $f( a ) = g( 0 )$, $f( b )$ \\
+    34 & & 15 & & $[ a, b ]$ \\
+    101 & & 4 & $Px )$ & $P( x )$ \\
+    147 & 2 & & bogaci & ubogaci \\
+    311 & 10 & & $i$.Jeżeli & $i$. Jeżeli \\
+    311 & 15 & & $X$ spełniającą & $X$, spełniającą \\
+    312 & & 10 & $\mu$ skończona & $\mu$\dywiz skończona \\
+    313 & 6 & & $\{ x ;\! f( x ) > a \}$ & $\{ x ; f( x ) > a \}$ \\
+    313 & 15 & & $0 = a_{ 0 }$ & $0 \leq a_{ 0 }$ \\
+    313 & 15 & & $x,$ & $x;$ \\
+    313 & 16 & & $A_{ 0 } \ldots \cup A_{ n }$ & $A_{ 0 } \cup \ldots \cup A_{ n }$ \\
+    315 & 3 & & $A^{ 0 } \leq f_{ 1 }( x )$ & $A$: $0 \leq f_{ 1 }( x )$ \\
+    318 & & 7 & Caucy'ego & Cauchy'ego \\
+    & & & & \\ \hline
+  \end{tabular}
+\end{center}
+
+\begin{itemize}
+\item[--] Str. 27. Niech $\varphi \bot [ \mathcal{ P } ]$.  Wówczas
+  $\varphi \bot \mathcal{ P }$ i $\varphi = 0$.
+\item[--] Str. 37.
+  \ldots$\psi = \frac{ \overline{ l ( \varphi_{ 0 } ) } }{ ||
+    \varphi_{ 0 } ||^{ 2 } } \varphi_{ 0 } \, .$
+\item[--] Str. 40. \ldots punkcie $D( A )$\ldots
+\item[--] Str. 40. \ldots określone na $D( A )$\ldots
+\item[--] Str. 41. \ldots dużych $n$ mamy
+  $|| A_{ n } - A_{ m } || < 2 \epsilon$.
+\item[--] Str. 47. \ldots wynika, że
+  $S_{ \lambda } = ( \lambda I - A )^{ -1 } \in B( \mathcal{ H } )$.
+\item[--] \ldots być równo zbiorowi $\{ 0 \}$ \ldots
+\item[--] Str. 54 \ldots może być równa zbiorowi $\{ 0 \}$\ldots
+\item[--] Str. 71. \ldots$A^{ * } A = S U^{ * } U S = S E S$\ldots
+\item[--] Str. 74. \ldots interpretacją. Teraz\ldots
+\item[--] Str. 85.
+  $$\ldots = -i \frac{ d }{ dx } \frac{ 1 }{ \sqrt{ 2 \pi } }
+  \int\limits_{ -\infty }^{ +\infty } ( \e^{ i x s } - 1 ) \varphi(
+  s ) \dPL s \textrm{.}$$
+\item[--] Str. 86.
+  $$F^{ -1 } Q \varphi = -i \frac{ d }{ dx } \frac{ 1 }{ \sqrt{ 2 \pi }
+  } \int\limits_{ -\infty }^{ +\infty } ( \e^{ i x s } - 1 )
+  \varphi( s ) \dPL s = \frac{ 1 }{ \hbar } P F^{ -1 } \varphi$$
+\item[--] Str. 311. \ldots dla każdego $i$. Jeżeli\ldots
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\newpage
+\section{Informatyka kwantowa}
+
+\vspace{\spaceTwo}
+% ######################################
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Richard P. Feynman \\
+  „Wykłady o~obliczeniach”, \cite{FeynmanWykladyOObliczeniach2007} }
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    279 & & 11 & jednen & jeden \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+% #####################################################################
+% #####################################################################
+% Bibliografia
+\bibliographystyle{plalpha} \bibliography{PhilNaturBooks}{}
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
