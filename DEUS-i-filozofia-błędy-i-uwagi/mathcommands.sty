@@ -1,0 +1,678 @@
+% ####################################################################
+% Pakiet z skrótami różnych matematycznych LaTeXa
+
+% Część skrótów nie będzie działało bez pakietów od American Mathematican
+% Society, takich jak "amsmath", "amssym", etc.
+% ####################################################################
+\ProvidesPackage{mathshortcuts}
+
+
+
+% ---------------------------------------
+% Command for mathematical mode
+% ---------------------------------------
+
+
+
+
+
+% ##################
+% Sets
+% ##################
+
+
+% Ładniejszy zbiór pusty
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+
+
+% Podstawowe oznaczenia matematyczne
+% \newcommand{\fr}{\frac}
+% \newcommand{\tfr}{\tfrac}
+% \newcommand{\tr}{\textrm}
+
+
+% Często pojawiające się stałe matematyczna
+% \newcommand{\onehalf}{\fr{ 1 }{ 2 }}
+% \newcommand{\sqrtTwo}{\sqrt{ 2 }} % Pierwiastek z 2
+% \newcommand{\ovSqTwo}{\fr{ 1 }{ \sqrtTwo }} % 1 / \sqrt{ 2 }
+% \newcommand{\sqTwoPi}{\sqrt{ 2 \pi }}
+% \newcommand{\ovSqTwoPi}{\fr{ 1 }{ \sqrt{ 2 \pi } }}
+
+
+% Ułamki
+% \newcommand{\oneOv}[1]{\fr{ 1 }{ #1 }}
+% \newcommand{\ovTwo}[1]{\fr{ #1 }{ 2 }}
+% \newcommand{\twoOv}[1]{\fr{ #1 }{ 2 }}
+
+
+
+% Do umieszczania ,,nad'' i ,,pod'' symbolami matematycznymi.
+% Wymyśl lepszą nazwę
+% \newcommand{\til}{\tilde}
+
+% \newcommand{\wh}{\widehat}
+% \newcommand{\wt}{\widetilde}
+
+% \newcommand{\ul}{\underline}
+% \newcommand{\ol}{\overline}
+
+% \newcommand{\ub}{\underbrace}
+
+% \newcommand{\us}{\underset}
+% \newcommand{\os}{\overset}
+
+
+% Trzcionki matematyczne
+% \newcommand{\mr}{\mathrm}
+% \newcommand{\mb}{\mathbb}
+% \newcommand{\mf}{\mathfrak}
+\newcommand{\gfrak}{\mathfrak{g}}
+
+\newcommand{\Mfrak}{\mathfrak{M}}
+% \newcommand{\mbf}{\mathbf}
+% \newcommand{\bsym}{\boldsymbol}
+
+
+% Strzałki
+% \newcommand{\lra}{\longrightarrow}
+% \newcommand{\xra}{\xrightarrow}
+
+% \newcommand{\Ra}{\Rightarrow}
+% \newcommand{\ifonlyif}{\Longleftrightarrow} % Podobno działa \iff
+
+% \newcommand{\ora}{\overrightarrow}
+% \newcommand{\ola}{\overleftarrow}
+
+
+% Częste zwroty
+% \newcommand{\wtw}{wtedy i~tylko wtedy}
+
+
+% Wartość bezwzględna i normy
+\providecommand{\abs}[1]{\lvert{ #1 }\rvert}
+
+\newcommand{\absOne}[1]{|\, { #1 } \,|}  % ABSolute value One
+\newcommand{\abstw}[1]{\left| \, { #1 } \, \right|}
+\newcommand{\absth}[1]{\left| { #1 } \right|}
+\newcommand{\absf}[1]{| { #1 } |}
+% \providecommand{\absd}[1]{\left| #1 \right|}
+% Zupełnie nie wiem, czemu to jest \providecommand
+\providecommand{\norm}[1]{\lVert{ #1 }\rVert}
+
+
+
+
+
+% ##########
+% Litery greckie
+% \newcommand{\al}{\alpha}
+% \newcommand{\be}{\beta}
+% \newcommand{\ga}{\gamma}
+% \newcommand{\Ga}{\Gamma}
+% \newcommand{\del}{\delta}
+% \newcommand{\Del}{\Delta}
+% By \lambda była wyświetlana jako Unicode, a dawał znak \uplambda
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+% \newcommand{\la}{\uplambda}
+% \newcommand{\Lam}{\Lambda}
+
+% By \epsilon był wyświetlany jako Unicode, a dawał znak \varepsilon
+% \let\oldepsilon\epsilon
+% \renewcommand{\epsilon}{\varepsilon}
+
+% \newcommand{\vp}{\varphi}
+% \newcommand{\om}{\omega}
+% \newcommand{\Om}{\Omega}
+% \newcommand{\Si}{\Sigma}
+
+
+
+
+
+% ##########
+% Blackboard bold letters
+\newcommand{\Cbb}{\mathbb{C}}
+
+\newcommand{\Kbb}{\mathbb{K}}
+
+\newcommand{\Lbb}{\mathbb{L}}
+
+\newcommand{\Nbb}{\mathbb{N}}
+
+\newcommand{\Rbb}{\mathbb{R}}
+
+\newcommand{\Zbb}{\mathbb{Z}}
+
+
+% Coś innego
+% \newcommand{\Rbbp}{\Rb_{ + }}
+% \newcommand{\Rbbn}{\mathbb{R}^{ n }}
+% \newcommand{\Rbbd}{\mathbb{R}^{ d }}
+
+% \newcommand{\Rbtwo}{\mathbb{R}^{ 2 }}
+% \newcommand{\Rbth}{\mathbb{R}^{ 3 }}
+
+
+
+
+
+% ##########
+% Bold face letters
+
+\newcommand{\Cbold}{\mathbf{C}}
+
+\newcommand{\Ebold}{\mathbf{E}}
+
+\newcommand{\Pbold}{\mathbf{P}}
+
+\newcommand{\Tbold}{\mathbf{T}}
+
+
+
+
+
+% ##################
+% Calligraphy letters
+\newcommand{\Acal}{\mathcal{A}}
+
+\newcommand{\Ccal}{\mathcal{C}}
+
+\newcommand{\Dcal}{\mathcal{D}}
+
+\newcommand{\Hcal}{\mathcal{H}}
+
+\newcommand{\Lcal}{\mathcal{L}}
+
+\newcommand{\Mcal}{\mathcal{M}}
+
+\newcommand{\Ncal}{\mathcal{N}}
+
+\newcommand{\Ocal}{\mathcal{O}}
+
+\newcommand{\Pcal}{\mathcal{P}}
+
+\newcommand{\Rcal}{\mathcal{R}}
+
+\newcommand{\Ucal}{\mathcal{U}}
+
+\newcommand{\Vcal}{\mathcal{V}}
+
+% \newcommand{\Ec}{\mathcal{E}}
+% \newcommand{\lc}{\mathcal{l}}
+% \newcommand{\Rc}{\mathcal{R}}
+
+
+
+% Rzadziej używane oznaczenia literowe
+% \newcommand{\Bc}{\mathcal{B}}
+% \newcommand{\Fc}{\mathcal{F}}
+% \newcommand{\Mc}{\mathcal{M}}
+
+
+% \newcommand{\Tc}{\mathcal{T}}
+% \newcommand{\Pc}{\mathcal{P}}
+% \newcommand{\Zc}{\mathcal{Z}}
+
+
+
+
+
+
+% ##################
+% Functions
+
+
+% Complex analysis
+\DeclareMathOperator{\Arg}{Arg}
+\DeclareMathOperator{\Imag}{\mathfrak{Im}}
+\DeclareMathOperator{\Log}{Log}
+\DeclareMathOperator{\Real}{\mathfrak{Re}}
+
+
+
+% ##################
+% Groups
+
+% \newcommand{\es}{\emptyset}
+% \newcommand{\subs}{\subset}
+% \newcommand{\setm}{\setminus}
+% \newcommand{\ti}{\times}
+% \newcommand{\com}{\complement}
+
+% \newcommand{\set}[1]{\{ #1 \}}
+
+
+
+
+
+% #############
+% Algebra
+% \newcommand{\Real}{\mf{Re}}
+% \newcommand{\Imag}{\mf{Im}}
+% \newcommand{\ot}{\otimes}
+% \newcommand{\we}{\wedge}
+\DeclareMathOperator{\Tr}{Tr}
+
+
+
+
+
+% #############
+% Algebra liniowa
+
+% Podprzestrzenie i odwzorowania liniowe
+\newcommand{\image}{\textrm{im}}
+
+% Vectors
+\newcommand{\veca}{\vec{ a }}
+
+\newcommand{\vecb}{\vec{ b }}
+
+\newcommand{\vecE}{\vec{ E }}
+
+\newcommand{\vecF}{\vec{ F }}
+\newcommand{\vecf}{\vec{ f }}
+
+\newcommand{\vecJ}{\vec{ J }}
+
+\newcommand{\vecn}{\vec{ n }}
+
+\newcommand{\vecp}{\vec{ p }}
+
+\newcommand{\vecq}{\vec{ q }}
+
+\newcommand{\vecr}{\vec{ r }}
+
+\newcommand{\vecX}{\vec{ X }}
+\newcommand{\vecx}{\vec{ x }}
+
+\newcommand{\vecy}{\vec{ y }}
+
+
+
+
+
+
+
+
+\newcommand{\vecZero}{\vec{ 0 }}
+
+% Funkcje wektorowe
+\newcommand{\vecxt}{\vec{ x }( t )}
+
+
+% Vectors, bold font
+\newcommand{\vecabold}{\mathbf{a}}
+
+\newcommand{\vecbbold}{\mathbf{b}}
+
+\newcommand{\veccbold}{\mathbf{c}}
+
+\newcommand{\vecebold}{\mathbf{e}}
+
+\newcommand{\vecgbold}{\mathbf{g}}
+
+\newcommand{\vecibold}{\mathbf{i}}
+
+\newcommand{\vecjbold}{\mathbf{j}}
+
+\newcommand{\veckbold}{\mathbf{k}}
+
+\newcommand{\vecnbold}{\mathbf{n}}
+
+\newcommand{\vecPbold}{\mathbf{P}}
+\newcommand{\vecpbold}{\mathbf{p}}
+
+\newcommand{\vecqbold}{\mathbf{q}}
+
+\newcommand{\vecRbold}{\mathbf{R}}
+\newcommand{\vecrbold}{\mathbf{r}}
+
+\newcommand{\vectbold}{\mathbf{t}}
+
+\newcommand{\vecubold}{\mathbf{u}}
+
+\newcommand{\vecVbold}{\mathbf{V}}
+\newcommand{\vecvbold}{\mathbf{v}}
+
+\newcommand{\vecxbold}{\mathbf{x}}
+
+\newcommand{\vecybold}{\mathbf{y}}
+
+
+\newcommand{\vecrhobold}{\mathbf{\rho}}
+
+\newcommand{\vecomegabold}{\boldsymbol{\omega}}
+
+
+\newcommand{\vecOnebold}{\mathbf{1}}
+
+
+
+% Przestrzenie macierzy
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\SO}{\mathrm{SO}}
+\newcommand{\SU}{\mathrm{SU}}
+
+
+
+
+
+
+
+% #############
+% Funkcje
+
+\newcommand{\sgn}{\textrm{sgn}}
+
+
+
+
+
+% #############
+% Analiza matematyczna
+
+% #####
+% Oznaczenia do teorii funkcji
+\newcommand{\supp}{\mathrm{supp}\,}
+
+
+% Ciąg
+% \newcommand{\xn}{x_{ n }}
+% \newcommand{\yn}{y_{ n }}
+
+
+% Delty
+% \newcommand{\Delt}{\Delta t}
+
+% Granice
+% \newcommand{\Lim}{\lim\limits}
+% \newcommand{\Liminf}{\ul{\lim}}
+% \newcommand{\Limsup}{\ol{\lim}}
+
+% \newcommand{\nToInfty}{n \to +\infty}
+
+% \newcommand{\xToZero}{x \to 0}
+% \newcommand{\xToPInf}{x \to +\infty}
+% \newcommand{\xToMInf}{x \to -\infty}
+
+% \newcommand{\epsToZero}{\epsilon \to 0}
+% \newcommand{\epsToPZero}{\epsilon \to 0^{ + }}
+% \newcommand{\epsToMZero}{\epsilon \to 0^{ + }}
+
+% \newcommand{\DelToZero}{\Delta t \to 0}
+
+
+% \newcommand{\RToInf}{R \to \infty} % Przydatne w analizie zespolonej
+
+
+% % Sumy
+% \newcommand{\Sum}{\sum\limits}
+
+% % Iloczyny
+% \newcommand{\Prod}{\prod\limits}
+
+
+
+% ########
+% Różniczkowanie i pochodne
+\newcommand{\dPL}{\mathrm{d}}  % differential PL
+
+
+% #####
+% Różniczkowanie i pochodne anglosaskie (czyli ogólne i światowe)
+\newcommand{\de}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
+% Zwykła pochodna - pierwszy argument rząd pochodnej, drugi funkcja,
+% trzeci zmienna
+
+
+
+% #####
+% Różniczkowanie i pochodne, polskie standardy
+\newcommand{\dePL}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
+
+
+
+% Pochodne cząstkowe
+\newcommand{\partialDerivative}[3]{
+  \frac{ \partial^{ #1 } { #2 } }{ \partial { #3 }^{ #1 } } }
+% Partial Derivative
+\newcommand{\pdo}[1]{\partial_{ #1 }}  % Partial Derivative One -- notacja
+% pochodnej cząstkowej bez ułamka
+\newcommand{\pdtwo}[1]{\partial_{ x^{ #1 } }} % PD two - po x z indeksem "#1"
+\newcommand{\pdth}[3]{\fr{ \partial^{ 2 } #1 }{ { \partial x^{ #2 } }
+    { \partial x^{ #3 } } }}  % PD three - po zmiennych x z indeksami "#1" "#2"
+
+
+
+% Klasy różniczkowalności
+% \newcommand{\Cone}{\Cc^{ 1 }}
+% \newcommand{\Ctwo}{\Cc^{ 2 }}
+
+% \newcommand{\Cj}{\Cc^{ j }}
+% \newcommand{\Ck}{\Cc^{ k }}
+% \newcommand{\Cn}{\Cc^{ n }}
+
+% \newcommand{\Cinfty}{\Cc^{ \infty }}
+
+% \newcommand{\Cvar}[1]{\Cc^{ #1 }}
+
+% \newcommand{\CinftyR}{\Cc^{ \infty }( \R )}
+
+% \newcommand{\CinftyRtwo}{\Cinfty( \R^{ 2 } )}
+% \newcommand{\CinftyRth}{\Cinfty( \R^{ 3 } )}
+% \newcommand{\CinftyRfo}{\Cinfty( \R^{ 4 } )}
+
+% \newcommand{\CinftyRn}{\Cc^{ \infty }( \R^{ n } )}
+
+
+
+
+
+% #############
+% Całki i całkowanie
+\newcommand{\dx}{\difPL x}
+\newcommand{\dend}{\, d}  % Różniczka kończąca (ang. end) całkę
+
+
+
+% % ########
+% % Całki i całkowanie anglosaskie (czyli ogólne i światowe)
+% \newcommand{\Int}{\int\limits}
+% \newcommand{\IntLo}[3]{\int\limits_{ { #1 } }^{ { #2 } } d#3 \,}  % One
+% \newcommand{\IntLt}[4]{\Int_{ { #1 } }^{ { #2 } }  #3 \, d#4}  % Two
+
+% \newcommand{\IntMo}[2]{\Int #1 \, d#2}  % Integral Measure One
+% \newcommand{\IntMt}[2]{\Int d#1 \, #2}  % Integral Measure Two
+% \newcommand{\IntWie}[3]{\Int_{ #1 } d^{ #2 } #3 \,}  % Wielowymiarowa
+% % \newcommand{\IntTro}[1]{\Int d^{ 3 }#1 \,}  % Trójwymiarowa, usuń to jak
+% % będziesz
+% \newcommand{\IntTho}[1]{\Int d^{ 3 }#1 \;}  % Trójwymiarowa one
+% \newcommand{\IntDo}[5]{\Int_{ #1 } d^{ #2 }#3\, d^{ #4 }#5 \;}
+% % Integral Double One
+
+% \newcommand{\IntSeto}[3]{\Int_{ #1 } #2 \, d#3}  % Całka po zbiorze.
+% \newcommand{\IntSett}[2]{\Int_{ #1 } d#2 \,}
+
+% \newcommand{\IntOvRTh}[1]{\Int_{ \R^{ 3 } } d#1\,}
+
+
+
+% % #####
+% % Całki w określonych granicach
+% \newcommand{\IntMPInf}[1]{\Int_{ -\infty }^{ +\infty } d#1 \,}
+% \newcommand{\IntOInf}[1]{\Int_{ 0 }^{ +\infty } d #1 \;}
+% \newcommand{\IntMInfO}[1]{\Int_{ -\infty }^{ 0 } d #1 \;}
+% % \newcommand{\IntA}[1]{\Int_{ -\infty }^{ +\infty } d #1 \;}
+% % \newcommand{\IntB}[1]{\int_{ \R } d #1 \;}
+% % \newcommand{\IntC}[2]{\int_{ \R } #1 \, d #2}
+% \newcommand{\IntOvRo}[1]{\int_{ \R } d #1 \;}  % Integral over R version one
+% \newcommand{\IntOvRt}[2]{\int_{ \R } #1 \, d #2}
+% % Integral over R version two
+
+
+
+% % ########
+% % Całki i całkowanie, polski standard
+% \newcommand{\IntLoPL}[3]{\int\limits_{ { #1 } }^{ { #2 } } \difPL#3 \,}  % One
+% \newcommand{\IntLtPL}[4]{\int\limits_{ { #1 } }^{ { #2 } }  #3 \, \difPL#4}
+% % Two
+
+% \newcommand{\IntMPL}[2]{\int #1 \, \difPL#2}  % Integral Measure
+% \newcommand{\IntPhyPL}[2]{\int \difPL#1 \, #2}  % Bardziej Fizyczna notacja;)
+% \newcommand{\IntWiePL}[3]{\int\limits_{ #1 } \difPL^{ #2 } #3 \,}  % Wielowymiarowa
+% \newcommand{\IntTroPL}[1]{\int \difPL^{ 3 }#1 \,}  % Trójwymiarowa
+% \newcommand{\IntDoPL}[5]{\int\limits_{ #1 } \difPL^{ #2 }#3\, \difPL^{ #4 }\,
+%   #5 \;}
+
+% \newcommand{\IntSetOPL}[3]{\int\limits_{ #1 } #2 \, d#3}  % Całka po zbiorze.
+% % Set (one) PL
+% \newcommand{\IntSetTwPL}[1]{\int\limits_{ #1 }}  % TWo
+
+
+
+% % #####
+% % Całki w określonych granicach
+% \newcommand{\IntMPInfPL}[1]{\int\limits_{ -\infty }^{ +\infty } \difPL #1 \;}
+% \newcommand{\IntOInfPL}[1]{\int\limits_{ 0 }^{ +\infty } \difPL #1 \;}
+% \newcommand{\IntOvRoPL}[1]{\int\limits_{ \Rb } \difPL #1 \;}  % R One
+% \newcommand{\IntOvRtPL}[2]{\int\limits_{ \Rb } #1 \, \difPL #2}  % R Two
+
+
+
+
+% #############
+% Analiza wektorowa
+\newcommand{\divergence}{\textrm{div}}
+
+
+
+% ##################
+% Functions
+% ##################
+
+
+% \newcommand{\arg}{\textrm{arg}}
+
+
+
+
+
+% #############
+% Analiza zespolona
+\newcommand{\Res}{\textrm{Res}}
+
+\newcommand{\Pier}{\textrm{Pier}}  % Otoczenie pierścieniowe
+
+
+
+
+
+% #############
+% Analiza funkcjonalna
+% \newcommand{\da}{\dagger}
+
+% Brakety
+% W analizie funkcjonalnej też często się je stosuje
+% \newcommand{\lket}{\langle}
+% \newcommand{\rket}{\rangle}
+% \newcommand{\dketo}[2]{\langle #1 | #2 \rangle}  % Dirac ket one
+% % Jak będziesz mógł to usuń komendę powyżej
+% \newcommand{\DKeto}[2]{\langle #1 \, | \, #2 \rangle}  % Dirac Ket One
+% \newcommand{\DKett}[2]{\langle #1, \, #2 \rangle}  % Dirac Ket two
+
+
+% Przestrzenie L^{ p }
+% \newcommand{\Lo}{L^{ 1 }}  % L^{ one }
+% \newcommand{\Lt}{L^{ 2 }}  % L^{ two }
+% \newcommand{\Lp}{L^{ p }}
+% \newcommand{\LIo}{\Lc^{ 1 }}
+% \newcommand{\LIp}{\Lc^{ p }}
+% \newcommand{\LtO}{\Lt( \Rb, d \mu )}
+% \newcommand{\LtT}{\Lt( \Rb^{ 3 }, d \mu )}
+% \newcommand{\LtLim}{L^{ 2 }-\Lim}
+
+
+
+% Wersja polska
+% \newcommand{\LtOPL}{\Lt( \Rb, \difPL \mu )}
+% \newcommand{\LtTPL}{\Lt( \Rb^{ 3 }, \difPL \mu )}
+
+
+
+
+
+% ##########
+% Teoria dystrybucji
+\newcommand{\Pv}{\mathrm{Pv}}
+
+\newcommand{\sd}{\textrm{sd}}  % Stopień skalowania Steinmanna
+
+
+
+% ########################################
+
+
+
+
+
+% ####################
+% Analiza matematyczna
+
+
+
+
+
+
+
+
+% ############################
+% Sprawdź czy się nie powtarzają
+
+
+
+
+
+% \DeclareMathOperator{\csch}{csch}
+% \DeclareMathOperator{\arcsec}{arcsec}
+% \DeclareMathOperator{\arccsc}{arcCsc}
+% \DeclareMathOperator{\arccosh}{arcCosh}
+% \DeclareMathOperator{\arcsinh}{arcsinh}
+% \DeclareMathOperator{\artanh}{artanh}
+% \DeclareMathOperator{\arcsech}{arcsech}
+% \DeclareMathOperator{\arccsch}{arcCsch}
+% \DeclareMathOperator{\arcoth}{arcoth}
+
+
+
+
+
+% \newcommand{\e}{\mr{e}}
+% \newcommand{\ii}{\mr{i}}
+% \newcommand{\id}{\mr{id}}
+% \newcommand{\de}{\mr{d}}
+% \newcommand{\sgm}{\mr{sgm}}
+% \newcommand{\cy}{\mr{cykl}}
+% \newcommand{\ad}{\mr{ad}}
+% \newcommand{\Ad}{\mr{Ad}}
+% \newcommand{\Le}{\mc{L}}
+
+
+
+% \newcommand{\D}[2]{\mc{D}_{ #1 }( #2 )}
+
+\newcommand{\dR}{\textrm{dR}}
+
+\newcommand{\ch}{\textrm{ch}}
+
+\newcommand{\Vect}{\textrm{Vect}}
+
+\newcommand{\opp}{\textrm{opp}}
+
+
+
+% Koniec komend
+% ############################
