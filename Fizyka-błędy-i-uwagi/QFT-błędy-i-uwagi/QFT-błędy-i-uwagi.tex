@@ -149,6 +149,131 @@
 
 
 
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Henryk Arodź, Leszek Hadasz \\
+  „Lectures on~Classical and~Quantum Theory~of Fields”,
+  \cite{ArodzHadaszFieldTheory10} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+\start \Str{4} Związek między omawianymi na tej stronie równaniami
+(1.4) i~(1.5) można wyjaśnić w~następujący sposób. Sama postać
+(1.4)~sugeruje, że~należy rozpatrzyć następujące równanie
+\begin{equation}
+  \label{eq:ArodzHadasz-01}
+  m R^{ 2 } \frac{ d^{ 2 } \varphi( x_{ i }, t ) }{ dt^{ 2 } } =
+  -m g R \sin \varphi( x_{ i }, t )
+  + \kappa a \frac{ \partial^{ 2 } \varphi( x, t ) }{ \partial x^{ 2 } }\bigg|_{ x = x_{ i } }.
+\end{equation}
+Jednak to równanie obowiązuje tylko dla punktów $x_{ i }$ w~których
+znajdują wahadła, za to dla dowolnego $t \in \Rbb$. Poprzednio już
+założyliśmy istnienie funkcji $\varphi( x , t )$ interpolującej między
+tymi punktami. Teraz przyjmujemy, że~również dla każdego
+$x \in ( x_{ i }, x_{ i + 1 } )$, $i = -M, \ldots, N - 1$ spełniony jest
+związek wyrażony równaniem \eqref{eq:ArodzHadasz-01}, czyli
+\begin{equation}
+  \label{eq:ArodzHadasz-02}
+  m R^{ 2 } \frac{ \partial^{ 2 } \varphi( x_{ i }, t ) }{ t } =
+  -m g R \sin \varphi( x_{ i }, t )
+  + \kappa a \frac{ \partial^{ 2 } \varphi( x, t ) }{ \partial x^{ 2 } }.
+\end{equation}
+A~to jest właśnie równanie (1.5).
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    7   & & 11 & $0, \ldots,\!3$ & $0, \ldots, 3$ \\
+    11  &  5 & & $\tensor[]{ \check{ \Lcal } }{ _{ \mu }^{ \nu } }$
+           & $\tensor[]{ \check{ \Lcal } }{ ^{ \mu }_{ \nu } }$ \\
+    11  &  6 & & $( \Lcal^{ T } )^{ -1 }$ & $\Lcal^{ -1 }$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Michael E. Peskin, Daniel V. Schroeder \\
+  „An Introduction to Quantum Field Theory”, \cite{MPDSAIQFT} }
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+
+\Str{24} W rzeczywistości to operator $\phi^{ \dagger }( x )$
+kreuje cząstke w stanie $| 0 \rangle$, zaś operator $\phi( x )$
+niszczy cząstkę w zadanym stanie. POPRAW.
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % & & & & \\
+    26  & &  5 & positive-energy & negative-energy \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
 % ############################
 \Work{ % Autor i tytuł dzieła
   Silvan S. Schweber \\
@@ -326,7 +451,7 @@ $\eta_{ \mu \nu } \Lcal^{ \mu }_{ \rho }$????!!!!!
            & $\eta_{ \mu \nu } \frac{ \partial x'^{ \mu } }{ \partial x^{ \rho } }
              \frac{ \partial x'^{ \nu } }{ \partial x^{ \sigma } }$ \\
     86 & & 2 & $\Lcal_{ \rho }^{ -1 \mu } P^{ \rho }$
-           & $\tensor[]{ ( \Lcal^{ -1 } ) }{ ^\mu_\rho } P^{ \rho }$ \\
+           & $\tensor[]{ ( \Lcal^{ -1 } ) }{ ^{ \mu }_{ \rho } } P^{ \rho }$ \\
     142 & & 14 & powloce & powłoce \\
     \hline
   \end{tabular}
@@ -361,8 +486,8 @@ $\eta_{ \mu \nu } \Lcal^{ \mu }_{ \rho }$????!!!!!
 \StrWg{281}{1} \\
 \Jest
 $S_{ \vecpbold_{ 1 }', \sigma_{ 1 }', n_{ 1 }'; \, \vecpbold_{ 2 }',
-  \sigma_{ 2 }', n_{ 2 }';\; \cdots, \; \vecpbold_{ 1 }, \sigma_{ 1 }, n_{
-    1 } ; \, \ldots { p }_{ 2 },
+  \sigma_{ 2 }', n_{ 2 }';\; \cdots, \; \vecpbold_{ 1 }, \sigma_{ 1 },
+  n_{ 1 } ; \, \ldots { p }_{ 2 },
   \sigma_{ 2 }, n_{ 2 }; \, \cdots }$ \\[0.5em]
 \Powin
 $S_{ \vecpbold_{ 1 }', \sigma_{ 1 }', n_{ 1 }'; \, \vecpbold_{ 2 }',
@@ -564,6 +689,131 @@ $S_{ \vecpbold_{ 1 }', \sigma_{ 1 }', n_{ 1 }'; \, \vecpbold_{ 2 }',
 
 
 
+% ######################################
+\section{Matematyczna kwantowa teoria pola}
+
+\vspace{\spaceTwo}
+
+% ######################################
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  N. N. Bogoliubov, D. V. Shirkov \\
+  „Introduction to the theory of quantized fields”, \cite{NBDSITQF} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+W książce użyta jest staromodna notacja dla czterowektorów. Ze względu na wygodę, w tych notatkach będę używał bardziej współczesnej wersji.
+
+
+
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+
+\Str{38} Wyjaśnienie w~tekście czemu składowa $U_{ 0 }$
+generuje ujemną energię nie jest zbyt jasne. W~istocie sprawa jest
+prosta: wyrażenie na energie zawiera wyrażenia typu
+$-U^{ ( - ) }_{ \mu } U^{ ( + )\, \mu }$ przy czym każdy wszystkie
+iloczyny $U^{ ( - ) }_{ \nu } U^{ ( + )\, \nu }$ (brak sumowania!)
+są dodatnie. Stąd wyraz czasowy wchodzi do energii jako ujemny człon
+$-U^{ ( - ) }_{ 0 } U^{ ( + )\, 0 }$ podczas gdy człony przestrzenne
+dają dodatni wkład. Należy więc wyeliminować człon czasowy.
+
+\vspace{\spaceFour}
+
+
+
+\Str{45} Warto byłoby jawnie zaznaczyć, że~wektory $\vecebold_{ 1 }$
+i~$\vecebold_{ 2 }$ zależą od $k$.
+
+\vspace{\spaceFour}
+
+
+
+\Str{72}
+
+\vspace{\spaceFour}
+
+
+
+\Str{106} Warto byłoby dodać komentarz wyjaśniający dlaczego
+wielkości termodynamiczne (określane tu jako skalarne) definiuje~się
+zawsze w~układzie CW danego fragmentu płynu.
+
+\vspace{\spaceFour}
+
+
+
+\Str{108}
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    6 & 8 & & begun & began \\
+    14 & & 3 & $U$ & $u_{ i }$ \\
+    19 & 1 & & $u'^{ k }( x' )$ & $u'_{ k }( x' )$ \\
+    21 & 7 & & $\delta u_{ i }$ & $\overline{ \delta } u_{ i }$ \\
+    21 & 7 & & $\delta$ & $\overline{ \delta }$ \\
+    24 & & 8 & $\sum\limits_{ j,\, k < l }$
+           & $\sum\limits_{ j } \sum\limits_{ k < l }$ \\
+    24 & & 8 & $( u_{ j }( x )$ & $u_{ j }( x )$ \\
+    25 & 2 & & $\sum\limits_{ i,\, i }$ & $\sum\limits_{ i,\, j }$ \\
+    26 & & 4 & $-i \alpha u_{ j }$ & $-i \alpha u_{ j }^{ * }$ \\
+    27 & 4 & & $\partial u_{ i } / \partial x^{ k }$
+           & $\partial u_{ j } / \partial x^{ k }$ \\
+    29 & 9 & & (2.19) & (2.20) \\
+    30 & & 12 & $\tilde{ \varphi }( x )$ & $\tilde{ \varphi }( k )$ \\
+    31 & & 6 & $k_{ 4 } x_{ 4 }$ & $-k_{ 4 } x_{ 4 }$ \\
+    33 & 3 & & (3.19) & (3.14) \\
+    33 & 3 & & (3.4) & (3.5) \\
+    35 & 1 & & $n_{ 3 }^{ 3 }$ & $n_{ 3 }^{ 2 }$ \\
+    43 & 13 & & (43) & (4.3) \\
+    44 & & 10 & $U^{ *( \mp ) }$ & $U_{ n }^{ *( \mp ) }$ \\
+    47 & & 16 & (4.24) & (4.26) \\
+    49 & & 14 & $\Gamma^{ m }$ by & by \\
+    70 & 1 & & $x^{ 0 }$ & $-x^{ 0 }$ \\
+    72 & 8 & & while & but \\
+    72 & 8 & & in addition & do not \\
+    73 & & 8 & $\theta( k^{ 0 } )$ & $\theta( -k^{ 0 } )$ \\
+    74 & & 18 & $\psi^{ ( + ) }( \veckbold )$
+           & $\psi^{ ( + ) }( -\veckbold )$ \\
+    74 & & 17 & $\psi^{ ( - ) }( -\veckbold )$
+           & $\psi^{ ( - ) }( \veckbold )$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\vspace{\spaceTwo}
+% ############################
 
 
 
@@ -574,6 +824,125 @@ $S_{ \vecpbold_{ 1 }', \sigma_{ 1 }', n_{ 1 }'; \, \vecpbold_{ 2 }',
 
 
 
+% ############################
+\Work{  % Autor i tytuł dzieła
+  Othmar Steinmann \\
+  „Perturbative Quantum Eletrodynamics \\
+  and~Axiomatic Field Theory”, \cite{Ste00} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    7   & & 11 & $0,\ldots,\!3$ & $0,\ldots, 3$ \\
+    11  &  5 & & $\tensor{ \check{ \Lcal } }{ _{ \mu }^{ \nu } }$
+           & $\tensor{ \check{ \Lcal } }{ ^{ \mu }_{ \nu } }$ \\
+    11  &  6 & & $( \Lcal^{ T } )^{ -1 }$ & $\Lcal^{ -1 }$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  R. F. Streater, A. S. Wightman \\
+  „PCT, spin and statistics, and all that”, \cite{RSAWPCT} }
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+
+\Str{5}
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{10} Nie omówiono zagadnienia
+$\sgn\tensor{ ( \Lcal_{ 1 } \Lcal_{ 2 } ) }{^{ 0 }_{ 0 }}$ dla iloczynu dwóch
+transformacji Lorentza.
+
+\vspace{\spaceFour}
+
+
+
+\Str{18} W Definicji (2.1,1) powinno być założenie o istnieniu
+wektora zerowego.
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    12 & &  3 & $( \tau^{ 2 } )( \tau^{ \mu } )^{ T }( \tau^{ 2 } )^{ -1 }$
+           & $\tau^{ 2 } ( \tau^{ \mu } )^{ T } \tau^{ 2 }$ \\
+    12 & & 1 & $\tau^{ 2 } ( x )^{ T }( \tau^{ 2 } )^{ -1 }$
+           & $\tau^{ 2 } ( x )^{ T } \tau^{ 2 }$ \\ %Popraw
+    13 & 2 & & $\tau^{ 2 } A^{ T }( \tau^{ 2 } )^{ -1 }$
+           & $\tau^{ 2 } A^{ T } \tau^{ 2 }$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+% \noindent
+
+
+\vspace{\spaceTwo}
+% ############################
 
 
 
