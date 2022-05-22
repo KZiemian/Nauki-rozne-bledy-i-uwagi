@@ -54,7 +54,7 @@
 % ---------------------------------------
 % Pakiety których pliki *.sty mają być w tym samym katalogu co ten plik
 % ---------------------------------------
-\usepackage{latexshortcuts}
+\usepackage{latexgeneralcommands}
 
 
 
@@ -94,7 +94,7 @@
 
 % ---------------------------------------------------------------------
 % Tytuł, autor, data
-\title{Historia --~błędy i~uwagi}
+\title{Historia~-- błędy i~uwagi}
 
 % \author{}
 % \date{}
@@ -126,24 +126,6 @@
 
 
 
-
-
-
-
-
-
-
-
-% ########################################
-% \newpage
-% \Field{Historia świecka}
-
-% \vspace{\spaceThree}
-
-
-
-
-
 % ######################################
 \section{Syntezy historyczne}
 
@@ -152,14 +134,18 @@
 
 
 
-% ##################
+% ############################
 \Work{ % Autor i tytuł dzieła
   Paul Johnson \\
   „Narodziny nowoczesności”, \cite{JohnsonNarodzinyNowoczesnoci1995} }
 
 
-\CenterTB{Błędy}
+% ##################
+\CenterBoldFont{Błędy}
+
+
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -178,6 +164,8 @@
     % & & & & \\
     \hline
   \end{tabular}
+
+
 
 
 
@@ -231,7 +219,9 @@
 
 \end{center}
 
+
 \vspace{\spaceTwo}
+% ############################
 
 
 
@@ -239,13 +229,18 @@
 
 
 
-% ##################
+
+
+
+% ############################
 \Work{ % Autor i tytuł dzieła
   Conrad Totman \\
   „Historia Japonii”, \cite{TotmanHistoriaJaponii2009} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \start \Str{XXXII} Ponieważ do~regionu Tokai należą prowincje
 o~numerach 27--34, więc należałoby~się spodziewać, że~do regionu Kinki
@@ -265,8 +260,13 @@ z~regionami Kinki i~Shikoku.
 
 % \vspace{\spaceFour}
 
-\CenterTB{Błędy}
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -293,6 +293,8 @@ z~regionami Kinki i~Shikoku.
 
 
 
+
+
   % \begin{tabular}{|c|c|c|c|c|}
   %   \hline
   %   & \multicolumn{2}{c|}{} & & \\
@@ -340,7 +342,9 @@ z~regionami Kinki i~Shikoku.
   %   %   & & & & \\
   %   \hline
   % \end{tabular}
+
 \end{center}
+
 % \noi
 % \StrWd{}{} \\
 % \Jest \Pow
@@ -348,6 +352,7 @@ z~regionami Kinki i~Shikoku.
 % \Jest
 
 \vspace{\spaceTwo}
+% ############################
 
 
 
@@ -366,20 +371,23 @@ z~regionami Kinki i~Shikoku.
 
 
 
-% ##################
+% ############################
 \Work{ % Autor i tytuł dzieła
   James M. McPherson \\
   „Battle Cry~of Freedom. Historia Wojny Secesyjnej”,
   \cite{McPhersonBattleCryOfFreedom2016} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \start W~książce angielskie określenie „Civil War” zostało
 przełożone jako Wojna Secesyjna, jednak znacznie lepszym tłumaczeniem
 jest „Wojna Domowa” i~jej będę w~razie potrzeby używał.
 
 \vspace{\spaceFour}
+
 
 
 \start W~języku częściej mówi~się o~„American Revolution”
@@ -390,6 +398,13 @@ Rewolucję”, bądź „Rewolucję Amerykańską” i~tej wersji będę w razie
 potrzeby używał.
 
 \vspace{\spaceFour}
+
+
+
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
 
 
 \start \StrWd{23}{4} Podane tu~stwierdzenie, że~Amerykanie w~1850~r.
@@ -408,7 +423,11 @@ zapełnione, trafniej byłoby powiedzieć, iż~zostały zaludnione.
 
 
 
-\CenterTB{Błędy}
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
 
 \begin{center}
 
@@ -423,7 +442,7 @@ zapełnione, trafniej byłoby powiedzieć, iż~zostały zaludnione.
     14  & & 21 & Stowarzyszeń & „Stowarzyszeń \\
     17  & &  6 & sprzeczności.. & sprzeczności. \\
     23  & & 11 & niewolnictwo jednak & jednak niewolnictwo \\
-    25  & & 13 & \emph{Encclopedia~od} & \emph{Encyclopedia~of} \\
+    25  & & 13 & \textit{Encclopedia~od} & \textit{Encyclopedia~of} \\
     26  & 17 & & 1960~r. & 1860~r. \\
     30  &  7 & & 1854~r. & w~1854~r. \\
     33  & & 19 & codzienne & „codzienne \\
@@ -439,6 +458,8 @@ zapełnione, trafniej byłoby powiedzieć, iż~zostały zaludnione.
     % & & & & \\
     \hline
   \end{tabular}
+
+
 
 
 
@@ -491,35 +512,45 @@ zapełnione, trafniej byłoby powiedzieć, iż~zostały zaludnione.
   % \end{tabular}
 
 \end{center}
-\noi
+
+
+\noindent
 \StrWd{31}{22} \\
-\Jest Podczas gdy nie odrzucali tezy \\
-\Powin  Nie~odrzucając tezy \\
+\Jest  Podczas gdy nie odrzucali tezy \\
+\Powin Nie~odrzucając tezy \\
 \StrWg{35}{13} \\
-\Jest i~okresami bezrobocia, spowodowanymi recesją \\
-\Powin  i~okresów bezrobocia, spowodowanych recesją \\
+\Jest  i~okresami bezrobocia, spowodowanymi recesją \\
+\Powin i~okresów bezrobocia, spowodowanych recesją \\
 
 \vspace{\spaceTwo}
-
-
-
-
-
 % ############################
+
+
+
+
+
+
+
+
+
+
+% ######################################
 \subsection{Dzieje świata po~1914~r.}
 
 \vspace{\spaceThree}
+% ######################################
+
+
+
 % ############################
-
-
-
-% ##################
 \Work{ % Autor i tytuł dzieła
   Martin Gilbert \\
   „Pierwsza wojna światowa”, \cite{GilbertPierwszaWojnaSwiatowa2003} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \start \StrWg{21}{1} Ponieważ książka ta został pierwotnie wydania
 w~1994 roku, przynajmniej prawa autorskie Martina Gilberta zostały
@@ -531,17 +562,24 @@ tu~o~26~grudnia 1993 roku, ale~pewności mieć nie~mogę.
 \vspace{\spaceFour}
 
 
+
 \start \StrWg{70}{2} Nie wiem kto popełnił błąd, żołnierz, autor
 czy~tłumacz, ale to zdanie o~martwym doboszu jest bez sensu.
 
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{70}{5} To zdanie jest na~pewno źle przetłumaczone,
 ale~nie~wiem jakie je poprawić.
 
 
-\CenterTB{Błędy}
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
 \begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
@@ -568,21 +606,30 @@ ale~nie~wiem jakie je poprawić.
 
 \end{center}
 
+
 \vspace{\spaceTwo}
+% ############################
 
 
 
 
 
-% ##################
+
+
+
+
+
+% ############################
 \Work{ % Autor i tytuł dzieła
   Paul Johnson \\
   „Historia świata XX wieku, od~Rewolucji Październikowej \\
   do~<<Solidarności>>. Tom~I”,
-  \cite{JohnsonHistoriaSwiataXXWiekuTomI2009} }
+  \cite{JohnsonHistoriaSwiataXXWiekuVolI2009} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \start \Str{17--18} Terminy id, ego, superego nie zostały wprowadzone
 przez Freuda, lecz przez jego tłumacza, bądź tłumaczy, na~język
@@ -593,7 +640,8 @@ i~Markowskiego \cite{BM09}).
 \vspace{\spaceFour}
 
 
-\start \Str{56} Książka Keynesa \emph{Ekonomiczne konsekwencje
+
+\start \Str{56} Książka Keynesa \textit{Ekonomiczne konsekwencje
   pokoju}, nie mogła ukazać~się pod koniec 1917 roku.
 Najprawdopodobniej chodzi tu o~koniec roku 1919. Powinno~się tu też
 znaleźć obszerniejsze omówienie treści tej książki.
@@ -601,10 +649,12 @@ znaleźć obszerniejsze omówienie treści tej książki.
 \vspace{\spaceFour}
 
 
+
 \start \Str{63} Głosowanie nad traktatem o~którym tu mowa
 nie~odbyło~się w~marcu 1919 roku, lecz w~marcu 1920 r.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{72} Wyrażoną tu opinię, że~Polska skorzystała z~obawy
@@ -616,6 +666,7 @@ opisał w~„Pierwszej zdradzie zachodu”.
 \vspace{\spaceFour}
 
 
+
 \start \Str{90} Wydaje~się, że~opisany tu~ciąg przemówień Lenina
 i~relacja Krupskiej o~tym jak położył~się spać bez słowa, dotyczą
 wydarzeń z~jednego dnia, tego którego Lenin wrócił on do Rosji. Jeśli
@@ -625,11 +676,13 @@ obecnej, nie jest to w~pełni jasne.
 \vspace{\spaceFour}
 
 
+
 \start \Str{189} Opis udziału niemieckich wojskowych w~zawieszeniu
 przez Niemcy broni w~I~Wojnie Światowej, powinien być bardziej
 wyczerpujący, w~tym momencie jest zbyt zwięzły, aby był jasny.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{189} W~tym miejscu po~raz pierwszy zostaje użyte
@@ -640,6 +693,7 @@ powszechnie przyjęta dla~sojuszu z~II, a~nie z~I, Wojny Światowej.
 \vspace{\spaceFour}
 
 
+
 \start \Str{223} Drugie zdanie drugiego paragrafu na~tej stronie jest
 źle skonstruowane, nie wiem jednak jak je poprawić. Mimo tego, tego
 jego sens jest jasny.
@@ -647,11 +701,13 @@ jego sens jest jasny.
 \vspace{\spaceFour}
 
 
+
 \start \Str{232} Ludendorff spada tu jak z~nieba, aby zostać naczelnym
 wodzem w~rządzie Hitlera, powołanym podczas puczu monachijskiego.
 Warto byłoby napisać skąd on~się w~ogóle w~tym miejscu wziął.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{237--238} Tekst byłby znacznie bardziej logiczny, gdy
@@ -664,6 +720,7 @@ emocjonalnej”.
 \vspace{\spaceFour}
 
 
+
 \start \Str{241} Stwierdzenie o~kurczącej~się populacji Francji jest
 mało udane, bowiem jak zaraz potem Johnson wskazuje, populacja ta
 w~rzeczywistości rosła. Problemem jest to, że~rosła ona bardzo słabo
@@ -671,6 +728,7 @@ w~porównaniu z~innymi państwami i~tym samym malał stosunek liczby
 mieszkańców Francji do mieszkańców innych krajów w~Europie.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{262} Na tej stronie pojawia~się po~raz pierwszy
@@ -683,9 +741,11 @@ jeszcze w~języku polskim ustalonej nazwy na~to~zjawisko.
 \vspace{\spaceFour}
 
 
+
 \start \Str{288}
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{304} W~2016~r. byłem na wykładzie na~temat chrześcijaństwa
@@ -698,6 +758,7 @@ gigantycznym uproszczeniem, a~może nawet wypaczeniem, historii.
 \vspace{\spaceFour}
 
 
+
 \start \Str{303} Czytając ten fragment odniosłem wrażenie, że~cesarz
 Meiji był stary człowiekiem, gdy sprawował swą władzę,
 w~rzeczywistości jednak objął formalnie panowanie, gdy miał 15 lat,
@@ -708,9 +769,11 @@ zdrowia jego następcy, co ten fragment mógł sugerować.
 \vspace{\spaceFour}
 
 
+
 \start \Str{305}
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{310} Rok 1944 jako data przystąpienia Japonii do II~Wojny
@@ -722,9 +785,11 @@ jednak jak~ją poprawić.
 \vspace{\spaceFour}
 
 
+
 \start \Str{345} Brak numeru strony w~prawy górnym rogu.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{345} Opisane tu wydarzenia, okupacja Korei przez
@@ -735,6 +800,7 @@ dosyć niejasne i~chaotyczne.
 \vspace{\spaceFour}
 
 
+
 \start \Str{454} Nie rozumiem dlaczego Stalin chował za~plecy prawą
 rękę, skoro jego lewa była uszkodzona. Czy to dlatego, że~nie był
 w~stanie schować lewej ręki za~plecami?
@@ -742,9 +808,11 @@ w~stanie schować lewej ręki za~plecami?
 \vspace{\spaceFour}
 
 
+
 \start \Str{457} W~tekście brak odwołania do~przypisu 11.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{459}
@@ -752,15 +820,24 @@ w~stanie schować lewej ręki za~plecami?
 \vspace{\spaceFour}
 
 
+
 \start \Str{465}
 
 \vspace{\spaceFour}
 
 
+
 \start \Str{477--478}
 
+
+
+
+
+% ##################
 \newpage
-\CenterTB{Błędy}
+\CenterBoldFont{Błędy}
+
+
 \begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
@@ -795,7 +872,7 @@ w~stanie schować lewej ręki za~plecami?
     243 &  8 & & nie & nie została \\
     248 & &  3 & 1853 & 1853 -- przy. red.] \\
     252 & &  4 & Enqu\'{e}te sur la~monarchie
-           & \emph{Enqu\'{e}te sur la~monarchie} \\
+           & \textit{Enqu\'{e}te sur la~monarchie} \\
     259 & 14 & & Algierczyków & Algierczykom \\
     281 & &  2 & red. & red.] \\
     292 & 15 & & Jesteśmy & „Jesteśmy \\
@@ -804,13 +881,15 @@ w~stanie schować lewej ręki za~plecami?
     351 &  5 & & podejrzanego & „podejrzanego \\
     382 & 11 & & wzrosty & wzrosły \\
     392 & 10 & & dały & dawały \\
-    393 & &  2 & Steffens,{ }{ }\emph{Individualism}
-           & Steffens, \emph{Individualism} \\
+    393 & &  2 & Steffens,{ }{ }\textit{Individualism}
+           & Steffens, \textit{Individualism} \\
     408 & & 13 & problem6w & problemów \\
     423 &  9 & & ulega kwestii & podlega dyskusji \\
     426 & &  7 & zalegle & zaległe \\
     \hline
   \end{tabular}
+
+
 
 
 
@@ -834,6 +913,8 @@ w~stanie schować lewej ręki za~plecami?
     % & & & & \\
     \hline
   \end{tabular}
+
+
 
 
 
@@ -886,8 +967,10 @@ w~stanie schować lewej ręki za~plecami?
   % \end{tabular}
 
 \end{center}
-\noi
-\tb{Okładka} \\
+
+
+\noindent
+\textbf{Okładka} \\
 \Jest  ”Solidarności” \\
 \Powin „Solidarności” \\
 \Str{1} \\
@@ -898,6 +981,7 @@ w~stanie schować lewej ręki za~plecami?
 \Powin \textbf{Historia świata XX wieku} \\
 
 \vspace{\spaceTwo}
+% ############################
 
 
 
@@ -911,18 +995,19 @@ w~stanie schować lewej ręki za~plecami?
 % ######################################
 \subsection{Świat po~1945~r.}
 
-\vspace{\spaceThree}
+\vspace{\spaceTwo}
 % ######################################
 
 
 % ##################
 \Work{ % Autor i tytuł działa
   Tony Judt \\
-  „Powojnie. Historia Europy od~roku 1945”, \cite{JudtPowojnie2016}
-}
+  „Powojnie. Historia Europy od~roku 1945”, \cite{JudtPowojnie2016} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \start \Str{28} Stwierdzenie, że~aż do lat trzydziestych~XIX~w. babcie
 hiszpańskie straszyły dzieci Napoleonem, jest trochę niezręczne. Wojny
@@ -935,10 +1020,12 @@ to~zdanie sformułować lepiej.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{102}{8} Nie potrafię zrozumieć co~w~tym kontekście miało
 znaczyć zdanie „co~wyjątkowo miało~się okazać nieskuteczne”.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{111} Warto byłoby podać trochę więcej informacji o~zimie
@@ -949,10 +1036,12 @@ jaki~się utrzymywała, byłoby zupełnie wystarczające.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{125}{7} Należałoby podać, w~jakiej walucie~są wyrażone,
 przedstawione tu wydatki.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{131} W~ostatnim akapicie na~tej stronie jest mowa
@@ -962,12 +1051,14 @@ o~co tak naprawdę chodzi.
 \vspace{\spaceFour}
 
 
-\start \StrWg{150}{20} Zdanie „zbliża~się czas wielkich zawirowań
---~a~tym samym konieczność określenia przez Związek Radziecki
+
+\start \StrWg{150}{20} Zdanie „zbliża~się czas wielkich zawirowań~--
+a~tym samym konieczność określenia przez Związek Radziecki
 wynikających z~tego korzyści” nie jest zbyt dobrze skonstruowane
 i~trochę niezrozumiałe.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWg{159}{20} Zdanie „pozwoli Niemcom gnić, dopóki owoce
@@ -977,11 +1068,13 @@ ani~zbyt jasne, ani~nie brzmi zbyt dobrze w~języku polskim.
 \vspace{\spaceFour}
 
 
+
 \start \StrWg{174}{18} Słowa Milovana Dżilasa warto byłoby opatrzyć
 komentarzem. W~tym momencie ich brzmienie jest trochę dziwne, a~sens
 niepewny.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWg{197}{8} W~tym wierszu jest mowa o~przeżyciu przez
@@ -991,11 +1084,13 @@ to~błąd i~tak naprawdę chodzi o~Drugą.
 \vspace{\spaceFour}
 
 
+
 \start \Str{204} Przypis konsultanta wydania polskiego, który obecnie
 znajduje~się na~końcu zdania w~wierszu 21 od~góry, powinienem
 znajdować~się na końcu zdania w~wierszy drugim od~góry.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWg{258}{17} Z~kontekstu ciężko wywnioskować, kim było
@@ -1005,10 +1100,12 @@ poprawiony.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{282}{3} Na~końcu książki nie ma odniesienia do przypisu
 z~tej linii.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{417}{19--18} O~Luckym Luku, czyli na polski Mającym
@@ -1019,13 +1116,15 @@ jest dla mnie kontrowersyjne.
 \vspace{\spaceFour}
 
 
+
 \start \Str{474} Raymond Aron był zapewne całe życie antykomunistą,
-ale~ponieważ w~jednym z~wydań \emph{Opium dla~intelektualistów}
+ale~ponieważ w~jednym z~wydań \textit{Opium dla~intelektualistów}
 napisał, że~książkę można traktować jako marksistowską krytykę pewnych
 zjawisk, jego stosunek do~intelektualnego dziedzictwa marksizmu,
 pozostaje sprawą otwartą.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{510} Choć „Dziady. Część III” zostały napisane po
@@ -1039,11 +1138,13 @@ z~najważniejszych.
 \vspace{\spaceFour}
 
 
+
 \start \StrWg{513}{7} W~1970 roku protesty o~szczególnych
 konsekwencjach miały miejsce w~Szczecinie, nie można więc ich
 ograniczać tylko do Gdańska.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWg{526}{14} Wydaje mi~się, że rozumiem sens zdania
@@ -1054,10 +1155,12 @@ i~skomplikowany sposób, aby czytelnik nie zgubił~się.
 \vspace{\spaceFour}
 
 
+
 \start \StrWg{556}{8} Nie rozumiem co miały znaczyć słowa
 „dla~obojętnych skrajów ruchu robotniczego”.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{561} Nie wiem czy mogę~się w~pełni zgodzić ze
@@ -1067,6 +1170,7 @@ lecz zapewne była to specyficzna odmiana racjonalizmu.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{585}{18} Panków to dzielnica Berlina, gdzie
 w~początkowym okresie istnienia NRD~znajdowały się rezydencje władz
 tego kraju.
@@ -1074,10 +1178,12 @@ tego kraju.
 \vspace{\spaceFour}
 
 
+
 \start \StrWg{602}{13} Na~końcu książki nie ma odniesienia do przypisu
 z~tej linii.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{655}{16--14} Zdanie „przeczyć fundamentalnemu
@@ -1088,11 +1194,14 @@ jest napisane w~niezrozumiały sposób.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{681}{4--3} Nie rozumiem co miało dokładnie znaczyć
 zdanie „Epoka zastoju Leonida Breżniewa (Michaił Gorbaczow)
 żywiła~się wieloma złudzeniami”.
 
 \vspace{\spaceFour}
+
+
 
 \start \StrWd{681}{2} W~Polsce przyjęła~się pisonia tego nazwiska
 „Potiomkin” nie jak w~krajach anglojęzycznych „Potemkin”.
@@ -1100,10 +1209,12 @@ zdanie „Epoka zastoju Leonida Breżniewa (Michaił Gorbaczow)
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{693}{16} Na~końcu książki nie ma odniesienia do przypisu
 z~tej linii.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{694} Bill Clinton miał 46 lat, gdy został prezydentem USA
@@ -1116,10 +1227,12 @@ Roosevelt który miał tylko 42 lata, gdy~objął ten urząd w~1901 roku.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{703}{18} Słowo „niezrównany” brzmi trochę dziwnie
 w~tym kontekście. Może powinno być „nierówny”.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{718}{2} Zwrot „bezwarunkowe niezrozumienie” jest
@@ -1130,16 +1243,19 @@ lepszym tłumaczeniem.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{734}{19} NRD pojawia~się w~tym wersie dość
 niespodziewanie, może chodziło o~Czechosłowację?
 
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{742}{10} Na~końcu książki nie ma odniesienia do przypisu
 z~tej linii.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{757}{6--5} Zdanie „którego rządzący byli
@@ -1149,16 +1265,19 @@ jakoś niezręcznie. Może dałoby~się je sformułować lepiej?
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{782}{15} Powinno tu być wyjaśnione czym~są prawa
 ciągnięcia.
 
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{805}{9} Na~końcu książki nie ma odniesienia do przypisu
 z~tej linii.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{823}{12-10} Zdanie „W~kraju było teraz więcej osób
@@ -1169,20 +1288,26 @@ i~nie od razu zrozumiałe.
 \vspace{\spaceFour}
 
 
-\start \tb{Wkładka~1, str.~6, u~góry.} Dla ułatwienia czytelnikom
+
+\start \textbf{Wkładka~1, str.~6, u~góry.} Dla ułatwienia czytelnikom
 orientacji, warto byłoby napisać, o~jaki akt stworzenia tu chodzi.
 
 \vspace{\spaceFour}
 
 
-\start \tb{Wkładka~1, str.~6, u~dołu.} Cytowane są tu te same słowa
+
+\start \textbf{Wkładka~1, str.~6, u~dołu.} Cytowane są tu te same słowa
 Clementa Attlee co na stronie~127, jednak te dwie wersje nie są
 identyczne.
 
 
-\CenterTB{Błędy}
 
+
+
+% ##################
 \nopagebreak
+\CenterBoldFont{Błędy}
+
 
 \begin{center}
 
@@ -1200,7 +1325,7 @@ identyczne.
     58  & &  7 & postępującą & postępującej \\
     58  & &  6 & degeneracją & degeneracji \\
     99  & 10 & & to & za~to \\
-    127 & 11 & & \emph{metody} & \emph{metody dozwolone} \\
+    127 & 11 & & \textit{metody} & \textit{metody dozwolone} \\
     131 & 13 & & radziecką & bolszewicką \\
     185 & 19 & & być może & może \\
     199 & 11 & & przeregulowanej prawnie & prawnie przeregulowanej \\
@@ -1228,6 +1353,8 @@ identyczne.
 
 
 
+
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -1248,7 +1375,7 @@ identyczne.
     793 & &  8 & międzynarodową... & międzynarodową. \\
     793 & &  3 & nawet & on nawet \\
     798 & &  6 & walczyć & wlec~się \\
-    815 & 15 & & \emph{Beatrice Webb (1925)} & Beatrice Webb (1925) \\
+    815 & 15 & & \textit{Beatrice Webb (1925)} & Beatrice Webb (1925) \\
     838 &  3 & & w~związku z~tym & w~tym czasie \\
     937 & & 13 & Tabu & Różne tabu \\
     967 & & 11 & góry(Schuman & góry (Schuman \\
@@ -1258,7 +1385,9 @@ identyczne.
   \end{tabular}
 
 \end{center}
-\noi
+
+
+\noindent
 \StrWd{110}{6} \\
 \Jest  na~samą perspektywę pokoju \\
 \Powin na~samą myśl o~perspektywie pokoju \\
@@ -1275,7 +1404,9 @@ identyczne.
 \Jest  który rozpada~się w~wartości 37~miliardów rozpadów na~sekundę \\
 \Powin w~którym dochodzi do~37~miliardów rozpadów na~sekundę \\
 
+
 \vspace{\spaceTwo}
+% ############################
 
 
 
@@ -1302,14 +1433,16 @@ identyczne.
 
 
 
-% ##################
+% ############################
 \Work{ % Autor i tytuł dzieła
   Philipp Ther \\
   „Nowy ład na starym kontynencie. Historia neoliberalnej \\
   Europy”, \cite{TherNowyLad2015} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \start \Str{120} Jest tu mowa, że~Lech Wałęsa był pierwszym
 prezydentem demokratycznej polski. Trzeba sprawdzić, czy ten tytuł nie
@@ -1318,7 +1451,13 @@ powinien przypaść gen.~Wojciechowi Jaruzelskiemu.
 % \vspace{\spaceFour}
 
 
-\CenterTB{Błędy} \nopagebreak
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
 \begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
@@ -1332,22 +1471,22 @@ powinien przypaść gen.~Wojciechowi Jaruzelskiemu.
     14  & 16 & & „ruskich” & o~„ruskich” \\
     16  &  6 & & o & jako \\
     30  & 12 & & wschodniego & zachodniego \\
-    33  &  2 & & \emph{prospects}” & \emph{prospects} \\
+    33  &  2 & & \textit{prospects}” & \textit{prospects} \\
     41  & 13 & & po1917 & po~1917 \\
     43  &  3 & & po1918 & po~1918 \\
-    49  & &  2 & \emph{1989}„ & \emph{1989}, \\
+    49  & &  2 & \textit{1989}„ & \textit{1989}, \\
     50  & & 13 & doprowadziło & nie~doprowadziło \\
     51  & &  1 & 61-65,71 & 61--65, 71 \\
-    57  & &  2 & 1985--1988 & \emph{1985--1988} \\
+    57  & &  2 & 1985--1988 & \textit{1985--1988} \\
     60  & &  7 & NRD.nCi & NRD. Ci \\
-    60  & &  1 & \emph{War},: & \emph{War}, \\
+    60  & &  1 & \textit{War},: & \textit{War}, \\
     % & & & & \\
     62  & &  9 & przypieczętowa & przypieczętowano \\
     71  & &  8 & Niemczami~i & Niemcami~niż \\
     80  & & 17 & z~Lewobrzeżną & Lewobrzeżną \\
     85  & & 11 & w & o \\
-    88  & &  6 & \tb{\emph{Anders}} & Anders \\
-    109 &  1 & & & Tilly'emu \\
+    88  & &  6 & \textbf{\textit{Anders}} & Anders \\
+    109 &  1 & & & Tilly’emu \\
     124 & 11 & & 5) & 5). \\
     146 &  1 & & ( ang. & (ang. \\
     % & & & & \\
@@ -1358,12 +1497,15 @@ powinien przypaść gen.~Wojciechowi Jaruzelskiemu.
   \end{tabular}
 
 \end{center}
-\noi
+
+
+\noindent
 \StrWd{30}{22} \\
 \Jest  metropolii”$^{ 14 }$. Natomiast w~regionalnej \\
 \Powin metropolii”$^{ 14 }$, w~regionalnej \\
 
 \vspace{\spaceTwo}
+% ############################
 
 
 
@@ -1382,15 +1524,18 @@ powinien przypaść gen.~Wojciechowi Jaruzelskiemu.
 
 
 
-% ####################
-\Work{
+% ############################
+\Work{ % Autor i tytuł dzieła
   Christopher A. Ferrara \\
   „Liberty: The God That Failed”, \cite{Ferrara12} }
 
 
-\CenterTB{Błędy}
+% ##################
+\CenterBoldFont{Błędy}
+
 
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -1399,17 +1544,20 @@ powinien przypaść gen.~Wojciechowi Jaruzelskiemu.
     & Od góry & Od dołu & & \\
     \hline
     23  &  3 & & in & in an other \\
-    40  & &  1 & \emph{St. Saint} & \emph{Saint} \\
-    207 & &  2 & Government & \emph{Government} \\
+    40  & &  1 & \textit{St. Saint} & \textit{Saint} \\
+    207 & &  2 & Government & \textit{Government} \\
     227 & 11 & & doing-not & doing--not \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
 
+
 \vspace{\spaceTwo}
+% ############################
 
 
 
@@ -1429,14 +1577,16 @@ powinien przypaść gen.~Wojciechowi Jaruzelskiemu.
 
 
 
-% ##################
+% ############################
 \Work{ % Autor i tytuł dzieła
   Andrew Gordon \\
   „Nowożytna historia Japonii”,
   \cite{GordonNowozytnaHistoriaJaponii2010} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \start \StrWg{46}{3} Jest tu podana ilość mieszkańców Tokio w~1720~r.,
 ale~do 1868~r. to miasto nosiło nazwę~Edo.
@@ -1444,17 +1594,20 @@ ale~do 1868~r. to miasto nosiło nazwę~Edo.
 \vspace{\spaceFour}
 
 
+
 \start \Str{83} Nie rozumiem na czym polegała dewaluacja złotych monet
-przeprowadzona przez \emph{bakufu}, ani czemu wywołało to zwiększenie
+przeprowadzona przez \textit{bakufu}, ani czemu wywołało to zwiększenie
 podaży pieniądza i~inflację.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWg{85}{10} Nie jest napisane kim jest ten potężny
 reformator i~wróg cudzoziemców.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{88} Powinno zostać tu dokładniej opisany zamach na Iiego
@@ -1464,11 +1617,13 @@ niego. Z~kontekstu wynika, że~Iiego zginął.
 \vspace{\spaceFour}
 
 
+
 \start \Str{91}{15} Sens tego zdania miał być chyba następujący. Gdyby
-rząd \emph{bakufu} przetrwał, to w~skutek jego reform powstałby system
+rząd \textit{bakufu} przetrwał, to w~skutek jego reform powstałby system
 zbliżony do tego, który stworzyła restauracja Meiji.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{134}{13--11} Nie jest wyjaśnione która grupa
@@ -1478,11 +1633,13 @@ ksenofobiczne.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{424}{11} Zgodnie z~tym co było napisane na~stronie~417
 kobieta ta raczej nie fałszowała banknotów, lecz~potwierdzenia
 depozytu z~lokalnej agencji kredytowej.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWg{425}{5} W~tym miejscu jest mowa o~sytuacji gospodarczej
@@ -1493,6 +1650,7 @@ tu nadwyżka handlowa odnosi~się do~czasu, gdy Unia Europejska jeszcze
 formalnie nie istniał i~użycie jej nazwy jest formą skrótu myślowego.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{432} Podany tu średni czas czas trwania kadencji premierów
@@ -1523,8 +1681,12 @@ w~2001~r. Przyjęcie więc, że~dziesięciu premierów, sprawowało urząd
 dwanaście lat, jest po~prostu bardzo niedokładnym postawieniem sprawy,
 by~nie powiedzieć niechlujnym.
 
+
+% ##################
 \newpage
-\CenterTB{Błędy}
+\CenterBoldFont{Błędy}
+
+
 \begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
@@ -1563,12 +1725,15 @@ by~nie powiedzieć niechlujnym.
   \end{tabular}
 
 \end{center}
-\noi
+
+
+\noindent
 \StrWd{240}{7} \\
 \Jest  gospodarczej i~militarnej przewagi \\
 \Powin o~gospodarczą i~militarną przewagę \\
 
 \vspace{\spaceTwo}
+% ############################
 
 
 
@@ -1587,7 +1752,9 @@ by~nie powiedzieć niechlujnym.
   \cite{PolitSmutnyKontynent2002} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \start \Str{28} Wedle tej pracy wojska japońskie wkroczyły na Syberię
 w~1918~r., zaś wycofały~się w~1922, interwencja wojskowa trwała więc
@@ -1597,8 +1764,9 @@ a~podpisaniem pekińskiego traktatu japońsko-rosyjskiego w~1925~r.
 \vspace{\spaceFour}
 
 
+
 \start \Str{34} Według znakomitej audycji
-\href{https://www.bbc.co.uk/programmes/b00pcm9f}{\emph{The~Samurai}}
+\href{https://www.bbc.co.uk/programmes/b00pcm9f}{\textit{The~Samurai}}
 (około 39~minuty) z~cyklu In~Our Time, Japończycy nie brali
 do~samolotów mieczy, bowiem rozmiary kokpitu na~to nie~pozwalały.
 Zaś~zdjęcia przedstawiające pilotów wsiadających do~swoich maszyn
@@ -1607,15 +1775,18 @@ z~mieczami były upozowane do~celów propagandowych.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{48}{11} Nie rozumiem, czemu zatopienie przez japońskie
 samoloty dwóch statków na Yangzi, zostało określone jako atak piracki.
 
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{100}{21} „Jan Baptysta” to po polsku „Jan Chrzciciel”.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{151} Nagłówek występujący na~nieparzystych stronach tego
@@ -1625,8 +1796,15 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 \vspace{\spaceFour}
 
 
-\CenterTB{Błędy}
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -1634,24 +1812,24 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    12  & & 12 & \emph{others} & \emph{Others} \\
+    12  & & 12 & \textit{others} & \textit{Others} \\
     16  &  6 & & współwinny mi & współwinnymi \\
-    17  & &  4 & \emph{Presidents. The} & \emph{Presidents: The} \\
+    17  & &  4 & \textit{Presidents. The} & \textit{Presidents: The} \\
     21  &  4 & & pro- si & prosi \\
     21  &  6 & & wobec Balfoura & Balfourowi \\
     25  & & 10 & 1939~, & 1939, \\
     28  &  1 & & polowy & połowy \\
-    28  & &  6 & \emph{intervention} & \emph{Intervention} \\
-    29  & &  2 & \emph{Asia. Tradition} & \emph{Asia: Tradition} \\
-    34  & &  4 & \emph{Nanking. The} & \emph{Nanking: The} \\
+    28  & &  6 & \textit{intervention} & \textit{Intervention} \\
+    29  & &  2 & \textit{Asia. Tradition} & \textit{Asia: Tradition} \\
+    34  & &  4 & \textit{Nanking. The} & \textit{Nanking: The} \\
     38  & &  6 & E.~Russell~of Liverpool & E.~Russell \\
-    40  & & 18 & \emph{Criminal. The} & \emph{Criminal: The} \\
-    40  & & 15 & \emph{smuggling} & \emph{Smuggling} \\
-    40  & & 15 & \emph{puppets} & \emph{Puppets} \\
-    40  & & 14 & \emph{atrocities} & \emph{Atrocities} \\
+    40  & & 18 & \textit{Criminal. The} & \textit{Criminal: The} \\
+    40  & & 15 & \textit{smuggling} & \textit{Smuggling} \\
+    40  & & 15 & \textit{puppets} & \textit{Puppets} \\
+    40  & & 14 & \textit{atrocities} & \textit{Atrocities} \\
     43  & &  2 & Cyt & Cyt. \\
-    44  & &  5 & \emph{Sun. The} & \emph{Sun:~The} \\
-    46  & &  8 & \emph{Territory:The} & \emph{Territory: The} \\
+    44  & &  5 & \textit{Sun. The} & \textit{Sun:~The} \\
+    46  & &  8 & \textit{Territory:The} & \textit{Territory: The} \\
     47  & &  7 & s.194 & s.~194 \\
     47  & &  6 & E.~Russell~of Liverpool & E.~Russell \\
     49  & &  4 & historia) , & historia), \\
@@ -1660,6 +1838,8 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 
 
 
+
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -1667,51 +1847,53 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    49  & &  8 & \emph{Japan. History} & \emph{Japan: History} \\
-    52  & &  6 & \emph{Hopkins. An} & \emph{Hopkins: An} \\
-    52  & &  2 & \emph{Mao. A} & \emph{Mao: A} \\
-    53  & &  4 & \emph{China. The} & \emph{China: The} \\
-    54  & &  4 & \emph{Tangle. The} & \emph{Tangle: The} \\
-    55  & &  6 & \emph{Sun. The} & \emph{Sun: The} \\
+    49  & &  8 & \textit{Japan. History} & \textit{Japan: History} \\
+    52  & &  6 & \textit{Hopkins. An} & \textit{Hopkins: An} \\
+    52  & &  2 & \textit{Mao. A} & \textit{Mao: A} \\
+    53  & &  4 & \textit{China. The} & \textit{China: The} \\
+    54  & &  4 & \textit{Tangle. The} & \textit{Tangle: The} \\
+    55  & &  6 & \textit{Sun. The} & \textit{Sun: The} \\
     57  & &  5 & zob.: & zob. \\
     57  & &  4 & 1964,s. & 1964, s. \\
     59  &  6 & & min & mln \\
-    59  & &  2 & \emph{China. The} & \emph{China: The} \\
-    60  & & 12 & \emph{Dream. A} & \emph{Dream: A} \\
+    59  & &  2 & \textit{China. The} & \textit{China: The} \\
+    60  & & 12 & \textit{Dream. A} & \textit{Dream: A} \\
     61  &  3 & & jako by & jakoby \\
-    61  & &  2 & \emph{Coexistence. The} & \emph{Coexistence: The} \\
-    68  & &  4 & \emph{World. The} & \emph{World: The} \\
-    69  & 13 & & a\emph{mba}- & \emph{amba}- \\
-    71  & &  7 & \emph{Center. 300} & \emph{Center: 300} \\
+    61  & &  2 & \textit{Coexistence. The} & \textit{Coexistence: The} \\
+    68  & &  4 & \textit{World. The} & \textit{World: The} \\
+    69  & 13 & & a\textit{mba}- & \textit{amba}- \\
+    71  & &  7 & \textit{Center. 300} & \textit{Center: 300} \\
     74  & & 14 & pretensje. Odebrałby & pretensje, odebrałby \\
-    79  & &  5 & \emph{War. America} & \emph{War: America} \\
-    80  & &  5 & \emph{Tibet. A} & \emph{Tibet: A} \\
-    81  & &  9 & \emph{its history} & \emph{Its History} \\
-    84  & &  4 & \emph{Sen, Dzieło} & \emph{Sen. Dzieło} \\
+    79  & &  5 & \textit{War. America} & \textit{War: America} \\
+    80  & &  5 & \textit{Tibet. A} & \textit{Tibet: A} \\
+    81  & &  9 & \textit{its history} & \textit{Its History} \\
+    84  & &  4 & \textit{Sen, Dzieło} & \textit{Sen. Dzieło} \\
     100 & &  9 & de & ode \\
-    101 & &  5 & \emph{Vietnam. A} & \emph{Vietnam: A} \\
+    101 & &  5 & \textit{Vietnam. A} & \textit{Vietnam: A} \\
     102 & 14 & & z~biurze & w~biurze \\
-    105 & & 17 & \emph{Lake. The} & \emph{Lake: The} \\
-    109 & &  3 & \emph{April. The} & \emph{April: The} \\
+    105 & & 17 & \textit{Lake. The} & \textit{Lake: The} \\
+    109 & &  3 & \textit{April. The} & \textit{April: The} \\
     110 & &  1 & 292) & 292 \\
-    117 & &  6 & \emph{Wietnam: the} & \emph{Wietnam: The} \\
-    118 & & 15 & --~czy & czy \\
-    119 & &  5 & \emph{Minh;} & \emph{Minh:} \\
-    121 & &  9 & \emph{Lake. The} & \emph{Lake: The} \\
+    117 & &  6 & \textit{Wietnam: the} & \textit{Wietnam: The} \\
+    118 & & 15 & -- czy & czy \\
+    119 & &  5 & \textit{Minh;} & \textit{Minh:} \\
+    121 & &  9 & \textit{Lake. The} & \textit{Lake: The} \\
     125 & &  8 & 407). & 407), \\
     125 & &  6 & za:~.~J. & za:~J. \\
-    125 & &  5 & \emph{Retrospect. The} & \emph{Retrospect: The} \\
+    125 & &  5 & \textit{Retrospect. The} & \textit{Retrospect: The} \\
     132 & & 18 & kłamliwie$^{ 8 }$ , & kłamliwie$^{ 8 }$, \\
     132 & & 16 & Xianlianga$^{ 9 }$ ) & Xianlianga$^{ 9 }$) \\
-    133 & &  7 & \emph{Marshall. The} & \emph{Marshall: The} \\
-    133 & &  6 & \emph{autobiographical notes}
-           & \emph{Autobiographical Notes} \\
-    135 & & 14 & \emph{Combat. Korea} & \emph{Combat: Korea} \\
+    133 & &  7 & \textit{Marshall. The} & \textit{Marshall: The} \\
+    133 & &  6 & \textit{autobiographical notes}
+           & \textit{Autobiographical Notes} \\
+    135 & & 14 & \textit{Combat. Korea} & \textit{Combat: Korea} \\
     \hline
   \end{tabular}
 
 
 
+
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -1719,8 +1901,8 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    135 & & 11 & \emph{Warfare. Secrets} & \emph{Warfare: Secrets} \\
-    138 & &  6 & \emph{Logai. The} & \emph{Logai: The} \\
+    135 & & 11 & \textit{Warfare. Secrets} & \textit{Warfare: Secrets} \\
+    138 & &  6 & \textit{Logai. The} & \textit{Logai: The} \\
     138 & &  4 & (ur.1938) & (ur.~1938) \\
     141 & & 18 & przekroczony''$^{ 27 }$~. & przekroczony''$^{ 27 }$. \\
     141 & & 14 & szacunki$^{ 28 }$~. & szacunki$^{ 28 }$. \\
@@ -1728,7 +1910,8 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
     142 &  5 & & mln$^{ 30 }$~. & mln$^{ 30 }$. \\
     142 & 13 & & chodziło$^{ 31 }$~. & chodziło$^{ 31 }$. \\
     142 & & 18 & obozie$^{ 32 }$~. & obozie$^{ 32 }$. \\
-    142 & &  5 & \emph{China. Reflections} & \emph{China: Reflections} \\
+    142 & &  5 & \textit{China. Reflections}
+           & \textit{China: Reflections} \\
     142 & & 12 & „~czymś & „czymś \\
     143 & 19 & & 10\%~! & 10\%! \\
     143 & 15 & & trzydziestki$^{ 33 }$~. & trzydziestki$^{ 33 }$. \\
@@ -1738,30 +1921,32 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
     148 &  3 & & kwiatów$^{ 44 }$~. & kwiatów$^{ 44 }$. \\
     148 & & & ile?”$^{ 45 }$~. & ile?”$^{ 45 }$ \\
     151 & 19 & & bardziej niewielu & mniej \\
-    153 & &  3 & \emph{MacArthur. An} & \emph{MacArthur: An} \\
-    154 & &  8 & \emph{Dream. A} & \emph{Dream: A} \\
-    155 & &  8 & \emph{March: an} & \emph{March: An} \\
-    159 & &  6 & \emph{War. The} & \emph{War: The} \\
-    160 & &  8 & \emph{Sun. The} & \emph{Sun: The} \\
-    160 & &  4 & \emph{Downfall. The} & \emph{Downfall: The} \\
-    161 & &  9 & \emph{MacArthur. The} & \emph{MacArthur: The} \\
-    161 & &  2 & \emph{Japan, The} & \emph{Japan: The} \\
-    162 & &  7 & \emph{Peace. MacArthur} & \emph{Peace: MacArthur} \\
-    162 & &  3 & \emph{Japan. A} & \emph{Japan: A} \\
-    162 & &  2 & \emph{MacArthur. His} & \emph{MacArthur: His} \\
-    166 & &  6 & \emph{War. The} & \emph{War: The} \\
-    166 & &  3 & \emph{Ho}pe & \emph{Hope} \\
-    168 & &  2 & \emph{Combat. Korea} & \emph{Combat: Korea} \\
-    170 & &  4 & \emph{MacArthur, 1941-1951}
-           & \emph{MacArthur: 1941--1951} \\
+    153 & &  3 & \textit{MacArthur. An} & \textit{MacArthur: An} \\
+    154 & &  8 & \textit{Dream. A} & \textit{Dream: A} \\
+    155 & &  8 & \textit{March: an} & \textit{March: An} \\
+    159 & &  6 & \textit{War. The} & \textit{War: The} \\
+    160 & &  8 & \textit{Sun. The} & \textit{Sun: The} \\
+    160 & &  4 & \textit{Downfall. The} & \textit{Downfall: The} \\
+    161 & &  9 & \textit{MacArthur. The} & \textit{MacArthur: The} \\
+    161 & &  2 & \textit{Japan, The} & \textit{Japan: The} \\
+    162 & &  7 & \textit{Peace. MacArthur} & \textit{Peace: MacArthur} \\
+    162 & &  3 & \textit{Japan. A} & \textit{Japan: A} \\
+    162 & &  2 & \textit{MacArthur. His} & \textit{MacArthur: His} \\
+    166 & &  6 & \textit{War. The} & \textit{War: The} \\
+    166 & &  3 & \textit{Ho}pe & \textit{Hope} \\
+    168 & &  2 & \textit{Combat. Korea} & \textit{Combat: Korea} \\
+    170 & &  4 & \textit{MacArthur, 1941-1951}
+           & \textit{MacArthur: 1941--1951} \\
     170 & &  3 & obsesją , & obsesją, \\
     171 &  5 & & żołnierzem.$^{ 52 }$ & żołnierzem”$^{ 52 }$. \\
-    178 & &  3 & \emph{Japan. A} & \emph{Japan: A} \\
-    182 & &  4 & \emph{Hirohito. Emperor} & \emph{Hirohito: Emperor} \\
-    182 & &  8 & \emph{procesowi}.$^{ 22 }$
-           & \emph{procesowi}”.$^{ 22 }$ \\
+    178 & &  3 & \textit{Japan. A} & \textit{Japan: A} \\
+    182 & &  4 & \textit{Hirohito. Emperor} & \textit{Hirohito: Emperor} \\
+    182 & &  8 & \textit{procesowi}.$^{ 22 }$
+           & \textit{procesowi}”.$^{ 22 }$ \\
     \hline
   \end{tabular}
+
+
 
 
 
@@ -1773,48 +1958,50 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
     & Od góry & Od dołu & & \\
     \hline
     183 & & 12 & lnukai & Inukai \\
-    184 & &  5 & \emph{Japan. The} & \emph{Japan: The} \\
-    185 & & 11 & \emph{Nanking. The} & \emph{Nanking: The} \\
-    185 & & 10 & \emph{l997,passim} & 1997, \emph{passim} \\
-    185 & &  5 & \emph{Hirahito. Behind} & \emph{Hirahito: Behind} \\
-    185 & &  2 & \emph{Hirahito. Behind} & \emph{Hirahito: Behind} \\
-    187 & 13 & & \emph{terno} & \emph{tenno} \\
-    188 & & 11 & \emph{Peace. MacArthur} & \emph{Peace: MacArthur} \\
-    193 & &  7 & \emph{Prince. Akihito} & \emph{Prince: Akihito} \\
-    193 & &  5 & \emph{Mishima. A} & \emph{Mishima: A} \\
-    193 & &  4 & \emph{Yukio. The} & \emph{Yukio: The} \\
-    194 & & 17 & \emph{eks}-króla & eks-króla \\
+    184 & &  5 & \textit{Japan. The} & \textit{Japan: The} \\
+    185 & & 11 & \textit{Nanking. The} & \textit{Nanking: The} \\
+    185 & & 10 & \textit{l997,passim} & 1997, \textit{passim} \\
+    185 & &  5 & \textit{Hirahito. Behind} & \textit{Hirahito: Behind} \\
+    185 & &  2 & \textit{Hirahito. Behind} & \textit{Hirahito: Behind} \\
+    187 & 13 & & \textit{terno} & \textit{tenno} \\
+    188 & & 11 & \textit{Peace. MacArthur} & \textit{Peace: MacArthur} \\
+    193 & &  7 & \textit{Prince. Akihito} & \textit{Prince: Akihito} \\
+    193 & &  5 & \textit{Mishima. A} & \textit{Mishima: A} \\
+    193 & &  4 & \textit{Yukio. The} & \textit{Yukio: The} \\
+    194 & & 17 & \textit{eks}-króla & eks-króla \\
     194 & & 15 & jako przywódca & przywódca \\
-    194 & &  9 & tenno & \emph{tenno} \\
+    194 & &  9 & tenno & \textit{tenno} \\
     197 & 13 & & smród”$^{ 2 }$~. & smród”$^{ 2 }$. \\
     197 & &  2 & $^{ 2 }$H.~Lory & $^{ 2 }$ H.~Lory \\
-    198 & &  1 & \emph{Tojo. The} & \emph{Tojo: The} \\
-    200 & &  7 & \emph{Patriots: a} & \emph{Patriots: A} \\
-    201 & &  2 & \emph{Nomonhan. Japan} & \emph{Nomonhan: Japan} \\
-    203 & &  2 & \emph{1939-1946. The} & \emph{1939--1946: The} \\
-    204 & &  8 & \emph{Admiral. Yamamoto} & \emph{Admiral: Yamamoto} \\
+    198 & &  1 & \textit{Tojo. The} & \textit{Tojo: The} \\
+    200 & &  7 & \textit{Patriots: a} & \textit{Patriots: A} \\
+    201 & &  2 & \textit{Nomonhan. Japan} & \textit{Nomonhan: Japan} \\
+    203 & &  2 & \textit{1939-1946. The} & \textit{1939--1946: The} \\
+    204 & &  8 & \textit{Admiral. Yamamoto} & \textit{Admiral: Yamamoto} \\
     204 & &  4 & por.~: & por.: \\
-    207 & &  4 & \emph{Sun. The} & \emph{Sun: The} \\
+    207 & &  4 & \textit{Sun. The} & \textit{Sun: The} \\
     210 & 11 & & Mości”$^{ 32 }$~. & Mości”$^{ 32 }$. \\
     210 & 18 & & decyzji”.$^{ 33 }$ & decyzji”$^{ 33 }$. \\
     210 & &  6 & prewencyjnemu”$^{ 35 }$~. & prewencyjnemu”$^{ 35 }$. \\
-    213 & & 10 & \emph{II. Selected} & \emph{II: Selected} \\
-    216 & & 10 & \emph{Justice. The} & \emph{Justice: The} \\
-    220 & &  4 & \emph{Admiral. Yamamoto} & \emph{Admiral: Yamamoto} \\
-    221 & &  7 & \emph{Alliance. The} & \emph{Alliance: The} \\
-    221 & &  4 & \emph{Decline. A} & \emph{Decline: A} \\
-    223 & &  2 & \emph{Pacific. A} & \emph{Pacific: A} \\
-    224 & &  2 & \emph{History. Japanes} & \emph{History: Japanes} \\
-    225 & &  9 & \emph{Polityczno- dyplomatyczne}
-           & \emph{Polityczno-dyplomatyczne} \\
-    225 & &  7 & \emph{between} & \emph{Between} \\
-    225 & &  3 & \emph{Conference 1921-22. Naval}
-           & \emph{Conference 1921--22: Naval} \\
-    227 & &  3 & \emph{Choice. Japan's} & \emph{Choice: Japan's} \\
-    230 & &  5 & \emph{Enemies. The} & \emph{Enemies: The} \\
-    232 & &  9 & \emph{Sun. The} & \emph{Sun: The} \\
+    213 & & 10 & \textit{II. Selected} & \textit{II: Selected} \\
+    216 & & 10 & \textit{Justice. The} & \textit{Justice: The} \\
+    220 & &  4 & \textit{Admiral. Yamamoto} & \textit{Admiral: Yamamoto} \\
+    221 & &  7 & \textit{Alliance. The} & \textit{Alliance: The} \\
+    221 & &  4 & \textit{Decline. A} & \textit{Decline: A} \\
+    223 & &  2 & \textit{Pacific. A} & \textit{Pacific: A} \\
+    224 & &  2 & \textit{History. Japanes} & \textit{History: Japanes} \\
+    225 & &  9 & \textit{Polityczno- dyplomatyczne}
+           & \textit{Polityczno-dyplomatyczne} \\
+    225 & &  7 & \textit{between} & \textit{Between} \\
+    225 & &  3 & \textit{Conference 1921-22. Naval}
+           & \textit{Conference 1921--22: Naval} \\
+    227 & &  3 & \textit{Choice. Japan's} & \textit{Choice: Japan's} \\
+    230 & &  5 & \textit{Enemies. The} & \textit{Enemies: The} \\
+    232 & &  9 & \textit{Sun. The} & \textit{Sun: The} \\
     \hline
   \end{tabular}
+
+
 
 
 
@@ -1825,38 +2012,39 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    232 & &  3 & \emph{Slept. The} & \emph{Slept: The} \\
-    233 & & 18 & \emph{Orange. The} & \emph{Orange: The} \\
+    232 & &  3 & \textit{Slept. The} & \textit{Slept: The} \\
+    233 & & 18 & \textit{Orange. The} & \textit{Orange: The} \\
     233 & & 16 & dzieło, o~którym & działania, o~których \\
-    235 & &  3 & \emph{Sea, Midway} & \emph{Sea: Midway} \\
+    235 & &  3 & \textit{Sea, Midway} & \textit{Sea: Midway} \\
     235 & 12 & & w~USA & z~USA \\
     238 &  9 & & Wysokością!. & Wysokością! \\
-    243 & &  3 & \emph{Kai-shek: soldier and stantesman}
-           & \emph{Kai-shek: Soldier and Stantesman} \\
-    244 & &  2 & \emph{China. The~first full biography}
-           & \emph{China: The~First Full Biography} \\
+    243 & &  3 & \textit{Kai-shek: soldier and stantesman}
+           & \textit{Kai-shek: Soldier and Stantesman} \\
+    244 & &  2 & \textit{China. The~first full biography}
+           & \textit{China: The~First Full Biography} \\
     247 & 13 & & czaerwcu & czerwcu \\
     248 & & 19 & i~najcięższe & o~najcięższe \\
-    248 & &  5 & \emph{Expedition. China's} & \emph{Expedition: China's} \\
+    248 & &  5 & \textit{Expedition. China's}
+           & \textit{Expedition: China's} \\
     249 & & 20 & „panów” wojny” & „panów wojny” \\
     249 & &  4 & S.I.Hsiung & S.I. Hsiung \\
-    249 & &  2 & \emph{coup} & \emph{Coup} \\
-    249 & &  1 & \emph{nationalism} & \emph{Nationalism} \\
-    249 & &  1 & \emph{revolution} & \emph{Revolution} \\
-    250 & &  4 & \emph{under} & \emph{Under} \\
-    251 & &  3 & \emph{Counter --~revolutionaries}
-           & \emph{Cunterrevolutionaries} \\
-    252 & & 11 & \emph{Manchuria. The} & \emph{Manchuria: The} \\
-    252 & & 10 & \emph{the} & \emph{The} \\
-    252 & &  3 & \emph{Change. Essays} & \emph{Change: Essays} \\
-    253 & &  2 & \emph{the epic} & \emph{The Epic} \\
-    253 & &  2 & \emph{communism's} & \emph{Communism's} \\
-    253 & &  1 & \emph{survival} & \\
+    249 & &  2 & \textit{coup} & \textit{Coup} \\
+    249 & &  1 & \textit{nationalism} & \textit{Nationalism} \\
+    249 & &  1 & \textit{revolution} & \textit{Revolution} \\
+    250 & &  4 & \textit{under} & \textit{Under} \\
+    251 & &  3 & \textit{Counter --~revolutionaries}
+           & \textit{Cunterrevolutionaries} \\
+    252 & & 11 & \textit{Manchuria. The} & \textit{Manchuria: The} \\
+    252 & & 10 & \textit{the} & \textit{The} \\
+    252 & &  3 & \textit{Change. Essays} & \textit{Change: Essays} \\
+    253 & &  2 & \textit{the epic} & \textit{The Epic} \\
+    253 & &  2 & \textit{communism's} & \textit{Communism's} \\
+    253 & &  1 & \textit{survival} & \\
     255 & & 10 & żony~, & żony \\
-    256 & &  4 & \emph{Fight. The} & \emph{Fight: The} \\
-    256 & &  2 & \emph{War. From} & \emph{War: From} \\
-    261 & &  9 & \emph{East. China} & \emph{East: China} \\
-    261 & &  2 & \emph{Creation. My} & \emph{Creation: My} \\
+    256 & &  4 & \textit{Fight. The} & \textit{Fight: The} \\
+    256 & &  2 & \textit{War. From} & \textit{War: From} \\
+    261 & &  9 & \textit{East. China} & \textit{East: China} \\
+    261 & &  2 & \textit{Creation. My} & \textit{Creation: My} \\
     265 & 18 & & z~absurdalny & w~absurdalny \\
     % & & & & \\
     % & & & & \\
@@ -1885,14 +2073,16 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
   w~XX~w.”, \cite{PolitSmutnyKontynent2021} }
 
 
-% \CenterTB{Uwagi}
+% % ##################
+% \CenterBoldFont{Uwagi}
 
 
 
 
 
 % ##################
-\CenterTB{Błędy}
+\CenterBoldFont{Błędy}
+
 
 \begin{center}
 
@@ -1903,7 +2093,7 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    7 &  4 & & \emph{spoglądać{ } na} & \emph{spoglądać na} \\
+    7 &  4 & & \textit{spoglądać{ } na} & \textit{spoglądać na} \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -1915,6 +2105,8 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 
 
 
+
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -1922,17 +2114,17 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
     & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    403 & &  6 & \emph{Ally.} & \emph{Ally:} \\
+    403 & &  6 & \textit{Ally.} & \textit{Ally:} \\
     408 & &  8 & wespół & wespół~z \\
-    412 & &  3 & \emph{Snows. A~History} & \emph{Snows: A~History} \\
-    412 & &  3 & \emph{since} & \emph{Since} \\
+    412 & &  3 & \textit{Snows. A~History} & \textit{Snows: A~History} \\
+    412 & &  3 & \textit{since} & \textit{Since} \\
     416 &  1 & & w przyczyn & z~przyczyn \\
-    417 & &  2 & \emph{Generalissimo. Chiang}
-           & \emph{The Generalissimo: Chiang} \\
-    423 & &  2 & \emph{Enlai. The} & \emph{Enlai: The} \\
+    417 & &  2 & \textit{Generalissimo. Chiang}
+           & \textit{The Generalissimo: Chiang} \\
+    423 & &  2 & \textit{Enlai. The} & \textit{Enlai: The} \\
     425 &  7 & & Chin nowoczesnych & nowoczesnych Chin \\
-    425 & &  4 & \emph{History} $^{ 2 }$ & \emph{History}$^{ 2 }$ \\
-    425 & &  2 & \emph{History. The} & \emph{History: The} \\
+    425 & &  4 & \textit{History} $^{ 2 }$ & \textit{History}$^{ 2 }$ \\
+    425 & &  2 & \textit{History. The} & \textit{History: The} \\
     428 &  7 & & krepowano & krępowano \\
     428 & & 17 & `W~przyszłości & W~przyszłości \\
     429 & 12 & & Sukcesom i~aktywnościom & W~sukcesach i~aktywnościach \\
@@ -1967,6 +2159,7 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
   \end{tabular}
 
 \end{center}
+
 
 \vspace{\spaceTwo}
 % ############################
@@ -2003,7 +2196,8 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 
 
 % ##################
-\CenterTB{Błędy}
+\CenterBoldFont{Błędy}
+
 
 \begin{center}
 
@@ -2027,6 +2221,7 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
   \end{tabular}
 
 \end{center}
+
 
 \vspace{\spaceTwo}
 % ############################
@@ -2057,7 +2252,8 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 
 
 % ##################
-\CenterTB{Błędy}
+\CenterBoldFont{Błędy}
+
 
 \begin{center}
 
@@ -2068,17 +2264,17 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    14  & & 11 & Stechlinowie & \emph{Stechlinowie} \\
-    16  & & 10 & 18 & \emph{18} \\
+    14  & & 11 & Stechlinowie & \textit{Stechlinowie} \\
+    16  & & 10 & 18 & \textit{18} \\
     17  & & 11 & Nowoczesny system-świat
-           & \emph{Nowoczesny system świat} \\
-    19  &  3 & & Więcej niż skrajni & \emph{Więcej niż skrajni} \\
+           & \textit{Nowoczesny system świat} \\
+    19  &  3 & & Więcej niż skrajni & \textit{Więcej niż skrajni} \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
-    627 & 12 & & \emph{Stechlin} & \emph{Der Stechlin} \\
+    627 & 12 & & \textit{Stechlin} & \textit{Der Stechlin} \\
     % & & & & \\
     \hline
   \end{tabular}
@@ -2088,7 +2284,7 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 \noindent
 \StrWd{19}{1} \\
 \Jest  Zarys historii gospodarczej XX~wieku \\
-\Powin \emph{Zarys historii gospodarczej XX~wieku}
+\Powin \textit{Zarys historii gospodarczej XX~wieku}
 
 
 \vspace{\spaceTwo}
@@ -2119,7 +2315,8 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 
 
 % ##################
-\CenterTB{Błędy}
+\CenterBoldFont{Błędy}
+
 
 \begin{center}
 
@@ -2156,7 +2353,9 @@ powinien mieć postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
   \cite{GessenPutinCzlowiekBezTwarzy2012} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \start \StrWd{9}{6} Zamieszczony tu komentarz odnośnie słowa
 „lustracja”, które ma wedle niego pochodzić z~greki, jest zapewne
@@ -2167,6 +2366,7 @@ mechanicznie, bez~refleksji, że~w~języku polskim, w~przeciwieństwie
 do~oryginału, ten związek etymologiczny nie zachodzi.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{75--76} W~przedstawionej tu opowieści jest pewna
@@ -2180,6 +2380,7 @@ tłum i~wszedł do siedziby Stasi.
 \vspace{\spaceFour}
 
 
+
 \start \Str{93} Sacharow urodził~się w~1921 r., Gorbaczow zaś w~1931,
 w~1989 mięli więc odpowiednio 68 i~58 lat. Nazwanie Gorbaczowa młody
 to pewne nadużycie, wynikające zapewne z~kontrastu między schorowany,
@@ -2188,13 +2389,15 @@ bliski śmierci Sacharowem, a~pełnym energii Michaiłem.
 \vspace{\spaceFour}
 
 
-\start \Str{101} \tb{Akapit trzeci.} Powinno tu być jawniej napisane,
+
+\start \textbf{Str. 101, akapit trzeci.} Powinno tu być jawniej napisane,
 że~wracamy do historii Putina.
 
 \vspace{\spaceFour}
 
 
-\start \tb{Tylna okładka, wiersz 5 (od dołu).} Masha Gessen
+
+\start \textbf{Tylna okładka, wiersz 5 (od dołu).} Masha Gessen
 urodziła~się w~1967~r. więc w~latach 1981--1991 miła od~14 do~24 lat,
 jest więc wysoce nieprawdopodobne, by~w~tym okresie pracowała
 w~Stanach Zjednoczonych. Zapewne chodziło o~to, że~wówczas tam
@@ -2205,7 +2408,8 @@ mieszkała.
 
 
 % ##################
-\CenterTB{Błędy}
+\CenterBoldFont{Błędy}
+
 
 \begin{center}
 
@@ -2237,143 +2441,12 @@ mieszkała.
 
 \end{center}
 
-\vspace{\spaceTwo}
-% ############################
-
-
-
-
-
-
-
-
-
-
-% ######################################
-\section{Eseje i~publicystyka}
-
-\vspace{\spaceTwo}
-% ######################################
-
-
-
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Andrzej Nowak \\
-  „Strachy i lachy. Przemiany polskiej pamięci 1982--2012”,
-  \cite{Nowak12} }
-
-
-\CenterTB{Uwagi}
-
-\start \Str{47} T.~S.~Eliot jest na tej stronie nazwany „wielkim
-poetą katolickim”, acz z~tego co wiem do Kościoła nigdy nie
-przyszedł, zamiast tego dołączył do jakiegoś wyznania
-anglokatolickiego. Zaś użycie przymiotnika „wielki” w~odniesieniu to
-tego poety, którego twórczości nie da~się czytać, jest już na~pewno
-błędem.
 
 \vspace{\spaceTwo}
 % ############################
 
 
 
-
-
-
-
-
-
-
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Andrzej Nowak \\
-  „Intelektualna historia III~RP. Rozmowy z~lat 1990--2012”,
-  \cite{NowakIntelektualnaHistoriaIIIRP2013} }
-
-
-% ##################
-\CenterTB{Błędy}
-
-\begin{center}
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    195 &  6 & & pomocą & pomocy \\
-    579 & &  3 & osób. & osób, \\
-    580 & & 10 & od & do \\
-    665 &  7 & & The~National Interest” & „The~National Interest” \\
-    % & & & & \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-
-\end{center}
-
-\noindent
-\tb{Przednia okładka, wiersz 14.} \\
-\Jest \emph{ImperologicalStudies.APolishPerspective}(2011);
-\emph{Czaswalki} \\
-\Powin \emph{Imperological Studies. A Polish Perspective} (2011);
-\emph{Czas walki} \\
-\tb{Przednia okładka, wiersz 10 (od dołu).} \\
-\Jest \ldots w~Brnie \\
-\Powin  w~Brnie \\
-
-\vspace{\spaceTwo}
-% ############################
-
-
-
-
-
-
-
-% ##################
-\Work{ % Autor i tytuł dzieła
-  Andrzej Nowak \\
-  „Historia i~polityka”, \cite{NowakHistoriaIPolityka2016} }
-
-
-\CenterTB{Uwagi}
-
-\start \Str{} Nowak popełni tu pewien błąd pisząc o~grze komputerowej
-„Dzikie Pola”, jest to standardowa stołowa gra RPG i~nie ma nic
-wspólnego z~komputerem.
-
-
-\CenterTB{Błędy}
-\begin{center}
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    6   &  2 & & 448 & 484 \\
-    18  & 18 & & „ kult & „kult \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    99  & &  2 & (1918--1920) & (1918--2008) \\
-    133 & & 23 & 1981 & 1918 \\
-    135 & &  5 & 361 (przytoczony & 361. Przytoczony \\
-    % & & & & \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-
-\end{center}
-
-\vspace{\spaceTwo}
 
 
 
@@ -2384,7 +2457,12 @@ wspólnego z~komputerem.
 % ####################################################################
 % ####################################################################
 % Bibliografia
-\bibliographystyle{plalpha} \bibliography{HistoryBooks}{}
+\bibliographystyle{plalpha}
+
+\bibliography{HistoryBooks}{}
+
+
+
 
 
 % ############################
