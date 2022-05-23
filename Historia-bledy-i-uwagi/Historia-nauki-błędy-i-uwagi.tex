@@ -76,6 +76,7 @@
 % Pakiety których pliki *.sty mają być w tym samym katalogu co ten plik
 % ------------------------------
 \usepackage{latexgeneralcommands}
+\usepackage{mathcommands}
 
 
 
@@ -150,7 +151,9 @@
   \cite{BourbakiElementyHistoriiMatematyki1980} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \start \Str{63} Dziwne, że~autorzy formułują tu własność systemów
 liczbowych pisząc, że~iloraz $b_{ n } / b_{ n - 1 }$ jest równy tej
@@ -160,6 +163,7 @@ iż~$b_{ n } = b \, b_{ n - 1 }$.
 \vspace{\spaceFour}
 
 
+
 \start \Str{68} Autorzy piszą tu w~taki sposób, jakby Grecy
 i~rachmistrzowie byli dwoma zupełnie różnymi grupami ludzi.
 Najprawdopodobniej jednak rachmistrzowie sami byli Grekami.
@@ -167,11 +171,19 @@ Najprawdopodobniej jednak rachmistrzowie sami byli Grekami.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{243}{6} Mały nawias okrągły za~duży źle wygląda. Nie
 wiem jednak jak w~tej chwile jak zmodyfikować tekst, by ten problem
 naprawić.
 
-\CenterTB{Błędy}
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
 \begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
@@ -208,10 +220,10 @@ naprawić.
     72  & & 16 & 84) ($^{ 3 }$) & 84)($^{ 3 }$) \\
     73  & 10 & & wieku~($^{ 1 }$) & wieku($^{ 1 }$) \\
     73  & & 12 & roli; & roli, \\
-    74  & 12 & & Jordana\dywiz H\"{o}ldera”~($^{ 1 }$)
-           & Jordana\dywiz H\"{o}ldera”($^{ 1 }$) \\
+    74  & 12 & & Jordana-H\"{o}ldera”~($^{ 1 }$)
+           & Jordana-H\"{o}ldera”($^{ 1 }$) \\
     74  & 15 & & ]139b] & [139b] \\
-    82  & &  9 & \emph{metafizycznego}”; & \emph{metafizycznego}”); \\
+    82  & &  9 & \textit{metafizycznego}”; & \textit{metafizycznego}”); \\
     83  & 12 & & Hamilton ($^{ 1 }$) & Hamilton($^{ 1 }$) \\
     84  & &  6 & a~m.~in. & m.~in. \\
     85  & & 16 & Jacobi ($^{ 1 }$) & Jacobi($^{ 1 }$) \\
@@ -223,6 +235,8 @@ naprawić.
     91  & & 17 & okręgi ($^{ 2 }$) & okręgi($^{ 2 }$) \\
     \hline
   \end{tabular}
+
+
 
 
 
@@ -242,7 +256,7 @@ naprawić.
     93  & &  3 & skopiowany & wzorowany \\
     94  & 11 & & mianowicie ($^{ 1 }$) & mianowicie($^{ 1 }$) \\
     94  & &  9 & w~~którym & z~którego \\
-    95  &  4 & & Algebrze & \emph{Algebrze} \\
+    95  &  4 & & Algebrze & \textit{Algebrze} \\
     95  &  8 & & nowoczesnych($^{ 1 }$).Wreszcie
            & nowoczesnych($^{ 1 }$). Wreszcie \\
     95  & 10 & & trzeciego ($^{ 2 }$) & trzeciego($^{ 2 }$) \\
@@ -250,7 +264,8 @@ naprawić.
     95  & & 13 & ,meno de & „meno de \\
     96  & & 17 & 98) ($^{ 1 }$) & 98)($^{ 1 }$) \\
     99  &  2 & & danego ($^{ 1 }$) & danego($^{ 1 }$) \\
-    99  &  3 & & \emph{metafizykę} ($^{ 2 }$) & \emph{metafizykę}($^{ 2 }$) \\
+    99  &  3 & & \textit{metafizykę} ($^{ 2 }$)
+           & \textit{metafizykę}($^{ 2 }$) \\
     99  &  6 & & wartości ($^{ 3 }$) & wartości($^{ 3 }$) \\
     100 & & 18 & pierwiastków ($^{ 1 }$) & pierwiastków($^{ 1 }$) \\
     101 &  1 & & Gaussa ($^{ 1 }$) & Gaussa($^{ 1 }$) \\
@@ -278,6 +293,8 @@ naprawić.
 
 
 
+
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -292,11 +309,12 @@ naprawić.
     119 &  1 & & jeszcze prawdziwe & prawdziwe \\
     120 & & 13 & 488) ($^{ 1 }$) & 488)($^{ 1 }$) \\
     121 &  5 & & algebraiczne ($^{ 1 }$) & algebraiczne($^{ 1 }$) \\
-    121 &  3 & & $\mathbb{Z}[ i |$ & $\mathbb{Z}[ i ]$ \\
+    121 &  3 & & $\Zbb[ i |$ & $\Zbb[ i ]$ \\
     122 &  3 & & Gaussa ($^{ 1 }$) & Gaussa($^{ 1 }$) \\
     123 & & 11 & Galoisa ”czynników  & Galoisa ” czynników \\
     % ???????????
-    124 & & 10 & \emph{skończona} ($^{ 1 }$) & \emph{skończona}($^{ 1 }$) \\
+    124 & & 10 & \textit{skończona} ($^{ 1 }$)
+           & \textit{skończona}($^{ 1 }$) \\
     125 &  6 & & podstawowe”~~($^{ 1 }$) & podstawowe”($^{ 1 }$) \\
     126 & 18 & & 1880 ($^{ 1 }$) & 1880($^{ 1 }$) \\
     127 & &  6 & $\mathbb{Z}[ \sqrt{ -3 } ]$) ($^{ 1 }$)
@@ -305,8 +323,8 @@ naprawić.
            & $\mathbb{Z}[ \theta, \theta' ]$($^{ 1 }$) \\
     129 &  8 & & postacią ($^{ 1 }$) & postacią($^{ 1 }$) \\
     135 &  2 & & topologicznych ($^{ 1 }$) & topologicznych($^{ 1 }$) \\
-    138 &  8 & & \emph{prymarnego} ($^{ 1 }$)
-           & \emph{prymarnego}($^{ 1 }$) \\
+    138 &  8 & & \textit{prymarnego} ($^{ 1 }$)
+           & \textit{prymarnego}($^{ 1 }$) \\
     138 & 10 & & wykazuje ($^{ 2 }$) & wykazuje($^{ 2 }$) \\
     138 & 11 & & pierścieniach ($^{ 3 }$) & pierścieniach($^{ 3 }$) \\
     142 &  5 & & algebraicznej ($^{ 1 }$) & algebraicznej($^{ 1 }$) \\
@@ -329,6 +347,8 @@ naprawić.
     156 & &  9 & uwagi ($^{ 1 }$) & uwagi($^{ 1 }$) \\
     \hline
   \end{tabular}
+
+
 
 
 
@@ -370,8 +390,8 @@ naprawić.
     190 &  6 & & wygodnej ($^{ 1 }$) & wygodnej($^{ 1 }$) \\
     191 &  4 & & niewymierność ($^{ 1 }$) & niewymierność($^{ 1 }$) \\
     191 & & 11 & geometrycznej ($^{ 3 }$) & geometrycznej($^{ 3 }$) \\
-    194 & 13 & & arytmetyczno\dywiz geometrycznej~~($^{ 1 }$)
-           & arytmetyczno\dywiz geometrycznej($^{ 1 }$) \\
+    194 & 13 & & arytmetyczno-geometrycznej~~($^{ 1 }$)
+           & arytmetyczno-geometrycznej($^{ 1 }$) \\
     196 & &  8 & rzeczywiste ($^{ 1 }$) & rzeczywiste($^{ 1 }$) \\
     199 &  9 & & ciągłość) ($^{ 1 }$) & ciągłość)($^{ 1 }$) \\
     201 &  8 & & wymiaru) ($^{ 1 }$) & wymiaru)($^{ 1 }$) \\
@@ -392,7 +412,9 @@ naprawić.
   \end{tabular}
 
 \end{center}
-\noi
+
+
+\noindent
 \StrWd{42}{17} \\
 \Jest  już od~początku nie przestał  \\
 \Powin od samego początku nie przestawał \\
@@ -406,8 +428,8 @@ naprawić.
 \Jest  w~tym czasie jeszcze \\
 \Powin jeszcze w~tym czasie \\
 \StrWd{121}{14} \\
-\Jest  \emph{wielu innych liczb pierwszych} [niż 5] \\
-\Powin \emph{wielu innych} [niż 5] \emph{liczb pierwszych} \\
+\Jest  \textit{wielu innych liczb pierwszych} [niż 5] \\
+\Powin \textit{wielu innych} [niż 5] \emph{liczb pierwszych} \\
 \StrWg{122}{8} \\
 \Jest  którą bez przerwy zajmować~się będzie prawie wyłącznie przez 25 lat \\
 \Powin którą będzie zajmował~się prawie wyłącznym i~niemal bez przerwy
@@ -417,6 +439,7 @@ przez 25 lat \\
 \Powin postawić takie pytanie \\
 
 \vspace{\spaceTwo}
+% ############################
 
 
 
@@ -424,15 +447,20 @@ przez 25 lat \\
 
 
 
-% ##################
+
+
+
+% ############################
 \Work{ % Autor i tytuł dzieła
   C. B. Boyer \\
   „Historia rachunku różniczkowego i~całkowego \\
   i~rozwój jego pojęć”,
-  \cite{BoyerHistoriaRachunkuRozniczkowegoICalkowego64} }
+  \cite{BoyerHistoriaRachunkuRozniczkowegoICalkowego1964} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \start W~całej książce angielskie zwarte i~treściwe słowo „calculus”
 jest zastąpione długim polskim terminem „rachunek różniczkowy
@@ -446,10 +474,8 @@ zdań. Lepiej byłoby wprowadzi do książki, obok powyższego, termin
 
 
 
-% ##########
-\tb{Konkretne strony}
-
-\vspace{\spaceFour}
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
 
 
 \start \StrWd{18}{2} Umieszczenie w~tym samym zdaniu stwierdzenia
@@ -461,12 +487,14 @@ często bardzo poważne.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{19}{18} Użyte tu określenie „mistycyzm imaginacyjnej
 spekulacji” jest wyraźnie niesprawiedliwe w~stosunku do metafizyki,
 najważniejszego działu filozofii. Nie~zmienia tego fakt, że~Boyer mógł
 mieć na myśli tylko transcendentalną metafizykę ze~szkoły Kanta.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{23} Stwierdzenie, że pewne podstawowe idea zostały
@@ -476,6 +504,7 @@ wątpliwe.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{26}{6} Nazwanie podanych wyżej pojęć „sztucznymi”,
 ciężko jest mi nazwać czymś innym, niż nieczułością na piękno
 matematyki.
@@ -483,12 +512,20 @@ matematyki.
 \vspace{\spaceFour}
 
 
-\start \Str{28} Ponieważ drugie wydanie tej książki ukazało~się w~1949~r., autor nie mógł wiedzieć, że~w~latach 60 XX w., głównie za sprawą
+
+\start \Str{28} Ponieważ drugie wydanie tej książki ukazało~się w~1949~r.,
+autor nie mógł wiedzieć, że~w~latach 60 XX w., głównie za sprawą
 prac Abrahama Robinsona zostanie sformułowana analiza niestandardowa,
 oparta na ścisły pojęciu nieskończenie małych liczb.
 
 
-\CenterTB{Błędy}
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
 \begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
@@ -498,8 +535,8 @@ oparta na ścisły pojęciu nieskończenie małych liczb.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    29 & & 4 & [(376] & ([376] \\
-    42 & 13 & & [402 & [402] \\
+    29  & &  4 & [(376] & ([376] \\
+    42  & 13 & & [402 & [402] \\
     % & & & & \\
     % & & & & \\
     \hline
@@ -508,6 +545,7 @@ oparta na ścisły pojęciu nieskończenie małych liczb.
 \end{center}
 
 \vspace{\spaceTwo}
+% ############################
 
 
 
@@ -515,13 +553,19 @@ oparta na ścisły pojęciu nieskończenie małych liczb.
 
 
 
-% ##################
+
+
+
+% ############################
 \Work{ % Autor i tytuł dzieła
   R. Rhodes \\
   „Jak powstała bomba atomowa”, \cite{Rhodes00} }
 
 
-\CenterTB{Błędy}
+% ##################
+\CenterBoldFont{Błędy}
+
+
 \begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
@@ -540,6 +584,7 @@ oparta na ścisły pojęciu nieskończenie małych liczb.
 \end{center}
 
 \vspace{\spaceTwo}
+% ############################
 
 
 
@@ -547,13 +592,19 @@ oparta na ścisły pojęciu nieskończenie małych liczb.
 
 
 
-% ##################
+
+
+
+% ############################
 \Work{ % Autor i tytuł dzieła
   A. K. Wróblewski \\
   „Historia fizyki”, \cite{Wroblewski06} }
 
 
-\CenterTB{Błędy}
+% ##################
+\CenterBoldFont{Błędy}
+
+
 \begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
@@ -570,6 +621,7 @@ oparta na ścisły pojęciu nieskończenie małych liczb.
 \end{center}
 
 \vspace{\spaceTwo}
+% ############################
 
 
 
@@ -583,7 +635,12 @@ oparta na ścisły pojęciu nieskończenie małych liczb.
 % ####################################################################
 % ####################################################################
 % Bibliografia
-\bibliographystyle{plalpha} \bibliography{LibMathInfo}{}
+\bibliographystyle{plalpha}
+
+\bibliography{HistoryBooks}{}
+
+
+
 
 
 % ############################
