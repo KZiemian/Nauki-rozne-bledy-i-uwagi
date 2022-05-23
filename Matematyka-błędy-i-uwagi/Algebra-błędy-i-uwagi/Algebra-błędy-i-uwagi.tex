@@ -1,1 +1,668 @@
-Test
+% Autor: Kamil Ziemian
+
+% ---------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ------------------------------
+\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
+% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
+% % grafiki.
+% \usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
+% \usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
+% % wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ------------------------------
+% MARGINS
+% ------------------------------
+\setmarginsrb
+{ 0.7in} % left margin
+{ 0.6in} % top margin
+{ 0.7in} % right margin
+{ 0.8in} % bottom margin
+{  20pt} % head height
+{0.25in} % head sep
+{   9pt} % foot height
+{ 0.3in} % foot sep
+
+
+
+% ------------------------------
+% Często przydatne pakiety
+% ------------------------------
+\usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+% ------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ------------------------------
+\let\lll\undefined  % Amsmath gryzie się z pakietami do języka
+% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm}  % Dalsze wsparcie od AMS
+% \usepackage{siunitx}  % Do prostszego pisania jednostek fizycznych
+\usepackage{upgreek}  % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+\usepackage{slashed}  % Pozwala w prosty sposób pisać slash Feynmana.
+\usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
+% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% nie wiem.
+
+
+
+% ##########
+% Tworzenie otoczeń „Twierdzenie”, „Definicja”, „Lemat”, etc.
+\newtheorem{twr}{Twierdzenie}  % Komenda wprowadzająca otoczenie
+% „twr” do pisania twierdzeń matematycznych
+\newtheorem{defin}{Definicja}  % Analogicznie jak powyżej
+\newtheorem{wni}{Wniosek}
+
+
+
+% ------------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ------------------------------
+% \usepackage{reedsimon}  % Pakiet napisany konkretnie dla tego pliku.
+\usepackage{latexgeneralcommands}
+\usepackage{mathcommands}
+
+
+
+% ---------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% ---------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ------------------------------
+% Ustawienia różnych parametrów tekstu
+% ------------------------------
+\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
+
+
+
+% ------------------------------
+% Pakiet "hyperref"
+% Polecano by umieszczać go na końcu preambuły.
+% ------------------------------
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł, autor, data
+\title{Algebra~-- błędy i~uwagi}
+
+% \author{}
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+% ######################################
+\maketitle  % Tytuł całego tekstu
+% ######################################
+
+% ,,P\ldots'' oznacza, że w wydaniu ,,\ldots'' błąd został poprawiony.\\
+
+
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Andrzej Białynicki-Birula \\
+  „Zarys algebry”, \cite{BialynickiBirulaZarysAlgebry87} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+\start \Str{11} \red{Popraw.} Podany tu system aksjomatów jest arcynieporęczny,
+przez co w~dalszych partiach książki nie~jest stosowany konsekwentnie.
+Problem polega na tym, że~ponieważ wedle tej definicji 0 nie jest
+liczbą naturalną, mając dwie liczby naturalne $p$, $q$, $p \geq q$ nie
+wiemy, czy ich różnica $p - q$ jest liczbą naturalną. W~szczególności
+wykonane w~dowodzie twierdzenia 3.3 dzielenie
+$q_{ 1 } | p_{ 1 } - q_{ 1 }$ okazuje~się być operacją wykraczającą
+poza teorię, bo $p_{ 1 } = q_{ 1 }$. Fakt, że~jest to dowód nie~wprost
+(lub przez kontrapozycję), nie wydaje~się zmieniać istoty rzeczy.
+Również w~twierdzeniu 3.5 jest mowa o~dodawaniu do liczby naturalnej
+liczby całkowitej $r$, która może być równa 0, co uwidacznia potrzebę
+rozszerzenia teorii. Jeżeli to jest możliwe, należałoby zmodyfikować
+system Peano tak, by liczby naturalne uwzględniały 0.
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    11  & & 11 & \textbf{całkowitych} & \textbf{naturalnych} \\
+    11  & &  1 & \textbf{całkowitych} & \textbf{naturalnych} \\
+    14  & 14 & & $A^{ 2 } \quad A$ & $A^{ 2 } \to A$ \\
+    15  &  3 & & $( a^{ 1 } )^{ -1 }$ & $( a^{ -1 } )^{ -1 }$ \\
+    16  & 13 & & \textit{lącznym} & \textit{łącznym} \\
+    24  &  9 & & $if\big( \varphi( a_{ 1 }, \ldots, a_{ n } ) \big)$
+           & $i \circ f\big( \varphi( a_{ 1 }, \ldots, a_{ n } ) \big)$ \\
+    24  & 10 & & $if\big( \varphi( a_{ 1 }, \ldots, a_{ n } ) \big)$
+           & $i \circ f\big( \varphi( a_{ 1 }, \ldots, a_{ n } ) \big)$ \\
+    25  & &  1 & $s( a )$ & $[ s( a ) ]$ \\
+    31  & &  4 & $\pi_{ t }( i' \circ i )$
+           & $\pi_{ t } \circ ( i' \circ i )$ \\
+    33  & 21 & & \S{} 2 & \S{} 4 \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    291  & 11 & & 1974. & 1974). \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+
+Str. 37. \ldots$j k = -k j$\ldots \\
+Str. 80. \ldots więc $g h_{ 1 } g^{ -1 } \in G_{ y }$\ldots \\
+Str. 80. Istotnie, $h \in \varphi_{ x }^{ -1 }( g x )$\ldots \\
+Str. 81. \ldots orbit $H x_{ 1 } \cup \ldots \cup H x_{ l } \, .$
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  M. Hamermesh \\
+  „Teoria grup w zastosowaniu do zagadnień fizycznych”, ABB }
+
+
+
+Str. 35. Może właściwszym byłoby zdefiniowanie podgrupy
+  właściwej jako podgrupy różnej od $G$ i $e$?
+
+Str. 14.
+$$ \mathbf{ x } = \mathbf{ a }^{ -1 } \mathbf{ x }' \, ,$$
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+% ######################################
+\newpage
+\section{Algebra liniowa}
+
+\vspace{\spaceTwo}
+
+% ######################################
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Henryk Arodź, Krzysztof Rościszewski \\
+  „Algebra i geometria analityczna w~zadaniach”, \cite{AR} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+Str. 64. Brakuje macierzy $\mathbf{I} \, .$
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    & & & & \\
+    & & & & \\
+    & & & & \\
+    & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+Str. 15.
+$$\sqrt[ n ]{ z } = \sqrt[ n ]{ | z | } \exp( i \frac{ \varphi + 2 k
+  \pi }{ n } ) \, .$$ \\
+Str. 15. \ldots $Re \; z = a$\ldots \\
+Str. 74. (14) $6 \boldsymbol{ \gamma } \, ,$ \\
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Jacek Gancarzewicz \\
+  „Algebra liniowa i~jej zastosowania”,
+  \cite{GancarzewiczAlgebraLiniowa2004} }
+
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+\start \Str{11}
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{34} Alternatywny, prosty dowód podpunkt (2) twierdzenia
+3.7, polega na przyjęciu, że~$x \neq 0$ i~pomnożeniu równość $xy = 0$
+z~lewej strony przez $x^{ -1 }$.
+
+\vspace{\spaceFour}
+
+
+
+W pierwszym rozdziale nie określono znaku permutacji
+identycznościowej.
+
+\vspace{\spaceFour}
+
+
+
+Nie określono operacji odejmowania wektorów. Z definicji jest
+to:$$x - y := x + ( -y ) \, .$$
+
+\vspace{\spaceFour}
+
+
+
+Problem sumowania po pustym zbiorze wskaźników nie został omówiony.
+Powinno oczywiście być $\sum_{ \substack{ \iota \in \emptyset } } v_{ \iota } = 0 \, .$
+
+\vspace{\spaceFour}
+
+
+
+Str. 40. Jest pewna luka w dowodzie drugiej wersji zasadniczego
+twierdzenia algebry. Procedura dzielenia pokazuje bowiem, że po n
+krokach wielomian jest stopnia 0, czyli musi być stałą, nie pokazano
+jednak, że stała ta wynosi $a_{ n }$. Aby to pokazać należy
+stwierdzić, co można pokazać indukcyjnie, że w iloczynach typu
+$( z - z_{ 1 } )^{ \alpha_{ 1 } } \ldots( z - z_{ j } )^{ \alpha_{ j } }$
+wyraz przy najniższej potędze wynosi 1 i następnie skorzystać z
+twierdzenia, że dwa wielomiany w ciele liczb zespolonych są równe
+wtedy i tylko wtedy gdy wszystkie ich współczynniki są równe.
+
+\vspace{\spaceFour}
+
+
+
+Str. 60. W ostatniej permutacji trzeba jedną 7 zastąpić 4.
+
+\vspace{\spaceFour}
+
+
+
+Str. 76. Błąd w numeracji podpunktów twierdzenia.
+
+\vspace{\spaceFour}
+
+
+
+Str. 341. W twierdzeniu 45.1 powinno być $n \geq 1 \, .$ Dla n = 0
+istnieje 0 punktów afonicznie niezależnych.
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    28  & & 13 & $x \neq 0$ & $x \neq y$ \\
+    34  & & 12 & $x( y y^{ -1 } x^{ -1 }$ & $x( y y^{ -1 } ) x^{ -1 }$ \\
+    53  &  6 & & $\Real( ( \eta \eta' ) \eta'' ) )$
+           & $\Real( ( \eta \eta' ) \eta'' )$ \\
+    59  & 16 & & $x_{ 3 }$ & $x_{ 1 }$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+\noindent
+\StrWg{420}{15} \\
+\Jest
+\begin{equation*}
+  k_{ f }
+  =
+  \begin{cases}
+    \dim Z_{ f }, & gdy\:\, Z_{ f } \neq \oldemptyset, \\
+    \quad \quad \quad \quad \quad -1, & gdy\:\, Z_{ f } = \oldemptyset,
+  \end{cases}
+\end{equation*}
+\Powin
+\begin{equation*}
+  k_{ f }
+  =
+  \begin{cases}
+    \dim Z_{ f }, & \textrm{gdy}\:\, Z_{ f } \neq \oldemptyset, \\
+    -1, & \textrm{gdy}\:\, Z_{ f } = \oldemptyset,
+  \end{cases}
+\end{equation*}
+\Powin  Wykonując jawnie różniczkowanie w~(10) \\
+\StrWd{71}{16} \\
+\Jest
+$R\left( x, \sqrt{ a x^{ 4 } + b x^{ 3 } + c x^{ 2 } + d x + e }
+\right.$ \\
+\Powin
+$R\left( x, \sqrt{ a x^{ 4 } + b x^{ 3 } + c x^{ 2 } + d x + e }
+\right)$ \\
+
+\vspace{\spaceTwo}
+
+
+Str. 41. \ldots to funkcja kwadratowa $z^2+az+b$\ldots \\
+Str. 44.
+  $$\overline{ \xi } = \overline{ z_{ 1 } } - z_{ 2 } j \, .$$ \\
+Str. 59. $( x_{ 1 }, \ldots, x_{ k } ) \leq ( y_{ 1 }, \ldots, y_{ k } ) \, .$ \\
+Str. 62. \ldots i skalara $a \in F$\ldots \\
+
+Str. 64.
+  $$x = 1 x = ( a^{ -1 } a ) x = a^{ -1 }( a x ) = a^{ -1 } 0 = 0 \,
+  .$$ \\
+Str. 66. Wymieniając w twierdzeniu 8.8 równoważne warunki,
+otrzymujemy\ldots \\
+Str. 75. \ldots otrzymujemy
+$f( a f^{ -1 }( y ) + b f^{ -1 } ( y' ) ) = a y + b y'$\ldots \\
+Str. 76. Na podstawie twierdzenia 1.2 punkt 1. \\
+Str. 86. \ldots z zasady kontrapozycji. \\
+Str. 110. $( a_{ 0 }, a_{ 1 }, a_{ 2 }, \ldots )$. \\
+Str. 121. \ldots otrzymujemy
+$\alpha = \sum_{ i = 1 }^{ n } \lambda_{ i } e^{ * }_{ i } .$ \\
+Str. 134. \ldots nie występują one w tezie twierdzenia. \\
+Str. 143. \ldots bo jeżeli dla $\alpha \in U^{ * }$\ldots \\
+Str. 143.
+  $$f( e_{ i } ) = \sum_{ j = 1 }^{ m } a_{ j i } \overline{ { e } }_{
+    j } \, , \qquad f'( e'_{ i } ) = \sum_{ j = 1 }^{ m } a_{ j i } \overline{
+    { e }' }_{ j } \, ,$$ \\
+Str. 147.
+$$f : M( m, 1; F ) = F^{ m } \ni x \longrightarrow A x \in M( n, 1 ;
+F ) = F^{ n } \, ,$$ \\
+Str. 195.
+\ldots$\mathcal{ J }_{ 1 } : F \otimes X \rightarrow X$ \textit{oraz}
+$\mathcal{ J }_{ 2 } : X \otimes F \rightarrow X$\ldots \\
+Str. 223. \ldots\emph{gdzie $K \in M( p; F )$ oraz}\ldots \\
+Str. 238. Niech $x_{ 1 }, \ldots, x_{ n } \in F ,$ będzie\ldots \\
+Str. 238. \ldots przez punkty $x_{ 1 }$,\ldots,$x_{ n }$ nazywamy
+wyznacznik
+$$\mathcal{ V }_{ x_{ 1 }, \ldots, x_{ n } } = \ldots$$ \\
+Str. 238. Jeżeli wśród punktów $x_{ 1 },\ldots, x_{ n }$\ldots \\
+Str. 238. \ldots że $\mathcal{ V }_{ x_{ 1 }, \ldots, x_{ n } } \neq 0 .$ \\
+Str. 238.
+$$\mathcal{ V }_{ x_{ 1 }, \ldots, x_{ n } } = \prod_{ 1 \leq i < j
+  \leq n - 1 }( x_{ j } - x_{ i } ) \neq 0 \, .$$ \\
+Str. 238. \ldots pierwiastków $x_{ 1 }, \ldots, x_{ n - 1 }$\ldots \\
+Str. 253. \ldots \textit{nieujemnych} $p, q, p', q'$\ldots \\
+Str. 269. \ldots liniowe
+$\rho_{ V }^{ p } : \Lambda^{ p } V^{ * } \rightarrow L^{ p }_{ a } ( V )$\ldots \\
+Str. 269. \begin{displaymath}
+  \begin{split}
+    (\rho_{ V }^{ p } \circ \Lambda^{ p }( f^{ * } ) ) ( \beta_{ 1 } \wedge \ldots \wedge \beta_{ p } ) &= \rho_{ V }^{ p } ( f^{ * }( \beta_{ 1 } ) \wedge \ldots \wedge f^{ * } ( \beta_{ p } ) ) \\
+                                                                    &= \rho_{ V }^{ p } (\beta_{ 1 } \circ f \wedge \ldots \wedge \beta_{ p } \circ f )\\
+                                                                    &= u_{ V }^{ p } ( \beta_{ 1 } \circ f, \ldots, \beta_{ p } \circ f ) \, .
+  \end{split}
+\end{displaymath} \\
+Str. 272. \ldots że lewa strona równości\ldots \\
+Str. 272. Obliczmy prawą stronę równości\ldots \\
+Str. 272. $$P = \frac{ 1 }{ ( p + q )! p! q! } \ldots$$ \\
+Str. 272. \begin{displaymath}
+  \begin{split}
+    P \quad =& \quad \frac{ 1 }{ ( p + q )! p! q! } \sum_{ \sigma \in S_{ p + q } } \sum_{ \rho \in  S_{ p } } \sum_{ \tau \in S_{ q } } \textrm{sgn} \, \sigma \, \textrm{sgn} \, \rho \, \textrm{sgn} \, \tau \\
+         & \quad \qquad \alpha_{ 1 } ( v_{ \sigma( 1 ) } ) \ldots \alpha_{ p } ( v_{ \sigma ( p ) } ) \alpha_{ p + 1 } ( v_{ \sigma( p + 1 ) } ) \ldots \alpha_{ p + q } ( v_{ \sigma ( p + q ) } ) \\
+    = & \quad \frac{ p! q! }{ ( p + q )! p! q! } \sum_{ \sigma \in S_{ p + q } } \textrm{sgn} \, \sigma \\
+         & \quad \qquad \alpha_{ 1 } ( v_{ \sigma( 1 ) } ) \ldots \alpha_{ p } ( v_{ \sigma ( p ) } ) \alpha_{ p
+           + 1 } ( v_{ \sigma( p + 1 ) } ) \ldots \alpha_{ p + q } ( v_{ \sigma ( p + q ) } )
+           \, .
+  \end{split}
+\end{displaymath} \\
+Str. 276. \ldots gdyż macierz $A$\ldots \\
+Str. 304. \ldots indukowane
+$T^{ p } ( f ) : T^{ p } ( V ) \rightarrow T^{ p } (W)$\ldots \\
+Str. 322. \ldots element $\omega \in L( X_{ 1 } ,\ldots, X_{ k }; Y )$ \ldots \\
+Str. 324. \ldots w przypadku $X_{ 1 } = \ldots = X_{ k } = X$\ldots \\
+Str. 328. Odwzorowanie $A_{ X } : \bigotimes^{ k } X \rightarrow \Lambda^{ k } X$\ldots \\
+Str. 328. \ldots dla rodziny $\{ A_{ X } \} \, .$ \\
+Str. 329. \ldots $k$-liniowe
+$u^{ a }_{ X } : X \times \ldots \times X \rightarrow \bigotimes^{ k } X$ i
+$u^{ s }_{ X } : X \times \ldots \times X \rightarrow \bigotimes^{ k } X$\ldots \\
+Str. 354. Zadanie \romannumeral6.7a zostało rozwiązane w
+twierdzeniu 44.11. \\
+Str. 363. \ldots należą do $M( 0; F )$\ldots \\
+Str. 364. \ldots oraz $v = p( f |_{ U } ) ( v ) \in U_{ 1 }$\ldots \\
+
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Andrzej Herdegen \\
+  „Algebra liniowa i~geometria”,
+  \cite{HerdegenAlgebraLiniowaIGeometria10} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    8   & 6 & & $p$ ; & $p$; \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\vspace{\spaceFour}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Andrzej Staruszkiewicz \\
+  „Algebra i~geometria. Wykłady dla fizyków. Tom I”, \cite{ASAG} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+Str. 14. \ldots $\det A \neq 0$, to \\
+$\textrm{rz} ( AB ) = \textrm{rz} ( B ) \, .$ \\
+
+
+\vspace{\spaceFour}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% #####################################################################
+% #####################################################################
+% Bibliografia
+\bibliographystyle{plalpha}
+
+\bibliography{MathComScienceBooks}{}
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
