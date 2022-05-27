@@ -4,7 +4,7 @@
 % Część skrótów nie będzie działało bez pakietów od American Mathematican
 % Society, takich jak "amsmath", "amssym", etc.
 % ####################################################################
-\ProvidesPackage{mathshortcuts}
+\ProvidesPackage{mathcommands}
 
 
 
@@ -40,13 +40,6 @@
 % \newcommand{\ovSqTwoPi}{\fr{ 1 }{ \sqrt{ 2 \pi } }}
 
 
-% Ułamki
-% \newcommand{\oneOv}[1]{\fr{ 1 }{ #1 }}
-% \newcommand{\ovTwo}[1]{\fr{ #1 }{ 2 }}
-% \newcommand{\twoOv}[1]{\fr{ #1 }{ 2 }}
-
-
-
 % Do umieszczania ,,nad'' i ,,pod'' symbolami matematycznymi.
 % Wymyśl lepszą nazwę
 % \newcommand{\til}{\tilde}
@@ -66,6 +59,7 @@
 % Trzcionki matematyczne
 % \newcommand{\mr}{\mathrm}
 % \newcommand{\mb}{\mathbb}
+\newcommand{\Cfrak}{\mathfrak{C}}
 % \newcommand{\mf}{\mathfrak}
 \newcommand{\gfrak}{\mathfrak{g}}
 
@@ -177,13 +171,20 @@
 % Calligraphy letters
 \newcommand{\Acal}{\mathcal{A}}
 
+\newcommand{\Bcal}{\mathcal{B}}
+
 \newcommand{\Ccal}{\mathcal{C}}
 
 \newcommand{\Dcal}{\mathcal{D}}
 
+\newcommand{\Ecal}{\mathcal{E}}
+
 \newcommand{\Hcal}{\mathcal{H}}
 
+\newcommand{\Ical}{\mathcal{I}}
+
 \newcommand{\Lcal}{\mathcal{L}}
+\newcommand{\lcal}{\mathcal{l}}
 
 \newcommand{\Mcal}{\mathcal{M}}
 
@@ -641,10 +642,10 @@
 % \DeclareMathOperator{\arccsc}{arcCsc}
 % \DeclareMathOperator{\arccosh}{arcCosh}
 % \DeclareMathOperator{\arcsinh}{arcsinh}
-% \DeclareMathOperator{\artanh}{artanh}
+\DeclareMathOperator{\artanh}{artanh}
 % \DeclareMathOperator{\arcsech}{arcsech}
 % \DeclareMathOperator{\arccsch}{arcCsch}
-% \DeclareMathOperator{\arcoth}{arcoth}
+\DeclareMathOperator{\arcoth}{arcoth}
 
 
 
@@ -660,6 +661,8 @@
 % \newcommand{\Ad}{\mr{Ad}}
 % \newcommand{\Le}{\mc{L}}
 
+
+\newcommand{\Diam}{\textrm{Diam}}
 
 
 % \newcommand{\D}[2]{\mc{D}_{ #1 }( #2 )}
