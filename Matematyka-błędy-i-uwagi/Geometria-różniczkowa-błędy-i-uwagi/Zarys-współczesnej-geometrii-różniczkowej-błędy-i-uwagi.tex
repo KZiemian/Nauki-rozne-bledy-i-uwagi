@@ -773,8 +773,6 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
            & $X_{ 1 }, \ldots, f_{ k }$ \\
     40  &  4 & & $\Fcal( X_{ 1 }, \ldots, X_{ k }, Y )( u )$
            & $F( f_{ 1 }, \ldots, f_{ k }, g )( u )$ \\
-    40  &  6 & & $\Gcal( X_{ 1 }, \ldots, X_{ k }, Y )( u \otimes v )$
-           & $\Gcal( f_{ 1 }, \ldots, f_{ k }, g )( u \otimes v )$ \\
     \hline
   \end{tabular}
 
@@ -789,6 +787,8 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
+    40  &  6 & & $\Gcal( X_{ 1 }, \ldots, X_{ k }, Y )( u \otimes v )$
+           & $\Gcal( f_{ 1 }, \ldots, f_{ k }, g )( u \otimes v )$ \\
     41  & 14 & & \textit{wymiaru i~ich izomorfizmów} & \textit{wymiaru} \\
     41  & 15 & & $X \times \ldots X$ & $X \times \ldots \times X$ \\
     41  & & 12 & $\beta_{ 1 } : B_{ q }$ & $\beta_{ q } : B_{ q }$ \\
@@ -834,125 +834,135 @@ zdefiniowana. Najprościej zrobić to chyba w~następujący sposób.
                  { \Vert q_{ 1 } \Vert^{ 2 } + \Vert q_{ 2 } \Vert^{ 2 } }$
            & $\frac{ 1 }
              { \Vert q_{ 1 } \Vert^{ 2 } + \Vert q_{ 2 } \Vert^{ 2 } }$ \\
-    55  & 17 & & $\overline{ q_{ 1 } }$ & $\bar{ q }_{ 1 }$ \\
-    % 55  & & 16 & $\Ac$ & $\Ab$ \\
-    % 55  & 13 & & $V_{ \Hc }$ & $V_{ \Hb }$ \\
-    % 55  & 13 & & $V_{ \Ac }$ & $V_{ \Ab }$ \\
+    55  & 17 & & $\overline{ q_{ 1 } }$ & $\overline{ q }_{ 1 }$ \\
+    55  & & 16 & $\Acal$ & $\Abb$ \\
     \hline
   \end{tabular}
 
-  % \begin{tabular}{|c|c|c|c|c|}
-  %   \hline
-  %   & \multicolumn{2}{c|}{} & & \\
-  %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-  %                             & Powinno być \\ \cline{2-3}
-  %   & Od góry & Od dołu & & \\
-  %   \hline
-  %   55  & 17 & & $V_{ \Hc }$ & $V_{ \Hb }$ \\
-  %   55  & 17 & & $V_{ \Ac }$ & $V_{ \Ab }$ \\
-  %   55  & 18 & & $V_{ \Hc }$ & $V_{ \Hb }$ \\
-  %   55  & 18 & & $V_{ \Ac }$ & $V_{ \Ab }$ \\
-  %   55  & & 15 & $V_{ \Hc }$ & $V_{ \Hb }$ \\
-  %   55  & & 15 & $V_{ \Ac }$ & $V_{ \Ab }$ \\
-  %   55  & & 13 & $V_{ \Hc }$ & $V_{ \Hb }$ \\
-  %   58  &  3 & & $z$. & $z$, \\
-  %   58  &  5 & & $det f$ & $\det f$ \\
-  %   58  &  9 & & $T( M )$ & $T( X )$ \\
-  %   58  & &  4 & $( b.c )$ & $( b, c )$ \\
-  %   58  & &  2 & $\Ac.\Bc$ & $\Ac, \Bc$ \\
-  %   61  & & 15 & dopuścić do & dopuścić je do \\
-  %   61  & & 11 & homeomorfizm & homeomorfizmem \\
-  %   61  & &  6 & $\Gamma$, & $\Gamma$; \\
-  %   62  &  3 & & $\id_{ U } \circ \varphi$ & $\varphi \circ \id_{ U }$ \\
-  %   62  & 20 & & bijekcją & bijekcją klasy $\Cc^{ \infty }$ \\
-  %   62  & 21 & & różniczkowalne & klasy $\Cc^{ \infty }$ \\
-  %   63  &  5 & & $i > p$ i $j \leq q$ & $i \leq p$ i $j > p$ \\
-  %   64  & & 21 & przestrzeni & niepustej przestrzeni \\
-  %   64  & &  7 & $\Gamma^{ \infty }( n )$-strukturą
-  %          & $\Gamma^{ \infty }( n )$-strukturze \\
-  %   65  &  1 & & $\Gamma$\dywiz rozmaitością
-  %          & $\Gamma$\dywiz rozmaitość \\
-  %   65  &  3 & & $\Gamma^{ \infty }( n )$-strukturze
-  %          & $\Gamma^{ \infty }( n )$-strukturą \\
-  %   65  &  6 & & $\Gamma^{ \infty }( n )$-struktura
-  %          & $\Gamma^{ \infty }( n )$-strukturą \\
-  %   65  & &  7 & $\Hom_{ \: F }$ & $\Hom_{ F }$ \\
-  %   67  & &  4 & $\big( \fr{ 4 r u_{ 1 } }{ \norm{ u } }, \ld,
-  %                \fr{ 4 r u_{ n } }{ \norm{ u } } \big),$
-  %          & $\left( \fr{ 4 r^{ 2 } u_{ 1 } }{ \norm{ u } }, \ld,
-  %            \fr{ 4 r^{ 2 } u_{ n } }{ \norm{ u } } \right)\! ,$ \\
-  %   69  &  4 & & $[ t, x ]$ & $[ ( t, x ) ]$ \\
-  %   69  &  5 & & $[ t, x ]$ & $[ ( t, x ) ]$ \\
-  %   69  & 14 & & $\varphi \circ \psi^{ -1 }( t, x )$
-  %          & $\varphi \circ \psi^{ -1 }( [ ( t, x ) ] )$ \\
-  %   69  & 14 & & $( t - 1, -x )$ & $( t + 1, -x )$ \\
-  %   70  &  2 & & oraz$( 1, \bar{ z } )$ & oraz $( 1, \bar{ z } )$ \\
-  %   70  & & 15 & $\lambda \circ f$ & $f \circ \lambda$ \\
-  %   70  & & 15 & $M( q, p + q; Q )$ & $M( q, p + q; q )$ \\
-  %   70  & &  1 & $a$ & $A$ \\
-  %   71  & 21 & & $P.q$ & $P, Q$ \\
-  %   71  & 21 & & $p_{ ) }$ & $p )$ \\
-  %   71  & 18 & & $P' Q'$ & $P', Q'$ \\
-  %   71  & & 16 & $G_{ pq }$ & $G_{ p, q }$ \\
-  %   71  & & 15 & $\P_{ n }[ \Rb )$ & $\P_{ n }( \Rb )$ \\
-  %   71  & &  5 & więc topologia na & więc \\
-  %   71  & &  5 & $P_{ n }( \Rb )$ & $\P_{ n }( \Rb )$ \\
-  %   \hline
-  % \end{tabular}
 
-  % \begin{tabular}{|c|c|c|c|c|}
-  %   \hline
-  %   & \multicolumn{2}{c|}{} & & \\
-  %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-  %                             & Powinno być \\ \cline{2-3}
-  %   & Od góry & Od dołu & & \\
-  %   \hline
-  %   72  &  2 & & $\fr{ u_{ 1 } }{ u_{ i } }, \ld. \fr{ u_{ i - 1 } }{ u_{ i } }$
-  %          & $\fr{ u_{ 1 } }{ u_{ i } }, \ld, \fr{ u_{ i - 1 } }{ u_{ i } }$ \\
-  %   72  & & 15 & $\Rb^{ n }$ & $\Rb^{ m }$ \\
-  %   72  & &  1 & w & w tym opracowaniu \\
-  %   72  & &  1 & będziemy & będziemy się \\
-  %   74  & &  8 & \emph{klasy klasy} & \emph{klasy} \\
-  %   75  &  9 & & izomorficzna & dyfeomorficzna \\
-  %   76  & 14 & & $\varphi^{ -1 }( \supp \, \wt{ \lambda } )$ & $U$ \\
-  %   76  & &  4 & $\ol{ \, V }$ & $\ol{ V }$ \\
-  %   77  &  3 & & $\ol{\, V }_{ i }$ & $\ol{ V }_{ i }$ \\
-  %   77  &  8 & & $\varphi^{ -1 }( \supp \, \lambda_{ i } )$ & $U_{ i }$ \\
-  %   77  & 20 & & $\supp \, \lambda$ & $U$ \\
-  %   78  &  2 & & $\ol{ V_{ \kappa } }$ & $\ol{ V }_{ \kappa }$ \\
-  %   78  &  4 & & $\ol{ \wt{ U }_{ \tilde{ \iota } } }$
-  %          & $\ol{ \wt{ U } }_{ \tilde{ \iota } }$ \\
-  %   78  &  6 & & $\wt{ \lambda_{ \kappa } }$ & $\wt{ \lambda }_{ \kappa }$ \\
-  %   78  &  7 & & $\wt{ \lambda_{ \kappa } }$ & $\wt{ \lambda }_{ \kappa }$ \\
-  %   78  &  7 & & $\ol{ \, V_{ x } }$ & $\ol{ V }_{ x }$ \\
-  %   79  &  5 & & $( ( \varphi( x ) )$ & $( \varphi( x ) )$ \\
-  %   82  & 10 & & $\wt{ \psi }'_{ x }$
-  %          & $\wt{ \varphi }'_{ x }$ \\
-  %   82  & 10 & & $\psi$ & $\varphi'$ \\
-  %   82  & & 12 & $f_{ \iota }( U_{ \iota } )$ & $f_{ \iota }( T_{ \iota } )$ \\
-  %   82  & &  1 & dyfeorficzności & dyfeomorficzności \\
-  %   84  &  3 & & $( 0. \fr{ 1 }{ 2 } )$ & $( 0, \fr{ 1 }{ 2 } )$ \\
-  %   84  & & 10 & $FF\Ic$ & $\Ic$ \\
-  %   86  &  5 & & $( ( \varphi( x ) )$ & $( \varphi( x ) )$ \\
-  %   86  & &  3 & $\Rb^{ n + 2 }$ & $\Rb^{ n_{ 2 } }$ \\
-  %   87  &  4 & & ,. & . \\
-  %   88  & &  9 & $( \partial_{ j }|_{ x }$ & $( \partial_{ j }|_{ x } )$ \\
-  %   89  &  7 & & $f_{ x_{ 2 } }^{ 2 }$ & $f_{ x_{ 2 } }^{ ( 2 ) }$ \\
-  %   89  &  7 & & $f_{ x_{ 1 } }^{ 1 }$ & $f_{ x_{ 1 } }^{ ( 1 ) }$ \\
-  %   89  &  7 & & $d f_{ x_{ 2 } }^{ 2 }$ & $d f_{ x_{ 2 } }^{ ( 2 ) }$ \\
-  %   89  &  8 & & $d f_{ x_{ 1 } }^{ 1 }$ & $d f_{ x_{ 1 } }^{ ( 1 ) }$ \\
-  %   90  &  4 & & $\Cc^{ \infty }( M, x )$ & $\Cc^{ \infty }( M, x_{ 0 } )$ \\
-  %   90  & 12 & & $\Cc^{ \infty }( M, x )$
-  %          & $\Cc^{ \infty }( M, x_{ 0 } )$ \\
-  %   90  & 13 & & (11.20) & (11.21) \\
-  %   90  & & 11 & $\fr{ \partial ( \varphi^{ i } \circ \varphi^{ -1 } ) }{ u^{ j } }$
-  %          & $\fr{ \partial ( \varphi^{ i } \circ \varphi^{ -1 } ) }{ \partial u^{ j } }$ \\
-  %   90  & &  3 & $\Cc^{ \infty }( M, x )$
-  %          & $\Cc^{ \infty }( M, x_{ 0 } )$ \\
-  %   92  & 13 & & $\xi^{ 1 }(x) \ld$ & $\xi^{ 1 }(x), \ld$ \\
-  %   96  & &  6 & $( f ( \varphi^{ -1 }$ & $( f \circ \varphi^{ -1 } )$ \\
-  %   \hline
-  % \end{tabular}
+
+
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    55  & 13 & & $V_{ \Hcal }$ & $V_{ \Hbb }$ \\
+    55  & 13 & & $V_{ \Acal }$ & $V_{ \Abb }$ \\
+    55  & 17 & & $V_{ \Hcal }$ & $V_{ \Hbb }$ \\
+    55  & 17 & & $V_{ \Acal }$ & $V_{ \Abb }$ \\
+    55  & 18 & & $V_{ \Hcal }$ & $V_{ \Hbb }$ \\
+    55  & 18 & & $V_{ \Acal }$ & $V_{ \Abb }$ \\
+    55  & & 15 & $V_{ \Hcal }$ & $V_{ \Hbb }$ \\
+    55  & & 15 & $V_{ \Acal }$ & $V_{ \Abb }$ \\
+    55  & & 13 & $V_{ \Hcal }$ & $V_{ \Hbb }$ \\
+    58  &  3 & & $z$. & $z$, \\
+    58  &  5 & & $det f$ & $\det f$ \\
+    58  &  9 & & $T( M )$ & $T( X )$ \\
+    58  & &  4 & $( b.c )$ & $( b, c )$ \\
+    58  & &  2 & $\Acal.\Bcal$ & $\Acal, \Bcal$ \\
+    61  & & 15 & dopuścić do & dopuścić je do \\
+    61  & & 11 & homeomorfizm & homeomorfizmem \\
+    61  & &  6 & $\Gamma$, & $\Gamma$; \\
+    62  &  3 & & $\id_{ U } \circ \varphi$ & $\varphi \circ \id_{ U }$ \\
+    62  & 20 & & bijekcją & bijekcją klasy $\Ccal^{ \infty }$ \\
+    62  & 21 & & różniczkowalne & klasy $\Ccal^{ \infty }$ \\
+    63  &  5 & & $i > p$ i $j \leq q$ & $i \leq p$ i $j > p$ \\
+    64  & & 21 & przestrzeni & niepustej przestrzeni \\
+    64  & &  7 & $\Gamma^{ \infty }( n )$-strukturą
+           & $\Gamma^{ \infty }( n )$-strukturze \\
+    65  &  1 & & $\Gamma$-rozmaitością & $\Gamma$-rozmaitość \\
+    65  &  3 & & $\Gamma^{ \infty }( n )$-strukturze
+           & $\Gamma^{ \infty }( n )$-strukturą \\
+    65  &  6 & & $\Gamma^{ \infty }( n )$-struktura
+           & $\Gamma^{ \infty }( n )$-strukturą \\
+    65  & &  7 & $\Hom_{ \: F }$ & $\Hom_{ F }$ \\
+    67  & &  4 & $\big( \frac{ 4 r u_{ 1 } }{ \norm{ u } }, \ldots,
+                 \frac{ 4 r u_{ n } }{ \norm{ u } } \big),$
+           & $\left( \frac{ 4 r^{ 2 } u_{ 1 } }{ \norm{ u } }, \ldots,
+             \frac{ 4 r^{ 2 } u_{ n } }{ \norm{ u } } \right)\! ,$ \\
+    69  &  4 & & $[ t, x ]$ & $[ ( t, x ) ]$ \\
+    69  &  5 & & $[ t, x ]$ & $[ ( t, x ) ]$ \\
+    69  & 14 & & $\varphi \circ \psi^{ -1 }( t, x )$
+           & $\varphi \circ \psi^{ -1 }( [ ( t, x ) ] )$ \\
+    69  & 14 & & $( t - 1, -x )$ & $( t + 1, -x )$ \\
+    70  &  2 & & oraz$( 1, \bar{ z } )$ & oraz $( 1, \bar{ z } )$ \\
+    70  & & 15 & $\lambda \circ f$ & $f \circ \lambda$ \\
+    70  & & 15 & $M( q, p + q; Q )$ & $M( q, p + q; q )$ \\
+    70  & &  1 & $a$ & $A$ \\
+    71  & 21 & & $P.q$ & $P, Q$ \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    71  & 21 & & $p_{ ) }$ & $p )$ \\
+    71  & 18 & & $P' Q'$ & $P', Q'$ \\
+    71  & & 16 & $G_{ pq }$ & $G_{ p, q }$ \\
+    71  & & 15 & $\Pbb_{ n }[ \Rbb )$ & $\Pbb_{ n }( \Rbb )$???? \\
+    71  & &  5 & więc topologia na & więc \\
+    71  & &  5 & $P_{ n }( \Rbb )$ & $\Pbb_{ n }( \Rbb )$ \\
+    72  &  2 & & $\frac{ u_{ 1 } }{ u_{ i } }, \ldots.
+                 \frac{ u_{ i - 1 } }{ u_{ i } }$
+           & $\frac{ u_{ 1 } }{ u_{ i } }, \ldots,
+             \frac{ u_{ i - 1 } }{ u_{ i } }$ \\[0.3em]
+    72  & & 15 & $\Rbb^{ n }$ & $\Rbb^{ m }$ \\
+    72  & &  1 & w & w~tym opracowaniu \\
+    72  & &  1 & będziemy & będziemy~się \\
+    74  & &  8 & \textit{klasy klasy} & \textit{klasy} \\
+    75  &  9 & & izomorficzna & dyfeomorficzna \\
+    76  & 14 & & $\varphi^{ -1 }( \supp \, \widetilde{ \lambda } )$ & $U$ \\
+    76  & &  4 & $\overline{ \, V }$ & $\overline{ V }$ \\
+    77  &  3 & & $\overline{ \, V }_{ i }$ & $\overline{ V }_{ i }$ \\
+    77  &  8 & & $\varphi^{ -1 }( \supp \, \lambda_{ i } )$ & $U_{ i }$ \\
+    77  & 20 & & $\supp \, \lambda$ & $U$ \\
+    78  &  2 & & $\overline{ V_{ \kappa } }$ & $\overline{ V }_{ \kappa }$ \\[0.3em]
+    78  &  4 & & $\overline{ \widetilde{ U }_{ \tilde{ \iota } } }$
+           & $\overline{ \widetilde{ U } }_{ \tilde{ \iota } }$ \\
+    78  &  6 & & $\widetilde{ \lambda_{ \kappa } }$ & $\widetilde{ \lambda }_{ \kappa }$ \\
+    78  &  7 & & $\widetilde{ \lambda_{ \kappa } }$ & $\widetilde{ \lambda }_{ \kappa }$ \\
+    78  &  7 & & $\overline{ \, V_{ x } }$
+           & $\overline{ V }_{ x }$ \\
+    79  &  5 & & $( ( \varphi( x ) )$ & $\big( \varphi( x ) \big)$ \\
+    82  & 10 & & $\widetilde{ \psi }'_{ x }$
+           & $\widetilde{ \varphi }'_{ x }$ \\
+    % 82  & 10 & & $\psi$ & $\varphi'$ \\
+    % 82  & & 12 & $f_{ \iota }( U_{ \iota } )$ & $f_{ \iota }( T_{ \iota } )$ \\
+    % 82  & &  1 & dyfeorficzności & dyfeomorficzności \\
+    % 84  &  3 & & $( 0. \fr{ 1 }{ 2 } )$ & $( 0, \fr{ 1 }{ 2 } )$ \\
+    % 84  & & 10 & $FF\Ic$ & $\Ic$ \\
+    % 86  &  5 & & $( ( \varphi( x ) )$ & $( \varphi( x ) )$ \\
+    % 86  & &  3 & $\Rb^{ n + 2 }$ & $\Rb^{ n_{ 2 } }$ \\
+    % 87  &  4 & & ,. & . \\
+    % 88  & &  9 & $( \partial_{ j }|_{ x }$ & $( \partial_{ j }|_{ x } )$ \\
+    % 89  &  7 & & $f_{ x_{ 2 } }^{ 2 }$ & $f_{ x_{ 2 } }^{ ( 2 ) }$ \\
+    % 89  &  7 & & $f_{ x_{ 1 } }^{ 1 }$ & $f_{ x_{ 1 } }^{ ( 1 ) }$ \\
+    % 89  &  7 & & $d f_{ x_{ 2 } }^{ 2 }$ & $d f_{ x_{ 2 } }^{ ( 2 ) }$ \\
+    % 89  &  8 & & $d f_{ x_{ 1 } }^{ 1 }$ & $d f_{ x_{ 1 } }^{ ( 1 ) }$ \\
+    % 90  &  4 & & $\Cc^{ \infty }( M, x )$ & $\Cc^{ \infty }( M, x_{ 0 } )$ \\
+    % 90  & 12 & & $\Cc^{ \infty }( M, x )$
+    %        & $\Cc^{ \infty }( M, x_{ 0 } )$ \\
+    % 90  & 13 & & (11.20) & (11.21) \\
+    % 90  & & 11 & $\fr{ \partial ( \varphi^{ i } \circ \varphi^{ -1 } ) }{ u^{ j } }$
+    %        & $\fr{ \partial ( \varphi^{ i } \circ \varphi^{ -1 } ) }{ \partial u^{ j } }$ \\
+    % 90  & &  3 & $\Cc^{ \infty }( M, x )$
+    %        & $\Cc^{ \infty }( M, x_{ 0 } )$ \\
+    % 92  & 13 & & $\xi^{ 1 }(x) \ld$ & $\xi^{ 1 }(x), \ld$ \\
+    % 96  & &  6 & $( f ( \varphi^{ -1 }$ & $( f \circ \varphi^{ -1 } )$ \\
+    \hline
+  \end{tabular}
 
   % \begin{tabular}{|c|c|c|c|c|}
   %   \hline
