@@ -116,8 +116,8 @@
 % ---------------------------------------
 % Packages written by us
 % ---------------------------------------
-\usepackage{latexshortcuts}
-\usepackage{mathshortcuts}
+\usepackage{latexgeneralcommands}
+% \usepackage{mathshortcuts}
 
 
 
@@ -143,7 +143,8 @@
 
 
 % ------------------------------
-
+% Pakiet „hyperref”
+% Polecano by umieszczać go na końcu preambuły.
 % ------------------------------
 \usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
 % do bibliografii na hiperlinki.
@@ -152,13 +153,23 @@
 
 
 
+
+
+
+
+
 % ---------------------------------------------------------------------
 % Tytuł, autor, data
-\title{Logika i~teoria mnogości --~błędy i~uwagi}
+\title{Logika i~teoria mnogości~-- błędy i~uwagi}
 
 % \author{}
 % \date{}
 % ---------------------------------------------------------------------
+
+
+
+
+
 
 
 
@@ -171,9 +182,13 @@
 
 
 
+
+
 % ######################################
 \maketitle  % Tytuł całego tekstu
 % ######################################
+
+
 
 
 
@@ -185,13 +200,15 @@
 
 
 
-% ##################
+% ############################
 \Work{ % Autor i tytuł dzieła
   Józef W.~Bremer \\
   „Wprowadzenie do~logiki”, \cite{BremerWprowadzenieDoLogiki2004} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \start \StrWg{132}{1} Zdanie
 „$p \vee q ( ( p \land q ) \to ( p \land q ) )$” nie ma żadnego sensu
@@ -200,10 +217,14 @@ Niestety nie wiem który należy tam umieścić.
 
 
 
+
+
 % ##################
-\CenterTB{Błędy}
+\CenterBoldFont{Błędy}
+
 
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -212,18 +233,19 @@ Niestety nie wiem który należy tam umieścić.
     & Od góry & Od dołu & & \\
     \hline
     4   &  8 & & LATEX & \LaTeX \\
-    13  & &  8 & \emph{formalnej} & \emph{formalnej}; \\
-    20  & & 15 & Ockhama''$^{ 7 }$. & Ockhama''$^{ 7 }$, \\
+    13  & &  8 & \textit{formalnej} & \textit{formalnej}; \\
+    20  & & 15 & Ockhama”$^{ 7 }$. & Ockhama”$^{ 7 }$, \\
     21  & 14 & & Współczesnych & współczesnych \\
-    26  & &  2 & \emph{Lwowsko-\! Warszawska} & \emph{Lwowsko-Warszawska} \\
+    26  & &  2 & \textit{Lwowsko-\! Warszawska}
+           & \textit{Lwowsko-Warszawska} \\
     45  & & 10 & konkretna & konkretną \\
     86  & 10 & & przypadku.. & przypadku. \\
     88  & 11 & & średniego & pośredniego \\  % ???
-    98  & &  9 & $P \ul{ e } S$ & $S \ul{ e } P$ \\
-    114 &  9 & & zwane\emph{prawo} & zwane \emph{prawo} \\
+    98  & &  9 & $P \underline{ e } S$ & $S \underline{ e } P$ \\
+    114 &  9 & & zwane\textit{prawo} & zwane \textit{prawo} \\
     117 &  6 & & jedzie & jadą \\
     119 & & 14 & współczesnej~. & współczesnej. \\
-    122 & &  4 & wniosek $\equiv P$) & wniosek $\equiv P$)'' \\
+    122 & &  4 & wniosek $\equiv P$) & wniosek $\equiv P$)” \\
     125 & & 14 & „nie-analityczne & „nie-analityczne” \\
     131 &  6 & & „$\neg p \vee \neg q''$ & „$\neg p \vee \neg q$” \\
     131 &  6 & & $\equiv$,\hspace{2pt},$\neg ( p \land q )$”
@@ -238,10 +260,12 @@ Niestety nie wiem który należy tam umieścić.
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
 
+
 \vspace{\spaceTwo}
-% ##################
+% ############################
 
 
 
@@ -268,16 +292,20 @@ Niestety nie wiem który należy tam umieścić.
   \cite{GrzegorczykZarysLogikiMatematycznej1975} }
 
 
-\CenterTB{Uwagi}
 
-\start \Str{16} Na tej stronie Grzegorczyk swoim wyborem nazw dla
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+\noindent
+\Str{16} Na tej stronie Grzegorczyk swoim wyborem nazw dla
 własności funkcji stworzył problem, który czyni język jego książki
 niejednoznacznym. Zdecydowała się nadać funkcji $f : X \to Y$
-różnowartościowej nazwę \emph{funkcji wzajemnie
+różnowartościowej nazwę \textit{funkcji wzajemnie
   jednoznaczną}\footnote{Nie cytuję dosłownie sformułowań z~książki,
   bo wymagają one poprawienia i~ujednoznacznienia.}, a funkcji która
 jest różnowartościowa i~spełnia dodatkowo warunek $f( X ) = Y$ nazwę
-\emph{funkcji wzajemnie jednoznacznej odwzorowującej zbiór $X$ na cały
+\textit{funkcji wzajemnie jednoznacznej odwzorowującej zbiór $X$ na cały
   zbiór $Y$}.
 
 Już na stronie następnej stronie (str. 17) stosuje to nazewnictwo
@@ -288,7 +316,7 @@ $f( X ) = Y$. Aby z tego wybrnąć przyjmujemy umowę, że~sformułowania
 „na zbiór $Y$” i~„na cały zbiór $Y$” oba oznaczają to sama, czyli że
 dane odwzorowanie pokrywa swoimi wartościami cały zbiór $Y$
 (równoważnie $f( X ) = Y$). Jeśli $f( X ) \neq Y$ będziemy mówić, że
-\emph{funkcja $f$ odwzorowuje zbiór $X$ w~zbiór $Y$}.
+\textit{funkcja $f$ odwzorowuje zbiór $X$ w~zbiór $Y$}.
 
 Dalej na stronie 17 pisze, że jeśli zawęzimy potęgowanie oraz
 pierwiastkowanie do liczb dodatnich, to wówczas obie funkcje są
@@ -307,9 +335,9 @@ wyznaczają funkcje. Jak widać pojęcie jednoznaczności dla funkcji
 i~dla relacji oznacza zupełnie coś innego.
 
 Proponuję następujące wyjście z tej sytuacji. Funkcję $f: X \to Y$
-będziemy nazywać \emph{jednoznaczną} jeśli jest różnowartościowa.
+będziemy nazywać \textit{jednoznaczną} jeśli jest różnowartościowa.
 Funkcję która jest różnowartościowa i~dla której zachodzi
-$f( X ) = Y$, będziemy nazywali \emph{wzajemnie jednoznaczną}. Pojęć
+$f( X ) = Y$, będziemy nazywali \textit{wzajemnie jednoznaczną}. Pojęć
 „relacja jednoznaczna” i~„relacja wzajemnie jednoznaczna” będziemy
 unikać.
 
@@ -318,11 +346,15 @@ terminologi, czy też okaże~się to zbyt skomplikowane w~praktyce. Do
 tego jednak momentu będziemy poprawiać jej fragmenty w~zgodzie z~tym
 co zostało powyżej napisane.
 
+\vspace{\spaceFour}
+
+
+
 
 
 % ##################
-\newpage
-\CenterTB{Błędy}
+\CenterBoldFont{Błędy}
+
 
 \begin{center}
 
@@ -375,7 +407,8 @@ co zostało powyżej napisane.
 
 
 % ##################
-\CenterTB{Błędy}
+\CenterBoldFont{Błędy}
+
 
 \begin{center}
 
@@ -419,25 +452,27 @@ co zostało powyżej napisane.
 
 
 
-% ##################
+% ############################
 \Work{ % Autor i tytuł dzieła
   Kazimierz Kuratowski \\
   „Wstęp do~teorii mnogości i~topologii”,
   \cite{KuratowskiWstepTeoriiMnogosciITopologii2004} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \start \Str{10} Należy uwzględnić dwa typy dowodu używające negacji.
 Pierwszy to~dowód przez \textbf{kontrapozycję}, opierający~się
 na~tożsamości
 \begin{equation}
-  \label{eq:Kuratowski-01}
+  \label{eq:KuratowskiWTMiT-01}
   ( \alpha \Rightarrow \beta ) \equiv ( \neg \beta \Rightarrow \neg \alpha).
 \end{equation}
 Drugi to~dowód \textbf{nie wprost}, opierający~się na~tożsamości
 \begin{equation}
-  \label{eq:Kuratowski-02}
+  \label{eq:KuratowskiWTMiT-02}
   ( \alpha \Rightarrow \beta ) \equiv \neg ( \alpha \land \neg \beta ).
 \end{equation}
 
@@ -447,7 +482,9 @@ Drugi to~dowód \textbf{nie wprost}, opierający~się na~tożsamości
 
 
 
-\CenterTB{Błędy}
+% ##################
+\CenterBoldFont{Błędy}
+
 
 \begin{center}
 
@@ -502,7 +539,7 @@ Drugi to~dowód \textbf{nie wprost}, opierający~się na~tożsamości
 \end{center}
 
 \vspace{\spaceTwo}
-% ##################
+% ############################
 
 
 
@@ -516,7 +553,12 @@ Drugi to~dowód \textbf{nie wprost}, opierający~się na~tożsamości
 % ####################################################################
 % ####################################################################
 % Bibliografia
-\bibliographystyle{plalpha} \bibliography{MathCompScienceBooks}{}
+\bibliographystyle{plalpha}
+
+\bibliography{MathComScienceBooks}{}
+
+
+
 
 
 % ############################
