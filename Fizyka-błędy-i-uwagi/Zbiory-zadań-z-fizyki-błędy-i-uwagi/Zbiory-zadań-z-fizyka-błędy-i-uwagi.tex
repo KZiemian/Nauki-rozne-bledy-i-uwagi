@@ -1,0 +1,378 @@
+% Autor: Kamil Ziemian
+
+% ---------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern} % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ------------------------------
+\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
+\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
+\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+% wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ------------------------------
+% MARGINS
+% ------------------------------
+\setmarginsrb
+{ 0.7in} % left margin
+{ 0.6in} % top margin
+{ 0.7in} % right margin
+{ 0.8in} % bottom margin
+{  20pt} % head height
+{0.25in} % head sep
+{   9pt} % foot height
+{ 0.3in} % foot sep
+
+
+
+% ------------------------------
+% Często przydatne pakiety
+% ------------------------------
+\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+% ------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ------------------------------
+\let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
+% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
+% \usepackage{siunitx} % Dla prostszego pisania jednostek fizycznych
+\usepackage{upgreek} % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+\usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
+\usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
+% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% nie wiem.
+
+
+
+% ##########
+% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
+\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
+% „theorem” do pisania twierdzeń matematycznych
+\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+\newtheorem{corollary}{Wniosek}
+
+
+
+% ---------------------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ---------------------------------------
+\usepackage{latexgeneralcommands}
+\usepackage{mathcommands}
+% \usepackage{calculuscommands}
+% \usepackage{SchwartzBooksCommands}  % Pakiet napisany m.in. dla tego pliku.
+
+
+
+% ---------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% ---------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ------------------------------
+% Ustawienia różnych parametrów tekstu
+% ------------------------------
+\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
+
+
+
+% ------------------------------
+% Pakiet "hyperref"
+% Polecano by umieszczać go na końcu preambuły.
+% ------------------------------
+\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł
+\title{Zbiory zadań z~fizyki~-- błędy i~uwagi}
+
+% \author{}
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+% % ######################################
+% \section{Standardowe wykłady elektrodynamiki Clerka Maxwella}
+% % Tytuł danego działu
+
+% \vspace{\spaceTwo}
+% % \vspace{\spaceThree}
+
+% % ######################################
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  J. Jędrzejewski, W. Kruczek, A. Kujawski \\
+  „Zbiór zadań z fizyki”, wydanie \romannumeral5?, \cite{} }
+
+
+
+% Uwagi:
+% \begin{itemize}
+% \item
+% \end{itemize}
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % & & & & \\
+    635 &  2 & & $\frac{ 6 p }{ x^{ 4 } }$ & $-\frac{ 6 p }{ x^{ 4 } }$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+Dyskusja elektrostatyki powinna się zacząć od dyskusji problemu układu
+odniesienia.
+
+\vspace{\spaceFour}
+
+
+
+Aby zapewnić fizyczną konsytencje teorii na początku rozdziału I
+powinno zostać przyjęte, że w rozważanych przypadkach nie ma obecnych
+pól magnetycznych. Nie jest to minimalny warunek konsytencji teorii,
+ale najbardziej naturalny.
+
+\vspace{\spaceFour}
+
+
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+% \noi \tb{Konkretne strony}
+
+% \vspace{\spaceFour}
+
+
+\Str{47} Powinna tu być zamieszczona dyskusja problemu określenia wartości
+pola elektrycznego, w~punkcie w~którym znajduje się ładunek punktowy.
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    58 & 5 & & $\rho( \bold{ x }' ) \nabla^{ 2 } \bigg( \frac{ 1 }{ \sqrt{ r^{ 2 } + a^{ 2 } } } \bigg) \, d^{ 3 } x'$ & $\int \rho( \bold{ x }' ) \nabla^{ 2 } \bigg( \frac{ 1 }{ \sqrt{ r^{ 2 } + a^{ 2 } } } \bigg) \, d^{ 3 } x'$ \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\noindent
+\StrWg{25}{7} \\
+\Jest  w~równaniach Maxwella niesymetrycznie jedynie w~pierwszych dwóch
+równaniach. \\
+\Powin nie występują symetrycznie w~równaniach Maxwella, są obecne jedynie
+w~dwóch pierwszych równaniach. \\
+
+Str. 51. po wewnętrznej stronie, Pristley w analogii
+
+Str. 65. $\displaystyle w = \frac{ q^{ 2 }_{ 1 } }{ 8 \pi | \vecxbold - \vecxbold_{ 1 } |^{ 4 } } + \frac{ q^{ 2 }_{ 1 } }{ 8 \pi | \vecxbold - \vecxbold_{ 2 } |^{ 4 } } + \frac{ q_{ 1 } q_{ 2 } \, ( \vecxbold - \vecxbold_{ 1 } ) \cdot ( \vecxbold - \vecxbold_{ 2 } ) }{ 4 \pi | \vecxbold - \vecxbold_{ 1 } |^{ 3 } | \vecxbold - \vecxbold_{ 2 } |^{ 3 } }$.
+
+Str. 114. $\displaystyle Y_{ l m }( \theta, \varphi ) = \sqrt{ \frac{ ( 2l + 1 ) ( l - m )! }{ 4 \pi ( l + m )! } } P^{ m }_{ l }( \cos \theta ) e^{ i m \varphi }$
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Fizyka klasycznych cząstek naładowanych}
+% Tytuł danego działu
+
+\vspace{\spaceTwo}
+% \vspace{\spaceThree}
+
+% ######################################
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Fritz Rohrlich \\
+  „Klasyczna teoria cząstek naładowanych”,
+  \cite{RohrlichKlasycznaTeoriaCzastekNaladowanych1981} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu &  &  \\ \hline
+    % & & & & \\
+    24 & 7 & & $k \vecrbold$ & $-k \vecrbold$ \\
+    25 & & 14 & $\vecEbold \times \frac{ \vecvbold }{ c } \times \vecBbold$
+           & $\vecEbold + \frac{ \vecvbold }{ c } \times \vecBbold$ \\
+    25 & 4 & & \emph{Electrodynamics},John & \emph{Electrodynamics}, John \\
+    27 & 10 & & $v / c^{ 2 }$ & $v^{ 2 } / c^{ 2 }$ \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+% #####################################################################
+% #####################################################################
+% Bibliografia
+\bibliographystyle{plalpha}
+
+\bibliography{PhilNaturBooks}{}
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
