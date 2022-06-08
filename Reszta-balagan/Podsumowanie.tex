@@ -1,0 +1,282 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[polish]{babel}% Tłumaczy na polski teksty automatyczne LaTeXa i pomaga z typografią.
+\usepackage[plmath,OT4,MeX]{polski}% Polska notacja we wzorach matematycznych. Ładne polskie
+\usepackage[T1]{fontenc}% Pozwala pisać znaki diakrytyczne z języków innych niż polski.
+\usepackage[utf8]{inputenc}% Pozwala pisać polskie znaki bezpośrednio.
+%\usepackage{indentfirst}% Sprawia, że jest wcięcie w pierwszym akapicie.
+\frenchspacing% Wyłącza duże odstępy na końcu zdania. Pakiet babel polski robi to samo, ale to jest %zabezpieczenie jakibym chciał przestać go używać.
+\usepackage{fullpage}% Mniejszse marginesy.
+\usepackage{amsfonts}% Czcionki matematyczne od American Mathematic Society.
+\usepackage{amsmath}% Dalsze wsparcie od AMS. Więc tego, co najlepsze w LaTeX, czyli trybu
+%matematycznego.
+\usepackage{upgreek}%Lepsze greckie czcionki. Przyklad skladni: pi = \uppi
+%\usepackage{txfonts}%Inne ulepszenie greckich liter. Przyklad skladni: pi = \piup
+\usepackage{amscd}% Jeszcze wsparcie od AMS.
+\usepackage{latexsym}% Więcej symboli.
+\usepackage{textcomp}% Pakiet z dziwnymi symbolami.
+\usepackage{slashed}% Pozwala pisać slash Feynmana.
+\usepackage{xy}% Pozwala rysować grafy.
+\usepackage{tensor}% Pozwala prosto używać notacji tensorowej. Albo nawet pięknej notacji
+%tensorowej:).
+\usepackage{vmargin}
+%----------------------------------------------------------------------------------------
+%	MARGINS
+%----------------------------------------------------------------------------------------
+\setmarginsrb           { 0.7in}  % left margin
+                        { 0.6in}  % top margin
+                        { 0.7in}  % right margin
+                        { 0.8in}  % bottom margin
+                        {  20pt}  % head height
+                        {0.25in}  % head sep
+                        {   9pt}  % foot height
+                        { 0.3in}  % foot sep
+\usepackage{graphicx}% Pozwala wstawiać grafikę.
+%\usepackage{url}% Pozwala pisać ładnie znak ~.
+\def\mathbi#1{\textbf{\em #1}}
+\newcommand{\vt}{$(x_1,x_{2}, \ldots, x_n)$}
+\newcommand{\vet}{(x_1,x_{2}, \ldots, x_n)}
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\ii}{\mathrm{i}}
+\newcommand{\de}{\mathrm{d}}
+\newcommand{\T}{\mathcal{T}_{ l }}
+\newcommand{\Tl}{\mathcal{T}_{ l \lambda }}
+\newcommand{\dd}[3]{\frac{ \de^{ #1 } #2 }{ \de #3^{ #1 } }}
+\newcommand{\pd}[3]{\frac{ \partial^{ #1 } #2 }{ \partial #3^{ #1 } }}
+\newcommand{\gYl}{ \langle g_{ l } Y_{ l m } | }
+\newcommand{\gYr}{ | g_{ l } Y_{ l m } \rangle }
+\newcommand{\gH}{\widehat{ g }}
+\newcommand{\supp}{\mathrm{supp}\,}
+
+
+\title{Podsumowanie obecnego stanu badań}
+\author{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Podstawy}
+
+Podstawowym obiektem użytywany w~analizie jest operator $T( w^{ 2 } )$, który ma postać:
+\begin{equation}
+T( w^{ 2 } ) = \sum_{ l,\, m } \gYr \T( w^{ 2 } ) \gYr, \label{eq:1}
+\end{equation}
+\begin{equation}
+\T( w^{ 2 } ) = \frac{ \sigma }{ 1 - \sigma \gYl G_{ 0 }( w^{ 2 } ) \gYr } \label{eq:2}.
+\end{equation}
+Przyjęliśmy następujące skalowanie funkcji $g_{ l }$\footnote{Pozwoliłem sobie już przyjąć $\varepsilon = 2,5$.}:
+\begin{equation}
+g_{ \uplambda l }( r - a ) = \uplambda^{ -2,5 } g_{ l }\left( \tfrac{ r - a }{ \uplambda } \right). \label{eq:3}
+\end{equation}
+Dla zastosowania twierdzenia Kato\dywiz Rosenbluma musi zachodzić:
+\begin{equation}
+\mathrm{Tr}[ V_{ \lambda } ] = \sum_{ l = 0 }^{ \infty } ( 2 l + 1 ) || g_{ l \lambda } ||^{ 2 } < +\infty. \label{eq:4}
+\end{equation}
+Powyższy warunek jest równoważny:
+\begin{equation}
+\sum_{ l = 0 }^{ \infty } ( 2 l + 1 ) || g_{ l } ||^{ 2 } < +\infty. \label{eq:5}
+\end{equation}
+Definuje funkcje:
+\begin{equation}
+\gH( p ) = 4 \pi ( -i )^{ l } \int\limits_{ 0 }^{ +\infty } \de r \, r^{ 2 } \overline{ j_{ l }( p r ) } g_{ l }( r - a ). \label{eq:6}
+\end{equation}
+Warunki konsystencji mają postać:
+\begin{equation}
+\mathrm{Tr} \mathcal{P}_{ \tau } = \sum_{ l } ( 2 l + 1 ) \int\limits_{ \mathbb{R}_{ + }^{ 2 } } \de p \de k \; p^{ -\tau + 2 } \frac{ k }{ ( p + k )^{ 2 } } | \widehat{ g }_{ l }( p ) |^{ 2 } | \widehat{ g }_{ l }( k ) |^{ 2 } | \T( k + i 0 ) |^{ 2 }, \qquad \tau = 0, 1. \label{eq:7}
+\end{equation}
+Dla $\tau = 0$ wielkość ta przedstawia energię zaś dla $\tau = 1$ ilość cząstek, tak jak Pan mówił.\\
+\textbf{Uwaga.} Granica rezolwentowa jest niezależna od przyjętej wartości $\sigma$, gdyż pojawia się ona w~formule na rezolwentę tylko poprzez człon:
+\begin{displaymath}
+\frac{ \uplambda^{ -3 } \sigma }{ 1 - \uplambda^{ -3 } \sigma F_{ \uplambda }( w^{ 2 } ) }.
+\end{displaymath}
+Wydaje mi się, że~analizę granicy rezolwentowej warto jest przeprowadzić przy wykorzystaniu parametru $\uplambda$, pozostałe zaś zagadnienia jest przeprowadzić przy użyciu parametru $a$, choć musiałbym się bliżej przyjrzeć rachunkom.
+
+\section*{Analiza spektralna.}
+Dla $\sigma = +1$ nie ma stanów związanych, dla $\sigma = -1$ mamy dwa warunki na stan związany do wartości własnej $k^{ 2 }$:
+\begin{equation}
+\exists l, \quad \widehat{ g }_{ l }( k ) = 0, \label{eq:8}
+\end{equation}
+\begin{equation}
+1 = \int\limits_{ 0 }^{ +\infty } \de p \, \frac{ p^{ 2 } }{ p^{ 2 } - k^{ 2 } } \gH_{ l }( p ). \label{eq:9}
+\end{equation}
+Przez analogie do pracy Pana i dr. Stopy istenieje stanu związanego jest w~tym wypadku pradopodobne.
+
+Istnienie widma osobliwego jest uzależnione od zbadania zachowania funkcji $\T( k^{ 2 } + i 0 )$. Opytmalnie powina być ona ograniczona. \\
+\textbf{Pytanie.} Dla $\sigma = +1$ widmo $h_{ a }^{ 2 }$ jest równe $\langle 0, +\infty )$, jednak nie wiem co się dzieje dla $\sigma = -1$.
+
+\section*{Skalowanie\footnote{Ta część nie zawiera niczego szczególnie trudnego uznałem jednak, że należy ją dodać dla zupełności rozważań.} i reżim dużego $a$.}
+
+W~formułach Hilberta\dywiz Schmidta z~$\uplambda$ zmieniają się wyrażenia $\widehat{ g }_{ l }( p )$ i $\Tl( k^{ 2 } + i0 )$. Pierwsze z~nich ma następujące zachwanie\footnote{W~poniższych rachunkach pomijam w~miarę możliwości wskaźnik $l$.}:
+\begin{equation}
+\gH_{ \uplambda,\, a }( p ) = \uplambda^{ -\varepsilon } 4 \pi ( -i )^{ l } \int\limits_{ 0 }^{ +\infty } \de r \, r^{ 2 } \overline{ j_{ l }( p r ) } g\left( \tfrac{ r - a }{ \uplambda } \right) = \uplambda^{ -\varepsilon } 4 \pi ( -i )^{ l } \int\limits_{ 0 }^{ +\infty } \de r \, r^{ 2 } \overline{ j_{ l }( \uplambda p \tfrac{ r }{ \uplambda } ) } g\left( \tfrac{ r }{ \uplambda } - \tfrac{ a }{ \uplambda } \right) = \uplambda^{ 3 - \varepsilon }\gH_{ \frac{ a }{ \uplambda } }( \uplambda p ). \label{eq:10}
+\end{equation}
+Drugi wyraz ma postać:
+\begin{equation}
+\mathcal{T}_{ \uplambda }( k^{ 2 } + i 0 ) =\frac{ \sigma }{ 1 - \sigma F_{ \uplambda, \, a }( k ) }, \label{eq:11}
+\end{equation}
+\begin{equation}
+F_{ \uplambda, \, a }( k ) = \uplambda^{ -2\varepsilon } i k \int \de x \de x' \, \overline{ g\left( \tfrac{ x }{ \uplambda } - \tfrac{ a }{ \uplambda } \right) } g\left( \tfrac{ x' }{ \uplambda } - \tfrac{ a }{ \uplambda } \right) x^{ 2 } x'^{ 2 } \left[ \theta( x' - x ) j( k x ) h^{ ( 1 ) }( k x' ) + \theta( x - x' ) j( k x' ) h^{ ( 1 ) }( k x ) \right]. \label{eq:12}
+\end{equation}
+Stąd:
+\begin{equation}
+F_{ \uplambda, \, a }( k ) = \uplambda^{ 5 - 2 \varepsilon } F_{ \frac{ a }{ \uplambda } }( \uplambda k ). \label{eq:13}
+\end{equation}
+\textbf{Pytanie.} W formułach które używamy należy wziąć $T( k^{ 2 } + i 0 )$, zaś we wzorach na elementy macierzowe po prostu wstawiliśmy funkcje od argumentu $k$, pomijając przejście graniczne. Podejrzewam, że to jest poprawne, ale nie umiem tego uzasadnić.
+\\ \textbf{Koniec pytania.} \\
+W obu przypadkach otrzymujemy te same fukcje lecz~dla promienia sfery $\frac{ a }{ \uplambda }$ i~argumentu $\uplambda k$. Ponieważ wszystkie one znajdują się pod całką możemy zmienić zmienne na $k' = \uplambda k$, potrzebujemy jednak pozbyć~się czynnika $\uplambda^{ 5 - 2\varepsilon }$. Tym samym:
+\begin{equation}
+\varepsilon = 2, 5. \label{eq:14}
+\end{equation}
+
+Po prostych obliczeniach otrzymujemy teraz:
+\begin{equation}
+\mathrm{Tr}\mathcal{P}^{ \tau }_{ \uplambda, \, a } = \uplambda^{ \tau - 1 } \mathrm{Tr}\mathcal{P}^{ \tau }_{ \frac{ a }{ \uplambda } }. \label{eq:15}
+\end{equation}
+Z tego wzoru wynika, że~liczba cząstek jest reguralna w~granicy $\lambda \rightarrow 0$, natomiast energia eksploduje jak $\lambda^{ -1 }$.\footnote{Nie dyskutuję tu zagadnienia czy jakaś osobliswość~się nie pojawi w~wyrażeniu $\mathrm{Tr}\mathcal{P}^{ \tau }_{ \frac{ a }{ \uplambda } }$.}
+
+\section*{Szic problemu wyrazu $\T$}
+
+\begin{equation}
+\int\limits_{ \mathbb{R}_{ + }^{ 2 } } \de p \de k \; p^{ -\tau + 2 } \frac{ k }{ ( p + k )^{ 2 } } | \widehat{ g }_{ l }( p ) |^{ 2 } | \widehat{ g }_{ l }( k ) |^{ 2 } | \T( k + i 0 ) |^{ 2 }. \label{eq:16} 
+\end{equation}
+Teraz będzie nas interesowała wielkość:
+\begin{equation}
+\T( k^{ 2 } + i0 ) = \frac{ \sigma }{ 1 - \sigma F_{ l }( a, k ) }, \label{eq:17} 
+\end{equation}
+\begin{equation}
+F_{ l }( a, k ) = i k \int\limits_{ \mathbb{R}^{ 2 } } \de x \de x' \, \overline{ g_{ l }( x - a ) } g_{ l }( x' - a ) x^{ 2 } x'^{ 2 } \left[ \theta( x' - x ) j_{ l }( k x ) h_{ l }^{ ( 1 ) }( k x' ) + \theta( x - x' ) j_{ l }( k x' ) h_{ l }^{ ( 1 ) }( k x ) \right]. \label{eq:18}
+\end{equation}
+Po prostej zmianie zmiennych mamy:
+\begin{equation}
+\begin{split}
+i k \int\limits_{ \mathbb{R}^{ 2 } } \de x \de x' \, \overline{ g_{ l }( x ) } g_{ l }( x' ) ( x + a )^{ 2 } ( x' + a )^{ 2 } & \left[ \theta( x' - x ) j_{ l }\left( ka + ka \left( \tfrac{ x }{ a } \right) \right) h_{ l }^{ ( 1 ) }( ka + ka ( \tfrac{ x' }{ a } ) ) \right. \\
+& + \left. \theta( x - x' ) j_{ l }( ka + ka ( \tfrac{ x' }{ a } ) ) h_{ l }^{ ( 1 ) }\left( ka + ka \left( \tfrac{ x }{ a } \right) \right) \right]. \label{eq:19}
+\end{split}
+\end{equation}
+\textbf{Założenie.} Dla uproszczenia przyjmijmy, że~$g_{ l }( x )$ jest rzeczywista.\\
+Oznaczając:
+\begin{equation}
+P( x, x', a ) = ( x + a )^{ 2 }( x' + a )^{ 2 } = x^{ 2 } x'^{ 2 } + a 2( x' x^{ 2 } + x x'^{ 2 } ) + a^{ 2 } ( x^{ 2 } + x'^{ 2 } ) + a^{ 3 } 2( x + x' ) + a^{ 4 }, \label{eq:20}
+\end{equation}
+możemy teraz wykonać w~drugim wyrazie sumy zmiany zmiennych i~otrzymać:
+\begin{equation}
+%\begin{split}
+2 i k \int\limits_{ \mathbb{R}^{ 2 } } \de x \de x' \, g_{ l }( x ) g_{ l }( x' ) P( x, x', a ) \left[ \theta( x' - x ) j_{ l }\left( ka + ka \left( \tfrac{ x }{ a } \right) \right) h_{ l }^{ ( 1 ) }( ka + ka ( \tfrac{ x' }{ a } ) ) \right]. \label{eq:21}
+%\end{split}
+\end{equation}
+
+\section*{Pana ostatnie spostrzeżenia.}
+
+Zaczynamy od spostrzeżenia, że zachodzi związek:
+\begin{equation}
+x^{ 2 } j_{ l }( x ) = w( x ) e^{ i x } + \overline{ w( x ) } e^{ -i x }. \label{eq:22}
+\end{equation}
+Wielomian $w( x )$ ma postać\footnote{Wszystkie współczynniki tego wielomianu~są postaci $i A$, $A \in \mathbb{R}$.}
+\begin{displaymath}
+w( x ) = p_{ 0 } x + p_{ 1 } + p_{ 2 } \frac{ 1 }{ x } + \ldots + p_{ l } \frac{ 1 }{ x^{ l - 1 } }.
+\end{displaymath}
+Wzór na funkcje $\gH( p )$, przechodzi w następującą zależność\footnote{Tu korzystam z~założenia, że~fukcje $g_{ l }( x )$~są rzeczywiste.}:
+\begin{equation}
+\begin{split}
+\gH( p ) =& 4 \pi ( -i )^{ l } \int\limits_{ 0 }^{ +\infty } \de x \, \overline{ j_{ l }( p x ) } g_{ l }( x - a ) \\
+=& 4 \pi ( -i )^{ l } \frac{ 1 }{ p^{ 2 } } \int\limits_{ -\delta }^{ +\infty } \de x \, \left[ w( p ( a + x ) ) e^{ i p( x + a ) } g_{ l }( x ) + c.c. \right]. \label{eq:23}
+\end{split}
+\end{equation}
+%\textbf{Ryzykowne.} Ten krok może okazać się błędny, jednak w~obecnej chwili ułatwił mi myślenie o problemie. Ponieważ funkcje (\ref{eq:21}) i~(\ref{eq:23})
+Jak pan powiedział możemy teraz \underline{przyjąć, że~$p \in \langle \eta, +\infty )$}, tak~by zachodziły nierówności:
+\begin{displaymath}
+pa > \varepsilon, \quad p( a + x ) > \frac{ \varepsilon }{ 2 }, \quad \varepsilon > 0.
+\end{displaymath}
+To wraz z~formułą\footnote{Jest ona oczywiście prawdziwa dla wszystkich członów w~wielomianie $w( x )$.}:
+\begin{equation}
+\frac{ 1 }{ ( p( a + x ) )^{ k } } = \frac{ 1 }{ ( pa )^{ k } ( 1 + \tfrac{ x }{ a } )^{ k } } = \frac{ 1 }{ ( pa )^{ k } } ( 1 + O( \tfrac{ x }{ a } ) ), \label{eq:24}
+\end{equation}
+pozwala na przybliżenie:
+\begin{equation}
+\begin{split}
+\gH( p ) = 4 \pi ( -i )^{ l } \frac{ 1 }{ p^{ 2 } } [  w( pa ) e^{ i pa } \int\limits_{ -\delta }^{ +\infty } \de x \, e^{ i p x } g_{ l }( x ) + c.c. ] = 4 \pi ( -i )^{ l } \frac{ 1 }{ p^{ 2 } } \left[ w( pa ) e^{ i pa } \widetilde{ g }_{ l }( p ) + \overline{ w( pa ) } e^{ -i pa } \widetilde{ g }_{ l }( -p ) \right], \label{eq:25}
+\end{split}
+\end{equation}
+$\widetilde{ g }_{ l }( p )$ oznacza tu transformatę Fouriera. Jeżeli dla uproszczenia przyjmiemy, że~$g_{ l }( x )$ jest parzysta wtedy jej transformata Fouriera też jest parzysta i~otrzymujemy:
+\begin{equation}
+\begin{split}
+\gH( p ) = 4 \pi ( -i )^{ l } a^{ 2 } j_{ l }( p a ) \widetilde{ g }_{ l }( p ). \label{eq:26}
+\end{split}
+\end{equation}
+
+\section*{Wyrażenia Hilberta\dywiz Schmidta}
+Na tym poziomie przybliżenia otrzymujemy wyrażenie na energię i~ilość cząstek:
+\begin{equation}
+\begin{split}
+a^{ 4 } ( 4 \pi )^{ 2 } & \int\limits_{ \mathbb{R}_{ + }^{ 2 } } \de p \de k \; p^{ -\tau + 2 } \frac{ k }{ ( p + k )^{ 2 } } | \widetilde{ g }_{ l }( p ) |^{ 2 } | \widetilde{ g }_{ l }( k ) |^{ 2 } |^{ 2 } | j_{ l }( pa ) |^{ 2 } | j_{ l }( ka ) |^{ 2 } \\
+&\times 1/\Big| 1 - \sigma 2 i k \int\limits_{ \mathbb{R}^{ 2 } } \de x \de x' \, g_{ l }( x ) g_{ l }( x' ) P( x, x', a ) \left[ \theta( x' - x ) j_{ l }\left( ka + ka \left( \tfrac{ x }{ a } \right) \right) h_{ l }^{ ( 1 ) }( ka + ka ( \tfrac{ x' }{ a } ) ) \right] \Big|^{ 2 }
+\end{split} 
+\end{equation}
+Zauważmy,~że zachodzi:
+\begin{equation}
+P( x, x', a ) = a^{ 4 } + O( \tfrac{ x }{ a }, \tfrac{ x ' }{ a } ),
+\end{equation}
+rozsądne więc wydaje~się użycie na tym etapie przybliżenia $P( \ldots ) \approx a^{ 4 }$.
+
+Zapisując $j_{ l }( x ) = w( x ) e^{ i x } + \overline{ w( x ) } e^{ -i x }$ i~$h_{ l }^{ ( 1 ) }( x ) = v( x ) e^{ i x }$, gdzie $w( x )$ i~$v( x )$~są wielomianami w~$\frac{ 1 }{ x }$ otrzymujemy:
+\begin{equation}
+j_{ l }( ka + kx ) h_{ l }^{ ( 1 ) }( ka + kx ) = w( ka ) v( ka ) e^{ i ( 2ka + kx + kx' ) } + \overline{ w( ka ) } v( ka ) e^{ -i( kx - kx') } + \ldots
+\end{equation}
+Jeśli dodatkowo skorzystamy z~przedstawienia funkcji Heavside'a $\theta( x' - x ) = \frac{ 1 }{ 2 } ( 1 + \varepsilon( x' - x ) )$ i~parzystości funkcji $g_{ l }( x )$ dostajemy\footnote{W~tym miejscu przyjąćłem, że~w~transformacie Fouriera jest $e^{ +i kx }$.}
+\begin{equation}
+\begin{split}
+& 2 i k \int\limits_{ \mathbb{R}^{ 2 } } \de x \de x' \, g_{ l }( x ) g_{ l }( x' ) P( x, x', a ) \left[ \theta( x' - x ) j_{ l }\left( ka + ka \left( \tfrac{ x }{ a } \right) \right) h_{ l }^{ ( 1 ) }( ka + ka ( \tfrac{ x' }{ a } ) ) \right] \Big|^{ 2 } \\
+& = a^{ 4 } i k \left[ 2 \pi \left( j_{ l }( ka ) h_{ l }^{ ( 1 ) }( ka ) \right) \widetilde{ g }_{ l }( k )^{ 2 } + h_{ l }^{ ( 1 ) }( k a )  \left( w( ka ) e^{ i ka } \int\de x' \de x \, \varepsilon( x' - x ) g_{ l }( x' ) g_{ l }( x ) e^{ i k( x + x') } \right. \right. \\
+& \; + \left. \left. \overline{ w( ka ) } e^{ -i ka } \int\de x' \de x \, \varepsilon( x' + x ) g_{ l }( x' ) g_{ l }( x ) e^{ i k( x + x') } \right) \right].
+\end{split}
+\end{equation}
+Wyrażenie Hilberta\dywiz Schmidta przyjmują w tej chwili postać:
+\begin{equation}
+\begin{split}
+\frac{ 1 }{ a^{ 4 } } ( 4 \pi )^{ 2 } & \int\limits_{ \mathbb{R}_{ + }^{ 2 } } \de p \de k \; p^{ -\tau + 2 } \frac{ k }{ ( p + k )^{ 2 } } | \widetilde{ g }_{ l }( p ) |^{ 2 } | \widetilde{ g }_{ l }( k ) |^{ 2 } |^{ 2 } | j_{ l }( pa ) |^{ 2 } | j_{ l }( ka ) |^{ 2 } \\
+&\times 1/\Big| \frac{ 1 }{ a^{ 4 } } - \sigma i k \left[ \left( j_{ l }( ka ) h_{ l }^{ ( 1 ) }( ka ) \right) \widetilde{ g }_{ l }( k )^{ 2 } + h_{ l }^{ ( 1 ) }( k a )  \left( w( ka ) e^{ i ka } \int\de x' \de x \, \varepsilon( x' - x ) g_{ l }( x' ) g_{ l }( x ) e^{ i k( x + x') } \right. \right. \\
+& + \left. \left. \overline{ w( ka ) } e^{ -i ka } \int\de x' \de x \, \varepsilon( x' + x ) g_{ l }( x' ) g_{ l }( x ) e^{ i k( x + x') } \right) \right] \Big|^{ 2 }.
+\end{split} 
+\end{equation}
+
+\section*{Nowe}
+Jeżeli wykorzystamy przedstawienie:
+\begin{equation}
+\begin{split}
+j_{ l }( ka + k x ) &\approx w( ka ) e^{ i ka } e^{ i kx } + \overline{ w( ka ) } e^{ -i ka } e^{ -i kx } \\
+&= w( ka ) e^{ i ka } e^{ i kx } + c.c.
+\end{split}
+\end{equation}
+\begin{equation}
+\begin{split}
+n_{ l }( ka + k x ) &\approx v( ka ) e^{ i ka } e^{ i kx } + \overline{ v( ka ) } e^{ -i ka } e^{ -i kx } \\
+&= v( ka ) e^{ i ka } e^{ i kx } + c.c.
+\end{split}
+\end{equation}
+Pomnożenie tych funkcji daje:
+\begin{equation}
+\begin{split}
+&j_{ l }( ka + kx ) n_{ l }( ka + kx' ) \approx w( ka ) v( ka ) e^{ i 2ka } e^{ i kx } e^{ i kx' } + \overline{ w( ka ) } v( ka ) e^{ -i kx } e^{ i kx' } \\
+&+ w( ka ) \overline{ v( ka ) } e^{ i kx } e^{ -i kx' } + \overline{ w( ka )} \, \overline{ v( ka ) } e^{ -i 2ka } e^{ -i kx } e^{ -i kx' } \\
+&= w( ka ) v( ka ) e^{ i 2ka } e^{ i kx } e^{ i kx' } + \overline{ w( ka ) } v( ka ) e^{ -i kx } e^{ i kx' } + c.c.
+\end{split}
+\end{equation}
+Jeżeli wycałkujemy tą równość z~funkcją $\varepsilon( x' - x ) g_{ l }( x ) g_{ l }( x' )$ to otrzymamy:
+\begin{equation}
+w( ka ) v( ka ) e^{ i 2ka } \int \de x \de x' \varepsilon( x' - x ) g_{ l }( x ) g_{ l }( x' ) e^{ i kx } e^{ i kx' } + \overline{ w( ka ) } v( ka ) \int \de x \de x' \varepsilon( x' + x ) g_{ l }( x ) g_{ l }( x' ) e^{ i kx } e^{ i kx' } + c.c.
+\end{equation}
+%\textbf{Znaczące.} Dla dalszych rozumowania podstawowe znaczenie ma operowanie wyrażeniem\\ $j_{ l }\left( ka + ka ( \tfrac{ x }{ a } ) \right) h_{ l }^{ ( 1 ) }( ka + ka ( \tfrac{ x' }{ a } ) )$. W~tym miejscu można chyba powtórzyć w~dużej mierze analizę przeprowadzoną poprzednio dla $\lambda$ gdzie rolę małego wyrazu zajmuje $\tfrac{ x }{ a }$, gdzie $| x | < \delta$, przy czym\\ $\supp g_{ l } \subset \langle -\delta, +\delta \rangle$.
+
+
+
+%Korzystając z~Pana sugestii, należy użyć formy:
+%\begin{equation}
+%f( ka + kx ) = f( ka ) + f'( ka ) ka \left( \tfrac{ x }{ a } \right) + \ldots
+%\end{equation}
+
+\bibliographystyle{ieeetr}
+\bibliography{BibliographyPL}{}
+
+
+
+\end{document}

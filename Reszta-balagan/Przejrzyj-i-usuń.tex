@@ -1,0 +1,1315 @@
+% Autor: Kamil Ziemian
+
+% ---------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ------------------------------
+\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
+% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
+% % grafiki.
+% \usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
+% \usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
+% % wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ------------------------------
+% MARGINS
+% ------------------------------
+\setmarginsrb
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
+
+
+
+% ------------------------------
+% Często używane pakiety
+% ------------------------------
+% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+% ------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ------------------------------
+\let\lll\undefined  % Amsmath gryzie się z językiem pakietami do języka
+% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm}  % Dalsze wsparcie od AMS
+% \usepackage{siunitx}  % Do prostszego pisania jednostek fizycznych
+\usepackage{upgreek}  % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+% \usepackage{slashed}  % Pozwala w prosty sposób pisać slash Feynmana.
+\usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
+% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% nie wiem.
+
+
+
+% ------------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ------------------------------
+\usepackage{latexgeneralcommands}
+\usepackage{mathcommands}
+
+\usepackage{tensor}
+
+
+
+% ---------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% ---------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ------------------------------
+% Ustawienia różnych parametrów tekstu
+% ------------------------------
+\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
+
+
+
+
+
+% ------------------------------
+% Pakiet „hyperref”
+% Polecano by umieszczać go na końcu preambuły.
+% ------------------------------
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł, autor, data
+\title{QFT~-- błędy i~uwagi}
+
+% \author{}
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+
+
+\begin{center}
+Jacek Gancarzewicz\\
+,,Algebra liniowa i jej zastosowania'',\\ wydanie \romannumeral1, JG.
+\end{center}
+Jest źle:
+\begin{itemize}
+\item W pierwszym rozdziale niezdefiniowano znaku permutacji \\identycznościowej.
+\item Nie zdefiniowano operacji odejmowania wektorów.
+\item Problem sumowania po pustym zbiorze wskaźników nie został omówiony.
+\item
+\item Str. 60. W ostatniej permutacji trzeba jedną 7 zastąpić 4.
+\item Str. 76. Błąd w numeracji punktów twierdzenia.
+\item Str.
+\item Str. 341. W twierdzeniu 45.1 powinno być $n \geq 1$. Błąd jest poważny.
+\end{itemize}
+Powinno być:
+\begin{itemize}
+\item[--] Str. 28. $x\neq y$.
+\item[--] Str. 41. $z^2+az+b$.
+\item[--] Str. 59. $(x_{1},\ldots,x_{k})\leq (y_{1},\ldots,y_{k})$.
+\item[--] Str. 76. Na podstawie twierdzenia 1.2 punkt 1.
+\item[--] Str. . $a^{-1} 0=0$.
+\item[--] Str. 86. \ldots z zasady kontrapozycji.
+\item[--] Str. 110. $(a_{0},a_{1},a_{2},\ldots)$.
+\item[--] Str. 143. $\alpha\in U^{*}$. $f'(e'_{j})=\sum_{j=1}^{m}a_{ji}\overset{\_}{e}'_{j}$.
+\item[--] Str. 166. Twierdzenie 12.14.
+\item[--] Str. 167. $Y^{*}$. $(a_{i,1},...,a_{i,n})\in F^{n}$. Dla każdego ciągu $(x_{1},...,x_{n})\in F^{n}$.
+\item[--] Str. 195. $\mathcal{J}_{1}: F\otimes X\rightarrow X$ i $\mathcal{J}_{2}: X\otimes F\rightarrow X$.
+\item[--] Str.
+\item[--] Str.
+\item[--] Str.
+\item[--] Str. 354. Zadanie \romannumeral6.7a  zostało rowiązane w twierdzeniu 44.11.
+\item[--] Str.
+\item[--] Str.
+\end{itemize}
+
+
+
+\begin{center}
+Jacek Gancarzewicz\\
+,,Zarys współczesnej geometrii różniczkowej'',\\ wydanie \romannumeral1, GR.
+\end{center}
+Jest źle:
+\begin{itemize}
+\item
+%\item
+%\item
+%\item
+%\item
+%\item
+%\item
+%\item
+%\item
+%\item
+\end{itemize}
+Powinno być:
+\begin{itemize}
+\item[--] Str. 11. \ldots$ax+by\in V$.
+\item[--] Str. 12. \ldots jest kombinacją liniową pozostałych wektorów\ldots
+\item[--] Str. 15. \ldots wektorów $y_{1},\ldots,y_{n}\in Y$ istnieje\ldots
+\item[--] Str. 18. $f_{1},\ldots,f_{k}$
+\item[--] Str. 19. \ldots$f:X\times\ldots\times X \rightarrow Y$\ldots
+\item[--] Str. 19.
+\begin{align*}
+\mathrm{dim}\, L(X_{1},\ldots,X_{k};Y)&=\mathrm{dim}\, L(X_{1},\ldots,X_{k})\; \mathrm{dim}\, Y,\\
+\mathrm{dim}\, L^{k}_{s}(X;Y)&=\mathrm{dim}\,L^{k}_{s}(X;Y)\; \mathrm{dim}\, Y,\\
+\mathrm{dim}\, L^{k}_{a}(X;Y)&=\mathrm{dim}\,L^{k}_{a}(X;Y)\; \mathrm{dim}\, Y.\\
+\end{align*}
+\item[--] Str. 43. \ldots wszystkich $\alpha,\beta,\gamma,\rho=1,\ldots,n$ zachodzą \ldots
+\item[--] Str. 46. $\pi_{s}^{k}=\pi_{s}^{r}\circ \pi^{k}_{r}$.
+\item[--] Str. 48. $\pi^{r}_{s}$.
+\item[--] Str. 48. \ldots na def\mbox{}inicję\ldots
+\item[--] Str. 49. \ldots$(a_{1},a_{2},a_{3},\ldots)+(b_{1},b_{2},b_{3},\ldots)=(a_{1}+b_{1},a_{2}+b_{2},a_{3}+b_{3},\ldots)$\dots
+\item[--] Str. 49. \ldots$\rho(b)=(p^{1}(b),p^{2}(b),p^{3}(b),\ldots)$\dots
+\item[--] Str. 51. \ldots oraz odwzorowań ciągłych\ldots
+\item[--] Str. 62. $\varphi_{U}=\varphi\circ\mathrm{id}_{U}$.
+\item[--]
+\item[--]
+\item[--]
+\end{itemize}
+
+
+\begin{center}
+Laurent Schwartz\\
+,,Kurs analizy matematycznej'',\\ wydanie \romannumeral1.
+\end{center}
+Jest źle:
+\begin{itemize}
+\item Str. 10. Zbyt restrykcyjne zdef\mbox{}iniowanie różnicy zbiorów.
+\item Str. 11. W definicji funkcji nie został poruszony problem jednoznaczego przyporządkowania wartości.
+\item Str. 17. Jeżeli $f$ nie jest suriekcją to rodzina zbiorów postaci $f^{-1}(\{z\})$ dalej stanowi rozwarstwienie przestrzeni $E$, z tą różnicą, że zawiera teraz zbiór $\emptyset$. Ponadto dla suriekcji, jeżeli $x \neq y$ to $f^{-1}(\{x\})\neq f^{-1}(\{y\})$, teraz oczywiście może zajść $f^{-1}(\{x\})= f^{-1}(\{y\})=\emptyset$. W szczególności $f^{-1}$ nie musi być odwzorowaniem na zbiór klas abstrakcji. W tej sytuacji nie można uważać $F$ za ,,model'' dla $E/R$.
+\item Funkcja $f(x)=\frac{\log(x)}{1-x}$ nie jest bijekcją odcinka ]0,1[ na $\mathbb{R}$, bowiem w całym tym przedziale $f(x)<-1$.
+\item Str. 53. Ostatnie zdanie przypis 5 jest napisany zbyt lekomyślnie, sugeruje bowiem, że dla zbierzności danej funkcji nie ma znaczenia czy $a\in A$, czy też $a\notin A$. W rzeczywistości jest wręcz przeciwnego.
+\item
+\item
+\end{itemize}
+Powinno być:
+\begin{itemize}
+\item[--] Str. 13. \ldots można mówić o zbiorze $f^{-1}(\{z\})$ \ldots
+\item[--] Str. 14. Ponadto zachodzi zawsze\ldots
+\item[--] Str. 16. \ldots $f_{3}$ jest obrazem funkcji $f$\ldots
+\item[--] Str. 25. Nie oczywiste są tylko wzory (1.5.1).
+\item[--] Str. 31. \ldots bo $\mathbb{Q}$ jest przeliczalne.
+\item[--] Str. 37. $||\vec{0}||=0$.
+\item[--] Str. 41. W rzeczywistości własność (a$^{\prime\prime}$)\ldots
+\item[--] Str. 43. \ldots jest to dopełnienie zewnętrza tego zbioru $A$ lub\ldots
+\item[--] Str. 44. \ldots przeliczalną część gęstą.
+\item[--] Str. 46. \ldots dopełnienia początku współrzędnych do prostej rzeczywistej\ldots
+\item[--] Str. 50. \ldots określona przez $d^{\prime} (x,y)=\inf(d(x,y),1)$\ldots
+\item[--] Str. 53. \ldots jest przestrzenią metryczną, zbieżność ciągu\ldots
+\item[--] Str. 56. \ldots zbiorów z $E_{1}$ i $E_{2}$. ?
+\item[--]
+\item[--]
+\item[--]
+\item[--]
+\end{itemize}
+
+
+
+\begin{center}
+Kazimierz Kuratowski\\
+,,Wstęp do teorii mnogości i topologii'',\\ wydanie \romannumeral9, KK.
+\end{center}
+Jest źle:
+\begin{itemize}
+\item Brak ,,gramatyki'' pisania zdań złożonych logicznych. Jest to jednak usprawiedliwione względami dydaktycznymi.
+\item Nie wspomniano o rozdzielności dodawania zbiorów względem mnożenia. Jest to w zadaniach.
+\item Str. 10. Wszystkie dowody ,,nie wprost'', są przypisane regule \\ kontrapozycji.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+% Bibliografia
+\bibliographystyle{plalpha}
+
+\bibliography{PhilNaturBooks}{}
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
