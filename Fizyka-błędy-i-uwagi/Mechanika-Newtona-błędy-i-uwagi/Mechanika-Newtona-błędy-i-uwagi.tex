@@ -305,7 +305,11 @@ założenie o~ciągłości $g$ wydaje się bardzo nienaturalne. Wydaje się,
     124 & 13 & & $\mathbf{Q}$ & $Q$ \\
     165 & &  9 & postc & postaci \\
     169 & & 10 & Prykład & Przykład \\
+    170 & 8 & & k-wymiaro & k-wymiro- \\
+    181 & & 15 & obszru & obszaru \\
     186 & & 11 & $T^{ * } V$ & $T^{ * } V_{ x }$ \\
+    188 & 1 & & ednoparametrowa & jednoparametrowa \\
+    214 & & 6 & rotacja & rotacją \\
     225 & 13 & & $H( \partial L / \partial \dot{ \vecpbold }, \vecqbold )$
            & $H( \partial L / \partial \dot{ \vecqbold }, \vecqbold )$ \\
     242 &  3 & & \textit{Jacobiego} & Jacobiego \\
@@ -332,6 +336,9 @@ założenie o~ciągłości $g$ wydaje się bardzo nienaturalne. Wydaje się,
 \StrWd{71}{15} \\
 \Jest  do swego\ldots \\
 \Powin dowolnie blisko swego\ldots \\
+\StrWg{215}{4} \\
+\Jest  wirowej, a~pole jest bezźródłowe. \\
+\Powin wirowej. \\
 
 
 \vspace{\spaceTwo}
@@ -574,6 +581,32 @@ ważnych wniosków. Np. jeśli rozpatrujemy układ dwóch cząstek i znamy
 energię kinetyczną jednej z nich i energię oddziaływania, to możemy
 obliczyć pewne parametry ruchu drugiej.
 
+\vspace{\spaceFour}
+
+
+
+\start \Str{14} Należałoby podać większą dyskusję prędkości względnej
+dwóch układów inercjalnych.
+
+\vspace{\spaceFour}
+
+
+\start \Str{15} Jak można ściślej uzasadnić, że rzeczywiście
+potrzebujemy liniowej zależności od prędkości prawej strony równania
+wyrażającego równoważność między dwoma lagrażjanami? \Dok
+
+\vspace{\spaceFour}
+
+
+\start \Str{22} Dyskusja ważności addytywnych zasad zachowania, ma
+swoją głębię i wagę, zaciemnia ona jednak pewne szczegóły. Autorzy gdy
+ją pisali musieli mieć na myśli procesy rozpraszania, nie wspomnieli
+jednak, że jeśli znana jest postać oddziaływania między dwoma
+cząstkami, również mamy możliwość wyciągnięcia z praw zachowania
+ważnych wniosków. Np. jeśli rozpatrujemy układ dwóch cząstek i znamy
+energię kinetyczną jednej z nich i energię oddziaływania, to możemy
+obliczyć pewne parametry ruchu drugiej.
+
 
 
 
@@ -622,6 +655,146 @@ obliczyć pewne parametry ruchu drugiej.
 % ############################
 \Work{ % Autor i tytuł dzieła
   Bogdan Skalmierski \\
+  „Mechanika”, \cite{SkalmierskiMechanika1998} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+We wszystkich rozważaniach przestrzeni wektorowych, będziemy~się ograniczać
+do dwóch najważniejszych dla fizyki, w~szczególności też dla mechaniki,
+typów przestrzeni wektorowych. Mianowicie będziemy rozważać tylko
+przestrzenie wektorowe nad ciałem liczby rzeczywistych lub zespolonych.
+W~istocie w~mechanice Newtona prawie zawsze wystarczające będzie rozważanie
+przestrzeni nad ciałem liczb rzeczywistych.
+
+Dodatkowo przyjmujemy, że~wszystkie rozważane przestrzenie mają skończony wymiar, chyba że~jest powiedziane inaczej. Wymiar rozważanej przestrzeni zawsze będziemy oznaczać symbolem $N$.
+
+
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+\Str{17} Warto zatrzymać się na chwilę nad pojęciem \textbf{składowej wektora} i~\textbf{współrzędnej wektora}. Niech $V$ będzie rozważaną przestrzenią wektorową, a~$\vecvbold$ zawartym w~niej wektorem. \textbf{Współrzędnymi wektora $\vecvbold$ w bazie $\vecebold_{ i }$} będziemy nazywać ciąg liczb $\alpha_{ i }$ takich, że
+\begin{equation}
+  \label{eq:SkalmierskiMechanika-01}
+  \vecvbold = \sum_{ i = 1 }^{ N } \alpha_{ i } \vecebold_{ i }.
+\end{equation}
+Gdy nie będzie możliwości nieporozumień, współrzędne wektora $\vecvbold$
+będziemy oznaczać symbolami $v_{ i }$, $v_{ i } \equiv \alpha_{ i }$. Analogicznie
+współrzędne wektora $\vecabold$ będziemy oznaczać symbolami $a_{ i }$,
+wektora $\vecbbold$, $b_{ i }$, etc.
+
+\textbf{Składowymi wektora $\vecvbold$} będziemy nazywać dowolny zbiór
+liniowo niezależnych wektorów \\
+$\{ \vecwbold_{ 1 }, \vecwbold_{ 2 }, \ldots, \vecwbold_{ k } \}$, $k \geq 1$, taki że
+\begin{equation}
+  \label{eq:SkalmierskiMechanika-02}
+  \vecvbold = \sum_{ i = 1 }^{ k } \vecwbold_{ i }.
+\end{equation}
+
+Kilka uwag odnośnie tej definicji. Moglibyśmy przyjąć, że wektory
+$\vecwbold_{ i }$ tworzą nie zbiór tylko ciąg, jednak ponieważ dodawanie
+(skończonej) liczby wektorów jest przemienne oraz że~w~praktyce rzadko
+kiedy podaje~się konkretną numerację zbioru składowych, przyjęliśmy taką
+jej . Moglibyśmy też opuścić warunek liniowej niezależności tych
+wektorów i~definicja była wciąż użyteczna, jednak to założenie wydaje
+nam~się bardzo naturalne w~tym kontekście i~nie powinno sprawiać żadnych
+problemu, gdy to pojęcie jest stosowane w literaturze fizycznej.
+
+Wykluczyliśmy możliwość, że $k = 0$, czyli, że zbiór składowych jest pusty.
+Ponieważ w~algebrze liniowej przyjmuje się, że suma po pustym zbiorze
+wektorów daje nam wektor zerowy, w~skutek tego definicja ta wyklucza rozkład
+wektora zerowego na zerową liczbę składowych. Natomiast założenie o~liniowej
+niezależność zbioru wyklucza dowolny inny rozkład wektora zerowego na
+składowe. Żadna z~tych konsekwencji podanej definicji, nie powinna stanowić
+problemu.
+
+Na koniec zauważmy, że~dopuszczamy sytuację gdy $k < N$, co jest przypadkiem
+często spotykanym w~praktyce.
+
+\vspace{\spaceFour}
+
+
+
+\Str{19} Mała uwaga na temat notacji. W~każdej przestrzeni wektorowej $V$
+jest określone działanie mnożenia wektora przez liczbę z~zadanego
+ciała\footnote{W~naszym wypadku $\Fbb = \Rbb$ lub $\Fbb = \Cbb$.} $\Fbb$:
+$\textrm{product} : \Fbb \times V \to V$. W sytuacji gdy $\alpha \in \Fbb$,
+$\vecabold \in V$, będziemy uznawać, że~następujące wyrażania są sobie
+równoważne.
+\begin{equation}
+  \label{eq:SkalmierskiMechanika-03}
+  \textrm{product}( \alpha, \vecabold ) \equiv \alpha \, \vecabold \equiv \vecabold \, \alpha
+\end{equation}
+
+Analogiczne, dla $\alpha \neq 0$ uważamy dwa poniższe wyrażenia za równoważne.
+\begin{equation}
+  \label{eq:SkalmierskiMechanika-04}
+  \frac{ 1 }{ \alpha } \vecabold \equiv \frac{ \vecabold }{ \alpha }
+\end{equation}
+
+\vspace{\spaceFour}
+
+
+
+\Str{21} Z~formy podanej tu procedury opuszczania wskaźnika, wynika,
+że~jeśli $a^{ i }$ są współrzędnymi odpowiedniego wektora, to $a_{ i }$ są
+współrzędnymi nie wektora, lecz formy (1-formy). Dopiero korzystając
+z~naturalnego izomorfizmu (Czy to jest na pewno naturalny izomorfizm???)
+między wektorami i~formami możemy utożsamić te dwa obiekty, co będziemy
+w~dalszym ciągu czynić.
+
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    22 & 13 & & wektor{ }{ }{ }$\vecdbold$ & wektor $\vecdbold$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\noindent
+
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Bogdan Skalmierski \\
   „Mechanika z~wytrzymałością materiałów”,
   \cite{SkalmierskiMechanikaZWytrzymalosciaMaterialow1983} }
 
@@ -652,8 +825,9 @@ kwadratu, ta niedokładność nie~wpływa na ostateczny wynik.
 \start \Str{36} Aby wyprowadzenie wzoru (3.21) było poprawne,
 potrzebujemy by
 $| \dot{ \vecebold }_{ 1 } \cdot \vecebold_{ 2 } | = \dot{ \vecebold }_{ 1 }
-\cdot \vecebold_{ 2 }$. Oznacza to, że~układ obraca się od~wektora $\vecebold_{ 1 }$
-do~$\vecebold_{ 2 }$.
+\cdot \vecebold_{ 2 }$. Oznacza to, że~układ obraca się od~wektora
+$\vecebold_{ 1 }$ do~$\vecebold_{ 2 }$.
+
 
 
 
@@ -724,12 +898,12 @@ do~$\vecebold_{ 2 }$.
 $( \dot{ x }_{ 1 } \vecibold + \dot{ x }_{ 2 } \vecjbold )
 \left( \frac{ \partial x_{ 1 } }{ \partial r } \vecibold
   + \frac{ \partial x_{ 2 } }{ \partial r } \vecjbold \right)
-\cdot \frac{ 1 }{ \vecOnebold }$ \\[0.5em]
+\cdot \frac{ 1 }{ \vecOneBold }$ \\[0.5em]
 \Powin
 $( \dot{ x }_{ 1 } \vecibold + \dot{ x }_{ 2 } \vecjbold )
 \cdot \left( \frac{ \partial x_{ 1 } }{ \partial r } \vecibold
   + \frac{ \partial x_{ 2 } }{ \partial r } \vecjbold \right)
-\frac{ 1 }{ | \vecOnebold | }$ \\
+\frac{ 1 }{ | \vecOneBold | }$ \\
 
 
 \vspace{\spaceTwo}
@@ -741,6 +915,76 @@ $( \dot{ x }_{ 1 } \vecibold + \dot{ x }_{ 2 } \vecjbold )
 
 
 
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  B. Skalmierski \\
+  „Mechanika. Tom I: Podstawy mechaniki klasycznej”, \cite{BSMI} }
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+
+\Str{10} Warunek c) w~definicji przestrzeni topologicznej Hausdorffa jest źle sformułowany, bowiem $\mathrm{R}_{ a }$ jest bez żadnych założeń otoczeniem punktu B zawartym w~$\mathrm{R}_{ a }$. To co autor chciał tu podać jest to definicja przestrzeni topologicznej Hausdorffa bazująca na pojęciu bazy otoczeń (chyba), należy więc zajrzeć do książki do topologi~by sprawdzić jak należy to poprawić.
+
+\vspace{\spaceFour}
+
+
+
+Definicja homeomorfizmu jest trochę nie jasna, można bowiem odczytać ją tak, że~choć funkcja $f$ musi być ciągła, to żaden zaś warunek nie jest nałożyny na $f^{ -1 }$.
+
+\vspace{\spaceFour}
+
+
+
+\StrWg{11}{8} Brak wcięcia akapitu.
+
+\vspace{\spaceFour}
+
+
+
+\Str{18}{10} Brak wcięcia akapitu.
+
+\vspace{\spaceFour}
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu &  &  \\ \hline
+    % & & & & \\
+    17 & & 13 & $( \vecabold \times \vecbbold ) \times \vecebold_{ j }$
+           & $( \vecabold \times \vecbbold ) \cdot \vecebold_{ j }$ \\
+    17 & & 13 & $( \vecebold_{ i } \times \vecebold_{ k } ) \times \vecebold_{ j }$
+           & $( \vecebold_{ i } \times \vecebold_{ k } ) \cdot \vecebold_{ j }$ \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\noindent
+\StrWd{42}{10} \\
+\Jest  Słońce znajduje się nie w centrum \\
+\Powin ale Słońce nie znajduje się w centrum \\
+
+\vspace{\spaceTwo}
+% ############################
 
 
 
