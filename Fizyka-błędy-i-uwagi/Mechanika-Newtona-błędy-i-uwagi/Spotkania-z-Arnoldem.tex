@@ -1,0 +1,555 @@
+% Autor: Kamil Ziemian
+
+% ---------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ------------------------------
+\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
+\usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+\usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
+\usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
+% wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ------------------------------
+% MARGINS
+% ------------------------------
+\setmarginsrb
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
+
+
+
+% ------------------------------
+% Często przydatne pakiety
+% ------------------------------
+\usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+% ------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ------------------------------
+\let\lll\undefined  % Amsmath gryzie się z językiem pakietami do języka
+% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm}  % Dalsze wsparcie od AMS
+% \usepackage{siunitx}  % Do prostszego pisania jednostek fizycznych
+\usepackage{upgreek}  % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+\usepackage{slashed}  % Pozwala w prosty sposób pisać slash Feynmana.
+\usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
+% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% nie wiem.
+
+
+
+% ------------------------------
+% Tworzenie otoczeń „Twierdzenie”, „Definicja”, „Lemat”, etc.
+\newtheorem{twr}{Twierdzenie}  % Komenda wprowadzająca otoczenie
+% „twr” do pisania twierdzeń matematycznych
+\newtheorem{defin}{Definicja}  % Analogicznie jak powyżej
+\newtheorem{wni}{Wniosek}
+
+
+
+% ------------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ------------------------------
+% \usepackage{reedsimon}  % Pakiet napisany konkretnie dla tego pliku.
+% \usepackage{latexgeneralcommands}
+% \usepackage{mathcommands}
+
+% \usepackage{mechanika}  % Pakiet napisany konkretnie dla tego pliku.
+
+% \usepackage{tensor}
+
+
+
+% ---------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% ---------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ------------------------------
+% Ustawienia różnych parametrów tekstu
+% ------------------------------
+\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
+
+
+
+% ------------------------------
+% Pakiet „hyperref”
+% Polecano by umieszczać go na końcu preambuły.
+% ------------------------------
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł, autor, data
+\title{Spotkania z Arnoldem}
+
+% \author{}
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+Książka W. Arnolda „Metody matematyczne mechaniki klasycznej”
+stanowi dzięki głębi swych przemyśleń, naciskowi na~intuicyjne
+uzasadnienie stosowanego formalizmu, matematycznemu wyrafinowaniu
+i~niezwykłej erudycji autora jedno z~najlepszych dzieł jakie w~XX
+wieku napisano na temat mechaniki klasycznej. Równocześnie jest to
+pozycja bardzo trudna, w~której elementarne zagadnienia sąsiadują
+z~bardzo skomplikowanymi problemami, wiele kluczowych rozumowań jest
+tylko naszkicowanych, a~pełne jej zrozumienie wymaga pewnego obycie
+ze~współczesną matematyką.
+
+Celem tych spotkań jest wspólne przestudiowanie i~zrozumienie tego
+dzieła na cotygodniowych dwugodzinnych spotkaniach. W~zależności od
+preferencji uczestników forma tych spotkań może przybrać postać
+wykładów prowadzonych przez \ldots na podstawie poszczególnych
+rozdziałów, bądź referowania przez zainteresowane osoby kolejnych
+fragmentów książki. W~obu wypadkach wspólna dyskusja przedstawionego
+materiału ma być centralną częścią spotkań.
+
+
+
+
+% ############################
+\begin{center}
+
+  \begin{center}
+
+    \textbf{Plan}
+
+  \end{center}
+
+\end{center}
+
+% ############################
+
+
+
+\noindent
+Poniżej jest lista części książki, które będą przerabiane na
+spotkaniach.
+
+\noindent
+\textbf{Uwagi}
+\begin{itemize}
+\item[--] Choć pierwsza książki traktuje o~mechanice w~sformułowaniu
+  Newtona, co nie pokrywa się z planem kursu ,,Mechanika klasyczna''
+  profesora Bizonia, to wprowadzone jest w~niej kilka kluczowych dla
+  całej książki koncepcji, dlatego też jej część znalazła~się w~planie
+  spotkań.
+
+\item[--] Gwiazdką (*) oznaczone są paragrafy których treść można
+  w~całości, albo w~większości, pominąć bez szkody dla dalszej części
+  książki, jednak ze względu na ciekawy materiał warto rozważyć ich
+  przerobienie w całości.
+
+\item[--] Plan może ulec zmianie w~czasie trwania spotkań.
+
+\item[--] Jeżeli ktoś chce zgłosić zastrzeżenie do tego planu prosze
+  pisać na adres \ldots .
+
+\end{itemize}
+
+\begin{itemize}
+\item[\textbf{Roz. I.}] \textbf{Fakty doświadczalne.}
+
+\item[--] 1. Zasada względności i przyczynowości.
+
+\item[--] 2. Grupa Galileusz i~równania Newtona.
+
+
+\item[\textbf{Roz. II.}] \textbf{Badanie równań ruchu.}
+
+\item[--] 4. Układy o~jednym stopniu swobody.
+
+\item[--] 5. Układy o~dwóch stopniach swobody.
+
+\item[--] 11*. Rozumowanie oparte na podobieństwie.
+
+
+\item[\textbf{Roz. III.}] \textbf{Zasada wariacyjna (całość).}
+
+\item[--] 12. Rachunek wariacyjny.
+
+\item[--] 13. Równanie Lagrange'a.
+
+\item[--] 14. Przekształcenie Legendre'a.
+
+\item[--] 15. Równania Hamiltona.
+
+\item[--] 16. Twierdzenie Liouville'a.
+
+
+\item[\textbf{Roz. IV.}] \textbf{Mechanika Lagrange'a na
+    rozmaitościach.}
+
+\item[--] 17. Więzy holonomiczne.
+
+\item[--] 18. Rozmaitości różniczkowalne.
+
+\item[--] 19. Układy dynamiczne Lagrange'a.
+
+\item[--] 20. Twierdzenie E. Noether.
+
+
+\item[\textbf{Roz. V.}] \textbf{Drgania.}
+
+\item[--] 22. Linearyzacja.
+
+\item[--] 23. Małe drgania.
+
+\item[--] 24*. O~zachowaniu się częstości własnych.
+
+\item[--] 25*. Rezonans parametryczny.
+
+
+\item[\textbf{Roz. VII.}] \textbf{Formy różniczkowe (całość).}
+
+\item[--] 32. Formy zewnętrzne.
+
+\item[--] 33. Iloczyn zewnętrzny.
+
+\item[--] 34. Formy różniczkowe.
+
+\item[--] 35. Całkowanie form różniczkowych.
+
+\item[--] 36. Różniczkowanie zewnętrzne.
+
+
+\item[\textbf{Roz. VIII.}] \textbf{Rozmaitości symplektyczne.}
+
+\item[--] 37. Struktura symplektyczna na rozmaitości.
+
+\item[--] 38. Hamiltonowskie potoki fazowe i~ich niezmienniki całkowe.
+
+\item[--] 39. Algebry Liego pól wektorowych.
+
+\item[--] 40. Algebra Liego pól Hamiltona.
+
+\item[--] 41. Geometria symplektyczna.
+
+\item[--] 42*. Rezonans parametryczny w~układach o~wielu stopniach
+  swobody.
+
+\item[--] 43. Atlas symplektyczny.
+
+
+\item[\textbf{Roz. IX.}] \textbf{Formalizm kanoniczny.}
+
+\item[--] 44*. Niezmiennik całkowy Poincar\'{e}go-Cartana.
+
+\item[--] 45. Konsekwencje twierdzenia o~niezmienniku całkowym
+  Poincar\'{e}go-Cartana.
+
+\item[--] 46*. Zasada Huygensa.
+
+\item[--] 47*. Metoda Jacobiego-Hamiltona całkowania równań
+  kanonicznych Hamiltona.
+
+\item[--] 48. Funkcje tworzące.
+
+
+\item[\textbf{Roz. IX.}] \textbf{Wprowadzenie do teorii zaburzeń.}
+
+\item[--] 49*. Układy całkowalne.
+
+\item[--] 50*. Współrzędne działanie-kąt.
+
+\item[--] 51*. Uśrednianie.
+
+\item[--] 52*. Uśrednianie zaburzeń
+
+
+\item[] \textbf{Uzupełnienia.}
+
+\item[--] 5*. Układy dynamiczne wykazujące symetrię.
+
+\item[--] 8*. Teoria zaburzeń dla~ruchów prawie okresowych
+  i~twierdzenie Kołmogorowa.
+
+\item[--] 12*. Osobliwości Lagrange'a.
+
+\item[--] Na co nam jeszcze starczy sił ;). O~ile w~ogóle tu
+  dotrzemy\ldots
+
+\end{itemize}
+
+
+
+\begin{center}
+
+  \Large{\textbf{Bibliografia.}}
+
+\end{center}
+
+\noindent
+Poniższa lista zawiera pozycje zarówno skierowane zarówno dla osób
+które chcą przeczytać szersze opracowanie niektórych zagadnień, jak
+i~tych które chcą poznać w~jaki sposób można uogólnić omawiane
+zagadnienia. Niestety dla wszystkich omawianych problemów nie
+udało~się znaleźć zadowalającej \linebreak
+literatury, pewnych zaś
+wartych uwagii pozycji nie~umieszczono na niej, jako mało adekwatnych
+do~treści spotkań. \newline
+\noindent
+\textbf{BWMiI} -- Biblioteka Wydziału Matematyki i Informatyki. \\
+\newline
+\noindent
+\textbf{Cykl W. Arnolda.} Książki te optymalnie byłoby czytać
+w~podanej poniżej kolejności, stąd obecność tu omawianego na
+spotkaniach dzieła.
+\begin{itemize}
+\item[--] \emph{Równania różniczkowe zwyczajne} (RRZ), BWMiI.
+
+\item[--] \emph{Metody matematyczne mechaniki klasycznej} (MMMK),
+  BWMiI. %Biblioteka Wydziału Matematyki i Informatyki.
+
+\item[--] \emph{Teoria równań różniczkowych} (TRR), BWMiI.
+
+\end{itemize}
+
+% \textbf{Mechanika klasyczna.}
+\begin{itemize}
+\item[] \textbf{Podstawy matematyczne.}
+
+\item[--] L. Schwartz, \emph{Kurs analizy matematycznej, tom I} (LSI),
+  większość bibliotek np. NKFu. Książka trudna, ale zawiera dowód
+  chyba każdego twierdzenia z~analizy jakie będzie potrzebne.
+
+\item[--] A. Herdegen, \emph{Algebra liniowa i~geometria} (AH).
+  Głównie twierdzenia o~formach kwadratowych\footnote{Jedyną inną
+    pozycją, która o~ile wiem zawiera dowody potrzebnych twierdzeń,
+    jest książka „Wykłady z~algebry liniowej” I. M. Gelfanda.}.
+
+
+\item[] \textbf{Struktura czasoprzestrzeni mechaniki Newtona.}
+
+\item[--] W. Kopczyński, A. Trautman, \emph{Czasoprzestrzeń i
+    grawitacja} (KT), biblioteki FAISu, NKFu etc. Dobra, krótka
+  i~trudna pozycja, jedna z~niewielu które zajmują~się tym tematem.
+
+
+\item[] \textbf{Mechanika klasyczna.}
+
+\item[--] E. T. Whittaker, \emph{Dynamika analityczna} (ETW),
+  biblioteka NKFu. Wiekowa, lecz wciąż warta uwagii pozycja.
+\item[--] R. Abraham, J. E. Marsden, \emph{Foundations of Mechanics,
+    Second Edition} (FoM2),
+  \url{http://authors.library.caltech.edu/25029/} . Monumentalne
+  dzieło starające~się z~pełną ścisłością przedstawić mechanikę za
+  pomocą metod współczesnej matematyki.
+
+
+\item[] \textbf{Równania różniczkowe zwyczajne.}
+
+\item[--] W. Walter, \emph{Ordinary differential equations} (WWODEs),
+  Springer Link. Rozsądny, współczesny wykład podstaw teorii ODEs.
+
+\item[--] E. Hairer, S. P. N\o rsett, G. Warner, \emph{Solving Ordinary
+    Differential Equations} (SODEs), Springer Link. Monumentlane
+  dzieło o~tym jak analitycznie, a~przedewszystkim numerycznie
+  rozwiązać dane równanie.
+
+
+\item[] \textbf{Rachunek wariacyjny.}
+
+\item[--] I. M. Gelfand, S. V. Fomin, \emph{Rachunek wariacyjny} (GF),
+  większość bibliotek, np. NKFu i FAISu. Standardowy wykład
+  klasycznych osiągnięć rachunku wariacyjnego.
+
+\item[--] J. Jost, X. Li-Jost, \emph{Calculus of Variations} (JLJ),
+  BWMiI. Podręcznik zawierający wprowadzenie do~wpółczesnych metod
+  w~rachunku wariacyjnym.
+
+\item[--] M. Giaquinta, St. Hildebrandt, \emph{Calculus of Variations}
+  (GHCoV), Springer Link. Monografia starająca~się dać możlwie
+  wyczerpujący opis współczesnych metod.
+
+
+\item[] \textbf{Geometria różniczkowa.}
+
+\item[--] J. Gancarzewicz, \emph{Zarys współczesnej geometrii
+    różniczkowej} (ZWGR). Abstrakcyjna, długa i~niepozbawiona sporych
+  błędów, jednak bardzo dobra pozycja dla średnio zaawansowanych.
+
+\item[--] R. Sulanke, P. Wintgen, \emph{Geometria różniczkowa i~teoria
+    wiązek} (SW), BWMiI. Pozycja wprowadzająca, zawierająca dobre
+  wprowadzenie do teorii tożsamości geometryczno\dywiz całkowych
+  na~rozmaitościach.
+
+
+\item[] \textbf{Teoria form.}
+
+\item[--] L. Schwartz, \emph{Kurs analizy matematycznej, tom II}
+  (LSII), BWMiI. Bez znajomości teorii całki\linebreak z~I tomu,
+  prawie nie do zrozumienia.
+
+\item[--] S. G. Krantz, H. R. Parks, \emph{Geometric Integration
+    Theory} (GIT), Springer Link. Zawiera wprowadzenie do teorii
+  prądów, pozwalajacej rozważać formy o~wartościach w~dystrybucjach.
+\item[] \textbf{Geometria symplektyczna i mechanika.}
+
+\item[--] P. Libermann, Ch.\dywiz M. Marle, \emph{Symplectic Geometry
+    and Analytical Mechanics} (SGAM), BWMiI, Springer Link. Wykład
+  geometrii syplektycznej ilustrowany zastosowaniami w mechanice.
+
+
+  \newpage
+\item[] \textbf{Układy nieholonomiczne.}
+
+\item[--] J. I. Nejmark, N. A. Fufajew, \emph{Dynamika układów
+    nieholonomicznych} (DUN), Allegro\footnote{Prostszy sposób nie
+    jest znany.}. Podstawowe, w~dobry sposób staroświeckie, dzieło
+  w~tej dziedzinie.
+
+\item[--] E. Massa, E. Paganim \emph{A new look at classical mechanics
+    of constrained systems} (EMEP), \\
+  \url{https://eudml.org/doc/76747} . Nowoczesna próba zmierzenia~się
+  z~zagadieniem więzów nieholonomicnzych. Dość trudna pozycja.
+
+\item[--] H. Geiges \emph{Contact geometry} (HGCM),
+  arXiv:math/0307242v2 [math.SG]
+  \url{http://arxiv.org/abs/math/0307242} . Można tu znaleść dobre,
+  jak na ten dział matematyki, wprowadzenie w~teorię rozmaitości
+  kontaktowych, podstawy matematycznego opisu układów
+  nieholonomicznych.
+
+
+\item[] \textbf{Geometria różniczkowa poza mechaniką.}
+
+\item[--] G. Svetlichny, \emph{Preparation for Gauge Theory} (PGT),
+  arXiv:math-ph/9902027v3 \url{http://arxiv.org/abs/math-ph/9902027} .
+  Czasami trochę zbyt zwięzły, lecz merytorycznie bardzo dobry, wykład
+  na temat zastosowania geometrii różniczkowej, i~pochodnych działów
+  matematyki, do opisu \textbf{klasycznych} teorii pola z~cechowaniem,
+  takich jak elektrodynamika, czy pola Yanga-Millesa.
+
+\end{itemize}
+
+
+
+
+
+\textbf{Ważne:}
+
+\begin{quote}
+  Dla prawdziwego matematyka, jest dużo ważniejsze by wiedzieć jakie
+  problemy nie zostały wciąż rozwiązane i~gdzie znane obecnie metody
+  okazały~się niewystarczające, niż pamiętać wszystkie liczby których
+  iloczyny udało~się do tej pory uzyskać, czy orientować się w~
+  ocenianie literatury stworzonej na przestrzeni ostatnich 20 tysięcy
+  lat.
+\end{quote}
+
+W. Arnold w~przedmowie do książki „Arnold's Problems”, Springer Link, tłumaczenie swobodne. \\
+
+\begin{quote}
+  Zauważyliśmy bowiem, że dla początkujących słuchaczy dużą przeszkodę
+  w zdobywaniu tej nauki stanowią dzieła różnych teologów: już to
+  dlatego, że są nadmiernie przeładowane bezużytecznymi zagadnieniami,
+  artykułami i dowodami, już to dlatego, że zagadnienia, z jakimi owi
+  początkujący winni koniecznie się zapoznać, nie są podane
+  systematycznie: według uporządkowanej kolejności nauk czy traktatów,
+  ale omawiane są albo w związku z komentowaniem dzieł, albo z okazji
+  dysputy; już to wreszcie dlatego, że częste wałkowanie tego samego
+  budziło w ich umysłach nudę i zamęt.
+
+  Ufni w pomoc Bożą i starając się uniknąć tych i podobnych
+  niedociągnięć, będziemy usiłowali krótko i jasno - o ile na to sama
+  rzecz pozwoli - wyłożyć wszystko, co zakresem swoim obejmuje nauka
+  święta.
+\end{quote}
+
+Św. Tomasz z~Akwinu we wstępie do \emph{Sumy Teologicznej},
+\url{http://www.katedra.uksw.edu.pl/suma/suma_1.pdf}.
+
+
+
+
+
+
+
+
+
+
+% #####################################################################
+% #####################################################################
+% Bibliografia
+\bibliographystyle{plalpha} \bibliography{PhilNaturBooks}{}
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
