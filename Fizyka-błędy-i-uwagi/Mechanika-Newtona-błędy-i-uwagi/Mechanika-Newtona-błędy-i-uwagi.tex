@@ -396,8 +396,7 @@ odniesienia, bo nie wchodzi do nich pochodna wektorów bazy.
 
 
 Str. 20.
-$\frac{ d\vecebold_{ 1 } }{ dt } = \vecomegabold \times
-\vecebold_{ 1 } \, ,$
+$\frac{ d\vecebold_{ 1 } }{ dt } = \vecomegabold \times \vecebold_{ 1 } \, ,$
 
 Str. 20.
 $\frac{ \tilde{ \dPL } \tilde{ \vecxbold } }{ \dPL t }
@@ -635,7 +634,7 @@ obliczyć pewne parametry ruchu drugiej.
 
 \noindent
 \StrWd{27}{2} \\
-\Jest $S = S' + \mu \vecVbold \cdot \vecRbold' + \frac{ 1 }{ 2 } \mu V^{ 2 } t$ \\
+\Jest  $S = S' + \mu \vecVbold \cdot \vecRbold' + \frac{ 1 }{ 2 } \mu V^{ 2 } t$ \\
 \Powin $S = S' + \mu \vecVbold \cdot \vecRbold'( t ) - \mu \vecVbold
 \cdot \vecRbold'( 0 ) + \frac{ 1 }{ 2 } \mu V^{ 2 } t$ \\
 
@@ -774,6 +773,80 @@ z~naturalnego izomorfizmu (Czy to jest na pewno naturalny izomorfizm???)
 między wektorami i~formami możemy utożsamić te dwa obiekty, co będziemy
 w~dalszym ciągu czynić.
 
+\vspace{\spaceFour}
+
+
+
+\Str{24} Użycie konwencji sumacyjnej we wzorze (1.26) chyba bardzie zaciemnia, niż rozjaśnia jego treść. Byłby on bardziej zrozumiały, gdyby został zapisany jako
+\begin{equation}
+  \label{eq:SkalmierskiMechanika-06}
+  \sum_{ j = 1 }^{ 3 } \varepsilon_{ j i k } \, \varepsilon_{ j m n }
+  = \delta_{ i m } \, \delta_{ k n } - \delta_{ i n } \, \delta_{ k m }.
+\end{equation}
+
+Sam autor ma chyba z~tym problem bo nazywa wyrażenie
+$\varepsilon_{ j i k } \, \varepsilon_{ j m n }$ iloczynem, podczas gdy zgodnie z~przyjętą
+konwencją należy je uważać za zapis sumy po $j$. Wedle mojej intuicji
+językowej wyrażenia arytmetyczne\footnote{Jeśli chodzi o~wyrażenia bardziej
+  złożone, np. zawierające funkcję $\sin$, sposób ich nazywania wymaga
+  większej dozy refleksji.} nazywamy po wyrażeniu które stoi najniżej
+w~hierarchii działań występujących w~danym wyrażeniu. Mówiąc prościej,
+to które wykonujemy na końcu. Z tego więc względu sumą nazywamy wyrażenia
+$a + b$, $a + bc$, iloczynem $ab$, $a ( b + c )$, etc. Stąd wzór
+\eqref{eq:SkalmierskiMechanika-06} nazwalibyśmy raczej sumą, niż iloczynem.
+
+W~skutek tego zamieszania terminologicznego, przedstawiony tu dowód
+tożsamości \eqref{eq:SkalmierskiMechanika-06} nie jest całkowicie jasny.
+Można go jednak przeprowadzić w następujący sposób\footnote{Dla zupełności
+  podamy tu pełny dowód tego twierdzenia.}. Aby uniknąć nieporozumień,
+przyjmiemy, że $j_{ 1 }$ oznacza jedną z liczb $1, 2, 3$. Wyrażenie
+$\varepsilon_{ j_{ 1 } i k }$ przyjmuje wartość różną od zera wtedy i tylko wtedy, gdy
+wszystkie trzy liczby $j_{ 1 }$, $i$, $k$, są między sobą różne. Inaczej
+mówiąc, jeśli ciąg $j_{ 1 }, i, k$ stanowi permutacje ciągu $1, 2, 3$.
+Jeżeli więc $i = k$ to lewa strona tożsamości
+\eqref{eq:SkalmierskiMechanika-06} jest równa 0.
+Prawa zaś stronę możemy przepisać jako
+\begin{equation}
+  \label{eq:SkalmierskiMechanika-07}
+  \delta_{ i m } \, \delta_{ i n } - \delta_{ i n } \, \delta_{ i m }.
+\end{equation}
+Jeżeli $i \neq m$ lub $i \neq n$ to wyrażenie powyżej jest oczywiście równe 0.
+Pozostał nam do rozpatrzenia ostatni przypadek: $i = m$ i~$i = n$, bądź
+krócej $i = m = n$. W~tym przypadku też oczywiście otrzymujemy 0. Ta sama
+analiza stosuje~się do $\varepsilon_{ j m n }$.
+
+Jak powiedziano wyżej, dla ustalonej liczby $j_{ 1 }$ iloczyn
+$\varepsilon_{ j_{ 1 } i k }$ z~$\varepsilon_{ j_{ 1 } m n }$ będzie niezerowy wtedy i tylko wtedy,
+gdy oba ciągi $j_{ 1 }, i, k$ oraz $j_{ 1 }, m, n$ są różnowartościowe
+(inaczej: są permutacjami ciągu $1, 2, 3$). Zachodzi więc
+$j_{ 1 } \neq i \neq k \neq j_{ 1 }$ i~analogicznie dla $j_{ 1 } \neq m \neq n \neq j_{ 1 }$.
+W~tym przypadku z~sumy \eqref{eq:SkalmierskiMechanika-06} przeżywa tylko
+jeden wyraz. Jeśli bowiem $i = 1$, $k = 2$, to niezerowy będzie tylko wyraz
+dla którego $j = 3$, analogicznie dla pozostałych przypadków. W takim razie
+możliwe są dwie sytuacje: a) $i = m$, $k = n$; b) $i = n$, $k = m$.
+
+W przepadku a) $\varepsilon_{ j_{ 1 } i k } = \varepsilon_{ j_{ 1 } m n }$, więc ich iloczyn jest
+równy $1^{ 2 } = 1$ lub $( -1 )^{ 2 } = 1$. Podstawienie zależności między
+$j_{ 1 }, i, k, m, n$ do prawej stron wzoru
+\eqref{eq:SkalmierskiMechanika-06} pokazuje, że~również jej wartość wynosi
+$1$.
+
+Przypadek b). Możliwe są dwie sytuacje:
+$\varepsilon_{ j_{ 1 } i k } = 1$, $\varepsilon_{ j_{ 1 } m n } = -1$
+lub~$\varepsilon_{ j_{ 1 } i k } = -1$, $\varepsilon_{ j_{ 1 } m n }$. Wobec tego lewa strona wzoru
+\eqref{eq:SkalmierskiMechanika-06} wynosi $-1$. Ponownie korzystając
+z~relacji między $j_{ 1 }, i, k, m, n$ dostajemy, że~tyle samo wynosi prawa
+strona tego wzoru, co kończy dowód.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -795,6 +868,12 @@ w~dalszym ciągu czynić.
     22 & 13 & & wektor{ }{ }{ }$\vecdbold$ & wektor $\vecdbold$ \\
     22 & &  9 & $a_{ z } b_{ y } \, \hphantom{k} \times \vecjbold$
            & $a_{ z } b_{ y } \, \veckbold \times \vecjbold$ \\
+    24 & 17 & &  $( \vecabold \cdot \veccbold ) \cdot \vecbbold
+                - ( \vecbbold \cdot \veccbold ) \cdot \vecabold$
+           & $( \vecabold \cdot \veccbold ) \vecbbold
+             - ( \vecbbold \cdot \veccbold ) \vecabold$ \\
+    % & & & & \\
+    % & & & & \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
