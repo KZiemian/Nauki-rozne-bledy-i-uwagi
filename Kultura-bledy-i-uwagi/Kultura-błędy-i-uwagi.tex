@@ -67,7 +67,7 @@
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
 % ------------------------------
-\usepackage{latexshortcuts}
+\usepackage{latexgeneralcommands}
 
 
 
@@ -90,13 +90,23 @@
 
 
 
+
+
+
+
+
 % ---------------------------------------------------------------------
-% Tytuł, autor, data
-\title{Kultura --~błędy i~uwagi}
+% Tytuł tekstu
+\title{Kultura~-- błędy i~uwagi}
 
 % \author{}
 % \date{}
 % ---------------------------------------------------------------------
+
+
+
+
+
 
 
 
@@ -109,9 +119,13 @@
 
 
 
+
+
 % ######################################
 \maketitle  % Tytuł całego tekstu
 % ######################################
+
+
 
 
 
@@ -138,15 +152,19 @@
 
 
 
-% ##################
+% ############################
 \Work{ % Autor i tytuł dzieła
   E. Michael Jones \\
   „Zdeprawowani moderniści”,
   \cite{EMichaelJonesZdeprawowaniModernisci14} }
 
 
-\CenterTB{Błędy}
+% ##################
+\CenterBoldFont{Błędy}
+
+
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -190,6 +208,8 @@
 
 
 
+
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -206,7 +226,7 @@
     207 &  7 & & taka & taką \\
     211 & & 18 & „Szczyt & Szczyt \\
     214 &  5 & & [ w~nagrodę] & [w~nagrodę] \\
-    214 &  6 & & najwyraźniej .. & najwyraźniej\ld \\
+    214 &  6 & & najwyraźniej .. & najwyraźniej\ldots \\
     217 & 22 & & Fread & Freuda \\
     218 & &  2 & od~z & z \\
     226 & 10 & & Mannung & Manning \\
@@ -216,8 +236,11 @@
     237 & &  4 & 560 & 1560 \\
     \hline
   \end{tabular}
+
 \end{center}
-\noi \\
+
+
+\noindent
 \StrWd{17}{10} \\
 \Jest nieczystości pierworodnej córki jest ślepotą ducha. \\
 \Powin pierworodną córką nieczystości jest ślepota ducha. \\
@@ -230,7 +253,11 @@
 \Powin „Gdyby potrafił być perwersyjny, byłby zdrowy,
 podobnie jak ojciec”$^{ 202 }$. \\
 
+
 \vspace{\spaceTwo}
+% ############################
+
+
 
 
 
@@ -255,16 +282,19 @@ podobnie jak ojciec”$^{ 202 }$. \\
 
 
 
-% ##################
+% ############################
 \Work{ % Autor i tytuł dzieła
   Zdzisław Krasnodębski \\
   „Drzemka rozsądnych. Zebrane eseje i~szkice”,
   \cite{KrasnodebskiDrzemkaRozsadnych06} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -286,29 +316,48 @@ podobnie jak ojciec”$^{ 202 }$. \\
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
-\noi
+
+\noindent
 \StrWd{72}{2} \\
 \Jest Frankreich 1871, Deutschland 1918 \\
 \Powin  \emph{Frankreich 1871, Deutschland 1918} \\
 
 \vspace{\spaceTwo}
+% ############################
 
 
 
 
 
-% ##################
-\Work{
+
+
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
   Zdzisław Krasnodębski \\
   „Zwycięzca po~przejściach. Zebrane eseje i~szkice~V”,
   \cite{KrasnodebskiZwyciezcaPoPrzejsciach2012} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi do~konkretnych stron}
+
 
 \start \Str{317} Pominięto miejsce i~datę pierwszej publikacji
 artykułu \emph{Nie udawaj Greka, Polsko!}
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
 
 
 
@@ -322,16 +371,19 @@ artykułu \emph{Nie udawaj Greka, Polsko!}
 
 
 
-% ##################
+% ############################
 \Work{ % Autor i tytuł dzieła
   Maria Janion \\
   „Niesamowita Słowiańszczyzna. Fantazmaty literatury”,
    \cite{JanionNiesamowitaSlowianszczyzna2006} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -353,26 +405,38 @@ artykułu \emph{Nie udawaj Greka, Polsko!}
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
-% \noi
-% \StrWd{72}{2} \\
-% \Jest Frankreich 1871, Deutschland 1918 \\
-% \Pow  \emph{Frankreich 1871, Deutschland 1918} \\
+
+
+\noindent
+\StrWd{72}{2} \\
+\Jest  Frankreich 1871, Deutschland 1918 \\
+\Powin \textit{Frankreich 1871}, \textit{Deutschland 1918} \\
+
 
 \vspace{\spaceTwo}
+% ############################
 
 
 
 
 
-% ##################
+
+
+
+
+
+% ############################
 \Work{ % Autor i tytuł dzieła
   Jan Sowa \\
   „Fantomowe ciało króla. Peryferyjne zmagania z~nowoczesną formą”,
   \cite{SowaFantomoweCialoKrola11} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \start \StrWg{36}{15} Zdanie „jego aktywność ściśle wiąże~się
 związana ze społeczną\ldots”, powinno brzmieć „jego aktywność ściśle
@@ -384,10 +448,18 @@ bo obie przekazują tą samą treść.
 \vspace{\spaceFour}
 
 
+
 \start \StrWg{63}{5--9} Zawarty tu tekst, jest źle skonstruowany
 gramatycznie.
 
-\CenterTB{Błędy}
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
 \begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
@@ -402,14 +474,21 @@ gramatycznie.
     118 &  8 & & dawały & nie dawały \\
     300 & 17 & & mogły & mogło \\
     362 & 12 & & torrusa & torusa \\
-    367 & 15 & & c\tb{oś} & \tb{coś} \\
+    367 & 15 & & c\textbf{oś} & \textbf{coś} \\
     % & & & & \\
     \hline
   \end{tabular}
 
 \end{center}
 
+
 \vspace{\spaceTwo}
+% ############################
+
+
+
+
+
 
 
 
@@ -423,24 +502,29 @@ gramatycznie.
 
 
 
-% ##################
+% ############################
 \Work{ % Autor i tytuł dzieła
   Renata Iwicka \\
   „Źródła klasycznej demonologii japońskiej”,
   \cite{IwickaZrodlaKlasycznejDemonologiJaponskiej2017} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \start \Str{26} Zdjęcie na tej stronie powinno być lepiej opisane.
 
 \vspace{\spaceFour}
 
 
+
 \start \Str{49} Użyto tu przydomka „Raiko” % Raik\={o}
-by odnieść~się do~postaci Minamoto no~Yorumitsu jednak~to, że~ten przydomek odnosi~się do~niego stanie~się jasne dopiero na~stronie~52.
+by odnieść~się do~postaci Minamoto no~Yorumitsu jednak~to, że~ten
+przydomek odnosi~się do~niego stanie~się jasne dopiero na~stronie~52.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWg{94}{14--15} Według tego co~znalazłem, shamisen
@@ -454,10 +538,12 @@ nie jest całkiem proste.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{95}{3} W~tej książce normalnie zapisuje~się nazwę tej
 wyspy jako „Kyushu”. % Ky\={u}sh\={u}
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWg{128}{7} To~zdanie jest sformułowane w~taki sposób,
@@ -465,6 +551,7 @@ wyspy jako „Kyushu”. % Ky\={u}sh\={u}
 nazywają~się leżące na~niej bramy.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWg{129}{12--16} Fragment ten jest napisany w~taki sposób,
@@ -476,11 +563,13 @@ późniejsza zaś~to „Rashomon”. % Rash\={o}mon
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{139}{15} Aby~zachować płynność przytoczonej
 tu~opowieści, należałoby wcześniej wspomnieć, że~dwa bohaterowie
 dotarli do jakiejś rezydencji.
 
 \vspace{\spaceFour}
+
 
 
 \start \textbf{Str. 148, przypis 441.} Jestem przekonany, że~ten przypis
@@ -491,10 +580,12 @@ do~tego roku.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{169}{10} Całkiem możliwe, że~zamiast „wykryto dużo
 wcześniej” powinno pisać „wykryto bardzo wcześnie”.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWg{170}{} Nie jest dla mnie o~jaki z~wymienionych systemów
@@ -502,6 +593,7 @@ jest mowa w~tym zdaniu. Czy chodzi o~\emph{shugendo}, % shugend\={o}
 czy też o~\emph{on'yodo}? % on'y\={o}d\={o}
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{181} Podtytuł rozdziału jest zapisany tu jako „\emph{Tabu
@@ -514,6 +606,7 @@ z~konwencją zapisu tytułów odpowiednich części tekstu.
 \vspace{\spaceFour}
 
 
+
 \start \Str{187} Drugi paragraf jest nie najlepiej skonstruowany
 pod~względem językowym. Jego sens miał być zapewne taki. Gdyby
 przyporządkowanie stron świata i~zwierząt różnym wojownikom bazowało
@@ -523,15 +616,18 @@ wyglądałby inaczej niż ten~który~się przyjął.
 \vspace{\spaceFour}
 
 
+
 \start \Str{215} Podpis pod tym rysunkiem powinien być obszerniejszy.
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{222}{9} Może zamiast „użył znaku oznaczającego
 kobietę” powinno być „stworzył znak oznaczający kobietę”?
 
 \vspace{\spaceFour}
+
 
 
 \start \StrWd{222}{2} Według opisu na angielskiej Wikipedii, główny
@@ -544,12 +640,19 @@ i~\emph{ayakashi}.
 \vspace{\spaceFour}
 
 
+
 \start \Str{223} W~książce tej zwykle zapisuje~się nazwę przywoływanej
 tu~wyspy jako „Kyushu”, % Ky\={u}sh\={u}
 nie „Kiusiu”.
 
 
-\CenterTB{Błędy}
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
 \begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
@@ -584,7 +687,9 @@ nie „Kiusiu”.
   \end{tabular}
 
 \end{center}
-\noi
+
+
+\noindent
 \StrWg{169}{19} \\
 \Jest  a~zwłaszcza \\
 \Powin których szczególnym uosobieniem w~tym kontekście jest \\
@@ -595,7 +700,9 @@ nie „Kiusiu”.
 \Jest  obejmują dokładnie tę~samą kategorię \\
 \Powin są objęte tą~samą kategorią \\
 
+
 \vspace{\spaceTwo}
+% ############################
 
 
 
@@ -605,31 +712,6 @@ nie „Kiusiu”.
 
 
 
-
-% \Work{
-% Paul Johnson\\
-% ,,Narodziny nowoczesności'', \cite{Joh95}.}
-
-
-% \CenterTB{Błędy}
-
-% \begin{center}
-%   \begin{tabular}{|c|c|c|c|c|}
-%     \hline
-%     & \multicolumn{2}{c|}{} & & \\
-%           %     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-%     %     & Powinno być \\ \cline{2-3}
-%           %     & od góry & od dołu & & \\
-%     %     \hline
-%     & & & & \\
-%     29 & 2 & & cali, członie & cali, o członie \\
-%     142 & 1 & & Barbaji & Barbajowi \\
-%     142 & & 14 & w nową operą & z nową operą \\
-%     345 & 15 & & XIX & XVIII \\
-%     345 & 18 & & od & na od \\
-%     409 & 8 & & sposób & nie sposób \\ \hline
-%   \end{tabular}
-% \end{center}
 
 
 
@@ -651,29 +733,37 @@ nie „Kiusiu”.
 
 
 % ######################################
-\newpage
-\Field{Kino --~błędy i~uwagi}
+\section{Kino}
 
 \vspace{\spaceThree}
 % ######################################
 
 
 
-% ##################
+% ############################
 \Work{ % Redaktor i tytuł dzieła
   Red. Piotr Kletowski \\
   „Europejskie kino gatunków”,
   \cite{RedKletowskiEuropejskieKinoGatunkow16} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \start \StrWd{129}{1} W~filmie templariuszom nie wyłupiono oczu, lecz
 stracono i~powieszono na drzewach. Tam dzikie ptaki wyjadły ich oczy.
 
 
-\CenterTB{Błędy}
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -688,13 +778,18 @@ stracono i~powieszono na drzewach. Tam dzikie ptaki wyjadły ich oczy.
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
-\noi
+
+
+\noindent
 \StrWg{160}{12} \\
 \Jest  \emph{Za kilka dolarów więcej} Monco \\
 \Powin filmu \emph{Dobry, zły i~brzydki} Blondie \\
 
+
 \vspace{\spaceTwo}
+% ############################
 
 
 
@@ -705,23 +800,27 @@ stracono i~powieszono na drzewach. Tam dzikie ptaki wyjadły ich oczy.
 
 
 
-% ##################
+% ############################
 \Work{ % Autor i tytuł dzieła
   Tadeusz Szczepański \\
   „Zwierciadło Bergmana”, \cite{SzczepanskiZwierciadloBergmana2007} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \start \StrWg{131}{14} Postać pastora zagrał Gunnar Olsson.
 
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{132}{17} Protestancki biskup Edvard Verg\'{e}rus
 to~jeden z~bohaterów filmu Bergmana \emph{Fanny i~Aleksander}.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{146} Ponieważ Monika nie tylko udało~się uciec
@@ -733,6 +832,7 @@ co~najmniej nietrafne.
 \vspace{\spaceFour}
 
 
+
 \start \Str{220} W~samym filmie \emph{Siódma pieczęć} nie znalazłem
 niczego co~podtrzymywałoby przedstawioną tu interpretację, że~końcowa
 scena z~rodziną kuglarzy rozgrywa~się w~czyjejś wyobraźni. Wręcz
@@ -740,6 +840,7 @@ przeciwnie, cała narracja filmu przekonuje mnie, że~wydarzyło~się
 to~naprawdę.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{247} Na~tym zdjęciu bardzo ciężko dojrzeć, że~malowidło
@@ -750,8 +851,15 @@ pod~ręką, która prowadzi koński zaprzęg.
 \vspace{\spaceFour}
 
 
-\CenterTB{Błędy}
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -769,10 +877,12 @@ pod~ręką, która prowadzi koński zaprzęg.
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
 
-\vspace{\spaceTwo}
 
+\vspace{\spaceTwo}
+% ############################
 
 
 
@@ -791,13 +901,15 @@ pod~ręką, która prowadzi koński zaprzęg.
 
 
 
-% ##################
+% ############################
 \Work{ % Autor i tytuł dzieła
   Teodor Parnicki \\
   „Szkice literackie”, \cite{ParnickiSzkiceLiterackie1979} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
 
 \start \Str{88, 220} Na stronie 88 tytuł tej części to „O~humanizmie
 katolicyzmu”, zaś na 220 to „O~humanizmie katolickim”. Sens tych dwóch
@@ -806,6 +918,7 @@ tytułów jest oczywiście diametralnie różny. Wydaje się, że~poprawny to
 o~Zofii Kossak.
 
 \vspace{\spaceFour}
+
 
 
 \start \Str{69} W~zaczynającym się tu szkicu „Aleksander Puszkin
@@ -818,8 +931,12 @@ nigdzie nie ma drugiej.
 
 
 
-\CenterTB{Błędy}
+% ##################
+\CenterBoldFont{Błędy}
+
+
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -827,13 +944,14 @@ nigdzie nie ma drugiej.
                               & Powinno być \\ \cline{2-3}
     & od góry & od dołu & & \\
     \hline
-    XXI &  6 & & \emph{Juliana}\ldots$^{ 26 }$
+    XXI   &  6 & & \emph{Juliana}\ldots$^{ 26 }$
            & \emph{Juliana}\ldots”$^{ 26 }$ \\
+    XXIII & 15 & Lenowa. & Lenowa). \\
     91  &  9 & & upadku; & upadku. \\
     92  & 23 & & XX & XIX \\
     119 & & 7 & stałe & całe \\
-    % & & & & \\
-    % & & & & \\
+    174 & 13 & & słynnych --- encyklikach & słynnych encyklikach \\
+    174 & 15 & & XX. & XX.) \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -841,9 +959,12 @@ nigdzie nie ma drugiej.
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
 
+
 \vspace{\spaceTwo}
+% ############################
 
 
 
@@ -863,13 +984,15 @@ nigdzie nie ma drugiej.
 
 
 
-% ##################
+% ############################
 \Work{ % Autor i tytuł dzieła
   Władysław Strzemiński \\
   „Teoria widzenia”, \cite{StrzeminskiTeoriaWidzenia2016} }
 
 
-\CenterTB{Uwagi}
+% ##################
+\CenterBoldFont{Uwagi}
+
 
 \start \StrWg{33}{13} Cudzysłów wystający na~lewy margines wygląd mało
 estetycznie. W~przypadku dłuższych cytatów, których lewy margines jest
@@ -878,40 +1001,51 @@ większy, nie~jest to problem.
 \vspace{\spaceFour}
 
 
+
 \start \StrWd{39}{19} Cudzysłów wystający na~lewy margines wygląd mało
 estetycznie.
 
 \vspace{\spaceFour}
 
 
-% \start \Str{146} Ponieważ Monika nie tylko udało~się uciec
-% z~mieszczańskiej willi, bez żadnych konsekwencji dla jej dalszego
-% życia, ale także zdobyć pieczeń po~którą tam poszła,
-% uważam~że~nazwanie jej działań ,,sromotnie nieudanymi'', jest
-% co~najmniej nietrafne.
 
-% \vspace{\spaceFour}
+\start \Str{146} Ponieważ Monika nie tylko udało~się uciec
+z~mieszczańskiej willi, bez żadnych konsekwencji dla jej dalszego
+życia, ale także zdobyć pieczeń po~którą tam poszła,
+uważam~że~nazwanie jej działań ,,sromotnie nieudanymi'', jest
+co~najmniej nietrafne.
 
-
-% \start \Str{220} W~samym filmie \emph{Siódma pieczęć} nie znalazłem
-% niczego co~podtrzymywałoby przedstawioną tu interpretację,
-% że~końcowa scena z~rodziną kuglarzy rozgrywa~się w~czyjejś
-% wyobraźni. Wręcz przeciwnie, cała narracja filmu przekonuje mnie,
-% że~wydarzyło~się to~naprawdę.
-
-% \vspace{\spaceFour}
+\vspace{\spaceFour}
 
 
-% \start \Str{247} Na~tym zdjęciu bardzo ciężko dojrzeć, że~malowidło
-% na~ścianie przedstawie Śmierć z~szachami. Na~szczęście na~następnej
-% stronie jest wyjaśnione, iż~przedstawia ono Śmierć z~szachami
-% pod~ręką, która prowadzi koński zaprzęg.
 
-% \vspace{\spaceFour}
+\start \Str{220} W~samym filmie \emph{Siódma pieczęć} nie znalazłem
+niczego co~podtrzymywałoby przedstawioną tu interpretację,
+że~końcowa scena z~rodziną kuglarzy rozgrywa~się w~czyjejś
+wyobraźni. Wręcz przeciwnie, cała narracja filmu przekonuje mnie,
+że~wydarzyło~się to~naprawdę.
+
+\vspace{\spaceFour}
 
 
-\CenterTB{Błędy}
+
+\start \Str{247} Na~tym zdjęciu bardzo ciężko dojrzeć, że~malowidło
+na~ścianie przedstawie Śmierć z~szachami. Na~szczęście na~następnej
+stronie jest wyjaśnione, iż~przedstawia ono Śmierć z~szachami
+pod~ręką, która prowadzi koński zaprzęg.
+
+\vspace{\spaceFour}
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -930,9 +1064,11 @@ estetycznie.
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
 
 \vspace{\spaceTwo}
+% ############################
 
 
 
@@ -952,7 +1088,7 @@ estetycznie.
 
 
 
-% ##################
+% ############################
 \Work{ % Autor i tytuł dzieła
    Franciszek Wesołowski \\
   „Zasady muzyki”,
@@ -963,8 +1099,13 @@ estetycznie.
 
 % \start \StrWd{}{}
 
-\CenterTB{Błędy}
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
 \begin{center}
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     & \multicolumn{2}{c|}{} & & \\
@@ -981,13 +1122,17 @@ estetycznie.
     % & & & & \\
     \hline
   \end{tabular}
+
 \end{center}
-\noi
-\StrWg{160}{12} \\
-\Jest  \emph{Za kilka dolarów więcej} Monco \\
-\Powin filmu \emph{Dobry, zły i~brzydki} Blondie \\
+
+
+% \noindent
+% \StrWg{160}{12} \\
+% \Jest  \emph{Za kilka dolarów więcej} Monco \\
+% \Powin filmu \emph{Dobry, zły i~brzydki} Blondie \\
 
 \vspace{\spaceTwo}
+% ############################
 
 
 
@@ -1001,7 +1146,12 @@ estetycznie.
 % ####################################################################
 % ####################################################################
 % Bibliografia
-\bibliographystyle{plalpha} \bibliography{LibCivilizationCultura}{}
+\bibliographystyle{plalpha}
+
+\bibliography{}{}
+
+
+
 
 
 % ############################
