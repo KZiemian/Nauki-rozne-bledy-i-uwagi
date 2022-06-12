@@ -27,9 +27,9 @@
 % wprowadzane bezpośrednio w tekście.
 \usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ----------------------------
+% ---------------------------------------
 % MARGINS
-% ----------------------------
+% ---------------------------------------
 \setmarginsrb
 { 0.7in}  % left margin
 { 0.6in}  % top margin
@@ -51,9 +51,9 @@
 
 
 
-% ----------------------------
+% ---------------------------------------
 % Pakiety do tekstów z nauk przyrodniczych
-% ----------------------------
+% ---------------------------------------
 \let\lll\undefined  % Amsmath gryzie się z językiem pakietami do języka
 % polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
 % oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
@@ -126,7 +126,8 @@
 
 % ---------------------------------------------------------------------
 % Tytuł, autor, data
-\title{Wprowadzenie do~fizyki~-- błędy i~uwagi}
+\title{Wprowadzenie do~fizyki \\
+  Błędy i~uwagi}
 
 % \author{}
 % \date{}
@@ -163,12 +164,13 @@
 
 \vspace{\spaceTwo}
 % \vspace{\spaceThree}
+
 % ######################################
 
 
 
-% ##################
-\Work{ % Autor i tytuł dzieła
+% ############################
+\Work{ % Autorzy i tytuł dzieła
   Richard P.~Feynman, Robert B.~Leighton, Matthew Sands \\
   „Feynmana wykłady z~fizyki. Tom~I: mechanika, szczególna teoria
   względności”, \cite{FeynmanEtAlWykladyZFizykiVolI2004} }
@@ -199,6 +201,58 @@
   \end{tabular}
 
 \end{center}
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Autorzy i tytuł dzieła
+  Richard P.~Feynman, Robert B.~Leighton, Matthew Sands \\
+  „Feynmana wykłady z fizyki. Tom 2, część~1: ”, \cite{} }
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+
+\start \Str{65} Stwierdzenie, że pole elektryczne i magnetyczne są niezwiązane dopóki ładunki i prądy są statyczne, jest pewnym uproszczeniem. Jakkolwiek może być ono pedagogicznie uzasadnione to jednak warto byłoby dodać jakiś komentarz dla bardziej dociekliwych czytelników.
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % & & & & \\
+    59 & & 18 & zmieniał & nie zmieniał \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
 
 \vspace{\spaceTwo}
 % ############################
