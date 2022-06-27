@@ -536,8 +536,8 @@ cząstki swobodne umieszczone w przestrzeni spoczywają.
 
 
 
-\start \Str{14} $\frac{ \partial L }{ \partial \vecvbold }$ nie jest funkcją tylko
-kwadratu prędkości. Jest to wektor o składowych
+\start \Str{14} $\frac{ \partial L }{ \partial \vecvbold }$ nie jest
+funkcją tylko kwadratu prędkości. Jest to wektor o składowych
 $( \frac{ \partial L }{ \partial \vecvbold } )_{ i } = 2 \frac{
   \partial L }{ \partial { v^{ 2 } } } v_{ i }$, czyli zależy on
 jawnie od składowych prędkości. Widać jednak, że stałość
@@ -681,6 +681,35 @@ zawsze będziemy oznaczać symbolem~$N$.
 \CenterBoldFont{Uwagi do konkretnych stron}
 
 
+\Str{16} W~tym miejscu należałoby dodać następującą uwagę na temat oznaczeń
+dla wektorów zaczepionych. Jeżeli wektory zaczepione w~dwóch różnych
+punktach $A$ i~$B$ są równoważne, to będziemy je oznaczać tym samym symbolem
+np. $\vecabold$. Inaczej mówiąc, jeśli w~punktach $A$ i~$B$ jest zaczepiony
+ten sam wektor swobodny, to te dwa wektory swobodne oznaczamy tym samym
+symbolem.
+
+W~literaturze zwykle~się nie pisze jawnie, czy dany symbol $\vecabold$
+oznacza wektor swobodny, czy wektor zaczepiony w~danym punkcie. Co gorsza
+często ten sam symbol oznacza zarówno wektor swobodny $\vecabold$, jak
+i~wektor swobodny $\vecabold$ po zaczepieniu w~punkcie $A$. Może to
+prowadzić do niejasności i~utrudniać początkującym naukę.
+
+Bardziej przejrzysta byłaby notacja $\vecabold_{ A }$, jednak szansa by to
+oznaczenie~się przyjęło jest zaniedbywalnie mała. W~dalszej części
+komentarzy będziemy próbowali precyzować co dany wektor dokładnie oznacza.
+
+\vspace{\spaceFour}
+
+
+
+\Str{16} By uczynić definicję relacji współosiowości wektorów bardziej
+ścisłą, przyjmiemy, że~wektor $\vecZero$ jest współosiowy z~dowolnym innym
+wektorem.
+
+\vspace{\spaceFour}
+
+
+
 \Str{17} Warto zatrzymać się na chwilę nad pojęciem \textbf{składowej
   wektora} i~\textbf{współrzędnej wektora}. Niech $V$ będzie rozważaną
 przestrzenią wektorową, a~$\vecvbold$ zawartym w~niej wektorem.
@@ -770,6 +799,65 @@ stronie równości, musi też wystąpić po jej prawej stronie.
 \StrWd{19}{10} Jak stwierdziła IGG, lepszym oznaczeniem od $a_{ xi }$ byłoby
 $a_{ i,\, x }$. Taka notacja bardzie uwypukla to, że mamy do czynienia
 z~iksową składową wektora o~numerze $i$.
+
+\vspace{\spaceFour}
+
+
+
+\Str{20, 22} Definicja konta między wektorami, choć opierająca~się na tym,
+że~„łatwo widać” co to jest kont między wektorami, gdy się je narysuje,
+zostawia pewną lukę dla przypadku, gdy jeden wektor jest równy $\vecZero$.
+
+Aby ją zapełnić przyjmujemy, że~jeśli co najmniej jeden z~wektorów
+$\vecabold$ i~$\vecbbold$ jest wektorem zerowym to kąt między nimi
+wynosi~$0$ radianów: $\alpha = 0$.
+
+\vspace{\spaceFour}
+
+
+
+\Str{20} Może nie jest to zaznaczone wyraźnie, ale aby zdefiniować iloczyn
+skalarny dwóch wektorów musimy oba przemieścić w~taki sposób, by były
+zaczepione w~jednym punkcie. Albo dokonać operacji, która pozwoliłaby je
+zaczepić w~wspólnym punkcie. Zauważmy też, że~te same uwagi odnoszą się do iloczynu wektorowego i~podobnych operacji.
+
+W~definicji „za pomocą obrazka” musimy je zaczepić we wspólnym punkcie, by
+zmierzyć kąt jaki jest między nimi. Przykładem innego sposobu liczenia tego
+kąta jest traktowanie wektorów jako odcinków skierowanych i~przeniesienie
+wektora $\vecbbold$ do punktu końcowego wektora $\vecabold$, obliczenia kąta
+$\beta$ między tak utworzonymi odcinkami i~przyjęcie, że kąt między wektorami
+jest równy $\alpha = \pi - \beta$ (w~radianach). Widać jednak, że skoro możemy
+przesunąć wektor $\vecbbold$ do punktu końcowego wektora $\vecabold$, to
+równie dobrze moglibyśmy przenieść go do punktu zaczepienia tego
+wektora\footnote{To zagadnienie można podać bardziej ścisłej analizie,
+  jednak uważamy, że~obecnej formie jest ono wystarczająco precyzyjnie
+  sformułowane w~stosunku do naszych potrzeb.}.
+
+W~przypadku definicji „za pomocą wersorów/współrzędnych”, musimy założyć, że
+możemy porównać wersory zaczepione w~dwóch różnych miejscach i~obliczyć
+iloczyn skalarny między nimi. Możemy też uznać, że wersor reprezentuje nam
+klasę wektorów równoważnych i~w każdym punkcie przestrzeni jest zaczepiony
+jeden z nich. Ale tym samym uznaliśmy pojęcie równości „na odległość”,
+dzięki czemu możemy sformułować pojęcie przeniesienia wektora
+
+Jakbyśmy więc nie podeszli do zagadnienia, to albo musimy mieć pojęcie
+przesuwania wektorów, które ich nie zmienia, albo pojęcie równości wektorów
+„na odległość”. W~obecnym kontekście może wydawać~się to drobnostką, jednak
+przy dokładnej analizie pewnych wzorów pominięcie tego aspektu może
+prowadzić do niejasności i~zbyt pobieżnego rozumienia danego zagadnienia.
+Problem ten staje~się czymś bardzo poważnym, gdy przechodzimy do geometrii
+różniczkowej.
+
+W~dalszym ciągu będziemy więc przyjmować, że~podczas obliczania wielkości
+takich jaki iloczyn skalarny oba wektory zostały przeniesione do pewnego
+wspólnego punktu i~dopiero wtedy obliczamy wynik. Dlatego wykonując tą
+operację na wektorach $\vecabold$, $\vecbbold$, nie będziemy dodawać im
+indeksu dolnego, jak w $\vecabold_{ A }$, by zaznaczyć w~którym miejscu są
+one zaczepione.
+
+Powstaje pytanie, skoro rezultatem np. iloczynu wektorowego, jest wektor to
+w~którym miejscu jest on zaczepiony? W~takiej sytuacji będziemy pryzmować,
+iż~taki wektor jest wektorem swobodnym, chyba że~jest powiedziane inaczej.
 
 \vspace{\spaceFour}
 
@@ -1037,7 +1125,8 @@ $( \dot{ x }_{ 1 } \vecibold + \dot{ x }_{ 2 } \vecjbold )
 % ############################
 \Work{ % Autor i tytuł dzieła
   B. Skalmierski \\
-  „Mechanika. Tom I: Podstawy mechaniki klasycznej”, \cite{BSMI} }
+  „Mechanika. Tom I: Podstawy mechaniki klasycznej”,
+  \cite{SkalmierskiPodstawyMechanikiKlasycznejTomI1998} }
 
 
 % ##################
@@ -1057,7 +1146,7 @@ topologi~by sprawdzić jak należy to poprawić.
 
 Definicja homeomorfizmu jest trochę nie jasna, można bowiem odczytać ją
 tak, że~choć funkcja $f$ musi być ciągła, to żaden zaś warunek nie jest
-nałożyny na $f^{ -1 }$.
+nałożony na $f^{ -1 }$.
 
 \vspace{\spaceFour}
 
