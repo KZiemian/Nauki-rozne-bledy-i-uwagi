@@ -72,7 +72,7 @@
 
 % ------------------------------
 % Tworzenie otoczeń „Twierdzenie”, „Definicja”, „Lemat”, etc.
-\newtheorem{twr}{Twierdzenie}  % Komenda wprowadzająca otoczenie
+\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
 % „twr” do pisania twierdzeń matematycznych
 \newtheorem{defin}{Definicja}  % Analogicznie jak powyżej
 \newtheorem{wni}{Wniosek}
@@ -703,8 +703,8 @@ komentarzy będziemy próbowali precyzować co dany wektor dokładnie oznacza.
 
 
 \Str{16} By uczynić definicję relacji współosiowości wektorów bardziej
-ścisłą, przyjmiemy, że~wektor $\vecZero$ jest współosiowy z~dowolnym innym
-wektorem.
+ścisłą, przyjmiemy, że~wektor $\vecZeroBold$ jest współosiowy z~dowolnym
+innym wektorem.
 
 \vspace{\spaceFour}
 
@@ -806,7 +806,8 @@ z~iksową składową wektora o~numerze $i$.
 
 \Str{20, 22} Definicja konta między wektorami, choć opierająca~się na tym,
 że~„łatwo widać” co to jest kont między wektorami, gdy się je narysuje,
-zostawia pewną lukę dla przypadku, gdy jeden wektor jest równy $\vecZero$.
+zostawia pewną lukę dla przypadku, gdy jeden wektor jest równy
+$\vecZeroBold$.
 
 Aby ją zapełnić przyjmujemy, że~jeśli co najmniej jeden z~wektorów
 $\vecabold$ i~$\vecbbold$ jest wektorem zerowym to kąt między nimi
@@ -935,11 +936,128 @@ lub~$\varepsilon_{ j_{ 1 } i k } = -1$, $\varepsilon_{ j_{ 1 } m n } = 1$. Wobec
 z~relacji między $j_{ 1 }, i, k, m, n$ dostajemy, że~tyle samo wynosi prawa
 strona tego wzoru, co kończy dowód.
 
+\vspace{\spaceFour}
+
+
+
+\Str{24} W~tym miejscu Skalmierski stwierdził, że~prawdziwe jest twierdzenie
+które można by wysłowić w~następujący sposób. „Momenty dwóch wektorów
+obliczone względem ustalonego punktu są równe wtedy i~tylko wtedy, gdy te
+wektory są równoważne i~współosiowe”. Takie twierdzenie jednak nie zachodzi.
+
+Rozważmy najpierw wektory leżące na prostych przechodzących przez punkt
+$O$. Momenty wszystkich tych wektorów względem punktu $O$ są równe
+$\vecZeroBold$, widzimy więc, że~istnieje nieskończenie wiele wektorów,
+które nie muszą być ani równoważne, ani współosiowe, a~momenty ich obu są
+równe $\vecZeroBold$. Widzimy też, że o~równoważności i~współosiowości
+wektorów których moment wynosi $\vecZeroBold$ nie możemy nic powiedzieć.
+
+Zauważmy też, że~poza przypadkiem wymienionym wyżej, jest tylko jedna inna
+możliwość, że~moment wektory jest równy $\vecZeroBold$. Mianowicie gdy
+liczymy moment wektora zerowego zaczepionego w~dowolnym punkcie
+przestrzeni.
+
+Rozważmy teraz wektory\footnote{Ze względu na wygodę, nie będę w~notacji
+  rozróżniał między wektorem, $\alpha$~jego współrzędnymi.}:
+$\vecabold = [ 0, 1, 0 ]$ z~wektorem wodzącym jego punktu zaczepienia
+$\vecrbold_{ 1 } = [ 1, 0, 0 ]$ i~$\vecbbold = [ -1, 0,  0 ]$ z~wektorem
+wodzącym punktu zaczepienia $\vecrbold_{ 2 } = [ 0, 1, 0 ]$. Jak łatwo
+sprawdzić zachodzi
+\begin{equation}
+  \label{eq:SkalmierskiMechanika-07}
+  \vecMbold = \vecrbold_{ 1 } \times \vecabold =
+  \vecrbold_{ 2 } \times \vecbbold = [ 0, 0, 1 ].
+\end{equation}
+Wektory $\vecabold$ i~$\vecbbold$ nie są ani równoważne, ani~współliniowe.
+
+Przykład przedstawiony w~poprzednim paragrafie można uogólnić w~następujący
+sposób. Mianowicie zauważając, że~iloczyn wektorowy jest niezmiennicze ze
+względu na obroty: jeśli dwa wektory $\vecabold$ i~$\vecbbold$ zaczepione
+w~punkcie~$A$ obrócimy o~ten sam kąt wokół punktu $A$, to ich iloczyn
+wektorowy nie ulegnie zmianie. W~naszym przypadku sytuacja jest trochę
+bardziej skomplikowana.
+
+Niech $O$ będzie punktem względem którego liczymy moment wektora, $A_{ 0 }$
+punktem w~którym jest zaczepiony wektor $\vecabold_{ 0 }$. Jeśli teraz
+obrócimy wektor wodzący punktu $A$, który będziemy oznaczać
+$\vecrbold_{ 0 }$, o~kąt $\varphi$ wokół punktu $O$ to otrzymamy nowy wektor
+$\vecrbold_{ 1 }$ pokazujący inny punkt. Punkt wskazywany przez wektor
+$\vecrbold_{ 1 }$ oznaczmy przez $A_{ 1 }$. Jeśli teraz obrócimy wektor
+$\vecabold_{ 0 }$ o~kąt $\varphi$ wokół punktu $A_{ 0 }$, to otrzymany nowy wektor
+który oznaczymy przez $\vecabold_{ 1 }$. Teraz wektor $\vecabold_{ 1 }$
+zaczepiamy w~punkcie $A_{ 1 }$.
+
+Po tak przeprowadzonej operacji moment wektora $\vecabold_{ 1 }$
+zaczepionego w~punkcie $A_{ 1 }$ jest taki sam, jak wektora $\vecabold_{ 0 }$
+zaczepionego w~punkcie $A_{ 0 }$. Wynika to z tego, że~tak przeprowadzona
+transformacja zachowuje długość wektorów oraz kąt między wektorem
+a~wektorem wodzącym jego punktu zaczepienia. Łatwo zauważyć, że~równość
+\eqref{eq:SkalmierskiMechanika-07} zachodzi, bo wektor $\vecbbold$ powstaje
+przez obrót wektora $\vecabold$ o~kąt $\pi / 2$ zgodnie z~procedurą opisaną
+powyżej.
+
+Rozważmy jeszcze jeden przypadek. Niech będzie dany wektor $\vecabold$
+o~wektorze wodzącym $\vecrbold_{ 1 }$ i~niech dana będzie liczba rzeczywista
+$\alpha \neq 0$. Rozważmy wektor $\vecbbold = \alpha \vecabold$, zaczepiony w~punkcie
+danym przez wektor $\vecrbold_{ 2 } = ( 1 / \alpha ) \vecrbold_{ 1 }$. Łatwo
+zauważyć, że
+\begin{equation}
+  \label{eq:SkalmierskiMechanika-08}
+  \vecrbold_{ 2 } \times \vecbbold =
+  \left( \frac{ 1 }{ \alpha } \vecrbold_{ 1 } \right) \times ( \alpha \vecabold ) =
+  \vecrbold_{ 1 } \times \vecabold.
+\end{equation}
+Otrzymaliśmy całą klasę wektorów, które nie są równoważne, acz są
+współosiowe, których momenty względem punktu $O$ są takie same. Zwróćmy
+uwagę, że jak w poprzednim przykładzie z~obrotami, tutaj również zmieniamy
+nie tylko wektor, ale też jego punkt zaczepienia.
+
+Prawdopodobnie można podać wyczerpującą klasyfikację wektorów posiadających
+ten sam moment względem punktu $O$, jedna powyższe przykłady sugerują,
+iż~gra nie jest warta świeczki, dlatego poprzestaniemy na udowodnieniu
+poniższego twierdzenia.
 
 
 
 
 
+% #############
+\begin{theorem}
+
+  Jeżeli wektory $\vecabold$ i~$\vecbbold$ są równoważne i~współosiowe, to
+  ich momenty są równe.
+
+\end{theorem}
+
+
+
+\begin{proof}
+
+  Skoro wektory
+  $\vecabold$ i~$\vecbbold$ są równoważne i~współosiowe więc różnią się tyko
+  punktem zaczepienia na pewnej prostej. Zgodnie z tym co powiedziany
+  poprzednio będziemy je więc oznaczać tym samym symbolem $\vecabold$. Tym
+  samym mamy
+  \begin{equation}
+    \label{eq:SkalmierskiMechanika-07}
+    \vecMbold_{ 1 } = \vecrbold_{ 1 } \times \vecabold, \quad
+    \vecMbold_{ 2 } = \vecrbold_{ 2 } \times \vecabold.
+  \end{equation}
+  Skoro te wektory różnią się tylko punktem zaczepienia na pewnej prostej,
+  zaś na punkt te wskazują wektory $\vecrbold_{ 1 }$ i~$\vecrbold_{ 2 }$ to
+  istnieje taki wektor $\vecRbold$ współosiowy z~$\vecabold$, taki że
+  $\vecrbold_{ 2 } = \vecrbold_{ 1 } + \vecRbold$. Tym samym mamy
+  \begin{equation}
+    \label{eq:SkalmierskiMechanika-08}
+    \vecMbold_{ 2 } =
+    \vecrbold_{ 2 } \times \vecabold =
+    ( \vecrbold_{ 1 } + \vecRbold ) \times \vecabold =
+    \vecrbold_{ 1 } \times \vecabold + \vecRbold \times \vecabold =
+    \vecrbold_{ 1 } \times \vecabold + \vecZeroBold = \vecMbold_{ 1 }.
+  \end{equation}
+
+\end{proof}
+% #############
 
 
 
