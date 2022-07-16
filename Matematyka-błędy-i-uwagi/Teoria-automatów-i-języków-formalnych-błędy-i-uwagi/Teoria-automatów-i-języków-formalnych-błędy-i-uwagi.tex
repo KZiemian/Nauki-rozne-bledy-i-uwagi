@@ -84,6 +84,7 @@
 \usepackage{latexgeneralcommands}
 \usepackage{mathcommands}
 % \usepackage{calculuscommands}
+\newcommand{\conca}{\textrm{conca}}
 % \usepackage{SchwartzBooksCommands}  % Pakiet napisany m.in. dla tego pliku.
 
 
@@ -128,6 +129,8 @@
   Błędy i~uwagi}
 
 \author{Kamil Ziemian}
+
+
 % \date{}
 % ---------------------------------------------------------------------
 
@@ -258,10 +261,112 @@ wydaje mi~się, że~lepiej wyglądałby symbol $\textrm{Ker}_{ h }$.
 
 
 \start \Str{8} Wedle podanej tu definicji wolny monoid $M$ nad
-alfabetem $A$ jest obiektem o~pewnej bardzo konkretnej strukturze
-ontologicznej. Sprawa ta prowadzi do pewnych niejasności w~dalszym wykładzie materiału.
+alfabetem $A$, który będziemy oznaczać również symbolem $A^{ * }$,
+jest obiektem o~pewnej bardzo konkretnej strukturze ontologicznej.
+Sprawa ta prowadzi do pewnych niejasności w~dalszym wykładzie materiału.
 
-???????
+Mianowicie bierzemy pewien zbiór $A$, którego elementy noszą nazwę „liter” lub „symboli” (patrz uwaga do str. 9) następnie tworzymy zbiór wszystkich ciągów tych symboli, który będziemy oznaczać symbolem $A^{ * }$.
+\begin{equation}
+  \label{eq:Forys-Forys-01}
+  A^{ * } =
+  \{ ( a_{ 1 }, a_{ 2 }, a_{ 3 }, \ldots, a_{ n } ) \;\; : \;\; n \geq 0, \;
+  a_{ i } \in A \}.
+\end{equation}
+Wedle tej definicji do $A^{ * }$ należy ciąg pusty, oznaczany symbolem
+\textrm{"1"}. Taki ciąg intuicyjnie jest prosty do pojęcia, zaś~bardziej
+formalnie jest to odwzorowanie $f : \emptyset \to A$.
+
+W~zbiorze $A^{ * }$ wprowadzamy też działanie $\cdot$ wzorem
+\begin{equation}
+  \label{eq:Froys-Forys-02}
+  ( a_{ 1 }, a_{ 2 }, \ldots, a_{ n } ) \cdot ( b_{ 1 }, b_{ 2 }, \ldots, b_{ m } ) =
+  ( a_{ 1 }, a_{ 2 }, \ldots, a_{ n }, b_{ 1 }, b_{ 2 }, \ldots, b_{ m } ).
+\end{equation}
+
+W~dalszym ciągu książki dowiadujemy~się, że klasycznym monoidem wolnym jest
+$( \Nbb_{ 0 }, +, 0 )$. Powstaje teraz pytanie, czy aby móc powiedzieć,
+że~zbiór liczb naturalnych z~$0$ jest monoidem wolnym, nie musimy go
+przedstawić jako zbioru ciągów jakiś symboli, tak jak jest to przedstawione
+w~powyższej definicji? To jednak rodzi pewne problemy.
+
+Zauważmy, że~możemy wprawdzie przyjąć\footnote{Nie będziemy tu poruszać
+  niezwykle interesującego i~ważnego zagadnienie, tego mianowicie,
+  że~w~pewnych teoriach typów „obiekty izomorficzne są identyczne” i~tym
+  samym, nie ma dwóch różnych „modeli liczb naturalnych” z~zerem czy bez.
+  Zawędrowalibyśmy tym sposobem zbyt daleko od właściwego tematu.}, że~zbiór
+$A = \{ | \}$, liczba $0$ to pusty ciąg, $1 = ( | )$, $2 = ( |, | )$,
+$3 = ( |, |, | )$, etc., jednak podstawowa intuicja matematyczna mówi,
+że~wprowadzanie takiej konstrukcji nie powinno być konieczne. Zanim
+przejdziemy do dyskusji tego zagadnienia, zauważmy, że~w tak podanym wolnym
+monoidzie $A^{ * }$ konkatenacja ciągów rzeczywiście prowadzi do tego co
+intuicyjnie rozpoznajemy jako dodawanie liczb naturalnych. Przykładowo
+\begin{equation}
+  \label{eq:Forys-Forys-03}
+  1 + 2 = ( | ) \cdot ( |, | ) = ( |, |, | ) = 3.
+\end{equation}
+
+Wróćmy teraz do problemu, czemu takie podejście do liczby naturalnych
+jawi~się intuicji matematycznej jako niekonieczne. Powinno być bowiem
+możliwe myślenie o~liczbach naturalnych jako „po prostu o liczbach”, jako
+autonomicznych bytach, nie zaś jako ciągach jakiegoś symbolu. Dodatkowo,
+taka definicji to błędne koło, samo bowiem pojęcie ciągu o~skończonej
+długości wymaga uznania, że~wiemy czym jest zbiór liczb $\{ 1, 2, \ldots, n \}$.
+Skończony ciąg symboli to bowiem nic innego jak odwzorowanie
+$f : \{ 1, 2, \ldots, n \} \to A$. Z~tego powodu potrzebujemy definicji liczb
+naturalnych, która nie bazuje na pojęciu ciągu, jedną z~nich jest ta, która
+bazuje na użyciu zbioru pustego.
+
+Rozważmy teraz inny przykład. Zbiór wszystkich macierzy kwadratowych wymiaru
+$n$, który będziemy oznaczać symbolem $\GL( m )$, możemy rozpatrywać jako
+monoid $( \GL( m ), \cdot, \matUnit )$, gdzie $\cdot$ to mnożenie macierzy, zaś
+$\matUnit$ to macierz jednostkowa $m \times m$. Czy jest więc w~ogóle sens
+w~zadawaniu pytania~się, czy ten monoid zawiera jakiś podmonoid wolny,
+rozumiany jako zbiór ciągów z~działaniem konkatenacji? Wszak mając dwie
+macierze $A$ i~$B$ należące do $\GL( m )$ musielibyśmy z~jednej strony
+rozważać ich iloczyn $A \cdot B$, z~drugiej ciąg dwuelementowy $( A, B )$
+i~ustalić relację między tymi dwoma bytami. Nie jest powiedziane, że~nie
+można utożsamić konkretnej macierzy kwadratowej, z~ciągiem jakiejś zbioru
+macierzy, acz taka konstrukcja wydaje~się znacznie mniej naturalna, niż
+przedstawiona powyżej dla liczb naturalnych.
+
+W~świetle tego proponuję następujące wyjście z~sytuacji. \textbf{Wolnym
+  monoidem językowym $A^{ * }$ nad alfabetem $A$} będziemy nazywać wcześniej
+określony zbiór ciągów wraz z~działaniem konkatenacji. Jest więc to obiekt
+o~konkretnej strukturze ontologicznej. Teraz ustalamy, że~monoid
+$( M, \cdot, 1_{ M } )$ jest monoidem wolnym, jeśli jest izomorficzny z~pewnym
+wolnym monoidem językowym $A^{ * }$ nad alfabetem $A$. Zbiór $A$ może być
+podzbiorem $M$ lub nie. Jak pokazują twierdzenia udowodnione na stronach
+9--12, jeśli istnieje dowolny zbiór $A$, taki że $M$ jest izomorficzny
+z~wolnym monoidem językowym $A^{ * }$, to można znaleźć taki zbiór $B \subset M$,
+że~$M$ jest izomorficzny z~wolnym monoidem językowym $B^{ * }$. Jednak
+poprawne omówienie tej kwestii wymaga uporządkowania kilku pojęć.
+
+Również z~tych twierdzeń wynika wniosek, że~jeśli dany monoid
+$( M, \cdot, 1_{ M } )$ jest monoidem wolnym, to istnieje taki zbiór $B$,
+że~każdy element $m \in M$, $m \neq 1_{ M }$ można przedstawić w~jeden i~tylko
+jeden sposób jako
+\begin{equation}
+  \label{eq:Forys-Forys-04}
+  b_{ 1 } \cdot b_{ 2 } \cdot \ldots \cdot b_{ n }, \quad
+  b_{ i } \in B.
+\end{equation}
+Zauważmy, że~w~powyższym wyrażeniu może zachodzić $b_{ i } = b_{ j }$ dla
+$i \neq j$. W~istocie ta własność jest równoważna przyjętej definicji i~tym
+samym można by ją przyjąć w~jej miejsce. Nie zrobiliśmy tego, bo zapisanie
+tej definicji w~sposób precyzyjny „od zera” wymagało tyle miejsca, że~nie
+wygląda na to, byśmy w~ten sposób coś zyskiwali.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{8} Korzystając z~wprowadzonych wcześniej pojęć, możemy teraz
+zająć~się niejasnościami, jakie wynikają, z~użycia w~tej książce symbolu
+$A^{ * }$ w~dwóch różnych znaczeniach. Jeżeli bowiem $A \subset M$, gdzie $M$ jest
+pewnym monoidem, to symbol $A^{ * }$ może oznaczać zarówno wolny monoid
+językowy nad alfabetem $A$, jak i~podmonoid monoidu $M$ generowany przez
+$A$. Jeśli przyjmiemy, że~$M$ to omawiany już wcześniej monoid macierzy
+kwadratowych $( \GL( m ), \cdot, )$ ????
 
 \vspace{\spaceFour}
 
