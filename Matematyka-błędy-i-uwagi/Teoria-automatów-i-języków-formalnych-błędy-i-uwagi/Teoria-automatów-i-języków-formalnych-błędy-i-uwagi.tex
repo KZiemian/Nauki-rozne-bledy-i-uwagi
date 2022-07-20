@@ -411,10 +411,47 @@ Jeżeli zbiór $A$ jest podany, ale bez wskazania, że jest to podzbiór pewnego
 monoidu $M$, to przez symbol $A^{ * }$ będziemy rozumieć wolny monoid
 językowy nad alfabetem $A$. W~przypadku gdy $A$ jest podzbiorem monoidu $M$,
 ale~rozważać będziemy wolny monoid językowy nad $A$, to zostanie to
-zaznaczone jawnie.
+zaznaczone jawnie. Szczególny przypadkiem, acz nietrudnym do zrozumienia
+jest ten, gdy $A \subset M$ i~$M$ jest monoidem językowym. Wówczas obie definicje
+symbolu $A^{ * }$~się pokrywają.
 
 W~świetle powyższych ustaleń wprowadzimy odpowiednie poprawki do tej
 książeczki.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{8} Dysponując już tak uporządkowanym słownictwem, przeanalizujmy
+strukturę wolnego monoidu językowego $A^{ * }$ na alfabetem $A$. Jeśli potrzebny będzie nam przykład wolnego monoidu językowego, sięgniemy po
+niezwykle ważny w~informatyce monoid $\{ 0, 1 \}^{ * }$. Łatwo spostrzec,
+że~jest to monoid nieprzemienny, przykładowo jeśli $u = 00$, $b = 11$, to
+\begin{equation}
+  \label{eq:Forys-Forys-05}
+  u v = 0011 \neq 1100 = vu.
+\end{equation}
+Nasuwa~się naturalne pytanie: co można powiedzieć o~zbiorze $C$ taki, że dla
+wszystkich $u, v \in C$ zachodzi
+\begin{equation}
+  \label{eq:Forys-Forys-06}
+  uv = vu.
+\end{equation}
+Problem ten wymaga dalszej analizy.
+
+Zauważmy, że~dla monoidu językowego zachodzi równość
+\begin{equation}
+  \label{eq:Forys-Forys-07}
+  | u v | = | u | + | v |.
+\end{equation}
+Wynika ona w~prosty sposób z~definicji konkatenacji. Z~niej i~z~tego,
+że~$| u | \geq 0, u \in M$, wynika, że grupa jedynki w~wolnym monoidzie
+językowym jest trywialna. Choć wniosek ten jest prosty do zrozumienia,
+bardziej sformalizowany dowód wymagałby użycia nierówności
+\begin{equation}
+  \label{eq:Forys-Forys-08}
+  | u v | \geq | u |,
+\end{equation}
+które wynika wprost z~dwóch wspomnianych własności.
 
 \vspace{\spaceFour}
 
