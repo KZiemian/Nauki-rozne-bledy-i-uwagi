@@ -211,8 +211,37 @@ znacznie lepiej, niż używany w tej książce $mod_{ 6 }$.
 $x \in M$ jest odwracalny w~monoidzie $M$ wtedy i tylko wtedy, gdy
 istnieje takie $y \in M$, że $x \cdot y = 1_{ M }$. Jednak monoid nie
 musi być przemienny, więc nie widzę powodu by zachodziła też równość
-$y \cdot x = 1_{ M }$. Trzeba się dokładniej przyjrzeć temu
-problemowi.
+$y \cdot x = 1_{ M }$. Co więcej, wolne monoidy językowe, które zdefiniujemy
+dalej, a~które są dla nas szczególnie interesujące, nie są przemienne, więc problem jest tym poważniejszy.
+
+Wydaje mi, że jest to zwykłe przeoczenie ze strony autorów i~trzeba po
+prostu przyjąć, że~element $x \in M$ nazywamy odwracalny, gdy istnieje
+taki element $y \in M$, że~zachodzi
+\begin{equation}
+  \label{eq:Forys-Forys-01}
+  x \cdot y = y \cdot x = 1_{ M }.
+\end{equation}
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{6} Na tej stronie znajdujemy stwierdzenia, że „zbiór elementów
+odwracalnych monoidu $M$ stanowi podgrupę tego monoidu”. Zwykle przez
+podgrupę rozumie~się podzbiór $G_{ 1 }$ grupy $G_{ 0 }$, taki że~wraz
+z~działaniem odziedziczonym z~$G_{ 0 }$ jest grupą. Tutaj jednak jest mowa,
+że~grupa jedynki, oznaczmy ją $U$ (od ang. \textit{unity}), jest podgrupą
+monoidu, który nie musi być podgrupą.
+
+Sens tego jest dość oczywisty. Mianowicie, że trójka uporządkowana
+$( U, \cdot, 1 )$, gdzie $\cdot$ jest działaniem odziedziczonym po monoidzie $M$,
+zaś $1 \in U$, jest elementem neutralnym tego monoidu, jest grupą. Jednak
+czyni to cały system pojęciowy trochę mniej ścisłym.
+
+Moglibyśmy doprecyzować ten formalizm za pomocą pojęcia algebry ogólnej
+(zob. \cite{BialynickiBirulaZarysAlgebry1987}), lecz zamiast tego będziemy
+po prostu mówić, że~$U$ jest podzbiorem $M$ i~jest grupą. Pod tym kontem
+dokonamy pewnych poprawek w tekście.
 
 \vspace{\spaceFour}
 
@@ -267,18 +296,18 @@ Sprawa ta prowadzi do pewnych niejasności w~dalszym wykładzie materiału.
 
 Mianowicie bierzemy pewien zbiór $A$, którego elementy noszą nazwę „liter” lub „symboli” (patrz uwaga do str. 9) następnie tworzymy zbiór wszystkich ciągów tych symboli, który będziemy oznaczać symbolem $A^{ * }$.
 \begin{equation}
-  \label{eq:Forys-Forys-01}
+  \label{eq:Forys-Forys-02}
   A^{ * } =
   \{ ( a_{ 1 }, a_{ 2 }, a_{ 3 }, \ldots, a_{ n } ) \;\; : \;\; n \geq 0, \;
   a_{ i } \in A \}.
 \end{equation}
 Wedle tej definicji do $A^{ * }$ należy ciąg pusty, oznaczany symbolem
-\textrm{"1"}. Taki ciąg intuicyjnie jest prosty do pojęcia, zaś~bardziej
-formalnie jest to odwzorowanie $f : \emptyset \to A$.
+$1 \equiv \textrm{""}$. Taki ciąg intuicyjnie jest prosty do pojęcia,
+zaś~bardziej formalnie jest to odwzorowanie $f : \emptyset \to A$.
 
 W~zbiorze $A^{ * }$ wprowadzamy też działanie $\cdot$ wzorem
 \begin{equation}
-  \label{eq:Froys-Forys-02}
+  \label{eq:Froys-Forys-03}
   ( a_{ 1 }, a_{ 2 }, \ldots, a_{ n } ) \cdot ( b_{ 1 }, b_{ 2 }, \ldots, b_{ m } ) =
   ( a_{ 1 }, a_{ 2 }, \ldots, a_{ n }, b_{ 1 }, b_{ 2 }, \ldots, b_{ m } ).
 \end{equation}
@@ -301,7 +330,7 @@ przejdziemy do dyskusji tego zagadnienia, zauważmy, że~w tak podanym wolnym
 monoidzie $A^{ * }$ konkatenacja ciągów rzeczywiście prowadzi do tego co
 intuicyjnie rozpoznajemy jako dodawanie liczb naturalnych. Przykładowo
 \begin{equation}
-  \label{eq:Forys-Forys-03}
+  \label{eq:Forys-Forys-04}
   1 + 2 = ( | ) \cdot ( |, | ) = ( |, |, | ) = 3.
 \end{equation}
 
@@ -365,8 +394,27 @@ zająć~się niejasnościami, jakie wynikają, z~użycia w~tej książce symbolu
 $A^{ * }$ w~dwóch różnych znaczeniach. Jeżeli bowiem $A \subset M$, gdzie $M$ jest
 pewnym monoidem, to symbol $A^{ * }$ może oznaczać zarówno wolny monoid
 językowy nad alfabetem $A$, jak i~podmonoid monoidu $M$ generowany przez
-$A$. Jeśli przyjmiemy, że~$M$ to omawiany już wcześniej monoid macierzy
-kwadratowych $( \GL( m ), \cdot, )$ ????
+$A$, są to więc dwa różne byty.
+
+Jeśli przyjmiemy, że~$M$ to omawiany już wcześniej monoid macierzy
+kwadratowych $( \GL( m ), \cdot, \matUnit )$, zaś
+$A = \{ B_{ 1 }, B_{ 2 }, B_{ 3 }, \ldots, B_{ n } \}$, to symbol $A^{ * }$ możne
+oznaczać zbiór ciągów macierzy kwadratowych,
+np.~$( B_{ 1 }, B_{ 2 }, B_{ 3 } )$, jak i~zbiór macierzy kwadratowych
+utworzonych jako iloczyny macierzowy macierzy ze zbioru $A$. W~tym drugim
+przypadku do tego zbioru należy choćby macierz $B_{ 1 } \cdot B_{ 2 } \cdot B_{ 3 }$.
+
+By usunąć tego typu dwuznaczności przyjmiemy następującą konwencję. Jeżeli
+jest jawnie powiedziane, że~$A$ jest podzbiorem monoidu $M$, to przez symbol
+$A^{ * }$ będziemy rozumieli najmniejszy podmonoid $M$ zawierający $A$.
+Jeżeli zbiór $A$ jest podany, ale bez wskazania, że jest to podzbiór pewnego
+monoidu $M$, to przez symbol $A^{ * }$ będziemy rozumieć wolny monoid
+językowy nad alfabetem $A$. W~przypadku gdy $A$ jest podzbiorem monoidu $M$,
+ale~rozważać będziemy wolny monoid językowy nad $A$, to zostanie to
+zaznaczone jawnie.
+
+W~świetle powyższych ustaleń wprowadzimy odpowiednie poprawki do tej
+książeczki.
 
 \vspace{\spaceFour}
 
@@ -438,7 +486,8 @@ symboli”.
 \noindent
 \StrWd{6}{13} \\
 \Jest  jest podgrupą $M$. \\
-\Powin jest grupą zawartą, jako zbiór, w~$M$. \\
+\Powin jest grupą zawartą, jako zbiór, w~$M$. Grupa ta dziedziczy po $M$
+działanie i~element neutralny. \\
 \StrWd{6}{1} \\
 \Jest  \textit{dla} $x \in S^{ 1 }$ $\rho_{ a }( x )= a x$. \\
 \Powin $\rho_{ a }( x ) = a x$ \textit{dla} $x \in S^{ 1 }$. \\
