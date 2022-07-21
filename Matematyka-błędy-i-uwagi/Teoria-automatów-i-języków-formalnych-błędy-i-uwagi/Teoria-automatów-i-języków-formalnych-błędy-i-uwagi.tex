@@ -289,6 +289,14 @@ wydaje mi~się, że~lepiej wyglądałby symbol $\textrm{Ker}_{ h }$.
 
 
 
+\start \Str{8} Rysunki na tej stronie są zrobione dość niechlujnie. Wystarczy
+zwrócić uwagę, że~symbol $h$ leży w~różnych odległości od lewego marginesu,
+podczas, gdy powinien być w~tej samej pozycji.
+
+\vspace{\spaceFour}
+
+
+
 \start \Str{8} Wedle podanej tu definicji wolny monoid $M$ nad
 alfabetem $A$, który będziemy oznaczać również symbolem $A^{ * }$,
 jest obiektem o~pewnej bardzo konkretnej strukturze ontologicznej.
@@ -468,7 +476,36 @@ symboli”.
 
 
 
+\start \Str{9} Dowód twierdzenia 1.2.1 byłby znacznie prostszy do
+zrozumienia, gdyby został wskazane, że~jeśli $h : A^{ * } \to M$ jest
+rozszerzeniem odwzorowania $f : A \to M$ do homomorfizmu musi spełniać
+następujące trzy warunki
+\begin{subequations}
+  \begin{align}
+    \label{eq:Forys-Forys-08-A}
+    h( 1 ) &= 1_{ M }, \\
+    \label{eq:Forys-Forys-08-B}
+    h( a ) &= f( a ), \quad \forall \, a \in A, \\
+    \label{eq:Forys-Forys-08-C}
+    h( a_{ 1 } \ldots a_{ n } )
+           &= f( a_{ 1 } ) \cdot \ldots \cdot f( a_{ n } ), \quad
+             \forall \, a_{ i } \in A^{ * }.
+  \end{align}
+\end{subequations}
+Dla większej przejrzystości działanie wewnętrzne w~monoidzie $M$ zapisaliśmy
+za pomocą symbolu $\cdot$. Równania te gwarantują nam, że~może istnieć co
+najwyżej jedno odwzorowanie $h : A^{ * } \to M$, dla których są one spełnione.
 
+Możemy teraz użyć równań
+\eqref{eq:Forys-Forys-08-A}-\eqref{eq:Forys-Forys-08-C}, do
+\textit{zdefiniowania} homomorfizmu $h$. Z~definicji $A^{ * }$ wynika, że
+odwzorowanie dane tymi wzorami ma za swoją dziedzinę cały zbiór $A^{ * }$. Dla
+każdego $a \in A^{ * }$ zachodzi też $h( a ) \in M$ i~podobnie można sprawdzić
+pozostałe warunki na to, by $h$ było homomorfizmem monoidu $A^{ * }$ w~monoid
+$M$. Ponieważ są to dość proste\footnote{Jak to niektórzy powiadają „Nie ma
+  czego dowodzić”.} opuścimy te rozważania.
+
+\vspace{\spaceFour}
 
 
 
@@ -570,6 +607,11 @@ działanie i~element neutralny. \\
 \StrWd{9}{6} \\
 \Jest  \textit{monoidu} \\
 \Powin \textit{monoidu językowego} \\
+\StrWg{9}{25} \\
+\Jest  \textit{homomorfizm} \\
+\Powin \textit{homomorfizm z~wolnego monoidu językowego w~dowolny monoid} \\
+
+
 
 
 \vspace{\spaceTwo}
