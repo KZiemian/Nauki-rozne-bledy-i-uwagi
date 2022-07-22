@@ -578,14 +578,13 @@ następujące trzy warunki
     h( a ) &= f( a ), \quad \forall \, a \in A, \\
     \label{eq:Forys-Forys-11-C}
     h( a_{ 1 } \ldots a_{ n } )
-           &= f( a_{ 1 } ) \cdot \ldots \cdot f( a_{ n } ), \quad
-             \forall \, a_{ i } \in A.
+           &= f( a_{ 1 } ) \cdot \ldots \cdot f( a_{ n } ),
   \end{align}
 \end{subequations}
-Dla większej przejrzystości działanie wewnętrzne w~monoidzie $M$
-zapisaliśmy za pomocą symbolu $\cdot$. Równania te gwarantują nam,
-że~może istnieć co najwyżej jedno odwzorowanie $h : A^{ * } \to M$,
-dla których są one spełnione.
+$\forall \, a_{ i } \in A$, $i = 1, 2, \ldots, n$. Dla większej przejrzystości działanie
+wewnętrzne w~monoidzie $M$ zapisaliśmy za pomocą symbolu $\cdot$. Równania te
+gwarantują nam, że~może istnieć co najwyżej jedno odwzorowanie
+$h : A^{ * } \to M$, dla których są one spełnione.
 
 Możemy teraz użyć równań
 \eqref{eq:Forys-Forys-11-A}-\eqref{eq:Forys-Forys-11-C}, do
@@ -661,17 +660,15 @@ następujące własności
                        + h( \texttt{"} a_{ 2 } \texttt{"} ) + \ldots
                        + h( \texttt{"} a_{ n } \texttt{"} ) = \\
     % \nolabel
-                     &= a_{ 1 } + a_{ 2 } + \ldots + a_{ n }, \quad
-                       a_{ i } \in \{ 0, 1 \}.
+                     &= a_{ 1 } + a_{ 2 } + \ldots + a_{ n },
   \end{align}
 \end{subequations}
-Przykładowo
+$\forall \, a_{ i } \in \{ 0, 1 \}$, $i = 1, 2, \ldots, n$. Przykładowo
 \begin{equation}
   \label{eq:Forys-Forys-15}
   h( \texttt{"} 0100110 \texttt{"} ) =
   0 + 1 + 0 + 0 + 1 + 1 + 0 = 3.
 \end{equation}
-
 Łatwo zauważyć, że~odwzorowanie $h$ nie jest izomorfizmem. Świadczy o~tym
 choćby to, że
 \begin{equation}
@@ -864,7 +861,8 @@ wzór \eqref{eq:Forys-Forys-18}.
   monoidem językowym $B^{ * }$} \\
 \StrWd{10}{11} \\
 \Jest  \textit{generatorów.} \\
-\Powin \textit{generatorów i~jest równa $S \setminus S^{ 2 }$}. \\
+\Powin \textit{generatorów i~jest równa $S \setminus S^{ 2 }$, gdzie
+  $S = M \setminus \{ 1_{ M } \}$}. \\
 
 
 \vspace{\spaceTwo}
