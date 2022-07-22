@@ -188,7 +188,7 @@ ale polskie standardy typograficzna mówią, że~powinno~się stosować
 formę: „cytowany tekst”. Dodatkowo, wyjątek warto uczynić dla ciągów
 symboli (liter z~danego alfabetu $A$), nazywanych napisami bądź
 stringami (ang. \textit{strings}), które zgodnie z~przyjętą
-w~informatyce konwencją będziemy oznaczać jako \texttt{"abc"}.
+w~informatyce konwencją będziemy oznaczać jako $\texttt{"} abc \texttt{"}$.
 
 Więcej o~napisach powiemy przy okazji omawiania monoidów wolnych.
 
@@ -240,10 +240,27 @@ monoidzie $M$, zaś $1 \in U$, jest elementem neutralnym tego monoidu,
 jest grupą. Jednak czyni to cały system pojęciowy trochę mniej
 ścisłym.
 
-Moglibyśmy doprecyzować ten formalizm za pomocą pojęcia algebry
-ogólnej (zob. \cite{BialynickiBirulaZarysAlgebry1987}), lecz zamiast
-tego będziemy po prostu mówić, że~$U$ jest podzbiorem $M$ i~jest
-grupą. Pod tym kontem dokonamy pewnych poprawek w tekście.
+Możemy doprecyzować ten formalizm za pomocą pojęcia algebry
+ogólnej (zob. \cite{BialynickiBirulaZarysAlgebry1987}) i~w~ostatecznym
+rozrachunku wydaje~się, że~jest to najbardziej ekonomiczne podejście.
+
+Niech $( A, \varphi_{ 1 }, \varphi_{ 2 }, \ldots, \varphi_{ n } )$ będzie algebrą ogólną typu $\alpha$, np.
+monoidem, i~niech $B \subset A$. Jeżeli system
+$( B, \varphi_{ 1 }|_{ B }, \varphi_{ 2 }|_{ B }, \ldots, \varphi_{ n }|_{ B } )$ jest algebrą ogólną
+typu $\beta$, to mówimy, że~$B$ jest podalgebrą ogólną $A$ typu $\beta$.
+Przykładowo, jeśli $( M, \cdot, 1_{ M } )$ jest monoidem, a~$( G, \cdot, 1_{ M } )$,
+gdzie $G \subset M$, jest grupą, to mówimy, że~$G$ jest podgrupą monoidu $M$. Tak
+jak zazwyczaj, będziemy używali też bardziej zwięzłych wyrażeń językowych
+jak „$G$ jest podgrupą $M$”, nie stwierdzając jawnie, że~$M$ jest monoidem.
+
+Idea jaka stoi za tymi pojęciami jest jasna. Po zawężeniu działania danej
+algebry ogólnej $( A, \varphi_{ 1 }, \varphi_{ 2 }, \ldots, \varphi_{ n } )$ do mniejszego zbioru
+$B \subset A$, mogą się zmienić własności tych działań i~tym samym typ algebry.
+Podzbiór $\Pcal$ ciała $\Fbb$ może okazać~się pierścieniem, bo wszystkie
+elementy nieodwracalne, z~wyjątkiem zera, należą do zbioru $\Fbb \setminus \Pcal$.
+
+Wszystkie te rozważania moglibyśmy ująć w~sposób bardziej sformalizowany,
+jednak wydaje~się, że~obecna ich forma jest wystarczająco precyzyjna.
 
 \vspace{\spaceFour}
 
@@ -655,7 +672,7 @@ Przykładowo
 Łatwo zauważyć, że~odwzorowanie $h$ nie jest izomorfizmem. Świadczy o~tym
 choćby to, że
 \begin{equation}
-  \label{eq:Forys-Forys-15}
+  \label{eq:Forys-Forys-16}
   h( \textrm{""} ) = h( \textrm{"} 0 \textrm{"} ) = 0.
 \end{equation}
 
@@ -677,14 +694,32 @@ Jeśli jednak przez $A^{ * }$ rozumiemy wolny monoid językowy, to jak zostało
 wykazane w~poprzednich komentarzach, to homomorfizm $h$ \textit{nie jest}
 izomorfizmem, więc nie możemy napisać równości „$M = A^{ * }$”.
 
-Na koniec zauważmy, że~jeśli $A = \{ 1 \}$ to wówczas $A^{ * }$ jest
-kanonicznie izomorficzny z~$M$.
+Na koniec zauważmy, że~jeśli $A = \{ 1 \}$ to wówczas wolny monoid językowy
+$A^{ * }$ jest kanonicznie izomorficzny z~$M$.
 
 \vspace{\spaceFour}
 
 
 
-\start \Str{10} W~dowodzie twierdzenia 1.2.2 użyte jest mowa o~„długości elementu $m \in M$ w~$B^{ * }$”.
+\start \Str{10} W~dowodzie twierdzenia 1.2.2 użyte jest mowa o~„długości elementu $m \in M$ w~$B^{ * }$”. Sens tego jest następujący. Dany jest zbiór $B$, niekoniecznie zawarty w~$M$, i~izomorfizm $f$, nie musi być to izomorfizm kanoniczny, między wolnym monoidem językowym $B^{ * }$, a~$M$. Dla każdego elementu $m \in M$ istnieje więc $w \in B^{ * }$, taki że $f( w ) = m$. Możemy więc przypisać elementowi $m$ liczbę z~$\Nbb_{ 0 }$, którą nazywamy jego długością, za pomocą wzoru
+\begin{equation}
+  \label{eq:Forys-Forys-17}
+  | m | := | w |.
+\end{equation}
+Tylko tyle jest nam potrzebne do udowodnienia twierdzenia 1.2.2.
+
+Wybiegnijmy trochę w~przyszłość. Jeśli monoid $M$ jest monoidem wolnym, to~z~definicji jest on kanonicznie izomorficzny z~wolnym monoidem językowym $A^{ * }$. Dzięki twierdzeniu 1.2.2 i~wnioskom z~niego jest ono kanonicznie izomorficzny zbiór $A$ jest jednoznacznie wyznaczony przez relację
+\begin{equation}
+  \label{eq:Forys-Forys-18}
+  A = S \setminus S^{ 2 }, \quad
+  S = M \setminus \{ 1_{ M } \}.
+\end{equation}
+W~każdym monoidzie wolnym istnieje więc kanoniczne pojęcie długości
+elementu $m \in M$. Mianowicie, niech $h : A^{ * } \to M$ będzie kanonicznym
+izomorfizmem tych monoidów i~niech $m = h( w )$. Przez \textbf{długość
+  elementu $m \in M$} rozumiemy liczbę całkowitą nieujemną określoną przez
+wzór \eqref{eq:Forys-Forys-18}.
+
 
 Drugą rzeczą na którą zwrócimy uwagę jest to, co~się dzieje w~sytuacji, gdy
 odwzorowanie $h : A^{ * } \to M$ jest izomorfizmem. Będziemy przy tym rozważać
@@ -731,7 +766,6 @@ określona. ????
     6  & 11 & & $\forall x, y \in S$ & $\forall x, y \in S,$ \\
     6  & 14 & & $\forall x, y \in M$ & $\forall x, y \in M,$ \\
     6  & & 14 & $x \cdot y = 1$ & $x \cdot y = 1_{ M }$ \\
-    6  & & 13 & Podgrupa & Grupa \\
     7  & & 12 & $\forall x, y, z \in S$ & $\forall x, y, z \in S,$ \\
     7  & & 10 & $\forall x, y, z \in S$ & $\forall x, y, z \in S,$ \\
     7  & &  8 & $\forall x, y, z \in S$ & $\forall x, y, z \in S,$ \\
@@ -754,10 +788,6 @@ określona. ????
 
 
 \noindent
-\StrWd{6}{13} \\
-\Jest  jest podgrupą $M$. \\
-\Powin jest grupą zawartą, jako zbiór, w~$M$. Grupa ta dziedziczy po $M$
-działanie i~element neutralny. \\
 \StrWd{6}{1} \\
 \Jest  \textit{dla} $x \in S^{ 1 }$ $\rho_{ a }( x )= a x$. \\
 \Powin $\rho_{ a }( x ) = a x$ \textit{dla} $x \in S^{ 1 }$. \\
@@ -812,6 +842,10 @@ działanie i~element neutralny. \\
 \StrWd{9}{3} \\
 \Jest  wolnych monoidów (półgrup) \\
 \Powin wolnych monoidów (półgrup) językowych \\
+\StrWg{10}{3} \\
+\Jest  \textit{to znaczy} $M = B^{ * }$ \\
+\Powin \textit{czyli $M$ jest kanonicznie izomorficzny z~pewnym wolnym
+  monoidem językowym $B^{ * }$} \\
 
 
 \vspace{\spaceTwo}
