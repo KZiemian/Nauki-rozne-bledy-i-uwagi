@@ -379,9 +379,15 @@ W~świetle tego proponuję następujące wyjście z~sytuacji.
 \textbf{Wolnym monoidem językowym $A^{ * }$ nad alfabetem $A$}
 będziemy nazywać wcześniej określony zbiór ciągów wraz z~działaniem
 konkatenacji. Jest więc to obiekt o~konkretnej strukturze
-ontologicznej. Teraz ustalamy, że~monoid $( M, \cdot, 1_{ M } )$ jest
-monoidem wolnym, jeśli jest izomorficzny z~pewnym wolnym monoidem
-językowym $A^{ * }$ nad alfabetem $A$. Zbiór $A$ może być podzbiorem
+ontologicznej.
+
+Wybiegając trochę w~przyszłość, zdefiniujemy teraz monoid wolny, korzystając
+z~pojęcia kanonicznego homomorfizmu. Monoid $( M, \cdot, 1_{ M } )$ jest
+\textbf{monoidem wolnym}, jeśli jest istnieje taki zbiór $A \subset M$, że~wolny
+monoid językowym $A^{ * }$ nad alfabetem $A$ jest kanonicznie izomorficzny
+z~$M$. Nie widać więc powodu by monoid $M$ miał bardziej ustaloną strukturę ontologiczną, niż np. grupa abelowa.
+
+????? Zbiór $A$ może być podzbiorem
 $M$ lub nie. Jak pokazują twierdzenia udowodnione na stronach 9--12,
 jeśli istnieje dowolny zbiór $A$, taki że $M$ jest izomorficzny
 z~wolnym monoidem językowym $A^{ * }$, to można znaleźć taki zbiór
@@ -389,7 +395,7 @@ $B \subset M$, że~$M$ jest izomorficzny z~wolnym monoidem językowym
 $B^{ * }$. Jednak poprawne omówienie tej kwestii wymaga uporządkowania
 kilku pojęć.
 
-Również z~tych twierdzeń wynika wniosek, że~jeśli dany monoid
+???? Również z~tych twierdzeń wynika wniosek, że~jeśli dany monoid
 $( M, \cdot, 1_{ M } )$ jest monoidem wolnym, to istnieje taki zbiór
 $B$, że~każdy element $m \in M$, $m \neq 1_{ M }$ można przedstawić
 w~jeden i~tylko jeden sposób jako
@@ -496,7 +502,9 @@ jeżeli przez symbol $A^{ * }$ rozumiemy podmonoid algebraiczny, to $A^{ * } =
 językowy to wówczas zachodzi
 \begin{equation}
   \label{eq:Forys-Forys-09}
-  A^{ * } = \{ \textrm{""}, 0, 00, 000, 0000, \ldots \}.
+  A^{ * } = \{ \textrm{""}, \textrm{"} 0 \textrm{"},
+  \textrm{"} 00 \textrm{"}, \textrm{"} 000 \textrm{"},
+  \textrm{"} 0000 \textrm{"}, \ldots \}.
 \end{equation}
 Powyższy monoid językowy jest izomorficzny z~całym monoidem
 $( \Nbb_{ 0 }, +, 0)$. Ten izomorfizm zadany jest przez relacje
@@ -551,7 +559,7 @@ następujące trzy warunki
     \label{eq:Forys-Forys-11-C}
     h( a_{ 1 } \ldots a_{ n } )
            &= f( a_{ 1 } ) \cdot \ldots \cdot f( a_{ n } ), \quad
-             \forall \, a_{ i } \in A^{ * }.
+             \forall \, a_{ i } \in A.
   \end{align}
 \end{subequations}
 Dla większej przejrzystości działanie wewnętrzne w~monoidzie $M$
@@ -561,29 +569,49 @@ dla których są one spełnione.
 
 Możemy teraz użyć równań
 \eqref{eq:Forys-Forys-11-A}-\eqref{eq:Forys-Forys-11-C}, do
-\textit{zdefiniowania} homomorfizmu $h$. Z~definicji $A^{ * }$ wynika,
-że odwzorowanie dane tymi wzorami ma za swoją dziedzinę cały zbiór
-$A^{ * }$. Dla każdego $a \in A^{ * }$ zachodzi też $h( a ) \in M$
-i~podobnie można sprawdzić pozostałe warunki na to, by $h$ było
-homomorfizmem monoidu $A^{ * }$ w~monoid $M$. Ponieważ są to dość
-proste\footnote{Jak to niektórzy powiadają „Nie ma czego dowodzić”.}
-opuścimy te rozważania.
+\textit{zdefiniowania} homomorfizmu $h$. Ponieważ sprawdzenie, że~tak zadane
+odwzorowanie jest homeomorfizmem jest dość\footnote{Jak to niektórzy
+  powiadają: „Nie ma czego dowodzić”.} opuścimy dyskusję tego tematu.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{9} W~celu uproszczenia rozważań wprowadzimy teraz dodatkową
+terminologię. Homomorfizm $h : A^{ * } \to M$, $A \subset M$, prowadzący z~wolnego
+monoidu językowego $A^{ * }$ do monoidu $M$, jednoznacznie wyznaczony przez
+warunki
+\begin{subequations}
+  \begin{align}
+    \label{eq:Forys-Forys-12-A}
+    h( \textrm{""} ) &= 1_{ M }, \\
+    \label{eq:Forys-Forys-12-B}
+    h( \textrm{"} a \textrm{"} ) &= a, \quad
+                                   \forall \, a \in A,
+  \end{align}
+\end{subequations}
+będziemy nazywali \textbf{kanonicznym homomorfizmem wolnego monoidu $A^{ * }$
+  językowego w~monoid $M$}, lub po prostu \textbf{kanonicznym
+  homomorfizmem}, gdy zbiór $A$ i~monoid $M$ będą wynikać z~kontekstu.
+Jeżeli dodatkowo $h$ jest izomorfizmem, to będziemy oprócz oczywistych
+sformułowań takich jak „kanoniczny izomorfizm”, będziemy również mówili,
+że~$A^{ * }$ i~$M$ są kanonicznie izomorficzne.
+
+Nie potrafię powiedzieć, czy ten homomorfizm jest kanoniczny w~sensie teorii
+kategorii, jednak nie potrafię w~tym momencie wymyślić dla niego lepszej
+nazwy.
 
 \vspace{\spaceFour}
 
 
 
 
-\start \Str{9} Warto zwrócić uwagę na to, że~omawiany tu specjalny
-homomorfizm wolnego monoidu językowego $A^{ * }$ z~monoidem $M$, gdzie
+\start \Str{9} Warto zwrócić uwagę na to, że~omawiany tu homomorfizm
+kanoniczny wolnego monoidu językowego $A^{ * }$ z~monoidem $M$, gdzie
 $A \subset M$ jest zbiorem generatorów $M$, nie musi być izomorfizmem. Zanim
-przejdziemy do dokładniejszego omówienia tej kwestii, przypomnijmy, że~ten
-homomorfizm jest jednoznacznie wyznaczony przez warunek
-\begin{equation}
-  \label{eq:Forys-Forys-12}
-  h( \textrm{"} a \textrm{"} ) = a, \quad
-  a \in A.
-\end{equation}
+przejdziemy do dokładniejszego omówienia tej kwestii, przypomnijmy,
+że~homomorfizm kanoniczny jest jednoznacznie wyznaczony przez warunki
+\eqref{eq:Forys-Forys-12-A}--\eqref{eq:Forys-Forys-12-B}.
 
 By to pokazać rozważmy
 ponownie monoid $( \Nbb_{ 0 }, +, 0 )$ i~wolny monoid językowy
@@ -596,9 +624,10 @@ oczywiste, że
   \textrm{"} 0 0 \textrm{"}, \textrm{"} 0 1 \textrm{"},
   \textrm{"} 1 1 \textrm{"}, \ldots \}.
 \end{equation}
-Homomorfizm $h : A^{ * } \to \Nbb_{ 0 }$ zadajemy za pomocą wzorów
+Kanoniczny homomorfizm $h : A^{ * } \to \Nbb_{ 0 }$ na mocy wzorów
 \eqref{eq:Forys-Forys-11-A}-\eqref{eq:Forys-Forys-11-C}
-i~\eqref{eq:Forys-Forys-12}, które w~twym przypadku przybierają postać
+i~\eqref{eq:Forys-Forys-12-A}-\eqref{eq:Forys-Forys-12-B}, posiada
+następujące własności
 \begin{subequations}
   \begin{align}
     \label{eq:Forys-Forys-14-A}
@@ -624,7 +653,7 @@ Przykładowo
 \end{equation}
 
 Łatwo zauważyć, że~odwzorowanie $h$ nie jest izomorfizmem. Świadczy o~tym
-choćby poniższy przykład
+choćby to, że
 \begin{equation}
   \label{eq:Forys-Forys-15}
   h( \textrm{""} ) = h( \textrm{"} 0 \textrm{"} ) = 0.
@@ -637,10 +666,9 @@ choćby poniższy przykład
 \start \Str{9} Potrzebujemy tu poczynić pewną uwagę odnośnie notacji.
 Przyjmijmy, że $A$ jest podzbiorem monoidu $M$. W~skutek wybranych oznaczeń
 zapis $M = A^{ * }$ może oznaczać, że~podmonoid algebraiczny $A^{ * }$ jest
-równy $M$, z~drugiej zaś strony, iż~wolny podmonoid językowy $A^{ * }$ jest
-izomorficzny z~$M$, gdzie izomorfizm ustala homomorfizm $h$, wyznaczony
-jednoznacznie przez warunek \eqref{eq:Forys-Forys-12}. Obie te sytuacje nie
-są wcale równoważne.
+równy $M$. Jeśli zaś kanoniczny homomorfizm $h : A^{ * } \to M$ jest
+izomorfizmem, to wówczas $M = A^{ * }$, będzie właśnie skrótowym zapisem tego
+izomorfizmu. Obie te sytuacje nie są wcale równoważne.
 
 Rozpatrzmy ponownie monoid $( \Nbb_{ 0 }, +, 0 )$ i~wolny monoid językowy
 $A^{ * } = \{ 0, 1 \}^{ * }$. Jest oczywiste, że~jeśli symbol $A^{ * }$ rozumiemy
@@ -649,14 +677,20 @@ Jeśli jednak przez $A^{ * }$ rozumiemy wolny monoid językowy, to jak zostało
 wykazane w~poprzednich komentarzach, to homomorfizm $h$ \textit{nie jest}
 izomorfizmem, więc nie możemy napisać równości „$M = A^{ * }$”.
 
+Na koniec zauważmy, że~jeśli $A = \{ 1 \}$ to wówczas $A^{ * }$ jest
+kanonicznie izomorficzny z~$M$.
+
+\vspace{\spaceFour}
 
 
-???????????
+
+\start \Str{10} W~dowodzie twierdzenia 1.2.2 użyte jest mowa o~„długości elementu $m \in M$ w~$B^{ * }$”.
 
 Drugą rzeczą na którą zwrócimy uwagę jest to, co~się dzieje w~sytuacji, gdy
 odwzorowanie $h : A^{ * } \to M$ jest izomorfizmem. Będziemy przy tym rozważać
 tylko sytuację, gdy $A \subset M$ i~$A^{ * }$ jest wolny monoidem językowym,
-przypadek ogólniejszy pozostawiamy na razie otwarty. Mianowicie możemy wtedy określić \textbf{długość $| m |$ elementu $m \in M$} za pomocą wzoru
+przypadek ogólniejszy pozostawiamy na razie otwarty. Mianowicie możemy wtedy
+określić \textbf{długość $| m |$ elementu $m \in M$} za pomocą wzoru
 \begin{equation}
   \label{eq:Forys-Forys-16}
   | m | := | w |, \quad
@@ -705,8 +739,9 @@ określona. ????
     7  & &  3 & $M / \rho$ & $M_{ / \rho }$ \\
     8  & & 10 & $n \geq 0\;\;,$ & $n \geq 0,$ \\
     8  & &  7 & $n \!\! = \!\! 0$ & $n = 0$ \\
+    9  & 22 & & $f : A \mapsto M$ & $f : A \to M$ \\
+    9  & 23 & & $h : A^{ * } \mapsto M$ & $h : A^{ * } \to M$ \\
     9  & &  9 & $\to \textrm{\textbf{M}}$ & $\to M$ \\
-    % & & & & \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -765,16 +800,18 @@ działanie i~element neutralny. \\
 \StrWg{9}{14} \\
 \Jest  monoidzie \\
 \Powin monoidzie językowym \\
-\StrWd{9}{6} \\
-\Jest  \textit{monoidu} \\
-\Powin \textit{monoidu językowego} \\
+\StrWg{9}{19} \\
+\Jest  \textit{monoidu $A^{ * }$} \\
+\Powin \textit{wolnego monoidu językowego $A^{ * }$} \\
 \StrWg{9}{25} \\
 \Jest  \textit{homomorfizm} \\
 \Powin \textit{homomorfizm z~wolnego monoidu językowego w~dowolny monoid} \\
 \StrWd{9}{6} \\
 \Jest  \textit{monoidu} $A^{ * }$ \\
 \Powin \textit{monoidu językowego} $A^{ * }$ \\
-
+\StrWd{9}{3} \\
+\Jest  wolnych monoidów (półgrup) \\
+\Powin wolnych monoidów (półgrup) językowych \\
 
 
 \vspace{\spaceTwo}
