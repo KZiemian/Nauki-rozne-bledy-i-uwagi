@@ -191,7 +191,9 @@ symboli (liter z~danego alfabetu $A$), nazywanych napisami bądź
 stringami (ang. \textit{strings}), które zgodnie z~przyjętą
 w~informatyce konwencją będziemy oznaczać jako $\texttt{"} abc \texttt{"}$.
 
-Więcej o~napisach powiemy przy okazji omawiania monoidów wolnych.
+Więcej o~napisach powiemy przy okazji omawiania wolnych monoidów językowych.
+
+
 
 
 
@@ -520,19 +522,19 @@ jeżeli przez symbol $A^{ * }$ rozumiemy podmonoid algebraiczny, to $A^{ * } =
 językowy to wówczas zachodzi
 \begin{equation}
   \label{eq:Forys-Forys-09}
-  A^{ * } = \{ \textrm{""}, \textrm{"} 0 \textrm{"},
-  \textrm{"} 00 \textrm{"}, \textrm{"} 000 \textrm{"},
-  \textrm{"} 0000 \textrm{"}, \ldots \}.
+  A^{ * } = \{ \texttt{""}, \texttt{"} 0 \texttt{"},
+  \texttt{"} 00 \texttt{"}, \texttt{"} 000 \texttt{"},
+  \texttt{"} 0000 \texttt{"}, \ldots \}.
 \end{equation}
 Powyższy monoid językowy jest izomorficzny z~całym monoidem
 $( \Nbb_{ 0 }, +, 0)$. Ten izomorfizm zadany jest przez relacje
 \begin{subequations}
   \begin{align}
     \label{eq:Forys-Forys-10-A}
-    h( \textrm{""} ) &= 0, \\
-    h( \textrm{"} 0 \textrm{"} ) &= 1, \\
-    h( \textrm{"} 0 0 \textrm{"} ) &= 2, \\
-    h( \textrm{"} 0 0 0 \textrm{"} ) &= 3, \\
+    h( \texttt{""} ) &= 0, \\
+    h( \texttt{"} 0 \texttt{"} ) &= 1, \\
+    h( \texttt{"} 0 0 \texttt{"} ) &= 2, \\
+    h( \texttt{"} 0 0 0 \texttt{"} ) &= 3, \\
     &\vdots
   \end{align}
 \end{subequations}
@@ -547,7 +549,7 @@ dokładniejszego wyjaśnienia znaczenia danych symboli.
 
 \start \Str{8--9} By uniknąć nieporozumień, należy jasno stwierdzić, że~gdy
 będziemy mówić o~„zbiorze ciągów liter z~alfabetu $A$” to w domyśle do tego
-zbioru zawsze należy też ciąg pusty \textrm{""}.
+zbioru zawsze należy też ciąg pusty \texttt{""}.
 
 \vspace{\spaceFour}
 
@@ -602,9 +604,9 @@ warunki
 \begin{subequations}
   \begin{align}
     \label{eq:Forys-Forys-12-A}
-    h( \textrm{""} ) &= 1_{ M }, \\
+    h( \texttt{""} ) &= 1_{ M }, \\
     \label{eq:Forys-Forys-12-B}
-    h( \textrm{"} a \textrm{"} ) &= a, \quad
+    h( \texttt{"} a \texttt{"} ) &= a, \quad
                                    \forall \, a \in A,
   \end{align}
 \end{subequations}
@@ -638,9 +640,9 @@ oczywiste, że
 \begin{equation}
   \label{eq:Forys-Forys-13}
   A^{ * } =
-  \{ \textrm{""}, \textrm{"} 0, \textrm{"} 1 \textrm{"},
-  \textrm{"} 0 0 \textrm{"}, \textrm{"} 0 1 \textrm{"},
-  \textrm{"} 1 1 \textrm{"}, \ldots \}.
+  \{ \texttt{""}, \texttt{"} 0, \texttt{"} 1 \texttt{"},
+  \texttt{"} 0 0 \texttt{"}, \texttt{"} 0 1 \texttt{"},
+  \texttt{"} 1 1 \texttt{"}, \ldots \}.
 \end{equation}
 Kanoniczny homomorfizm $h : A^{ * } \to \Nbb_{ 0 }$ na mocy wzorów
 \eqref{eq:Forys-Forys-11-A}-\eqref{eq:Forys-Forys-11-C}
@@ -649,15 +651,15 @@ następujące własności
 \begin{subequations}
   \begin{align}
     \label{eq:Forys-Forys-14-A}
-    h( \textrm{""} ) &= 0, \\
+    h( \texttt{""} ) &= 0, \\
     \label{eq:Forys-Forys-14-B}
-    h( \textrm{"} 0 \textrm{"} ) &= 0, \quad
-    h( \textrm{"} 1 \textrm{"} ) = 1, \\
+    h( \texttt{"} 0 \texttt{"} ) &= 0, \quad
+    h( \texttt{"} 1 \texttt{"} ) = 1, \\
     \label{eq:Forys-Forys-14-C}
-    h( \textrm{"} a_{ 1 } a_{ 2 } \ldots a_{ n } \textrm{"} )
-                     &= h( \textrm{"} a_{ 1 } \textrm{"} )
-                       + h( \textrm{"} a_{ 2 } \textrm{"} ) + \ldots
-                       + h( \textrm{"} a_{ n } \textrm{"} ) = \\
+    h( \texttt{"} a_{ 1 } a_{ 2 } \ldots a_{ n } \texttt{"} )
+                     &= h( \texttt{"} a_{ 1 } \texttt{"} )
+                       + h( \texttt{"} a_{ 2 } \texttt{"} ) + \ldots
+                       + h( \texttt{"} a_{ n } \texttt{"} ) = \\
     % \nolabel
                      &= a_{ 1 } + a_{ 2 } + \ldots + a_{ n }, \quad
                        a_{ i } \in \{ 0, 1 \}.
@@ -666,7 +668,7 @@ następujące własności
 Przykładowo
 \begin{equation}
   \label{eq:Forys-Forys-15}
-  h( \textrm{"} 0100110 \textrm{"} ) =
+  h( \texttt{"} 0100110 \texttt{"} ) =
   0 + 1 + 0 + 0 + 1 + 1 + 0 = 3.
 \end{equation}
 
@@ -674,7 +676,7 @@ Przykładowo
 choćby to, że
 \begin{equation}
   \label{eq:Forys-Forys-16}
-  h( \textrm{""} ) = h( \textrm{"} 0 \textrm{"} ) = 0.
+  h( \texttt{""} ) = h( \texttt{"} 0 \texttt{"} ) = 0.
 \end{equation}
 
 \vspace{\spaceFour}
@@ -721,20 +723,33 @@ izomorfizmem tych monoidów i~niech $m = h( w )$. Przez \textbf{długość
   elementu $m \in M$} rozumiemy liczbę całkowitą nieujemną określoną przez
 wzór \eqref{eq:Forys-Forys-18}.
 
+\vspace{\spaceFour}
 
-Drugą rzeczą na którą zwrócimy uwagę jest to, co~się dzieje w~sytuacji, gdy
-odwzorowanie $h : A^{ * } \to M$ jest izomorfizmem. Będziemy przy tym rozważać
-tylko sytuację, gdy $A \subset M$ i~$A^{ * }$ jest wolny monoidem językowym,
-przypadek ogólniejszy pozostawiamy na razie otwarty. Mianowicie możemy wtedy
-określić \textbf{długość $| m |$ elementu $m \in M$} za pomocą wzoru
+
+
+\start \Str{10} Dowód drugiej części twierdzenia 1.2.2 byłby bardziej zrozumiały, gdyby wzór przedstawiający działania kanonicznego homomorfizmu zapisać jako
 \begin{equation}
-  \label{eq:Forys-Forys-16}
-  | m | := | w |, \quad
-  m = h( w ),\; w \in A^{ * }.
+  \label{eq:Forys-Forys-19}
+  h( \texttt{"} a_{ 1 } a_{ 2 } \ldots a_{ n } \texttt{"} ) =
+  h( \texttt{"} a_{ 1 } \texttt{"} ) h( \texttt{"} a_{ 2 } \texttt{"} ) \ldots
+  h( \texttt{"} a_{ n } \texttt{"} ) = a_{ 1 } a_{ 2 } \ldots a_{ n }.
 \end{equation}
 
-Jak pokazuje twierdzenie udowodnione na stronie 10, ta definicja jest dobrze
-określona. ????
+
+
+% Drugą rzeczą na którą zwrócimy uwagę jest to, co~się dzieje w~sytuacji, gdy
+% odwzorowanie $h : A^{ * } \to M$ jest izomorfizmem. Będziemy przy tym rozważać
+% tylko sytuację, gdy $A \subset M$ i~$A^{ * }$ jest wolny monoidem językowym,
+% przypadek ogólniejszy pozostawiamy na razie otwarty. Mianowicie możemy wtedy
+% określić \textbf{długość $| m |$ elementu $m \in M$} za pomocą wzoru
+% \begin{equation}
+%   \label{eq:Forys-Forys-16}
+%   | m | := | w |, \quad
+%   m = h( w ),\; w \in A^{ * }.
+% \end{equation}
+
+% Jak pokazuje twierdzenie udowodnione na stronie 10, ta definicja jest dobrze
+% określona. ????
 
 \vspace{\spaceFour}
 
