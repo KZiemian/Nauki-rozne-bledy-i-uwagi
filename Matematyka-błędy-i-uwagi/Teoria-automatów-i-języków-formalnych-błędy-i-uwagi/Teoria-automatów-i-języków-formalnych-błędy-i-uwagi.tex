@@ -172,15 +172,16 @@
 
 \start Zawartość tej książeczki jest pod pewnym względami większa, zaś
 pod pewnymi względami mniejsza, niż kursu online \textit{Języki,
-  automaty i~obliczania}, autorstwa, nota bene, Marii Foryś, Wita
+  automaty i~obliczania}, autorstwa, notabene, Marii Foryś, Wita
 Forysia i~Adama Romana, warto więc przerabiać go równolegle z~tą
-książeczką. Można go znaleźć\footnote{Pełna forma linku:
+książeczką. Można go znaleźć pod tym
+\colorhref{https://wazniak.mimuw.edu.pl/index.php?title=J\%C4\%99zyki,\_automaty\_i\_obliczenia}{linkiem}\footnote{Pełna forma linku:
   \href{https://wazniak.mimuw.edu.pl/index.php?title=J\%C4\%99zyki,\_automaty\_i\_obliczenia}
-  {https://wazniak.mimuw.edu.pl/index.php?title=J\%C4\%99zyki,\_automaty\_i\_obliczenia}.}
-pod tym
-\colorhref{https://wazniak.mimuw.edu.pl/index.php?title=J\%C4\%99zyki,\_automaty\_i\_obliczenia}{linkiem}.
+  {https://wazniak.mimuw.edu.pl/index.php?title=J\%C4\%99zyki,\_automaty\_i\_obliczenia}.}.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -204,9 +205,11 @@ Więcej o~napisach powiemy przy okazji omawiania wolnych monoidów językowych.
 
 
 \start \Str{6} Według mnie symbol $\textrm{mod}_{ 6 }$ wygląda
-znacznie lepiej, niż używany w tej książce $mod_{ 6 }$.
+znacznie lepiej niż używany w tej książce $mod_{ 6 }$.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -227,6 +230,8 @@ taki element $y \in M$, że~zachodzi
 \end{equation}
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -256,16 +261,19 @@ gdzie $G \subset M$, jest grupą, to mówimy, że~$G$ jest podgrupą monoidu $M$
 jak zazwyczaj, będziemy używali też bardziej zwięzłych wyrażeń językowych
 jak „$G$ jest podgrupą $M$”, nie stwierdzając jawnie, że~$M$ jest monoidem.
 
-Idea jaka stoi za tymi pojęciami jest jasna. Po zawężeniu działania danej
-algebry ogólnej $( A, \varphi_{ 1 }, \varphi_{ 2 }, \ldots, \varphi_{ n } )$ do mniejszego zbioru
-$B \subset A$, mogą się zmienić własności tych działań i~tym samym typ algebry.
-Podzbiór $\Fbb$ pierścienia $\Pcal$ może okazać~się ciałem, bo wszystkie
-elementy nieodwracalne, z~wyjątkiem zera, należą do zbioru $\Pcal \setminus \Fbb$.
+Idea jaka stoi za tymi pojęciami jest jasna. Po zawężeniu działań
+wewnętrznych danej algebry ogólnej $( A, \varphi_{ 1 }, \varphi_{ 2 }, \ldots, \varphi_{ n } )$ do
+mniejszego zbioru $B \subset A$, mogą się zmienić własności tych działań i~tym
+samym typ algebry. Podzbiór $\Fbb$ pierścienia $\Pcal$ może okazać~się
+ciałem, bo wszystkie elementy nieodwracalne, z~wyjątkiem zera, należą do
+zbioru $\Pcal \setminus \Fbb$.
 
 Wszystkie te rozważania moglibyśmy ująć w~sposób bardziej sformalizowany,
 jednak wydaje~się, że~obecna ich forma jest wystarczająco precyzyjna.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -277,12 +285,14 @@ procedury którą zaprezentujemy poniżej.”.
 
 
 
-\start \Str{6} Dowodu twierdzenia 1.1.1 zawiera dodatkową informację,
-nad którą warto~się zatrzymać, mianowicie że~każdą półgrupę można
+
+
+\start \Str{6} Dowód twierdzenia 1.1.1 zawiera dodatkową informację,
+nad którą warto~się zatrzymać. Mianowicie że~każdą półgrupę można
 rozszerzyć do monoidu. Wymaga to jedynie
 oczywistego/nieoczywistego\footnote{Zależy to od przekonań
-  filozoficzno-matematycznych konkretnej osoby.}, że~istnieje element
-$1 \notin S$.
+  filozoficzno-matematycznych konkretnej osoby.} założenia, że~istnieje
+element $1 \notin S$.
 
 W~kontekście samego dowodu twierdzenia 1.1.1, warto~się zastanowić nad
 tym dlaczego dokonujemy rozszerzenia półgrupy $( S, \cdot )$ do
@@ -304,10 +314,14 @@ warto przy nim pozostać.
 
 
 
+
+
 \start \Str{7} Tak jak w~przypadku symbolu $\textrm{mod}_{ 6 }$,
 wydaje mi~się, że~lepiej wyglądałby symbol $\textrm{Ker}_{ h }$.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -316,6 +330,8 @@ Wystarczy zwrócić uwagę, że~symbol $h$ leży w~różnych odległości od
 lewego marginesu, podczas, gdy powinien być w~tej samej pozycji.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -336,7 +352,7 @@ $A^{ * }$.
   a_{ i } \in A \}.
 \end{equation}
 Wedle tej definicji do $A^{ * }$ należy ciąg pusty, oznaczany symbolem
-$1 \equiv \textrm{""}$. Taki ciąg intuicyjnie jest prosty do pojęcia,
+$1 \equiv \texttt{""}$. Taki ciąg intuicyjnie jest prosty do pojęcia,
 zaś~bardziej formalnie jest to odwzorowanie $f : \emptyset \to A$.
 
 W~zbiorze $A^{ * }$ wprowadzamy też działanie $\cdot$ wzorem
@@ -356,7 +372,7 @@ problemy.
 Zauważmy, że~możemy wprawdzie przyjąć\footnote{Nie będziemy tu
   poruszać niezwykle interesującego i~ważnego zagadnienie, tego
   mianowicie, że~w~pewnych teoriach typów „obiekty izomorficzne są
-  identyczne” i~tym samym, nie ma dwóch różnych „modeli liczb
+  identyczne” i~tym samym nie ma dwóch różnych „modeli liczb
   naturalnych” z~zerem czy bez. Zawędrowalibyśmy tym sposobem zbyt
   daleko od właściwego tematu.}, że~zbiór $A = \{ | \}$, liczba $0$ to
 pusty ciąg, $1 = ( | )$, $2 = ( |, | )$, $3 = ( |, |, | )$, etc.,
@@ -372,7 +388,7 @@ intuicyjnie rozpoznajemy jako dodawanie liczb naturalnych. Przykładowo
 
 Wróćmy teraz do problemu, czemu takie podejście do liczby naturalnych
 jawi~się intuicji matematycznej jako niekonieczne. Powinno być bowiem
-możliwe myślenie o~liczbach naturalnych jako „po prostu o liczbach”,
+możliwe myślenie o~liczbach naturalnych jako „po prostu o~liczbach”,
 jako autonomicznych bytach, nie zaś jako ciągach jakiegoś symbolu.
 Dodatkowo, taka definicji to błędne koło, samo bowiem pojęcie ciągu
 o~skończonej długości wymaga uznania, że~wiemy czym jest zbiór liczb
@@ -385,7 +401,7 @@ Rozważmy teraz inny przykład. Zbiór wszystkich macierzy kwadratowych
 wymiaru $n$, który będziemy oznaczać symbolem $\GL( m )$, możemy
 rozpatrywać jako monoid $( \GL( m ), \cdot, \matUnit )$, gdzie $\cdot$
 to mnożenie macierzy, zaś $\matUnit$ to macierz jednostkowa
-$m \times m$. Czy jest więc w~ogóle sens w~zadawaniu pytania~się, czy
+$m \times m$. Czy jest więc w~ogóle sens w~pytaniu~się, czy
 ten monoid zawiera jakiś podmonoid wolny, rozumiany jako zbiór ciągów
 z~działaniem konkatenacji? Wszak mając dwie macierze $A$ i~$B$
 należące do $\GL( m )$ musielibyśmy z~jednej strony rozważać ich
@@ -401,11 +417,30 @@ będziemy nazywać wcześniej określony zbiór ciągów wraz z~działaniem
 konkatenacji. Jest więc to obiekt o~konkretnej strukturze
 ontologicznej.
 
+Poza tym zachowujemy prawienie niezmienioną terminologię ze~stron 8--9
+dotyczącą wolnych monoidów. Będziemy więc mówić o~„bazie (alfabecie) $A$”,
+elementy zbioru $A$ będziemy nazywać „literami”, bądź jak zostało to
+wyjaśnione w~jednym z~dalszych punktów, „symbolami”. Ciągi liter (symboli)
+będziemy nazywali „słowami”, a~dowolny podzbiór monoidu $A^{ * }$ będziemy
+nazywali „językiem”. W~razie potrzeby będziemy do tego zbioru dodawać
+odpowiednie synonimy wszystkich tych pojęć.
+
 Wybiegając trochę w~przyszłość, zdefiniujemy teraz monoid wolny, korzystając
 z~pojęcia kanonicznego homomorfizmu. Monoid $( M, \cdot, 1_{ M } )$ jest
 \textbf{monoidem wolnym}, jeśli jest istnieje taki zbiór $A \subset M$, że~wolny
 monoid językowym $A^{ * }$ nad alfabetem $A$ jest kanonicznie izomorficzny
-z~$M$. Nie widać więc powodu by monoid $M$ miał bardziej ustaloną strukturę ontologiczną, niż np. grupa abelowa.
+z~$M$. Nie widać więc powodu by monoid $M$ miał bardziej ustaloną strukturę
+ontologiczną, niż np. grupa abelowa.
+
+Na monoidy wolne przenosimy nazewnictwo wprowadzone wcześniej dla wolnych
+monoidów językowych. Zbiór $A$ będziemy więc nazywać „bazą (alfabetem)
+wolnego monoidu $M$”, elementy $A$ będziemy nazywać „literami (symbolami)”,
+etc.
+
+Analogiczna nomenklatura stosuje~się też do półgrup. Mamy więc \textbf{wolne
+  półgrupy językowe nad alfabetem $A$} i~\textbf{wolne półgrupy}, ponieważ
+jednak ponieważ ich własności są bardzo podobne do omówionych powyżej
+własności monoidów, nie będziemy ich dokładnie opisywać.
 
 ????? Zbiór $A$ może być podzbiorem
 $M$ lub nie. Jak pokazują twierdzenia udowodnione na stronach 9--12,
@@ -432,6 +467,8 @@ zera” wymagało tyle miejsca, że~nie wygląda na to, byśmy w~ten sposób
 coś zyskiwali.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -474,6 +511,8 @@ książeczki.
 
 
 
+
+
 \start \Str{8} Dysponując już tak uporządkowanym słownictwem,
 przeanalizujmy strukturę wolnego monoidu językowego $A^{ * }$ na
 alfabetem $A$. Jeśli potrzebny będzie nam przykład wolnego monoidu
@@ -512,6 +551,21 @@ które wynika wprost z~dwóch wspomnianych własności.
 
 
 
+
+???? \start \Str{9} Niech $M$ będzie monoidem wolnym, $B \subset M$ jego bazą, a~$h : B^{ * } \to M$ kanonicznym izomorfizmem. Dla $a \in M$ wprowadzamy następującą notację
+\begin{equation}
+  \label{eq:7}
+  \texttt{"} a \texttt{"} :=
+  \texttt{"} b_{ 1 } b_{ 2 } \ldots b_{ n } \texttt{"}, \quad
+  a = h( \texttt{"} b_{ 1 } b_{ 2 } \ldots b_{ n } \texttt{"} ), \,
+  b_{ i } \in B,\, i = 1, 2, \ldots, n.
+\end{equation}
+
+
+
+
+
+
 \Str{8} Zwróćmy uwagę, że~jeśli $A \subset M$, gdzie $M$ jest monoidem, to
 podmonoid algebraiczny $A^{ * }$ i~wolnym monoid językowy $A^{ * }$
 i~alfabetem $A$ mogą być radykalnie różnymi obiektami.
@@ -547,11 +601,15 @@ dokładniejszego wyjaśnienia znaczenia danych symboli.
 
 
 
+
+
 \start \Str{8--9} By uniknąć nieporozumień, należy jasno stwierdzić, że~gdy
 będziemy mówić o~„zbiorze ciągów liter z~alfabetu $A$” to w domyśle do tego
 zbioru zawsze należy też ciąg pusty \texttt{""}.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -563,6 +621,8 @@ powiedzieć „elementami alfabetu są symbole” i~„słowa są ciągami
 symboli”.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -593,6 +653,8 @@ odwzorowanie jest homeomorfizmem jest dość\footnote{Jak to niektórzy
   powiadają: „Nie ma czego dowodzić”.} opuścimy dyskusję tego tematu.
 
 \vspace{\spaceFour}
+
+
 
 
 
@@ -639,7 +701,7 @@ oczywiste, że
 \begin{equation}
   \label{eq:Forys-Forys-13}
   A^{ * } =
-  \{ \texttt{""}, \texttt{"} 0, \texttt{"} 1 \texttt{"},
+  \{ \texttt{""}, \texttt{"} 0 \texttt{"}, \texttt{"} 1 \texttt{"},
   \texttt{"} 0 0 \texttt{"}, \texttt{"} 0 1 \texttt{"},
   \texttt{"} 1 1 \texttt{"}, \ldots \}.
 \end{equation}
@@ -680,6 +742,8 @@ choćby to, że
 
 
 
+
+
 \start \Str{9} Potrzebujemy tu poczynić pewną uwagę odnośnie notacji.
 Przyjmijmy, że $A$ jest podzbiorem monoidu $M$. W~skutek wybranych oznaczeń
 zapis $M = A^{ * }$ może oznaczać, że~podmonoid algebraiczny $A^{ * }$ jest
@@ -701,6 +765,8 @@ $A^{ * }$ jest kanonicznie izomorficzny z~$M$.
 
 
 
+
+
 \start \Str{10} W~dowodzie twierdzenia 1.2.2 użyte jest mowa o~„długości elementu $m \in M$ w~$B^{ * }$”. Sens tego jest następujący. Dany jest zbiór $B$, niekoniecznie zawarty w~$M$, i~izomorfizm $f$, nie musi być to izomorfizm kanoniczny, między wolnym monoidem językowym $B^{ * }$, a~$M$. Dla każdego elementu $m \in M$ istnieje więc $w \in B^{ * }$, taki że $f( w ) = m$. Możemy więc przypisać elementowi $m$ liczbę z~$\Nbb_{ 0 }$, którą nazywamy jego długością, za pomocą wzoru
 \begin{equation}
   \label{eq:Forys-Forys-17}
@@ -708,7 +774,11 @@ $A^{ * }$ jest kanonicznie izomorficzny z~$M$.
 \end{equation}
 Tylko tyle jest nam potrzebne do udowodnienia twierdzenia 1.2.2.
 
-Wybiegnijmy trochę w~przyszłość. Jeśli monoid $M$ jest monoidem wolnym, to~z~definicji jest on kanonicznie izomorficzny z~wolnym monoidem językowym $A^{ * }$. Dzięki twierdzeniu 1.2.2 i~wnioskom z~niego jest ono kanonicznie izomorficzny zbiór $A$ jest jednoznacznie wyznaczony przez relację
+Wybiegnijmy teraz trochę w~przyszłość. Jeśli monoid $M$ jest monoidem
+wolnym, to~z~definicji jest on kanonicznie izomorficzny z~wolnym monoidem
+językowym $A^{ * }$. Dzięki twierdzeniu 1.2.2 i~wnioskom z~niego jest ono
+kanonicznie izomorficzny zbiór $A$ jest jednoznacznie wyznaczony przez
+relację
 \begin{equation}
   \label{eq:Forys-Forys-18}
   A = S \setminus S^{ 2 }, \quad
@@ -724,7 +794,11 @@ wzór \eqref{eq:Forys-Forys-18}.
 
 
 
-\start \Str{10} Dowód drugiej części twierdzenia 1.2.2 byłby bardziej zrozumiały, gdyby wzór przedstawiający działania kanonicznego homomorfizmu zapisać jako
+
+
+\start \Str{10} Dowód drugiej części twierdzenia 1.2.2 byłby bardziej
+zrozumiały, gdyby wzór przedstawiający działania kanonicznego homomorfizmu
+zapisać jako
 \begin{equation}
   \label{eq:Forys-Forys-19}
   h( \texttt{"} a_{ 1 } a_{ 2 } \ldots a_{ n } \texttt{"} ) =
@@ -732,25 +806,135 @@ wzór \eqref{eq:Forys-Forys-18}.
   h( \texttt{"} a_{ n } \texttt{"} ) = a_{ 1 } a_{ 2 } \ldots a_{ n }.
 \end{equation}
 
+\vspace{\spaceFour}
 
 
-% Drugą rzeczą na którą zwrócimy uwagę jest to, co~się dzieje w~sytuacji, gdy
-% odwzorowanie $h : A^{ * } \to M$ jest izomorfizmem. Będziemy przy tym rozważać
-% tylko sytuację, gdy $A \subset M$ i~$A^{ * }$ jest wolny monoidem językowym,
-% przypadek ogólniejszy pozostawiamy na razie otwarty. Mianowicie możemy wtedy
-% określić \textbf{długość $| m |$ elementu $m \in M$} za pomocą wzoru
-% \begin{equation}
-%   \label{eq:Forys-Forys-16}
-%   | m | := | w |, \quad
-%   m = h( w ),\; w \in A^{ * }.
-% \end{equation}
 
-% Jak pokazuje twierdzenie udowodnione na stronie 10, ta definicja jest dobrze
-% określona. ????
+
+??????Drugą rzeczą na którą zwrócimy uwagę jest to, co~się dzieje w~sytuacji, gdy
+odwzorowanie $h : A^{ * } \to M$ jest izomorfizmem. Będziemy przy tym rozważać
+tylko sytuację, gdy $A \subset M$ i~$A^{ * }$ jest wolny monoidem językowym,
+przypadek ogólniejszy pozostawiamy na razie otwarty. Mianowicie możemy wtedy
+określić \textbf{długość $| m |$ elementu $m \in M$} za pomocą wzoru
+\begin{equation}
+  \label{eq:Forys-Forys-16}
+  | m | := | w |, \quad
+  m = h( w ),\; w \in A^{ * }.
+\end{equation}
+
+Jak pokazuje twierdzenie udowodnione na stronie 10, ta definicja jest dobrze
+określona. ????
 
 \vspace{\spaceFour}
 
 
+
+
+\start \Str{10--11} W~kontekście podanych tu rozważań, należy zatrzymać~się zatrzymać nad pewnymi własnościami potęg zbiorów w~monoidach i~półgrupach. Niech $S$ będzie dowolną podgrupą, zachodzi wówczas
+\begin{equation}
+  \label{eq:Forys-Forys-17}
+  S \supset S^{ 2 } \supset S^{ 3 } \supset \ldots
+\end{equation}
+Ogólniej $S^{ k } \supset S^{ k + 1 }$ i~może zachodzić $S^{ k } \neq S^{ k + 1 }$. Choć dowód tego twierdzenia jest bardzo prosty to przeprowadzimy go powoli i~szczegółowo, by dokładnie zrozumieć o~co w~nim chodzi.
+
+Rozpatrzmy przypadek $S \supset S^{ 2 }$. Każdy element jest $S^{ 2 }$ jest postaci $ab$, gdzie $a, b \in S$. Z~definicji działania wewnętrznego mamy $ab = c$, $c \in S$, z~czego wynika, że~$S \supset S^{ 2 }$.
+
+Weźmy teraz przypadek $S^{ 2 } \supset S^{ 3 }$. Rozpatrzymy element
+\begin{equation}
+  \label{eq:2}
+  abc \in S^{ 3 }, \quad a, b, c \in S.
+\end{equation}
+Znowu, korzystając z~podstawowych własności działania wewnętrznego w~półgrupie mamy
+\begin{equation}
+  \label{eq:3}
+  abc = ( ab ) c.
+\end{equation}
+Oczywiście zachodzi $ab = a_{ 1 }$, dla pewnego $a_{ 1 } \in S$, więc
+\begin{equation}
+  \label{eq:4}
+  abc = ( ab ) c = a_{ 1 } c,
+\end{equation}
+a~wyrażenie $a_{ 1 } c$ należy do zbioru $S^{ 2 }$ z~definicji.
+
+Analogicznie przeprowadzamy dowód dla dowolnego $k$. Weźmy iloczyn
+\begin{equation}
+  \label{eq:5}
+  a_{ 1 } a_{ 2 } a_{ 3 } a_{ 4 } \ldots a_{ k + 1 } \in S^{ k }, \quad
+  a_{ i } \in S,\, i = 1, 2, \ldots, n.
+\end{equation}
+Przekształcamy go w~sposób analogiczny co poprzednio.
+\begin{equation}
+  \label{eq:6}
+  a_{ 1 } a_{ 2 } a_{ 3 } a_{ 4 } \ldots a_{ k + 1 } =
+  ( a_{ 1 } a_{ 2 } ) a_{ 3 } a_{ 4 } \ldots a_{ k + 1 } =
+  b a_{ 3 } a_{ 4 } \ldots a_{ k + 1 } \in S^{ k },
+\end{equation}
+gdzie $b = a_{ 1 } a_{ 2 } \in S$. Tym samym dowiedliśmy,
+że~$S^{ k } \supset S^{ k + 1 }$.
+
+Gdybyśmy rozważali monoid $M$, to nie zaobserwowalibyśmy nic ciekawego.
+Wynika to z~tego, że $1_{ M } \in M$, więc $M^{ 2 } = M$. Sprawa robi~się ciekawsza, gdy rozważamy zbiór $S = M \setminus \{ 1_{ M } \}$. Nie możemy zagwarantować, że~$S \supset S^{ 2 }$, bo może~się zdarzyć, że~dla dwóch elementów $a, b \in S$ zachodzi $a b = 1_{ M }$. Możemy jednak zauważyć, że~zachodzi następujące twierdzenie.
+
+
+
+
+
+% #############
+\begin{theorem}
+  \label{thm:Forys-Forys-01}
+
+  Niech $M$ będzie monoidem. Zbiór $S = M \setminus \{ 1_{ M } \}$ jest półgrupą wtedy
+  i~tylko wtedy, gdy grupa jedynki monoidu $M$ jest trywialna.
+
+\end{theorem}
+
+
+
+\begin{proof}
+
+  Dowód tego twierdzenia jest w~istocie bardzo prosty. Po pierwsze
+  przypomnijmy, że~z~definicji zbiór $S = M \setminus \{ 1_{ M } \}$ jest półgrupą
+  wtedy i~tylko wtedy, gdy $S \supset S^{ 2 }$.
+
+  $\Rightarrow$ Wystarczy pokazać, że~jeśli $a b = 1_{ M }$ to $a = 1_{ M }$ i~tym
+  samym $b = 1_{ M }$. Ponieważ $1_{ M } \notin S$ i~$S^{ 2 } \subset S$, więc jeśli
+  istniej taka para $a, b \in M$, że~$ab = 1_{ M }$ to $a$ lub $b$ musi
+  należeć do zbioru $M \setminus S = \{ 1_{ M } \}$, co tę część dowodu.
+
+  $\Leftarrow$ Dowód przeprowadzimy przez kontrapozycję. Jeżeli grupa jedynki nie
+  jest trywialna, to istnieją dwa takie elementy, że~$a b = 1_{ M }$, przy
+  czym $a \neq 1_{ M }$ i~$b \neq 1_{ M }$. Tym samym mielibyśmy $a, b \in S$,
+  $ab = 1_{ M } \in S^{ 2 }$ i~jednocześnie $ab \notin S$. Dowód został zakończony.
+
+\end{proof}
+% #############
+
+
+
+
+
+\start \Str{10} Zatrzymajmy~się na chwilę nad wnioskiem 1.2.2. Stwierdzanie, że~baza $B$ wolnego monoidu $M$ jest minimalnym zbiorem generatorów oznaczy tyle, że dla każdego zbioru generatorów $D$ zachodzi $B \subset D$. Z~dowodu twierdzenia 1.2.2 wynika, że~$A \subset B$, gdzie $A = S \setminus S^{ 2 }$. Jeśli ponadto zachodziłaby $B \subset D$, to otrzymujemy, że~$A = B$. W~tym momencie jedyny dowód inkluzji $B \subset D$ jaki potrafię wymyślić,
+przebiega
+w~następujący sposób.
+
+Jeżeli zbiór $D$ zawiera element neutralny, to możemy go usunąć z~niego bez straty ogólności, por. wzór na stronie~7. Od tego momentu przyjmujemy więc, że~$1_{ M } \notin D$.
+
+Każdy element $d$ zbioru $D$ jest w~sposób koniczny izomorficzny z~pewny ciągiem elementów zbioru $B$:
+$\texttt{"} d \texttt{"} = h^{ -1 }( d ) = \texttt{"} b_{ 1 } b_{ 2 } \ldots b_{ n } \texttt{"}$. Tym samym jeśli $b = d_{ 1 } d_{ 2 } \ldots d_{ m }$, $d_{ i } \in D$, $i = 1, 2, \ldots, m$ to musi zachodzić
+\begin{equation}
+  \label{eq:8}
+  \texttt{"} d_{ 1 } d_{ 2 } \ldots d_{ m } \texttt{"} = \texttt{"} b \texttt{"}.
+\end{equation}
+Ponieważ każdy $\textrm{"} d_{ 1 } \textrm{"}$ jest sam postaci $\texttt{"} b_{ i,\, 1 } b_{ i,\, 2 } \ldots b_{ i,\, n } \texttt{"}$, gdzie $b_{ i, j } \in B$, $i = 1, 2, \ldots, n$ jest ustaloną liczbą, $i$ jak poprzednio przyjmuje wartości od $1$ do $m$, to na mocy tego co zostało powiedziane przy okazji omawiania wzoru \eqref{eq:Forys-Forys-07}, powyższa równość może zachodzić wtedy i~tylko wtedy, gdy $m = 1$ i~$d_{ 1 } = \texttt{"} b \texttt{"}$. Czyli $\texttt{"} b \texttt{"} \in h^{ -1 }( D )$, co jest równoważne temu, że~$h( \texttt{"} b \texttt{"} ) = b \in D$.
+
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{11} W~dowodzie twierdzenia 1.2.4 jest napisane „Jeśli monoid jest wolny, to na mocy twierdzenia 1.2.2 spełnia wszystkich powyższe warunki”, gdzie warunki o~których mowa to to, że~monoid $M$ jest równo podzielny, $S = M \setminus \{ 1_{ M } \}$ jest podgrupą i~$\cap_{ n \in \Nbb } S^{ n } = \emptyset$. Jednak według mnie
+
+% \label{eq:Forys-Forys-07}
 
 
 
@@ -789,7 +973,8 @@ wzór \eqref{eq:Forys-Forys-18}.
     9  & 22 & & $f : A \mapsto M$ & $f : A \to M$ \\
     9  & 23 & & $h : A^{ * } \mapsto M$ & $h : A^{ * } \to M$ \\
     9  & &  9 & $\to \textrm{\textbf{M}}$ & $\to M$ \\
-    % & & & & \\
+    % 10 & & 10 &  & \\
+    10 & 18 & & $id_{ A } : A \mapsto M$ & $id_{ A } : A \to M$ \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -863,6 +1048,19 @@ wzór \eqref{eq:Forys-Forys-18}.
 \Jest  \textit{generatorów.} \\
 \Powin \textit{generatorów i~jest równa $S \setminus S^{ 2 }$, gdzie
   $S = M \setminus \{ 1_{ M } \}$}. \\
+\StrWg{10}{18} \\
+\Jest  $h : A^{ * } \mapsto M$ \\
+\Powin $h : A^{ * } \to M$, gdzie $A^{ * }$ jest wolnym monoidem językowym. \\
+\StrWd{10}{23} \\
+\Jest  \textit{Homomorfizm $h$ jest, jak łatwo stwierdzić, izomorfizmem,
+  więc monoid $M$ jako izomorficznym z~$A^{ * }$ jest wolny.} \\
+\Powin \textit{Ponownie, z~faktu że każdy element $m \in S$ można rozłożyć na
+  elementy ze zbioru $A$, wynika, że homomorfizm $h$ jest suriekcją.
+  Z~jednoznaczności tego rozkładu wynika, że~$h$ jest infekcją, a~więc
+  izomorfizmem. Tym samym monoid $M$ jest izomorficzny z~wolnym monoidem
+  językowym $A^{ * }$, zgodnie więc z~definicją jest monoidem wolnym.}
+
+
 
 
 \vspace{\spaceTwo}
