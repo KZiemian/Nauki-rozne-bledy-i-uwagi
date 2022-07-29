@@ -238,19 +238,23 @@ taki element $y \in M$, że~zachodzi
 \start \Str{6} Na tej stronie znajdujemy stwierdzenia, że „zbiór
 elementów odwracalnych monoidu $M$ stanowi podgrupę tego monoidu”.
 Zwykle przez podgrupę rozumie~się podzbiór $G_{ 1 }$ grupy $G_{ 0 }$,
-taki że~wraz z~działaniem odziedziczonym z~$G_{ 0 }$ jest grupą. Tutaj
+taki że~wraz z~działaniem\footnote{Używając terminologi z~książki
+  Białynickiego-Biruli, mówilibyśmy o~trzech różnych działaniach:
+  dwuargumentowym działaniu wewnętrznym, jednoargumentowym działaniu brania
+  elementu odwrotnego i~zeroargumentowym działaniu zwracającym element
+  neutralny. Zob. \cite{BialynickiBirulaZarysAlgebry1987}.} odziedziczonym
+z~$G_{ 0 }$ jest grupą. Tutaj
 jednak jest mowa, że~grupa jedynki, oznaczmy ją $U$ (od ang.
-\textit{unity}), jest podgrupą monoidu, który nie musi być podgrupą.
+\textit{unity}), jest podgrupą monoidu, który to monoid nie musi być
+podgrupą.
 
-Sens tego jest dość oczywisty. Mianowicie, że trójka uporządkowana
+Sens tego zwrotu jest dość oczywisty. Mianowicie, że trójka uporządkowana
 $( U, \cdot, 1 )$, gdzie $\cdot$ jest działaniem odziedziczonym po
 monoidzie $M$, zaś $1 \in U$, jest elementem neutralnym tego monoidu,
-jest grupą. Jednak czyni to cały system pojęciowy trochę mniej
-ścisłym.
+jest grupą. Jednak takie rozciąganie standardowego rozumienia pojęcia podgrupy czyni cały system pojęciowy trochę mniej ścisłym.
 
 Możemy doprecyzować ten formalizm za pomocą pojęcia algebry
-ogólnej (zob. \cite{BialynickiBirulaZarysAlgebry1987}) i~w~ostatecznym
-rozrachunku wydaje~się, że~jest to najbardziej ekonomiczne podejście.
+ogólnej (zob. \cite{BialynickiBirulaZarysAlgebry1987}) i~wydaje~się, że~w~ostatecznym rozrachunku jest to najbardziej ekonomiczne podejście.
 
 Niech $( A, \varphi_{ 1 }, \varphi_{ 2 }, \ldots, \varphi_{ n } )$ będzie algebrą ogólną typu $\alpha$, np.
 monoidem, i~niech $B \subset A$. Jeżeli system
@@ -326,7 +330,7 @@ wydaje mi~się, że~lepiej wyglądałby symbol $\textrm{Ker}_{ h }$.
 
 
 \start \Str{8} Rysunki na tej stronie są zrobione dość niechlujnie.
-Wystarczy zwrócić uwagę, że~symbol $h$ leży w~różnych odległości od
+Wystarczy zwrócić uwagę, że~symbol $h$ leży w~nich w~różnych odległości od
 lewego marginesu, podczas, gdy powinien być w~tej samej pozycji.
 
 \vspace{\spaceFour}
@@ -355,7 +359,8 @@ Wedle tej definicji do $A^{ * }$ należy ciąg pusty, oznaczany symbolem
 $1 \equiv \texttt{""}$. Taki ciąg intuicyjnie jest prosty do pojęcia,
 zaś~bardziej formalnie jest to odwzorowanie $f : \emptyset \to A$.
 
-W~zbiorze $A^{ * }$ wprowadzamy też działanie $\cdot$ wzorem
+W~zbiorze $A^{ * }$ wprowadzamy też działanie konkatenacjami oznaczane $\cdot$
+wzorem
 \begin{equation}
   \label{eq:Froys-Forys-03}
   ( a_{ 1 }, a_{ 2 }, \ldots, a_{ n } ) \cdot ( b_{ 1 }, b_{ 2 }, \ldots, b_{ m } ) =
@@ -407,7 +412,7 @@ z~działaniem konkatenacji? Wszak mając dwie macierze $A$ i~$B$
 należące do $\GL( m )$ musielibyśmy z~jednej strony rozważać ich
 iloczyn $A \cdot B$, z~drugiej ciąg dwuelementowy $( A, B )$ i~ustalić
 relację między tymi dwoma bytami. Nie jest powiedziane, że~nie można
-utożsamić konkretnej macierzy kwadratowej, z~ciągiem jakiejś zbioru
+utożsamić konkretnej macierzy kwadratowej z~ciągiem jakiejś zbioru
 macierzy, acz taka konstrukcja wydaje~się znacznie mniej naturalna,
 niż przedstawiona powyżej dla liczb naturalnych.
 
@@ -417,8 +422,9 @@ będziemy nazywać wcześniej określony zbiór ciągów wraz z~działaniem
 konkatenacji. Jest więc to obiekt o~konkretnej strukturze
 ontologicznej.
 
-Poza tym zachowujemy prawienie niezmienioną terminologię ze~stron 8--9
-dotyczącą wolnych monoidów. Będziemy więc mówić o~„bazie (alfabecie) $A$”,
+Poza tym zachowujemy prawienie niezmienioną terminologię ze~stron 8--9,
+która jest tam wprowadzona dla wolnym monoidów i~stosujemy ją też do
+wolnych monoidów językowych. Będziemy więc mówić o~„bazie (alfabecie) $A$”,
 elementy zbioru $A$ będziemy nazywać „literami”, bądź jak zostało to
 wyjaśnione w~jednym z~dalszych punktów, „symbolami”. Ciągi liter (symboli)
 będziemy nazywali „słowami”, a~dowolny podzbiór monoidu $A^{ * }$ będziemy
@@ -435,12 +441,15 @@ ontologiczną, niż np. grupa abelowa.
 Na monoidy wolne przenosimy nazewnictwo wprowadzone wcześniej dla wolnych
 monoidów językowych. Zbiór $A$ będziemy więc nazywać „bazą (alfabetem)
 wolnego monoidu $M$”, elementy $A$ będziemy nazywać „literami (symbolami)”,
-etc.
+etc. Dla większej jasności rozważań element wolnego monidłu językowego
+będziemy często zapisywać jako ciągi symboli wewnątrz cudzysłowu
+\texttt{" "}. Przykładowo $\texttt{"} abc \texttt{"}$. Mamy nadzieję,
+że~pomoże to uniknąć pewnych nieporozumień.
 
-Analogiczna nomenklatura stosuje~się też do półgrup. Mamy więc \textbf{wolne
+Analogiczna terminologia stosuje~się też do półgrup. Mamy więc \textbf{wolne
   półgrupy językowe nad alfabetem $A$} i~\textbf{wolne półgrupy}, ponieważ
-jednak ponieważ ich własności są bardzo podobne do omówionych powyżej
-własności monoidów, nie będziemy ich dokładnie opisywać.
+jednak ponieważ ich definicje oraz własności są bardzo podobne do
+omówionych powyżej własności monoidów, nie będziemy ich dokładnie opisywać.
 
 ????? Zbiór $A$ może być podzbiorem
 $M$ lub nie. Jak pokazują twierdzenia udowodnione na stronach 9--12,
@@ -477,7 +486,7 @@ teraz zająć~się niejasnościami, jakie wynikają, z~użycia w~tej książce
 symbolu $A^{ * }$ w~dwóch różnych znaczeniach. Jeżeli bowiem
 $A \subset M$, gdzie $M$ jest pewnym monoidem, to symbol $A^{ * }$
 może oznaczać zarówno wolny monoid językowy nad alfabetem $A$, jak
-i~podmonoid monoidu $M$ generowany przez $A$, są to więc dwa różne
+i~podmonoid monoidu $M$ generowany przez $A$, a~są to dwa różne
 byty.
 
 Jeśli przyjmiemy, że~$M$ to omawiany już wcześniej monoid macierzy
@@ -518,7 +527,7 @@ przeanalizujmy strukturę wolnego monoidu językowego $A^{ * }$ na
 alfabetem $A$. Jeśli potrzebny będzie nam przykład wolnego monoidu
 językowego, sięgniemy po niezwykle ważny w~informatyce monoid
 $\{ 0, 1 \}^{ * }$. Łatwo spostrzec, że~jest to monoid nieprzemienny,
-przykładowo jeśli $u = 00$, $b = 11$, to
+przykładowo jeśli $u = 00$, $v = 11$, to
 \begin{equation}
   \label{eq:Forys-Forys-05}
   u v = 0011 \neq 1100 = vu.
@@ -552,19 +561,6 @@ które wynika wprost z~dwóch wspomnianych własności.
 
 
 
-???? \start \Str{9} Niech $M$ będzie monoidem wolnym, $B \subset M$ jego bazą, a~$h : B^{ * } \to M$ kanonicznym izomorfizmem. Dla $a \in M$ wprowadzamy następującą notację
-\begin{equation}
-  \label{eq:7}
-  \texttt{"} a \texttt{"} :=
-  \texttt{"} b_{ 1 } b_{ 2 } \ldots b_{ n } \texttt{"}, \quad
-  a = h( \texttt{"} b_{ 1 } b_{ 2 } \ldots b_{ n } \texttt{"} ), \,
-  b_{ i } \in B,\, i = 1, 2, \ldots, n.
-\end{equation}
-
-
-
-
-
 
 \Str{8} Zwróćmy uwagę, że~jeśli $A \subset M$, gdzie $M$ jest monoidem, to
 podmonoid algebraiczny $A^{ * }$ i~wolnym monoid językowy $A^{ * }$
@@ -582,20 +578,16 @@ językowy to wówczas zachodzi
 \end{equation}
 Powyższy monoid językowy jest izomorficzny z~całym monoidem
 $( \Nbb_{ 0 }, +, 0)$. Ten izomorfizm zadany jest przez relacje
-\begin{subequations}
-  \begin{align}
-    \label{eq:Forys-Forys-10-A}
+\begin{equation}
+  \label{eq:Forys-Forys-10}
+  \begin{split}
     h( \texttt{""} ) &= 0, \\
     h( \texttt{"} 0 \texttt{"} ) &= 1, \\
     h( \texttt{"} 0 0 \texttt{"} ) &= 2, \\
     h( \texttt{"} 0 0 0 \texttt{"} ) &= 3, \\
-    &\vdots
-  \end{align}
-\end{subequations}
-Dla większej przejrzystości, element wolnego monidłu językowego zapisujemy
-jako ciągi symboli wewnątrz cudzysłowu \texttt{" "}. Tę praktykę będziemy
-też stosować w~dalszym ciągu tych notatek, zawsze gdy zajdzie potrzeba
-dokładniejszego wyjaśnienia znaczenia danych symboli.
+                     &\vdots
+  \end{split}
+\end{equation}
 
 \vspace{\spaceFour}
 
@@ -679,10 +671,11 @@ sformułowań takich jak „kanoniczny izomorfizm”, będziemy również mówil
 że~$A^{ * }$ i~$M$ są kanonicznie izomorficzne.
 
 Nie potrafię powiedzieć, czy ten homomorfizm jest kanoniczny w~sensie teorii
-kategorii, jednak nie potrafię w~tym momencie wymyślić dla niego lepszej
-nazwy.
+kategorii, jednak w~tym momencie i~tak nie potrafię w~tym momencie wymyślić
+dla niego lepszej nazwy.
 
 \vspace{\spaceFour}
+
 
 
 
@@ -721,7 +714,7 @@ następujące własności
                      &= h( \texttt{"} a_{ 1 } \texttt{"} )
                        + h( \texttt{"} a_{ 2 } \texttt{"} ) + \ldots
                        + h( \texttt{"} a_{ n } \texttt{"} ) = \\
-    % \nolabel
+    % \skiplabel
                      &= a_{ 1 } + a_{ 2 } + \ldots + a_{ n },
   \end{align}
 \end{subequations}
@@ -748,14 +741,13 @@ choćby to, że
 Przyjmijmy, że $A$ jest podzbiorem monoidu $M$. W~skutek wybranych oznaczeń
 zapis $M = A^{ * }$ może oznaczać, że~podmonoid algebraiczny $A^{ * }$ jest
 równy $M$. Jeśli zaś kanoniczny homomorfizm $h : A^{ * } \to M$ jest
-izomorfizmem, to wówczas $M = A^{ * }$, będzie właśnie skrótowym zapisem tego
-izomorfizmu. Obie te sytuacje nie są wcale równoważne.
+izomorfizmem, to wówczas przez $M = A^{ * }$, będzie rozumieć skrótowy zapisem tego faktu. Obie te sytuacje nie są wcale równoważne.
 
 Rozpatrzmy ponownie monoid $( \Nbb_{ 0 }, +, 0 )$ i~wolny monoid językowy
 $A^{ * } = \{ 0, 1 \}^{ * }$. Jest oczywiste, że~jeśli symbol $A^{ * }$ rozumiemy
 jako podmonoid algebraiczny to oczywiście zachodzi $M = A^{ * }$.
 Jeśli jednak przez $A^{ * }$ rozumiemy wolny monoid językowy, to jak zostało
-wykazane w~poprzednich komentarzach, to homomorfizm $h$ \textit{nie jest}
+wykazane w~poprzednich komentarzach, homomorfizm $h$ \textit{nie jest}
 izomorfizmem, więc nie możemy napisać równości „$M = A^{ * }$”.
 
 Na koniec zauważmy, że~jeśli $A = \{ 1 \}$ to wówczas wolny monoid językowy
@@ -767,28 +759,18 @@ $A^{ * }$ jest kanonicznie izomorficzny z~$M$.
 
 
 
-\start \Str{10} W~dowodzie twierdzenia 1.2.2 użyte jest mowa o~„długości elementu $m \in M$ w~$B^{ * }$”. Sens tego jest następujący. Dany jest zbiór $B$, niekoniecznie zawarty w~$M$, i~izomorfizm $f$, nie musi być to izomorfizm kanoniczny, między wolnym monoidem językowym $B^{ * }$, a~$M$. Dla każdego elementu $m \in M$ istnieje więc $w \in B^{ * }$, taki że $f( w ) = m$. Możemy więc przypisać elementowi $m$ liczbę z~$\Nbb_{ 0 }$, którą nazywamy jego długością, za pomocą wzoru
+\start \Str{9} Niech $M$ będzie monoidem wolnym, $B \subset M$ jego bazą,
+a~$h : B^{ * } \to M$ kanonicznym izomorfizmem. Dla $a \in M$ wprowadzamy
+następującą notację
 \begin{equation}
   \label{eq:Forys-Forys-17}
-  | m | := | w |.
+  \texttt{"} a \texttt{"} :=
+  \texttt{"} b_{ 1 } b_{ 2 } \ldots b_{ n } \texttt{"}, \quad
+  a = h( \texttt{"} b_{ 1 } b_{ 2 } \ldots b_{ n } \texttt{"} ), \,
+  b_{ i } \in B,\, i = 1, 2, \ldots, n.
 \end{equation}
-Tylko tyle jest nam potrzebne do udowodnienia twierdzenia 1.2.2.
-
-Wybiegnijmy teraz trochę w~przyszłość. Jeśli monoid $M$ jest monoidem
-wolnym, to~z~definicji jest on kanonicznie izomorficzny z~wolnym monoidem
-językowym $A^{ * }$. Dzięki twierdzeniu 1.2.2 i~wnioskom z~niego jest ono
-kanonicznie izomorficzny zbiór $A$ jest jednoznacznie wyznaczony przez
-relację
-\begin{equation}
-  \label{eq:Forys-Forys-18}
-  A = S \setminus S^{ 2 }, \quad
-  S = M \setminus \{ 1_{ M } \}.
-\end{equation}
-W~każdym monoidzie wolnym istnieje więc kanoniczne pojęcie długości
-elementu $m \in M$. Mianowicie, niech $h : A^{ * } \to M$ będzie kanonicznym
-izomorfizmem tych monoidów i~niech $m = h( w )$. Przez \textbf{długość
-  elementu $m \in M$} rozumiemy liczbę całkowitą nieujemną określoną przez
-wzór \eqref{eq:Forys-Forys-18}.
+Mamy nadzieję, że ta notacja pozwoli w~przejrzysty sposób zapisywać pewne
+dość abstrakcyjne kroki rachunkowe.
 
 \vspace{\spaceFour}
 
@@ -800,7 +782,7 @@ wzór \eqref{eq:Forys-Forys-18}.
 zrozumiały, gdyby wzór przedstawiający działania kanonicznego homomorfizmu
 zapisać jako
 \begin{equation}
-  \label{eq:Forys-Forys-19}
+  \label{eq:Forys-Forys-18}
   h( \texttt{"} a_{ 1 } a_{ 2 } \ldots a_{ n } \texttt{"} ) =
   h( \texttt{"} a_{ 1 } \texttt{"} ) h( \texttt{"} a_{ 2 } \texttt{"} ) \ldots
   h( \texttt{"} a_{ n } \texttt{"} ) = a_{ 1 } a_{ 2 } \ldots a_{ n }.
@@ -811,13 +793,53 @@ zapisać jako
 
 
 
+
+\start \Str{10} W~dowodzie twierdzenia 1.2.2 użyte jest mowa o~„długości
+elementu $m \in M$ w~$B^{ * }$”. Sens tego jest następujący. Dany jest zbiór
+$B$, niekoniecznie zawarty w~$M$, i~izomorfizm $f$, nie musi być to
+izomorfizm kanoniczny, między wolnym monoidem językowym $B^{ * }$ a~$M$. Dla
+każdego elementu $m \in M$ istnieje więc $w \in B^{ * }$, taki że $f( w ) = m$.
+Możemy więc przypisać elementowi $m$ liczbę z~$\Nbb_{ 0 }$, którą nazywamy
+jego długością, za pomocą wzoru
+\begin{equation}
+  \label{eq:Forys-Forys-19}
+  | m | := | w |.
+\end{equation}
+Tylko tyle jest nam potrzebne do udowodnienia twierdzenia 1.2.2.
+
+Wybiegnijmy teraz trochę w~przyszłość. Jeśli monoid $M$ jest monoidem
+wolnym, to~z~definicji jest on kanonicznie izomorficzny z~wolnym monoidem
+językowym $A^{ * }$, dla pewnego $A \subset M$. Dzięki wnioskowi 1.2.2 i~dyskusji
+przeprowadzonej w~tych notatkach na jego temat, zbiór $A$ jest jednoznacznie
+wyznaczony przez relację
+\begin{equation}
+  \label{eq:Forys-Forys-20}
+  A = S \setminus S^{ 2 }, \quad
+  S = M \setminus \{ 1_{ M } \}.
+\end{equation}
+W~każdym monoidzie wolnym istnieje więc kanoniczne pojęcie długości
+elementu $m \in M$. Mianowicie, niech $h : A^{ * } \to M$ będzie kanonicznym
+izomorfizmem odpowiednich monoidów i~niech $m = h( w )$. Przez
+\textbf{długość elementu $m \in M$} rozumiemy liczbę całkowitą nieujemną
+określoną przez wzór \eqref{eq:Forys-Forys-20}.
+
+\vspace{\spaceFour}
+
+
+
+
+
+
+
+
+
 ??????Drugą rzeczą na którą zwrócimy uwagę jest to, co~się dzieje w~sytuacji, gdy
 odwzorowanie $h : A^{ * } \to M$ jest izomorfizmem. Będziemy przy tym rozważać
 tylko sytuację, gdy $A \subset M$ i~$A^{ * }$ jest wolny monoidem językowym,
 przypadek ogólniejszy pozostawiamy na razie otwarty. Mianowicie możemy wtedy
 określić \textbf{długość $| m |$ elementu $m \in M$} za pomocą wzoru
 \begin{equation}
-  \label{eq:Forys-Forys-16}
+  \label{eq:Forys-Forys-21}
   | m | := | w |, \quad
   m = h( w ),\; w \in A^{ * }.
 \end{equation}
@@ -830,7 +852,9 @@ określona. ????
 
 
 
-\start \Str{10--11} W~kontekście podanych tu rozważań, należy zatrzymać~się zatrzymać nad pewnymi własnościami potęg zbiorów w~monoidach i~półgrupach. Niech $S$ będzie dowolną podgrupą, zachodzi wówczas
+\start \Str{10--11} W~kontekście podanych tu rozważań, należy zatrzymać~się
+zatrzymać nad pewnymi własnościami potęg podzbiorów w~monoidach
+i~półgrupach. Niech $S$ będzie dowolną podgrupą, zachodzi wówczas
 \begin{equation}
   \label{eq:Forys-Forys-17}
   S \supset S^{ 2 } \supset S^{ 3 } \supset \ldots
@@ -899,7 +923,7 @@ Wynika to z~tego, że $1_{ M } \in M$, więc $M^{ 2 } = M$. Sprawa robi~się cie
   $\Rightarrow$ Wystarczy pokazać, że~jeśli $a b = 1_{ M }$ to $a = 1_{ M }$ i~tym
   samym $b = 1_{ M }$. Ponieważ $1_{ M } \notin S$ i~$S^{ 2 } \subset S$, więc jeśli
   istniej taka para $a, b \in M$, że~$ab = 1_{ M }$ to $a$ lub $b$ musi
-  należeć do zbioru $M \setminus S = \{ 1_{ M } \}$, co tę część dowodu.
+  należeć do zbioru $M \setminus S = \{ 1_{ M } \}$, co kończy tę część dowodu.
 
   $\Leftarrow$ Dowód przeprowadzimy przez kontrapozycję. Jeżeli grupa jedynki nie
   jest trywialna, to istnieją dwa takie elementy, że~$a b = 1_{ M }$, przy
@@ -913,20 +937,41 @@ Wynika to z~tego, że $1_{ M } \in M$, więc $M^{ 2 } = M$. Sprawa robi~się cie
 
 
 
-\start \Str{10} Zatrzymajmy~się na chwilę nad wnioskiem 1.2.2. Stwierdzanie, że~baza $B$ wolnego monoidu $M$ jest minimalnym zbiorem generatorów oznaczy tyle, że dla każdego zbioru generatorów $D$ zachodzi $B \subset D$. Z~dowodu twierdzenia 1.2.2 wynika, że~$A \subset B$, gdzie $A = S \setminus S^{ 2 }$. Jeśli ponadto zachodziłaby $B \subset D$, to otrzymujemy, że~$A = B$. W~tym momencie jedyny dowód inkluzji $B \subset D$ jaki potrafię wymyślić,
-przebiega
-w~następujący sposób.
+\start \Str{10} Zatrzymajmy~się na chwilę nad wnioskiem 1.2.2.
+Stwierdzanie, że~baza $B$ wolnego monoidu $M$ jest minimalnym zbiorem
+generatorów oznaczy tyle, że dla każdego zbioru generatorów $D$ zachodzi
+$B \subset D$. Z~dowodu twierdzenia 1.2.2 wynika, że~$A \subset B$, gdzie
+$A = S \setminus S^{ 2 }$. Jeśli ponadto pokazalibyśmy, że~$B \subset D$, to otrzymujemy,
+że~$A = B$. W~tym momencie jedyny dowód inkluzji $B \subset D$ jaki potrafię
+wymyślić, przebiega w~następujący sposób.
 
-Jeżeli zbiór $D$ zawiera element neutralny, to możemy go usunąć z~niego bez straty ogólności, por. wzór na stronie~7. Od tego momentu przyjmujemy więc, że~$1_{ M } \notin D$.
+Jeżeli zbiór $D$ zawiera element neutralny, to możemy go usunąć z~niego bez
+straty ogólności, por. wzór na stronie~7 omawianej książki. Od tego momentu
+przyjmujemy więc, że~$1_{ M } \notin D$.
 
-Każdy element $d$ zbioru $D$ jest w~sposób koniczny izomorficzny z~pewny ciągiem elementów zbioru $B$:
-$\texttt{"} d \texttt{"} = h^{ -1 }( d ) = \texttt{"} b_{ 1 } b_{ 2 } \ldots b_{ n } \texttt{"}$. Tym samym jeśli $b = d_{ 1 } d_{ 2 } \ldots d_{ m }$, $d_{ i } \in D$, $i = 1, 2, \ldots, m$ to musi zachodzić
+Każdy element $d$ zbioru $D$ jest w~sposób koniczny izomorficzny z~pewny
+ciągiem elementów zbioru $B$:
+$\texttt{"} d \texttt{"} = h^{ -1 }( d ) = \texttt{"} b_{ 1 } b_{ 2 } \ldots b_{ n }
+\texttt{"} \in B^{ * }$. Tym samym jeśli $b = d_{ 1 } d_{ 2 } \ldots d_{ m }$,
+$d_{ i } \in D$, $i = 1, 2, \ldots, m$ to musi zachodzić
 \begin{equation}
   \label{eq:8}
-  \texttt{"} d_{ 1 } d_{ 2 } \ldots d_{ m } \texttt{"} = \texttt{"} b \texttt{"}.
+  \texttt{"} d_{ 1 } d_{ 2 } \ldots d_{ m } \texttt{"} =
+  \texttt{"} b \texttt{"} = h^{ -1 }( b ) \in B^{ * }.
 \end{equation}
-Ponieważ każdy $\textrm{"} d_{ 1 } \textrm{"}$ jest sam postaci $\texttt{"} b_{ i,\, 1 } b_{ i,\, 2 } \ldots b_{ i,\, n } \texttt{"}$, gdzie $b_{ i, j } \in B$, $i = 1, 2, \ldots, n$ jest ustaloną liczbą, $i$ jak poprzednio przyjmuje wartości od $1$ do $m$, to na mocy tego co zostało powiedziane przy okazji omawiania wzoru \eqref{eq:Forys-Forys-07}, powyższa równość może zachodzić wtedy i~tylko wtedy, gdy $m = 1$ i~$d_{ 1 } = \texttt{"} b \texttt{"}$. Czyli $\texttt{"} b \texttt{"} \in h^{ -1 }( D )$, co jest równoważne temu, że~$h( \texttt{"} b \texttt{"} ) = b \in D$.
+Ponieważ każdy $\texttt{"} d_{ 1 } \texttt{"}$ jest sam postaci
+$\texttt{"} b_{ i,\, 1 } b_{ i,\, 2 } \ldots b_{ i,\, n } \texttt{"}$, gdzie
+$b_{ i, j } \in B$, $i = 1, 2, \ldots, n$ jest ustaloną liczbą, $i$ jak poprzednio
+przyjmuje wartości od $1$ do $m$, to na mocy tego co zostało powiedziane
+przy okazji omawiania wzoru \eqref{eq:Forys-Forys-07}, powyższa równość
+może zachodzić wtedy i~tylko wtedy, gdy $m = 1$ i~$d_{ 1 } = \texttt{"} b
+\texttt{"}$. Czyli $\texttt{"} b \texttt{"} \in h^{ -1 }( D )$, co jest
+równoważne temu, że~$h( \texttt{"} b \texttt{"} ) = b \in D$. Tym samym
+dowiedliśmy, że~$B \subset D$.
 
+Tym samym dowiedliśmy, że~baza $B$ jest nie tylko najmniejszym w~sensie
+inkluzji zbiorem generatorów wolnego monoidu $M$, ale też, że~jest ona
+wyznaczona jednoznacznie przez warunek $B = S \setminus S^{ 2 }$.
 
 \vspace{\spaceFour}
 
