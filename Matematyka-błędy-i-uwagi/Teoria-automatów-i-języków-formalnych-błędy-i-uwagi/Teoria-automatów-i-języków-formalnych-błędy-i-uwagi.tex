@@ -856,39 +856,44 @@ określona. ????
 zatrzymać nad pewnymi własnościami potęg podzbiorów w~monoidach
 i~półgrupach. Niech $S$ będzie dowolną podgrupą, zachodzi wówczas
 \begin{equation}
-  \label{eq:Forys-Forys-17}
+  \label{eq:Forys-Forys-22}
   S \supset S^{ 2 } \supset S^{ 3 } \supset \ldots
 \end{equation}
-Ogólniej $S^{ k } \supset S^{ k + 1 }$ i~może zachodzić $S^{ k } \neq S^{ k + 1 }$. Choć dowód tego twierdzenia jest bardzo prosty to przeprowadzimy go powoli i~szczegółowo, by dokładnie zrozumieć o~co w~nim chodzi.
+Ogólniej $S^{ k } \supset S^{ k + 1 }$ i~może zachodzić $S^{ k } \neq S^{ k + 1 }$. Choć
+dowód tego twierdzenia jest bardzo prosty to przeprowadzimy go powoli
+i~szczegółowo, by dokładnie zrozumieć o~co w~nim chodzi.
 
-Rozpatrzmy przypadek $S \supset S^{ 2 }$. Każdy element jest $S^{ 2 }$ jest postaci $ab$, gdzie $a, b \in S$. Z~definicji działania wewnętrznego mamy $ab = c$, $c \in S$, z~czego wynika, że~$S \supset S^{ 2 }$.
+Rozpatrzmy przypadek $S \supset S^{ 2 }$. Każdy element jest $S^{ 2 }$ jest
+postaci $ab$, gdzie $a, b \in S$. Z~definicji działania wewnętrznego mamy
+$ab = c$, $c \in S$, z~czego wynika, że~$S \supset S^{ 2 }$.
 
 Weźmy teraz przypadek $S^{ 2 } \supset S^{ 3 }$. Rozpatrzymy element
 \begin{equation}
-  \label{eq:2}
+  \label{eq:Forys-Forys-23}
   abc \in S^{ 3 }, \quad a, b, c \in S.
 \end{equation}
-Znowu, korzystając z~podstawowych własności działania wewnętrznego w~półgrupie mamy
+Znowu, korzystając z~podstawowych własności działania wewnętrznego
+w~półgrupie mamy
 \begin{equation}
-  \label{eq:3}
+  \label{eq:Forys-Forys-24}
   abc = ( ab ) c.
 \end{equation}
 Oczywiście zachodzi $ab = a_{ 1 }$, dla pewnego $a_{ 1 } \in S$, więc
 \begin{equation}
-  \label{eq:4}
+  \label{eq:Forys-Forys-25}
   abc = ( ab ) c = a_{ 1 } c,
 \end{equation}
 a~wyrażenie $a_{ 1 } c$ należy do zbioru $S^{ 2 }$ z~definicji.
 
 Analogicznie przeprowadzamy dowód dla dowolnego $k$. Weźmy iloczyn
 \begin{equation}
-  \label{eq:5}
+  \label{eq:Forys-Forys-26}
   a_{ 1 } a_{ 2 } a_{ 3 } a_{ 4 } \ldots a_{ k + 1 } \in S^{ k }, \quad
   a_{ i } \in S,\, i = 1, 2, \ldots, n.
 \end{equation}
 Przekształcamy go w~sposób analogiczny co poprzednio.
 \begin{equation}
-  \label{eq:6}
+  \label{eq:Forys-Forys-27}
   a_{ 1 } a_{ 2 } a_{ 3 } a_{ 4 } \ldots a_{ k + 1 } =
   ( a_{ 1 } a_{ 2 } ) a_{ 3 } a_{ 4 } \ldots a_{ k + 1 } =
   b a_{ 3 } a_{ 4 } \ldots a_{ k + 1 } \in S^{ k },
@@ -955,7 +960,7 @@ $\texttt{"} d \texttt{"} = h^{ -1 }( d ) = \texttt{"} b_{ 1 } b_{ 2 } \ldots b_{
 \texttt{"} \in B^{ * }$. Tym samym jeśli $b = d_{ 1 } d_{ 2 } \ldots d_{ m }$,
 $d_{ i } \in D$, $i = 1, 2, \ldots, m$ to musi zachodzić
 \begin{equation}
-  \label{eq:8}
+  \label{eq:Forys-Forys-28}
   \texttt{"} d_{ 1 } d_{ 2 } \ldots d_{ m } \texttt{"} =
   \texttt{"} b \texttt{"} = h^{ -1 }( b ) \in B^{ * }.
 \end{equation}
@@ -977,7 +982,38 @@ wyznaczona jednoznacznie przez warunek $B = S \setminus S^{ 2 }$.
 
 
 
-\start \Str{11} W~dowodzie twierdzenia 1.2.4 jest napisane „Jeśli monoid jest wolny, to na mocy twierdzenia 1.2.2 spełnia wszystkich powyższe warunki”, gdzie warunki o~których mowa to to, że~monoid $M$ jest równo podzielny, $S = M \setminus \{ 1_{ M } \}$ jest podgrupą i~$\cap_{ n \in \Nbb } S^{ n } = \emptyset$. Jednak według mnie
+\start \Str{11} W~dowodzie twierdzenia 1.2.4 jest napisane „Jeśli monoid
+jest wolny, to na mocy twierdzenia 1.2.2 spełnia wszystkich powyższe
+warunki”, gdzie warunki o~których mowa to to, że~monoid $M$ jest równo
+podzielny, $S = M \setminus \{ 1_{ M } \}$ jest podgrupą
+i~$\cap_{ n \in \Nbb } \, S^{ n } = \emptyset$. Jednak według mnie wynikają nie z~tego
+twierdzenia, lecz z~podanej w~tych notatkach definicji monoidu wolnego $M$.
+
+Dokładniej wszystkie te własności posiada każdy wolny monoid językowy
+i~na mocy kanonicznego izomorfizmu przenoszą~się one z~wolnego monoidu
+językowego $B^{ * }$ na monoid $M$, gdzie $B \subset M$. Poniżej udowodnimy
+wszystkie te trzy własności dla dowolnego wolnego monoidu językowego.
+
+Zaczniemy od własności, że~dla dowolnego wolnego monoidu językowego $M$
+zbiór $S = M \setminus \{ 1_{ M } \}$ jest podgrupą. W~zasadzie cała praca jest już
+wykonana, bo zgodnie z~twierdzeniem \eqref{thm:Forys-Forys-01} $S$ jest
+podpółgrupą wtedy i~tylko wtedy, gdy grupa jedynki $M$ jest trywialna,
+a~ten fakt udowodniliśmy przy okazji podanie równości
+\eqref{eq:Forys-Forys-07}.
+
+Przejdźmy teraz do dowodu tego, że wolny monoid językowy jest
+równopodzielny. Weźmy takie elementy $a, b, c, d \in M$, że~zachodzi
+\begin{equation}
+  \label{eq:Forys-Forys-29}
+  a b = c d.
+\end{equation}
+Z~definicji wolnego monoidu językowego wynika, że~możemy przedstawić te elementy jako
+\begin{subequations}
+  \begin{align}
+    a &= b_{ a,\, 1 } b_{ a,\, 2 } \ldots b_{ a,\, n_{ 1 } }, \\
+  \end{align}
+\end{subequations}
+gdzie wszystkie $b_{ a,\, i }$, $b_{ b,\, j }$, $c_{ c,\, k }$, $d_{ d,\, l }$ należą do bazy $B$ wolnego monoidu językowego $M$.
 
 % \label{eq:Forys-Forys-07}
 
@@ -1018,8 +1054,20 @@ wyznaczona jednoznacznie przez warunek $B = S \setminus S^{ 2 }$.
     9  & 22 & & $f : A \mapsto M$ & $f : A \to M$ \\
     9  & 23 & & $h : A^{ * } \mapsto M$ & $h : A^{ * } \to M$ \\
     9  & &  9 & $\to \textrm{\textbf{M}}$ & $\to M$ \\
-    % 10 & & 10 &  & \\
+    10 & & 10 & $\{ a^{ n } \quad : \quad n \geq 2 \}$ & $\{ a^{ n } \; : \; n \geq 2 \}$ \\
     10 & 18 & & $id_{ A } : A \mapsto M$ & $id_{ A } : A \to M$ \\
+    11 &  1 & & $\{ 1 \}$ & $\{ 1_{ M } \}$ \\
+    11 &  9 & & $\forall n \in \! \Nbb$ & $\forall n \in \Nbb$ \\
+    11 & 10 & & $( u u^{ -1 } ).....$ & $( u u^{ - 1 } ) \ldots$ \\
+    11 & 12 & & $n \in \! \Nbb$ & $n \in \Nbb$ \\
+    11 & 12 & & $\bigcap_{ n \in \Nbb } \, \mathbf{S}^{ n }$
+           & $\bigcap_{ n \in \Nbb } \, S^{ n }$ \\
+    11 & 18 & & $S^{ k } \; = 0$ & $S^{ k } = 0$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -1103,7 +1151,12 @@ wyznaczona jednoznacznie przez warunek $B = S \setminus S^{ 2 }$.
   elementy ze zbioru $A$, wynika, że homomorfizm $h$ jest suriekcją.
   Z~jednoznaczności tego rozkładu wynika, że~$h$ jest infekcją, a~więc
   izomorfizmem. Tym samym monoid $M$ jest izomorficzny z~wolnym monoidem
-  językowym $A^{ * }$, zgodnie więc z~definicją jest monoidem wolnym.}
+  językowym $A^{ * }$, zgodnie więc z~definicją jest monoidem wolnym.} \\
+\StrWg{11}{15} \\
+\Jest  $\mathbf{S} \supset \mathbf{S}^{ 2 } \supset \mathbf{S}^{ 3 } \ldots
+\supset \mathbf{S}^{ k } \supset \mathbf{S}^{ k + 1 } ...$ \\
+\Powin $S \supset S^{ 2 } \supset S^{ 3 } \supset \ldots \supset S^{ k } \supset S^{ k + 1 } \supset \ldots$ \\
+
 
 
 
