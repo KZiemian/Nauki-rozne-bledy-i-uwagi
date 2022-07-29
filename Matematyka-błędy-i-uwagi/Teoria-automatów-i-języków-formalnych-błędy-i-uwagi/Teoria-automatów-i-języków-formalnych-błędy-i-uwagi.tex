@@ -532,7 +532,7 @@ przykładowo jeśli $u = 00$, $v = 11$, to
   \label{eq:Forys-Forys-05}
   u v = 0011 \neq 1100 = vu.
 \end{equation}
-Nasuwa~się naturalne pytanie: co można powiedzieć o~zbiorze $C$ taki,
+Nasuwa~się naturalne pytanie: co można powiedzieć o~zbiorze $C$ takim,
 że dla wszystkich $u, v \in C$ zachodzi
 \begin{equation}
   \label{eq:Forys-Forys-06}
@@ -912,8 +912,8 @@ Wynika to z~tego, że $1_{ M } \in M$, więc $M^{ 2 } = M$. Sprawa robi~się cie
 \begin{theorem}
   \label{thm:Forys-Forys-01}
 
-  Niech $M$ będzie monoidem. Zbiór $S = M \setminus \{ 1_{ M } \}$ jest półgrupą wtedy
-  i~tylko wtedy, gdy grupa jedynki monoidu $M$ jest trywialna.
+  Niech $M$ będzie monoidem. Zbiór $S = M \setminus \{ 1_{ M } \}$ jest podpółgrupą
+  wtedy i~tylko wtedy, gdy grupa jedynki monoidu $M$ jest trywialna.
 
 \end{theorem}
 
@@ -982,6 +982,8 @@ wyznaczona jednoznacznie przez warunek $B = S \setminus S^{ 2 }$.
 
 
 
+
+
 \start \Str{11} W~dowodzie twierdzenia 1.2.4 jest napisane „Jeśli monoid
 jest wolny, to na mocy twierdzenia 1.2.2 spełnia wszystkich powyższe
 warunki”, gdzie warunki o~których mowa to to, że~monoid $M$ jest równo
@@ -996,7 +998,7 @@ wszystkie te trzy własności dla dowolnego wolnego monoidu językowego.
 
 Zaczniemy od własności, że~dla dowolnego wolnego monoidu językowego $M$
 zbiór $S = M \setminus \{ 1_{ M } \}$ jest podgrupą. W~zasadzie cała praca jest już
-wykonana, bo zgodnie z~twierdzeniem \eqref{thm:Forys-Forys-01} $S$ jest
+wykonana, bo zgodnie z~twierdzeniem \ref{thm:Forys-Forys-01} $S$ jest
 podpółgrupą wtedy i~tylko wtedy, gdy grupa jedynki $M$ jest trywialna,
 a~ten fakt udowodniliśmy przy okazji podanie równości
 \eqref{eq:Forys-Forys-07}.
@@ -1007,15 +1009,133 @@ równopodzielny. Weźmy takie elementy $a, b, c, d \in M$, że~zachodzi
   \label{eq:Forys-Forys-29}
   a b = c d.
 \end{equation}
-Z~definicji wolnego monoidu językowego wynika, że~możemy przedstawić te elementy jako
+Z~definicji wolnego monoidu językowego wynika, że~możemy przedstawić te
+elementy jako
 \begin{subequations}
   \begin{align}
-    a &= b_{ a,\, 1 } b_{ a,\, 2 } \ldots b_{ a,\, n_{ 1 } }, \\
+    \label{eq:Forys-Forys-30-A}
+    a &= f_{ a,\, 1 } f_{ a,\, 2 } \ldots f_{ a,\, n_{ 1 } }, \\
+    \label{eq:Forys-Forys-30-B}
+    b &= f_{ b,\, 1 } f_{ b,\, 2 } \ldots f_{ b,\, n_{ 2 } }, \\
+    \label{eq:Forys-Forys-30-C}
+    c &= f_{ c,\, 1 } f_{ c,\, 2 } \ldots f_{ c,\, n_{ 3 } }, \\
+    \label{eq:Forys-Forys-30-D}
+    d &= f_{ d,\, 1 } f_{ d,\, 2 } \ldots f_{ d,\, n_{ 4 } },
   \end{align}
 \end{subequations}
-gdzie wszystkie $b_{ a,\, i }$, $b_{ b,\, j }$, $c_{ c,\, k }$, $d_{ d,\, l }$ należą do bazy $B$ wolnego monoidu językowego $M$.
+gdzie wszystkie $f_{ a,\, i }$, $f_{ b,\, j }$, $f_{ c,\, k }$, $f_{ d,\, l }$
+należą do bazy $B$ wolnego monoidu językowego $M$. Tym samym mamy
+\begin{subequations}
+  \begin{align}
+    \label{eq:Forys-Forys-31-A}
+    a b
+    &=
+      f_{ a,\, 1 } f_{ a,\, 2 } \ldots f_{ a,\, n_{ 1 } } f_{ b,\, 1 }
+      f_{ b,\, 2 } \ldots f_{ b,\, n_{ 2 } }, \\
+    \label{eq:Forys-Forys-31-B}
+    cd
+    &=
+      f_{ c,\, 1 } f_{ c,\, 2 } \ldots f_{ c,\, n_{ 3 } } f_{ d,\, 1 }
+      f_{ d,\, 2 } \ldots f_{ d,\, n_{ 4 } }.
+  \end{align}
+\end{subequations}
+Wobec tego równość \eqref{eq:Forys-Forys-29} może zachodzić wtedy i~tylko
+wtedy, gdy $n_{ 1 } + n_{ 2 } = n_{ 3 } + n_{ 4 }$ i~$f_{ a,\, 1 } = f_{ c,\, 1 }$,
+$f_{ a,\, 2 } = f_{ c,\, 2 }$, etc. Rozpatrzmy teraz możliwe przypadki.
 
-% \label{eq:Forys-Forys-07}
+Jeśli $n_{ 1 } = n_{ 3 }$ to $a = b$ i~$c = d$, więc równości $a = cu$
+i~$d = ub$ zachodzą dla $u = \texttt{""}$. Może przejść do analizy następnego przypadku.
+
+Jeśli $n_{ 1 } > n_{ 3 }$, to możemy zapisać
+\begin{equation}
+  \label{eq:Forys-Forys-32}
+  c = f_{ a,\, 1 } f_{ a,\, 2 } \ldots f_{ a,\, n_{ 3 } },
+\end{equation}
+i~tym samym
+\begin{equation}
+  \label{eq:Forys-Forys-33}
+  a =
+  ( f_{ a,\, 1 } f_{ a,\, 2 } \ldots f_{ a,\, n_{ 3 } } ) \cdot ( f_{ a,\, n_{ 3 } + 1 }
+  f_{ a,\, n_{ 3 } + 2 } \ldots f_{ a,\, n_{ 3 } } )
+  =
+  c ( f_{ a,\, n_{ 3 } + 1 } f_{ a,\, n_{ 3 } + 2 } \ldots f_{ a,\, n_{ 3 } } ).
+\end{equation}
+Kładąc $u = f_{ a,\, n_{ 3 } + 1 } f_{ a,\, n_{ 3 } + 2 } \ldots f_{ a,\, n_{ 1 } }$,
+dostajemy równość $a = cu$. Implikuje to również,
+że~$f_{ d,\, 1 } = f_{ a,\, n_{ 3 } + 1 }$, $f_{ d,\, 2 } = f_{ a,\, n_{ 3 } + 2 }$,
+etc. Tym samym dostajemy równość $d = ub$ i~dowód tego przypadku został
+zakończony.
+
+Pozostał nam do rozpatrzenia przypadek $n_{ 1 } < n_{ 3 }$, dowód przebiega
+analogicznie co dla nierówności w~drugą stronę. Tym razem mamy
+\begin{equation}
+  \label{eq:Forys-Forys-34}
+  a = f_{ c,\, 1 } f_{ c,\, 2 } \ldots f_{ c,\, n_{ 1 } },
+\end{equation}
+i~analogicznie
+\begin{equation}
+  \label{eq:Forys-Forys-35}
+  c =
+  ( f_{ c,\, 1 } f_{ c,\, 2 } \ldots f_{ c,\, n_{ 1 } })
+  \cdot ( f_{ c,\, n_{ 1 } + 1 } f_{ c,\, n_{ 1 } + 2 } \ldots f_{ c,\, n_{ 3 } } )
+  =
+  a \cdot ( f_{ c,\, n_{ 1 } + 1 } f_{ c,\, n_{ 1 } + 2 } \ldots f_{ c,\, n_{ 3 } } )
+\end{equation}
+Oznaczmy $v = f_{ c,\, n_{ 1 } + 1 } f_{ c,\, n_{ 2 } + 2 } \ldots f_{ c,\, n_{ 3 } }$,
+stąd $c = a v$. Tak jak poprzednio mamy ciąg równości
+$f_{ b,\, 1 } = f_{ c,\, n_{ 1 } + 1 }$, $f_{ b,\, 2 } = f_{ c,\, n_{ 1 } + 2 }$, etc.,
+co prowadzi do równości $b = v d$. To kończy dowód tej własności.
+
+Pozostaje nam udowodnić, że~dla wolnego monoidu językowego $M$ zachodzi
+$\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$. Zauważmy, że~z~definicji zbioru $S$, jeśli $w$
+należy do $S$ to jego długość jest co najmniej równa jeden: $| w | \geq 1$. Tym
+samym jeśli $w_{ 1 } \in S^{ 2 }$, to jego długość jest co najmniej równa $2$, bo istnieją takie $s_{ 1 }, s_{ 2 } \in S$, takie że $w = s_{ 1 } s_{ 2 }$, więc
+\begin{equation}
+  \label{eq:1}
+  | w | = | s_{ 1 } s_{ 2 } | = | s_{ 1 } | + | s_{ 2 } | \geq 2.
+\end{equation}
+Rozumują w~ten sposób i~korzystając z~zasady indukcji w~prosty sposób otrzymujemy, że
+\begin{equation}
+  \label{eq:2}
+  | w | \geq n, \quad \forall w \in S^{ n }.
+\end{equation}
+
+Teraz możemy udowodnić pożądaną własność. Oczywista jest zależność
+\begin{equation}
+  \label{eq:3}
+  \bigcap_{ n \in \Nbb } \, S^{ n } \subset S.
+\end{equation}
+Niech teraz $w \in S$ i~$| w | = n$. W~takim razie $w \notin S^{ n + 1 }$,
+więc $w \notin \bigcap_{ n \in \Nbb } S^{ n }$. Jest to prawdą dla każdego $w \in S$
+i~stąd $\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \Str{11} W~dowodzie twierdzenia 1.2.4 fakt, że~grupa jedynki monoidu
+$M$ jest trywialna, nie wydaje~się potrzebny, więc część dowodu tego
+twierdzenia możemy zupełnie pominąć.
+
+Grupa jedynki monoidu $M$ rozważanego w~tym twierdzeniu jest w~istocie
+trywialna. Wynika to na na mocy twierdzenia \ref{thm:Forys-Forys-01}
+z~tego, że~$S$ jest podpółgrupą.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \Str{11}
+
+
+
+
+
+
 
 
 
@@ -1038,7 +1158,7 @@ gdzie wszystkie $b_{ a,\, i }$, $b_{ b,\, j }$, $c_{ c,\, k }$, $d_{ d,\, l }$ n
     5  & & 12 & $( \textrm{\textbf{M}}, \cdot, 1_{ \textrm{\textbf{M}}} )$
            & $( M, \cdot, 1_{ M } )$ \\
     5  & &  1 & $x \in \textrm{\textbf{M}}$ & $x \in M$ \\
-    5  & &  1 & $\exists b \in B\; ,$ & $\exists b \in B,$ \\
+    5  & &  1 & $\exists b \in B\; ,$ & $\exists \, b \in B,$ \\
     6  &  9 & & $( S, \cdot )${ }, { }{ }$( S', \ast )$
            & $( S, \cdot )$, $( S', \ast )$ \\
     6  & 11 & & $\forall x, y \in S$ & $\forall x, y \in S,$ \\
@@ -1062,6 +1182,7 @@ gdzie wszystkie $b_{ a,\, i }$, $b_{ b,\, j }$, $c_{ c,\, k }$, $d_{ d,\, l }$ n
     11 & 12 & & $n \in \! \Nbb$ & $n \in \Nbb$ \\
     11 & 12 & & $\bigcap_{ n \in \Nbb } \, \mathbf{S}^{ n }$
            & $\bigcap_{ n \in \Nbb } \, S^{ n }$ \\
+    11 & 17 & & \textit{( 1.2.1)} & \textit{(1.2.1)} \\
     11 & 18 & & $S^{ k } \; = 0$ & $S^{ k } = 0$ \\
     % & & & & \\
     % & & & & \\
@@ -1156,8 +1277,14 @@ gdzie wszystkie $b_{ a,\, i }$, $b_{ b,\, j }$, $c_{ c,\, k }$, $d_{ d,\, l }$ n
 \Jest  $\mathbf{S} \supset \mathbf{S}^{ 2 } \supset \mathbf{S}^{ 3 } \ldots
 \supset \mathbf{S}^{ k } \supset \mathbf{S}^{ k + 1 } ...$ \\
 \Powin $S \supset S^{ 2 } \supset S^{ 3 } \supset \ldots \supset S^{ k } \supset S^{ k + 1 } \supset \ldots$ \\
-
-
+\StrWg{11}{18} \\
+\Jest  \textit{Ponieważ, jak uzasadniliśmy, grupa jedynki jest trywialna,}
+\\
+\Powin \textit{Ponieważ $S$ jest półgrupą, wynika stąd,~że} \\
+\StrWd{11}{19} \\
+\Jest  $\mathbf{S} \supsetneq \mathbf{S}^{ 2 } \supsetneq \mathbf{S}^{ 3 } \ldots
+\supsetneq \mathbf{S}^{ k } \supsetneq \mathbf{S}^{ k + 1 } \ldots$ \\
+\Powin $S \supsetneq S^{ 2 } \supsetneq S^{ 3 } \supsetneq \ldots \supsetneq S^{ k } \supsetneq S^{ k + 1 } \supsetneq \ldots$ \\
 
 
 
