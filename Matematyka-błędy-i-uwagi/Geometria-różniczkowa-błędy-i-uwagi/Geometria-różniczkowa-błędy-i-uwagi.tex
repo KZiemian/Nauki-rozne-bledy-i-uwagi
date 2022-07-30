@@ -1,6 +1,6 @@
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Podstawowe ustawienia i pakiety
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 \RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
 % sposoby używania LaTeXa. Więcej jest w l2tabu English version.
 \documentclass[a4paper,11pt]{article}
@@ -14,9 +14,9 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ----------------------------
+% ------------------------------
 \usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
 \usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
 % grafiki.
@@ -25,9 +25,9 @@
 % wprowadzane bezpośrednio w tekście.
 \usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ----------------------------
+% ------------------------------
 % MARGINS
-% ----------------------------
+% ------------------------------
 \setmarginsrb
 { 0.7in} % left margin
 { 0.6in} % top margin
@@ -438,7 +438,8 @@ konwencji jako kwestię uproszczenie notacji i~zwyczaju.
 % ############################
 \Work{ % Autor i tytuł dzieła
   Wojciech Wojtyński \\
-  „Grupy i~algebry Liego”, \cite{} }
+  \textit{Grupy i~algebry Liego},
+  \cite{WojtynskiGrupyIAlgebryLiego1986}}
 
 
 % ##################
@@ -461,9 +462,13 @@ konwencji jako kwestię uproszczenie notacji i~zwyczaju.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    8   & & & & $( m, n )$ \\
-    8   & & & & $m \in M$ jest $f( m ) \in N$ \\
-    8   & & & & $M \ni m \to f( m ) \in N$ \\
+    5   & & 10 & klasa grup & klasa \\
+    7   & &  4 & sumę & \textit{sumę} \\
+    7   & &  1 & $M_{ 1 } \ldots M_{ k }$ & $M_{ 1 }, \ldots, M_{ k }$ \\
+    8   &  3 & & $( m,\; n )$ & $( m, n )$ \\
+    8   & 17 & & $n \in N$ & $m \in M$ \\
+    8   & 17 & & $f( m ) \in M$ & $f( m ) \in N$ \\
+    8   & 18 & & $f( n )$ & $f( m )$ \\
     9   & & & & $x_{ 1 }, \, x_{ 2 } \in X$ \\
     25  & & & & $i_{ x_{ 0 } }( t ) = x_{ 0 }$ \\
     % & & & & \\
@@ -502,10 +507,6 @@ konwencji jako kwestię uproszczenie notacji i~zwyczaju.
 \Powin $[ a, b ] \in M$ jest~równoważne warunkowi $[ b, a ] \in M$ \\
 
 \begin{itemize}
-\item[--] Str. 8. \ldots$( m, n )$\ldots
-\item[--] Str. 8. \ldots$m \in M$ jest $f( m ) \in N$\ldots
-\item[--] Str. 8. \ldots$M \ni m \rightarrow f( m ) \in N$\ldots
-\item[--] Str. 9. \ldots$x_{ 1 }, \, x_{ 2 } \in X$\ldots
 \item[--] Str. 15. $$\omega( \lambda x_{ 1 } + \mu x_{ 2 }, y ) =
   \lambda \, \omega( x_{ 1 }, y ) + \mu \, \omega( x_{ 2 }, y )$$
 \item[--] Str. 20. \ldots tj. $F$ jest formą dwuliniową na $X$ (jako
