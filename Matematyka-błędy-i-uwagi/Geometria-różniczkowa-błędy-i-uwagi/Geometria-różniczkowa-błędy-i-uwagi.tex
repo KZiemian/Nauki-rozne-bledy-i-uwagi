@@ -313,8 +313,8 @@ $( \frac{ v_{ 1 } }{ v_{ i } }, \ldots, \frac{ v_{ i - 1 } }{ v_{ i } },
 % ############################
 \Work{ % Autor i tytuł dzieła
   Bogusław Gdowski \\
-  „Elementy geometrii różniczkowej z~zadaniami”,
-  \cite{GdowskiElementGeometriiRozniczkowejZZadaniami1999} }
+  \textit{Elementy geometrii różniczkowej z~zadaniami},
+  \cite{GdowskiElementGeometriiRozniczkowejZZadaniami1999}}
 
 
 % ##################
@@ -435,7 +435,15 @@ konwencji jako kwestię uproszczenie notacji i~zwyczaju.
 
 
 
+
+
+
+
+
+
 % ############################
+\newpage
+
 \Work{ % Autor i tytuł dzieła
   Wojciech Wojtyński \\
   \textit{Grupy i~algebry Liego},
@@ -445,6 +453,32 @@ konwencji jako kwestię uproszczenie notacji i~zwyczaju.
 % ##################
 \CenterBoldFont{Uwagi}
 
+
+\start W~książce do oznaczenia ciał używa się fontów pogrubionych:
+$\mathbf{K}$, $\mathbf{R}$, $\mathbf{C}$, etc. W~tych notatkach będziemy
+używali standardowych fontów „blackboard bold”: $\Kbb$, $\Rbb$, $\Cbb$, etc.
+Wyjątkiem będzie sytuacja, gdy został użyty zły symbol, wtedy będziemy
+dążyć, by wzór poprawiany bym maksymalnie podobny do oryginału w~książce.
+
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+
+\start \Str{13} W~tym miejscu powinniśmy zaznaczyć, że~dla prostoty zapisu
+będziemy często opuszczać symbol działania dwuargumentowego i~zamiast pisać
+$x \cdot y$, dla $x, y \in X$, będziemy pisali po prostu $x y$.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{14} Definicja zbioru $A \cdot B$ byłaby bardziej precyzyjna, gdy została zapisana w~poniższej postaci.
+\begin{equation}
+  \label{eq:Wojtynski-01}
+  A \cdot B := \{ x \in X : \exists\, y \in A, \exists\, z \in B,\; x = \mu( y, z ) \}.
+\end{equation}
 
 
 
@@ -478,15 +512,80 @@ konwencji jako kwestię uproszczenie notacji i~zwyczaju.
     11  & 10 & & $\rho( X, Y )$ & $\rho( x, y )$ \\
     11  & &  5 & zbioru & niepustego zbioru \\
     13  &  6 & & $y_{ \varphi } \in X_{ \varphi }$ & $x_{ \varphi } \in X_{ \varphi }$ \\
-    % & & & & \\
-    % & & & & \\
+    14  &  1 & & $x_{ 1 },\;\; x_{ 2 } \in X$ & $x_{ 1 },\, x_{ 2 } \in X$ \\
+    14  &  6 & & $x e_{ + }$ & $x \, e_{ + }$ \\
+    14  & 18 & & $\mu\big( x, \mu( x, y ) \big)$
+           & $\mu\big( x, \mu( y, z ) \big)$ \\
+    14  & 21 & & $\mathbf{x} \in \mathbf{X}$ & $x \in X$ \\
+    15  & &  5 & $\mu \omega( x_{ 1 }, y )$ & $\mu \, \omega( x_{ 2 }, y )$ \\
+    17  &  7 & & $W$ modulo $V$, & $W$, \\
+    17  &  7 & & $\tau( x_{ j }, y_{ k } )$
+           & $\tau( x_{ j }, y_{ k } ) = \pi( x_{ j } \otimes y_{ k } )$ \\
+    & & & & \\
+        % & & & & \\
     25  & & & & $i_{ x_{ 0 } }( t ) = x_{ 0 }$ \\
     % & & & & \\
     % & & & & \\
-    99  & & & & także $[ a, b ] \in M$ \\
-    99  & & & & $N \leq L_{ 2 }$, \textit{to} $f^{ -1 }( N ) \leq L_{ 1 }$ \\
-    100 & & & & $a_{ i } \in f^{ -1 }( b_{ i } )$ \\
+    % 99  & & & & także $[ a, b ] \in M$ \\
+    % 99  & & & & $N \leq L_{ 2 }$, \textit{to} $f^{ -1 }( N ) \leq L_{ 1 }$ \\
+    % 100 & & & & $a_{ i } \in f^{ -1 }( b_{ i } )$ \\
     % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % 5   & & 10 & klasa grup & klasa \\
+    % 7   & &  4 & sumę & \textit{sumę} \\
+    % 7   & &  1 & $M_{ 1 } \ldots M_{ k }$ & $M_{ 1 }, \ldots, M_{ k }$ \\
+    % 8   &  3 & & $( m,\; n )$ & $( m, n )$ \\
+    % 8   & 17 & & $n \in N$ & $m \in M$ \\
+    % 8   & 17 & & $f( m ) \in M$ & $f( m ) \in N$ \\
+    % 8   & 18 & & $f( n )$ & $f( m )$ \\
+    % 9   & &  4 & $x_{ 1 },\;\; x_{ 2 } \in X$ & $x_{ 1 },\, x_{ 2 } \in X$ \\
+    % 9   & &  4 & albo & lub \\
+    % 10  &  4 & & $y_{ 0 } \succ x$($y_{ 0 } \prec x$)
+    %        & $x \prec y_{ 0 }$ ($y_{ 0 } \prec x$) \\
+    % 10  & 14 & & \textit{to istnieje w~$X$} & \textit{to w~$X$ istniej} \\
+    % 10  & &  9 & $U \subset \Omega_{ x_{ 0 } }$ & $U \in \Omega_{ x_{ 0 } }$ \\
+    % 11  & 10 & & $\rho( X, Y )$ & $\rho( x, y )$ \\
+    % 11  & &  5 & zbioru & niepustego zbioru \\
+    % 13  &  6 & & $y_{ \varphi } \in X_{ \varphi }$ & $x_{ \varphi } \in X_{ \varphi }$ \\
+    % 14  &  1 & & $x_{ 1 },\;\; x_{ 2 } \in X$ & $x_{ 1 },\, x_{ 2 } \in X$ \\
+    % 14  &  6 & & $x e_{ + }$ & $x \, e_{ + }$ \\
+    % 14  & 18 & & $\mu\big( x, \mu( x, y ) \big)$
+    %        & $\mu\big( x, \mu( y, z ) \big)$ \\
+    % 14  & 21 & & $\mathbf{x} \in \mathbf{X}$ & $x \in X$ \\
+    % 15  & &  5 & $\mu \omega( x_{ 1 }, y )$ & $\mu \, \omega( x_{ 2 }, y )$ \\
+    % 17  &  7 & & $W$ modulo $V$, & $W$, \\
+    % 17  &  7 & & $\tau( x_{ j }, y_{ k } )$
+    %        & $\tau( x_{ j }, y_{ k } ) = \pi( x_{ j } \otimes y_{ k } )$ \\
+    99  &  2 & & $[ a, b ] \in \mathbf{K}$ & $[ a, b ] \in M$ \\
+    99  &  4 & & $[ a, b ] \in \mathbf{K}$ & $[ a, b ] \in M$ \\
+    99  &  4 & & $[ b, a ] \in \mathbf{K}$ & $[ b, a ] \in M$ \\
+    99  & & 13 & $*$ & Działanie $*$ \\
+    100 & &  9 & $\mathbf{K} \leq L_{ 2 }$ & $M \leq L_{ 2 }$ \\
+    100 & &  9 & $f^{ -1 }( \mathbf{K} )$ & $f^{ - 1}( M )$ \\
+    100 & &  6 & $a_{ i } = f^{ -1 }( b_{ i } )$
+           & $a_{ i } \in f^{ -1 }( b_{ i } )$ \\
+    100 & &  5 & $\mathbf{K}$ & $M$ \\
+    100 & &  4 & $f^{ -1 }( K )$ & $f^{ -1 }( M )$ \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -501,10 +600,14 @@ konwencji jako kwestię uproszczenie notacji i~zwyczaju.
 
 
 \noindent
-\StrWg{15}{} \\
-\Jest \\
-\Powin $\omega( \lambda x_{ 1 } + \mu x_{ 2 },\, y ) = \lambda \, \omega( x_{
-  1 },\, y ) + \mu \, \omega( x_{ 2 },\, y )$ \\
+\StrWg{18}{5} \\
+\Jest  $\displaystyle \omega\Big( \big( \sum_{ i } x_{ i } \otimes y_{ i } ),
+\sum_{ j } x_{ j } \otimes y_{ j } )$ \\
+\Powin $\displaystyle \omega\Big( \sum_{ i } x_{ i } \otimes y_{ i },
+\sum_{ j } v_{ j } \otimes w_{ j } \Big)$ \\
+\StrWg{18}{5} \\
+\Jest  $\displaystyle \mu( x_{ i }, x_{ j } ) \otimes \nu( y_{ i }, y_{ j } )$ \\
+\Powin $\displaystyle \mu( x_{ i }, v_{ j } ) \otimes \nu( y_{ i }, w_{ j } )$ \\
 \StrWg{20}{} \\
 \Jest \\
 \Powin tj.~$F$ jest formą dwuliniową na $X$ (jako przestrzeni nad~$\Rbb$) \\
@@ -512,23 +615,15 @@ konwencji jako kwestię uproszczenie notacji i~zwyczaju.
 \Jest \\
 \Powin $\mathfrak{so}_{ + }( n,\, \Cbb ) = \mathfrak{sl}( n,\, \Cbb ) \cap
 \mathfrak{o}_{ + }( n,\, \Cbb ) \textrm{.}$ \\
-\StrWg{99}{} \\
-\Jest \\
-\Powin $[ a, b ] \in M$ jest~równoważne warunkowi $[ b, a ] \in M$ \\
 
 \begin{itemize}
 \item[--] Str. 20. \ldots tj. $F$ jest formą dwuliniową na $X$ (jako
   przestrzeni nad $\mathbb{R}$)\ldots
-\item[--] Str. 25. \ldots$i_{ x_{ 0 } }( t ) = x_{ 0 }$\ldots
+
 \item[--] Str. 30. $$\mathfrak{so}_{ + }( n, \mathbb{C} ) =
-  \mathfrak{sl}( n, \mathbb{C} ) \cap \mathfrak{o}_{ + }( n,
+\mathfrak{sl}( n, \mathbb{C} ) \cap \mathfrak{o}_{ + }( n,
   \mathbb{C} ) \textrm{.}$$
-\item[--] Str. 99. \ldots także $[ a, b ] \in M$\ldots
-\item[--] Str. 99. \ldots $[ a, b ] \in M$ jest równoważne warunkowi
-  $[ b, a ] \in M$\ldots
-\item[--] Str. 100. \ldots$N \leq L_{ 2 }$, \emph{to} $f^{ -1 }( N )
-  \leq L_{ 1 }$\ldots
-\item[--] Str. 100. \ldots$a_{ i } \in f^{ -1 }( b_{ i } )$\ldots
+
 \end{itemize}
 
 
