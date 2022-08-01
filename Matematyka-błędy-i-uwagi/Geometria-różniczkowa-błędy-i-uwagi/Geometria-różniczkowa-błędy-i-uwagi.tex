@@ -474,16 +474,46 @@ $x \cdot y$, dla $x, y \in X$, będziemy pisali po prostu $x y$.
 
 
 
-\start \Str{14} Definicja zbioru $A \cdot B$ byłaby bardziej precyzyjna, gdy została zapisana w~poniższej postaci.
+
+
+\start \Str{14} Definicja zbioru $A \cdot B$ byłaby bardziej precyzyjna, gdy
+została zapisana w~poniższej postaci.
 \begin{equation}
   \label{eq:Wojtynski-01}
   A \cdot B := \{ x \in X : \exists\, y \in A, \exists\, z \in B,\; x = \mu( y, z ) \}.
 \end{equation}
 
+\vspace{\spaceFour}
+
+
+
+
+
+\start \Str{19} Warto zaznaczyć, że~naturalne włożenie $\omega_{ 0 }$ w~algebrę
+$A$, dla przypadku gdy $A$ jest algebrą z~jedynką, ma postać
+\begin{equation}
+  \label{eq:Wojtynski-02}
+  \Kbb \ni \lambda \mapsto \omega_{ 0 }( \lambda ) = \lambda \, 1 \in A,
+\end{equation}
+gdzie $1$ jest elementem neutralnym algebry $A$. Gdy $A$ nie posiada jedynki
+przyjmujemy
+\begin{equation}
+  \label{eq:Wojtynski-03}
+  \Kbb \ni \lambda \mapsto \omega_{ 0 }( \lambda ) \equiv 0 \in A.
+\end{equation}
+
+
+
+
+
+
+
 
 
 
 % ##################
+\newpage
+
 \CenterBoldFont{Błędy}
 
 
@@ -521,15 +551,17 @@ $x \cdot y$, dla $x, y \in X$, będziemy pisali po prostu $x y$.
     17  &  7 & & $W$ modulo $V$, & $W$, \\
     17  &  7 & & $\tau( x_{ j }, y_{ k } )$
            & $\tau( x_{ j }, y_{ k } ) = \pi( x_{ j } \otimes y_{ k } )$ \\
-    & & & & \\
-        % & & & & \\
+    18  & &  1 & $X^{ k } \times X^{ m }$ & $X^{ \otimes k } \times X^{ \otimes m }$ \\
+    18  & &  1 & $X^{ k } \otimes X^{ m }$ & $X^{ \otimes k } \otimes X^{ \otimes m }$ \\
+    20  & 19 & & $\overline{ F( y, x ) }$ & $\overline{ F( y, x ) }$. \\
+    20  & 20 & & (tj. & Tj. \\
+    20  & 20 & & $\Rbb$)) & $\Rbb$) \\
     25  & & & & $i_{ x_{ 0 } }( t ) = x_{ 0 }$ \\
-    % & & & & \\
-    % & & & & \\
-    % 99  & & & & także $[ a, b ] \in M$ \\
-    % 99  & & & & $N \leq L_{ 2 }$, \textit{to} $f^{ -1 }( N ) \leq L_{ 1 }$ \\
-    % 100 & & & & $a_{ i } \in f^{ -1 }( b_{ i } )$ \\
-    % & & & & \\
+    37  &  8 & & $e_{ i } ( e_{ j }, e_{ k } )$
+           & $( e_{ i } \cdot e_{ j } ) \cdot e_{ k }$ \\
+    37  & &  8 & $\bar{q} q$ & $\bar{q} \cdot q$ \\
+    50  & &  8 & $e_{ i } ( e_{ j } \cdot e_{ k } )$
+           & $e_{ i } \cdot ( e_{ j } \cdot e_{ k } )$ \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -543,6 +575,8 @@ $x \cdot y$, dla $x, y \in X$, będziemy pisali po prostu $x y$.
 
 
 
+
+  \newpage
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -608,6 +642,9 @@ $x \cdot y$, dla $x, y \in X$, będziemy pisali po prostu $x y$.
 \StrWg{18}{5} \\
 \Jest  $\displaystyle \mu( x_{ i }, x_{ j } ) \otimes \nu( y_{ i }, y_{ j } )$ \\
 \Powin $\displaystyle \mu( x_{ i }, v_{ j } ) \otimes \nu( y_{ i }, w_{ j } )$ \\
+\StrWg{19}{11} \\
+\Jest  $\rho( x_{ 1 } ) \cdot \rho( x_{ 2 } ) \ldots \rho( x_{ n } )$ \\
+\Powin $\rho( x_{ 1 } ) \cdot \rho( x_{ 2 } ) \cdot \ldots \cdot \rho( x_{ n } )$ \\
 \StrWg{20}{} \\
 \Jest \\
 \Powin tj.~$F$ jest formą dwuliniową na $X$ (jako przestrzeni nad~$\Rbb$) \\
