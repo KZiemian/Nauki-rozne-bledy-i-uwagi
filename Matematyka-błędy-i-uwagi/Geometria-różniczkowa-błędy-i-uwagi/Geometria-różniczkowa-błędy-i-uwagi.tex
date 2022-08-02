@@ -474,6 +474,11 @@ klasę funkcji różniczkowalnych nie symbolem $C^{ k }$, lecz $\Ccal^{ k }$, et
 będziemy często opuszczać symbol działania dwuargumentowego i~zamiast pisać
 $x \cdot y$, dla $x, y \in X$, będziemy pisali po prostu $x y$.
 
+Reguły jaką stosował Wojtyński decydując~się w~danym miejscu zostawić, bądź
+opuścić symbol $\cdot$ pozostają dla mnie zagadką. W~miarę jednak swoich
+możliwości będę starał się wskazać w~tych notatkach, w~których miejscach
+pisownię wzorów należałoby ujednolicić.
+
 \vspace{\spaceFour}
 
 
@@ -541,6 +546,42 @@ sformatowane.
 
 
 
+\start \Str{25} Definicja 1.33 byłaby bardziej logiczna, gdyby najpierw
+została podana definicja przestrzeni lokalnie łukowo spójnej, a~dopiero
+potem lokalnie jednospójnej.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \Str{31} Na początku tej strony czytamy „pierwsza podprzestrzeń ma
+wymiar zespolony $( n^{ 2 } - n ) / 2$”. Ponieważ może zachodzić wątpliwość,
+którą przestrzeń określamy jako „pierwszą”, zanotujemy, że~przez pierwszą
+przestrzeń należy rozumieć przestrzeń macierzy z~zerowymi współczynnikami na
+diagonali. Przez „drugą przestrzeń” należy rozumieć przestrzeń macierz
+z~zerowymi współczynnikami poza diagonalą.
+
+\vspace{\spaceFour}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 % ##################
 \newpage
 
@@ -594,16 +635,84 @@ sformatowane.
     23  &  4 & & $\lambda ( A_{ 1 } x )$ & $\lambda \big( A_{ 1 }( x ) \big)$ \\
     24  & 15 & & $( a, b ) \in \Omega$ & $( a, b ) \in \Omega$, \\
     24  & & 12 & $\Ccal^{ 1 }$ & $\Ccal^{ k }$ \\
-    25  & & & & $i_{ x_{ 0 } }( t ) = x_{ 0 }$ \\
+    25  &  9 & & $1 / 2 \leq t$ & $1 / 2 < t$ \\
+    25  & 12 & & $i_{ x_{ 0 } }( t ) = 0$ & $i_{ x_{ 0 } }( t ) = x_{ 0 }$ \\
+    26  & &  4 & 46 & 47 \\
+    26  & &  1 & $x \in X$ & $a \in B$ \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  \newpage
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    27  &  2 & & $= d$ & $= u$ \\
+    29  &  9 & & $\textrm{Gl}( n, \Cbb )$ & $\GL( n, \Cbb )$ \\
+    29  & &  9 & $( A B )^{ T } = B^{ T } A^{ T }$
+           & $( A \cdot B )^{ T } = B^{ T } \cdot A^{ T }$ \\
+    29  & &  8 & $\overline{ A B }$ & $\overline{ A \cdot B }$ \\
+    29  &  7 & & $( A B )^{ * }$ & $( A \cdot B )^{ * }$ \\
+    30  & & 16 & $\oFrak( n, \Cbb )$ & $\oFrak_{ + }( n, \Cbb )$ \\
+    30  & & 10 & $*$ -- operacją & $*$ operacją \\
+    %    & &  4 & $x_{ 1 },\;\; x_{ 2 } \in X$ & $x_{ 1 },\, x_{ 2 } \in X$ \\
+    %    & &  4 & albo & lub \\
+    %   &  4 & & $y_{ 0 } \succ x$($y_{ 0 } \prec x$)
+    %        & $x \prec y_{ 0 }$ ($y_{ 0 } \prec x$) \\
+    %   & 14 & & \textit{to istnieje w~$X$} & \textit{to w~$X$ istniej} \\
+    %   & &  9 & $U \subset \Omega_{ x_{ 0 } }$ & $U \in \Omega_{ x_{ 0 } }$ \\
+    %   & 10 & & $\rho( X, Y )$ & $\rho( x, y )$ \\
+    %   & &  5 & zbioru & niepustego zbioru \\
+    %   &  6 & & $y_{ \varphi } \in X_{ \varphi }$ & $x_{ \varphi } \in X_{ \varphi }$ \\
+    %   &  1 & & $x_{ 1 },\;\; x_{ 2 } \in X$ & $x_{ 1 },\, x_{ 2 } \in X$ \\
+    %   &  6 & & $x e_{ + }$ & $x \, e_{ + }$ \\
+    %   & 18 & & $\mu\big( x, \mu( x, y ) \big)$
+    %        & $\mu\big( x, \mu( y, z ) \big)$ \\
+    %   & 21 & & $\mathbf{x} \in \mathbf{X}$ & $x \in X$ \\
+    %   & &  5 & $\mu \omega( x_{ 1 }, y )$ & $\mu \, \omega( x_{ 2 }, y )$ \\
+    %   &  7 & & $W$ modulo $V$, & $W$, \\
+    %   &  7 & & $\tau( x_{ j }, y_{ k } )$
+    %        & $\tau( x_{ j }, y_{ k } ) = \pi( x_{ j } \otimes y_{ k } )$ \\
+    %   & &  1 & $X^{ k } \times X^{ m }$ & $X^{ \otimes k } \times X^{ \otimes m }$ \\
+    %   & &  1 & $X^{ k } \otimes X^{ m }$ & $X^{ \otimes k } \otimes X^{ \otimes m }$ \\
+    %   & 19 & & $\overline{ F( y, x ) }$ & $\overline{ F( y, x ) }$. \\
+    %   & 20 & & (tj. & Tj. \\
+    %   & 20 & & $\Rbb$)) & $\Rbb$) \\[0.3em]
+    %   &  5 & & $\displaystyle
+    %              \frac{ \overline{ \langle x, y \rangle } }{ | \langle x, y \rangle | }$
+    %        & $\displaystyle
+    %          \frac{ \overline{ \langle x', y \rangle } }{ | \langle x', y \rangle | }$ \\
+    %   &  5 & & $\langle x, y \rangle \neq 0$ & $\langle x', y \rangle \neq 0$ \\
+    %   &  4 & & $\lambda ( A_{ 1 } x )$ & $\lambda \big( A_{ 1 }( x ) \big)$ \\
+    %   & 15 & & $( a, b ) \in \Omega$ & $( a, b ) \in \Omega$, \\
+    %   & & 12 & $\Ccal^{ 1 }$ & $\Ccal^{ k }$ \\
+    %   &  9 & & $1 / 2 \leq t$ & $1 / 2 < t$ \\
+    %   & 12 & & $i_{ x_{ 0 } }( t ) = 0$ & $i_{ x_{ 0 } }( t ) = x_{ 0 }$ \\
+    %   &  8 & & $e_{ i } ( e_{ j }, e_{ k } )$
+    %        & $e_{ i } \cdot ( e_{ j } \cdot e_{ k } )$ \\
+    %   &  8 & &
+    %        & $( e_{ i } \cdot e_{ j } ) \cdot e_{ k }$ \\
+    %   & &  8 & $\bar{q} q$ & $\bar{q} \cdot q$ \\
+    %   & &  8 & $e_{ i } ( e_{ j } \cdot e_{ k } )$
+    % & $e_{ i } \cdot ( e_{ j } \cdot e_{ k } )$ \\
     37  &  8 & & $e_{ i } ( e_{ j }, e_{ k } )$
            & $e_{ i } \cdot ( e_{ j } \cdot e_{ k } )$ \\
+    % & & & & \\
+    % & & & & \\
     37  &  8 & &
            & $( e_{ i } \cdot e_{ j } ) \cdot e_{ k }$ \\
     37  & &  8 & $\bar{q} q$ & $\bar{q} \cdot q$ \\
     50  & &  8 & $e_{ i } ( e_{ j } \cdot e_{ k } )$
            & $e_{ i } \cdot ( e_{ j } \cdot e_{ k } )$ \\
-    % & & & & \\
-    % & & & & \\
+& & & & \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
