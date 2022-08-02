@@ -569,6 +569,61 @@ z~zerowymi współczynnikami poza diagonalą.
 
 
 
+\start \Str{31} Dowód tego, że~odwzorowanie
+$\GL( n, \Kbb ) \ni A \mapsto \widetilde{A} \in \GL( n, \Kbb )$ jest izomorfizmem,
+byłby prostszy, gdyby zostało jawnie powiedziane, że~odwzorowanie to jest
+inwolucją.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \Str{31} Aby udowodnić, że~dla macierzy $A \in \OStraight( n, \Rbb )$
+zachodzi $| a_{ i, j } | \leq 1$, dla $i, j = 1, 2, \ldots, n$, należy w~równości
+\begin{equation}
+  \label{eq:Wojtynski-04}
+  \sum_{ j = 1 }^{ n } a_{ j i } \, a_{ j k } = \delta_{ k }^{ i }, \quad
+  i, k = 1, 2, \ldots, n,
+\end{equation}
+podstawić $i = k$, do prowadzi do
+\begin{equation}
+  \label{eq:Wojtynski-05}
+  \sum_{ j = 1 }^{ n } a_{ j i } \, a_{ j i } =
+  \sum_{ j = 1 }^{ n } ( a_{ j i } )^{ 2 } =
+  ( a_{ 1 i } )^{ 2 } + ( a_{ 2 i } )^{ 2 } + \ldots + ( a_{ n i } )^{ 2 } =
+  \delta^{ i }_{ i } = 1.
+\end{equation}
+Ponieważ wszystkie współczynniki $a_{ i j }$, gdzie $i, j = 1, 2, \ldots, n$, są
+rzeczywiste, otrzymuje od razu nierówność
+\begin{equation}
+  \label{eq:Wojtynski-06}
+  ( a_{ i j } )^{ 2 } \leq 1.
+\end{equation}
+Pierwiastkując obustronnie i~biorąc dodatnie wartości pierwiastka
+otrzymujemy szukaną nierówność: $| a_{ i j } | \leq 1$.
+
+Całe to rozumowanie jest bardzo proste, jednak uznaliśmy, iż warto je
+zapisać w~tak szczegółowy sposób. Czyni to wykład prowadzony w~książce
+trochę bardziej jasnym i~zupełnym.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \Str{31} Czy warunek $A A^{ T } = I$ wynika z~warunku $A^{ T } A = I$,
+gdy $A$ jest macierzą kwadratową wymiaru $n$?
+
+\vspace{\spaceFour}
+
+
+
+
+
+
 
 
 
@@ -663,7 +718,7 @@ z~zerowymi współczynnikami poza diagonalą.
     29  &  7 & & $( A B )^{ * }$ & $( A \cdot B )^{ * }$ \\
     30  & & 16 & $\oFrak( n, \Cbb )$ & $\oFrak_{ + }( n, \Cbb )$ \\
     30  & & 10 & $*$ -- operacją & $*$ operacją \\
-    %    & &  4 & $x_{ 1 },\;\; x_{ 2 } \in X$ & $x_{ 1 },\, x_{ 2 } \in X$ \\
+    31  & 13 & & $\widetilde{ ( A B ) }$ & $\widetilde{ ( A \cdot B ) }$ \\
     %    & &  4 & albo & lub \\
     %   &  4 & & $y_{ 0 } \succ x$($y_{ 0 } \prec x$)
     %        & $x \prec y_{ 0 }$ ($y_{ 0 } \prec x$) \\
@@ -732,30 +787,30 @@ z~zerowymi współczynnikami poza diagonalą.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    % 5   & & 10 & klasa grup & klasa \\
-    % 7   & &  4 & sumę & \textit{sumę} \\
-    % 7   & &  1 & $M_{ 1 } \ldots M_{ k }$ & $M_{ 1 }, \ldots, M_{ k }$ \\
-    % 8   &  3 & & $( m,\; n )$ & $( m, n )$ \\
-    % 8   & 17 & & $n \in N$ & $m \in M$ \\
-    % 8   & 17 & & $f( m ) \in M$ & $f( m ) \in N$ \\
-    % 8   & 18 & & $f( n )$ & $f( m )$ \\
-    % 9   & &  4 & $x_{ 1 },\;\; x_{ 2 } \in X$ & $x_{ 1 },\, x_{ 2 } \in X$ \\
-    % 9   & &  4 & albo & lub \\
-    % 10  &  4 & & $y_{ 0 } \succ x$($y_{ 0 } \prec x$)
+    %    & & 10 & klasa grup & klasa \\
+    %    & &  4 & sumę & \textit{sumę} \\
+    %    & &  1 & $M_{ 1 } \ldots M_{ k }$ & $M_{ 1 }, \ldots, M_{ k }$ \\
+    %    &  3 & & $( m,\; n )$ & $( m, n )$ \\
+    %    & 17 & & $n \in N$ & $m \in M$ \\
+    %    & 17 & & $f( m ) \in M$ & $f( m ) \in N$ \\
+    %    & 18 & & $f( n )$ & $f( m )$ \\
+    %    & &  4 & $x_{ 1 },\;\; x_{ 2 } \in X$ & $x_{ 1 },\, x_{ 2 } \in X$ \\
+    %    & &  4 & albo & lub \\
+    %   &  4 & & $y_{ 0 } \succ x$($y_{ 0 } \prec x$)
     %        & $x \prec y_{ 0 }$ ($y_{ 0 } \prec x$) \\
-    % 10  & 14 & & \textit{to istnieje w~$X$} & \textit{to w~$X$ istniej} \\
-    % 10  & &  9 & $U \subset \Omega_{ x_{ 0 } }$ & $U \in \Omega_{ x_{ 0 } }$ \\
-    % 11  & 10 & & $\rho( X, Y )$ & $\rho( x, y )$ \\
-    % 11  & &  5 & zbioru & niepustego zbioru \\
-    % 13  &  6 & & $y_{ \varphi } \in X_{ \varphi }$ & $x_{ \varphi } \in X_{ \varphi }$ \\
-    % 14  &  1 & & $x_{ 1 },\;\; x_{ 2 } \in X$ & $x_{ 1 },\, x_{ 2 } \in X$ \\
-    % 14  &  6 & & $x e_{ + }$ & $x \, e_{ + }$ \\
-    % 14  & 18 & & $\mu\big( x, \mu( x, y ) \big)$
+    %   & 14 & & \textit{to istnieje w~$X$} & \textit{to w~$X$ istniej} \\
+    %   & &  9 & $U \subset \Omega_{ x_{ 0 } }$ & $U \in \Omega_{ x_{ 0 } }$ \\
+    %   & 10 & & $\rho( X, Y )$ & $\rho( x, y )$ \\
+    %   & &  5 & zbioru & niepustego zbioru \\
+    %   &  6 & & $y_{ \varphi } \in X_{ \varphi }$ & $x_{ \varphi } \in X_{ \varphi }$ \\
+    %   &  1 & & $x_{ 1 },\;\; x_{ 2 } \in X$ & $x_{ 1 },\, x_{ 2 } \in X$ \\
+    %   &  6 & & $x e_{ + }$ & $x \, e_{ + }$ \\
+    %   & 18 & & $\mu\big( x, \mu( x, y ) \big)$
     %        & $\mu\big( x, \mu( y, z ) \big)$ \\
-    % 14  & 21 & & $\mathbf{x} \in \mathbf{X}$ & $x \in X$ \\
-    % 15  & &  5 & $\mu \omega( x_{ 1 }, y )$ & $\mu \, \omega( x_{ 2 }, y )$ \\
-    % 17  &  7 & & $W$ modulo $V$, & $W$, \\
-    % 17  &  7 & & $\tau( x_{ j }, y_{ k } )$
+    %   & 21 & & $\mathbf{x} \in \mathbf{X}$ & $x \in X$ \\
+    %   & &  5 & $\mu \omega( x_{ 1 }, y )$ & $\mu \, \omega( x_{ 2 }, y )$ \\
+    %   &  7 & & $W$ modulo $V$, & $W$, \\
+    %   &  7 & & $\tau( x_{ j }, y_{ k } )$
     %        & $\tau( x_{ j }, y_{ k } ) = \pi( x_{ j } \otimes y_{ k } )$ \\
     99  &  2 & & $[ a, b ] \in \mathbf{K}$ & $[ a, b ] \in M$ \\
     99  &  4 & & $[ a, b ] \in \mathbf{K}$ & $[ a, b ] \in M$ \\
