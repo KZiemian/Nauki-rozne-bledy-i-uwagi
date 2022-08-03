@@ -83,9 +83,8 @@
 % ---------------------------------------
 \usepackage{latexgeneralcommands}
 \usepackage{mathcommands}
-% \usepackage{calculuscommands}
 \newcommand{\conca}{\textrm{conca}}
-% \usepackage{SchwartzBooksCommands}  % Pakiet napisany m.in. dla tego pliku.
+
 
 
 
@@ -829,29 +828,6 @@ określoną przez wzór \eqref{eq:Forys-Forys-20}.
 
 
 
-
-
-
-
-??????Drugą rzeczą na którą zwrócimy uwagę jest to, co~się dzieje w~sytuacji, gdy
-odwzorowanie $h : A^{ * } \to M$ jest izomorfizmem. Będziemy przy tym rozważać
-tylko sytuację, gdy $A \subset M$ i~$A^{ * }$ jest wolny monoidem językowym,
-przypadek ogólniejszy pozostawiamy na razie otwarty. Mianowicie możemy wtedy
-określić \textbf{długość $| m |$ elementu $m \in M$} za pomocą wzoru
-\begin{equation}
-  \label{eq:Forys-Forys-21}
-  | m | := | w |, \quad
-  m = h( w ),\; w \in A^{ * }.
-\end{equation}
-
-Jak pokazuje twierdzenie udowodnione na stronie 10, ta definicja jest dobrze
-określona. ????
-
-\vspace{\spaceFour}
-
-
-
-
 \start \Str{10--11} W~kontekście podanych tu rozważań, należy zatrzymać~się
 zatrzymać nad pewnymi własnościami potęg podzbiorów w~monoidach
 i~półgrupach. Niech $S$ będzie dowolną podgrupą, zachodzi wówczas
@@ -902,7 +878,11 @@ gdzie $b = a_{ 1 } a_{ 2 } \in S$. Tym samym dowiedliśmy,
 że~$S^{ k } \supset S^{ k + 1 }$.
 
 Gdybyśmy rozważali monoid $M$, to nie zaobserwowalibyśmy nic ciekawego.
-Wynika to z~tego, że $1_{ M } \in M$, więc $M^{ 2 } = M$. Sprawa robi~się ciekawsza, gdy rozważamy zbiór $S = M \setminus \{ 1_{ M } \}$. Nie możemy zagwarantować, że~$S \supset S^{ 2 }$, bo może~się zdarzyć, że~dla dwóch elementów $a, b \in S$ zachodzi $a b = 1_{ M }$. Możemy jednak zauważyć, że~zachodzi następujące twierdzenie.
+Wynika to z~tego, że $1_{ M } \in M$, więc $M^{ 2 } = M$. Sprawa robi~się
+ciekawsza, gdy rozważamy zbiór $S = M \setminus \{ 1_{ M } \}$. Nie możemy
+zagwarantować, że~$S \supset S^{ 2 }$, bo może~się zdarzyć, że~dla dwóch
+elementów $a, b \in S$ zachodzi $a b = 1_{ M }$. Możemy jednak zauważyć,
+że~zachodzi następujące twierdzenie.
 
 
 
@@ -1044,7 +1024,8 @@ wtedy, gdy $n_{ 1 } + n_{ 2 } = n_{ 3 } + n_{ 4 }$ i~$f_{ a,\, 1 } = f_{ c,\, 1 
 $f_{ a,\, 2 } = f_{ c,\, 2 }$, etc. Rozpatrzmy teraz możliwe przypadki.
 
 Jeśli $n_{ 1 } = n_{ 3 }$ to $a = b$ i~$c = d$, więc równości $a = cu$
-i~$d = ub$ zachodzą dla $u = \texttt{""}$. Może przejść do analizy następnego przypadku.
+i~$d = ub$ zachodzą dla $u = \texttt{""}$. Może przejść do analizy
+następnego przypadku.
 
 Jeśli $n_{ 1 } > n_{ 3 }$, to możemy zapisać
 \begin{equation}
@@ -1121,7 +1102,8 @@ twierdzenia możemy zupełnie pominąć.
 
 Grupa jedynki monoidu $M$ rozważanego w~tym twierdzeniu jest w~istocie
 trywialna. Wynika to na na mocy twierdzenia \ref{thm:Forys-Forys-01}
-z~tego, że~$S$ jest podpółgrupą.
+z~tego, że~$S$ jest podpółgrupą. Do dowodu tego twierdzenia nie jest więc
+zupełnie potrzebny fakt, że~$\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$.
 
 \vspace{\spaceFour}
 
