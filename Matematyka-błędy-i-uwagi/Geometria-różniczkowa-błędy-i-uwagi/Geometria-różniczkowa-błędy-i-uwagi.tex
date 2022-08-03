@@ -88,9 +88,9 @@
 
 
 
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Dodatkowe ustawienia dla języka polskiego
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 \renewcommand{\thesection}{\arabic{section}.}
 % Kropki po numerach rozdziału (polski zwyczaj topograficzny)
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}}
@@ -128,6 +128,8 @@
   Błędy i~uwagi}
 
 \author{Kamil Ziemian}
+
+
 % \date{}
 % ---------------------------------------------------------------------
 
@@ -623,9 +625,17 @@ gdy $A$ jest macierzą kwadratową wymiaru $n$?
 
 
 
+\start \Str{32} Bezpośrednie przekształcenie wzoru
+$\bar{A} = \widetilde{A} = ( A^{ T } )^{ -1 }$ prowadzi do dwóch zależności:
+$A^{ T } \bar{A} = I$, $\bar{A} A^{ T } = I$. Dopiero gdy dokonamy sprzężenia
+zespolonego obu stron drugiej z~tych równości dostanie podany w~książce wzór
+$A \bar{A}^{ T } = I$. Nie mogę mieć pewności, czemu autor zdecydował~się
+zapisać te zależności w~takiej formie, mogę jedynie podejrzewać, że~chodziło
+o~to by wyprowadzone z~nich wzory (2.9) przyjęły bardziej symetryczną postać.
 
-
-
+Jeżeli teraz dokonamy obustronnego sprzężenia zespolonego równości
+$A^{ T } \bar{A} = I$ to dostaniemy $\bar{A}^{ T } A = I$, co wraz
+z~$A \bar{A}^{ T } = I$ prowadzi do znanego wniosku: dla macierzy unitarnej $A$ zachodzi $\bar{A}^{ T } = A^{ -1 }$.
 
 
 
