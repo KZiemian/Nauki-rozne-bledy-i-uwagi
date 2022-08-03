@@ -1,0 +1,10 @@
+# ignore all PDF files
+*.pdf
+
+# ignore auxiliary files created by pdfLaTeX
+*.aux
+*.log
+*.out
+
+# ignore Emacs backups files
+*~
