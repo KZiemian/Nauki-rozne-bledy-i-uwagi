@@ -1,0 +1,1595 @@
+% Autor: Kamil Ziemian
+
+% ---------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ------------------------------
+\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
+% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
+% % grafiki.
+\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ------------------------------
+% MARGINS
+% ------------------------------
+\setmarginsrb
+{ 0.7in} % left margin
+{ 0.6in} % top margin
+{ 0.7in} % right margin
+{ 0.8in} % bottom margin
+{  20pt} % head height
+{0.25in} % head sep
+{   9pt} % foot height
+{ 0.3in} % foot sep
+
+
+
+% ------------------------------
+% Często używane pakiety
+% ------------------------------
+\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+% ------------------------------
+% Pakiety których pliki *.sty mają być w tym samym katalogu co ten plik
+% ------------------------------
+\usepackage{latexgeneralcommands}
+
+
+
+% ---------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% ---------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ------------------------------
+% Ustawienia różnych parametrów tekstu
+% ------------------------------
+\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
+
+
+
+
+
+% ------------------------------
+% Pakiet „hyperref”
+% Polecano by umieszczać go na końcu preambuły
+% ------------------------------
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł, autor, data
+\title{Historia Polski~-- błędy i~uwagi}
+
+% \author{}
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle  % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+% ######################################
+\section{Syntezy historii Polski}
+
+\vspace{\spaceTwo}
+% ######################################
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Norman Davies \\
+  „Boże igrzysko. Historia Polski”, \cite{DaviesBozeIgrzysko2010} }
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+
+\start \StrWg{4}{20} Treść tego wersu „[uzupełnić na~ozalidzie]”,
+to~musi być wynik naprawdę okropnego błędu edytorskiego.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    4   &  4 & & Volume~I & Volume~II \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  % \begin{tabular}{|c|c|c|c|c|}
+  %   \hline
+  %   & \multicolumn{2}{c|}{} & & \\
+  %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+  %   & Powinno być \\ \cline{2-3}
+  %   & Od góry & Od dołu & & \\
+  %   \hline
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   \hline
+  % \end{tabular}
+
+
+
+
+
+  % \begin{tabular}{|c|c|c|c|c|}
+  %   \hline
+  %   & \multicolumn{2}{c|}{} & & \\
+  %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+  %   & Powinno być \\ \cline{2-3}
+  %   & Od góry & Od dołu & & \\
+  %   \hline
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   \hline
+  % \end{tabular}
+
+\end{center}
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Tytuł i autor dzieła
+  Norman Davies \\
+  „Serce Europy”, \cite{DaviesSerceEuropy2014} }
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+
+\start \Str{16} Davies pisze tu o~tym, że~rzut trójwymiarowej Ziemi
+na~dwuwymiarową mapę musi pociągać za sobą zniekształcenia
+odwzorowywanego terenu, jednak mnie~się wydaje, że~źle zrozumiał,
+gdzie leży problem. Powierzchnię Ziemi można uważać za dwuwymiarową,
+tak jak mapę i~to raczej nie jest problemem w~kartografii.
+
+Jednocześnie wiadomo na mapie albo kąty albo kształt lądów nie mogą
+być wiernie oddane. Jest to jednak związane z~czymś innym niż wymiar,
+mianowicie z~Theorema Egregium Gaussa. Jako szczególny przypadek
+wynika z~niego, że~takie zniekształcenia przy przekształcaniu
+dwuwymiarowej powierzchni w~inną dwuwymiarową powierzchnię muszą się
+pojawić, jeśli mają one różne krzywizny Gaussa, dla~płaszczyzny zaś
+jest ona równa 0, a~dla sfery $\frac{ 1 }{ r^{ 2 } }$.
+
+\vspace{\spaceFour}
+
+
+
+\start \StrWg{17}{12} W~tym miejscu Davies stosuje często spotykany
+anachronizm pisząc o~Watykanie jako metonimie Ojca Świętego
+i~najwyższych władz Kościoła. Do~czasu zajęcia przez wojska Victora
+Emanuela~II Państwa Kościelnego w~1870~roku, władza doczesna papieża
+nie ograniczała~się tylko do~tej dzielnicy Rzymu, lecz przez wieki
+dotyczyła ogromnych połaci Półwyspu Apenińskiego. Dlatego trafniej
+w~kontekście 1765~r. byłoby pisać o~decyzji Rzymu.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{28} Wydaje mi~się, że~nazwanie wszystkich wymienionych
+tu~przez Davies państw dyktaturami, jest błędne. Państwo Watykańskie
+i~Tybet Dalajlamy nie są demokracjami, ale~to za~mało, aby uznać je
+za~dyktatury, bo~dyktatura jest pojęciem czysto negatywnym
+i~piętnującym.
+
+\vspace{\spaceFour}
+
+
+
+\start \StrWg{52}{10} Zostawienie w~tym wersie słowa „Batman”
+pisanego z~dużej litery, jest chyba błędem tłumacza. Sugeruje to,
+że~chodzi o~Człowieka-Nietoperza, jednanego z~najbardziej
+znanych superbohaterów amerykańskich, jednak jest bardziej
+prawdopodobne, że~angielskie słowo „batman” występuje to~w~znaczeniu
+„ordynans”.
+
+
+
+
+
+% % ##################
+% \CenterBoldFont{Błędy}
+
+
+% \begin{center}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     & & & & \\
+%     & & & & \\
+%     & & & & \\
+%     & & & & \\
+%     \hline
+%   \end{tabular}
+
+% \end{center}
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Andrzej Nowak \\
+  „Dzieje Polski. Tom~I do~1202: Skąd nasz ród”,
+  \cite{NowakDziejePolskiVolI2014} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+\start \textbf{Strona tytułowa.} W informacjach o~autorze jest podane,
+że~był redaktorem naczelnym „ARCANA” w~latach 1994--2012, lecz
+prawidłowy okresem są chyba lata 1995--2012.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{62} W~ostatnim paragrafie jest mowa o~czterech królów
+Słowian, ale~wymienionych jest tylko trzech.
+
+\vspace{\spaceFour}
+
+
+
+% POPRAW
+\start \StrWg{85}{16} „Nie było innej drogi do~Europy w~końcu X~w.
+jak poprzez chrzest, nie~było dalej w~Europie innej drogi do humanizmu
+jak poprzez chrześcijaństwo.” To zdanie chyba najlepiej oddaje
+problem z~postrzeganiem chrześcijaństwa nie tylko przez Nowaka,
+ale~i~przez przytłaczającą większość, jeśli nie~całość, polskiej myśli
+patriotycznej. Chrześcijaństwo, nawet nie rzymskokatolickim,
+jest tylko środkiem do osiągnięcia doczesnych, świeckich, ziemskich
+celów, takich jak dostanie~się do~„Europy”, albo kultywowanie
+humanizmu, nie~zaś wiarą pochodzącą od Boga i~jedyną drogą do życia
+wiecznego. To~zaś zredukowanie Boga i~wiary, do~doczesnych korzyści,
+to~straszliwe zło.
+
+\vspace{\spaceFour}
+
+
+
+\start \StrWd{92}{21--20} Nie potrafię zrozumieć, czy chodziło o~to,
+że~Otton~II przejściowo zdobył Akwizgran, czy że~miejsce to było
+przejściowo stolicą cesarską.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{96} W~swoim wykładzie z~cyklu
+\href{https://www.youtube.com/watch?v=QovVLT2fitc}{„Filary Polskości:
+  Mieszko i~Bolesław”} Nowak znacznie wyraźniej niż w~tej książce,
+pokazał cały cynizm polityczny Mieszka~I. O~możliwości takiego
+spojrzenia na tego władcę Nowak mówi tam otwarcie jednocześnie,
+zarówno na wykładzie jaki i~książce, próbuje przykryć ten cynizm,
+nazywając działania Mieszka „majstersztykiem polityki polskiej”.
+
+\vspace{\spaceFour}
+
+
+
+\start \StrWg{144}{24} Jest tu napisane, że~Miecław był cześnikiem,
+jednak jaka była nadworna funkcja cześnika jest wyjaśnione dopiero
+na~stronie~150.
+
+\vspace{\spaceFour}
+
+
+
+\start \StrWd{163}{17--15} Zdanie „Rozpoczyna od~modlitwy
+do~św.~Piotra, patrona Stolicy Apostolskiej w~Rzymie i~zarazem
+Gertrudowego syna, jadącego właśnie do~Rzymu, do~papieża.” można
+zrozumieć w~ten sposób, że~Gertruda modli~się do swojego syna, co jest
+nonsensowne. Prawdopodobnie miało być „zarazem patrona Gerturdowego
+syna”, co czyni całe zdanie zrozumiałym i~sensownym.
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    41  &  3 & & W X w. jeszcze & Jeszcze w X w. \\
+    53  & &  1 & Księga Wyjścia & Księga Rodzaju \\
+    61  & 10 & & do dziejów & dla dziejów \\
+    100 & 14 & & Kto & Kto to \\
+    169 & 17 & & mnie & do mnie \\
+    202 & &  1 & posiąść & przesiąść \\
+    236 & 14 & & „Gall”). & „Gall”. \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\noindent
+\StrWg{61}{8} \\
+\Jest  z~Rocznika kapituły krakowskiej dawnego \\
+\Powin z~dawnego Rocznika kapituły krakowskiej \\
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\newpage
+\section{Dzieje Polski z lat 1795--1914}
+
+\vspace{\spaceTwo}
+% ######################################
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Red. Andrzej Nowak \\
+  „Historie Polski w~XIX wieku. Kominy, ludzie i~obłoki: \\
+  modernizacja i~kultura. Tom~I”, \cite{HistoriaPolskiXIXVolI2013} }
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    16 & & 15 & równości równość & równości \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\newpage
+\section{Dzieje Polski po~roku 1914}
+
+% \vspace{\spaceTwo}
+% ######################################
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Paweł Zyzak \\
+  „Efekt domina. Czy Ameryka obaliła komunizm w~Polsce? \\
+  Tom~I”, \cite{ZyzakEfektDominaVolI2016} }
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    11  &  4 & & Labor & \textit{Labor} \\
+    11  & & 15 & in & \textit{in} \\
+    12  &  3 & & \textit{Konfederacja} & Konfederacja \\
+    12  & 23 & & CSS & CSSA \\
+    13  & 21 & & Development & \textit{Development} \\
+    13  & 22 & & The & \textit{The} \\
+    13  & & 11 & The~International Rescue
+           & \textit{The~International Rescue} \\
+    14  & &  3 & Office & \textit{Office} \\
+    16  & 15 & & I~Rozwoju & i~Rozwoju \\
+    16  & & 14 & \textit{Labour} & \textit{Trade Union} \\
+    17  &  5 & & miała obejmować & obejmować \\
+    31  & &  2 & \textit{WCFL} & \textit{WCL} \\
+    32  & &  7 & podziałało & podziałało~to \\
+    37  & 16 & & \textit{Konfekcji Damskiej} & Konfekcji Damskiej \\
+    41  &  3 & & polskiego.~ZRK & polskiego~ZRK \\
+    47  & &  1 & Katyń & \textit{Katyń} \\
+    48  & & 12 & za-oceanicznych & zaoceanicznych \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\noindent
+\textbf{Tyla okładka, wiersz 17.} \\
+\Jest Sorosa ,Williama \\
+\Powin Sorosa, Williama \\
+\StrWd{11}{16} \\
+\Jest  Amerian Seafarers Union \\
+\Powin \textit{Amerian Seafarers Union} \\
+\StrWd{11}{5} \\
+\Jest  Council~of Economic Advisers \\
+\Powin \textit{Council~of Economic Advisers} \\
+\StrWd{11}{1} \\
+\Jest  Council on~Foregin Relations \\
+\Powin \textit{Council on~Foregin Relations} \\
+\StrWg{12}{11} \\
+\Jest  \textit{Congress}) --~Kanadyjski Kongres Związków Zawodowych \\
+\Powin \textit{Congress} --~Kanadyjski Kongres Związków Zawodowych) \\
+\StrWd{12}{18} \\
+\Jest  Emergency Committe for~Aid to~Poland \\
+\Powin \textit{Emergency Committe for~Aid to~Poland} \\
+\StrWd{12}{8} \\
+\Jest  (\textit{Froce Ouvri\'{e}re} ) \\
+\Powin (\textit{Froce Ouvri\'{e}re} --~Główna Konfederacja Pracy --~Siły
+Pracy) \\
+\StrWg{13}{10} \\
+\Jest  Generalized System~of Preferences \\
+\Powin \textit{Generalized System~of Preferences} \\
+\StrWd{13}{4} \\
+\Jest  \textit{Leuven}) \\
+\Powin \textit{Leuven} --~Kotlicki Ośrodek Dokumentacyjny i~Badań
+Katolickich Uniwersytetu Leuven \\
+\StrWg{15}{1} \\
+\Jest  Polish American Congress Charitable Foundation \\
+\Powin \textit{Polish American Congress Charitable Foundation} \\
+\StrWg{15}{3} \\
+\Jest  Polish-American Enterprise Fund \\
+\Powin \textit{Polish-American Enterprise Fund} \\
+\StrWg{15}{10} \\
+\Jest  Postal, Telegraph and~Telephone International \\
+\Powin \textit{Postal, Telegraph and~Telephone International} \\
+\StrWg{43}{2} \\
+\Jest  \textit{Univeristy~of Illinois at~Urbana Champaign, 1998} \\
+\Powin Univeristy~of Illinois at~Urbana-Champaign, 1998 \\
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Paweł Zyzak \\
+  „Efekt domina. Czy Ameryka obaliła komunizm w~Polsce? \\
+  Tom~II”, \cite{ZyzakEfektDominaVolII2016} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+\start \StrWg{653}{3} Nie jest podana data wydania książki
+Dubinsky'ego i~Raskina. W~skutek tego daty tej brakuje również
+w~pierwszym tomie, str.~39, wiersz ósmy od~dołu.
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    664 & & 22 & Katyń & \textit{Katyń} \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\subsection{Lata 1914--1939}
+
+\vspace{\spaceThree}
+% ######################################
+
+
+
+% ############################
+\Work{ % Tytuł i autor dzieła
+  Wojciech Roszkowski \\
+  „Najnowsza historia Polski: 1914--1939”,
+  \cite{RoszkowskiNajnowszaHistoriaPolski1914-1939Wyd2011} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+\start Karygodną, i~to~niezależnie od uznawanej metodologi pisania
+prac historycznych, cechą całego tego wydania „Najnowszej historii
+Polski”, jest nieumieszczenie w~każdej tomie listy używanych
+skrótów. Należy dodać, że~jeśli skrót został wprowadzony w~jednym
+tomie, to~nie jest już wyjaśniany w~następnych, co~dodatkowo
+komplikuje sprawę.
+
+\vspace{\spaceFour}
+
+
+
+\start Ciekawym wydaje~się zauważanie, że~w~tej książce Roszkowski
+zrealizował chyba idealnie, jedno z~założeń zaprojektowanego przez
+piłsudczyków programu edukacji, przyjętego po reformie
+jędrzejewiczowskiej (1932): sprowadzenia lat 1918--1920 wyłączenie
+do~tematu walki o~granice. Więcej na ten temat \\
+w~Andrzej Chojnowski „Kwestia patriotyzmu w~poszukiwaniach
+programowych obozu piłsudczykowskiego”, str.~136
+\cite{RedKloczkowskiPatriotyzmPolakow2006}.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{26} Podany tu opis przyczyn wybuchu I~Wojny Światowej,
+zwłaszcza bardzo silne stwierdzenie, że~Austro-Węgry
+wypowiedziały wojnę Serbii pod naciskiem Niemiec, warto skonfrontować
+z~tym co pisze M. Gilbert w~swojej książce na temat tego przedziwnego
+wydarzenia \cite{GilbertPierwszaWojnaSwiatowa2003}.
+
+\vspace{\spaceFour}
+
+
+
+\start \StrWd{78}{4} Cudzysłów otwarty w~tym wierszu nigdy nie został
+zamknięty, przez co~nie wiadomo, gdzie~się kończy cytat.
+
+\vspace{\spaceFour}
+
+
+
+\start \StrWd{425}{6} Przy nazwisku „Unrag Józef” nie ma podanej
+strony na~której~się ta postać pojawia.
+
+\vspace{\spaceFour}
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    10  & & 13 & przyszłe & przyszle \\
+    20  & &  9 & sita & siła \\
+    27  & & 16 & z agrozić & zagrozić \\
+    29  & 21 & & Bąjończyków & Bajończyków \\
+    30  & 21 & & uczestniczyło w~niej & wśród jej członków było \\
+    31  & &  8 & Hans Beseler & Hans von Beseler \\
+    36  &  3 & & POW & POW. \\
+    37  & 12 & & LLOYDA & LOYDA \\
+    47 & & 6 & przed nadchodzącą zimą & nadchodzącej zimy \\
+    50  &  7 & & H.Wereszycki & H. Wereszycki \\
+    50  &  8 & & R.Dmowski & R.~Dmowski \\
+    50  &  8 & & J.Molenda & J.~Molenda \\
+    50  &  8 & & \textit{Pibudnczcy} & \textit{Piłsudczycy} \\
+    50  & 21 & & \textit{Pobki} & \textit{Polski} \\
+    68  & 14 & & j~ednolitego & jednolitego \\
+    73  & & 13 & 1920 R & 1920 R. \\
+    & & 17 & W braku & Z braku \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    411 &  4 & & \textit{50} & 50 \\
+    411 &  7 & & \textit{210, 211} & 210, 211 \\
+    411 &  9 & & \textit{113, 114, 170, 259} & 113, 114, 170, 259 \\
+    411 & 14 & & \textit{114} & 14 \\
+    411 & 18 & & \textit{389} & 389 \\
+    411 & &  6 & \textit{390} & 390 \\
+    411 & &  5 & \textit{391} & 391 \\
+    411 & &  3 & \textit{14}  & 14 \\
+    411 & &  3 & \textit{260} & 260 \\
+    412 &  2 & & \textit{390, 391} & 390, 391 \\
+    412 &  3 & & \textit{390, 391} & 390, 391 \\
+    412 &  5 & & \textit{50}  & 50 \\
+    412 &  7 & & \textit{210} & 210 \\
+    412 & 13 & & \textit{308} & 308 \\
+    412 & 13 & & \textit{171} & 171 \\
+    412 & 15 & & \textit{171} & 171 \\
+    412 & 19 & & \textit{211} & 211 \\
+    412 & 20 & & \textit{308} & 308 \\
+    412 & & 15 & \textit{113} & 113 \\
+    412 & &  9 & \textit{391} & 391 \\
+    412 & &  1 & \textit{14}  & 14 \\
+    412 & &  1 & \textit{113} & 113 \\
+    413 &  2 & & \textit{260} & 260 \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    413 &  4 & & \textit{307} & 307 \\
+    413 &  8 & & \textit{50}  &  50\\
+    413 & 12 & & \textit{171, 210, 308, 309, 390}
+           & 171, 210, 308, 309, 390 \\
+    413 & 13 & & \textit{391} & 391 \\
+    413 & 15 & & \textit{390} & 390 \\
+    413 & 15 & & \textit{51}  & 51 \\
+    413 & 17 & & \textit{171} & 171 \\
+    413 & 19 & & \textit{390} & 390 \\
+    413 & & 20 & \textit{390} & 390 \\
+    413 & & 18 & \textit{307} & 307 \\
+    413 & & 17 & \textit{114} & 114 \\
+    413 & & 10 & \textit{113} & 113 \\
+    413 & &  7 & \textit{390} & 390 \\
+    413 & &  4 & \textit{50}  & 50 \\
+    413 & &  3 & \textit{260} & 260 \\
+    414 &  2 & & \textit{260} & 260 \\
+    414 &  3 & & \textit{170} & 170 \\
+    414 &  6 & & \textit{114} & 114 \\
+    414 &  7 & & \textit{170} & 170 \\
+    414 & 11 & & \textit{210} & 210 \\
+    414 & 12 & & \textit{211} & 211 \\
+    414 & & 19 & \textit{51}  & 51 \\
+    414 & & 16 & \textit{210} & 210 \\
+    414 & & 15 & \textit{113} & 113 \\
+    414 & & 10 & \textit{390} & 390 \\
+    414 & &  6 & \textit{307} & 307 \\
+    414 & &  2 & \textit{260} & 260 \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  % \begin{tabular}{|c|c|c|c|c|}
+  %   \hline
+  %   & \multicolumn{2}{c|}{} & & \\
+  %         %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+  %         %   & Powinno być \\ \cline{2-3}
+  %         %   & Od góry & Od dołu & & \\
+  %         %   \hline
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   \hline
+  % \end{tabular}
+
+
+
+
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    425 &  8 & & \textit{170} & 170 \\
+    425 & 13 & & \textit{50}  & 50 \\
+    425 & 20 & & Adolf25 & Adolf 25 \\
+    425 & 23 & & \textit{170} & 170 \\
+    425 & & 16 & \textit{114, 170, 211, 260} & 114, 170, 211, 260 \\
+    425 & & 15 & \textit{308, 391} & 308, 391 \\
+    425 & & 14 & \textit{389} & 389 \\
+    425 & & 13 & \textit{113, 170, 171} & 113, 170, 171 \\
+    425 & & 12 & \textit{308} & 308 \\
+    425 & &  8 & \textit{50}  &  50 \\
+    425 & &  3 & \textit{389} & 389 \\
+    426 &  2 & & \textit{114} & 114 \\
+    426 &  9 & & \textit{50}  &  50 \\
+    426 & 14 & & \textit{211} & 211 \\
+    426 & 17 & & \textit{50}  &  50 \\
+    426 & 18 & & \textit{114} & 114 \\
+    426 & 21 & & \textit{259} & 259 \\
+    426 & 22 & & \textit{260} & 260 \\
+    426 & 23 & & \textit{308} & 308 \\
+    426 & &  6 & \textit{50}  &  50 \\
+    426 & &  5 & \textit{170} & 170 \\
+    426 & &  3 & \textit{170} & 170 \\
+    426 & &  2 & \textit{210, 211} & 210, 211 \\
+    427 &  4 & & \textit{389} & 389 \\
+    427 &  7 & & \textit{170, 391} & 170, 391 \\
+    427 &  8 & & \textit{114} & 114 \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\noindent
+\StrWd{47}{6} \\
+\Jest  nadchodzącą zimą \\
+\Powin nadchodzącej zimy \\
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\subsection{Lata 1939--1989}
+
+\vspace{\spaceThree}
+% ######################################
+
+
+
+% ############################
+\Work{ % Redaktorzy i tytuł dzieła
+  Redakcja i~opracowanie Adam Dziurok, Filip Musiał \\
+  „Instrukcje, wytyczne, pisma Departamentu IV~Ministerstwa Spraw
+  Wewnętrznych z~lat 1962--1989. Wybór dokumentów”,
+  \cite{RedDziurokMusialInstrukcjeWytycznePisma2017} }
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+
+\start \Str{905} Nazwiska pisane czcionką prostą (antykwą?) należą
+do~bohaterów historii omawianej w~tym tomie, zaś~te pisane kursywą
+do~badaczy i~historyków.
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ##############################
+\Work{ % Redaktor i tytuł dzieła
+  Red. Piotr Franaszka \\
+  „Granice kompromisu. Naukowcy wobec aparatu władzy ludowej”,
+  \cite{RedFranaszekGraniceKompromisu2015} }
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    9  & &  2 & A.Dziuba & A.~Dziuba \\
+    17 & 14 & & ZMP$^{ 33 }$\ldots & ZMP$^{ 33 }$. \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Wojciech Roszkowski \\
+  „Najnowsza historia Polski: 1939--1945”,
+  \cite{RoszkowskiNajnowszaHistoriaPolski1939-1945Wyd2011} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    10 & & 5 & Wisy & Wisły \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Wojciech Roszkowski \\
+  „Najnowsza historia Polski: 1980--1989”,
+  \cite{RoszkowskiNajnowszaHistoriaPolski1980-1989Wyd2011} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+\start \Str{8} Jest to jeden z~największych przykładów straszliwie
+suchej, pozbawiającej wydarzenia z~przeszłości realności, a~także nie
+pozwalającej~się zorientować w~symbolach o~ogromnej wadze,
+historiografii pozytywistycznej, chyba szkoły niemieckiej, jaką
+reprezentuje Roszkowski. Jeśli dobrze wywnioskowałem z~tego
+wystąpienia
+\href{https://www.youtube.com/watch?v=6B93_3CCMac}{Sławomira
+  Cenckiewicza}, to słynny skok Wałęsy przez płot, wedle niego był to
+w~istocie mur, miał miejsce w~opisywanym tu dniu 22~sierpnia 1980~r.
+Wałęsa musiał przeskoczyć ten mur, właśnie dlatego, że~spóźnił~się na
+główne otwarcie stoczni. Tylko pomarzyć jak~by to opisał Paul Johnson.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{16} Choć nie~czytałem poprzednich tomów, i~być może jest
+tam informacja o~tym kim jest Karol Modzelewski, to w~tym tomie jest
+wymieniony tylko dwa razy, i~z tego powodu powinna być podana jakaś
+informacja o~nim, by~czytelnik wiedział kto jest autorem tak wiele
+znaczącej nazwy jak „Solidarność”.
+
+\vspace{\spaceFour}
+
+
+
+\start \StrWd{23}{6} Cudzysłów otwarty w~tym wierszu nigdy nie został
+zamknięty, przez co~nie wiadomo, gdzie~się kończy cytat.
+
+\vspace{\spaceFour}
+
+
+
+\start \StrWd{26}{6} Nie jest podane co było tematem omawianej
+tu~narady sztabowej.
+
+
+% Błędy:\\
+% \begin{center}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%           %     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%     %     & Powinno być \\ \cline{2-3}
+%           %     & Od góry & Od dołu & & \\
+%     %     \hline
+%     & & & & \\
+%     & & & & \\ \hline
+%   \end{tabular}
+% \end{center}
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Redaktorzy i tytuł dzieła
+  Redakcja naukowa Mirosław Sikora; współpraca Piotr Fuglewicz \\
+  „High-tech za~żelazną kurtyną: elektronika, komputery
+  i~systemy sterowania w~PRL”, \cite{SikoraFuglewiczHighTech2017} }
+
+
+% \CenterTB{Uwagi}
+
+% \start \StrWd{26}{6} Nie jest podane co było tematem omawianej
+% tu~narady sztabowej.
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & od góry & Od dołu & & \\
+    \hline
+    4   & &  7 & przeciwko & Przeciwko \\
+    22  & 13 & & o\ldots{} fantastyce & o~fantastyce \\ % Czy to aby na pewno
+    % błąd?
+    50  & & 15 & tej uchwały & tej \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Dzieje Polski po~1989~r.}
+
+\vspace{\spaceTwo}
+% ######################################
+
+
+
+% ############################
+\Work{ % Autorzy i tytuł dzieła
+  Jan Kofman, Wojciech Roszkowski \\
+  „Transformacja i~postkomunizm”,
+  \cite{KofmanRoszkowskiTransformacjaIPostkomunizm1999} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+\start \Str{42} Przeliczyłem za~pomocą komputera przytoczone tu~dane
+i~otrzymany wynik nie zawsze pokrywał~się z~tym co zostało podane
+w~ostatniej kolumnie. Dokładniej, wyniki różniły~się zawsze, jednak
+w~wielu wypadkach był to zapewne wynik przyjętego sposobu
+zaokrąglania, dlatego w~błędach odnotowałem tylko te przypadki,
+gdy~różnica była rzędu procenta lub~większa.
+
+\vspace{\spaceFour}
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & od góry & od dołu & & \\
+    \hline
+    13  & &  4 & o~ekspansji & do~ekspansji \\
+    16  &  9 & & marntrawstwem & marnotrawstwem \\
+    18  &  2 & & jego do & do~jego \\
+    26  & & 19 & dziewięćdziesięciokrotne & czterdziestokrotnie \\
+    26  & &  5 & 1998 & 1988 \\
+    42  & 11 & & 80,2 & 78,5 \\
+    42  & 14 & & (107,4) & (108,3) \\
+    42  & & 11 & 77,8 &  76,6 \\
+    42  & &  8 & (35,7) & (37,4) \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Wojciech Roszkowski \\
+  „Najnowsza historia Polski: 1989--2011”,
+  \cite{RoszkowskiNajnowszaHistoriaPolski1989-2011Wyd2011} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    23 & &  2 & na~naturalnym & za~naturalnym \\
+    38 & & 11 & IX & XI \\
+    45 & &  2 & przez & przed \\
+    46 & & 15 & 2,5\%\% & 2,5\% \\
+    65 & & 16 & wygrali & wyciągnęli \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Historia Polski~-- zbiory artykułów}
+
+\vspace{\spaceTwo}
+% ######################################
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Janusz Cisek \\
+  „Oskar Halecki. Historyk~-- Szermierz Wolności”,
+  \cite{CisekOskarHalecki2009} }
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+\start \Str{5} Tytuł części „Historyk Kościoła” jest trochę
+nieadekwatna, bowiem dwa z~trzech zamieszczonych tu artykułów dotyczą
+historii Kościoła w~Polsce, co jest bardzo małym wycinkiem z~tego
+zagadnienia.
+
+\vspace{\spaceFour}
+
+
+
+\start \StrWg{48}{4} Artykuł ten mógł~się rzeczywiście ukazać
+w~wymienionym tu roku 1963, jednak spodziewałbym~się raczej tego,
+że~został opublikowany w~1966 roku.
+
+\vspace{\spaceFour}
+
+
+
+\start \StrWg{70}{7} Słowa „i~jego pielgrzymki” mogą być wynikiem
+błędu, w~poprawnej wersji powinny brzmieć „i~jego pielgrzymi”. Mogą
+też mieć następujący sens. Poeci romantyczni byli „wieszczami”
+narodu, jak i~w~szczególny sposób, czasów jego pielgrzymki.
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    44  & 14 & & Honorowej: & Honorowej, \\
+    90  & 10 & & W~braku & Z~braku \\
+    93  & & 12 & Rzym. & Rzym, \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+
+\vspace{\spaceTwo}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+% Bibliografia
+\bibliographystyle{plalpha}
+
+\bibliography{HistoryBooks,VariousFieldsBooks}{}
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
