@@ -26,58 +26,6 @@
 \let\emptyset\varnothing
 
 
-% Podstawowe oznaczenia matematyczne
-% \newcommand{\fr}{\frac}
-% \newcommand{\tfr}{\tfrac}
-% \newcommand{\tr}{\textrm}
-
-
-% Często pojawiające się stałe matematyczna
-% \newcommand{\onehalf}{\fr{ 1 }{ 2 }}
-% \newcommand{\sqrtTwo}{\sqrt{ 2 }} % Pierwiastek z 2
-% \newcommand{\ovSqTwo}{\fr{ 1 }{ \sqrtTwo }} % 1 / \sqrt{ 2 }
-% \newcommand{\sqTwoPi}{\sqrt{ 2 \pi }}
-% \newcommand{\ovSqTwoPi}{\fr{ 1 }{ \sqrt{ 2 \pi } }}
-
-
-% Do umieszczania ,,nad'' i ,,pod'' symbolami matematycznymi.
-% Wymyśl lepszą nazwę
-% \newcommand{\til}{\tilde}
-
-% \newcommand{\wh}{\widehat}
-% \newcommand{\wt}{\widetilde}
-
-% \newcommand{\ul}{\underline}
-% \newcommand{\ol}{\overline}
-
-% \newcommand{\ub}{\underbrace}
-
-% \newcommand{\us}{\underset}
-% \newcommand{\os}{\overset}
-
-
-% Trzcionki matematyczne
-% \newcommand{\mr}{\mathrm}
-% \newcommand{\mb}{\mathbb}
-
-% \newcommand{\mbf}{\mathbf}
-% \newcommand{\bsym}{\boldsymbol}
-
-
-% Strzałki
-% \newcommand{\lra}{\longrightarrow}
-% \newcommand{\xra}{\xrightarrow}
-
-% \newcommand{\Ra}{\Rightarrow}
-% \newcommand{\ifonlyif}{\Longleftrightarrow} % Podobno działa \iff
-
-% \newcommand{\ora}{\overrightarrow}
-% \newcommand{\ola}{\overleftarrow}
-
-
-% Częste zwroty
-% \newcommand{\wtw}{wtedy i~tylko wtedy}
-
 
 % Wartość bezwzględna i normy
 \providecommand{\abs}[1]{\lvert{ #1 }\rvert}
@@ -94,35 +42,19 @@
 
 
 
-% ##########
+% ##################
 % Litery greckie
-% \newcommand{\al}{\alpha}
-% \newcommand{\be}{\beta}
-% \newcommand{\ga}{\gamma}
-% \newcommand{\Ga}{\Gamma}
-% \newcommand{\del}{\delta}
-% \newcommand{\Del}{\Delta}
 % By \lambda była wyświetlana jako Unicode, a dawał znak \uplambda
 \let\oldlambda\Lambda
 \renewcommand{\lambda}{\uplambda}
-% \newcommand{\la}{\uplambda}
-% \newcommand{\Lam}{\Lambda}
-
-% By \epsilon był wyświetlany jako Unicode, a dawał znak \varepsilon
-% \let\oldepsilon\epsilon
-% \renewcommand{\epsilon}{\varepsilon}
-
-% \newcommand{\vp}{\varphi}
-% \newcommand{\om}{\omega}
-% \newcommand{\Om}{\Omega}
-% \newcommand{\Si}{\Sigma}
 
 
 
 
 
-% ##########
+% ##################
 % Blackboard bold letters
+
 \newcommand{\Abb}{\mathbb{A}}
 
 \newcommand{\Cbb}{\mathbb{C}}
@@ -146,19 +78,13 @@
 \newcommand{\Zbb}{\mathbb{Z}}
 
 
-% Coś innego
-% \newcommand{\Rbbp}{\Rb_{ + }}
-% \newcommand{\Rbbn}{\mathbb{R}^{ n }}
-% \newcommand{\Rbbd}{\mathbb{R}^{ d }}
-
-% \newcommand{\Rbtwo}{\mathbb{R}^{ 2 }}
-% \newcommand{\Rbth}{\mathbb{R}^{ 3 }}
+\newcommand{\matUnit}{I}
 
 
 
 
 
-% ##########
+% ##################
 % Bold face letters
 
 \newcommand{\Cbold}{\mathbf{C}}
@@ -174,7 +100,8 @@
 
 
 % ##################
-% Fraktur letters
+% Calligraphed letters
+
 \newcommand{\Acal}{\mathcal{A}}
 
 \newcommand{\Bcal}{\mathcal{B}}
@@ -193,6 +120,8 @@
 
 \newcommand{\Ical}{\mathcal{I}}
 
+\newcommand{\Jcal}{\mathcal{J}}
+
 \newcommand{\Kcal}{\mathcal{K}}
 
 \newcommand{\Lcal}{\mathcal{L}}
@@ -208,6 +137,8 @@
 
 \newcommand{\Rcal}{\mathcal{R}}
 
+\newcommand{\Scal}{\mathcal{S}}
+
 \newcommand{\Tcal}{\mathcal{T}}
 
 \newcommand{\Ucal}{\mathcal{U}}
@@ -218,25 +149,20 @@
 
 \newcommand{\Zcal}{\mathcal{Z}}
 
-% \newcommand{\Rc}{\mathcal{R}}
 
 
+
+
+% ##################
+% Fraktur letters
 
 \newcommand{\Cfrak}{\mathfrak{C}}
-% \newcommand{\mf}{\mathfrak}
+
 \newcommand{\gfrak}{\mathfrak{g}}
 
 \newcommand{\Mfrak}{\mathfrak{M}}
-% Rzadziej używane oznaczenia literowe
-% \newcommand{\Bc}{\mathcal{B}}
-% \newcommand{\Fc}{\mathcal{F}}
-% \newcommand{\Mc}{\mathcal{M}}
 
-
-% \newcommand{\Tc}{\mathcal{T}}
-% \newcommand{\Pc}{\mathcal{P}}
-% \newcommand{\Zc}{\mathcal{Z}}
-
+\newcommand{\Ufrak}{\mathfrak{U}}
 
 
 
@@ -272,21 +198,14 @@
 % ##################
 % Groups
 
-% \newcommand{\es}{\emptyset}
-% \newcommand{\subs}{\subset}
-% \newcommand{\setm}{\setminus}
-% \newcommand{\ti}{\times}
-% \newcommand{\com}{\complement}
 
 
 
 
 
-
-% #############
+% ##################
 % Algebra
-% \newcommand{\ot}{\otimes}
-% \newcommand{\we}{\wedge}
+
 \DeclareMathOperator{\Tr}{Tr}
 
 
@@ -309,6 +228,7 @@
 \newcommand{\vecd}{\vec{ d }}
 
 \newcommand{\vecE}{\vec{ E }}
+\newcommand{\vece}{\vec{ e }}
 
 \newcommand{\vecF}{\vec{ F }}
 \newcommand{\vecf}{\vec{ f }}
@@ -316,6 +236,8 @@
 \newcommand{\vecg}{\vec{ g }}
 
 \newcommand{\vech}{\vec{ h }}
+
+\newcommand{\veck}{\vec{ k }}
 
 \newcommand{\vecJ}{\vec{ J }}
 
@@ -365,7 +287,10 @@
 
 \newcommand{\vecjbold}{\mathbf{j}}
 
+\newcommand{\vecKbold}{\mathbf{K}}
 \newcommand{\veckbold}{\mathbf{k}}
+
+\newcommand{\vecMbold}{\mathbf{M}}
 
 \newcommand{\vecnbold}{\mathbf{n}}
 
@@ -412,6 +337,10 @@
 \newcommand{\SO}{\mathrm{SO}}
 \newcommand{\SU}{\mathrm{SU}}
 
+\newcommand{\OStraight}{\mathrm{O}}
+
+\newcommand{\oFrak}{\mathfrak{o}}
+\newcommand{\soFrak}{\mathfrak{so}}
 
 
 
@@ -435,40 +364,7 @@
 \newcommand{\supp}{\mathrm{supp}\,}
 
 
-% Ciąg
-% \newcommand{\xn}{x_{ n }}
-% \newcommand{\yn}{y_{ n }}
 
-
-% Delty
-% \newcommand{\Delt}{\Delta t}
-
-% Granice
-% \newcommand{\Lim}{\lim\limits}
-% \newcommand{\Liminf}{\ul{\lim}}
-% \newcommand{\Limsup}{\ol{\lim}}
-
-% \newcommand{\nToInfty}{n \to +\infty}
-
-% \newcommand{\xToZero}{x \to 0}
-% \newcommand{\xToPInf}{x \to +\infty}
-% \newcommand{\xToMInf}{x \to -\infty}
-
-% \newcommand{\epsToZero}{\epsilon \to 0}
-% \newcommand{\epsToPZero}{\epsilon \to 0^{ + }}
-% \newcommand{\epsToMZero}{\epsilon \to 0^{ + }}
-
-% \newcommand{\DelToZero}{\Delta t \to 0}
-
-
-% \newcommand{\RToInf}{R \to \infty} % Przydatne w analizie zespolonej
-
-
-% % Sumy
-% \newcommand{\Sum}{\sum\limits}
-
-% % Iloczyny
-% \newcommand{\Prod}{\prod\limits}
 
 
 
@@ -503,98 +399,12 @@
 
 
 
-% Klasy różniczkowalności
-% \newcommand{\Cone}{\Cc^{ 1 }}
-% \newcommand{\Ctwo}{\Cc^{ 2 }}
-
-% \newcommand{\Cj}{\Cc^{ j }}
-% \newcommand{\Ck}{\Cc^{ k }}
-% \newcommand{\Cn}{\Cc^{ n }}
-
-% \newcommand{\Cinfty}{\Cc^{ \infty }}
-
-% \newcommand{\Cvar}[1]{\Cc^{ #1 }}
-
-% \newcommand{\CinftyR}{\Cc^{ \infty }( \R )}
-
-% \newcommand{\CinftyRtwo}{\Cinfty( \R^{ 2 } )}
-% \newcommand{\CinftyRth}{\Cinfty( \R^{ 3 } )}
-% \newcommand{\CinftyRfo}{\Cinfty( \R^{ 4 } )}
-
-% \newcommand{\CinftyRn}{\Cc^{ \infty }( \R^{ n } )}
-
-
-
-
 
 % #############
 % Całki i całkowanie
 \newcommand{\dx}{\difPL x}
 \newcommand{\dend}{\, d}  % Różniczka kończąca (ang. end) całkę
 
-
-
-% % ########
-% % Całki i całkowanie anglosaskie (czyli ogólne i światowe)
-% \newcommand{\Int}{\int\limits}
-% \newcommand{\IntLo}[3]{\int\limits_{ { #1 } }^{ { #2 } } d#3 \,}  % One
-% \newcommand{\IntLt}[4]{\Int_{ { #1 } }^{ { #2 } }  #3 \, d#4}  % Two
-
-% \newcommand{\IntMo}[2]{\Int #1 \, d#2}  % Integral Measure One
-% \newcommand{\IntMt}[2]{\Int d#1 \, #2}  % Integral Measure Two
-% \newcommand{\IntWie}[3]{\Int_{ #1 } d^{ #2 } #3 \,}  % Wielowymiarowa
-% % \newcommand{\IntTro}[1]{\Int d^{ 3 }#1 \,}  % Trójwymiarowa, usuń to jak
-% % będziesz
-% \newcommand{\IntTho}[1]{\Int d^{ 3 }#1 \;}  % Trójwymiarowa one
-% \newcommand{\IntDo}[5]{\Int_{ #1 } d^{ #2 }#3\, d^{ #4 }#5 \;}
-% % Integral Double One
-
-% \newcommand{\IntSeto}[3]{\Int_{ #1 } #2 \, d#3}  % Całka po zbiorze.
-% \newcommand{\IntSett}[2]{\Int_{ #1 } d#2 \,}
-
-% \newcommand{\IntOvRTh}[1]{\Int_{ \R^{ 3 } } d#1\,}
-
-
-
-% % #####
-% % Całki w określonych granicach
-% \newcommand{\IntMPInf}[1]{\Int_{ -\infty }^{ +\infty } d#1 \,}
-% \newcommand{\IntOInf}[1]{\Int_{ 0 }^{ +\infty } d #1 \;}
-% \newcommand{\IntMInfO}[1]{\Int_{ -\infty }^{ 0 } d #1 \;}
-% % \newcommand{\IntA}[1]{\Int_{ -\infty }^{ +\infty } d #1 \;}
-% % \newcommand{\IntB}[1]{\int_{ \R } d #1 \;}
-% % \newcommand{\IntC}[2]{\int_{ \R } #1 \, d #2}
-% \newcommand{\IntOvRo}[1]{\int_{ \R } d #1 \;}  % Integral over R version one
-% \newcommand{\IntOvRt}[2]{\int_{ \R } #1 \, d #2}
-% % Integral over R version two
-
-
-
-% % ########
-% % Całki i całkowanie, polski standard
-% \newcommand{\IntLoPL}[3]{\int\limits_{ { #1 } }^{ { #2 } } \difPL#3 \,}  % One
-% \newcommand{\IntLtPL}[4]{\int\limits_{ { #1 } }^{ { #2 } }  #3 \, \difPL#4}
-% % Two
-
-% \newcommand{\IntMPL}[2]{\int #1 \, \difPL#2}  % Integral Measure
-% \newcommand{\IntPhyPL}[2]{\int \difPL#1 \, #2}  % Bardziej Fizyczna notacja;)
-% \newcommand{\IntWiePL}[3]{\int\limits_{ #1 } \difPL^{ #2 } #3 \,}  % Wielowymiarowa
-% \newcommand{\IntTroPL}[1]{\int \difPL^{ 3 }#1 \,}  % Trójwymiarowa
-% \newcommand{\IntDoPL}[5]{\int\limits_{ #1 } \difPL^{ #2 }#3\, \difPL^{ #4 }\,
-%   #5 \;}
-
-% \newcommand{\IntSetOPL}[3]{\int\limits_{ #1 } #2 \, d#3}  % Całka po zbiorze.
-% % Set (one) PL
-% \newcommand{\IntSetTwPL}[1]{\int\limits_{ #1 }}  % TWo
-
-
-
-% % #####
-% % Całki w określonych granicach
-% \newcommand{\IntMPInfPL}[1]{\int\limits_{ -\infty }^{ +\infty } \difPL #1 \;}
-% \newcommand{\IntOInfPL}[1]{\int\limits_{ 0 }^{ +\infty } \difPL #1 \;}
-% \newcommand{\IntOvRoPL}[1]{\int\limits_{ \Rb } \difPL #1 \;}  % R One
-% \newcommand{\IntOvRtPL}[2]{\int\limits_{ \Rb } #1 \, \difPL #2}  % R Two
 
 
 
@@ -628,33 +438,15 @@
 
 % #############
 % Analiza funkcjonalna
-% \newcommand{\da}{\dagger}
-
-% Brakety
-% W analizie funkcjonalnej też często się je stosuje
-% \newcommand{\lket}{\langle}
-% \newcommand{\rket}{\rangle}
-% \newcommand{\dketo}[2]{\langle #1 | #2 \rangle}  % Dirac ket one
-% % Jak będziesz mógł to usuń komendę powyżej
-% \newcommand{\DKeto}[2]{\langle #1 \, | \, #2 \rangle}  % Dirac Ket One
-% \newcommand{\DKett}[2]{\langle #1, \, #2 \rangle}  % Dirac Ket two
-
-
-% Przestrzenie L^{ p }
-% \newcommand{\Lo}{L^{ 1 }}  % L^{ one }
-% \newcommand{\Lt}{L^{ 2 }}  % L^{ two }
-% \newcommand{\Lp}{L^{ p }}
-% \newcommand{\LIo}{\Lc^{ 1 }}
-% \newcommand{\LIp}{\Lc^{ p }}
-% \newcommand{\LtO}{\Lt( \Rb, d \mu )}
-% \newcommand{\LtT}{\Lt( \Rb^{ 3 }, d \mu )}
-% \newcommand{\LtLim}{L^{ 2 }-\Lim}
 
 
 
-% Wersja polska
-% \newcommand{\LtOPL}{\Lt( \Rb, \difPL \mu )}
-% \newcommand{\LtTPL}{\Lt( \Rb^{ 3 }, \difPL \mu )}
+
+
+
+
+
+
 
 
 
@@ -665,6 +457,8 @@
 \newcommand{\Pv}{\mathrm{Pv}}
 
 \newcommand{\sd}{\textrm{sd}}  % Stopień skalowania Steinmanna
+
+
 
 
 
@@ -705,21 +499,9 @@
 
 
 
-% \newcommand{\e}{\mr{e}}
-% \newcommand{\ii}{\mr{i}}
-% \newcommand{\id}{\mr{id}}
-% \newcommand{\de}{\mr{d}}
-% \newcommand{\sgm}{\mr{sgm}}
-% \newcommand{\cy}{\mr{cykl}}
-% \newcommand{\ad}{\mr{ad}}
-% \newcommand{\Ad}{\mr{Ad}}
-% \newcommand{\Le}{\mc{L}}
-
 
 \newcommand{\Diam}{\textrm{Diam}}
 
-
-% \newcommand{\D}[2]{\mc{D}_{ #1 }( #2 )}
 
 \newcommand{\dR}{\textrm{dR}}
 
@@ -728,6 +510,8 @@
 \newcommand{\Vect}{\textrm{Vect}}
 
 \newcommand{\opp}{\textrm{opp}}
+
+\newcommand{\vol}{\mathrm{vol}}
 
 
 

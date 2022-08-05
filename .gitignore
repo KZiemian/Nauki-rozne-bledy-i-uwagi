@@ -8,3 +8,6 @@
 
 # ignore Emacs backups files
 *~
+
+# ignore auxiliary catalogs
+auto/
