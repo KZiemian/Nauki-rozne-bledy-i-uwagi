@@ -1,0 +1,22 @@
+Page 29.
+$ vim CONTRIBUTING.md
+$ git status
+
+Page 36.
+
+To remove a file from Git, you have to remove it from your tracked files (more accurately, remove it from your staging area) and then commit. ??
+
+Page 37.
+Another useful thing you may want to do is to keep the file in your working tree but remove it from
+your staging area.
+
+
+
+In version 2.1.348-2-ga76dfab, 2022-07-19, Figure 6 has "Stage Fixes". Since over five years passes, should this issue remain open?
+
+Since over five years pass since opening this issue, I think we can close it.
+
+It seems that there are no big plans to make a new edition of this book, which seems to me to be only feasible thing to do, that can make justice for eight years of Git development from 2014 to 2022. But, this is only my opinion, I may be wrong.
+
+Git figures out that it’s a rename implicitly, so it doesn’t matter if you rename a file that way or with
+the mv command. Czy to jest komentarz do komendy git mv?

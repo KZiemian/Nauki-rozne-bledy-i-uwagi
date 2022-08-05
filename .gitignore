@@ -6,6 +6,10 @@
 *.log
 *.out
 
+# ignore auxiliary files created by BibTeX
+*.bbl
+*.blg
+
 # ignore Emacs backups files
 *~
 
