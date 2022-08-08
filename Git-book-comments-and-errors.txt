@@ -20,3 +20,13 @@ It seems that there are no big plans to make a new edition of this book, which s
 
 Git figures out that it’s a rename implicitly, so it doesn’t matter if you rename a file that way or with
 the mv command. Czy to jest komentarz do komendy git mv?
+
+
+
+Add section about using space, Enter and "q" to navigate log entries. And what "\" means in command line.
+
+
+Page 45.
+"This command takes your staging area and uses it for the commit." -> This command takes your staging area and add its content to that from previously made commit. Then it creates new commit that will overwrite this made previoulsy.????
+
+"You can edit the message the same as always, but it overwrites your previous commit." -> You can edit the message the same as always, but remember that you previous comming commint will be replaced by this one.

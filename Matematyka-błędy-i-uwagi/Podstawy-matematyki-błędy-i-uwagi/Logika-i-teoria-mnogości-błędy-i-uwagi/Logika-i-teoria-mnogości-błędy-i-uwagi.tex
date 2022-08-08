@@ -88,10 +88,10 @@
 
 
 % Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-\newtheorem{twr}{Twierdzenie}  % Komenda wprowadzająca otoczenie
+\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
 % „twr” do pisania twierdzeń matematycznych
-\newtheorem{defin}{Definicja}  % Analogicznie jak powyżej
-\newtheorem{wni}{Wniosek}
+\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+\newtheorem{corollary}{Wniosek}
 
 
 
@@ -287,8 +287,8 @@ Niestety nie wiem który z nich należy tam umieścić.
 % ############################
 \Work{ % Autor i tytuł dzieła
   Andrzej Grzegorczyk \\
-  „Zarys logiki matematycznej”,
-  \cite{GrzegorczykZarysLogikiMatematycznej1975} }
+  \textit{Zarys logiki matematycznej},
+  \cite{GrzegorczykZarysLogikiMatematycznej1975}}
 
 
 
@@ -352,6 +352,8 @@ co zostało powyżej napisane.
 
 
 % ##################
+\newpage
+
 \CenterBoldFont{Błędy}
 
 
@@ -364,6 +366,8 @@ co zostało powyżej napisane.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
+    % W książce kropka po $Y$ jest bardzo duża w książce.
+    11  & &  3 & $Y$. & $Y$. \\
     12  &  3 & & \textit{ciałem} & \textit{ciałem uporządkowanym} \\
     16  & 12 & & str. 12 & str. 10 \\
     18  & 20 & & (dla & \big(dla \\
@@ -373,9 +377,9 @@ co zostało powyżej napisane.
     22  & &  3 & wzajemnej jednoznaczności & jednoznaczności \\
     22  & &  2 & przeciwobraz & przeciwobraz obrazu \\
     25  &  4 & & (21); & (21)); \\
-    29  & & 13 & $\forall x W$ & $\forall x \exists W$ \\
+    29  & & 13 & $\forall x W$ & $\forall \, x \; \exists \, W$ \\
     34  &  1 & & (23) & (23') \\
-    34  & 20 & & $\forall u$ & $x \in \bigcap X \equiv \forall u$ \\
+    34  & 20 & & $\forall u$ & $x \in \bigcap X \equiv \forall \, u$ \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -386,6 +390,13 @@ co zostało powyżej napisane.
   \end{tabular}
 
 \end{center}
+
+
+\noindent
+\StrWd{7}{4} \\
+\Jest  przedmioty{ } $a_{ 1 }, a_{ 2 }, \ldots, a_{ k }$ \\
+\Powin przedmioty $a_{ 1 }, a_{ 2 }, \ldots, a_{ k }$ \\
+
 
 \vspace{\spaceTwo}
 % ############################
