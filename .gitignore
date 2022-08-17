@@ -10,7 +10,7 @@
 *.bbl
 *.blg
 
-# ignore Emacs backups files
+# ignore Emacs backup files
 *~
 
 # ignore auxiliary catalogs
