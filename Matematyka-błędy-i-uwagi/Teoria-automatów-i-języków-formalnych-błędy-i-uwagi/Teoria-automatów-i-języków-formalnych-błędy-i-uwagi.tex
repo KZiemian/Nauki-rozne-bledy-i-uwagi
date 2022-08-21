@@ -191,7 +191,7 @@ symboli (liter z~danego alfabetu $A$), nazywanych napisami bądź
 stringami (ang. \textit{strings}), które zgodnie z~przyjętą
 w~informatyce konwencją będziemy oznaczać jako $\texttt{"} abc \texttt{"}$.
 
-Więcej o~napisach powiemy przy okazji omawiania wolnych monoidów językowych.
+Więcej o~napisach powiemy przy okazji omawiania wolnych monoidów słownych.
 
 
 
@@ -205,7 +205,7 @@ Więcej o~napisach powiemy przy okazji omawiania wolnych monoidów językowych.
 \start \Str{5} Warto zauważyć, że~ze względu na łączność działania
 w~monoidzie $M$, łączne jest również działanie w~monoidzie $\Pcal( M )$
 \begin{equation}
-  \label{eq:Forys-Forys-aaa}
+  \label{eq:Forys-Forys-01}
   ( A \cdot B ) \cdot C = A \cdot ( B \cdot C ), \quad
   A, B, C \in \Pcal( M ).
 \end{equation}
@@ -237,7 +237,7 @@ Wydaje mi, że jest to zwykłe przeoczenie ze strony autorów i~trzeba po
 prostu przyjąć, że~element $x \in M$ nazywamy odwracalny, gdy istnieje
 taki element $y \in M$, że~zachodzi
 \begin{equation}
-  \label{eq:Forys-Forys-01}
+  \label{eq:Forys-Forys-02}
   x \cdot y = y \cdot x = 1_{ M }.
 \end{equation}
 
@@ -362,7 +362,7 @@ Mianowicie bierzemy pewien zbiór $A$, którego elementy noszą nazwę
 wszystkich ciągów tych symboli, który będziemy oznaczać symbolem
 $A^{ * }$.
 \begin{equation}
-  \label{eq:Forys-Forys-02}
+  \label{eq:Forys-Forys-03}
   A^{ * } =
   \{ ( a_{ 1 }, a_{ 2 }, a_{ 3 }, \ldots, a_{ n } ) \;\; : \;\; n \geq 0, \;
   a_{ i } \in A \}.
@@ -374,7 +374,7 @@ zaś~bardziej formalnie jest to odwzorowanie $f : \emptyset \to A$.
 W~zbiorze $A^{ * }$ wprowadzamy też działanie konkatenacjami oznaczane $\cdot$
 wzorem
 \begin{equation}
-  \label{eq:Froys-Forys-03}
+  \label{eq:Froys-Forys-04}
   ( a_{ 1 }, a_{ 2 }, \ldots, a_{ n } ) \cdot ( b_{ 1 }, b_{ 2 }, \ldots, b_{ m } ) =
   ( a_{ 1 }, a_{ 2 }, \ldots, a_{ n }, b_{ 1 }, b_{ 2 }, \ldots, b_{ m } ).
 \end{equation}
@@ -399,7 +399,7 @@ tego zagadnienia, zauważmy, że~w tak podanym wolnym monoidzie
 $A^{ * }$ konkatenacja ciągów rzeczywiście prowadzi do tego co
 intuicyjnie rozpoznajemy jako dodawanie liczb naturalnych. Przykładowo
 \begin{equation}
-  \label{eq:Forys-Forys-04}
+  \label{eq:Forys-Forys-05}
   1 + 2 = ( | ) \cdot ( |, | ) = ( |, |, | ) = 3.
 \end{equation}
 
@@ -429,14 +429,14 @@ macierzy, acz taka konstrukcja wydaje~się znacznie mniej naturalna,
 niż przedstawiona powyżej dla liczb naturalnych.
 
 W~świetle tego proponuję następujące wyjście z~sytuacji.
-\textbf{Wolnym monoidem językowym $A^{ * }$ nad alfabetem $A$}
+\textbf{Wolnym monoidem słownym $A^{ * }$ nad alfabetem $A$}
 będziemy nazywać wcześniej określony zbiór ciągów wraz z~działaniem
 konkatenacji. Jest więc to obiekt o~konkretnej strukturze
 ontologicznej.
 
 Poza tym zachowujemy prawienie niezmienioną terminologię ze~stron 8--9,
 która jest tam wprowadzona dla wolnym monoidów i~stosujemy ją też do
-wolnych monoidów językowych. Będziemy więc mówić o~„bazie (alfabecie) $A$”,
+wolnych monoidów słownych. Będziemy więc mówić o~„bazie (alfabecie) $A$”,
 elementy zbioru $A$ będziemy nazywać „literami”, bądź jak zostało to
 wyjaśnione w~jednym z~dalszych punktów, „symbolami”. Ciągi liter (symboli)
 będziemy nazywali „słowami”, a~dowolny podzbiór monoidu $A^{ * }$ będziemy
@@ -446,28 +446,28 @@ odpowiednie synonimy wszystkich tych pojęć.
 Wybiegając trochę w~przyszłość, zdefiniujemy teraz monoid wolny, korzystając
 z~pojęcia kanonicznego homomorfizmu. Monoid $( M, \cdot, 1_{ M } )$ jest
 \textbf{monoidem wolnym}, jeśli jest istnieje taki zbiór $A \subset M$, że~wolny
-monoid językowym $A^{ * }$ nad alfabetem $A$ jest kanonicznie izomorficzny
+monoid słowny $A^{ * }$ nad alfabetem $A$ jest kanonicznie izomorficzny
 z~$M$. Nie widać więc powodu by monoid $M$ miał bardziej ustaloną strukturę
 ontologiczną, niż np. grupa abelowa.
 
 Na monoidy wolne przenosimy nazewnictwo wprowadzone wcześniej dla wolnych
-monoidów językowych. Zbiór $A$ będziemy więc nazywać „bazą (alfabetem)
+monoidów słownych. Zbiór $A$ będziemy więc nazywać „bazą (alfabetem)
 wolnego monoidu $M$”, elementy $A$ będziemy nazywać „literami (symbolami)”,
-etc. Dla większej jasności rozważań element wolnego monidłu językowego
+etc. Dla większej jasności rozważań element wolnego monoidu słownego
 będziemy często zapisywać jako ciągi symboli wewnątrz cudzysłowu
 \texttt{" "}. Przykładowo $\texttt{"} abc \texttt{"}$. Mamy nadzieję,
 że~pomoże to uniknąć pewnych nieporozumień.
 
 Analogiczna terminologia stosuje~się też do półgrup. Mamy więc \textbf{wolne
-  półgrupy językowe nad alfabetem $A$} i~\textbf{wolne półgrupy}, ponieważ
+  półgrupy słowne nad alfabetem $A$} i~\textbf{wolne półgrupy}, ponieważ
 jednak ponieważ ich definicje oraz własności są bardzo podobne do
 omówionych powyżej własności monoidów, nie będziemy ich dokładnie opisywać.
 
 ????? Zbiór $A$ może być podzbiorem
 $M$ lub nie. Jak pokazują twierdzenia udowodnione na stronach 9--12,
 jeśli istnieje dowolny zbiór $A$, taki że $M$ jest izomorficzny
-z~wolnym monoidem językowym $A^{ * }$, to można znaleźć taki zbiór
-$B \subset M$, że~$M$ jest izomorficzny z~wolnym monoidem językowym
+z~wolnym monoidem słownym $A^{ * }$, to można znaleźć taki zbiór
+$B \subset M$, że~$M$ jest izomorficzny z~wolnym monoidem słownym
 $B^{ * }$. Jednak poprawne omówienie tej kwestii wymaga uporządkowania
 kilku pojęć.
 
@@ -476,7 +476,7 @@ $( M, \cdot, 1_{ M } )$ jest monoidem wolnym, to istnieje taki zbiór
 $B$, że~każdy element $m \in M$, $m \neq 1_{ M }$ można przedstawić
 w~jeden i~tylko jeden sposób jako
 \begin{equation}
-  \label{eq:Forys-Forys-04}
+  \label{eq:Forys-Forys-05}
   b_{ 1 } \cdot b_{ 2 } \cdot \ldots \cdot b_{ n }, \quad
   b_{ i } \in B.
 \end{equation}
@@ -497,7 +497,7 @@ coś zyskiwali.
 teraz zająć~się niejasnościami, jakie wynikają, z~użycia w~tej książce
 symbolu $A^{ * }$ w~dwóch różnych znaczeniach. Jeżeli bowiem
 $A \subset M$, gdzie $M$ jest pewnym monoidem, to symbol $A^{ * }$
-może oznaczać zarówno wolny monoid językowy nad alfabetem $A$, jak
+może oznaczać zarówno wolny monoid słowny nad alfabetem $A$, jak
 i~podmonoid monoidu $M$ generowany przez $A$, a~są to dwa różne
 byty.
 
@@ -518,11 +518,11 @@ zawierający $A$. Taki obiekt będziemy nazywali \textbf{podmonoidem
 
 Jeżeli zbiór $A$ jest podany, ale bez wskazania, że
 jest to podzbiór pewnego monoidu $M$, to przez symbol $A^{ * }$
-będziemy rozumieć wolny monoid językowy nad alfabetem $A$. W~przypadku
+będziemy rozumieć wolny monoid słowny nad alfabetem $A$. W~przypadku
 gdy $A$ jest podzbiorem monoidu $M$, ale~rozważać będziemy wolny
-monoid językowy nad $A$, to zostanie to zaznaczone jawnie. Szczególny
+monoid słowny nad $A$, to zostanie to zaznaczone jawnie. Szczególny
 przypadkiem, acz nietrudnym do zrozumienia jest ten, gdy $A \subset M$
-i~$M$ jest monoidem językowym. Wówczas obie definicje symbolu
+i~$M$ jest monoidem słownym. Wówczas obie definicje symbolu
 $A^{ * }$~się pokrywają.
 
 W~świetle powyższych ustaleń wprowadzimy odpowiednie poprawki do tej
@@ -535,9 +535,9 @@ książeczki.
 
 
 \start \Str{8} Dysponując już tak uporządkowanym słownictwem,
-przeanalizujmy strukturę wolnego monoidu językowego $A^{ * }$ na
+przeanalizujmy strukturę wolnego monoidu słownego $A^{ * }$ na
 alfabetem $A$. Jeśli potrzebny będzie nam przykład wolnego monoidu
-językowego, sięgniemy po niezwykle ważny w~informatyce monoid
+słownego, sięgniemy po niezwykle ważny w~informatyce monoid
 $\{ 0, 1 \}^{ * }$. Łatwo spostrzec, że~jest to monoid nieprzemienny,
 przykładowo jeśli $u = 00$, $v = 11$, to
 \begin{equation}
@@ -552,14 +552,14 @@ Nasuwa~się naturalne pytanie: co można powiedzieć o~zbiorze $C$ takim,
 \end{equation}
 Problem ten wymaga dalszej analizy.
 
-Zauważmy, że~dla monoidu językowego zachodzi równość
+Zauważmy, że~dla monoidu słownego zachodzi równość
 \begin{equation}
   \label{eq:Forys-Forys-07}
   | u v | = | u | + | v |.
 \end{equation}
 Wynika ona w~prosty sposób z~definicji konkatenacji. Z~niej i~z~tego,
 że~$| u | \geq 0, u \in M$, wynika, że grupa jedynki w~wolnym
-monoidzie językowym jest trywialna. Choć wniosek ten jest prosty do
+monoidzie słownym jest trywialna. Choć wniosek ten jest prosty do
 zrozumienia, bardziej sformalizowany dowód wymagałby użycia
 nierówności
 \begin{equation}
@@ -575,20 +575,20 @@ które wynika wprost z~dwóch wspomnianych własności.
 
 
 \Str{8} Zwróćmy uwagę, że~jeśli $A \subset M$, gdzie $M$ jest monoidem, to
-podmonoid algebraiczny $A^{ * }$ i~wolnym monoid językowy $A^{ * }$
+podmonoid algebraiczny $A^{ * }$ i~wolnym monoid słowny $A^{ * }$
 i~alfabetem $A$ mogą być radykalnie różnymi obiektami.
 
 Dla przykładu weźmy monoid $( \Nbb_{ 0 }, +, 0)$ i~niech $A = \{ 0 \}$. Wówczas
 jeżeli przez symbol $A^{ * }$ rozumiemy podmonoid algebraiczny, to $A^{ * } =
 \{ 0 \}$, bowiem $0 + 0 = 0$. Jeżeli, przez $A^{ * }$ rozumiemy wolny podmonoid
-językowy to wówczas zachodzi
+słowny to wówczas zachodzi
 \begin{equation}
   \label{eq:Forys-Forys-09}
   A^{ * } = \{ \texttt{""}, \texttt{"} 0 \texttt{"},
   \texttt{"} 00 \texttt{"}, \texttt{"} 000 \texttt{"},
   \texttt{"} 0000 \texttt{"}, \ldots \}.
 \end{equation}
-Powyższy monoid językowy jest izomorficzny z~całym monoidem
+Powyższy monoid słowny jest izomorficzny z~całym monoidem
 $( \Nbb_{ 0 }, +, 0)$. Ten izomorfizm zadany jest przez relacje
 \begin{equation}
   \label{eq:Forys-Forys-10}
@@ -664,7 +664,7 @@ odwzorowanie jest homeomorfizmem jest dość\footnote{Jak to niektórzy
 
 \start \Str{9} W~celu uproszczenia rozważań wprowadzimy teraz dodatkową
 terminologię. Homomorfizm $h : A^{ * } \to M$, $A \subset M$, prowadzący z~wolnego
-monoidu językowego $A^{ * }$ do monoidu $M$, jednoznacznie wyznaczony przez
+monoidu słownego $A^{ * }$ do monoidu $M$, jednoznacznie wyznaczony przez
 warunki
 \begin{subequations}
   \begin{align}
@@ -676,7 +676,7 @@ warunki
   \end{align}
 \end{subequations}
 będziemy nazywali \textbf{kanonicznym homomorfizmem wolnego monoidu $A^{ * }$
-  językowego w~monoid $M$}, lub po prostu \textbf{kanonicznym
+  słownego w~monoid $M$}, lub po prostu \textbf{kanonicznym
   homomorfizmem}, gdy zbiór $A$ i~monoid $M$ będą wynikać z~kontekstu.
 Jeżeli dodatkowo $h$ jest izomorfizmem, to będziemy oprócz oczywistych
 sformułowań takich jak „kanoniczny izomorfizm”, będziemy również mówili,
@@ -693,14 +693,14 @@ dla niego lepszej nazwy.
 
 
 \start \Str{9} Warto zwrócić uwagę na to, że~omawiany tu homomorfizm
-kanoniczny wolnego monoidu językowego $A^{ * }$ z~monoidem $M$, gdzie
+kanoniczny wolnego monoidu słownego $A^{ * }$ z~monoidem $M$, gdzie
 $A \subset M$ jest zbiorem generatorów $M$, nie musi być izomorfizmem. Zanim
 przejdziemy do dokładniejszego omówienia tej kwestii, przypomnijmy,
 że~homomorfizm kanoniczny jest jednoznacznie wyznaczony przez warunki
 \eqref{eq:Forys-Forys-12-A}--\eqref{eq:Forys-Forys-12-B}.
 
 By to pokazać rozważmy
-ponownie monoid $( \Nbb_{ 0 }, +, 0 )$ i~wolny monoid językowy
+ponownie monoid $( \Nbb_{ 0 }, +, 0 )$ i~wolny monoid słowny
 $A^{ * } = \{ 0, 1 \}^{ * }$. Jest
 oczywiste, że
 \begin{equation}
@@ -755,14 +755,14 @@ zapis $M = A^{ * }$ może oznaczać, że~podmonoid algebraiczny $A^{ * }$ jest
 równy $M$. Jeśli zaś kanoniczny homomorfizm $h : A^{ * } \to M$ jest
 izomorfizmem, to wówczas przez $M = A^{ * }$, będzie rozumieć skrótowy zapisem tego faktu. Obie te sytuacje nie są wcale równoważne.
 
-Rozpatrzmy ponownie monoid $( \Nbb_{ 0 }, +, 0 )$ i~wolny monoid językowy
+Rozpatrzmy ponownie monoid $( \Nbb_{ 0 }, +, 0 )$ i~wolny monoid słowny
 $A^{ * } = \{ 0, 1 \}^{ * }$. Jest oczywiste, że~jeśli symbol $A^{ * }$ rozumiemy
 jako podmonoid algebraiczny to oczywiście zachodzi $M = A^{ * }$.
-Jeśli jednak przez $A^{ * }$ rozumiemy wolny monoid językowy, to jak zostało
+Jeśli jednak przez $A^{ * }$ rozumiemy wolny monoid słowny, to jak zostało
 wykazane w~poprzednich komentarzach, homomorfizm $h$ \textit{nie jest}
 izomorfizmem, więc nie możemy napisać równości „$M = A^{ * }$”.
 
-Na koniec zauważmy, że~jeśli $A = \{ 1 \}$ to wówczas wolny monoid językowy
+Na koniec zauważmy, że~jeśli $A = \{ 1 \}$ to wówczas wolny monoid słowny
 $A^{ * }$ jest kanonicznie izomorficzny z~$M$.
 
 \vspace{\spaceFour}
@@ -809,7 +809,7 @@ zapisać jako
 \start \Str{10} W~dowodzie twierdzenia 1.2.2 użyte jest mowa o~„długości
 elementu $m \in M$ w~$B^{ * }$”. Sens tego jest następujący. Dany jest zbiór
 $B$, niekoniecznie zawarty w~$M$, i~izomorfizm $f$, nie musi być to
-izomorfizm kanoniczny, między wolnym monoidem językowym $B^{ * }$ a~$M$. Dla
+izomorfizm kanoniczny, między wolnym monoidem słownym $B^{ * }$ a~$M$. Dla
 każdego elementu $m \in M$ istnieje więc $w \in B^{ * }$, taki że $f( w ) = m$.
 Możemy więc przypisać elementowi $m$ liczbę z~$\Nbb_{ 0 }$, którą nazywamy
 jego długością, za pomocą wzoru
@@ -821,7 +821,7 @@ Tylko tyle jest nam potrzebne do udowodnienia twierdzenia 1.2.2.
 
 Wybiegnijmy teraz trochę w~przyszłość. Jeśli monoid $M$ jest monoidem
 wolnym, to~z~definicji jest on kanonicznie izomorficzny z~wolnym monoidem
-językowym $A^{ * }$, dla pewnego $A \subset M$. Dzięki wnioskowi 1.2.2 i~dyskusji
+słownym $A^{ * }$, dla pewnego $A \subset M$. Dzięki wnioskowi 1.2.2 i~dyskusji
 przeprowadzonej w~tych notatkach na jego temat, zbiór $A$ jest jednoznacznie
 wyznaczony przez relację
 \begin{equation}
@@ -984,25 +984,25 @@ podzielny, $S = M \setminus \{ 1_{ M } \}$ jest podgrupą
 i~$\cap_{ n \in \Nbb } \, S^{ n } = \emptyset$. Jednak według mnie wynikają nie z~tego
 twierdzenia, lecz z~podanej w~tych notatkach definicji monoidu wolnego $M$.
 
-Dokładniej wszystkie te własności posiada każdy wolny monoid językowy
+Dokładniej wszystkie te własności posiada każdy wolny monoid słownego
 i~na mocy kanonicznego izomorfizmu przenoszą~się one z~wolnego monoidu
-językowego $B^{ * }$ na monoid $M$, gdzie $B \subset M$. Poniżej udowodnimy
-wszystkie te trzy własności dla dowolnego wolnego monoidu językowego.
+słownego $B^{ * }$ na monoid $M$, gdzie $B \subset M$. Poniżej udowodnimy
+wszystkie te trzy własności dla dowolnego wolnego monoidu słownego.
 
-Zaczniemy od własności, że~dla dowolnego wolnego monoidu językowego $M$
+Zaczniemy od własności, że~dla dowolnego wolnego monoidu słownego $M$
 zbiór $S = M \setminus \{ 1_{ M } \}$ jest podgrupą. W~zasadzie cała praca jest już
 wykonana, bo zgodnie z~twierdzeniem \ref{thm:Forys-Forys-01} $S$ jest
 podpółgrupą wtedy i~tylko wtedy, gdy grupa jedynki $M$ jest trywialna,
 a~ten fakt udowodniliśmy przy okazji podanie równości
 \eqref{eq:Forys-Forys-07}.
 
-Przejdźmy teraz do dowodu tego, że wolny monoid językowy jest
+Przejdźmy teraz do dowodu tego, że wolny monoid słownym jest
 równopodzielny. Weźmy takie elementy $a, b, c, d \in M$, że~zachodzi
 \begin{equation}
   \label{eq:Forys-Forys-29}
   a b = c d.
 \end{equation}
-Z~definicji wolnego monoidu językowego wynika, że~możemy przedstawić te
+Z~definicji wolnego monoidu słownego wynika, że~możemy przedstawić te
 elementy jako
 \begin{subequations}
   \begin{align}
@@ -1017,7 +1017,7 @@ elementy jako
   \end{align}
 \end{subequations}
 gdzie wszystkie $f_{ a,\, i }$, $f_{ b,\, j }$, $f_{ c,\, k }$, $f_{ d,\, l }$
-należą do bazy $B$ wolnego monoidu językowego $M$. Tym samym mamy
+należą do bazy $B$ wolnego monoidu słownego~$M$. Tym samym mamy
 \begin{subequations}
   \begin{align}
     \label{eq:Forys-Forys-31-A}
@@ -1080,7 +1080,7 @@ stąd $c = a v$. Tak jak poprzednio mamy ciąg równości
 $f_{ b,\, 1 } = f_{ c,\, n_{ 1 } + 1 }$, $f_{ b,\, 2 } = f_{ c,\, n_{ 1 } + 2 }$, etc.,
 co prowadzi do równości $b = v d$. To kończy dowód tej własności.
 
-Pozostaje nam udowodnić, że~dla wolnego monoidu językowego $M$ zachodzi
+Pozostaje nam udowodnić, że~dla wolnego monoidu słownego $M$ zachodzi
 $\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$. Zauważmy, że~z~definicji zbioru $S$, jeśli $w$
 należy do $S$ to jego długość jest co najmniej równa jeden: $| w | \geq 1$. Tym
 samym jeśli $w_{ 1 } \in S^{ 2 }$, to jego długość jest co najmniej równa $2$, bo istnieją takie $s_{ 1 }, s_{ 2 } \in S$, takie że $w = s_{ 1 } s_{ 2 }$, więc
@@ -1124,22 +1124,86 @@ zupełnie potrzebny fakt, że~$\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$.
 
 
 
-\start \Str{11}
+\start \Str{11} W~dowodzie twierdzenia 1.2.4 jest mowa o~tym, że ciąg
+inkluzji
+\begin{equation}
+  \label{eq:4}
+  S \supset S^{ 2 } \supset \ldots \supset S^{ k } \supset S^{ k + 1 } \supset S^{ k + 2 } \supset \ldots
+\end{equation}
+jest „skończony”, bądź „nieskończony”, jednak nie jest wcale jasne, co
+słowo „skończony” oznacza w~tym kontekście.
+
+W~istocie „skończony ciąg inkluzji” oznacza po prostu, że dla pewnego $k$
+zachodzi $S^{ k } = S^{ k + 1 }$, przyjmijmy przy tym, że~jest to najmniejsze
+$k$ o~tej własności. Tym samym, dzięki łączności mnożenia podzbiorów
+monoidu, otrzymujemy
+\begin{equation}
+  \label{eq:5}
+  S^{ k + 2 } = ( S^{ k + 1 } ) S = S^{ k } S = S^{ k + 1 } = S^{ k }.
+\end{equation}
+Stąd wynika, że~w~takiej sytuacji ciąg \eqref{eq:4} przyjmuje postać
+\begin{equation}
+  \label{eq:6}
+  S \supsetneq S^{ 2 } \supsetneq S^{ 3 } \supsetneq \ldots \supsetneq S^{ k } = S^{ k + 1 } = S^{ k + 2 } = \ldots
+\end{equation}
+Małe słowo komentarza. Ponieważ $k$ zostało wybrane jako najmniejsza
+liczba, taka że zachodzi $S^{ k } = S^{ k + 1 }$, stąd wynika, że~dla $l < k$
+jest prawdą, iż~$S^{ l } \supsetneq S^{ l + 1 }$, więc powyższy wzór jest poprawny.
+
+„Nieskończony ciąg inkluzji” oznacza więc sytuację, gdy
+\begin{equation}
+  \label{eq:7}
+  S \supsetneq S^{ 2 } \supsetneq S^{ 3 } \supsetneq \ldots \supsetneq S^{ k } \supsetneq S^{ k + 1 } \supsetneq S^{ k + 2 } \supsetneq \ldots
+\end{equation}
+
+\vspace{\spaceFour}
 
 
 
 
 
+\start \Str{11} Powinniśmy~się przyjrzeć lepiej stwierdzeniu, że~jeśli
+$m \in S^{ k } \setminus S^{ k + 1 }$, to można go przedstawić jako
+$s_{ 1 } s_{ 2 } \ldots s_{ k }$, gdzie $s_{ i } \in S \setminus S^{ 2 }$, $i = 1, 2, \ldots, k$.
+Choć jest to fakt stosunkowo prosty, omówimy go w~sposób szczegółowy, by
+pozostawić możliwie mało miejsca na niejasności.
+
+Istnienie takiego ciągu $s_{ i }$, $i = 1, 2, \ldots, k$ wynika wprost z~tego,
+że~$s \in S^{ k }$. Pozostaje pokazać, że~jeżeli
+$m = s_{ 1 } s_{ 2 } \ldots s_{ k } \notin S^{ k + 1 }$, to dla każdego $i = 1, 2, \ldots, k$
+mamy $s_{ 1 } \notin S^{ 2 }$. Na początek przypomnijmy, że~jeśli elementu
+$u \in S$ można przedstawić jako $u = u_{ 1 } u_{ 2 } \ldots u_{ n }$, $n \geq 2$, to
+można go przedstawić jako $u = u_{ 1 } U$, przyjmując
+$U = u_{ 2 } u_{ 3 } \ldots u_{ n }$. Jest to równoważne stwierdzeniu,
+że~$S^{ n } \subset S^{ 2 }$, gdy $n \geq 2$, jednak przedstawione
+w~tej formie powinno uczynić zrozumienie tego problemu prostszym.
+
+Dowód rzeczonej implikacji można teraz przeprowadzić bardzo prosto,
+korzystając z~zasady kontrapozycji. Jeśli istnieje element
+$s_{ i } \in S^{ 2 }$ to można go zapisać jako $s_{ i } = t_{ 1 } t_{ 2 }$,
+$t_{ 1 }, t_{ 2 } \in S$, więc $m = s_{ 1 } s_{ 2 } \ldots s_{ i - 1 } t_{ 1 } t_{ 2 }
+s_{ i + 1 } \ldots s_{ k }$, więc $m \in S^{ k + 1 }$, czyli nie jest prawdą,
+iż~$m \notin S^{ k + 1 }$, co kończy dowód.
+
+Oczywiście, jeśli $s_{ i } \in S^{ 2 }$, to istnieje możliwość, że~można go
+zasiać jako iloczyn większej liczby elementów, niż 2, choćby
+$s_{ i } = t_{ 1 } t_{ 2 } t_{ 3 }$. Dla dowodu omawianej własności nie ma to
+jednak znaczenia.
+
+Powyższe rozważania można podsumować stwierdzając,
+że~$m \in S^{ k } \setminus S^{ k + 1 }$, wtedy i~tylko wtedy, gdy można go zapisać jako
+$m = s_{ 1 } s_{ 2 } \ldots s_{ k }$, $s_{ i } \in S^{ k } \setminus S^{ k + 1 }$, $i = 1, \ldots, k$.
+
+\vspace{\spaceFour}
 
 
 
 
 
+\start \StrWd{11}{11} Według mnie zapis $\min\{ k, l \}$ wyglądałoby znacznie
+ładniej, niż użyty tutaj $min\{ k, l \}$.
 
-
-
-
-
+\vspace{\spaceFour}
 
 
 
@@ -1232,20 +1296,19 @@ zupełnie potrzebny fakt, że~$\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$.
            & $\bigcap_{ n \in \Nbb } \, S^{ n }$ \\
     11 & 17 & & \textit{( 1.2.1)} & \textit{(1.2.1)} \\
     11 & 18 & & $S^{ k } \; = 0$ & $S^{ k } = 0$ \\
+    11 & & 18 & $k \in \!\! \Nbb$ & $k \in \Nbb$ \\
     11 & & 17 & $\bigcap_{ n \in \Nbb } \mathbf{S}^{ 2 }$
            & $\bigcap_{ n \in \Nbb } S^{ n }$ \\
     11 & & 16 & $1, ...k$ & $1, \ldots, k$ \\
-    11 & & 15 & \textit{pólgrupy} & \textit{półgrupy} \\
+    11 & & 15 & \textit{pólgrupy}~$S$. & \textit{zbioru}~$A$. \\
     12 & &  9 & $s_{ 1 }, \hspace{0.5em} s_{ 1 } s_{ 2 },$
            & $s_{ 1 }, s_{ 2 } s_{ 3 },$ \\
-    %   & &  & $( \textrm{\textbf{S}}, \cdot )$ & $( S, \cdot )$ \\
-    %   & &  & $( \textrm{\textbf{M}}, \cdot, 1_{ \textrm{\textbf{M}}} )$
-    %        & $( M, \cdot, 1_{ M } )$ \\
-    %   & &   & $x \in \textrm{\textbf{M}}$ & $x \in M$ \\
-    %   & &   & $\exists b \in B\; ,$ & $\exists \, b \in B,$ \\
-    %   &   & & $( S, \cdot )${ }, { }{ }$( S', \ast )$
-    %        & $( S, \cdot )$, $( S', \ast )$ \\
-    %   &  & & $\forall x, y \in S$ & $\forall x, y \in S,$ \\
+    12 &  2 & & $1$ & $1_{ M }$ \\
+    12 &  3 & & $\{ 1 \}$ & $\{ 1_{ M } \}$ \\
+    12 &  6 & & $( M, \cdot, 1 )$ & $( M, \cdot, 1_{ M } )$ \\
+    12 &  6 & & $\{ 1 \}$ & $\{ 1_{ M } \}$ \\
+    12 &  9 & & $\{ 1 \}$ & $\{ 1_{ M } \}$ \\
+    12 &  9 & & $\bigcap S^{ n }$ & $\bigcap_{ n \in \Nbb } S^{ n }$ \\
     %   &  & & $\forall x, y \in M$ & $\forall x, y \in M,$ \\
     %   & &  & $x \cdot y = 1$ & $x \cdot y = 1_{ M }$ \\
     %   & &  & $\forall x, y, z \in S$ & $\forall x, y, z \in S,$ \\
@@ -1370,6 +1433,8 @@ zupełnie potrzebny fakt, że~$\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$.
 
 \end{center}
 
+\vspace{\spaceTwo}
+
 
 \noindent
 \StrWd{6}{1} \\
@@ -1389,60 +1454,60 @@ zupełnie potrzebny fakt, że~$\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$.
 \Powin $M_{ / Ker_{ h } }$ \\
 \StrWg{9}{1} \\
 \Jest  wolną półgrupę \\
-\Powin wolną półgrupę językową \\
+\Powin wolną półgrupę słowną \\
 \StrWg{9}{2} \\
 \Jest  wolny monoid \\
-\Powin wolny monoid językowy \\
+\Powin wolny monoid słowny \\
 \StrWg{9}{2} \\
 \Jest  wolna półgrupa \\
-\Powin wolna półgrupa językowa \\
+\Powin wolna półgrupa słowna \\
 \StrWg{9}{3} \\
 \Jest  nazywamy \\
-\Powin językowego nazywamy \\
+\Powin słownego nazywamy \\
 \StrWg{9}{4} \\
 \Jest  nazywamy \\
-\Powin językowego nazywamy \\
+\Powin słownego nazywamy \\
 \StrWg{9}{6} \\
 \Jest  nazywamy \\
-\Powin językowego nazywamy \\
+\Powin słownego nazywamy \\
 \StrWg{9}{6} \\
 \Jest  monoid wolny \\
-\Powin językowy monoid wolny \\
+\Powin słowny monoid wolny \\
 \StrWg{9}{6} \\
 \Jest  półgrupa wolna \\
-\Powin językowa półgrupa wolna \\
+\Powin słowny półgrupa wolna \\
 \StrWg{9}{12} \\
 \Jest  wolnych monoidów \\
-\Powin wolnych monoidów językowych \\
+\Powin wolnych monoidów słownych \\
 \StrWg{9}{12} \\
 \Jest  wolnych półgrupach \\
-\Powin wolnych półgrupach językowych \\
+\Powin wolnych półgrupach słownych \\
 \StrWg{9}{14} \\
 \Jest  monoidzie \\
-\Powin monoidzie językowym \\
+\Powin monoidzie słownym \\
 \StrWg{9}{19} \\
 \Jest  \textit{monoidu $A^{ * }$} \\
-\Powin \textit{wolnego monoidu językowego $A^{ * }$} \\
+\Powin \textit{wolnego monoidu słownego $A^{ * }$} \\
 \StrWg{9}{25} \\
 \Jest  \textit{homomorfizm} \\
-\Powin \textit{homomorfizm z~wolnego monoidu językowego w~dowolny monoid} \\
+\Powin \textit{homomorfizm z~wolnego monoidu słownego w~dowolny monoid} \\
 \StrWd{9}{6} \\
 \Jest  \textit{monoidu} $A^{ * }$ \\
-\Powin \textit{monoidu językowego} $A^{ * }$ \\
+\Powin \textit{monoidu słownego} $A^{ * }$ \\
 \StrWd{9}{3} \\
 \Jest  wolnych monoidów (półgrup) \\
-\Powin wolnych monoidów (półgrup) językowych \\
+\Powin wolnych monoidów (półgrup) słownych \\
 \StrWg{10}{3} \\
 \Jest  \textit{to znaczy} $M = B^{ * }$ \\
 \Powin \textit{czyli $M$ jest kanonicznie izomorficzny z~pewnym wolnym
-  monoidem językowym $B^{ * }$} \\
+  monoidem słownym $B^{ * }$} \\
 \StrWd{10}{11} \\
 \Jest  \textit{generatorów.} \\
 \Powin \textit{generatorów i~jest równa $S \setminus S^{ 2 }$, gdzie
   $S = M \setminus \{ 1_{ M } \}$}. \\
 \StrWg{10}{18} \\
 \Jest  $h : A^{ * } \mapsto M$ \\
-\Powin $h : A^{ * } \to M$, gdzie $A^{ * }$ jest wolnym monoidem językowym. \\
+\Powin $h : A^{ * } \to M$, gdzie $A^{ * }$ jest wolnym monoidem słownym. \\
 \StrWd{10}{23} \\
 \Jest  \textit{Homomorfizm $h$ jest, jak łatwo stwierdzić, izomorfizmem,
   więc monoid $M$ jako izomorficznym z~$A^{ * }$ jest wolny.} \\
@@ -1450,7 +1515,7 @@ zupełnie potrzebny fakt, że~$\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$.
   elementy ze zbioru $A$, wynika, że homomorfizm $h$ jest suriekcją.
   Z~jednoznaczności tego rozkładu wynika, że~$h$ jest infekcją, a~więc
   izomorfizmem. Tym samym monoid $M$ jest izomorficzny z~wolnym monoidem
-  językowym $A^{ * }$, zgodnie więc z~definicją jest monoidem wolnym.} \\
+  słownym $A^{ * }$, zgodnie więc z~definicją jest monoidem wolnym.} \\
 \StrWg{11}{15} \\
 \Jest  $\mathbf{S} \supset \mathbf{S}^{ 2 } \supset \mathbf{S}^{ 3 } \ldots
 \supset \mathbf{S}^{ k } \supset \mathbf{S}^{ k + 1 } ...$ \\
@@ -1466,7 +1531,7 @@ zupełnie potrzebny fakt, że~$\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$.
 
 
 
-\vspace{\spaceTwo}
+
 % ############################
 
 
