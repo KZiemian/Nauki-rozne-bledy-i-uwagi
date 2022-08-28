@@ -193,6 +193,17 @@ w~informatyce konwencją będziemy oznaczać jako $\texttt{"} abc \texttt{"}$.
 
 Więcej o~napisach powiemy przy okazji omawiania wolnych monoidów słownych.
 
+\vspace{\spaceFour}
+
+
+
+
+
+\start Zapisywanie dowodów twierdzeń za pomocą kursywy, jak to~się robi
+w~tej książeczce, naprawdę nie było najlepszym pomysłem.
+
+\vspace{\spaceFour}
+
 
 
 
@@ -463,29 +474,24 @@ Analogiczna terminologia stosuje~się też do półgrup. Mamy więc \textbf{woln
 jednak ponieważ ich definicje oraz własności są bardzo podobne do
 omówionych powyżej własności monoidów, nie będziemy ich dokładnie opisywać.
 
-????? Zbiór $A$ może być podzbiorem
-$M$ lub nie. Jak pokazują twierdzenia udowodnione na stronach 9--12,
-jeśli istnieje dowolny zbiór $A$, taki że $M$ jest izomorficzny
-z~wolnym monoidem słownym $A^{ * }$, to można znaleźć taki zbiór
-$B \subset M$, że~$M$ jest izomorficzny z~wolnym monoidem słownym
-$B^{ * }$. Jednak poprawne omówienie tej kwestii wymaga uporządkowania
-kilku pojęć.
-
-???? Również z~tych twierdzeń wynika wniosek, że~jeśli dany monoid
-$( M, \cdot, 1_{ M } )$ jest monoidem wolnym, to istnieje taki zbiór
+Równoważnym sposobem wysłowienia tych twierdzeń jest powiedzenie, że~jeśli
+dany monoid $( M, \cdot, 1_{ M } )$ jest monoidem wolnym, to istnieje taki zbiór
 $B$, że~każdy element $m \in M$, $m \neq 1_{ M }$ można przedstawić
 w~jeden i~tylko jeden sposób jako
 \begin{equation}
-  \label{eq:Forys-Forys-05}
+  \label{eq:Forys-Forys-06}
   b_{ 1 } \cdot b_{ 2 } \cdot \ldots \cdot b_{ n }, \quad
-  b_{ i } \in B.
+  b_{ i } \in B, n > 0.
 \end{equation}
 Zauważmy, że~w~powyższym wyrażeniu może zachodzić $b_{ i } = b_{ j }$
-dla $i \neq j$. W~istocie ta własność jest równoważna przyjętej
-definicji i~tym samym można by ją przyjąć w~jej miejsce. Nie
-zrobiliśmy tego, bo zapisanie tej definicji w~sposób precyzyjny „od
-zera” wymagało tyle miejsca, że~nie wygląda na to, byśmy w~ten sposób
-coś zyskiwali.
+dla $i \neq j$.
+
+Ponieważ podane wyżej sformułowanie jest równoważne definicji wolnego
+monoidu używającej pojęcia kanonicznego homomorfizmu $h$, mogliśmy przyjąć
+je za definicję monoidu wolnego. Nie poszliśmy tą drogą, bo precyzyjne
+zapisanie w~ten sposób definicji wolnego monoidu, wymagało wprowadzenia
+tylu pojęć, że~wydaje~się, iż taki wywód nie byłby bardziej przejrzysty od
+tego, a~wiele pojęć tu podanych wciąż wymagałoby późniejszego wprowadzenia.
 
 \vspace{\spaceFour}
 
@@ -541,20 +547,20 @@ słownego, sięgniemy po niezwykle ważny w~informatyce monoid
 $\{ 0, 1 \}^{ * }$. Łatwo spostrzec, że~jest to monoid nieprzemienny,
 przykładowo jeśli $u = 00$, $v = 11$, to
 \begin{equation}
-  \label{eq:Forys-Forys-05}
+  \label{eq:Forys-Forys-07}
   u v = 0011 \neq 1100 = vu.
 \end{equation}
 Nasuwa~się naturalne pytanie: co można powiedzieć o~zbiorze $C$ takim,
 że dla wszystkich $u, v \in C$ zachodzi
 \begin{equation}
-  \label{eq:Forys-Forys-06}
+  \label{eq:Forys-Forys-08}
   uv = vu.
 \end{equation}
 Problem ten wymaga dalszej analizy.
 
 Zauważmy, że~dla monoidu słownego zachodzi równość
 \begin{equation}
-  \label{eq:Forys-Forys-07}
+  \label{eq:Forys-Forys-09}
   | u v | = | u | + | v |.
 \end{equation}
 Wynika ona w~prosty sposób z~definicji konkatenacji. Z~niej i~z~tego,
@@ -563,7 +569,7 @@ monoidzie słownym jest trywialna. Choć wniosek ten jest prosty do
 zrozumienia, bardziej sformalizowany dowód wymagałby użycia
 nierówności
 \begin{equation}
-  \label{eq:Forys-Forys-08}
+  \label{eq:Forys-Forys-10}
   | u v | \geq | u |,
 \end{equation}
 które wynika wprost z~dwóch wspomnianych własności.
@@ -583,7 +589,7 @@ jeżeli przez symbol $A^{ * }$ rozumiemy podmonoid algebraiczny, to $A^{ * } =
 \{ 0 \}$, bowiem $0 + 0 = 0$. Jeżeli, przez $A^{ * }$ rozumiemy wolny podmonoid
 słowny to wówczas zachodzi
 \begin{equation}
-  \label{eq:Forys-Forys-09}
+  \label{eq:Forys-Forys-11}
   A^{ * } = \{ \texttt{""}, \texttt{"} 0 \texttt{"},
   \texttt{"} 00 \texttt{"}, \texttt{"} 000 \texttt{"},
   \texttt{"} 0000 \texttt{"}, \ldots \}.
@@ -591,7 +597,7 @@ słowny to wówczas zachodzi
 Powyższy monoid słowny jest izomorficzny z~całym monoidem
 $( \Nbb_{ 0 }, +, 0)$. Ten izomorfizm zadany jest przez relacje
 \begin{equation}
-  \label{eq:Forys-Forys-10}
+  \label{eq:Forys-Forys-12}
   \begin{split}
     h( \texttt{""} ) &= 0, \\
     h( \texttt{"} 0 \texttt{"} ) &= 1, \\
@@ -636,11 +642,11 @@ rozszerzeniem odwzorowania $f : A \to M$ do homomorfizmu musi spełniać
 następujące trzy warunki
 \begin{subequations}
   \begin{align}
-    \label{eq:Forys-Forys-11-A}
+    \label{eq:Forys-Forys-13-A}
     h( 1 ) &= 1_{ M }, \\
-    \label{eq:Forys-Forys-11-B}
+    \label{eq:Forys-Forys-13-B}
     h( a ) &= f( a ), \quad \forall \, a \in A, \\
-    \label{eq:Forys-Forys-11-C}
+    \label{eq:Forys-Forys-13-C}
     h( a_{ 1 } \ldots a_{ n } )
            &= f( a_{ 1 } ) \cdot \ldots \cdot f( a_{ n } ),
   \end{align}
@@ -651,7 +657,7 @@ gwarantują nam, że~może istnieć co najwyżej jedno odwzorowanie
 $h : A^{ * } \to M$, dla których są one spełnione.
 
 Możemy teraz użyć równań
-\eqref{eq:Forys-Forys-11-A}-\eqref{eq:Forys-Forys-11-C}, do
+\eqref{eq:Forys-Forys-13-A}-\eqref{eq:Forys-Forys-13-C}, do
 \textit{zdefiniowania} homomorfizmu $h$. Ponieważ sprawdzenie, że~tak zadane
 odwzorowanie jest homeomorfizmem jest dość\footnote{Jak to niektórzy
   powiadają: „Nie ma czego dowodzić”.} opuścimy dyskusję tego tematu.
@@ -668,9 +674,9 @@ monoidu słownego $A^{ * }$ do monoidu $M$, jednoznacznie wyznaczony przez
 warunki
 \begin{subequations}
   \begin{align}
-    \label{eq:Forys-Forys-12-A}
+    \label{eq:Forys-Forys-14-A}
     h( \texttt{""} ) &= 1_{ M }, \\
-    \label{eq:Forys-Forys-12-B}
+    \label{eq:Forys-Forys-14-B}
     h( \texttt{"} a \texttt{"} ) &= a, \quad
                                    \forall \, a \in A,
   \end{align}
@@ -697,28 +703,28 @@ kanoniczny wolnego monoidu słownego $A^{ * }$ z~monoidem $M$, gdzie
 $A \subset M$ jest zbiorem generatorów $M$, nie musi być izomorfizmem. Zanim
 przejdziemy do dokładniejszego omówienia tej kwestii, przypomnijmy,
 że~homomorfizm kanoniczny jest jednoznacznie wyznaczony przez warunki
-\eqref{eq:Forys-Forys-12-A}--\eqref{eq:Forys-Forys-12-B}.
+\eqref{eq:Forys-Forys-14-A}--\eqref{eq:Forys-Forys-14-B}.
 
 By to pokazać rozważmy
 ponownie monoid $( \Nbb_{ 0 }, +, 0 )$ i~wolny monoid słowny
 $A^{ * } = \{ 0, 1 \}^{ * }$. Jest
 oczywiste, że
 \begin{equation}
-  \label{eq:Forys-Forys-13}
+  \label{eq:Forys-Forys-15}
   A^{ * } =
   \{ \texttt{""}, \texttt{"} 0 \texttt{"}, \texttt{"} 1 \texttt{"},
   \texttt{"} 0 0 \texttt{"}, \texttt{"} 0 1 \texttt{"},
   \texttt{"} 1 1 \texttt{"}, \ldots \}.
 \end{equation}
 Kanoniczny homomorfizm $h : A^{ * } \to \Nbb_{ 0 }$ na mocy wzorów
-\eqref{eq:Forys-Forys-11-A}-\eqref{eq:Forys-Forys-11-C}
-i~\eqref{eq:Forys-Forys-12-A}-\eqref{eq:Forys-Forys-12-B}, posiada
+\eqref{eq:Forys-Forys-13-A}-\eqref{eq:Forys-Forys-13-C}
+i~\eqref{eq:Forys-Forys-14-A}-\eqref{eq:Forys-Forys-14-B}, posiada
 następujące własności
 \begin{subequations}
   \begin{align}
-    \label{eq:Forys-Forys-14-A}
+    \label{eq:Forys-Forys-16-A}
     h( \texttt{""} ) &= 0, \\
-    \label{eq:Forys-Forys-14-B}
+    \label{eq:Forys-Forys-16-B}
     h( \texttt{"} 0 \texttt{"} ) &= 0, \quad
     h( \texttt{"} 1 \texttt{"} ) = 1, \\
     \label{eq:Forys-Forys-14-C}
@@ -732,14 +738,14 @@ następujące własności
 \end{subequations}
 $\forall \, a_{ i } \in \{ 0, 1 \}$, $i = 1, 2, \ldots, n$. Przykładowo
 \begin{equation}
-  \label{eq:Forys-Forys-15}
+  \label{eq:Forys-Forys-17}
   h( \texttt{"} 0100110 \texttt{"} ) =
   0 + 1 + 0 + 0 + 1 + 1 + 0 = 3.
 \end{equation}
 Łatwo zauważyć, że~odwzorowanie $h$ nie jest izomorfizmem. Świadczy o~tym
 choćby to, że
 \begin{equation}
-  \label{eq:Forys-Forys-16}
+  \label{eq:Forys-Forys-18}
   h( \texttt{""} ) = h( \texttt{"} 0 \texttt{"} ) = 0.
 \end{equation}
 
@@ -757,13 +763,15 @@ izomorfizmem, to wówczas przez $M = A^{ * }$, będzie rozumieć skrótowy zapis
 
 Rozpatrzmy ponownie monoid $( \Nbb_{ 0 }, +, 0 )$ i~wolny monoid słowny
 $A^{ * } = \{ 0, 1 \}^{ * }$. Jest oczywiste, że~jeśli symbol $A^{ * }$ rozumiemy
-jako podmonoid algebraiczny to oczywiście zachodzi $M = A^{ * }$.
-Jeśli jednak przez $A^{ * }$ rozumiemy wolny monoid słowny, to jak zostało
+jako podmonoid algebraiczny to zachodzi $M = A^{ * }$,
+bo~$n = 1 + 1 + \ldots + 1$ (suma $n$ jedynek), dla każdego $n \in \Nbb$. Jeśli
+jednak przez $A^{ * }$ rozumiemy wolny monoid słowny, to jak zostało
 wykazane w~poprzednich komentarzach, homomorfizm $h$ \textit{nie jest}
 izomorfizmem, więc nie możemy napisać równości „$M = A^{ * }$”.
 
 Na koniec zauważmy, że~jeśli $A = \{ 1 \}$ to wówczas wolny monoid słowny
-$A^{ * }$ jest kanonicznie izomorficzny z~$M$.
+$A^{ * }$ jest kanonicznie izomorficzny z~$( \Nbb_{ 0 }, +, 0)$. Ten przykład
+powinien uczynić zrozumiałymi pewne subtelności tej teorii.
 
 \vspace{\spaceFour}
 
@@ -775,7 +783,7 @@ $A^{ * }$ jest kanonicznie izomorficzny z~$M$.
 a~$h : B^{ * } \to M$ kanonicznym izomorfizmem. Dla $a \in M$ wprowadzamy
 następującą notację
 \begin{equation}
-  \label{eq:Forys-Forys-17}
+  \label{eq:Forys-Forys-19}
   \texttt{"} a \texttt{"} :=
   \texttt{"} b_{ 1 } b_{ 2 } \ldots b_{ n } \texttt{"}, \quad
   a = h( \texttt{"} b_{ 1 } b_{ 2 } \ldots b_{ n } \texttt{"} ), \,
@@ -794,7 +802,7 @@ dość abstrakcyjne kroki rachunkowe.
 zrozumiały, gdyby wzór przedstawiający działania kanonicznego homomorfizmu
 zapisać jako
 \begin{equation}
-  \label{eq:Forys-Forys-18}
+  \label{eq:Forys-Forys-20}
   h( \texttt{"} a_{ 1 } a_{ 2 } \ldots a_{ n } \texttt{"} ) =
   h( \texttt{"} a_{ 1 } \texttt{"} ) h( \texttt{"} a_{ 2 } \texttt{"} ) \ldots
   h( \texttt{"} a_{ n } \texttt{"} ) = a_{ 1 } a_{ 2 } \ldots a_{ n }.
@@ -814,7 +822,7 @@ każdego elementu $m \in M$ istnieje więc $w \in B^{ * }$, taki że $f( w ) = m
 Możemy więc przypisać elementowi $m$ liczbę z~$\Nbb_{ 0 }$, którą nazywamy
 jego długością, za pomocą wzoru
 \begin{equation}
-  \label{eq:Forys-Forys-19}
+  \label{eq:Forys-Forys-21}
   | m | := | w |.
 \end{equation}
 Tylko tyle jest nam potrzebne do udowodnienia twierdzenia 1.2.2.
@@ -825,7 +833,7 @@ słownym $A^{ * }$, dla pewnego $A \subset M$. Dzięki wnioskowi 1.2.2 i~dyskusj
 przeprowadzonej w~tych notatkach na jego temat, zbiór $A$ jest jednoznacznie
 wyznaczony przez relację
 \begin{equation}
-  \label{eq:Forys-Forys-20}
+  \label{eq:Forys-Forys-22}
   A = S \setminus S^{ 2 }, \quad
   S = M \setminus \{ 1_{ M } \}.
 \end{equation}
@@ -845,7 +853,7 @@ określoną przez wzór \eqref{eq:Forys-Forys-20}.
 zatrzymać nad pewnymi własnościami potęg podzbiorów w~monoidach
 i~półgrupach. Niech $S$ będzie dowolną podgrupą, zachodzi wówczas
 \begin{equation}
-  \label{eq:Forys-Forys-22}
+  \label{eq:Forys-Forys-23}
   S \supset S^{ 2 } \supset S^{ 3 } \supset \ldots
 \end{equation}
 Ogólniej $S^{ k } \supset S^{ k + 1 }$ i~może zachodzić $S^{ k } \neq S^{ k + 1 }$. Choć
@@ -858,31 +866,31 @@ $ab = c$, $c \in S$, z~czego wynika, że~$S \supset S^{ 2 }$.
 
 Weźmy teraz przypadek $S^{ 2 } \supset S^{ 3 }$. Rozpatrzymy element
 \begin{equation}
-  \label{eq:Forys-Forys-23}
+  \label{eq:Forys-Forys-24}
   abc \in S^{ 3 }, \quad a, b, c \in S.
 \end{equation}
 Znowu, korzystając z~podstawowych własności działania wewnętrznego
 w~półgrupie mamy
 \begin{equation}
-  \label{eq:Forys-Forys-24}
+  \label{eq:Forys-Forys-25}
   abc = ( ab ) c.
 \end{equation}
 Oczywiście zachodzi $ab = a_{ 1 }$, dla pewnego $a_{ 1 } \in S$, więc
 \begin{equation}
-  \label{eq:Forys-Forys-25}
+  \label{eq:Forys-Forys-26}
   abc = ( ab ) c = a_{ 1 } c,
 \end{equation}
 a~wyrażenie $a_{ 1 } c$ należy do zbioru $S^{ 2 }$ z~definicji.
 
 Analogicznie przeprowadzamy dowód dla dowolnego $k$. Weźmy iloczyn
 \begin{equation}
-  \label{eq:Forys-Forys-26}
+  \label{eq:Forys-Forys-27}
   a_{ 1 } a_{ 2 } a_{ 3 } a_{ 4 } \ldots a_{ k + 1 } \in S^{ k }, \quad
   a_{ i } \in S,\, i = 1, 2, \ldots, n.
 \end{equation}
 Przekształcamy go w~sposób analogiczny co poprzednio.
 \begin{equation}
-  \label{eq:Forys-Forys-27}
+  \label{eq:Forys-Forys-28}
   a_{ 1 } a_{ 2 } a_{ 3 } a_{ 4 } \ldots a_{ k + 1 } =
   ( a_{ 1 } a_{ 2 } ) a_{ 3 } a_{ 4 } \ldots a_{ k + 1 } =
   b a_{ 3 } a_{ 4 } \ldots a_{ k + 1 } \in S^{ k },
@@ -953,7 +961,7 @@ $\texttt{"} d \texttt{"} = h^{ -1 }( d ) = \texttt{"} b_{ 1 } b_{ 2 } \ldots b_{
 \texttt{"} \in B^{ * }$. Tym samym jeśli $b = d_{ 1 } d_{ 2 } \ldots d_{ m }$,
 $d_{ i } \in D$, $i = 1, 2, \ldots, m$ to musi zachodzić
 \begin{equation}
-  \label{eq:Forys-Forys-28}
+  \label{eq:Forys-Forys-29}
   \texttt{"} d_{ 1 } d_{ 2 } \ldots d_{ m } \texttt{"} =
   \texttt{"} b \texttt{"} = h^{ -1 }( b ) \in B^{ * }.
 \end{equation}
@@ -961,7 +969,7 @@ Ponieważ każdy $\texttt{"} d_{ 1 } \texttt{"}$ jest sam postaci
 $\texttt{"} b_{ i,\, 1 } b_{ i,\, 2 } \ldots b_{ i,\, n } \texttt{"}$, gdzie
 $b_{ i, j } \in B$, $i = 1, 2, \ldots, n$ jest ustaloną liczbą, $i$ jak poprzednio
 przyjmuje wartości od $1$ do $m$, to na mocy tego co zostało powiedziane
-przy okazji omawiania wzoru \eqref{eq:Forys-Forys-07}, powyższa równość
+przy okazji omawiania wzoru \eqref{eq:Forys-Forys-09}, powyższa równość
 może zachodzić wtedy i~tylko wtedy, gdy $m = 1$ i~$d_{ 1 } = \texttt{"} b
 \texttt{"}$. Czyli $\texttt{"} b \texttt{"} \in h^{ -1 }( D )$, co jest
 równoważne temu, że~$h( \texttt{"} b \texttt{"} ) = b \in D$. Tym samym
@@ -994,25 +1002,25 @@ zbiór $S = M \setminus \{ 1_{ M } \}$ jest podgrupą. W~zasadzie cała praca je
 wykonana, bo zgodnie z~twierdzeniem \ref{thm:Forys-Forys-01} $S$ jest
 podpółgrupą wtedy i~tylko wtedy, gdy grupa jedynki $M$ jest trywialna,
 a~ten fakt udowodniliśmy przy okazji podanie równości
-\eqref{eq:Forys-Forys-07}.
+\eqref{eq:Forys-Forys-09}.
 
 Przejdźmy teraz do dowodu tego, że wolny monoid słownym jest
 równopodzielny. Weźmy takie elementy $a, b, c, d \in M$, że~zachodzi
 \begin{equation}
-  \label{eq:Forys-Forys-29}
+  \label{eq:Forys-Forys-30}
   a b = c d.
 \end{equation}
 Z~definicji wolnego monoidu słownego wynika, że~możemy przedstawić te
 elementy jako
 \begin{subequations}
   \begin{align}
-    \label{eq:Forys-Forys-30-A}
+    \label{eq:Forys-Forys-31-A}
     a &= f_{ a,\, 1 } f_{ a,\, 2 } \ldots f_{ a,\, n_{ 1 } }, \\
-    \label{eq:Forys-Forys-30-B}
+    \label{eq:Forys-Forys-31-B}
     b &= f_{ b,\, 1 } f_{ b,\, 2 } \ldots f_{ b,\, n_{ 2 } }, \\
-    \label{eq:Forys-Forys-30-C}
+    \label{eq:Forys-Forys-31-C}
     c &= f_{ c,\, 1 } f_{ c,\, 2 } \ldots f_{ c,\, n_{ 3 } }, \\
-    \label{eq:Forys-Forys-30-D}
+    \label{eq:Forys-Forys-31-D}
     d &= f_{ d,\, 1 } f_{ d,\, 2 } \ldots f_{ d,\, n_{ 4 } },
   \end{align}
 \end{subequations}
@@ -1020,19 +1028,20 @@ gdzie wszystkie $f_{ a,\, i }$, $f_{ b,\, j }$, $f_{ c,\, k }$, $f_{ d,\, l }$
 należą do bazy $B$ wolnego monoidu słownego~$M$. Tym samym mamy
 \begin{subequations}
   \begin{align}
-    \label{eq:Forys-Forys-31-A}
+    \label{eq:Forys-Forys-32-A}
     a b
     &=
       f_{ a,\, 1 } f_{ a,\, 2 } \ldots f_{ a,\, n_{ 1 } } f_{ b,\, 1 }
       f_{ b,\, 2 } \ldots f_{ b,\, n_{ 2 } }, \\
-    \label{eq:Forys-Forys-31-B}
+    \label{eq:Forys-Forys-32-B}
     cd
     &=
       f_{ c,\, 1 } f_{ c,\, 2 } \ldots f_{ c,\, n_{ 3 } } f_{ d,\, 1 }
       f_{ d,\, 2 } \ldots f_{ d,\, n_{ 4 } }.
   \end{align}
 \end{subequations}
-Wobec tego równość \eqref{eq:Forys-Forys-29} może zachodzić wtedy i~tylko
+Ponieważ elementy wolnego monoidu słownego są ciągami symboli, wobec tego
+równość \eqref{eq:Forys-Forys-30} może zachodzić wtedy i~tylko
 wtedy, gdy $n_{ 1 } + n_{ 2 } = n_{ 3 } + n_{ 4 }$ i~$f_{ a,\, 1 } = f_{ c,\, 1 }$,
 $f_{ a,\, 2 } = f_{ c,\, 2 }$, etc. Rozpatrzmy teraz możliwe przypadki.
 
@@ -1042,12 +1051,12 @@ następnego przypadku.
 
 Jeśli $n_{ 1 } > n_{ 3 }$, to możemy zapisać
 \begin{equation}
-  \label{eq:Forys-Forys-32}
+  \label{eq:Forys-Forys-33}
   c = f_{ a,\, 1 } f_{ a,\, 2 } \ldots f_{ a,\, n_{ 3 } },
 \end{equation}
 i~tym samym
 \begin{equation}
-  \label{eq:Forys-Forys-33}
+  \label{eq:Forys-Forys-34}
   a =
   ( f_{ a,\, 1 } f_{ a,\, 2 } \ldots f_{ a,\, n_{ 3 } } ) \cdot ( f_{ a,\, n_{ 3 } + 1 }
   f_{ a,\, n_{ 3 } + 2 } \ldots f_{ a,\, n_{ 3 } } )
@@ -1063,12 +1072,12 @@ zakończony.
 Pozostał nam do rozpatrzenia przypadek $n_{ 1 } < n_{ 3 }$, dowód przebiega
 analogicznie co dla nierówności w~drugą stronę. Tym razem mamy
 \begin{equation}
-  \label{eq:Forys-Forys-34}
+  \label{eq:Forys-Forys-35}
   a = f_{ c,\, 1 } f_{ c,\, 2 } \ldots f_{ c,\, n_{ 1 } },
 \end{equation}
 i~analogicznie
 \begin{equation}
-  \label{eq:Forys-Forys-35}
+  \label{eq:Forys-Forys-36}
   c =
   ( f_{ c,\, 1 } f_{ c,\, 2 } \ldots f_{ c,\, n_{ 1 } })
   \cdot ( f_{ c,\, n_{ 1 } + 1 } f_{ c,\, n_{ 1 } + 2 } \ldots f_{ c,\, n_{ 3 } } )
@@ -1085,18 +1094,18 @@ $\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$. Zauważmy, że~z~definicji zbioru 
 należy do $S$ to jego długość jest co najmniej równa jeden: $| w | \geq 1$. Tym
 samym jeśli $w_{ 1 } \in S^{ 2 }$, to jego długość jest co najmniej równa $2$, bo istnieją takie $s_{ 1 }, s_{ 2 } \in S$, takie że $w = s_{ 1 } s_{ 2 }$, więc
 \begin{equation}
-  \label{eq:1}
+  \label{eq:Forys-Forys-37}
   | w | = | s_{ 1 } s_{ 2 } | = | s_{ 1 } | + | s_{ 2 } | \geq 2.
 \end{equation}
 Rozumują w~ten sposób i~korzystając z~zasady indukcji w~prosty sposób otrzymujemy, że
 \begin{equation}
-  \label{eq:2}
+  \label{eq:Forys-Forys-38}
   | w | \geq n, \quad \forall w \in S^{ n }.
 \end{equation}
 
 Teraz możemy udowodnić pożądaną własność. Oczywista jest zależność
 \begin{equation}
-  \label{eq:3}
+  \label{eq:Forys-Forys-39}
   \bigcap_{ n \in \Nbb } \, S^{ n } \subset S.
 \end{equation}
 Niech teraz $w \in S$ i~$| w | = n$. W~takim razie $w \notin S^{ n + 1 }$,
@@ -1115,8 +1124,9 @@ twierdzenia możemy zupełnie pominąć.
 
 Grupa jedynki monoidu $M$ rozważanego w~tym twierdzeniu jest w~istocie
 trywialna. Wynika to na na mocy twierdzenia \ref{thm:Forys-Forys-01}
-z~tego, że~$S$ jest podpółgrupą. Do dowodu tego twierdzenia nie jest więc
-zupełnie potrzebny fakt, że~$\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$.
+z~tego, że~$S$ jest podpółgrupą, co przyjęliśmy w~założeniach tego
+twierdzenia. Do dowodu tej części twierdzenia nie jest więc zupełnie
+potrzebny fakt, że~$\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$.
 
 \vspace{\spaceFour}
 
@@ -1127,7 +1137,7 @@ zupełnie potrzebny fakt, że~$\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$.
 \start \Str{11} W~dowodzie twierdzenia 1.2.4 jest mowa o~tym, że ciąg
 inkluzji
 \begin{equation}
-  \label{eq:4}
+  \label{eq:Forys-Forys-40}
   S \supset S^{ 2 } \supset \ldots \supset S^{ k } \supset S^{ k + 1 } \supset S^{ k + 2 } \supset \ldots
 \end{equation}
 jest „skończony”, bądź „nieskończony”, jednak nie jest wcale jasne, co
@@ -1138,12 +1148,13 @@ zachodzi $S^{ k } = S^{ k + 1 }$, przyjmijmy przy tym, że~jest to najmniejsze
 $k$ o~tej własności. Tym samym, dzięki łączności mnożenia podzbiorów
 monoidu, otrzymujemy
 \begin{equation}
-  \label{eq:5}
+  \label{eq:Forys-Forys-41}
   S^{ k + 2 } = ( S^{ k + 1 } ) S = S^{ k } S = S^{ k + 1 } = S^{ k }.
 \end{equation}
-Stąd wynika, że~w~takiej sytuacji ciąg \eqref{eq:4} przyjmuje postać
+Stąd wynika, że~w~takiej sytuacji ciąg \eqref{eq:Forys-Forys-40} przyjmuje
+postać
 \begin{equation}
-  \label{eq:6}
+  \label{eq:Forys-Forys-42}
   S \supsetneq S^{ 2 } \supsetneq S^{ 3 } \supsetneq \ldots \supsetneq S^{ k } = S^{ k + 1 } = S^{ k + 2 } = \ldots
 \end{equation}
 Małe słowo komentarza. Ponieważ $k$ zostało wybrane jako najmniejsza
@@ -1152,7 +1163,7 @@ jest prawdą, iż~$S^{ l } \supsetneq S^{ l + 1 }$, więc powyższy wzór jest p
 
 „Nieskończony ciąg inkluzji” oznacza więc sytuację, gdy
 \begin{equation}
-  \label{eq:7}
+  \label{eq:Forys-Forys-43}
   S \supsetneq S^{ 2 } \supsetneq S^{ 3 } \supsetneq \ldots \supsetneq S^{ k } \supsetneq S^{ k + 1 } \supsetneq S^{ k + 2 } \supsetneq \ldots
 \end{equation}
 
@@ -1180,19 +1191,17 @@ w~tej formie powinno uczynić zrozumienie tego problemu prostszym.
 
 Dowód rzeczonej implikacji można teraz przeprowadzić bardzo prosto,
 korzystając z~zasady kontrapozycji. Jeśli istnieje element
-$s_{ i } \in S^{ 2 }$ to można go zapisać jako $s_{ i } = t_{ 1 } t_{ 2 }$,
-$t_{ 1 }, t_{ 2 } \in S$, więc $m = s_{ 1 } s_{ 2 } \ldots s_{ i - 1 } t_{ 1 } t_{ 2 }
+$s_{ i } \in S^{ 2 }$ to można go zapisać jako iloczyn dwóch lub więcej
+elementów. Ponieważ dla dowodu dokładna liczba czynników na które
+rozkłada~się $s_{ i }$ nie ma znaczenia, więc przyjmiemy, że~zachodzi
+najprostsza możliwość: $s_{ i } = t_{ 1 } t_{ 2 }$, $t_{ 1 }, t_{ 2 } \in S$.
+Więc $m = s_{ 1 } s_{ 2 } \ldots s_{ i - 1 } t_{ 1 } t_{ 2 }
 s_{ i + 1 } \ldots s_{ k }$, więc $m \in S^{ k + 1 }$, czyli nie jest prawdą,
 iż~$m \notin S^{ k + 1 }$, co kończy dowód.
 
-Oczywiście, jeśli $s_{ i } \in S^{ 2 }$, to istnieje możliwość, że~można go
-zasiać jako iloczyn większej liczby elementów, niż 2, choćby
-$s_{ i } = t_{ 1 } t_{ 2 } t_{ 3 }$. Dla dowodu omawianej własności nie ma to
-jednak znaczenia.
-
 Powyższe rozważania można podsumować stwierdzając,
 że~$m \in S^{ k } \setminus S^{ k + 1 }$, wtedy i~tylko wtedy, gdy można go zapisać jako
-$m = s_{ 1 } s_{ 2 } \ldots s_{ k }$, $s_{ i } \in S^{ k } \setminus S^{ k + 1 }$, $i = 1, \ldots, k$.
+$m = s_{ 1 } s_{ 2 } \ldots s_{ k }$, $s_{ i } \in S \setminus S^{ 2 }$, $i = 1, \ldots, k$.
 
 \vspace{\spaceFour}
 
@@ -1204,6 +1213,184 @@ $m = s_{ 1 } s_{ 2 } \ldots s_{ k }$, $s_{ i } \in S^{ k } \setminus S^{ k + 1 }
 ładniej, niż użyty tutaj $min\{ k, l \}$.
 
 \vspace{\spaceFour}
+
+
+
+
+
+\start \textbf{Str.~12, wiersze 2 i~3.} Wyrażenie
+$l^{ -1 }( 0 ) = \{ 1_{ M } \}$ jest bardzo brzydko podzielone między te dwa
+wiersze.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \Str{12} Dowód drugiej implikacji z~twierdzenia 1.2.5 jest
+przeprowadzony w~sposób dość bałaganiarski. Postaram się tutaj przedstawić
+go w~sposób bardziej uporządkowany. Plan dowodu jest jasny. Ponieważ
+założyliśmy, że~monoid $M$ jest równopodzielny, to jeśli na podstawie
+własności homomorfizmu $l$ dowiedziemy, że~$S = M \setminus \{ 1_{ M } \}$ jest
+półgrupą i~$\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$, to na podstawie twierdzenia 1.2.4
+monoid $M$ jest monoidem wolnym.
+
+Pierwszy krok polega na pokazaniu, że~$S$ jest półgrupą. Zgodnie
+z~twierdzeniem \eqref{thm:Forys-Forys-01} jest to równoważne temu, że~grupa
+jedynki monoidu $M$ jest trywialna. Ten ostatni fakt teraz udowodnimy.
+
+Niech $x$ należy do grupy jedynki monoidu $M$. W~takim wypadku istnieje
+element $y$, taki~że
+\begin{equation}
+  \label{eq:Forys-Forys-44}
+  x y = 1_{ M }.
+\end{equation}
+Obliczając wartość homomorfizmu $l$ na obu stronach tej równości dostajemy
+\begin{equation}
+  \label{eq:Forys-Forys-45}
+  l( x y ) = l( x ) + l( y ) = l( 1_{ M } ) = 0.
+\end{equation}
+Ta równość może zachodzić wtedy i~tylko wtedy, gdy $l( x ) = l( y ) = 0$.
+Ponieważ $l^{ -1 }( 0 ) = \{ 1_{ M } \}$, więc $x = y = 1_{ M }$, czyli grupa
+jedynki jest trywialna.
+
+Drugi krok polega na pokazaniu, że~$\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$. Jeżeli
+$M = \{ 1_{ M } \}$, to $S = \emptyset$ i~tym samym $\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$.
+Przejdźmy teraz do drugiego przypadku.
+
+Udowodnimy, że dla każdego $m \in S$, jeśli $c = l( m )$, to
+$m \notin S^{ c + 1 }$. By to zrobić posłużymy~się zasadą
+kontrapozycji\footnote{Kamil,
+  przemyśl to, że zasada kontrapozycji w tym przypadku działa w następujący
+  sposób: $\forall \, m ( p( m ) \Rightarrow q( m ) )$ przechodzi
+  w~$\forall \, m ( \sim q( m ) \Rightarrow \sim p( m ) )$.}. Jeżeli $m \in S^{ c + 1 }$ to
+istnieją takie $s_{ 1 }, s_{ 2 }, \ldots, s_{ c + 1 }$, zawarte w~$S$, że~zachodzi
+\begin{equation}
+  \label{eq:Forys-Forys-46}
+  m = s_{ 1 } s_{ 2 } \ldots s_{ c + 1 }.
+\end{equation}
+Skorzystajmy teraz z~własności homomorfizmu $l$.
+\begin{equation}
+  \label{eq:Forys-Forys-47}
+  l( m ) = l( s_{ 1 } s_{ 2 } \ldots s_{ c + 1 } ) =
+  l( s_{ 1 } ) + l( s_{ 2 } ) + \ldots + l( s_{ c + 1 } )
+\end{equation}
+Ponieważ $l^{ -1 }( 0 ) = \{ 1_{ M } \}$, więc $l( s_{ i } ) \geq 1$,
+dla~$i = 1, 2, \ldots, c + 1$. Tym samym, $l( m ) \geq c + 1$ co jest sprzeczne z~tym, że~$l( c ) = m$.
+
+Udowodniliśmy tym samym, że~dla każdego $m \in S$ jest prawdą,
+że~$m \notin S^{ c + 1 }$, gdzie $c = l( m )$ i~co za tym idzie
+$\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$. Dowód twierdzenia jest zakończony.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \Str{12} W~dowodzie twierdzenia 1.2.6 panuje podobny bałagan, jak
+w~dowodzie twierdzenia 1.2.4. Tak jak poprzednio postaramy~się go
+uporządkować.
+
+Na początku czytamy, że~monoid wolny ma trywialną grupę jedynki, jest
+równopodzielny, skracalny i~każdy jego element $m \neq 1_{ M }$ posiada
+skończoną liczbę nietrywialnych lewych faktorów, co ma wynikać
+z~twierdzenia~1.2.5. Ponownie nie jest to prawdą. Wszystkie te cechy
+wynikają z~tego, że~posiada je wolny monoid słowny i~dzięki istnieniu
+kanonicznego izomorfizmu cechy te przenoszą~się na monoid wolny.
+Wykazaliśmy poprzednio, że~wolny monoid słowny ma trywialną grupę jedynki
+i~jest równopodzielny, teraz wykażemy dwie pozostałe własności.
+
+Niech $B^{ * }$ będzie wolnym monidem słowny. Załóżmy, że~dla
+$a, x, y \in B^{ * }$ zachodzi
+\begin{equation}
+  \label{eq:Forys-Forys-48}
+  a x = a y.
+\end{equation}
+Ponieważ $B^{ * }$ jest wolnym monoidem słownym, więc zachodzą poniższe zależności
+\begin{subequations}
+  \begin{align}
+    \label{eq:Forys-Forys-49-A}
+    a &= b_{ a,\, 1 } b_{ a,\, 2 } \ldots b_{ a,\, n_{ 1 } }, \\
+    \label{eq:Forys-Forys-49-B}
+    x &= b_{ x,\, 1 } b_{ x,\, 2 } \ldots b_{ x,\, n_{ 2 } }, \\
+    \label{eq:Forys-Forys-49-C}
+    y &= b_{ y,\, 1 } b_{ y,\, 2 } \ldots b_{ y,\, n_{ 3 } },
+  \end{align}
+\end{subequations}
+gdzie $b_{ a,\, i }, b_{ x,\, j }, b_{ y,\, k } \in B$, dla $i = 1, 2, \ldots, n_{ 1 }$,
+$j = 1, 2, \ldots, n_{ 2 }$ i~$k = 1, 2, \ldots, n_{ 3 }$. Wstawiając te rozkłady do
+równości \eqref{eq:Forys-Forys-48} dostajemy
+\begin{equation}
+  \label{eq:Forys-Forys-50}
+  b_{ a,\, 1 } b_{ a,\, 2 } \ldots b_{ a,\, n_{ 1 } } b_{ x,\, 1 }
+  b_{ x,\, 2 } \ldots b_{ x,\, n_{ 2 } }
+  =
+  b_{ a,\, 1 } b_{ a,\, 2 } \ldots b_{ a,\, n_{ 1 } } b_{ y,\, 1 }
+  b_{ y,\, 2 } \ldots b_{ y,\, n_{ 3 } }.
+\end{equation}
+Ta równość może zachodzić wtedy i~tylko wtedy, gdy
+$n_{ 1 } + n_{ 2 } = n_{ 1 } + n_{ 3 }$, czyli $n_{ 2 } = n_{ 3 }$
+oraz $b_{ x,\, 1 } = b_{ y,\, 1 }, b_{ x,\, 2 } = b_{ y,\, 2 }, \ldots,
+b_{ x,\, n_{ 1 } } = b_{ y,\, n_{ 1 } }$. To zaś dowodzi, że $x = y$ tym samy
+wolny monoid słowny jest lewoskracalny. Dowód prawoskracalności przebiega
+w~ten sam sposób do tego stopnia, że~nie mam potrzeby go przytaczać.
+
+Przejdziemy teraz do dowodu tego, że~w~wolnym monoidzie słownym $M$ każdym
+element $m \in B^{ * }$ posiada tylko skończoną ilość nietrywialnych lewych
+faktorów, przy czym analogiczna własność zachodzi dla prawych faktorów.
+Metoda dowodu jest analogiczna do tej której zastosowaliśmy dla dowodzenia
+lewoskracalności.
+
+Niech dla $m \in B^{ * }$ zachodzi
+\begin{equation}
+  \label{eq:Forys-Forys-51}
+  m = s t.
+\end{equation}
+Jak poprzednio, obowiązują następujące równości
+\begin{subequations}
+  \begin{align}
+    \label{eq:Forys-Forys-52-A}
+    m &= b_{ m,\, 1 } b_{ m,\, 2 } \ldots b_{ m,\, n }, \\
+    \label{eq:Forys-Forys-52-B}
+    s &= b_{ s,\, 1 } b_{ s,\, 2 } \ldots b_{ s,\, n_{ 1 } }, \\
+    \label{eq:Forys-Forys-52-C}
+    t &= b_{ t,\, 1 } b_{ t,\, 2 } \ldots b_{ t,\, n_{ 2 } }.
+  \end{align}
+\end{subequations}
+gdzie, $n = | m |$, $b_{ m,\, i }, b_{ s,\, j }, b_{ s,\, k } \in B$,
+dla $i = 1, 2, \ldots, n$, $j = 1, 2, \ldots, n_{ 1 }$, $k = 1, 2, \ldots, n_{ 2 }$.
+Wstawiając powyższe równości do \eqref{eq:Forys-Forys-51} otrzymujemy
+\begin{equation}
+  \label{eq:Forys-Forys-53}
+  b_{ m,\, 1 } b_{ m,\, 2 } \ldots b_{ m,\, n } =
+  b_{ s,\, 1 } b_{ s,\, 2 } \ldots b_{ s,\, n_{ 1 } }
+  b_{ t,\, 1 } b_{ t,\, 2 } \ldots b_{ t,\, n_{ 2 } }.
+\end{equation}
+Ponownie, z~tej równości wynika, że~$n = n_{ 2 } + n_{ 3 }$ oraz
+$b_{ m,\, 1 } = b_{ s,\, 1 }, b_{ m,\, 2 } = b_{ s,\, 2 }, \ldots,
+b_{ m,\, n_{ 1 } } = b_{ s,\, n_{ 1 } }$, $b_{ m,\, n_{ 1 } + 1 } = b_{ t,\, n_{ 1 } + 1 },
+b_{ m,\, n_{ 1 } + 2 } = b_{ t,\, n_{ 1 } + 2 }, \ldots,
+b_{ m,\, n } = b_{ t,\, n }$. Z~tego wynika, że~każdy z~nietrywialnych
+lewych faktorów musi być postaci
+\begin{equation}
+  \label{eq:Forys-Forys-54}
+  s = b_{ m,\, 1 } b_{ m,\, 2 } \ldots b_{ m,\, i }, \quad
+  1 \leq i \leq n.
+\end{equation}
+Jest ich więc dokładnie~$n$, przy czym~$n$ jest długością słowa~$m$. To
+kończy dowód pierwszej części twierdzenia.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1301,32 +1488,30 @@ $m = s_{ 1 } s_{ 2 } \ldots s_{ k }$, $s_{ i } \in S^{ k } \setminus S^{ k + 1 }
            & $\bigcap_{ n \in \Nbb } S^{ n }$ \\
     11 & & 16 & $1, ...k$ & $1, \ldots, k$ \\
     11 & & 15 & \textit{pólgrupy}~$S$. & \textit{zbioru}~$A$. \\
-    12 & &  9 & $s_{ 1 }, \hspace{0.5em} s_{ 1 } s_{ 2 },$
-           & $s_{ 1 }, s_{ 2 } s_{ 3 },$ \\
     12 &  2 & & $1$ & $1_{ M }$ \\
     12 &  3 & & $\{ 1 \}$ & $\{ 1_{ M } \}$ \\
     12 &  6 & & $( M, \cdot, 1 )$ & $( M, \cdot, 1_{ M } )$ \\
     12 &  6 & & $\{ 1 \}$ & $\{ 1_{ M } \}$ \\
     12 &  9 & & $\{ 1 \}$ & $\{ 1_{ M } \}$ \\
     12 &  9 & & $\bigcap S^{ n }$ & $\bigcap_{ n \in \Nbb } S^{ n }$ \\
-    %   &  & & $\forall x, y \in M$ & $\forall x, y \in M,$ \\
-    %   & &  & $x \cdot y = 1$ & $x \cdot y = 1_{ M }$ \\
-    %   & &  & $\forall x, y, z \in S$ & $\forall x, y, z \in S,$ \\
-    %   & &  & $\forall x, y, z \in S$ & $\forall x, y, z \in S,$ \\
-    % 7  & &  8 & $\forall x, y, z \in S$ & $\forall x, y, z \in S,$ \\
-    % 7  & &  4 & $S / \rho$ & $S_{ / \rho }$ \\
-    % 7  & &  3 & $M / \rho$ & $M_{ / \rho }$ \\
-    % 8  & & 10 & $( a_{ 1 }, ..., a_{ n } )$ & $( a_{ 1 }, \ldots, a_{ n } )$ \\
-    % 8  & & 10 & $n \geq 0\;\;,$ & $n \geq 0,$ \\
-    % 8  & &  8 & $( a_{ 1 }, ..., a_{ n } ) \cdot ( b_{ 1 }, ..., b_{ m } )$
-    %        & $( a_{ 1 }, \ldots, a_{ n } ) \cdot ( b_{ 1 }, \ldots, b_{ m } )$ \\
-    % 8  & &  8 & $( a_{ 1 }, ..., a_{ n }, b_{ 1 }, ..., b_{ m } )$
-    %        & $( a_{ 1 }, \ldots, a_{ n }, b_{ 1 }, \ldots, b_{ m } )$ \\
-    % 8  & &  4 & $( a_{ 1 }, ..., a_{ n } )$ & $( a_{ 1 }, \ldots, a_{ n } )$ \\
-    % 8  & &  4 & $a_{ 1 } ... a_{ n }$ & $a_{ 1 } \ldots a_{ n }$ \\
-    % 8  & &  7 & $n \!\! = \!\! 0$ & $n = 0$ \\
-    % 9  & 20 & & $\{ 1 \}$ & $\{ 1_{ M } \}$ \\
-    % 9  & 22 & & $f : A \mapsto M$ & $f : A \to M$ \\
+    12 & 11 & & $\{ 1 \}$ & $\{ 1_{ M } \}$ \\
+    12 & 11 & & $\bigcap S^{ n }$ & $\bigcap_{ n \in \Nbb } S^{ n }$ \\
+    12 & 12 & & $\{ 1 \}$ & $\{ 1_{ M } \}$ \\
+    12 & 12 & & $m \!\! \notin \!\! S^{ k + 1 }$ & $m \notin S^{ k + 1 }$ \\
+    12 & 18 & & $\bigcap S^{ n }$ & $\bigcap_{ n \in \Nbb } S^{ n }$ \\
+    12 & 21 & & $1$ & $1_{ M }$ \\
+    12 & & 14 & $m \in M$,{ } $m \neq 1$ & $m \in M$, $m \neq 1_{ M }$ \\
+    12 & & 11 & $\bigcap S^{ n }$ & $\bigcap_{ n \in \Nbb } S^{ n }$  \\
+    12 & & 11 & $M \setminus \{ 1 \} $ & $M \setminus \{ 1_{ M } \} $ \\
+    12 & & 10 & $\bigcap S^{ n }$ & $\bigcap_{ n \in \Nbb } S^{ n }$ \\
+    12 & &  9 & $s_{ 1 }, \hspace{0.5em} s_{ 1 } s_{ 2 },$
+           & $s_{ 1 }, s_{ 2 } s_{ 3 },$ \\
+    12 & &  6 & $1 =$ & $1_{ M } =$ \\
+    12 & &  6 & $= 1$ & $= 1_{ M }$ \\
+    12 & &  5 & $1$ & $1_{ M }$ \\
+    12 & &  2 & $\bigcap S^{ n }$ & $\bigcap_{ n \in \Nbb } S^{ n }$ \\
+    %   &  & & $\{ 1 \}$ & $\{ 1_{ M } \}$ \\
+    %   &  & & $f : A \mapsto M$ & $f : A \to M$ \\
     % 9  & 23 & & $h : A^{ * } \mapsto M$ & $h : A^{ * } \to M$ \\
     % 9  & &  9 & $\to \textrm{\textbf{M}}$ & $\to M$ \\
     % 10 & 12 & & $b_{ 1 } ... b_{ k }$ & $b_{ 1 } \ldots b_{ k }$ \\
