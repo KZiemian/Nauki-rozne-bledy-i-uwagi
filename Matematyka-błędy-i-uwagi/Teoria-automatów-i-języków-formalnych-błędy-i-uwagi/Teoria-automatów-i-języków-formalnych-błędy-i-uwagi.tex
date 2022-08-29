@@ -200,7 +200,11 @@ Więcej o~napisach powiemy przy okazji omawiania wolnych monoidów słownych.
 
 
 \start Zapisywanie dowodów twierdzeń za pomocą kursywy, jak to~się robi
-w~tej książeczce, naprawdę nie było najlepszym pomysłem.
+w~tej książeczce, naprawdę nie było najlepszym pomysłem. Dlatego w~tych
+notatkach jeśli będę cytował fragment treści dowodu, to będzie on pisany
+kursywą, ale poprawka do niego już czcionką prostą\footnote{Należy te
+  notatki przejrzeć i~zobaczyć, czy wszędzie ta konwencja jest
+  przestrzega.}.
 
 \vspace{\spaceFour}
 
@@ -211,7 +215,6 @@ w~tej książeczce, naprawdę nie było najlepszym pomysłem.
 % ##################
 \CenterBoldFont{Uwagi do konkretnych stron}
 
-% \vspace{\spaceFour}
 
 \start \Str{5} Warto zauważyć, że~ze względu na łączność działania
 w~monoidzie $M$, łączne jest również działanie w~monoidzie $\Pcal( M )$
@@ -1481,7 +1484,7 @@ kończy dowód pierwszej części twierdzenia.
     11 & 12 & & $n \in \!\! \Nbb$ & $n \in \Nbb$ \\
     11 & 12 & & $\bigcap_{ n \in \Nbb } \, \mathbf{S}^{ n }$
            & $\bigcap_{ n \in \Nbb } \, S^{ n }$ \\
-    11 & 17 & & \textit{( 1.2.1)} & \textit{(1.2.1)} \\
+    11 & 17 & & \textit{( 1.2.1)} & (1.2.1) \\
     11 & 18 & & $S^{ k } \; = 0$ & $S^{ k } = 0$ \\
     11 & & 18 & $k \in \!\! \Nbb$ & $k \in \Nbb$ \\
     11 & & 17 & $\bigcap_{ n \in \Nbb } \mathbf{S}^{ 2 }$
@@ -1510,29 +1513,13 @@ kończy dowód pierwszej części twierdzenia.
     12 & &  6 & $= 1$ & $= 1_{ M }$ \\
     12 & &  5 & $1$ & $1_{ M }$ \\
     12 & &  2 & $\bigcap S^{ n }$ & $\bigcap_{ n \in \Nbb } S^{ n }$ \\
-    %   &  & & $\{ 1 \}$ & $\{ 1_{ M } \}$ \\
-    %   &  & & $f : A \mapsto M$ & $f : A \to M$ \\
-    % 9  & 23 & & $h : A^{ * } \mapsto M$ & $h : A^{ * } \to M$ \\
-    % 9  & &  9 & $\to \textrm{\textbf{M}}$ & $\to M$ \\
-    % 10 & 12 & & $b_{ 1 } ... b_{ k }$ & $b_{ 1 } \ldots b_{ k }$ \\
-    % 10 & 12 & & $1, ..., k$ & $1, \ldots, k$ \\
-    % 10 & 18 & & $id_{ A } : A \mapsto M$ & $id_{ A } : A \to M$ \\
-    % 10 & & 10 & $\{ a^{ n } \quad : \quad n \geq 2 \}$ & $\{ a^{ n } \; : \; n \geq 2 \}$ \\
-    % 11 &  1 & & $\{ 1 \}$ & $\{ 1_{ M } \}$ \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % 11 &  9 & & $\forall n \in \!\! \Nbb$ & $\forall n \in \Nbb$ \\
-    % 11 & 10 & & $( u u^{ -1 } ).....$ & $( u u^{ - 1 } ) \ldots$ \\
-    % 11 & 12 & & $n \in \! \Nbb$ & $n \in \Nbb$ \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
+    %   &  & &  & \\
+    %   &  & &  &  \\
+    %   &  & &  &  \\
+    %   & &   &  &  \\
+    %  &  & &  &  \\
+    %  &  & &  &  \\
+    %  & & & & \\
     % & & & & \\
     \hline
   \end{tabular}
@@ -1550,36 +1537,31 @@ kończy dowód pierwszej części twierdzenia.
   %                             & Powinno być \\ \cline{2-3}
   %   & Od góry & Od dołu & & \\
   %   \hline
-  %   %  &   & & $\{ 1 \}$ & $\{ 1_{ M } \}$ \\
-  %   %  &  & & $\forall n \in \!\! \Nbb$ & $\forall n \in \Nbb$ \\
-  %   %  &  & & $( u u^{ -1 } ).....$ & $( u u^{ - 1 } ) \ldots$ \\
-  %   %  &  & & $n \in \!\! \Nbb$ & $n \in \Nbb$ \\
-  %   %  &  & & $\bigcap_{ n \in \Nbb } \, \mathbf{S}^{ n }$
-  %   %        & $\bigcap_{ n \in \Nbb } \, S^{ n }$ \\
-  %   %  &  & & \textit{( 1.2.1)} & \textit{(1.2.1)} \\
-  %   %  &  & & $S^{ k } \; = 0$ & $S^{ k } = 0$ \\
-  %   %  & &  & $\bigcap_{ n \in \Nbb } \mathbf{S}^{ 2 }$
-  %   %        & $\bigcap_{ n \in \Nbb } S^{ n }$ \\
-  %   %  & &  & $1, ...k$ & $1, \ldots, k$ \\
-  %   %  & &  & \textit{polgrupy} & \textit{półgrupy} \\
-  %   %  & &  0 & $s_{ 1 }, \hspace{0.5em} s_{ 1 } s_{ 2 },$
-  %   %        & $s_{ 1 }, s_{ 2 } s_{ 3 },$ \\
-  %   %   &  & & $\forall x \in M$ & $\forall x \in M,$ \\
-  %   %   & &  & $( \textrm{\textbf{S}}, \cdot )$ & $( S, \cdot )$ \\
-  %   %   & &  & $( \textrm{\textbf{M}}, \cdot, 1_{ \textrm{\textbf{M}}} )$
-  %   %        & $( M, \cdot, 1_{ M } )$ \\
-  %   %   & &   & $x \in \textrm{\textbf{M}}$ & $x \in M$ \\
-  %   %   & &   & $\exists b \in B\; ,$ & $\exists \, b \in B,$ \\
-  %   %   &   & & $( S, \cdot )${ }, { }{ }$( S', \ast )$
-  %   %        & $( S, \cdot )$, $( S', \ast )$ \\
-  %   %   &  & & $\forall x, y \in S$ & $\forall x, y \in S,$ \\
-  %   %   &  & & $\forall x, y \in M$ & $\forall x, y \in M,$ \\
-  %   %   & &  & $x \cdot y = 1$ & $x \cdot y = 1_{ M }$ \\
-  %   %   & &  & $\forall x, y, z \in S$ & $\forall x, y, z \in S,$ \\
-  %   %   & &  & $\forall x, y, z \in S$ & $\forall x, y, z \in S,$ \\
-  %   %   & &  & $\forall x, y, z \in S$ & $\forall x, y, z \in S,$ \\
-  %   %   & &  & $S / \rho$ & $S_{ / \rho }$ \\
-  %   %   & &  & $M / \rho$ & $M_{ / \rho }$ \\
+  %   %  &   & &  &  \\
+  %   %  &  & &  &  \\
+  %   %  &  & &  &  \\
+  %   %  &  & &  &  \\
+  %   %  &  & & &  \\
+  %   %  &  & &  &  \\
+  %   %  &  & &  &  \\
+  %   %  & &  & &  \\
+  %   %  & &  &  &  \\
+  %   %  & &  &  &  \\
+  %   %  & &  0 & & \\
+  %   %   &  & & &  \\
+  %   %   & &  & & \\
+  %   %   & &  & &  \\
+  %   %   & &   & &  \\
+  %   %   & &   & &  \\
+  %   %   &   & & &  \\
+  %   %   &  & &  &  \\
+  %   %   &  & &  &  \\
+  %   %   & &  &  &  \\
+  %   %   & &  &  &  \\
+  %   %   & &  &  &  \\
+  %   %   & &  &  &  \\
+  %   %   & &  & &  \\
+  %   %   & &  &  &  \\
   %   %   & & & $( a_{ 1 }, ..., a_{ n } )$ & $( a_{ 1 }, \ldots, a_{ n } )$ \\
   %   %   & &  & $n \geq 0\;\;,$ & $n \geq 0,$ \\
   %   %   & &  & $( a_{ 1 }, ..., a_{ n } ) \cdot ( b_{ 1 }, ..., b_{ m } )$
@@ -1591,22 +1573,18 @@ kończy dowód pierwszej części twierdzenia.
   %   %   & &   & $n \!\! = \!\! 0$ & $n = 0$ \\
   %   %   &  & & $\{ 1 \}$ & $\{ 1_{ M } \}$ \\
   %   %   &  & & $f : A \mapsto M$ & $f : A \to M$ \\
-  %   %   &  & & $h : A^{ * } \mapsto M$ & $h : A^{ * } \to M$ \\
-  %   %   & &  & $\to \textrm{\textbf{M}}$ & $\to M$ \\
-  %   %  & & & $b_{ 1 } ... b_{ k }$ & $b_{ 1 } \ldots b_{ k }$ \\
-  %   %  & & & $1, ..., k$ & $1, \ldots, k$ \\
-  %   %  &  & & $id_{ A } : A \mapsto M$ & $id_{ A } : A \to M$ \\
-  %   %  & &  & $\{ a^{ n } \quad : \quad n \geq 2 \}$ & $\{ a^{ n } \; : \; n \geq 2 \}$ \\
-  %   %  &   & & $\{ 1 \}$ & $\{ 1_{ M } \}$ \\
+  %   %   &  & &  &  \\
+  %   %   & &  &  &  \\
+  %   %  & & &  &  \\
+  %   %  & & &  &  \\
+  %   %  &  & &  &  \\
+  %   %  & &  &  &  \\
+  %   %  &   & &  &  \\
   %   % & & & & \\
   %   % & & & & \\
   %   % & & & & \\
   %   % & & & & \\
   %   % & & & & \\
-  %   % & & & & \\
-  %   %  &  & & $\forall n \in \!\! \Nbb$ & $\forall n \in \Nbb$ \\
-  %   %  & & & $( u u^{ -1 } ).....$ & $( u u^{ - 1 } ) \ldots$ \\
-  %   %  &  & & $n \in \! \Nbb$ & $n \in \Nbb$ \\
   %   % & & & & \\
   %   % & & & & \\
   %   % & & & & \\
@@ -1624,7 +1602,7 @@ kończy dowód pierwszej części twierdzenia.
 \noindent
 \StrWd{6}{1} \\
 \Jest  \textit{dla} $x \in S^{ 1 }$ $\rho_{ a }( x )= a x$. \\
-\Powin $\rho_{ a }( x ) = a x$ \textit{dla} $x \in S^{ 1 }$. \\
+\Powin $\rho_{ a }( x ) = a x$ dla $x \in S^{ 1 }$. \\
 \StrWg{7}{8} \\
 \Jest  $\{ 1 \} \bigcup X \bigcup X^{ 2 } \bigcup ... \bigcup X^{ n } \bigcup \ldots$ \\
 \Powin $\{ 1_{ M } \} \bigcup X \bigcup X^{ 2 } \bigcup \ldots \bigcup X^{ n } \bigcup \ldots$ \\
@@ -1672,10 +1650,10 @@ kończy dowód pierwszej części twierdzenia.
 \Powin monoidzie słownym \\
 \StrWg{9}{19} \\
 \Jest  \textit{monoidu $A^{ * }$} \\
-\Powin \textit{wolnego monoidu słownego $A^{ * }$} \\
+\Powin wolnego monoidu słownego $A^{ * }$ \\
 \StrWg{9}{25} \\
 \Jest  \textit{homomorfizm} \\
-\Powin \textit{homomorfizm z~wolnego monoidu słownego w~dowolny monoid} \\
+\Powin homomorfizm z~wolnego monoidu słownego w~dowolny monoid \\
 \StrWd{9}{6} \\
 \Jest  \textit{monoidu} $A^{ * }$ \\
 \Powin \textit{monoidu słownego} $A^{ * }$ \\
@@ -1684,23 +1662,23 @@ kończy dowód pierwszej części twierdzenia.
 \Powin wolnych monoidów (półgrup) słownych \\
 \StrWg{10}{3} \\
 \Jest  \textit{to znaczy} $M = B^{ * }$ \\
-\Powin \textit{czyli $M$ jest kanonicznie izomorficzny z~pewnym wolnym
-  monoidem słownym $B^{ * }$} \\
-\StrWd{10}{11} \\
-\Jest  \textit{generatorów.} \\
-\Powin \textit{generatorów i~jest równa $S \setminus S^{ 2 }$, gdzie
-  $S = M \setminus \{ 1_{ M } \}$}. \\
+\Powin czyli $M$ jest kanonicznie izomorficzny z~pewnym wolnym monoidem
+słownym~$B^{ * }$, \\
 \StrWg{10}{18} \\
 \Jest  $h : A^{ * } \mapsto M$ \\
 \Powin $h : A^{ * } \to M$, gdzie $A^{ * }$ jest wolnym monoidem słownym. \\
+\StrWd{10}{11} \\
+\Jest  \textit{generatorów.} \\
+\Powin generatorów i~jest równa $S \setminus S^{ 2 }$, gdzie
+  $S = M \setminus \{ 1_{ M } \}$. \\
 \StrWd{10}{23} \\
 \Jest  \textit{Homomorfizm $h$ jest, jak łatwo stwierdzić, izomorfizmem,
   więc monoid $M$ jako izomorficznym z~$A^{ * }$ jest wolny.} \\
-\Powin \textit{Ponownie, z~faktu że każdy element $m \in S$ można rozłożyć na
+\Powin Ponownie, z~faktu że każdy element $m \in S$ można rozłożyć na
   elementy ze zbioru $A$, wynika, że homomorfizm $h$ jest suriekcją.
   Z~jednoznaczności tego rozkładu wynika, że~$h$ jest infekcją, a~więc
   izomorfizmem. Tym samym monoid $M$ jest izomorficzny z~wolnym monoidem
-  słownym $A^{ * }$, zgodnie więc z~definicją jest monoidem wolnym.} \\
+  słownym $A^{ * }$, zgodnie więc z~definicją jest monoidem wolnym. \\
 \StrWg{11}{15} \\
 \Jest  $\mathbf{S} \supset \mathbf{S}^{ 2 } \supset \mathbf{S}^{ 3 } \ldots
 \supset \mathbf{S}^{ k } \supset \mathbf{S}^{ k + 1 } ...$ \\
@@ -1708,7 +1686,7 @@ kończy dowód pierwszej części twierdzenia.
 \StrWg{11}{18} \\
 \Jest  \textit{Ponieważ, jak uzasadniliśmy, grupa jedynki jest trywialna,}
 \\
-\Powin \textit{Ponieważ $S$ jest półgrupą, wynika stąd,~że} \\
+\Powin Ponieważ $S$ jest półgrupą, wynika stąd,~że \\
 \StrWd{11}{19} \\
 \Jest  $\mathbf{S} \supsetneq \mathbf{S}^{ 2 } \supsetneq \mathbf{S}^{ 3 } \ldots
 \supsetneq \mathbf{S}^{ k } \supsetneq \mathbf{S}^{ k + 1 } \ldots$ \\[0.3em]
