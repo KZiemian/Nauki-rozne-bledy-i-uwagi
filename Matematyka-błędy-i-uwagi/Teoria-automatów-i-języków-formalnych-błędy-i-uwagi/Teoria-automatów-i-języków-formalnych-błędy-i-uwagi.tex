@@ -1385,16 +1385,41 @@ lewych faktorów musi być postaci
 Jest ich więc dokładnie~$n$, przy czym~$n$ jest długością słowa~$m$. To
 kończy dowód pierwszej części twierdzenia.
 
+Druga część twierdzenia wymaga w~większości tylko dobranych poprawek, które
+są zamieszczone w~części \textbf{Błędy}. Tutaj zapiszemy kilka wyjątków od
+tej reguły.
+
+Strategia tej części dowodu jest taka sama, jak w~dowodzie twierdzenia
+1.2.5. Zakładamy, że~monoid $M$ jest równopodzielny, skracalny, ma
+trywialną grupę jedynki oraz dowolny $m \in M$, $m \neq 1_{ M }$ ma tylko
+skończoną liczbę nietrywialnych lewych faktorów. Ponieważ z~założenia $M$
+jest równopodzielny, to jeśli dowiedziemy, że~z~pozostałych warunków
+wynika, iż~$S = M \setminus \{ 1_{ M } \}$ jest podpółgrupą
+i~$\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$, to na mocy twierdzenia 1.2.4, monoid $M$
+będzie monoidem wolnym.
+
+To, że~$S$ jest podpółgrupą wynika wprost z~tego, że~grupa jedynki jest
+trywialna, tego faktu używaliśmy już nieraz w~tych notatkach. Jak pokazano
+w~książce korzystając z~tego, że~monoid $M$ ma trywialną grupę jedynki,
+jest skracalny i~każdy element $m \neq 1_{ M }$ ma skończoną liczbę
+nietrywialnych lewych faktorów, można udowodnić,
+iż~$\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$. To zaś kończy dowód twierdzenia.
+
+Ostatnią rzeczą która mocniej kłuje w~oczy, jest zdanie „Zatem element $m$
+ma dla każdego $n \in \Nbb$, $n$ różnych lewych faktorów, co jest sprzeczne
+z~założeniem.”. Bardziej zgrabnym wysłowieniem tego samego byłoby
+stwierdzenie, że~dla każdego $n \in \Nbb$ można podać $n$ różnych,
+nietrywialnych faktorów elementu~$m$, co jest sprzeczne z~założeniem tym,
+że~istnieje ich tylko skończona ilość.
+
+\vspace{\spaceFour}
 
 
 
 
-
-
-
-
-
-
+\start Twierdzenie 1.2.6 powinno dalej być prawdą, gdy zamiast skończonej
+ilości nietrywialny lewych faktorów, będziemy mówić o~skończonej ilości
+prawych faktorów.
 
 
 
@@ -1513,7 +1538,7 @@ kończy dowód pierwszej części twierdzenia.
     12 & &  6 & $= 1$ & $= 1_{ M }$ \\
     12 & &  5 & $1$ & $1_{ M }$ \\
     12 & &  2 & $\bigcap S^{ n }$ & $\bigcap_{ n \in \Nbb } S^{ n }$ \\
-    %   &  & &  & \\
+    %  & & &  & \\
     %   &  & &  &  \\
     %   &  & &  &  \\
     %   & &   &  &  \\
@@ -1654,12 +1679,12 @@ kończy dowód pierwszej części twierdzenia.
 \StrWg{9}{25} \\
 \Jest  \textit{homomorfizm} \\
 \Powin homomorfizm z~wolnego monoidu słownego w~dowolny monoid \\
-\StrWd{9}{6} \\
-\Jest  \textit{monoidu} $A^{ * }$ \\
-\Powin \textit{monoidu słownego} $A^{ * }$ \\
 \StrWd{9}{3} \\
 \Jest  wolnych monoidów (półgrup) \\
 \Powin wolnych monoidów (półgrup) słownych \\
+\StrWd{9}{6} \\
+\Jest  \textit{monoidu} $A^{ * }$ \\
+\Powin \textit{monoidu słownego} $A^{ * }$ \\
 \StrWg{10}{3} \\
 \Jest  \textit{to znaczy} $M = B^{ * }$ \\
 \Powin czyli $M$ jest kanonicznie izomorficzny z~pewnym wolnym monoidem
@@ -1691,6 +1716,15 @@ słownym~$B^{ * }$, \\
 \Jest  $\mathbf{S} \supsetneq \mathbf{S}^{ 2 } \supsetneq \mathbf{S}^{ 3 } \ldots
 \supsetneq \mathbf{S}^{ k } \supsetneq \mathbf{S}^{ k + 1 } \ldots$ \\[0.3em]
 \Powin $S \supsetneq S^{ 2 } \supsetneq S^{ 3 } \supsetneq \ldots \supsetneq S^{ k } \supsetneq S^{ k + 1 } \supsetneq \ldots$ \\
+\StrWd{12}{6} \\
+\Jest  \textit{dla pewnego $t \in M$,} \\
+\Powin dla $t = s_{ p + 2 } s_{ p + 3 } \ldots s_{ q }$ \\
+\StrWd{12}{11} \\
+\Jest  \textit{z~poprzedniego twierdzenia.} \\
+\Powin z~twierdzenia 1.2.4. \\
+\StrWd{13}{5} \\
+\Jest  $m_{ 1 } w \in M$,{ } $w m_{ 2 } \in M$ \\
+\Powin $m_{ 1 } w \in M$, $w m_{ 2 } \in M$ \\
 
 
 
