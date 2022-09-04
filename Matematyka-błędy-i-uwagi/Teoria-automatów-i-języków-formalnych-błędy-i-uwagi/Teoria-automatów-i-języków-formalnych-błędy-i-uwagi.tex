@@ -617,8 +617,34 @@ $( \Nbb_{ 0 }, +, 0)$. Ten izomorfizm zadany jest przez relacje
 
 
 \start \Str{8--9} By uniknąć nieporozumień, należy jasno stwierdzić, że~gdy
-będziemy mówić o~„zbiorze ciągów liter z~alfabetu $A$” to w domyśle do tego
+będziemy mówić o~„zbiorze ciągów liter z~alfabetu $A$” to w~domyśle do tego
 zbioru zawsze należy też ciąg pusty \texttt{""}.
+
+Aby uniknąć innych dwuznaczności, związanych z~ciągami pustymi, wprowadzimy
+teraz dodatkową notację. Niech $A$ będzie dowolnym zbiorem. Jeżeli
+będziemy rozważali monoid, niekoniecznie wolny, zbudowany z~pewnych ciągów
+elementów zbioru $A$, wraz z~działaniem konkatenacja, to dla $a \in A$
+określmy $a^{ 0 }$ jako
+\begin{equation}
+  \label{eq:Forys-Forys-???}
+  a^{ 0 } = \texttt{""}.
+\end{equation}
+
+Analogicznie, jeśli dany jest wolny monoid słowny $A^{ * }$, to dla
+$w \in A^{ * }$ określamy
+\begin{equation}
+  \label{eq:Forys-Forys-???}
+  w^{ 0 } = \texttt{""} \in A^{ * }.
+\end{equation}
+
+Warto tutaj dodać pewnie komentarz. Jak to jest możliwe, że~monoid
+składający~się pewnych ciągów elementów zbioru $A$ wraz z~działaniem
+konkatenacji może nie być monoidem wolnym? To zagadnienie omówimy bardziej
+szczegółowo trochę dalej, teraz poprzestaniemy na zauważeniu, że~wolny
+monoid słowny składa~się, ze~\textit{wszystkich} ciągów elementów
+zbioru~$A$. Jeżeli dany monoid jest utworzony nie ze wszystkich, lecz
+tylko~niektórych ciągów elementów zbioru~$A$, to nie musi on być monoidem
+wolny.
 
 \vspace{\spaceFour}
 
@@ -951,9 +977,10 @@ elementów $a, b \in S$ zachodzi $a b = 1_{ M }$. Możemy jednak zauważyć,
 Stwierdzanie, że~baza $B$ wolnego monoidu $M$ jest minimalnym zbiorem
 generatorów. Oznaczy to tyle, że~dla każdego zbioru generatorów $D$ zachodzi
 $B \subset D$. Z~dowodu twierdzenia 1.2.2 wynika, że~$A \subset B$, gdzie
-$A = S \setminus S^{ 2 }$. Jeśli ponadto pokazalibyśmy, że~$B \subset D$, to otrzymujemy,
-że~$A = B$. W~tym momencie jedyny dowód inkluzji $B \subset D$ jaki potrafię
-wymyślić, przebiega w~następujący sposób.
+$A = S \setminus S^{ 2 }$. Jeśli ponadto pokazalibyśmy, że~$B \subset D$, dla każdego
+zbioru generatorów $D$, to otrzymamy równość~$A = B$. W~tym momencie
+jedyny dowód inkluzji $B \subset D$ jaki potrafię wymyślić, przebiega
+w~następujący sposób.
 
 Jeżeli zbiór $D$ zawiera element neutralny, to możemy go usunąć z~niego bez
 straty ogólności, por. wzór na stronie~7 omawianej książki. Od tego momentu
@@ -983,6 +1010,32 @@ dowiedliśmy, że~$B \subset D$.
 Wykazaliśmy nie tylko, że~baza $B$ jest nie tylko najmniejszym w~sensie
 inkluzji zbiorem generatorów wolnego monoidu $M$, ale też, że~jest ona
 wyznaczona jednoznacznie przez warunek $B = S \setminus S^{ 2 }$.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \Str{10} Wzorując~się na przykładzie 1.2.1 wprowadzimy teraz dwa
+monoidy, które mogą okazać się przydatne do podawania przykładów
+i~kontrprzykładów dotyczących własności tych struktur algebraicznych.
+
+Niech będzie dany dowolny\footnote{Nie będziemy~się tu wgłębiać w~dyskusje
+  nad ontologiczną naturą symbolu~$a$.} symbol $a$. Definiujemy wolne
+monoidy słowne
+\begin{align}
+  \Acal_{ 1 } &:= \{ a^{ n } : n = 0, 1, 2, \ldots \}, \\
+  \Acal_{ 2 } &:= \{ \texttt{""} \} \cup \{ a^{ n } : n = 2, 3, \ldots \}.
+\end{align}
+
+Monoid $\Acal_{ 1 }$ jest wolny monoidem słownym nad~alfabetem $B = \{ a \}$.
+Monoid $\Acal_{ 2 }$ nie jest monoidem wolnym,
+bo~$S \setminus S^{ 2 } = \{ a^{ 2 }, a^{ 3 } \}$, zaś rozkład na elementy $a^{ 2 }$ i~$a^{ 3 }$ nie jest jednoznaczny. Przykładowo
+\begin{equation}
+  \label{eq:Forys-Forys-???}
+  a^{ 6 } = a^{ 2 } a^{ 2 } a^{ 2 } = a^{ 3 } a^{ 3 }.
+\end{equation}
 
 \vspace{\spaceFour}
 
@@ -1124,8 +1177,8 @@ i~stąd $\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$.
 
 
 \start \Str{11} W~dowodzie twierdzenia 1.2.4 fakt, że~grupa jedynki monoidu
-$M$ jest trywialna, nie wydaje~się potrzebny, więc część dowodu tego
-twierdzenia możemy zupełnie pominąć.
+$M$ jest trywialna, nie wydaje~się potrzebny, więc tą część tego dowodu
+możemy zupełnie pominąć.
 
 Grupa jedynki monoidu $M$ rozważanego w~tym twierdzeniu jest w~istocie
 trywialna. Wynika to na na mocy twierdzenia \ref{thm:Forys-Forys-01}
@@ -1216,6 +1269,36 @@ $m = s_{ 1 } s_{ 2 } \ldots s_{ k }$, $s_{ i } \in S \setminus S^{ 2 }$, $i = 1,
 
 \start \StrWd{11}{11} Według mnie zapis $\min\{ k, l \}$ wyglądałoby znacznie
 ładniej, niż użyty tutaj $min\{ k, l \}$.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \Str{12} Zwróćmy uwagę na to, że~homomorfizm o~którym mowa
+w~twierdzeniu 1.2.5 nie musi być izomorfizmem. Rozważmy bowiem następujący
+monoid. Niech $a$ będzie dowolnym symbolem\footnote{Nie będziemy~się tu
+  wgłębiać w~ontologiczną naturę tego symbolu.} i~określmy następujący
+wolny monoid słowny:
+\begin{equation}
+  \label{eq:Forys-Forys-???}
+  \Acal = \{ a^{ n } : n = 0, 2, 4, \ldots \}.
+\end{equation}
+Inaczej mówiąc, monoid $\Acal$ składa~się, że~wszystkich ciągów symbolu
+$a$, które mają parzystą długość. Monoid ten jest wolny, co wynika choćby
+z~tego, że~$B = S \setminus S^{ 2 } = \{ a^{ 2 } \}$, $S = \Acal \setminus \{ 1_{ \Acal } \}$ i~tym
+samym każdy element $S$ ma jednoznaczny rozkład na elementy zbioru~$B$.
+
+Dla dowolnego $w = a^{ n } \in \Acal$, określamy homomorfizm $l$ za~pomocą
+wzoru
+\begin{equation}
+  \label{eq:Forys-Forys-???}
+  l( w ) = l( a^{ n } ) := n \in \Nbb.
+\end{equation}
+Jest oczywiste, że~ten homomorfizm spełnia wszystkie założenie twierdzenia
+i~nie jest bijekcją, bowiem zbiór $l( \Acal )$ jest równy zbiorowi liczb
+parzystych.
 
 \vspace{\spaceFour}
 
