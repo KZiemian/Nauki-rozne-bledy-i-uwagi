@@ -1,6 +1,6 @@
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Podstawowe ustawienia i pakiety
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 \RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
 % sposoby używania LaTeXa. Więcej jest w l2tabu English version.
 \documentclass[a4paper,11pt]{article}
@@ -14,20 +14,20 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ----------------------------
+% ------------------------------
 \usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
-\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+% \usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
 % grafiki.
-\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
+% \usepackage{verbatim} % Poprawia otoczenie VERBATIME.
 \usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
 % wprowadzane bezpośrednio w tekście.
 \usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ----------------------------
+% ------------------------------
 % MARGINS
-% ----------------------------
+% ------------------------------
 \setmarginsrb
 { 0.7in} % left margin
 { 0.6in} % top margin
@@ -43,7 +43,7 @@
 % ------------------------------
 % Często używane pakiety
 % ------------------------------
-\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+% \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
 \usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
 % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
@@ -70,9 +70,9 @@
 
 
 
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Dodatkowe ustawienia dla języka polskiego
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 \renewcommand{\thesection}{\arabic{section}.}
 % Kropki po numerach rozdziału (polski zwyczaj topograficzny)
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}}
@@ -80,27 +80,27 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
-% ----------------------------
+% ------------------------------
 \usepackage{latexgeneralcommands}
 % \usepackage{mathshortcuts}
 
 
 
-% ----------------------------
+% ------------------------------
 % Ustawienia różnych parametrów tekstu
-% ----------------------------
+% ------------------------------
 \renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
 % wierszami w tabelach.
 
 
 
-% ----------------------------
+% ------------------------------
 % Pakiet "hyperref"
 % Polecano by umieszczać go na końcu preambuły.
-% ----------------------------
+% ------------------------------
 \usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
 % do bibliografii na hiperlinki.
 
@@ -119,6 +119,8 @@
   Błędy i~uwagi}
 
 \author{Kamil Ziemian}
+
+
 % \date{}
 % ---------------------------------------------------------------------
 
@@ -150,9 +152,18 @@
 
 % ##################
 \Work{ % Autor i tytuł dzieła
-  J. Lyons \\
+  John Lyons \\
   \textit{Wstęp do językoznawstwa},
   \cite{LyonsWstepDoJezykoznawstwa1975}}
+
+
+\start \Str{110} Wprowadzony na tej stronie zapis $p_{ x }( y )$, oznacza
+prawdopodobieństwo warunkowe wystąpienia $x$, przy założeniu, że~zaszło~$y$.
+Jest on bardzo niewygodny w~użyciu i~warto byłoby zastąpić go jakąś lepszą
+notacją.
+
+
+
 
 
 % ##################
@@ -171,9 +182,12 @@
     32  & 17 & & inne, & inne; \\
     32  & 20 & & odosobnionych); & odosobnionych), \\
     % & & & & \\
-    % & & & & \\
     96  & 15 & & minimalna & maksymalna \\
-    100 & &  3 & niezależna & zależna \\
+    96  & 18 & & $p_{ 1 } . p_{ 2 } . p_{ 3 } \ldots p_{ m }$
+           & $p_{ 1 } \cdot p_{ 2 } \cdot p_{ 3 } \cdot \ldots \cdot p_{ m }$ \\
+    100 & &  4 & 1. Wartość & 1, wartość \\
+    100 & &  5 & $\frac{ 1 }{ n }$ (należy & $\frac{ 1 }{ n }$. Należy \\
+    % & & & & \\
     % & & & & \\
     \hline
   \end{tabular}
@@ -182,36 +196,6 @@
 
 \vspace{\spaceOne}
 % ############################
-
-% % ##################
-% \Work{ % Autor i tytuł dzieła
-%   J. Lyons \\
-%   „Wstęp do językoznawstwa”, \cite{} }
-
-
-% % ##################
-% \CenterBoldFont{Błędy}
-
-
-% \begin{center}
-
-%   \begin{tabular}{|c|c|c|c|c|}
-%     \hline
-%     & \multicolumn{2}{c|}{} & & \\
-%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-%                               & Powinno być \\ \cline{2-3}
-%     & Od góry & Od dołu & & \\
-%     \hline
-%     96  & 15 & & minimalna & maksymalna \\
-%     100 & &  3 & niezależna & zależna \\
-%     % & & & & \\
-%     \hline
-%   \end{tabular}
-
-% \end{center}
-
-% \vspace{\spaceOne}
-% % ############################
 
 
 
@@ -228,12 +212,6 @@
   \textit{Wielkie teorie językoznawcze \\
     Od~językoznawstwa historyczno-porównawczego do~pragmatyki},
   \cite{PaveauSarfatiWielkieTeorieJezykoznawcze2009}}
-
-% % ############################
-% \Work{ % Autorzy i tytuł dzieła
-%   Marie-Anne Paveau, Georges-\'{E}lia Sarfati \\
-%   „Wielkie teorie językoznawcze \\
-%   Od~językoznawstwa historyczno-porównawczego do~pragmatyki”, \cite{} }
 
 
 % ##################
@@ -273,6 +251,7 @@
 % ####################################################################
 % ####################################################################
 % Bibliografia
+
 \bibliographystyle{plalpha}
 
 \bibliography{VariousFieldsBooks}{}
