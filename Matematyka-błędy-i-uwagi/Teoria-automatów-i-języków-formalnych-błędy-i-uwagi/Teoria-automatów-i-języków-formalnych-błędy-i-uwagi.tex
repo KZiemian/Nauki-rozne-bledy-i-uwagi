@@ -1061,21 +1061,23 @@ wyznaczona jednoznacznie przez warunek $B = S \setminus S^{ 2 }$.
 
 
 \start \Str{10} Wzorując~się na przykładzie 1.2.1 wprowadzimy teraz dwa
-monoidy, które mogą okazać się przydatne do podawania przykładów
+monoidy, które mogą okazać~się przydatne przy podawania przykładów
 i~kontrprzykładów dotyczących własności tych struktur algebraicznych.
 
 Niech będzie dany dowolny\footnote{Nie będziemy~się tu wgłębiać w~dyskusje
   nad ontologiczną naturą symbolu~$a$.} symbol $a$. Definiujemy wolne
 monoidy słowne
 \begin{align}
+  \label{eq:}
   \Acal_{ 1 } &:= \{ a^{ n } : n = 0, 1, 2, \ldots \}, \\
+  \label{eq:}
   \Acal_{ 2 } &:= \{ \texttt{""} \} \cup \{ a^{ n } : n = 2, 3, \ldots \}.
 \end{align}
 
 Monoid $\Acal_{ 1 }$ jest wolny monoidem słownym nad~alfabetem $B = \{ a \}$.
 Monoid $\Acal_{ 2 }$ nie jest monoidem wolnym,
-bo~$S \setminus S^{ 2 } = \{ a^{ 2 }, a^{ 3 } \}$, zaś rozkład na elementy $a^{ 2 }$
-i~$a^{ 3 }$ nie jest jednoznaczny. Przykładowo
+bo~$S \setminus S^{ 2 } = \{ a^{ 2 }, a^{ 3 } \}$, $S = \Acal_{ 2 } \setminus \{ 1 \}$ zaś rozkład
+na~elementy $a^{ 2 }$ i~$a^{ 3 }$ nie jest jednoznaczny. Przykładowo
 \begin{equation}
   \label{eq:Forys-Forys-???}
   a^{ 6 } = a^{ 2 } a^{ 2 } a^{ 2 } = a^{ 3 } a^{ 3 }.
@@ -1087,19 +1089,62 @@ i~$a^{ 3 }$ nie jest jednoznaczny. Przykładowo
 
 
 
+\start \Str{10} W~kontekście wniosku~1.2.2 należy zauważyć,
+że~przeprowadzając drobną modyfikację fragmentu dowodu twierdzenia~1.2.2,
+można udowodnić następujące twierdzenie.
+
+
+
+
+% #############
+\begin{theorem}
+  \label{thm:Forys-Forys-02}
+
+  Niech $M$ będzie monoidem,~a~$D$ zbiorem jego generatorów. Wówczas
+  zachodzi
+  \begin{equation}
+    \label{eq:1}
+    A \subset D,
+  \end{equation}
+  gdzie $A = S \setminus S^{ 2 }$, $S = M \setminus \{ 1_{ M } \}$.
+
+\end{theorem}
+
+
+
+\begin{proof}
+
+  Dla dowolnego $a \in A$ zachodzi
+  \begin{equation}
+    \label{eq:2}
+    a = d_{ 1 } d_{ 2 } \ldots d_{ n }, \quad
+    d_{ i } \in D,\; i = 1, 2, \ldots, n.
+  \end{equation}
+  Jeżeli $n > 1$, to~wówczas jak już dyskutowaliśmy $a \in S^{ 2 }$ i~tym
+  samym\footnote{Zastanowić się czy to jest dowód ad absurdum.} $a \notin A$.
+  Wobec tego musi zachodzi $n = 1$, $a = d_{ 1 }$, stąd $a \in D$.
+
+\end{proof}
+% #############
+
+
+
+
+
 \start \Str{11} W~dowodzie twierdzenia 1.2.4 jest napisane „Jeśli monoid
 jest wolny, to na mocy twierdzenia 1.2.2 spełnia wszystkich powyższe
 warunki”, gdzie warunki o~których mowa to to, że~monoid $M$ jest równo
 podzielny, $S = M \setminus \{ 1_{ M } \}$ jest podgrupą
-i~$\cap_{ n \in \Nbb } \, S^{ n } = \emptyset$. Jednak według mnie wynikają nie z~tego
-twierdzenia, lecz z~podanej w~tych notatkach definicji monoidu wolnego $M$.
+i~$\cap_{ n \in \Nbb } \, S^{ n } = \emptyset$. Jednak według mnie nie wynikają one z~tego
+twierdzenia, lecz z~sformułowanej jawnie w~tych notatkach definicji wolnego
+monoidu $M$.
 
 Dokładniej wszystkie te własności posiada każdy wolny monoid słownego
 i~na mocy kanonicznego izomorfizmu przenoszą~się one z~wolnego monoidu
-słownego $B^{ * }$ na monoid $M$, gdzie $B \subset M$. Poniżej udowodnimy
-wszystkie te trzy własności dla dowolnego wolnego monoidu słownego.
+słownego $B^{ * }$ na monoid $M$, gdzie $B \subset M$. Dowody potrzebnych
+własności dla wolnego monoidu słownego przedstawimy poniżej.
 
-Zaczniemy od własności, że~dla dowolnego wolnego monoidu słownego $M$
+Zaczniemy od~tego, że~dla dowolnego wolnego monoidu słownego $M$
 zbiór $S = M \setminus \{ 1_{ M } \}$ jest podgrupą. W~zasadzie cała praca jest już
 wykonana, bo zgodnie z~twierdzeniem \ref{thm:Forys-Forys-01} $S$ jest
 podpółgrupą wtedy i~tylko wtedy, gdy grupa jedynki $M$ jest trywialna,
@@ -1161,9 +1206,9 @@ i~tym samym
   \label{eq:Forys-Forys-34}
   a =
   ( f_{ a,\, 1 } f_{ a,\, 2 } \ldots f_{ a,\, n_{ 3 } } ) \cdot ( f_{ a,\, n_{ 3 } + 1 }
-  f_{ a,\, n_{ 3 } + 2 } \ldots f_{ a,\, n_{ 3 } } )
+  f_{ a,\, n_{ 3 } + 2 } \ldots f_{ a,\, n_{ 1 } } )
   =
-  c ( f_{ a,\, n_{ 3 } + 1 } f_{ a,\, n_{ 3 } + 2 } \ldots f_{ a,\, n_{ 3 } } ).
+  c ( f_{ a,\, n_{ 3 } + 1 } f_{ a,\, n_{ 3 } + 2 } \ldots f_{ a,\, n_{ 1 } } ).
 \end{equation}
 Kładąc $u = f_{ a,\, n_{ 3 } + 1 } f_{ a,\, n_{ 3 } + 2 } \ldots f_{ a,\, n_{ 1 } }$,
 dostajemy równość $a = cu$. Implikuje to również,
@@ -1225,10 +1270,10 @@ $M$ jest trywialna, nie wydaje~się potrzebny, więc tą część tego dowodu
 możemy zupełnie pominąć.
 
 Grupa jedynki monoidu $M$ rozważanego w~tym twierdzeniu jest w~istocie
-trywialna. Wynika to na na mocy twierdzenia \ref{thm:Forys-Forys-01}
+trywialna. Wynika to~na mocy twierdzenia \ref{thm:Forys-Forys-01}
 z~tego, że~$S$ jest podpółgrupą, co przyjęliśmy w~założeniach tego
-twierdzenia. Do dowodu tej części twierdzenia nie jest więc zupełnie
-potrzebny fakt, że~$\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$.
+twierdzenia. Do dowodu tej własności nie jest więc zupełnie potrzebny fakt,
+że~$\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$.
 
 \vspace{\spaceFour}
 
