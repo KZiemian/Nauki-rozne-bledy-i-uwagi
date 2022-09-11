@@ -572,15 +572,23 @@ By usunąć tego typu dwuznaczności przyjmiemy następującą konwencję.
 Jeżeli jest jawnie powiedziane, że~$A$ jest podzbiorem monoidu $M$, to
 przez symbol $A^{ * }$ będziemy rozumieli najmniejszy podmonoid $M$
 zawierający $A$. Taki obiekt będziemy nazywali \textbf{podmonoidem
-  algebraicznym}.
+  algebraicznym}. Jeżeli symbol ten będzie oznaczać wolny monoid słowny,
+zostanie to jawnie zaznaczone w~tekście.
 
 Jeżeli zbiór $A$ jest podany, ale bez wskazania, że jest to podzbiór
-pewnego monoidu $M$, to przez symbol $A^{ * }$ będziemy rozumieć wolny
-monoid słowny nad alfabetem $A$. W~przypadku gdy $A$ jest podzbiorem
-monoidu $M$, ale~rozważać będziemy wolny monoid słowny nad $A$, to
-zostanie to zaznaczone jawnie. Szczególny przypadkiem, acz nietrudnym
-do zrozumienia jest ten, gdy $A \subset M$ i~$M$ jest monoidem
-słownym. Wówczas obie definicje symbolu $A^{ * }$~się pokrywają.
+pewnego monoidu $M$, to w~większość przypadków przez symbol $A^{ * }$
+będziemy rozumieć wolny monoid słowny nad alfabetem $A$. Niestety sposób
+w~jaki ta książeczka używa tej notacji, nie pozwala nam przyjąć reguły,
+że~$A^{ * }$ oznacza wolny monoid słowny, zawsze gdy nie jest powiedziane,
+iż~$A$ jest podzbiorem pewnego monoidu. Aby więc uniknąć nieporozumień,
+będziemy~się starali zawsze zaznaczyć jawnie, że~chodzi nam o~wolny monoid
+słowny.
+
+W~przypadku gdy~$A$ jest podzbiorem monoidu $M$, ale~rozważać będziemy
+wolny monoid słowny nad $A$, zostanie to zaznaczone jawnie. Szczególny
+przypadkiem, acz nietrudnym do zrozumienia, jest ten, gdy $A \subset M$ i~$M$
+jest monoidem słownym. Wówczas obie definicje symbolu $A^{ * }$~się
+pokrywają.
 
 W~świetle powyższych ustaleń wprowadzimy odpowiednie poprawki do tej
 książeczki.
@@ -1742,7 +1750,7 @@ $M^{ + } = M \setminus \{ 1_{ A^{ * } } \}$ jest półgrupą. Po drugie,
 $\bigcap_{ n \in \Nbb } ( M^{ + } )^{ n } = \emptyset$. Na~mocy tego,
 że~$M^{ + }$ jest półgrupą zachodzi następujący ciąg inkluzji.
 \begin{equation}
-  \label{eq:1}
+  \label{eq:Forys-Forys-66}
   M^{ + } \supset ( M^{ + } )^{ 2 } \supset ( M^{ + } )^{ 3 } \supset \ldots
 \end{equation}
 Ciąg ten analizujemy z~wykorzystaniem własności
@@ -1759,7 +1767,7 @@ ponieważ ta~ostatnia jest trywialna, ta pierwsza też musi taką być.
 
 Dowód drugiej własności opiera się na zauważeniu, że
 \begin{equation}
-  \label{eq:Forys-Forys-66}
+  \label{eq:Forys-Forys-67}
   \bigcap_{ n \in \Nbb } ( M^{ + } )^{ n } \subset \bigcap_{ n \in \Nbb } T^{ n } = \emptyset,
 \end{equation}
 gdzie $T = A^{ * } \setminus \{ 1_{ A^{ * } } \}$. Ponieważ dowód, że~z~tych dwóch
@@ -1784,7 +1792,7 @@ równopodzielny.
 Rozważmy bowiem elementy $b_{ 1 } = a^{ 2 }$, $b_{ 2 } = a^{ 4 }$,
 $d_{ 1 } = d_{ 2 } = a^{ 3 }$. Zachodzi
 \begin{equation}
-  \label{eq:3}
+  \label{eq:Forys-Forys-68}
   b_{ 1 } b_{ 2 } = a^{ 6 } = d_{ 1 } d_{ 2 }.
 \end{equation}
 Ponieważ $| b_{ 1 } | < | d_{ 1 } |$, więc sytuacja $b_{ 1 } = d_{ 1 } u$,
@@ -1792,7 +1800,7 @@ $u \in \Acal_{ 2 }$, jest wykluczona. W~takim wypadku pozostaje rozpatrzyć
 przypadek $d_{ 1 } = b_{ 1 } v$. Oznacza to, że musiałby istnieć element
 $v \in \Acal_{ 2 }$, taki~że
 \begin{equation}
-  \label{eq:2}
+  \label{eq:Forys-Forys-69}
   a^{ 3 } = a^{ 3 } v.
 \end{equation}
 W~oczywisty sposób, taki element nie istnieje w~$\Acal_{ 2 }$, więc ten
@@ -1802,6 +1810,40 @@ monoid nie jest równopodzielny.
 
 
 
+
+
+\start \Str{13} Użyte na tej stronie oznaczenie $w M$ jest tradycyjnym
+zapisem, używamy dla specjalnego przypadku mnożenia w~monoidzie (półgrupie)
+$\Pcal( M )$. Sens tej operacji jest następujący:
+\begin{equation}
+  \label{eq:Forys-Forys-70}
+  w \cdot A := \{ w \} \cdot A, \quad
+  A \in \Pcal( M ).
+\end{equation}
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \StrWg{14}{12} Odstępy w~tej linii są stanowczo za~duże.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \StrWd{14}{9} Odstęp nad tą linią jest zbyt duży.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \StrWd{14}{5} Odstęp nad tą linią jest zbyt duży.
 
 
 
@@ -2102,8 +2144,8 @@ słownym~$B^{ * }$, \\
 \Jest  $m_{ 1 } w \in M$,{ } $w m_{ 2 } \in M$ \\
 \Powin $m_{ 1 } w \in M$, $w m_{ 2 } \in M$ \\
 \StrWg{13}{20} \\
-
-
+\Jest  monoidu $M$ \\
+\Powin monoidu $M$, będącego podmonoidem wolnego monoidu $A^{ * }$, \\
 
 
 % ############################
