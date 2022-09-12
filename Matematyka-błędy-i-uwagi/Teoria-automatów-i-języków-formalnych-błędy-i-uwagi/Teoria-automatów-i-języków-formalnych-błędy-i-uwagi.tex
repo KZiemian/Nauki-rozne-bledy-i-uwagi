@@ -1520,7 +1520,7 @@ $c = l( m )$, to $m \notin S^{ c + 1 }$. By to zrobić posłużymy~się
 zasadą kontrapozycji\footnote{Kamil, przemyśl to, że zasada
   kontrapozycji w tym przypadku działa w następujący sposób:
   $\forall \, m ( p( m ) \Rightarrow q( m ) )$ przechodzi
-  w~$\forall \, m ( \sim q( m ) \Rightarrow \sim p( m ) )$.}. Jeżeli
+  w~$\forall \, m ( \not q( m ) \Rightarrow \sim p( m ) )$.}. Jeżeli
 $m \in S^{ c + 1 }$ to istnieją takie
 $s_{ 1 }, s_{ 2 }, \ldots, s_{ c + 1 }$, zawarte w~$S$, że~zachodzi
 \begin{equation}
@@ -1813,13 +1813,97 @@ monoid nie jest równopodzielny.
 
 
 \start \Str{13} Użyte na tej stronie oznaczenie $w M$ jest tradycyjnym
-zapisem, używamy dla specjalnego przypadku mnożenia w~monoidzie (półgrupie)
-$\Pcal( M )$. Sens tej operacji jest następujący:
+zapisem, używanym dla specjalnego przypadku mnożenia w~monoidzie (półgrupie)
+$\Pcal( M )$. Znaczenie tych symboli jest następujące:
 \begin{equation}
   \label{eq:Forys-Forys-70}
   w \cdot A := \{ w \} \cdot A, \quad
   A \in \Pcal( M ).
 \end{equation}
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \Str{13--14} Fragment dowodu twierdzenia 1.3.2, poświęcony implikacji
+$3 \Rightarrow 1$ jest w~istocie dowodem implikacji $2 \Rightarrow 1$. Niestety, w~tej chwili
+nie potrafię podać dowodu implikacji $3 \Rightarrow 1$, muszę więc poprzestać
+na~dokładnym omówieniu przedstawionego dowodu i~wyjaśnieniu gdzie leży
+problem.
+
+Zaczniemy od przyjrzenia~się warunkom 2 i~3.
+\begin{itemize}
+
+\item[2)] Dla dowolnego $w \in A^{ * }$ jeśli $M w \cap M \neq \emptyset$
+  i~$w M \cap M \neq \emptyset$, to~$w \in $M.
+
+\item[3)] Dla dowolnego $w \in A^{ * }$ jeśli $M w \cap M \cap w M \neq \emptyset$,
+  to~$w \in M$.
+
+\end{itemize}
+W~przypadku warunku 2 z~tego, że~istnieją takie $m_{ 1 } \in M$
+i~$m_{ 2 } \in M$, że~$m_{ 1 } w \in M$ oraz $w m_{ 2 } \in M$, możemy wnioskować,
+iż~$w \in M$. Dla przypadku 3, wymagane jest by~istniały takie elementy
+$m_{ 1 }, m_{ 2 } \in M$, że~$m_{ 1 } w = w m_{ 2 } \in M$ i~dopiero na mocy tego
+możemy wnioskować, iż~$w \in M$.
+
+Widzimy więc, że~warunek~3 jest ściśle mocniejszy, niż warunek~2 oraz że
+jeśli przyjmiemy warunek 2 jako prawdziwy, jesteśmy w~stanie dowieść
+prawdziwości warunku~3.
+
+Przejdźmy teraz do dowodu implikacji $2 \Rightarrow 1$, który jest przedstawiony
+jako dowód implikacji $3 \Rightarrow 1$. Dowód ten prowadzony jest metodą
+\textit{reductio ad~absurdum}, czyli korzystając z~reguły
+\begin{equation}
+  \label{eq:Forys-Forys-71}
+  ( p \Rightarrow q ) \Leftrightarrow \sim ( p \wedge ( \sim q ) ).
+\end{equation}
+Przyjmijmy więc, że~$M$~nie jest monoidem wolnym. Ponieważ jest on
+podmonoidem monoidu wolnego $A^{ * }$ posiada on bazę~$C$, w~takim razie
+jedyna możliwość by nie był on wolny, jest tak, że~pewien element posiada
+dwa różne rozkłady na elementy tej bazy. Niech $w \in C^{ + }$ będzie
+elementem z~dwoma różnymi rozkładami, który ma najmilejszą długość w~$M$.
+
+Przez to, że~$w$ jest elementem o~najmniejszej długości, rozumiemy to,
+że~jeśli przez $d \in \Nbb$ oznaczy długość najkrótszego z~rozkładów~$w$
+na~elementy $C$, to nie istnieje element $v \in M$, taki że co najmniej
+jeden z~jego rozkładów na elementy zbioru $C$ ma długość silnie mniejszą
+od~$d$.
+
+Niech teraz
+\begin{equation}
+  \label{eq:Forys-Forys-72}
+  w = c_{ i_{ 1 } } c_{ i_{ 2 } } \ldots c_{ i_{ p } } =
+  c_{ j_{ 1 } } c_{ j_{ 2 } } \ldots c_{ j_{ p } },
+\end{equation}
+gdzie $c_{ i_{ k } }, c_{ j_{ l } } \in C$, $k = 1, \ldots, p$, $l = 1, \ldots, q$ oraz
+$k > 1$, $l > 1$. Ponadto bez ograniczania ogólności możemy przyjąć,
+że~$c_{ i_{ 1 } } \neq c_{ j_{ 1 } }$ i~$c_{ i_{ p } } \neq c_{ j_{ q } }$. Gdyby było
+inaczej, przykładowo $c_{ i_{ 1 } } = c_{ j_{ 1 } }$, to na mocy tego,
+że~$A^{ * }$ jest monoidem skracalnym, po skróceniu pierwszych wyrazów
+w~dwóch rozkładach $w$ ze~wzoru \eqref{eq:Forys-Forys-72}, otrzymalibyśmy
+\begin{equation}
+  \label{eq:Forys-Forys-73}
+  w' = c_{ i_{ 2 } } c_{ i_{ 3 } } \ldots c_{ i_{ p } } =
+  c_{ j_{ 2 } } c_{ j_{ 3 } } \ldots c_{ j_{ q } }.
+\end{equation}
+Czyli $w'$ jest element zawartym w~$C^{ + }$, który ma dwa różne rozkłady
+na~elementy $C$ i~jeden z~tych rozkładów jest krótszy od~najkrótszego
+rozkładu~$w$. Ta uwaga powinna wyjaśnić, czemu w~książeczce w~linii 12
+na~stronie 14 znajdujemy wzór $c_{ i_{ 1 } } \neq c_{ j_{ 1 } }$.
+
+W~następnym kroku zapisujemy \eqref{eq:Forys-Forys-72} jako
+\begin{equation}
+  \label{eq:Forys-Forys-74}
+  c_{ i_{ 1 } } ( c_{ i_{ 2 } } c_{ i_{ 3 } } \ldots c_{ i_{ p } } ) =
+  c_{ j_{ 1 } } ( c_{ j_{ 2 } } c_{ j_{ 3 } } \ldots c_{ j_{ q } }).
+\end{equation}
+Korzystając z~równopodzielności $A^{ * }$, oznacza to, że~zachodzi jedna
+z~dwóch możliwości. Albo $c_{ i_{ 1 } } = c_{ j_{ 1 } } u$,
+$u ( c_{ i_{ 2 } } c_{ i_{ 3 } } \ldots c_{ i_{ p } } ) =
+c_{ j_{ 2 } } c_{ j_{ 3 } } \ldots c_{ j_{ q } }$ albo ????.
 
 \vspace{\spaceFour}
 
