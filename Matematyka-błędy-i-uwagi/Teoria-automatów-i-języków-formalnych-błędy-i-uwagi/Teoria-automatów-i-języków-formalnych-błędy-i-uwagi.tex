@@ -2013,8 +2013,8 @@ założenie.
 
 
 \start \Str{16} Oznaczenie „$RS$” pochodzi zapewne od angielskiego
-\textit{rewriting system}. Można się zastanawiać, czy lepiej nie wygląda
-oznaczenie „$\textrm{RS}$”.
+\textit{rewriting system}. Poza tym, w~mojej opini zapis „$\textrm{RS}$”
+wyglądałby lepiej.
 
 \vspace{\spaceFour}
 
@@ -2022,19 +2022,96 @@ oznaczenie „$\textrm{RS}$”.
 
 
 
+\start \Str{16} W~oznaczeniu $L_{ gen }( RS, I )$, „gen” pochodzi zapewne
+od~angielskiego \textit{generated}. Standardowo, w~mojej opinii zapis
+\begin{equation}
+  \label{eq:Forys-Forys-79}
+  L_{ \textrm{gen} }( \textrm{RS}, I )
+\end{equation}
+wyglądałoby znacznie lepiej, niż ten stosowany w~tej książeczce.
+
+\vspace{\spaceFour}
 
 
 
 
 
+\start \Str{16} W~oznaczeniu $L_{ acc }( RS, I )$, „acc” pochodzi zapewne
+od~angielskiego \textit{accepted}, choć jestem tego mniej pewien, niż tego
+jak należy rozwinąć skrót „gen”. Standardowo, w~mojej opinii zapis
+\begin{equation}
+  \label{eq:Forys-Forys-80}
+  L_{ \textrm{acc} }( \textrm{RS}, I )
+\end{equation}
+wyglądałby znacznie lepiej, niż ten stosowany w~tej książeczce.
+
+\vspace{\spaceFour}
 
 
 
 
 
+\start \Str{17} W~tej książeczce brakuje szerszego objaśnienia jaki jest
+sens symboli terminalnych i~nieterminalnych, które pozwoliłoby wyrobić
+sobie podstawową intuicję na ich temat. W~tym momencie nie jestem w~stanie
+samemu podać takiego objaśnienia.
+
+\vspace{\spaceFour}
 
 
 
+
+
+\start \Str{17} Ponieważ w~gramatyce zbiór praw przepisujących~$P$ jest
+podzbiorem $( V_{ N } \cup V_{ T } )^{ + } \cup ( V_{ N } \cup V_{ T } )^{ * }$,
+definicja przepisywania słów wymaga tutaj dodatkowego uściślenia, przy czym
+wystarczy ograniczyć~się do~doprecyzowania przypadku bezpośredniego
+przepisywania. Definicja przepisywania pośredniego dla gramatyki jest
+bowiem bardzo  oczywistą modyfikacją analogicznej definicji dla systemu
+przepisującego.
+
+Dla gramatyki $G = ( V_{ N }, V_{ T }, P, v_{ 0 } )$ definiujemy bezpośrednie
+przepisywanie słów, należących do wolnego monoidu językowego
+$( V_{ N } \cup V_{ T } )^{ * }$ w~następujący sposób. Niech
+$x, y \in ( V_{ N } \cup V_{ T } )^{ * }$. Mówimy, że~gramatyka przepisuje
+bezpośrednio słowo $x$ na $y$, co zapisuje jak poprzednio przez
+\begin{equation}
+  \label{eq:Forys-Forys-81}
+  x \mapsto y,
+\end{equation}
+jeśli istnieje reguła $v \to w \in P$ i~takie słowa
+$w_{ 1 }, w_{ 2 } \in ( V_{ N } \cup V_{ T } )^{ * }$, że $x = w_{ 1 } u w_{ 2 }$,
+$y = w_{ 1 } v w_{ 2 }$.
+
+Definicja przepisywania pośredniego jest tak oczywistą modyfikacją
+definicji podanej dla systemów przepisujących, że~nie będziemy jej
+formułować
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \Str{18} Przyjmiemy, że~dla danej gramatyki będziemy używać
+oznaczenia $M = ( V_{ N } \cup V_{ T } )^{ * }$ i~tym samym słowo puste będziemy
+oznaczać przez $1_{ M }$. Zgodnie z~tą zasadą poprawiny oznaczenia
+pojawiające~się po raz pierwszy na tej stronie i,~jeśli będzie trzeba,
+w~dalszej części tej książeczki.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \StrWd{20}{10} W~tym miejscu, tak ja na stronie~7, symbol
+$( A^{ * } )^{ 2 }$, nie oznacza wyniku mnożenia w~monoidzie
+$\Pcal( A^{ * } )$, czyli $A^{ * } \cdot A^{ * }$, lecz iloczyn kartezjański
+$A^{ * } \times A^{ * }$. W~dalszym ciągu zwykle nie będziemy już opisywać co
+w~danym miejscu oznacza ten symbol, licząc że czytelnik będzie w~stanie sam
+to wywnioskować. Postaramy~się jednak komentować miejsca, gdzie zrozumienie
+poprawnego sensu tego symbolu jest wyjątkowo trudne.
 
 
 
@@ -2196,6 +2273,61 @@ oznaczenie „$\textrm{RS}$”.
     17  & &  4 & N.Chomsky’ego & N.~Chomsky’ego \\
     17  & &  7 & $1, 2, ...$ & $1, 2, \ldots$ \\
     17  & & 11 & $1, 2, ...$ & $1, 2, \ldots$ \\
+    18  &  3 & & \textbf{(0) :} & \textbf{(0)} -- \\
+    18  &  4 & & \textbf{(1) :} & \textbf{(1)} -- \\
+    18  &  8 & & $1$ & $1_{ M }$ \\
+    18  &  9 & & $v_{ 0 } \; \to \; 1 \; \in \; P$
+           & $v_{ 0 } \to 1_{ M } \in P$ \\
+    18  & 11 & & \textbf{(2) :} & \textbf{(2)} -- \\
+    18  & 14 & & $V_{ N }$,{ } $x \in ( V_{ N } \cup V_{ T } )$
+           & $V_{ N }$, $x \in ( V_{ N } \cup V_{ T } )$ \\
+    18  & 15 & & \textbf{(3) :} & \textbf{(3)} -- \\
+    18  & 18 & & $V_{ N }$,{ } $x \in V_{ T }^{ * }$
+           & $V_{ N }$, $x \in V_{ T }^{ * }$ \\
+    18  & 21 & & $\mathbf{\Lcal_{ 0 }}$\textbf{:} & $\mathbf{\Lcal_{ 0 }}$ \\
+    18  & 22 & & $\mathbf{\Lcal_{ 1 }}$ \textbf{:} & $\mathbf{\Lcal_{ 1 }}$ \\
+    18  & 23 & & $\mathbf{\Lcal_{ 2 }}$ \textbf{:} & $\mathbf{\Lcal_{ 2 }}$ \\
+    18  & 24 & & $\mathbf{\Lcal_{ 3 }}$ \textbf{:} & $\mathbf{\Lcal_{ 3 }}$ \\
+    % & &  & &  \\
+    % & &  & & \\
+    20  & &  8 & $A^{ * } /_{ \rho }$ & $A^{ * }_{ / \rho }$ \\
+    % & &   &  &  \\
+    % &  & &  &  \\
+    % &  & &  &  \\
+    % &  & &  &  \\
+    % & &  &  &  \\
+    % & & &  &  \\
+    % & & &  &  \\
+    % &  & &  &  \\
+    % & &  &  &  \\
+    % &   & &  &  \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  \newpage
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
     % &   & & &  \\
     % &  & &  &  \\
     % &  & &  &  \\
@@ -2349,8 +2481,16 @@ słownym~$B^{ * }$, \\
 \Powin $w_{ 0 } \mapsto w_{ 1 } \mapsto \ldots \mapsto w_{ k }$ \\
 \StrWg{17}{9} \\
 \Jest  \textit{każdego}{ }{ }$( u, v ) \in P${ }{ } $\#_{ V_{ N } } u \geq 1$ \\
-\Powin \textit{każdego} $( u, v ) \in P$ zachodzi $\#_{ V_{ N } } u \geq 1$ \\
-
+\Powin \textit{każdego} $( u, v ) \in P$ \textit{zachodzi}
+$\#_{ V_{ N } } u \geq 1$ \\
+\StrWg{18}{7} \\
+\Jest  $( V_{ N } \cup V_{ T } )^{ * }$,{ } $v \in V_{ N }$,{ }
+$x \in ( V_{ N } \cup V_{ T } )^{ + }$ \\
+\Powin $( V_{ N } \cup V_{ T } )^{ * }$, $v \in V_{ N }$,
+$x \in ( V_{ N } \cup V_{ T } )^{ + }$ \\
+\StrWd{20}{10} \\
+\Jest  kongruencja{ }{ } $\rho \subset ( A^{ * } )^{ 2 }${ }{ } wyznacza \\
+\Powin kongruencja $\rho \subset ( A^{ * } )^{ 2 }$ wyznacza \\
 
 % ############################
 
