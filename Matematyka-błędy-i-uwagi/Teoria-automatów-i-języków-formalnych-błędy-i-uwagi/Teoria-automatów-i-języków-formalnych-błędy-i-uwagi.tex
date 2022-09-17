@@ -1858,13 +1858,13 @@ jako dowód implikacji $3 \Rightarrow 1$. Dowód ten prowadzony jest metodą
 \textit{reductio ad~absurdum}, czyli korzystając z~reguły
 \begin{equation}
   \label{eq:Forys-Forys-71}
-  ( p \Rightarrow q ) \Leftrightarrow \sim ( p \wedge ( \sim q ) ).
+  ( p \Rightarrow q ) \Leftrightarrow \; \sim ( p \wedge ( \sim q ) ).
 \end{equation}
 Przyjmijmy więc, że~$M$~nie jest monoidem wolnym. Ponieważ jest on
 podmonoidem monoidu wolnego $A^{ * }$ posiada on bazę~$C$, w~takim razie
 jedyna możliwość by nie był on wolny, jest tak, że~pewien element posiada
 dwa różne rozkłady na elementy tej bazy. Niech $w \in C^{ + }$ będzie
-elementem z~dwoma różnymi rozkładami, który ma najmilejszą długość w~$M$.
+elementem z~dwoma różnymi rozkładami, który ma najmniejszą długość w~$M$.
 
 Przez to, że~$w$ jest elementem o~najmniejszej długości, rozumiemy to,
 że~jeśli przez $d \in \Nbb$ oznaczy długość najkrótszego z~rozkładów~$w$
@@ -1879,7 +1879,16 @@ Niech teraz
   c_{ j_{ 1 } } c_{ j_{ 2 } } \ldots c_{ j_{ p } },
 \end{equation}
 gdzie $c_{ i_{ k } }, c_{ j_{ l } } \in C$, $k = 1, \ldots, p$, $l = 1, \ldots, q$ oraz
-$k > 1$, $l > 1$. Ponadto bez ograniczania ogólności możemy przyjąć,
+zachodzi $k > 1$, $l > 1$. Gdyby bowiem $k = l = 1$ to oba rozkłady byłby
+identyczne. Gdyby zaś $k = 1$ i~$l > 1$, to oznaczałoby,
+że~istnieje $c_{ i_{ 1 } } \in C = ( M^{ + } ) \setminus ( M^{ + } )^{ 2 }$, które należy
+do~$( M^{ + } )^{ 2 }$, bo~każdy wyraz postaci
+$c_{ j_{ 1 } } c_{ j_{ 2 } } \ldots c_{ j_{ q } }$ należy do $( M^{ + } )^{ 2 }$,
+i~otrzymujemy sprzeczność. Analogiczne rozumowanie da~się przeprowadzić
+w~stosunku do $l = 1$ i~$k > 1$, którego nie będziemy jawnie przeprowadzać,
+co kończy dowód tego, iż~$k > 1$ i~$l > 1$.
+
+Ponadto bez ograniczania ogólności możemy przyjąć,
 że~$c_{ i_{ 1 } } \neq c_{ j_{ 1 } }$ i~$c_{ i_{ p } } \neq c_{ j_{ q } }$. Gdyby było
 inaczej, przykładowo $c_{ i_{ 1 } } = c_{ j_{ 1 } }$, to na mocy tego,
 że~$A^{ * }$ jest monoidem skracalnym, po skróceniu pierwszych wyrazów
@@ -1901,9 +1910,66 @@ W~następnym kroku zapisujemy \eqref{eq:Forys-Forys-72} jako
   c_{ j_{ 1 } } ( c_{ j_{ 2 } } c_{ j_{ 3 } } \ldots c_{ j_{ q } }).
 \end{equation}
 Korzystając z~równopodzielności $A^{ * }$, oznacza to, że~zachodzi jedna
-z~dwóch możliwości. Albo $c_{ i_{ 1 } } = c_{ j_{ 1 } } u$,
-$u ( c_{ i_{ 2 } } c_{ i_{ 3 } } \ldots c_{ i_{ p } } ) =
-c_{ j_{ 2 } } c_{ j_{ 3 } } \ldots c_{ j_{ q } }$ albo ????.
+z~dwóch możliwości. Albo
+\begin{subequations}
+  \begin{align}
+    \label{eq:Forys-Forys-75-A}
+    c_{ i_{ 1 } } &= c_{ j_{ 1 } } u, \\
+    \label{eq:Forys-Forys-75-B}
+    c_{ j_{ 2 } } c_{ j_{ 3 } } \ldots c_{ j_{ q } }
+                  &= u ( c_{ i_{ 2 } } c_{ i_{ 3 } } \ldots c_{ i_{ p } } ),
+  \end{align}
+\end{subequations}
+albo
+\begin{subequations}
+  \begin{align}
+    \label{eq:Forys-Forys-76-A}
+    c_{ j_{ 1 } } &= c_{ i_{ 1 } } v, \\
+    \label{eq:Forys-Forys-76-B}
+    c_{ i_{ 2 } } c_{ i_{ 3 } } \ldots c_{ i_{ p } }
+                  &= v ( c_{ j_{ 2 } } c_{ j_{ 3 } } \ldots c_{ j_{ q } } ).
+  \end{align}
+\end{subequations}
+Rozpatrzmy pierwszy przypadek. Jest oczywiste,
+że~$c_{ i_{ 1 } }, c_{ j_{ 1 } }, c_{ i_{ 2 } } c_{ i_{ 3 } } \ldots c_{ i_{ p } },
+c_{ j_{ 2 } } c_{ j_{ 3 } } \ldots c_{ j_{ q } } \in C^{ + } \subset M$. Ponieważ
+\begin{subequations}
+  \begin{align}
+    \label{eq:Forys-Forys-77-A}
+    c_{ i_{ 1 } } &\in M u \cap M \neq \emptyset, \\
+    \label{eq:Forys-Forys-77-B}
+    c_{ j_{ 2 } } c_{ j_{ 3 } } \ldots c_{ j_{ q } } &\in M \cap u M \neq \emptyset,
+  \end{align}
+\end{subequations}
+więc na mocy warunku 2, $u \in M$.
+
+Zatrzymajmy~się na~chwilę w~tym miejscu, bowiem wedle mojego rozeznania,
+to jest moment kiedy dowód implikacji $3 \Rightarrow 1$ załamał~się. Wedle dowodu,
+jeśli przyjmiemy warunek~3 za prawdziwy, to wzory
+\eqref{eq:Forys-Forys-76-A}--\eqref{eq:Forys-Forys-76-B}
+i~\eqref{eq:Forys-Forys-77-A}--\eqref{eq:Forys-Forys-77-B} pozwalają nam
+stwierdzić, iż~$u \in M$. Ale tak nie jest, bo jak wskazywaliśmy powyżej, by
+skorzystać z~warunku trzy musielibyśmy pokazać,~że
+\begin{equation}
+  \label{eq:Forys-Forys-78}
+  c_{ i_{ 1 } } = c_{ j_{ 2 } } c_{ j_{ 3 } } \ldots c_{ j_{ q } },
+\end{equation}
+bo wówczas $c_{ i_{ 1 } } \in M u \cap M \cap u M \neq \emptyset$ i~to pozwala nam stwierdzić,
+iż~$u \in M$. Niestety nie wiem jak można poprawić to rozumowanie.
+
+Będziemy teraz kontynuowali dowód implikacji $2 \Rightarrow 1$. Mamy teraz dwie
+możliwości\footnote{Zauważmy, że~tym miejscu korzystamy z~zasady
+  wyłączonego środka, więc nie byłoby to akceptowalne w~matematyce
+  konstrukcyjnej.}: $u \neq 1_{ A^{ * } }$ lub $u = 1_{ A^{ * } }$. W~pierwszym
+przypadku $c_{ i_{ 1 } } \in C = ( M^{ + } ) \setminus ( M^{ + } )^{ 2 }$, które
+jednocześnie należy do $( M^{ + } )^{ 2 }$, otrzymujemy więc sprzeczność.
+Warto zwrócić uwagę, że~już wcześniej w~tym dowodzie napotkaliśmy tego typu
+problem.
+
+Analizy przypadku $u = 1_{ A^{ * } }$ jest bardzo prosta. Mamy wówczas
+$c_{ i _{ 1 } } = c_{ j_{ 1 } }$, co wobec tego co zostało powiedziane
+wcześniej, nie jest możliwe i~otrzymana sprzeczność kończy dowód implikacji
+$2 \Rightarrow 1$.
 
 \vspace{\spaceFour}
 
@@ -1928,6 +1994,53 @@ c_{ j_{ 2 } } c_{ j_{ 3 } } \ldots c_{ j_{ q } }$ albo ????.
 
 
 \start \StrWd{14}{5} Odstęp nad tą linią jest zbyt duży.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \Str{16} Warto zauważyć, że~dopuszczamy by ciąg przepisujący słowo
+$x$ na~słowo $y$ miał długość 0. Dokładniej, oznacza to, że~każdym systemie
+przepisującym słowo $w$ można przepisać na nie samo. Jest to bardzo rozsądne
+założenie.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \Str{16} Oznaczenie „$RS$” pochodzi zapewne od angielskiego
+\textit{rewriting system}. Można się zastanawiać, czy lepiej nie wygląda
+oznaczenie „$\textrm{RS}$”.
+
+\vspace{\spaceFour}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2068,20 +2181,21 @@ c_{ j_{ 2 } } c_{ j_{ 3 } } \ldots c_{ j_{ q } }$ albo ????.
     \hline
     14  &  2 & & $1$ & $1_{ A^{ * } }$ \\
     14  &  3 & & $1$ & $1_{ A^{ * } }$ \\
-    % &  & &  &  \\
-    % &  & &  &  \\
-    % &  & & &  \\
-    % &  & &  &  \\
-    % &  & &  &  \\
-    % & &  & &  \\
-    % & &  &  &  \\
-    % & &  &  &  \\
-    % & &  0 & & \\
-    % &  & & &  \\
-    % & &  & & \\
-    % & &  & &  \\
-    % & &   & &  \\
-    % & &   & &  \\
+    16  &  3 & & N.Chomsky’ego & N.~Chomsky’ego \\
+    16  & 10 & & $u \;\;\; \to \;\;\; v \; \in \; P$ & $u \to v \in P$ \\
+    16  & 14 & & a{ }{ } $x, y \; \in \; A^{ * }$ & a~$x, y \in A^{ * }$ \\
+    16  & 22 & & $w_{ 1 }, ..., w_{ k }$ & $w_{ 1 }, \ldots, w_{ k }$ \\
+    16  & 22 & & $w_{ 0 } = x$,{ } $w_{ k } = y$
+           & $w_{ 0 } = x$, $w_{ k } = y$ \\
+    16  & 23 & & $0, 1, ...k - 1$ & $0, 1, \ldots, k - 1$ \\
+    16  & &  3 & $\mapsto^{ * } x \, ,$ & $\mapsto^{ * } x,$ \\
+    16  & &  6 & $\mapsto^{ * } w \, ,$ & $\mapsto^{ * } w,$ \\
+    16  & & 15 & $w_{ 1 }, ..., w_{ k }$ & $w_{ 1 }, \ldots, w_{ k }$ \\
+    17  &  9 & & $V_{ N } \cap V_{ T } = \emptyset${ }{ }{ }i
+           & $V_{ N } \cap V_{ T } = \emptyset$~i \\
+    17  & &  4 & N.Chomsky’ego & N.~Chomsky’ego \\
+    17  & &  7 & $1, 2, ...$ & $1, 2, \ldots$ \\
+    17  & & 11 & $1, 2, ...$ & $1, 2, \ldots$ \\
     % &   & & &  \\
     % &  & &  &  \\
     % &  & &  &  \\
@@ -2230,6 +2344,12 @@ słownym~$B^{ * }$, \\
 \StrWg{13}{20} \\
 \Jest  monoidu $M$ \\
 \Powin monoidu $M$, będącego podmonoidem wolnego monoidu $A^{ * }$, \\
+\StrWd{16}{12} \\
+\Jest  $w_{ 0 } \mapsto \;\, w_{ 1 } \mapsto \;\, ... \mapsto w_{ k }$ \\
+\Powin $w_{ 0 } \mapsto w_{ 1 } \mapsto \ldots \mapsto w_{ k }$ \\
+\StrWg{17}{9} \\
+\Jest  \textit{każdego}{ }{ }$( u, v ) \in P${ }{ } $\#_{ V_{ N } } u \geq 1$ \\
+\Powin \textit{każdego} $( u, v ) \in P$ zachodzi $\#_{ V_{ N } } u \geq 1$ \\
 
 
 % ############################
