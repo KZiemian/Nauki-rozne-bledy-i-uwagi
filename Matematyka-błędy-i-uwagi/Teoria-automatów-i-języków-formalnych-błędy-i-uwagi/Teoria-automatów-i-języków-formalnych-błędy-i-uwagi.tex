@@ -2113,6 +2113,50 @@ w~danym miejscu oznacza ten symbol, licząc że czytelnik będzie w~stanie sam
 to wywnioskować. Postaramy~się jednak komentować miejsca, gdzie zrozumienie
 poprawnego sensu tego symbolu jest wyjątkowo trudne.
 
+\vspace{\spaceFour}
+
+
+
+
+
+\start \StrWg{21}{7} W~tej linii znajdujemy tajemniczo wyglądający wzór
+\begin{equation}
+  \label{eq:Forys-Forys-82}
+  \sim_{ \Acal } \; \subseteq \; \sim_{ \Bcal },
+\end{equation}
+gdzie symbolu $\sim_{ \Acal }$ (analogicznie $\sim_{ \Bcal }$) używamy do zapisania,
+że~dwa elementy są ze sobą w~relacji $\Acal$. Przykładowo fakt, że~elementy
+$a$ i~$b$ są w~relacji $\Acal$, zapisujemy jako $a \sim_{ \Acal } b$. Jak
+jednak można napisać, że~symbol $\sim_{ \Acal }$ zawiera~się w~symbolu
+$\sim_{ \Bcal }$? Aby to wyjaśnić wprowadzimy dodatkową notację.
+
+W~systemie teorii mnogości, w~którym pracujemy w~tej książeczce, relacja
+w~zbiorze $X$ jest pewnym podzbiorem iloczynu kartezjańskiego~$X \times X$.
+Oznaczmy więc przez $R \subset X \times X$ zbiór wyznaczający tę relację, zaś przez
+$\sim_{ R }$ symbol którym będziemy oznaczać, że~dwa elementy~są w~zadanej
+relacji. Jeśli więc $a$ i~$b$ są w relacji $R$ to będziemy pisać
+\begin{equation}
+  \label{eq:Forys-Forys-83}
+  a \sim_{ R } b.
+\end{equation}
+
+Niech będą dane dwie relacje $R_{ 1 }$ i~$R_{ 2 }$, przy czym
+$R_{ 1 }, R_{ 2 } \subset X \times X$. Jeśli
+\begin{equation}
+  \label{eq:Forys-Forys-84}
+  R_{ 1 } \subset R_{ 2 },
+\end{equation}
+to mówimy, że relacja $R_{ 2 }$ jest mocniejsza od relacji $R_{ 1 }$ lub
+że~relacja $R_{ 1 }$ jest słabsza od relacji $R_{ 2 }$. W~takim razie zapis
+\begin{equation}
+  \label{eq:Forys-Forys-85}
+  \sim_{ R_{ 1 } } \; \subset \; \sim_{ R_{ 2 } },
+\end{equation}
+jest tylko inną, chyba mniej poprawną, wersją wzoru
+\eqref{eq:Forys-Forys-84}.
+
+
+
 
 
 
@@ -2288,8 +2332,8 @@ poprawnego sensu tego symbolu jest wyjątkowo trudne.
     18  & 22 & & $\mathbf{\Lcal_{ 1 }}$ \textbf{:} & $\mathbf{\Lcal_{ 1 }}$ \\
     18  & 23 & & $\mathbf{\Lcal_{ 2 }}$ \textbf{:} & $\mathbf{\Lcal_{ 2 }}$ \\
     18  & 24 & & $\mathbf{\Lcal_{ 3 }}$ \textbf{:} & $\mathbf{\Lcal_{ 3 }}$ \\
-    % & &  & &  \\
-    % & &  & & \\
+    19  &  5 & & S.C.Kleene & S.C. Kleene \\
+    19  & &  5 & $s \in S$,{ } $a \in A$ & $s \in S$, $a \in A$ \\
     20  & &  8 & $A^{ * } /_{ \rho }$ & $A^{ * }_{ / \rho }$ \\
     % & &   &  &  \\
     % &  & &  &  \\
@@ -2328,11 +2372,12 @@ poprawnego sensu tego symbolu jest wyjątkowo trudne.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    % &   & & &  \\
-    % &  & &  &  \\
-    % &  & &  &  \\
-    % & &  &  &  \\
-    % & &  &  &  \\
+    52  & & 13 & $[ w_{ 1 } ].....[ w_{ m } ]$ & $[ w_{ 1 } ] \ldots [ w_{ m } ]$ \\
+    52  & & 14 & $w_{ 1 }, ....., w_{ m }$ & $w_{ 1 }, \ldots, w_{ m }$ \\
+    52  & & 14 & $[ w_{ 1 } ].....[ w_{ m } ]$
+           & $[ w_{ 1 } ] \ldots [ w_{ m } ]$ \\
+    52  & & 14 & $[ w_{ 1 } ..... w_{ m } ]$ & $[ w_{ 1 } \ldots w_{ m } ]$ \\
+    52  & & 14 & $w_{ 1 } ..... w_{ m }$ & $w_{ 1 } \ldots w_{ m }$ \\
     % & &  &  &  \\
     % & &  &  &  \\
     % & &  & &  \\
@@ -2488,9 +2533,22 @@ $\#_{ V_{ N } } u \geq 1$ \\
 $x \in ( V_{ N } \cup V_{ T } )^{ + }$ \\
 \Powin $( V_{ N } \cup V_{ T } )^{ * }$, $v \in V_{ N }$,
 $x \in ( V_{ N } \cup V_{ T } )^{ + }$ \\
+\StrWd{19}{5} \\
+\Jest  $w \in A^{ * }${ } $f( s, wa ) = f( f( s, w ), a )$ \\
+\Powin $w \in A^{ * }$ przyjmujemy $f( s, wa ) = f\big( f( s, w ), a \big)$ \\
+\StrWd{19}{6} \\
+\Jest  $s \in S${ } $f( s, 1 ) = s$ \\
+\Powin $s \in S$ przyjmujemy $f( s, 1_{ A^{ * } } ) = s$ \\
 \StrWd{20}{10} \\
 \Jest  kongruencja{ }{ } $\rho \subset ( A^{ * } )^{ 2 }${ }{ } wyznacza \\
 \Powin kongruencja $\rho \subset ( A^{ * } )^{ 2 }$ wyznacza \\
+
+
+
+
+
+
+
 
 % ############################
 
