@@ -173,6 +173,83 @@ notacją.
 podano żadnej wyraźniej reguły, na podstawie której wybierano by jeden z~tych
 sposobów zapisu.
 
+\vspace{\spaceFour}
+
+
+
+
+
+\start \Str{201} Na tej stronie pierwszy raz zauważyłem następujący fenomen.
+Na stronie 200 zdanie angielskie „How are you?” tłumaczone jest na polskie
+zdanie „Jak się masz?”, więc w~tekście oba te zdania zaczynają się od dużej
+litery. Podczas gdy tutaj zdanie „How do you do?” jest tłumaczone na
+„jak~się masz?”, czyli po angielsku jest pisane z~dużej, a~po polsku z~małej
+litery. Widzimy tu jawną niekonsekwencję w~zapisie.
+
+Nie potrafię stwierdzić, czy ta strona to pierwsze pierwszy miejsce gdzie ta
+niekonsekwencja~się pojawia, a~znalezienie i~poprawienie wszystkich tego
+typu przypadków, nie jest warte zachodu.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \Str{212} Zajmiemy~się tutaj tym, jak należy rozumieć „stosunek
+liczby morfemów do liczby wyrazów”. Zacznijmy od tego, że~fragment na temat
+roli morfemów i~morfów w~teorii języka jest w~mojej ocenie dość niejasny
+i~problematyczny. Jakby autor sam nie był pewien, jak należy do~tego
+zagadnienia podejść. Podrozdział 5.3.10 na temat rozbieżności między teorią
+i~praktyką językoznawstwa stanowi mocny argument na rzecz tego, iż~Lyons był
+wewnętrznie skonfliktowany pisząc tą część książki. Stąd dalsze rozważania
+problemu muszą bazować na moim odczytaniu wyłożonej tu teorii.
+
+Według niego, przyjęta jest hierarchiczna struktura języka, wedle której
+najniższą jednostką jest morfem, a~wyrazy są jednostkami wyższego rzędu
+zbudowanymi z~morfemów. Stąd każdy wyraz musi zawierać co najmniej jeden
+morfem. W~tym miejscu przyjmiemy założenie, że~każdy pojedynczy morfem jest
+wyrazem, choć nie potrafię teraz ustalić, czy nie jest to przypadkiem
+wniosek z~podanej tu teorii języka. Jeśli więc oznaczmy przez $m$ liczbę
+morfemów, zaś przez $n$ liczbę wyrazów, to~musi zachodzi $n \geq m$, bowiem
+połączenie dwóch lub więcej morfemów może dać nam nowy wyraz. Tym samym
+\begin{equation}
+  \label{eq:Lyons-Wstep-do-jezykoznawstwa-01}
+  \frac{ n }{ m } \geq 1.
+\end{equation}
+
+Jeśli więc powyższy iloraz jest równy $1$, to każdy wyraz składa~się
+z~dokładnie jednego morfemu. W~takiej sytuacji gdyby jeden morfem
+pojawiałby~się w~dwóch wyrazach, to wyrazy te musiałyby być identyczne, więc
+nie istnieje możliwość „powtórnego wykorzystania” danego morfemu.
+Przypadek $\frac{ n }{ m } = 1$ opisuje więc przypadek języka
+absolutnie izolującego w~następującym sensie.
+
+Wedle tego co czytamy na stronie 208, dany wyraz $A$ możemy rozumieć jako
+zbiór morfemów. Przez odmianę wyrazu $A$ rozumiem wyraz $B$ należący do tego
+samego języka, który zawiera wszystkie morfemy wyrazu $A$ i~co najmniej
+jeden nowy. By być bardziej precyzyjnymi oznaczymy zbiór morfemów z~których
+zbudowany jest wyraz $A$ za~pomocą symbolu $S_{ A }$. W~terminach teorii
+mnogości moglibyśmy więc zapisać fakt, że~$B$ jest odmianą wyrazu $A$ jako
+\begin{equation}
+  \label{eq:Lyons-Wstep-do-jezykoznawstwa-02}
+  S_{ A } \subsetneq S_{ B }.
+\end{equation}
+Przy takim spojrzeniu na kwestię odmiany wyrazów, w~języku dla którego
+zachodzi $\frac{ n }{ m } = 1$ żaden wyraz nie może zostać odmieniony.
+
+Na zakończenie zauważmy, że~jeśli mamy dwa różne wyrazy $A$ i~$B$ należące
+do wspólnego języka, to teoria mnogości pozwala nam zawsze utworzyć
+\begin{equation}
+  \label{eq:Lyons-Wstep-do-jezykoznawstwa-03}
+  S_{ A } \cup S_{ B }.
+\end{equation}
+Nie możemy jednak zagwarantować, że~taki zbiór będzie reprezentował
+jakikolwiek wyraz rozważanego języka, więc istnienie sumy dwóch dowolnych
+zbiorów nie wyklucza istnienia języka absolutnie izolującego.
+
+\vspace{\spaceFour}
+
 
 
 
@@ -201,6 +278,9 @@ sposobów zapisu.
     100 & &  4 & 1. Wartość & 1, wartość \\
     100 & &  5 & $\frac{ 1 }{ n }$ (należy & $\frac{ 1 }{ n }$. Należy \\
     127 &  3 & & nieciągłej & ciągłej \\
+    163 & &  8 & do & od \\
+    % & & & & \\
+    % & & & & \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -222,6 +302,8 @@ sposobów zapisu.
 
 
 % ############################
+\newpage
+
 \Work{ % Autorzy i tytuł dzieła
   Marie-Anne Paveau, Georges-\'{E}lia Sarfati \\
   \textit{Wielkie teorie językoznawcze \\
