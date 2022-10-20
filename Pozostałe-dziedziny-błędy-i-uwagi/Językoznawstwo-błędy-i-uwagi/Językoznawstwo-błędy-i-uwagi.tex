@@ -254,6 +254,73 @@ zbiorów nie wyklucza istnienia języka absolutnie izolującego.
 
 
 
+\start \Str{241} Na tej stronie znajdujemy dość trudne do zrozumienia
+zdanie: „Jeżeli reguły te zastosować kolejno w~taki sposób, żeby każda (poza
+pierwszą) służyła do zastąpienia (czyli przepisania) na <<wyjściu>>
+poprzedzającej ją reguły symbolu po lewej stronie za~pomocą symbolu
+w~nawiasach na prawo od strzałki”. Spróbujemy tu wyjaśnić, jakie jest jej
+prawdopodobny sens.
+
+Ponieważ w~przytoczonym fragmencie z~rozważań została wykluczona reguła
+oznaczona numerem (1), również tutaj wykluczymy ją na razie z~analizowanych
+przypadków. Przyjmijmy, że dane są trzy symbole $A$, $B$ i~$C$, ich sens nie
+będzie miał znaczenia dla wyniku, oraz reguła
+\begin{equation}
+  \label{eq:Lyons-Wstep-do-jezykoznawstwa-04}
+  A \to B + C.
+\end{equation}
+Z~treści podanych na tej stronie wzorów wynika, że~reguła przepisywania dana
+przez wzór \eqref{eq:Lyons-Wstep-do-jezykoznawstwa-04} oznacza, iż
+w~dowolnej formule zawierające $A$, mamy prawo ten symbol zastąpić przez
+$A( B + C )$. Przykładowo, formuła postaci
+\begin{equation}
+  \label{eq:Lyons-Wstep-do-jezykoznawstwa-05}
+  A + B,
+\end{equation}
+może zostać przepisana jako
+\begin{equation}
+  \label{eq:Lyons-Wstep-do-jezykoznawstwa-06}
+  A( B + C ) + B.
+\end{equation}
+Regułę przepisywania zapiszemy teraz słownie, aby można było ją łatwiej
+porównać omawianym tu problematycznym fragmentem tekstu, odejdziemy przy tym
+trochę od stylu książki Lyonsa.
+
+Słowna postać procedury tej procedury jest następująca. Jeżeli w~formule
+występuje symbol który w~którejś z~danych reguł występuje po lewej stronie
+strzałki, to formuła ta może zostać przepisana w~ten sposób, że~ten symbol
+zostanie zastąpiony przez ten sam symbol, do którego dołączono symbol
+stojący po prawej stronie strzałki ujęty w nawiasy.
+
+Możemy teraz powrócić do problemu reguły~(1). Ma ona postać
+\begin{equation}
+  \label{eq:Lyons-Wstep-do-jezykoznawstwa-07}
+  \Sigma \to S,
+\end{equation}
+gdzie $S$ jest odpowiednim symbolem. Dlaczego ta reguła jest traktowana
+w~sposób specjalny i~Lyons wyłączył ją z~poprzednich rozważań? Najbardziej
+prawdopodobne wyjaśnienie jak wiedzę jest takie, że~symbol $\Sigma$ ma
+w~przedstawianej tu teorii specjalny status teorii specjalny status.
+Nie jest to symbol oznaczający jakąś część danego języka, lecz stan
+początkowy procedury przepisywania, który służy tylko do tego by
+wygenerować formułę $\Sigma( S )$, gdzie $S$ jest symbolem oznaczający jakąś
+część rozważanego języka. I~ten specjalny status symbolu $\Sigma$ wymusza osobne
+traktowanie reguły wedle której jest on przepisywany.
+
+Inaczej mówiąc, aby teoria była ścisła, musimy zostać podany osobny zestaw
+reguł dla przepisywania symboli oznaczających elementy danego języka,
+a~osobny dla symboli które nie oznaczają elementów tego języka. Wydaje~się
+rozsądne przyjęcie, że~Lyons założył, choć nie napisałem tego jawnie,
+iż~jedynym symbolem systemu przepisywania, który nie oznacza części języka
+jest symbol $\Sigma$, zaś jedyną regułą, która pozwala ten symbol przepisać jest
+reguła \eqref{eq:Lyons-Wstep-do-jezykoznawstwa-07}.
+
+\vspace{\spaceFour}
+
+
+
+
+
 % ##################
 \newpage
 
@@ -271,7 +338,6 @@ zbiorów nie wyklucza istnienia języka absolutnie izolującego.
     \hline
     32  & 17 & & inne, & inne; \\
     32  & 20 & & odosobnionych); & odosobnionych), \\
-    % & & & & \\
     96  & 15 & & minimalna & maksymalna \\
     96  & 18 & & $p_{ 1 } . p_{ 2 } . p_{ 3 } \ldots p_{ m }$
            & $p_{ 1 } \cdot p_{ 2 } \cdot p_{ 3 } \cdot \ldots \cdot p_{ m }$ \\
@@ -279,7 +345,8 @@ zbiorów nie wyklucza istnienia języka absolutnie izolującego.
     100 & &  5 & $\frac{ 1 }{ n }$ (należy & $\frac{ 1 }{ n }$. Należy \\
     127 &  3 & & nieciągłej & ciągłej \\
     163 & &  8 & do & od \\
-    % & & & & \\
+    228 &  6 & & 7{ }{ }{ } 1 & 7{ }{ } 1 \\
+    228 &  7 & & 9{ }{ } 10 & 9 10 \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
