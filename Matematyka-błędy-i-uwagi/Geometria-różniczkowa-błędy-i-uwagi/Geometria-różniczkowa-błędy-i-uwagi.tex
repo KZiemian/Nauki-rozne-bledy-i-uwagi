@@ -163,11 +163,11 @@
 \Work{ % Autor i tytuł dzieła
   William M. Boothby \\
   „An~Introduction to~Differentiable Manifolds and~Riemannian
-  Geometry”, \cite{BoothbyIntroductionToDifferentiableManifolds1986} }
+  Geometry”, \cite{BoothbyIntroductionToDifferentiableManifolds1986}}
 
 
 % ##################
-\CenterBoldFont{Uwagi}
+\CenterBoldFont{Uwagi do konkretnych stron}
 
 
 \start \StrWd{233}{3} Zamiast $dy/dx$ powinno być $d g( x )/dx$.
@@ -498,6 +498,18 @@ pisownię wzorów należałoby ujednolicić.
 
 
 
+\start \Str{13} Definicja zbiorów $V$ stanowiących bazę otoczeń punktu
+$( x_{ \varphi } )$ jest trochę myląca na pierwszy rzut oka, bo mówi tylko
+o~zachowaniu tylko skończonej ilości elementów składowych punktu
+$( y_{ \phi } )$. Wstałoby ją opisać w~sposób bardziej przejrzysty, w~tym
+jednak momencie brakuje mi do tego wiedzy z~topologii.
+
+\vspace{\spaceFour}
+
+
+
+
+
 \start \Str{14} Definicja zbioru $A \cdot B$ byłaby bardziej precyzyjna, gdy
 została zapisana w~poniższej postaci.
 \begin{equation}
@@ -511,8 +523,9 @@ została zapisana w~poniższej postaci.
 
 
 
-\start \Str{19} Warto zaznaczyć, że~naturalne włożenie $\omega_{ 0 }$ w~algebrę
-$A$, dla przypadku gdy $A$ jest algebrą z~jedynką, ma postać
+\start \Str{19} Warto zaznaczyć, że~naturalne włożenie ciała skalarów
+$\Kbb$ w~algebrę $A$, które oznaczamy $\omega_{ 0 }$, dla przypadku gdy $A$ jest
+algebrą z~jedynką, ma postać
 \begin{equation}
   \label{eq:Wojtynski-02}
   \Kbb \ni \lambda \mapsto \omega_{ 0 }( \lambda ) = \lambda \, 1 \in A,
@@ -657,6 +670,79 @@ $A^{ * } = A^{ -1 }$.
 
 
 
+\start \Str{32} W~tym miejscu warto się zatrzymać nad wzorem
+\begin{equation}
+  \label{eq:Wojtynski-07}
+  \omega( x, y ) = x^{ T } \Omega y,
+\end{equation}
+który rozpatrywać będziemy tylko w~kontekście przestrzeni $\Cbb^{ n }$.
+
+Po pierwsze zwróćmy uwagę, że~$x$ po lewej stronie tego wzoru oznacza coś
+innego, niż po prawej. Po lewej $x$ oznacza ciąg (kolumnę) liczb $n$ liczb
+zespolonych, podczas gdy po prawej stronie oznacza on kolumnę, zapewne inną
+od poprzedniej, liczb zespolonych daną zależnościami
+\begin{equation}
+  \label{eq:Wojtynski-08}
+  x =
+  \begin{bmatrix}
+    x_{ 1 } \\
+    x_{ 2 } \\
+    \vdots \\
+    x_{ n }
+  \end{bmatrix}, \quad
+  x = \sum_{ i = 1 }^{ n } x_{ i } e_{ i },
+\end{equation}
+gdzie $e_{ 1 }, e_{ 2 }, \ldots, e_{ n }$ jest pewną bazą przestrzeni $\Cbb^{ n }$.
+Oznaczenia te są nieporęczne, czego świadectwem jest to, iż~we wzorze
+\eqref{eq:Wojtynski-08} ponownie ten sam symbol „$x$” oznacza dwa różne
+byty matematyczne.
+
+By uniknąć dalszego zamieszania, wektory należące do
+$\Cbb^{ n }$ będziemy oznaczać czcionką pogrubioną, a~kolumny ich
+współrzędnych w~pewnej bazie, czcionką prostą. Mamy więc
+$\vecxbold, \vecybold, \vecebold_{ 1 }, \vecebold_{ 2 }, \ldots, \vecebold_{ n }
+\in \Cbb$, oraz
+\begin{equation}
+  \label{eq:Wojtynski-09}
+  x =
+  \begin{bmatrix}
+    x_{ 1 } \\
+    x_{ 2 } \\
+    \vdots \\
+    x_{ n }
+  \end{bmatrix}, \quad
+  \vecxbold = \sum_{ i = 1 }^{ n } x_{ i } \vecebold_{ i }.
+\end{equation}
+Wzór \eqref{eq:Wojtynski-07} zapiszemy teraz jako
+\begin{equation}
+  \label{eq:Wojtynski-10}
+  \omega( \vecxbold, \vecybold ) = x^{ T } \Omega y.
+\end{equation}
+
+Weźmy teraz $\vecxbold = \vecebold_{ i }$, $\vecybold = \vecebold_{ j }$.
+Z~wzoru \eqref{eq:Wojtynski-09} wynika teraz, że~$x_{ l } = \delta^{ l }_{ i }$,
+$y_{ m } = \delta^{ m }_{ j }$ (konwencja jest wprowadzona na stronie~33 książki
+Wojtyńskiego) i~tym samym
+\begin{equation}
+  \label{eq:Wojtynski-11}
+  \omega( \vecebold_{ i }, \vecebold_{ j } ) = x^{ T } \Omega y =
+  \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } x_{ l } \Omega_{ l m } y_{ m } =
+  \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } \delta^{ i }_{ l } \Omega_{ l m } \delta^{ j }_{ m } =
+  \Omega_{ i j },
+\end{equation}
+gdzie $\Omega_{ l m }$ oznacza wyraz macierzy $\Omega$ znajdujący~się na przecięciu
+$l$-tego wiersza i~$m$-tej kolumny. Tym samym otrzymaliśmy bardzo przydatny
+wzór
+\begin{equation}
+  \label{eq:Wojtynski-12}
+  \Omega_{ i j } = \omega( \vecebold_{ i }, \vecebold_{ j } ).
+\end{equation}
+
+\vspace{\spaceFour}
+
+
+
+
 \start \StrWd{32}{13} Nie mam pojęcia o~co chodzi w~stwierdzeniu
 „gdzie $n = \dim \Kbb^{ n }$”.
 
@@ -666,13 +752,304 @@ $A^{ * } = A^{ -1 }$.
 
 
 
-\start \StrWd{33}{10} W~niewianie wyglądającym wzorze
-$\left( \frac{ e_{ 1 } }{ \sqrt{ \alpha } }, \frac{ e_{ 2 } }{ \sqrt{ \alpha } } \right)$
+\start \StrWd{33}{10} W~niewianie wyglądającym wzorze $\left(
+  \frac{ e_{ 1 } }{ \sqrt{ \alpha } }, \frac{ e_{ 2 } }{ \sqrt{ \alpha } } \right)$
 ukryta jest trudność, wynikająca z~tego, że~pierwiastek kwadratowy na
 płaszczyźnie zespolonej jest zawsze funkcją dwuznaczną\footnote{Pierwiastek
   z~zera to jak wiadomo wyjątek.}. Trzeba więc przyjąć jakąś konwencję,
 która będzie nam mówiła, ile dokładnie wynosi $\sqrt{ \alpha }$, gdzie
 $\alpha \in \Cbb$ i~możemy spokojnie kontynuować rozważania.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \StrWd{33}{5} Podany tu wzór $\dim Y^{ \perp } = n - 2$ jest niewątpliwie
+prawdziwy, w~tym jednak momencie nie potrafię zrozumieć poprawności jego
+dowodu. Do problemu tego należy wrócić, po odświeżeniu sobie informacji
+z~algebry liniowej o~wymiarach przestrzeni wektorowych i~formach liniowych.
+
+\vspace{\spaceFour}
+
+
+
+\start \Str{33-34} Podany tu dowód sprowadzania formy symplektycznej do
+postaci kanonicznej zawiera dużą lukę, bowiem w~algorytmie sprowadzania do
+postaci kanonicznej został pominięty bardzo ważny krok. Wyjaśnienie jak
+należy poprawić przedstawiony algorytm, poprzedzimy ogólną dyskusją problemu.
+
+Przyjmijmy, że~tak jak w~książce, forma symplektyczna $\omega$ jest zadana na
+przestrzeni $\Cbb^{ n }$. Niech $n = 2k$, gdzie $k \in \Nbb \setminus \{ 0 \}$. Wiemy
+już, że~formy symplektyczne istnieją tylko na przestrzeni o~wymiarze
+parzystym więc takie $k$ istnieje. Przejdźmy do momentu, gdy macierz formy symplektycznej ma postać
+\begin{equation}
+  \label{eq:Wojtynski-13}
+  \Omega =
+  \begin{pmatrix}
+    \hphantom{-} 0 & 1 & \hphantom{-} 0 & \ldots \\
+    -1 & 0 & \hphantom{-} 0 & \ldots \\
+    \hphantom{-} 0 & 0 & \hphantom{-} 0 & I \\
+    \hphantom{-} 0 & 0 & -I & 0 \\
+  \end{pmatrix}
+\end{equation}
+Ta macierz nie wygląda najlepiej, acz stworzenie lepszej w~systemie \LaTeX{}
+odłożymy na kiedy indziej\footnote{Oby to kiedy indziej kiedyś nadeszło.}.
+Na razie zauważymy, że~symbol $\ldots$ oznacza, iż~ostatni podany jawnie symbol
+w~macierzy powtarza~się w danym wierszu, aż~do jego końca. Do tego w~trzecim
+i~czwartym wierszu każdy symbol oznacza blok macierzowy o~rozmiarach
+$(k - 1) \times ( k - 1 )$. Symbol $\matUnit$ oznacza macierz jednostkową, zaś
+$0$ macierz której elementami są wyłącznie zera. Jak już mówiliśmy, nie
+wygląda to ładnie, ale na razie musi wystarczyć.
+
+By ułatwić rachunki, przyjmujemy iż wyrażenie
+\begin{equation}
+  \label{eq:Wojtynski-14}
+  d_{ i } \leftrightarrow d_{ j },
+\end{equation}
+oznacza przejście do ze starej bazy $d_{ 1 }, d_{ 2 }, \ldots, d_{ n }$ nowej bazy
+$d'_{ 1 }, d'_{ 2 }, \ldots, d'_{ n }$ danej jako
+\begin{subequations}
+  \begin{align}
+    \label{eq:Wojtynski-15-A}
+    &d'_{ i } = d_{ j }, \\
+    \label{eq:Wojtynski-15-B}
+    &d'_{ j } = d_{ i }, \\
+    \label{eq:Wojtynski-15-C}
+    &d'_{ l } = d_{ l },
+  \end{align}
+\end{subequations}
+dla $l \notin \{ i, j \}$. Oprócz tego będziemy zwykle opuszczać prim
+w~oznaczeniach nowej bazy, gdyż nie powinno to wprowadzać dwuznaczności,
+a~poważnie uprości to zapis.
+
+Wedle tego co pisze w~książce, gdy macierz jest formie
+\eqref{eq:Wojtynski-06} to wystarczy wykonać jedną operację zmiany bazy,
+$d_{ 2 } \leftrightarrow d_{ k + 1 }$, by uzyskać postać kanoniczną, co jest nieprawdą.
+W~istocie potrzebne jest $k - 1$ operacji tego typu, które zaraz opiszemy.
+Zwróćmy uwagę, że~dla $n = 2$, $k = 1$ czy potrzebnych jest $1 - 1 = 0$
+operacja. Rzeczywiście, macierz \eqref{eq:Wojtynski-06} przyjmuje postać
+\begin{equation}
+  \label{eq:Wojtynski-16}
+  \Omega =
+  \begin{pmatrix}
+    \hphantom{-} 0 & 1 \\
+    -1 & 0
+  \end{pmatrix}.
+\end{equation}
+Gdy $n = 4$, $k = 2$, więc potrzebne jest $k - 1 = 1$ operacja zmiany bazy,
+którą jest właśnie operacja $d_{ 2 } \leftrightarrow d_{ k + 1 }$. Widzimy więc, że~dopiero
+dla $n = 6$, $k = 3$ przedstawiony w~książce algorytm przestaje dawać
+porządny wynik.
+
+Zauważmy teraz, że~ze względu na definicję wyrazów macierzy $\Omega$
+\begin{equation}
+  \label{eq:Wojtynski-17}
+  \Omega_{ l m } = \omega( d_{ l }, d_{ m } ),
+\end{equation}
+wynika, że~operacja $d_{ i } \leftrightarrow d_{ j }$ na poziomie macierzy sprowadza~się do
+\begin{enumerate}
+
+\item Zamiany miejscami $i$-tego wiersza z~$j$-tym.
+
+\item Zamiany miejscami $i$-tej kolumny z~$j$-tą.
+
+\end{enumerate}
+By to pokazać, wybierzmy najpierw $l \notin \{ i, j \}$. Wówczas wyrazy
+$\Omega_{ l m }$ dla $l \notin \{ i, j \}$ nie ulegają zmianie. Dla $m = i$, mamy zaś
+\begin{equation}
+  \label{eq:Wojtynski-18}
+  \Omega'_{ l i } = \omega( d'_{ l }, d'_{ i } ) = \omega( d_{ l }, d_{ j } ) =
+  \Omega_{ l j }.
+\end{equation}
+Analogiczny rachunek pokazuje, że~$\Omega'_{ k j } = \Omega_{ k i }$. Weźmy teraz
+$l = i$ i~$m \notin \{ i, j \}$. Prowadzi to do
+\begin{equation}
+  \label{eq:Wojtynski-19}
+  \Omega'_{ i m } = \omega( d'_{ i }, d'_{ m } ) = \omega( d_{ j }, d_{ m } ) =
+  \Omega_{ j m }.
+\end{equation}
+Przejdźmy teraz do przypadku $k = l$, $l = m$. Mamy wtedy
+\begin{equation}
+  \label{eq:Wojtynski-20}
+  \Omega'_{ i j } = \omega( d'_{ i }, d'_{ j } ) = \omega( d_{ j }, d_{ i } ) =
+  \Omega_{ j i }.
+\end{equation}
+Analogicznie przebiega rachunek pokazujący, że
+\begin{equation}
+  \label{eq:Wojtynski-21}
+  \Omega'_{ j i } = \Omega_{ i j }.
+\end{equation}
+Wzory \eqref{eq:Wojtynski-18}--\eqref{eq:Wojtynski-21} stanowią indeksowy
+zapis reguł 1 i~2.
+
+Jesteśmy teraz gotowi uzupełnić podany w~książce algorytm sprowadzania
+formy do postaci kanonicznej. W~momencie w~którym sprawdziliśmy macierz
+formy symplektycznej do postaci \eqref{eq:Wojtynski-07} należy wykonać
+$k - 1$ operacji zmiany bazy:
+\begin{subequations}
+  \begin{align}
+    \label{eq:Wojtynski-22-A}
+    d_{ 2 } &\leftrightarrow d_{ k + 1 }, \\
+    \label{eq:Wojtynski-22-B}
+    d_{ 2 } &\leftrightarrow d_{ 3 }, \\
+    \label{eq:Wojtynski-22-C}
+    d_{ 3 } &\leftrightarrow d_{ 4 }, \\
+    \label{eq:Wojtynski-22-D}
+    &\hspace{0.65em} \vdots \\
+    \label{eq:Wojtynski-22-E}
+    d_{ k - 1 } &\leftrightarrow d_{ k }.
+  \end{align}
+\end{subequations}
+Nie podamy w~pełni formalnego dowodu tej procedury, gdyż wymagałby on
+żmudnego operowania na~wskaźnikach, które zapewne nie wyjaśnia wiele,
+zamiast tego, pokażemy jak ta procedure działa dla przypadku $n = 8$.
+Zanim jednak to tego przejdziemy, pokażemy jak taki formalny dowód mógłby
+wyglądać.
+
+Niech $\Omega^{ 0 }$ oznacza macierz formy symplektycznej w~postaci kanonicznej.
+Jej elementy dane są jako
+\begin{equation}
+  \label{eq:Wojtynski-23}
+  \Omega^{ 0 }_{ l m } =
+  \begin{cases}
+    -\delta^{ l }_{ m - l }, \quad l = 1, 2, \ldots, k, \\
+    \hphantom{-} \delta^{ l - k }_{ m }, \quad l = k + 1, k + 2, \ldots, k.
+  \end{cases}
+\end{equation}
+We wzorach powyżej symbol $\delta^{ i }_{ j }$ oznacza symbol Kroneckera, nie zaś
+jak w~książce (zob. str.~33) macierz-kolumnę o~wyrazach danych przez
+odpowiednie wartości przyjmowane przez ten symbol. Jeżeli teraz zapiszemy
+w~notacji wskaźnikowej wyrazy macierzy $\Omega$, wzór \eqref{eq:Wojtynski-07}, to
+dzięki wzorom \eqref{eq:Wojtynski-18}--\eqref{eq:Wojtynski-21}, poprzez
+dokładną analizę, będziemy w~stanie pokazać, że~ciąg zmian baz
+\eqref{eq:Wojtynski-22-A}--\eqref{eq:Wojtynski-22-E} prowadzi od macierzy
+$\Omega$ do macierzy $\Omega^{ 0 }$. Na koniec zauważmy, że~ponieważ jak pokazano na
+stronie 33, macierz $\Omega$ jest antysymetryczna, wystarczy pokazać, że~ta
+procedure prowadzi do dobre postaci wyrazów $\Omega_{ l m }$, dla $l \leq m$ (albo
+$l \geq m$).
+
+Przejdźmy teraz to ilustracji działania procedury
+\eqref{eq:Wojtynski-22-A}--\eqref{eq:Wojtynski-22-E} dla przypadku $n = 8$,
+$k = 4$. W~momencie początkowym nasza macierz ma postać
+\begin{equation}
+  \label{eq:Wojtynski-24}
+  \Omega =
+  \begin{pmatrix}
+    \hphantom{-} 0 & 1 & \hphantom{-} 0 & \hphantom{-} 0
+    & \hphantom{-} 0 & 0 & 0 & 0 \\
+    -1 & 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+                         & 0 & 0 & 0 \\
+    \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0
+                     & \hphantom{-} 0 & 1 & 0 & 0 \\
+    \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0
+                     & \hphantom{-} 0 & 0 & 1 & 0 \\
+    \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0
+                     & \hphantom{-} 0 & 0 & 0 & 1 \\
+    \hphantom{-} 0 & 0 & -1 & \hphantom{-} 0 & \hphantom{-} 0
+                         & 0 & 0 & 0 \\
+    \hphantom{-} 0 & 0 & \hphantom{-} 0 & -1 & \hphantom{-} 0
+                         & 0 & 0 & 0 \\
+    \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0 & -1
+                         & 0 & 0 & 0
+  \end{pmatrix}.
+\end{equation}
+Musimy teraz dokonać zmian baz $d_{ 2 } \leftrightarrow d_{ 5 }$,
+$d_{ 2 } \leftrightarrow d_{ 3 }$, $d_{ 3 } \leftrightarrow d_{ 4 }$, przy czym będziemy korzystali
+z~reguł 1~i~2 podanych wcześniej.
+\begin{equation}
+  \label{eq:Wojtynski-25}
+  \begin{split}
+    &\begin{pmatrix}
+       \hphantom{-} 0 & 1 & \hphantom{-} 0 & \hphantom{-} 0
+       & \hphantom{-} 0 & 0 & 0 & 0 \\
+       -1 & 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+                        & 0 & 0 & 0 \\
+       \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0
+       & \hphantom{-} 0 & 1 & 0 & 0 \\
+       \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0
+       & \hphantom{-} 0 & 0 & 1 & 0 \\
+       \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0
+       & \hphantom{-} 0 & 0 & 0 & 1 \\
+       \hphantom{-} 0 & 0 & -1 & \hphantom{-} 0 & \hphantom{-} 0
+                        & 0 & 0 & 0 \\
+       \hphantom{-} 0 & 0 & \hphantom{-} 0 & -1 & \hphantom{-} 0
+                        & 0 & 0 & 0 \\
+       \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0 & -1
+                        & 0 & 0 & 0
+     \end{pmatrix}
+      \xrightarrow[ d_{ 2 } \, \leftrightarrow \, d_{ 5 } ]{}
+      \begin{pmatrix}
+        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+        & 1 & 0 & 0 & 0 \\
+        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+        & 0 & 0 & 0 & 1 \\
+        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+        & 0 & 1 & 0 & 0 \\
+        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+        & 0 & 0 & 1 & 0 \\
+        -1 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & 0 & 0 & 0
+                    & 0 \\
+        \hphantom{-} 0 & \hphantom{-} 0 & -1 & \hphantom{-} 0 & 0 & 0 & 0
+                    & 0 \\
+        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & -1 & 0 & 0 & 0
+                    & 0 \\
+        \hphantom{-} 0 & -1 & \hphantom{-} 0 & \hphantom{-} 0 & 0 & 0 & 0
+                    & 0 \\
+      \end{pmatrix}
+      \xrightarrow[ d_{ 2 } \, \leftrightarrow \, d_{ 3 } ]{ } \\[1em]
+    &\xrightarrow[ d_{ 2 } \, \leftrightarrow \, d_{ 3 } ]{ }
+      \begin{pmatrix}
+        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+        & 1 & 0 & 0 & 0 \\
+        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+        & 0 & 1 & 0 & 0 \\
+        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+        & 0 & 0 & 0 & 1 \\
+        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+        & 0 & 0 & 1 & 0 \\
+        -1 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & 0 & 0 & 0
+                    & 0 \\
+        \hphantom{-} 0 & -1 & \hphantom{-} 0 & \hphantom{-} 0 & 0 & 0 & 0
+                    & 0 \\
+        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & -1 & 0 & 0 & 0
+                    & 0 \\
+        \hphantom{-} 0 & \hphantom{-} 0 & -1 & \hphantom{-} 0 & 0 & 0 & 0
+                    & 0
+      \end{pmatrix}
+      \xrightarrow[ d_{ 3 } \, \leftrightarrow \, d_{ 4 } ]{}
+      \begin{pmatrix}
+        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+        & \hphantom{-} 0 & 1 & 0 & 0 & 0 \\
+        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+        & \hphantom{-} 0 & 0 & 1 & 0 & 0 \\
+        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+        & \hphantom{-} 0 & 0 & 0 & 1 & 0 \\
+        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+        & \hphantom{-} 0 & 0 & 0 & 0 & 1 \\
+        -1 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & 0
+                             & 0 & 0 & 0 \\
+        \hphantom{-} 0 & -1 & \hphantom{-} 0 & \hphantom{-} 0 & 0
+                             & 0 & 0 & 0 \\
+        \hphantom{-} 0 & \hphantom{-} 0 & -1 & \hphantom{-} 0 & 0 & 0
+                                 & 0 & 0 \\
+        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & -1 & 0 & 0
+        & 0 & 0 \\
+      \end{pmatrix}
+  \end{split}
+\end{equation}
+Ten przykład powinien dobrze ilustrować, w~jaki sposób działa podany
+algorytm sprowadzania formy symplektycznej do postaci kanonicznej.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \Str{34} Lepiej wyjaśnić zdanie, że forma symplektyczna to taka,
+która ma postać (2.11). ???
 
 \vspace{\spaceFour}
 
@@ -757,12 +1134,13 @@ wygenerowanie w~\LaTeX{} macierzy, która lepiej ilustrowałaby problem.
              \frac{ \overline{ \langle x', y \rangle } }{ | \langle x', y \rangle | }$ \\
     21  &  5 & & $\langle x, y \rangle \neq 0$ & $\langle x', y \rangle \neq 0$ \\
     23  &  4 & & $\lambda ( A_{ 1 } x )$ & $\lambda \big( A_{ 1 }( x ) \big)$ \\
+    23  & &  3 & $f( x_{ 1 }, \ldots x_{ n } )$ & $f( x_{ 1 }, \ldots, x_{ n } )$ \\
+    23  & &  3 & $x_{ 1 }^{ \, k_{ 1 } }, \ldots x_{ n }^{ \, k_{ n } }$
+           & $x_{ 1 }^{ \, k_{ 1 } } \ldots x_{ n }^{ \, k_{ n } }$ \\
+    23  & &  3 & $( x_{ 1 } \ldots x_{ n } )$ & $( x_{ 1 }, \ldots, x_{ n } )$ \\
     24  & 15 & & $( a, b ) \in \Omega$ & $( a, b ) \in \Omega$, \\
     24  & & 12 & $\Ccal^{ 1 }$ & $\Ccal^{ k }$ \\
     25  &  9 & & $1 / 2 \leq t$ & $1 / 2 < t$ \\
-    25  & 12 & & $i_{ x_{ 0 } }( t ) = 0$ & $i_{ x_{ 0 } }( t ) = x_{ 0 }$ \\
-    26  & &  4 & 46 & 47 \\
-    26  & &  1 & $x \in X$ & $a \in B$ \\
     \hline
   \end{tabular}
 
@@ -779,6 +1157,9 @@ wygenerowanie w~\LaTeX{} macierzy, która lepiej ilustrowałaby problem.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
+    25  & 12 & & $i_{ x_{ 0 } }( t ) = 0$ & $i_{ x_{ 0 } }( t ) = x_{ 0 }$ \\
+    26  & &  4 & 46 & 47 \\
+    26  & &  1 & $x \in X$ & $a \in B$ \\
     27  &  2 & & $= d$ & $= u$ \\
     29  &  9 & & $\textrm{Gl}( n, \Cbb )$ & $\GL( n, \Cbb )$ \\
     29  & &  9 & $( A B )^{ T } = B^{ T } A^{ T }$
@@ -789,11 +1170,8 @@ wygenerowanie w~\LaTeX{} macierzy, która lepiej ilustrowałaby problem.
     30  & & 10 & $*$ -- operacją & $*$ operacją \\
     31  & 13 & & $\widetilde{ ( A B ) }$ & $\widetilde{ ( A \cdot B ) }$ \\
     32  & &  2 & (2.9) & (2.10) \\
-    34  & &  6 & \textit{$n$-tą} & \textit{$N$-tą} \\
-    %   & & & \textit{to istnieje w~$X$} & \textit{to w~$X$ istniej} \\
-    %   & &  & $U \subset \Omega_{ x_{ 0 } }$ & $U \in \Omega_{ x_{ 0 } }$ \\
-    %   & & & $\rho( X, Y )$ & $\rho( x, y )$ \\
-    %   & &  & zbioru & niepustego zbioru \\
+    36  &  8 & & $\omega( xAy )$ & $\omega( x, Ay )$ \\
+    % & &  &  &  \\
     %   & & & $y_{ \varphi } \in X_{ \varphi }$ & $x_{ \varphi } \in X_{ \varphi }$ \\
     %   & & & $x_{ 1 },\;\; x_{ 2 } \in X$ & $x_{ 1 },\, x_{ 2 } \in X$ \\
     %   & & & $x e_{ + }$ & $x \, e_{ + }$ \\
@@ -920,10 +1298,18 @@ wygenerowanie w~\LaTeX{} macierzy, która lepiej ilustrowałaby problem.
 \StrWd{31}{4} \\
 \Jest  $A \in \OStraight( n, \Rbb )$ \\
 \Powin $A \in \OStraight( n, \Rbb )$ zachodzi \\
-% \StrWd{}{} \\
-
-
-
+\StrWd{34}{6} \\
+\Jest  \textit{$n$-tą grupą symplektyczną} (oznaczaną $\Sp( n )$)
+nazywamy \\
+\Powin Przez \textit{$n$-tą grupę symplektyczną} (oznaczaną $\Sp( n )$)
+będziemy rozumieć \\
+\StrWd{34}{3} \\
+\Jest  \textit{$N$-tą zespoloną} (rzeczywistą) \textit{liniową grupą
+  symplektyczną} (oznaczenia $\Sp( n, \Cbb )$, $\Sp( n, \Rbb )$) \\
+nazywamy \\
+\Powin Przez \textit{$n$-tą zespoloną} (rzeczywistą) \textit{liniową grupę
+  symplektyczną} (oznaczenia $\Sp( n, \Cbb )$, $\Sp( n, \Rbb )$) będziemy
+rozumieć \\
 
 
 
@@ -941,6 +1327,7 @@ wygenerowanie w~\LaTeX{} macierzy, która lepiej ilustrowałaby problem.
 % ####################################################################
 % ####################################################################
 % Bibliografia
+
 \bibliographystyle{plalpha}
 
 \bibliography{MathComScienceBooks}{}
