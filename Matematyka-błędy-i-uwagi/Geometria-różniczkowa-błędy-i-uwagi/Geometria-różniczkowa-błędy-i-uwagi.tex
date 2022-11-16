@@ -606,8 +606,9 @@ inwolucją.
 
 
 
-\start \Str{31} Aby udowodnić, że~dla macierzy $A \in \OStraight( n, \Rbb )$
-zachodzi $| a_{ i, j } | \leq 1$, dla $i, j = 1, 2, \ldots, n$, należy w~równości
+\start \Str{31} Aby udowodnić, że~dla macierzy
+$A \in \OStraightBold( n, \Rbb )$ zachodzi $| a_{ i, j } | \leq 1$, dla
+$i, j = 1, 2, \ldots, n$, należy w~równości
 \begin{equation}
   \label{eq:Wojtynski-04}
   \sum_{ j = 1 }^{ n } a_{ j i } \, a_{ j k } = \delta_{ k }^{ i }, \quad
@@ -1070,7 +1071,72 @@ nazywamy \textit{formą symplektyczną}.” jest niefortunnie sformułowane.
 W~istocie formę nazywamy formą symplektyczną, jeśli w~pewnej bazie
 przyjmuje postać daną wzorem (2.11).
 
+Stwierdzenie~2.11 pokazuje, że~każda dwuliniowa, antysymetryczna
+i~nieosobliwa forma, jest formą symplektyczną. Teraz udowodnimy odwrotną
+implikację, mianowicie, iż~każda forma symplektyczna jest antysymetryczna
+i~nieosobliwa.
 
+Z~definicji, każda form symplektyczna jest formą dwuliniową i~istnieje baza
+przestrzeni $\Cbb^{ n }$, gdzie $n = 2k$, taka że
+\begin{equation}
+  \label{eq:Wojtynski-26}
+  \omega( \vecxbold, \vecybold ) =
+  \sum_{ i = 1 }^{ k } x_{ i } \, y_{ k + i } - y_{ i } \, x_{ k + i }, \qquad
+  \vecxbold = \sum_{ i = 1 }^{ n } x_{ i } \, \vecebold_{ i }, \;\;
+  \vecybold = \sum_{ i = 1 }^{ n } y_{ i } \, \vecebold_{ i }.
+\end{equation}
+Z~tego od razu wynika, że~$\omega$ jest formą antysymetryczna. Teraz wystarczy
+pokazać, że~jeśli $\omega( \vecxbold, \vecybold ) = 0$ dla każdego
+$\vecybold \in \Cbb^{ n }$, to $\vecxbold = \vecZeroBold$. Załóżmy, że~dany
+jest taki $\vecxbold$ i~weźmy $\vecybold = ( \delta^{ i }_{ j } )$, gdzie
+$1 \leq j \leq k$. Obliczmy teraz
+\begin{equation}
+  \label{eq:Wojtynski-27}
+  \omega( \vecxbold, \vecybold ) =
+  \sum_{ i = 1 }^{ k } x_{ i } \, y_{ k + i } - y_{ i } \, x_{ k + i } =
+  \sum_{ i = 1 }^{ k } x_{ i } \, \delta^{ k + i }_{ j } - \delta^{ i }_{ j } \, x_{ k + i } =
+  -x_{ k + j } = 0.
+\end{equation}
+Widzimy więc, że~$x_{ i } = 0$, dla $k + 1 \leq i \leq n$. Analogicznie biorąc
+$\vecebold = ( \delta^{ i }_{ k + j } )$, przy $1 \leq j \leq k$, dowodzimy,
+że~$x_{ i } = 0$, dla $1 \leq i \leq k$, tym samym pokazaliśmy,
+że~$\vecxbold = \vecZeroBold$. To~kończy dowód twierdzenia, iż~każda forma
+symplektyczna, jest dwuliniową, antysymetryczną i~nieosobliwą.
+
+\vspace{\spaceFour}
+
+
+
+
+\start \textbf{Str. 34, wiersze (od dołu) 1--3.} Znajdujemy tu informację,
+że~$n$-tą zespoloną (rzeczywistą) liniową grupę symplektyczną, którą oznaczamy jako $\Sp( n, \Cbb )$ ($\Sp( n, \Rbb )$), definiujemy
+jako podgrupę $\GL( 2n, \Cbb )$ ($\GL( 2n, \Rbb )$) składającą~się z~macierzy nieosobliwych stopnia $2n$ zachowujących macierz
+\begin{equation}
+  \label{eq:Wojtynski-28}
+  \Omega =
+  \begin{pmatrix}
+    \hphantom{-} 0 & I \\
+    -I & 0
+  \end{pmatrix},
+\end{equation}
+przy czym $\Omega$ jest macierzą kwadratową stopnia $2n$. Rozumiemy przez to,
+że~macierz $A$ należy do $\Sp( n, \Rbb )$ ($\Sp( n, \Cbb )$), jeśli
+\begin{equation}
+  \label{eq:Wojtynski-29}
+  A^{ T } \Omega A = \Omega.
+\end{equation}
+Dodatkowe zaznaczanie, że~$A$ musi być macierzą nieosobliwą, kładzie na tą
+własność tak silny nacisk, iż~może prowadzić do nieporozumień.
+
+Zauważmy, że~macierz $A$ musi być macierzą nieosobliwą z~dwóch powodów. Po
+pierwsze, bo $A \in \GL( n, \Cbb)$ ($A \in \GL( n, \Rbb )$), a~z~definicji
+każda macierz tego typu jest nieosobliwa. Po drugie, jak zostało to
+zauważone wcześniej na tej stronie książki Wojtyńskiego, jeśli macierz $A$
+zachowuje nieosobliwą macierz, to sama jest nieosobliwa, macierz $\Omega$ jest
+zaś nieosobliwa. Dowód nieosobliwości macierz $\Omega$ można uzyskać na wiele
+sposobów, choćby modyfikując podany w~tych notatkach dowód tego, że~forma
+symplektyczna, czyli taka która w~pewnej bazie przyjmuje postać
+\eqref{eq:Wojtynski-26}, jest nieosobliwa w~podanym na~32 sensie.
 
 \vspace{\spaceFour}
 
@@ -1082,13 +1148,29 @@ przyjmuje postać daną wzorem (2.11).
 macierzy brakuje symbolu $0$. Kiedyś można by~się zastanowić nad
 wygenerowanie w~\LaTeX{} macierzy, która lepiej ilustrowałaby problem.
 
+\vspace{\spaceFour}
 
 
 
 
 
-
-
+\start \StrWg{34}{8} Aby definicja przestrzeni $\spFrak( n, \Kbb )$ była
+ścisła, należy doprecyzować czym jest pojawiająca~się w~niej forma $\omega$.
+Należy bowiem przyjąć, że~$\omega$ nie jest dowolną formą symplektyczną, czyli
+taką która w~\textit{pewnej} bazie przyjmuje postać
+\eqref{eq:Wojtynski-26}, lecz taką która przyjmuje tą postać w~bazie
+kanonicznej. Inaczej mówiąc, jeśli
+\begin{equation}
+  \label{eq:Wojtynski-30}
+  \vecxbold = ( x_{ 1 }, x_{ 2 }, \ldots, x_{ 2n } ) \in \Kbb^{ 2n }, \quad
+  \vecybold = ( y_{ 1 }, y_{ 2 }, \ldots, y_{ 2n } ) \in \Kbb^{ 2n },
+\end{equation}
+to zachodzi
+\begin{equation}
+  \label{eq:Wojtynski-31}
+  \omega( \vecxbold, \vecybold ) =
+  \sum_{ i = 1 }^{ n } x_{ i } \, y_{ n + i } - y_{ i } \, x_{ n + i }.
+\end{equation}
 
 
 
@@ -1189,42 +1271,15 @@ wygenerowanie w~\LaTeX{} macierzy, która lepiej ilustrowałaby problem.
     29  &  7 & & $( A B )^{ * }$ & $( A \cdot B )^{ * }$ \\
     30  & & 16 & $\oFrak( n, \Cbb )$ & $\oFrak_{ + }( n, \Cbb )$ \\
     30  & & 10 & $*$ -- operacją & $*$ operacją \\
+    31  &  5 & & $a_{ i i } = -\bar{a}_{ i i }$
+           & $-a_{ i i } = \bar{a}_{ i i }$ \\
     31  & 13 & & $\widetilde{ ( A B ) }$ & $\widetilde{ ( A \cdot B ) }$ \\
+    31  & &  7 & \big(($A \in \OStraightBold( n, \Rbb )$\big)
+           & \big($A \in \OStraightBold( n, \Rbb )$\big) \\
     32  & &  2 & (2.9) & (2.10) \\
+    36  &  8 & & $\End( \Kbb^{ 2n } )$ & $\lFrak( 2n, \Kbb )$ \\
     36  &  8 & & $\omega( xAy )$ & $\omega( x, Ay )$ \\
     % & &  &  &  \\
-    %   & & & $y_{ \varphi } \in X_{ \varphi }$ & $x_{ \varphi } \in X_{ \varphi }$ \\
-    %   & & & $x_{ 1 },\;\; x_{ 2 } \in X$ & $x_{ 1 },\, x_{ 2 } \in X$ \\
-    %   & & & $x e_{ + }$ & $x \, e_{ + }$ \\
-    %   & & & $\mu\big( x, \mu( x, y ) \big)$
-    %        & $\mu\big( x, \mu( y, z ) \big)$ \\
-    %   & & & $\mathbf{x} \in \mathbf{X}$ & $x \in X$ \\
-    %   & & & $\mu \omega( x_{ 1 }, y )$ & $\mu \, \omega( x_{ 2 }, y )$ \\
-    %   &  & & $W$ modulo $V$, & $W$, \\
-    %   &  & & $\tau( x_{ j }, y_{ k } )$
-    %        & $\tau( x_{ j }, y_{ k } ) = \pi( x_{ j } \otimes y_{ k } )$ \\
-    %   & & & $X^{ k } \times X^{ m }$ & $X^{ \otimes k } \times X^{ \otimes m }$ \\
-    %   & & & $X^{ k } \otimes X^{ m }$ & $X^{ \otimes k } \otimes X^{ \otimes m }$ \\
-    %   &  & & $\overline{ F( y, x ) }$ & $\overline{ F( y, x ) }$. \\
-    %   &  & & (tj. & Tj. \\
-    %   &  & & $\Rbb$)) & $\Rbb$) \\[0.3em]
-    %   &  & & $\displaystyle
-    %              \frac{ \overline{ \langle x, y \rangle } }{ | \langle x, y \rangle | }$
-    %        & $\displaystyle
-    %          \frac{ \overline{ \langle x', y \rangle } }{ | \langle x', y \rangle | }$ \\
-    %   &  & & $\langle x, y \rangle \neq 0$ & $\langle x', y \rangle \neq 0$ \\
-    %   &  & & $\lambda ( A_{ 1 } x )$ & $\lambda \big( A_{ 1 }( x ) \big)$ \\
-    %   &  & & $( a, b ) \in \Omega$ & $( a, b ) \in \Omega$, \\
-    %   & &  & $\Ccal^{ 1 }$ & $\Ccal^{ k }$ \\
-    %   &  & & $1 / 2 \leq t$ & $1 / 2 < t$ \\
-    %   & & & $i_{ x_{ 0 } }( t ) = 0$ & $i_{ x_{ 0 } }( t ) = x_{ 0 }$ \\
-    %   &  & & $e_{ i } ( e_{ j }, e_{ k } )$
-    %        & $e_{ i } \cdot ( e_{ j } \cdot e_{ k } )$ \\
-    %   & & &
-    %        & $( e_{ i } \cdot e_{ j } ) \cdot e_{ k }$ \\
-    %   & &  & $\bar{q} q$ & $\bar{q} \cdot q$ \\
-    %   & &  & $e_{ i } ( e_{ j } \cdot e_{ k } )$
-    % & $e_{ i } \cdot ( e_{ j } \cdot e_{ k } )$ \\
     37  &  8 & & $e_{ i } ( e_{ j }, e_{ k } )$
            & $e_{ i } \cdot ( e_{ j } \cdot e_{ k } )$ \\
     % & & & & \\
@@ -1317,8 +1372,8 @@ wygenerowanie w~\LaTeX{} macierzy, która lepiej ilustrowałaby problem.
 \Jest  $\rho( x_{ 1 } ) \cdot \rho( x_{ 2 } ) \ldots \rho( x_{ n } )$ \\
 \Powin $\rho( x_{ 1 } ) \cdot \rho( x_{ 2 } ) \cdot \ldots \cdot \rho( x_{ n } )$ \\
 \StrWd{31}{4} \\
-\Jest  $A \in \OStraight( n, \Rbb )$ \\
-\Powin $A \in \OStraight( n, \Rbb )$ zachodzi \\
+\Jest  $A \in \OStraightBold( n, \Rbb )$ \\
+\Powin $A \in \OStraightBold( n, \Rbb )$ zachodzi \\
 \StrWd{34}{6} \\
 \Jest  \textit{$n$-tą grupą symplektyczną} (oznaczaną $\Sp( n )$)
 nazywamy \\
@@ -1331,6 +1386,11 @@ nazywamy \\
 \Powin Przez \textit{$n$-tą zespoloną} (rzeczywistą) \textit{liniową grupę
   symplektyczną} (oznaczenia $\Sp( n, \Cbb )$, $\Sp( n, \Rbb )$) będziemy
 rozumieć \\
+\StrWd{35}{3} \\
+\Jest  czyli $\bar{A}^{ T } \cdot A = I$ lub inaczej $\bar{A}^{ T } = A^{ -1 }$,
+czyli $\widetilde{A} = A^{ -1 }$ \\[0.5em]
+\Powin czyli $\bar{A} = \Big( A^{ T } \Big)^{ -1 }$, co można zapisać jako
+$\widetilde{A} = \bar{A}$ \\
 
 
 
