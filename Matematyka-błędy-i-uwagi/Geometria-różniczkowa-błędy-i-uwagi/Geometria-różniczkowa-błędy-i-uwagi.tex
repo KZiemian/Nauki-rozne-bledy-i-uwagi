@@ -641,8 +641,8 @@ trochę bardziej jasnym i~zupełnym.
 
 
 
-\start \Str{31} Czy warunek $A A^{ T } = I$ wynika z~warunku $A^{ T } A = I$,
-gdy $A$ jest macierzą kwadratową wymiaru $n$?
+\start \Str{31} Czy warunek $A A^{ T } = \matUnit$ wynika z~warunku
+$A^{ T } A = \matUnit$, gdy $A$ jest macierzą kwadratową wymiaru $n$?
 
 \vspace{\spaceFour}
 
@@ -652,18 +652,19 @@ gdy $A$ jest macierzą kwadratową wymiaru $n$?
 
 \start \Str{32} Bezpośrednie przekształcenie wzoru
 $\bar{A} = \widetilde{A} = ( A^{ T } )^{ -1 }$ prowadzi do dwóch zależności:
-$A^{ T } \bar{A} = I$, $\bar{A} A^{ T } = I$. Dopiero gdy dokonamy sprzężenia
-zespolonego obu stron drugiej z~tych równości dostanie podany w~książce wzór
-$A \bar{A}^{ T } = I$. Nie mogę mieć pewności, czemu autor zdecydował~się
-zapisać te zależności w~takiej formie, mogę jedynie podejrzewać, że~chodziło
-o~to by wyprowadzone z~nich wzory (2.9) przyjęły bardziej symetryczną postać.
+$A^{ T } \bar{A} = \matUnit$, $\bar{A} A^{ T } = \matUnit$. Dopiero gdy
+dokonamy sprzężenia zespolonego obu stron drugiej z~tych równości dostanie
+podany w~książce wzór $A \bar{A}^{ T } = \matUnit$. Nie mogę mieć pewności,
+czemu autor zdecydował~się zapisać te zależności w~takiej formie, mogę
+jedynie podejrzewać, że~chodziło o~to by wyprowadzone z~nich wzory (2.9)
+przyjęły bardziej symetryczną postać.
 
 Jeżeli teraz dokonamy obustronnego sprzężenia zespolonego równości
-$A^{ T } \bar{A} = I$ to dostaniemy $\bar{A}^{ T } A = I$, co wraz
-z~$A \bar{A}^{ T } = I$ prowadzi do znanego wniosku: dla macierzy unitarnej
-$A$ zachodzi $\bar{A}^{ T } = A^{ -1 }$. Używając operacji sprzężenia
-hermitowskiego, możemy tę równość zapisać w~bardzie popularnej formie
-$A^{ * } = A^{ -1 }$.
+$A^{ T } \bar{A} = \matUnit$ to dostaniemy $\bar{A}^{ T } A = \matUnit$, co
+wraz z~$A \bar{A}^{ T } = \matUnit$ prowadzi do znanego wniosku: dla
+macierzy unitarnej $A$ zachodzi $\bar{A}^{ T } = A^{ -1 }$. Używając
+operacji sprzężenia hermitowskiego, możemy tę równość zapisać w~bardzie
+popularnej formie $A^{ * } = A^{ -1 }$.
 
 \vspace{\spaceFour}
 
@@ -674,7 +675,7 @@ $A^{ * } = A^{ -1 }$.
 \start \Str{32} W~tym miejscu warto się zatrzymać nad wzorem
 \begin{equation}
   \label{eq:Wojtynski-07}
-  \omega( x, y ) = x^{ T } \Omega y,
+  \omega( x, y ) = x^{ T } \Omega \, y,
 \end{equation}
 który rozpatrywać będziemy tylko w~kontekście przestrzeni $\Cbb^{ n }$,
 zwracając tylko uwagę, że~przedstawione tu rozumowanie można uogólnić
@@ -693,7 +694,7 @@ od poprzedniej, liczb zespolonych daną zależnościami
     \vdots \\
     x_{ n }
   \end{bmatrix}, \quad
-  x = \sum_{ i = 1 }^{ n } x_{ i } e_{ i },
+  x = \sum_{ i = 1 }^{ n } x_{ i } \, e_{ i },
 \end{equation}
 gdzie $e_{ 1 }, e_{ 2 }, \ldots, e_{ n }$ jest pewną bazą przestrzeni $\Cbb^{ n }$.
 Oznaczenia te są nieporęczne, czego świadectwem jest to, iż~we wzorze
@@ -719,7 +720,7 @@ $\vecxbold, \vecybold, \vecebold_{ 1 }, \vecebold_{ 2 }, \ldots, \vecebold_{ n }
 Wzór \eqref{eq:Wojtynski-07} zapiszemy teraz jako
 \begin{equation}
   \label{eq:Wojtynski-10}
-  \omega( \vecxbold, \vecybold ) = x^{ T } \Omega y.
+  \omega( \vecxbold, \vecybold ) = x^{ T } \Omega \, y.
 \end{equation}
 
 Weźmy teraz $\vecxbold = \vecebold_{ i }$, $\vecybold = \vecebold_{ j }$.
@@ -728,9 +729,9 @@ $y_{ m } = \delta^{ m }_{ j }$ (konwencja jest wprowadzona na stronie~33 książ
 Wojtyńskiego) i~tym samym
 \begin{equation}
   \label{eq:Wojtynski-11}
-  \omega( \vecebold_{ i }, \vecebold_{ j } ) = x^{ T } \Omega y =
-  \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } x_{ l } \Omega_{ l m } y_{ m } =
-  \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } \delta^{ i }_{ l } \Omega_{ l m } \delta^{ j }_{ m } =
+  \omega( \vecebold_{ i }, \vecebold_{ j } ) = x^{ T } \Omega \, y =
+  \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } x_{ l } \, \Omega_{ l m } \, y_{ m } =
+  \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } \delta^{ i }_{ l } \, \Omega_{ l m } \, \delta^{ j }_{ m } =
   \Omega_{ i j },
 \end{equation}
 gdzie $\Omega_{ l m }$ oznacza wyraz macierzy $\Omega$ znajdujący~się na przecięciu
@@ -808,8 +809,8 @@ parzystym więc takie $k$ istnieje. Przejdźmy do momentu, gdy macierz formy sym
   \begin{pmatrix}
     \hphantom{-} 0 & 1 & \hphantom{-} 0 & \ldots \\
     -1 & 0 & \hphantom{-} 0 & \ldots \\
-    \hphantom{-} 0 & 0 & \hphantom{-} 0 & I \\
-    \hphantom{-} 0 & 0 & -I & 0 \\
+    \hphantom{-} 0 & 0 & \hphantom{-} 0 & \matUnit \\
+    \hphantom{-} 0 & 0 & -\matUnit & 0 \\
   \end{pmatrix}
 \end{equation}
 Ta macierz nie wygląda najlepiej, acz stworzenie lepszej w~systemie \LaTeX{}
@@ -817,7 +818,7 @@ odłożymy na kiedy indziej\footnote{Oby to kiedy indziej kiedyś nadeszło.}.
 Na razie zauważymy, że~symbol $\ldots$ oznacza, iż~ostatni podany jawnie symbol
 w~macierzy powtarza~się w danym wierszu, aż~do jego końca. Do tego w~trzecim
 i~czwartym wierszu każdy symbol oznacza blok macierzowy o~rozmiarach
-$(k - 1) \times ( k - 1 )$. Symbol $\matUnit$ oznacza macierz jednostkową, zaś
+$( k - 1 ) \times ( k - 1 )$. Symbol $\matUnit$ oznacza macierz jednostkową, zaś
 $0$ macierz której elementami są wyłącznie zera. Jak już mówiliśmy, nie
 wygląda to ładnie, ale na razie musi wystarczyć.
 
@@ -1109,21 +1110,23 @@ symplektyczna, jest dwuliniową, antysymetryczną i~nieosobliwą.
 
 
 \start \textbf{Str. 34, wiersze (od dołu) 1--3.} Znajdujemy tu informację,
-że~$n$-tą zespoloną (rzeczywistą) liniową grupę symplektyczną, którą oznaczamy jako $\Sp( n, \Cbb )$ ($\Sp( n, \Rbb )$), definiujemy
-jako podgrupę $\GL( 2n, \Cbb )$ ($\GL( 2n, \Rbb )$) składającą~się z~macierzy nieosobliwych stopnia $2n$ zachowujących macierz
+że~$n$-tą zespoloną (rzeczywistą) liniową grupę symplektyczną, którą
+oznaczamy jako $\Sp( n, \Cbb )$ ($\Sp( n, \Rbb )$), definiujemy
+jako podgrupę $\GL( 2n, \Cbb )$ ($\GL( 2n, \Rbb )$) składającą~się
+z~macierzy nieosobliwych stopnia $2n$ zachowujących macierz
 \begin{equation}
   \label{eq:Wojtynski-28}
   \Omega =
   \begin{pmatrix}
-    \hphantom{-} 0 & I \\
-    -I & 0
+    \hphantom{-} 0 & \matUnit \\
+    -\matUnit & 0
   \end{pmatrix},
 \end{equation}
 przy czym $\Omega$ jest macierzą kwadratową stopnia $2n$. Rozumiemy przez to,
 że~macierz $A$ należy do $\Sp( n, \Rbb )$ ($\Sp( n, \Cbb )$), jeśli
 \begin{equation}
   \label{eq:Wojtynski-29}
-  A^{ T } \Omega A = \Omega.
+  A^{ T } \, \Omega \, A = \Omega.
 \end{equation}
 Dodatkowe zaznaczanie, że~$A$ musi być macierzą nieosobliwą, kładzie na tą
 własność tak silny nacisk, iż~może prowadzić do nieporozumień.
@@ -1172,6 +1175,311 @@ to zachodzi
   \sum_{ i = 1 }^{ n } x_{ i } \, y_{ n + i } - y_{ i } \, x_{ n + i }.
 \end{equation}
 
+\vspace{\spaceFour}
+
+
+
+
+
+\start \Str{38} Nie rozumiem, czemu przy rozpatrywaniu kwaternionów jako
+przestrzeni wektorowej nad $\Cbb$, zdefiniowano mnożenie kwaternionu przez
+liczbę zespoloną z~prawej strony, a~nie jak to się robi zazwyczaj z~lewej.
+Nie wprowadza to żadnych prawdziwych problemów, jedynie prowadzi do
+niewygodnej notacji. Przykładowo, przy mnożeniu dowolnych wektorów
+z~przestrzeni $V$ przez $\alpha \in \Kbb$ z~lewej strony, własność
+jednorodności odwzorowania $A$ możemy zapisać jako
+\begin{equation}
+  \label{eq:Wojtynski-32}
+  A \alpha v = \alpha A v, \quad v \in V,
+\end{equation}
+podczas gdy przy mnożeniu z~prawej strony, by uniknąć wszelkich
+nieporozumień, musielibyśmy napisać
+\begin{equation}
+  \label{eq:Wojtynski-33}
+  A ( v \alpha ) = ( A v ) \alpha, \quad v \in V.
+\end{equation}
+
+Na koniec zauważmy, że~gdybyśmy zdefiniowali mnożenie kwaternionów przez
+liczby zespolone z~lewej strony, musielibyśmy zmienić wzór (2.20) z~książki,
+czyli
+\begin{equation}
+  \label{eq:Wojtynski-34}
+  q =
+  e_{ 0 } \, ( t_{ 0 } \, e_{ 0 } + t_{ 1 } \, e_{ 1 } )
+  + e_{ 2 } \, ( t_{ 2 } \, e_{ 0 } - t_{ 3 } e_{ 1 } ),
+\end{equation}
+na
+\begin{equation}
+  \label{eq:Wojtynski-35}
+  q =
+  ( t_{ 0 } \, e_{ 0 } + t_{ 1 } \, e_{ 1 } ) \, e_{ 0 }
+  + ( t_{ 2 } \, e_{ 0 } + t_{ 3 } \, e_{ 1 } ) \, e_{ 2 }.
+\end{equation}
+Można by twierdzić, że~wzór \eqref{eq:Wojtynski-35} wygląda bardziej
+naturalnie.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\start \Str{39} Podane tu wyjaśnienie dlaczego odwzorowanie $S$
+przekształca odwzorowania liniowe przestrzeni $\Hbb^{ n }$ w~odwzorowania
+liniowe przestrzeni $\Cbb^{ 2n }$ jest niepotrzebnie zagmatwane. Postaram~się
+przedstawić dowód tego faktu w~sposób jaśniejszy, najpierw jednak
+umieścimy cały problem w~szerszym kontekście. Do opisu tego problemu
+można użyć formalizmu teorii kategorii i~choć takie rozwiązanie ma wiele
+zalet, to~jednak zastosowanie go tutaj, może nas oddalić od bardzo
+konkretnego problemu grup macierzy, którym~się zajmujemy, a~to jest rzeczą
+nieporządną.
+
+Zacznijmy od tego, że~główną cechą odróżniającą kwaterniony $\Hbb$ od liczb
+rzeczywistych i~zespolonych, jest nieprzemienność ich mnożenia. Mimo tego,
+przestrzenie macierzy $\lFrak( n, \Kbb )$, gdzie $\Kbb$ może oznaczać
+$\Rbb$, $\Cbb$ lub~$\Hbb$, posiadają wiele wspólnych cech algebraicznych.
+Aby je zwięźle opisać, wprowadzimy trochę terminologii. Przyjmiemy,
+że~struktura algebraiczna posiadająca wszystkie cechy ciała, ale w~której
+mnożenie nie musi być przemienne, będziemy nazywać \textbf{ciałem
+  nieprzemiennych} oraz że~zarówno przestrzenie wektorowe jak i~algebry mogą
+być zarówno nad ciałem przemiennym jak i~nieprzemiennych. Wówczas
+$\lFrak( n, \Rbb )$ i~$\lFrak( n, \Cbb )$ są łącznymi, nieprzemiennymi
+algebrami wedle standardowych definicji. Strukturę algebry nieprzemiennej
+wyznacza mnożenie przez elementy z~$\Kbb$, dodawanie i~mnożenie macierzy.
+Z~kolei $\lFrak( n, \Hbb )$ jest „łączną, nieprzemienną prawie algebrą”, co
+spełnia wszystkie aksjomaty takiej algebry nad ciałem nieprzemiennym, poza
+jednym. Brak tej jednej własności, wynika z~nieprzemienność mnożenia
+kwaternionów.
+
+Dokładniej omówimy to zagadnienie poniżej, warto~się jednak teraz
+zastanowić, co ta sytuacja nam mówi. Czy powinniśmy zmienić definicję
+„algebry nad ciałem nieprzemiennym”, tak by usunąć z~niej jedną wymaganą
+własność, tak iż $\lFrak( n, \Hbb )$ stanie~się przykładem takiej algebry?
+Czy też należy zostawić definicje takie jakimi są, stwierdzają tylko,
+iż~$\lFrak( n, \Hbb )$ jest bytem, któremu niewiele brakuje, by był
+odpowiednią algebrą nad ciałem nieprzemiennym? Nie umiem w~tej chwili
+odpowiedzieć na to pytanie. Niezależnie od tego, użycie pojęcie „łącznej
+nieprzemiennej algebry nad ciałem przemiennym (nieprzemiennym)”, wydaje~się
+być dobrym krokiem do zrozumienia problemu.
+
+Naszą analizę rozpoczniemy od usystematyzowania oznaczeń. Za Wojtyńskim
+przyjmujemy następującą, prawostronną, konwekcję mnożenia elementów
+$\Kbb^{ n }$ przez elementy z~$\Kbb$
+\begin{equation}
+  \label{eq:Wojtynski-36}
+  v \alpha = ( v_{ 1 } \alpha, v_{ 2 } \alpha, \ldots, v_{ n } \alpha ), \quad
+  \alpha \in \Kbb, \, v \in \Kbb^{ n }.
+\end{equation}
+Ponadto dla macierzy $A \in \lFrak( n, \Kbb )$ o~elementach $a_{ ij }$,
+$i, j = 1, 2, \ldots, n$ przyjmujemy dodatkowe oznaczenie
+\begin{equation}
+  \label{eq:Wojtynski-37}
+  A = [ a_{ i j } ].
+\end{equation}
+Mnożenie macierzy przez element z~$\Kbb$ oraz sumę dwóch macierzy
+definiujemy w~zwykły sposób.
+\begin{subequations}
+  \begin{align}
+    \label{eq:Wojtynski-38-A}
+    A \alpha &= [ a_{ i j } \, \alpha ], \\
+    \label{eq:Wojtynski-38-B}
+    A + B &= [ a_{ i j } + b_{ i j } ],
+  \end{align}
+\end{subequations}
+gdzie, $\alpha \in \Kbb$,
+$A = [ a_{ i j } ]$, $B = [ b_{ i j } ] \in \lFrak( n, \Kbb )$.
+Również podążając za Wojtyńskim, działanie macierzy na wektor z~$\Kbb^{ n }$
+definiujemy jako
+\begin{equation}
+  \label{eq:Wojtynski-39}
+  ( A v )_{ i } = \sum_{ j = 1 }^{ n } a_{ i j } \, v_{ j },
+\end{equation}
+gdzie $v \in \Kbb^{ n }$, $A \in \lFrak( n, \Kbb )$. Teraz operację mnożenia
+dwóch macierzy z~$\lFrak( n, \Kbb )$ możemy określić jako
+\begin{equation}
+  \label{eq:Wojtynski-40}
+  A \cdot B = \left[ \sum_{ l = 1 }^{ n } a_{ i l } \, b_{ l j } \right].
+\end{equation}
+Dla uczynienia rozważań bardziej precyzyjnymi, przez pewien czas mnożenie
+macierzy będziemy jawnie oznaczać symbolem $\cdot$.
+
+Teraz przejdziemy do dowodu tego, że~$\lFrak( n, \Kbb )$ stanowi
+nieprzemienną algebrę. Z~rozmysłem odkładamy na~później rozważanie
+o~związku macierzy $\lFrak( n, \Kbb )$ z~odwzorowaniami liniowymi na
+$\Kbb^{ n }$. Jak~się okazuje, ten problem posiada kilka własnych niuansów
+wartych osobnej dyskusji. Pierwszym krokiem jest udowodnienie,
+że~$\lFrak( n, \Kbb )$ z~działaniami zdefiniowanymi
+w~\eqref{eq:Wojtynski-38-A}--\eqref{eq:Wojtynski-38-B} jest przestrzenią
+wektorową. Niech $A \in \lFrak( n, \Kbb )$. Własność
+\begin{equation}
+  \label{eq:Wojtynski-41}
+  A \, 1 = A,
+\end{equation}
+gdzie $1$ jest elementem neutralnym mnożenia w~$\Kbb$ wynika wprost
+z~definicji mnożenia macierzy przez element z~ciała $\Kbb$ podanej
+w~\eqref{eq:Wojtynski-38-A} oraz własności mnożenia w~ciele $\Kbb$.
+Podobnie własność
+\begin{equation}
+  \label{eq:Wojtynski-42}
+  A ( \beta \alpha ) = ( A \beta ) \alpha, \quad \alpha, \beta \in \Kbb,
+\end{equation}
+wynika, jak poprzednio z~definicji mnożenia macierzy przez element z~ciała
+oraz łączności mnożenia w~ciele $\Kbb$. W~dalszym ciągu nie będziemy jawnie
+przywoływać miejsc w~których korzystamy z~definicji
+\eqref{eq:Wojtynski-38-A}--\eqref{eq:Wojtynski-38-B}, pozostaniemy przy
+przytaczaniu potrzebnych własności z~ciała $\Kbb$. Z~rozdzielności dodawania
+względem mnożenia w~ciele $\Kbb$ wynikają dwie poniższe własności
+\begin{subequations}
+  \begin{align}
+    \label{eq:Wojtynski-43-A}
+    &A \, ( \alpha + \beta ) = A \, \alpha + A \, \beta, \\
+    \label{eq:Wojtynski-43-B}
+    &( A + B ) \, \alpha = A \, \alpha + B \, \beta,
+  \end{align}
+\end{subequations}
+gdzie $A, B \in \lFrak( n, \Kbb )$ i~$\alpha, \beta \in \Kbb$. Korzystając teraz
+z~tego, że~dodawanie w~$\Kbb$ jest łączne, przemienne i~dla każdego
+elementu $a \in \Kbb$ istnieje element odwrotny względem dodawania $-a$,
+dowodzimy
+\begin{subequations}
+  \begin{align}
+    \label{eq:Wojtynski-44-A}
+    &( A + B ) + C = A + ( B + C ), \\
+    \label{eq:Wojtynski-44-B}
+    &A + B = B + A, \\
+    \label{eq:Wojtynski-44-C}
+    &A + ( -A ) = 0,
+  \end{align}
+\end{subequations}
+gdzie $A, B, C \in \lFrak( n, \Kbb )$, zaś $0 \in \lFrak( n, \Kbb )$ to
+macierz zerowa\footnote{Macierz, której wszystkie elementy są równe
+  elementowi neutralnemu dodawania w~ciele $\Kbb$.}. Udowodniliśmy więc,
+że~$\lFrak( n, \Kbb )$ jest przestrzenią wektorową i~nigdzie w~dowodzie
+przemienność, lub jej brak, mnożenia nie odgrywa żadnej roli.
+
+Teraz przejdziemy do dowodu tego, że~$\lFrak( n, \Kbb )$ wraz z~działaniem
+mnożenia macierzy \eqref{eq:Wojtynski-40} jest łączną, nieprzemienną
+algebrą. Jak powiedzieliśmy wcześniej, nieprzemienność mnożenia macierzy
+jest dobrze znana, nie będziemy~się więc nad nią zatrzymywać. Łączność
+mnożenia macierzy
+\begin{equation}
+  \label{eq:Wojtynski-45}
+  ( A \cdot B ) \cdot C = A \cdot ( B \cdot C ),
+\end{equation}
+wynika z~definicji operacji mnożenia macierzy \eqref{eq:Wojtynski-40} oraz
+z~łączności mnożenia w~ciele $\Kbb$. Własność
+\begin{equation}
+  \label{eq:Wojtynski-46}
+  A \cdot ( B \, \alpha + C \, \beta ) = A \cdot ( B \, \alpha ) + A \cdot ( C \, \beta ) =
+  ( A \cdot B ) \, \alpha + ( A \cdot C ) \, \beta.
+\end{equation}
+wynika z~definicji mnożenia macierzy oraz łączności i~rozdzielności
+mnożenia względem dodawania w~ciele $\Kbb$. Jednak
+\begin{equation}
+  \label{eq:Wojtynski-47}
+  ( A \, \alpha + B \, \beta ) \cdot C \neq
+  ( A \cdot C ) \, \alpha + ( B \cdot C ) \, \beta =
+  A \cdot ( C \, \alpha ) + B \cdot ( C \, \beta ).
+\end{equation}
+Równość pomiędzy członem drugim i~trzecim powyższego wyrażenia, wynika
+z~definicji wstępujących tam działań oraz łączności i~rozdzielności
+mnożenia w~$\Kbb$. By zobaczyć, że~równość między dwoma pierwszy członami
+w~ogólności nie zachodzi, wystarczy rozpatrzyć prosty przykład. Niech
+$\matUnit \in \lFrak( n, \Kbb )$ będzie macierzą jednostkową zdefiniowaną
+w~standardowy sposób. Dla $A = B = \matUnit$, $C = \matUnit \, e_{ 2 }$
+i~$\alpha = \beta = \frac{ 1 }{ 2 } e_{ 1 }$ mamy
+\begin{subequations}
+  \begin{align}
+    \label{eq:Wojtynski-48-A}
+    &( A \, \alpha + B \, \beta ) \cdot C = \matUnit \, e_{ 1 } \, e_{ 2 }, \\
+    \label{eq:Wojtynski-48-B}
+    &( A \cdot C ) \, \alpha + ( B \cdot C ) \, \beta = \matUnit \, e_{ 2 } \, e_{ 1 } =
+      -\matUnit \, e_{ 1 } \, e_{ 2 }.
+  \end{align}
+\end{subequations}
+Gdyby oprócz wszystkich udowodnionych dotychczas własności, zachodziła
+jeszcze równość we wzorze \eqref{eq:Wojtynski-47}, to~$\lFrak( n, \Kbb )$
+byłoby łączną, nieprzemienną algebrą. O~problemie tym wspominaliśmy już
+na początku naszych rozważań nad strukturą algebraiczną zbiorów
+$\lFrak( n, \Kbb )$. Jak widać po tym przykładzie, problem ten pojawia~się
+bo mnożenie kwaternionów nie jest przemienne.
+
+Ponieważ ten wynik może być zaskakujący dla osób, dla których liczby
+rzeczywiste są synonimem wszystkich „systemów liczbowych”, zatrzymamy~się
+dłużej nad pewnym konsekwencjami nieprzemienność mnożenia kwaternionów Dla
+wszystkich macierzy $\lFrak( n, \Kbb )$, gdzie $\Kbb$ oznacza $\Rbb$ lub
+$\Cbb$, zachodzi własność
+\begin{equation}
+  \label{eq:Wojtynski-49}
+  ( \matUnit \alpha ) A = A ( \matUnit \alpha ), \quad
+  \alpha \in \Kbb, \, A \in \lFrak( n, \Kbb ),
+\end{equation}
+gdzie $\matUnit$ ponownie oznacza macierz jednostkową. Jednak
+\begin{equation}
+  \label{eq:Wojtynski-37}
+  ( \matUnit \alpha ) A \neq A ( \matUnit \alpha ), \quad
+  \alpha \in \Hbb, \, A \in \lFrak( n, \Hbb ).
+\end{equation}
+Prosty przykład ilustrujący tą własność otrzymuje przez wzięcie
+$\alpha = e_{ 1 }$, $A = \matUnit \, e_{ 2 }$. Warto zauważyć, że~jeśli
+$\alpha = t \, e_{ 0 }$, $t \in \Rbb$, to dla wszystkich macierz
+$A \in \lFrak( n, \Hbb )$ zachodzi $( \matUnit \alpha ) A = A ( \matUnit \alpha )$.
+
+Inną własnością wyróżniającą macierze z~$\lFrak( n, \Hbb )$ jest to, że
+zachodzi
+\begin{equation}
+  \label{eq:Wojtynski-38}
+  A ( v \alpha ) = ( A v ) \alpha,
+\end{equation}
+gdzie $\alpha \in \Hbb,$ $v \in \Hbb^{ n }$, $A \in \lFrak( n, \Hbb )$, ale
+\begin{equation}
+  \label{eq:Wojtynski-39}
+  ( A \alpha ) v \neq ( A v ) \alpha.
+\end{equation}
+Prosty przykład dla którego możemy to zobaczyć to $\alpha = e_{ 2 }$,
+$v = ( e_{ 3 }, 0, 0, \ldots, 0 )$, $A = \matUnit e_{ 2 }$
+Dla podkreślenia tego, jak bardzo „nienaturalną” jest ta własność, ostatnią
+równość zapiszemy również w~notacji, w~której mnożenie przez liczby obywa~się
+z~lewej strony.
+\begin{equation}
+  \label{eq:Wojtynski-40}
+  ( \alpha A ) v \neq A ( \alpha v ).
+\end{equation}
+Prosty przykład dla którego można to zobaczyć to  (tu też używamy
+konwencji mnożenia przez liczbę z~lewej strony).
+
+W~tym miejscu musimy zwrócić uwagę no to, że~to wzór \eqref{eq:Wojtynski-38}
+wyraża fakt, iż~$A$ jest odwzorowanie jednorodnym, nie zaś wzór
+\eqref{eq:Wojtynski-39}. Pozorny problem może wyniknąć stąd, że~mnożenie
+kwaternionów nie jest przemienne, więc konkretny sposób w~jaki definiujemy
+działanie macierzy $A$ na wektor $v \in \Hbb^{ n }$ ma znaczenie dla naszej
+teorii. Wojtyński zdefiniował je kładąc
+\begin{equation}
+  \label{eq:Wojtynski-41}
+  ( A v )_{ i } = \sum_{ j }^{ n } a_{ i j } v_{ j }, \quad
+  A = [ a_{ ij } ] \in \lFrak( n, \Hbb ).
+\end{equation}
+Takie określenie odwzorowanie $A$ jest jednorodne, gdy mnożenie wektorów
+z~$\Hbb^{ n }$ przez elementy z~$\Hbb$ jest zdefiniowane z~prawej strony.
+Gdybyśmy zdefiniowali mnożenie przez te elementy z~lewej strony, to
+by działanie macierzy na wektor $v$ było jednorodne, musielibyśmy
+zdefiniować je jako
+\begin{equation}
+  \label{eq:Wojtynski-42}
+  ( A v )_{ i } = \sum_{ j }^{ n } v_{ j } a_{ i j }.
+\end{equation}
+
+Przejdźmy teraz do dowodu tego, że~$\lFrak( n, \Kbb )$ tworzy algebrę,
+gdzie $\Rbb$, $\Cbb$ lub $\Hbb$. By udowodnić własności
+\begin{equation}
+  \label{eq:Wojtynski-43}
+  ( A + B ) v = A v + B v,
+\end{equation}
+wystarczy by dodawanie było rozdzielne względem mnożenia, co jest prawdą
+we~wszystkich rozważanych typach $\Kbb$. Ponieważ dowód tego faktu jest
+prosty, nie będziemy go tu przytaczać jawnie.
+
+\vspace{\spaceFour}
 
 
 
@@ -1287,9 +1595,9 @@ to zachodzi
            & $\bar{q} \cdot \frac{ 1 }{ \Vert q^{ 2 } \Vert } q$ \\
     37  & &  8 & $\bar{q} q$ & $\bar{q} \cdot q$ \\
     37  & &  4 & $\Vert q_{ 1 } q_{ 2 } \Vert$ & $\Vert q_{ 1 } \cdot q_{ 2 } \Vert$ \\
+    39  &  8 & & $z_{ n + 1 }$ & $z_{ n + i }$ \\
     50  & &  8 & $e_{ i } ( e_{ j } \cdot e_{ k } )$
            & $e_{ i } \cdot ( e_{ j } \cdot e_{ k } )$ \\
-    % & & & & \\
     % & & & & \\
     % & &  &  &  \\
     % & & & & \\
@@ -1366,12 +1674,18 @@ nazywamy \\
   symplektyczną} (oznaczenia $\Sp( n, \Cbb )$, $\Sp( n, \Rbb )$) będziemy
 rozumieć \\
 \StrWd{35}{3} \\
-\Jest  czyli $\bar{A}^{ T } \cdot A = I$ lub inaczej $\bar{A}^{ T } = A^{ -1 }$,
-czyli $\widetilde{A} = A^{ -1 }$ \\[0.5em]
+\Jest  czyli $\bar{A}^{ T } \cdot A = \matUnit$ lub inaczej
+$\bar{A}^{ T } = A^{ -1 }$, czyli $\widetilde{A} = A^{ -1 }$ \\[0.5em]
 \Powin czyli $\bar{A} = \Big( A^{ T } \Big)^{ -1 }$, co można zapisać jako
 $\widetilde{A} = \bar{A}$ \\
-
-
+\StrWg{38}{3} \\[0.5em]
+\Jest  $\displaystyle \big( \sum_{ i = 0 }^{ 3 } t_{ i } e_{ i } )$ \\
+\Powin $\displaystyle \big( \sum_{ i = 0 }^{ 3 } t_{ i } e _{ i } \big)$ \\[0.5em]
+\StrWg{38}{7} \\
+\Jest  $e_{ 0 } \, ( t_{ 0 } + t_{ 1 } \, e_{ 1 } )
++ e_{ 2 } \, ( t_{ 2 } - t_{ 3 } \, e_{ 1 } )$ \\[0.5em]
+\Powin $e_{ 0 } ( t_{ 0 } \, e_{ 0 } + t_{ 1 } \, e_{ 1 } )
++ e_{ 2 } \, ( t_{ 2 } \, e_{ 0 } - t_{ 3 } \, e_{ 1 } )$ \\
 
 % ############################
 
