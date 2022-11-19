@@ -1321,7 +1321,7 @@ w~\eqref{eq:Wojtynski-38-A} oraz własności mnożenia w~ciele $\Kbb$.
 Podobnie własność
 \begin{equation}
   \label{eq:Wojtynski-42}
-  A ( \beta \alpha ) = ( A \beta ) \alpha, \quad \alpha, \beta \in \Kbb,
+  A \, ( \beta \, \alpha ) = ( A \, \beta ) \, \alpha, \quad \alpha, \beta \in \Kbb,
 \end{equation}
 wynika, jak poprzednio z~definicji mnożenia macierzy przez element z~ciała
 oraz łączności mnożenia w~ciele $\Kbb$. W~dalszym ciągu nie będziemy jawnie
@@ -1416,7 +1416,7 @@ $\Cbb$, zachodzi własność
 \end{equation}
 gdzie $\matUnit$ ponownie oznacza macierz jednostkową. Jednak
 \begin{equation}
-  \label{eq:Wojtynski-37}
+  \label{eq:Wojtynski-50}
   ( \matUnit \alpha ) A \neq A ( \matUnit \alpha ), \quad
   \alpha \in \Hbb, \, A \in \lFrak( n, \Hbb ).
 \end{equation}
@@ -1425,38 +1425,39 @@ $\alpha = e_{ 1 }$, $A = \matUnit \, e_{ 2 }$. Warto zauważyć, że~jeśli
 $\alpha = t \, e_{ 0 }$, $t \in \Rbb$, to dla wszystkich macierz
 $A \in \lFrak( n, \Hbb )$ zachodzi $( \matUnit \alpha ) A = A ( \matUnit \alpha )$.
 
-Inną własnością wyróżniającą macierze z~$\lFrak( n, \Hbb )$ jest to, że
-zachodzi
+Inną własnością odróżniającą macierze z~$\lFrak( n, \Hbb )$ od tych
+z~$\lFrak( n, \Rbb )$ i~$\lFrak( n, \Cbb )$ jest to,
+że~zachodzi
 \begin{equation}
-  \label{eq:Wojtynski-38}
-  A ( v \alpha ) = ( A v ) \alpha,
+  \label{eq:Wojtynski-51}
+  A ( v \, \alpha ) = ( A v ) \, \alpha,
 \end{equation}
-gdzie $\alpha \in \Hbb,$ $v \in \Hbb^{ n }$, $A \in \lFrak( n, \Hbb )$, ale
+gdzie $\alpha \in \Hbb,$ $v \in \Hbb^{ n }$, $A \in \lFrak( n, \Hbb )$. Fakt ten
+ponownie wynika z~definicji działań oraz łączności i~rozdzielności mnożenia
+względem dodawania w~$\Kbb$. Jednakże
 \begin{equation}
-  \label{eq:Wojtynski-39}
-  ( A \alpha ) v \neq ( A v ) \alpha.
+  \label{eq:Wojtynski-52}
+  ( A \, \alpha ) v \neq ( A v ) \, \alpha.
 \end{equation}
 Prosty przykład dla którego możemy to zobaczyć to $\alpha = e_{ 2 }$,
-$v = ( e_{ 3 }, 0, 0, \ldots, 0 )$, $A = \matUnit e_{ 2 }$
-Dla podkreślenia tego, jak bardzo „nienaturalną” jest ta własność, ostatnią
-równość zapiszemy również w~notacji, w~której mnożenie przez liczby obywa~się
-z~lewej strony.
+$v = ( e_{ 3 }, 0, 0, \ldots, 0 )$, $A = \matUnit e_{ 2 }$. Dla podkreślenia tego,
+jak bardzo „nienaturalną” jest ta ostatnia własność, zapiszemy ją w~notacji, w~której mnożenie przez liczby obywa~się z~lewej strony.
 \begin{equation}
-  \label{eq:Wojtynski-40}
+  \label{eq:Wojtynski-53}
   ( \alpha A ) v \neq A ( \alpha v ).
 \end{equation}
 Prosty przykład dla którego można to zobaczyć to  (tu też używamy
 konwencji mnożenia przez liczbę z~lewej strony).
 
-W~tym miejscu musimy zwrócić uwagę no to, że~to wzór \eqref{eq:Wojtynski-38}
-wyraża fakt, iż~$A$ jest odwzorowanie jednorodnym, nie zaś wzór
-\eqref{eq:Wojtynski-39}. Pozorny problem może wyniknąć stąd, że~mnożenie
-kwaternionów nie jest przemienne, więc konkretny sposób w~jaki definiujemy
-działanie macierzy $A$ na wektor $v \in \Hbb^{ n }$ ma znaczenie dla naszej
-teorii. Wojtyński zdefiniował je kładąc
+W~tym miejscu musimy zwrócić uwagę no to, że~to wzór \eqref{eq:Wojtynski-51}
+wyraża fakt, iż~macierz~$A$ reprezentuje pewno odwzorowanie jednorodnym,
+nie zaś wzór \eqref{eq:Wojtynski-52}. Pozorny problem może wyniknąć stąd,
+że~mnożenie kwaternionów nie jest przemienne, więc konkretny sposób w~jaki
+definiujemy działanie macierzy $A$ na wektor $v \in \Hbb^{ n }$ ma znaczenie
+dla naszej teorii. Wojtyński zdefiniował je kładąc
 \begin{equation}
-  \label{eq:Wojtynski-41}
-  ( A v )_{ i } = \sum_{ j }^{ n } a_{ i j } v_{ j }, \quad
+  \label{eq:Wojtynski-52}
+  ( A v )_{ i } = \sum_{ j }^{ n } a_{ i j } \, v_{ j }, \quad
   A = [ a_{ ij } ] \in \lFrak( n, \Hbb ).
 \end{equation}
 Takie określenie odwzorowanie $A$ jest jednorodne, gdy mnożenie wektorów
@@ -1465,8 +1466,37 @@ Gdybyśmy zdefiniowali mnożenie przez te elementy z~lewej strony, to
 by działanie macierzy na wektor $v$ było jednorodne, musielibyśmy
 zdefiniować je jako
 \begin{equation}
-  \label{eq:Wojtynski-42}
-  ( A v )_{ i } = \sum_{ j }^{ n } v_{ j } a_{ i j }.
+  \label{eq:Wojtynski-53}
+  ( A v )_{ i } = \sum_{ j }^{ n } v_{ j } \, a_{ i j }.
+\end{equation}
+
+Wiemy już, że~odwzorowanie zadane przez macierz $A \in \lFrak( n, \Kbb )$
+wzorem \eqref{eq:Wojtynski-39} jest jednorodne nad $\Hbb$ i~tym samym
+jednorodne nad $\Rbb$ i~$\Cbb$, które są podciałami $\Hbb$\footnote{Użyta
+  tu terminologi może być ścisła, ale może być też trochę nieścisła. Nie
+  umiem tego teraz ustalić. Niezależnie od tego sama treść matematyczna
+  powinna być na tyle jasna, że~możemy na takim sformułowaniu poprzestać.}.
+Teraz możemy przejść do dowodu, że~jest ono addytywne i~tym samym liniowe.
+Dowód faktu, że
+\begin{equation}
+  \label{eq:Wojtynski-54}
+  A ( v + w ) = A v + A w, \quad v, \, w \in \Hbb^{ n },
+\end{equation}
+przebiega wedle standardowego schematu, z~wykorzystaniem tego, że~w~ciele
+$\Hbb$ dodawania jest rozdzielne względem mnożenia.
+
+W~tym momencie wiemy już, że~każda macierz z~$\lFrak( n, \Hbb )$
+reprezentuje odwzorowanie liniowe nad $\Hbb$. Odwrotnie, każde odwzorowanie
+liniowe wyznacza pewną macierz. Oznaczmy bowiem
+\begin{equation}
+  \label{eq:Wojtynski-55}
+  E_{ i } = ( 0, 0, \ldots, 0, e_{ 0 }, 0, \ldots, 0 ),
+\end{equation}
+gdzie $e_{ 0 }$ znajduje~się na $i$-tej pozycji. Wówczas dla dowolnego
+$v \in \Hbb^{ n }$ mamy
+\begin{equation}
+  \label{eq:Wojtynski-56}
+  ????
 \end{equation}
 
 Przejdźmy teraz do dowodu tego, że~$\lFrak( n, \Kbb )$ tworzy algebrę,
@@ -1596,9 +1626,10 @@ prosty, nie będziemy go tu przytaczać jawnie.
     37  & &  8 & $\bar{q} q$ & $\bar{q} \cdot q$ \\
     37  & &  4 & $\Vert q_{ 1 } q_{ 2 } \Vert$ & $\Vert q_{ 1 } \cdot q_{ 2 } \Vert$ \\
     39  &  8 & & $z_{ n + 1 }$ & $z_{ n + i }$ \\
+    39  & &  8 & $\langle s^{ -1 }( z ), \, s^{ -1 }( w ) \rangle_{ \Hbb } =$
+           & zachodzi $\langle s^{ -1 }( z ), \, s^{ -1 }( w ) \rangle_{ \Hbb } =$ \\
     50  & &  8 & $e_{ i } ( e_{ j } \cdot e_{ k } )$
            & $e_{ i } \cdot ( e_{ j } \cdot e_{ k } )$ \\
-    % & & & & \\
     % & &  &  &  \\
     % & & & & \\
     % & & & & \\
@@ -1619,8 +1650,9 @@ prosty, nie będziemy go tu przytaczać jawnie.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    %    & &  & & \\
-    %    & &  & & \\
+    % & &  & & \\
+    76  & 16 & & $\displaystyle \frac{ \partial ( \varphi \circ f_{ 2 } ) }{ \partial x_{ j } }$
+& $\displaystyle \frac{ \partial ( \varphi \circ f_{ 2 } ) }{ \partial x_{ j } }( 0 )$ \\
     99  &  2 & & $[ a, b ] \in \mathbf{K}$ & $[ a, b ] \in M$ \\
     99  &  4 & & $[ a, b ] \in \mathbf{K}$ & $[ a, b ] \in M$ \\
     99  &  4 & & $[ b, a ] \in \mathbf{K}$ & $[ b, a ] \in M$ \\
