@@ -219,7 +219,7 @@ To~mogłoby ograniczyć nieporozumienia związane z~tym wzorem.
 \Work{ % Autorzy i tytuł dzieła
   J. Gancarzewicz, B. Opozda \\
   „Wstęp do geometrii różniczkowej”,
-  \cite{GancarzewiczOpozdaWstepDoGeometriiRozniczkowej2003} }
+  \cite{GancarzewiczOpozdaWstepDoGeometriiRozniczkowej2003}}
 
 
 % ##################
@@ -1181,42 +1181,67 @@ to zachodzi
 
 
 
-\start \Str{38} Nie rozumiem, czemu przy rozpatrywaniu kwaternionów jako
-przestrzeni wektorowej nad $\Cbb$, zdefiniowano mnożenie kwaternionu przez
-liczbę zespoloną z~prawej strony, a~nie jak to się robi zazwyczaj z~lewej.
-Nie wprowadza to żadnych prawdziwych problemów, jedynie prowadzi do
-niewygodnej notacji. Przykładowo, przy mnożeniu dowolnych wektorów
-z~przestrzeni $V$ przez $\alpha \in \Kbb$ z~lewej strony, własność
-jednorodności odwzorowania $A$ możemy zapisać jako
+\start \Str{38} Z~nie do końca jasnych dla mnie powodów, gdy na tej stronie
+przedstawiono kwaterniony jako dwuwymiarową przestrzeń wektorową nad nad
+$\Cbb$, zdefiniowano kombinację liniową kwaterniowów bazowych $e_{ 0 }$
+i~$e_{ 2 }$ w~taki sposób, że~współczynniki zespolone mnożą je z~prawej
+strony:
 \begin{equation}
   \label{eq:Wojtynski-32}
-  A \alpha v = \alpha A v, \quad v \in V,
+  q = e_{ 0 } \, z + e_{ 2 } \, w, \quad z, \, w \in \Cbb.
 \end{equation}
-podczas gdy przy mnożeniu z~prawej strony, by uniknąć wszelkich
-nieporozumień, musielibyśmy napisać
+Podejrzewam, że~chodzi o~to, iż~nieprzemienność mnożenie kwaternionów
+sprawia, iż~to jak definiujemy działanie macierzy z~$\lFrak( n, \Hbb )$ na
+wektor z~przestrzeni $\Hbb^{ n }$ ma kilka nieoczywistych konsekwencji dla
+innych części teorii, co może sprawić iż ta nietypowa notacja okazuje~się
+mieć sporo zalet. Zagadnienie to omówimy bardziej szczegółowo w~dalszej
+części notatek, tu zaś poprzestaniemy na wskazaniu, iż~w~tej notacji
+własność jednorodność odwzorowania $A : V \to V$ zapisujemy jako
 \begin{equation}
   \label{eq:Wojtynski-33}
-  A ( v \alpha ) = ( A v ) \alpha, \quad v \in V.
+  A ( v \alpha ) = ( A v ) \alpha, \quad \alpha \in \Kbb, \, v \in V,
 \end{equation}
-
-Na koniec zauważmy, że~gdybyśmy zdefiniowali mnożenie kwaternionów przez
-liczby zespolone z~lewej strony, musielibyśmy zmienić wzór (2.20) z~książki,
-czyli
+nie zaś jak w~standardowej notacji
 \begin{equation}
   \label{eq:Wojtynski-34}
+  A \alpha v = \alpha A v.
+\end{equation}
+
+Ostatecznie, to czy mnożenie zapisujemy z~lewej czy z~prawej strony jest
+tylko kwestią konwencji i~całą teorię da~się zdefiniować w~sposób spójny
+wybierając jedną z nich. W~tej kwestii warto jednak zauważyć to,
+iż~wybierając mnożenie kwaternionów bazowych z~lewej strony, musielibyśmy
+zmienić wzór (2.20) z~książki, czyli
+\begin{equation}
+  \label{eq:Wojtynski-35}
   q =
   e_{ 0 } \, ( t_{ 0 } \, e_{ 0 } + t_{ 1 } \, e_{ 1 } )
   + e_{ 2 } \, ( t_{ 2 } \, e_{ 0 } - t_{ 3 } e_{ 1 } ),
 \end{equation}
 na
 \begin{equation}
-  \label{eq:Wojtynski-35}
+  \label{eq:Wojtynski-36}
   q =
   ( t_{ 0 } \, e_{ 0 } + t_{ 1 } \, e_{ 1 } ) \, e_{ 0 }
   + ( t_{ 2 } \, e_{ 0 } + t_{ 3 } \, e_{ 1 } ) \, e_{ 2 }.
 \end{equation}
-Można by twierdzić, że~wzór \eqref{eq:Wojtynski-35} wygląda bardziej
+Pod pewnym względami wzór \eqref{eq:Wojtynski-35} wygląda bardziej
 naturalnie.
+
+Na koniec zwróćmy uwagę na to, że~skoro liczby zespolone są podciałem
+kwaternionów, to niezależnie czy mnożenie kwaternionów bazowych określimy
+z~prawej, czy lewej strony, możemy zawsze przenieść liczbę zespoloną
+z~prawej strony kwaternionu bazowe na lewą i~na odwrót. W~tym kontekście
+warto podać dwa użyteczne wzory:
+\begin{subequations}
+  \begin{align}
+    \label{eq:Wojtynski-37-A}
+    &e_{ 0 } \, z = z \, e_{ 0 }, \\
+    \label{eq:Wojtynski-38-B}
+    &e_{ 2 } \, z = \bar{z} \, e_{ 2 },
+  \end{align}
+\end{subequations}
+gdzie $z \in \Cbb$.
 
 \vspace{\spaceFour}
 
@@ -1245,11 +1270,37 @@ mnożenie nie musi być przemienne, będziemy nazywać \textbf{ciałem
 być zarówno nad ciałem przemiennym jak i~nieprzemiennych. Wówczas
 $\lFrak( n, \Rbb )$ i~$\lFrak( n, \Cbb )$ są łącznymi, nieprzemiennymi
 algebrami wedle standardowych definicji. Strukturę algebry nieprzemiennej
-wyznacza mnożenie przez elementy z~$\Kbb$, dodawanie i~mnożenie macierzy.
-Z~kolei $\lFrak( n, \Hbb )$ jest „łączną, nieprzemienną prawie algebrą”, co
-spełnia wszystkie aksjomaty takiej algebry nad ciałem nieprzemiennym, poza
-jednym. Brak tej jednej własności, wynika z~nieprzemienność mnożenia
-kwaternionów.
+wyznacza mnożenie przez elementy z~ciała, dodawanie i~mnożenie macierzy.
+Opisanie struktur $\lFrak( n, \Hbb )$ wymaga wprowadzenia nowych pojęć.
+
+Niech $V$ będzie przestrzenią wektorową na ciałem $\Kbb$, na której jest
+zadane jest działanie wewnętrzne
+\begin{equation}
+  \label{eq:Wojtynsi-39}
+  \cdot : V \times V \ni ( v, w ) \mapsto v \cdot w \in V.
+\end{equation}
+Rozpatrzmy teraz dwie potencjalne własności tego działania:
+\begin{subequations}
+  \begin{align}
+    \label{eq:Wojtynski-40-A}
+    &( \alpha \, v + \beta \, w ) \cdot p  =  \alpha \, ( v \cdot p ) + \beta \, ( w \cdot p ), \\
+    \label{eq:Wojtynski-40-B}
+    &v \cdot ( \alpha \, w + \beta \, p ) = \alpha \, ( v \cdot w ) + \beta \, ( v \cdot p ),
+  \end{align}
+\end{subequations}
+gdzie $\alpha, \beta \in \Kbb$, $v, w, p \in V$. Jeśli dla danej przestrzeni $V$ wzór
+\eqref{eq:Wojtynski-40-A} zachodzi dla wszystkich możliwych przypadków,
+to~przestrzeń tą nazywamy \textbf{lewej algebrą}. Definicje \textbf{lewej
+  algebry łącznej}, \textbf{lewej algebry przemiennej}, etc., są
+prostymi uogólnieniami definicji dla standardowej algebry, nie ma więc
+potrzeby byśmy je tutaj podawali. Analogicznie, jeśli dla wszystkich
+możliwych przypadków zachodzi wzór \eqref{eq:Wojtynski-40-B} to $V$ nazywamy
+\textbf{prawą algebrą}. Zdefiniowanie \textbf{prawej algebry łącznej}
+i~innych możliwych jej typów, nie powinno teraz sprawiać żadnego problemu.
+Łatwo zauważyć, że jeśli dana przestrzeń jest jednocześnie algebrą lewą
+i~prawą, to jest ona algebrą w~standardowym sensie tego słowa.
+
+W~dalszym ciągu tych notatek pokażemy~że $\lFrak( n, \Kbb )$ jest ??? algebrą ???, ale nie jest algebrą bo nie spełnia warunku \eqref{eq:????}
 
 Dokładniej omówimy to zagadnienie poniżej, warto~się jednak teraz
 zastanowić, co ta sytuacja nam mówi. Czy powinniśmy zmienić definicję
@@ -1266,6 +1317,7 @@ Naszą analizę rozpoczniemy od usystematyzowania oznaczeń. Za Wojtyńskim
 przyjmujemy następującą, prawostronną, konwekcję mnożenia elementów
 $\Kbb^{ n }$ przez elementy z~$\Kbb$
 \begin{equation}
+  % Numeracja wzorów.
   \label{eq:Wojtynski-36}
   v \alpha = ( v_{ 1 } \alpha, v_{ 2 } \alpha, \ldots, v_{ n } \alpha ), \quad
   \alpha \in \Kbb, \, v \in \Kbb^{ n }.
