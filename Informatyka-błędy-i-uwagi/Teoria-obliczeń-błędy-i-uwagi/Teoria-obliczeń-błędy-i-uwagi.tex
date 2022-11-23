@@ -1,5 +1,3 @@
-% Autor: Kamil Ziemian
-
 % ---------------------------------------------------------------------
 % Podstawowe ustawienia i pakiety
 % ---------------------------------------------------------------------
@@ -31,14 +29,14 @@
 % MARGINS
 % ------------------------------
 \setmarginsrb
-{ 0.7in} % left margin
-{ 0.6in} % top margin
-{ 0.7in} % right margin
-{ 0.8in} % bottom margin
-{  20pt} % head height
-{0.25in} % head sep
-{   9pt} % foot height
-{ 0.3in} % foot sep
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
 
 
 
@@ -60,7 +58,7 @@
 \usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
 % Mathematical Society (w skrócie AMS)
 \usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
-% \usepackage{siunitx} % Dla prostszego pisania jednostek fizycznych
+% \usepackage{siunitx} % Do prostszego pisania jednostek fizycznych
 \usepackage{upgreek} % Ładniejsze greckie litery
 % Przykładowa składnia: pi = \uppi
 \usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
@@ -70,8 +68,9 @@
 
 
 
-% ##########
+% ------------
 % Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
+% ------------
 \newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
 % „theorem” do pisania twierdzeń matematycznych
 \newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
@@ -79,20 +78,19 @@
 
 
 
-% ---------------------------------------
+% ------------------------------
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
-% ---------------------------------------
+% ------------------------------
 \usepackage{latexgeneralcommands}
-\usepackage{mathcommands}
-% \usepackage{calculuscommands}
-% \usepackage{SchwartzBooksCommands}  % Pakiet napisany m.in. dla tego pliku.
 
 
 
-% ---------------------------------------------------------------------
+
+
+% --------------------------------------------------------------------
 % Dodatkowe ustawienia dla języka polskiego
-% ---------------------------------------------------------------------
+% --------------------------------------------------------------------
 \renewcommand{\thesection}{\arabic{section}.}
 % Kropki po numerach rozdziału (polski zwyczaj topograficzny)
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}}
@@ -125,11 +123,12 @@
 
 
 % ---------------------------------------------------------------------
-% Tytuł, autor, data
-\title{Fizyka i~inne dziedziny \\
-  Błędy i~uwagi}
+% Tytuł i autor tekstu
+\title{Informatyka --~błędy i~uwagi}
 
-% \author{}
+\author{Kamil Ziemian}
+
+
 % \date{}
 % ---------------------------------------------------------------------
 
@@ -151,29 +150,17 @@
 
 
 % ######################################
-\maketitle % Tytuł całego tekstu
+\maketitle  % Tytuł całego tekstu
 % ######################################
+
 
 
 
 
 % ############################
 \Work{ % Autor i tytuł dzieła
-  Hagen Kleinert \\
-  „Path Integrals in~Quantum Mechanics, Statistics,
-  Polymer Physics and Financial Markets”,
-  \cite{KleinertPathIntegrals2009}}
-
-
-% ##################
-\CenterBoldFont{Uwagi do konkretnych stron}
-
-% \noi \tb{Konkretne strony}
-
-% \vspace{\spaceFour}
-
-
-
+  Richard P. Feynman \\
+  „Wykłady o~obliczeniach”, \cite{FeynmanWykladyOObliczeniach2007}}
 
 
 % ##################
@@ -189,28 +176,31 @@
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    %     & & & & \\
-    %     & & & & \\
-    %     & & & & \\
+    2   &  3 & & No nie! & „No nie!” \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    279 & 20 & & w~~wielu & w~wielu \\
+    279 & & 11 & jednen & jeden \\
     \hline
   \end{tabular}
 
 \end{center}
 
-
-\noindent
-\StrWg{29}{9} \\[0.4em]
-\Jest  $\displaystyle \sum_{ n = -N }^{ N } \langle p | x_{ n } \rangle \langle x_{ n } | p' \rangle
-= \sum_{ n = -N }^{ N } \langle p | x_{ n } \rangle \langle x_{ n } | p' \rangle
-= \sum_{ n = -N }^{ N } e^{ i( p - p' ) n a / \hbar }$ \\
-\Powin $\displaystyle \sum_{ n = -N }^{ N } \langle p | x_{ n } \rangle \langle x_{ n } | p' \rangle
-= \sum_{ n = -N }^{ N } e^{ i( p - p' ) n a / \hbar }$
-
-
-
-
-
 \vspace{\spaceTwo}
+
+
+
 % ############################
 
 
@@ -222,12 +212,12 @@
 
 
 
-% #####################################################################
-% #####################################################################
+% ####################################################################
+% ####################################################################
 % Bibliografia
 \bibliographystyle{plalpha}
 
-\bibliography{PhilNaturBooks}{}
+\bibliography{MathComScienceBooks.bib}{}
 
 
 
