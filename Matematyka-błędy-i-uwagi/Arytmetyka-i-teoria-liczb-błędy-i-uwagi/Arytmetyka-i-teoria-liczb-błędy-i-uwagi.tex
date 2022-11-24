@@ -29,14 +29,14 @@
 % MARGINS
 % ------------------------------
 \setmarginsrb
-{ 0.7in} % left margin
-{ 0.6in} % top margin
-{ 0.7in} % right margin
-{ 0.8in} % bottom margin
-{  20pt} % head height
-{0.25in} % head sep
-{   9pt} % foot height
-{ 0.3in} % foot sep
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
 
 
 
@@ -58,7 +58,7 @@
 \usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
 % Mathematical Society (w skrócie AMS)
 \usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
-% \usepackage{siunitx} % Do prostszego pisania jednostek fizycznych
+% \usepackage{siunitx} % Dla prostszego pisania jednostek fizycznych
 \usepackage{upgreek} % Ładniejsze greckie litery
 % Przykładowa składnia: pi = \uppi
 \usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
@@ -68,31 +68,29 @@
 
 
 
-% ----------
+% ##########
 % Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-% ----------
-\newtheorem{twr}{Twierdzenie} % Komenda wprowadzająca otoczenie
-% ,,twr'' do pisania twierdzeń matematycznych
-\newtheorem{defin}{Definicja} % Analogicznie jak powyżej
-\newtheorem{wni}{Wniosek}
+\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
+% „theorem” do pisania twierdzeń matematycznych
+\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+\newtheorem{corollary}{Wniosek}
 
 
 
-% ----------------------------
+% ---------------------------------------
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
-% ----------------------------
-% \usepackage{}  % Pakiet napisany między innymi
-% dla tego pliku.
+% ---------------------------------------
 \usepackage{latexgeneralcommands}
+\usepackage{mathcommands}
+% \usepackage{calculuscommands}
+% \usepackage{SchwartzBooksCommands}  % Pakiet napisany m.in. dla tego pliku.
 
 
 
-
-
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Dodatkowe ustawienia dla języka polskiego
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 \renewcommand{\thesection}{\arabic{section}.}
 % Kropki po numerach rozdziału (polski zwyczaj topograficzny)
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}}
@@ -100,18 +98,18 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Ustawienia różnych parametrów tekstu
-% ----------------------------
+% ------------------------------
 \renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
 % wierszami w tabelach.
 
 
 
-% ----------------------------
+% ------------------------------
 % Pakiet "hyperref"
 % Polecano by umieszczać go na końcu preambuły.
-% ----------------------------
+% ------------------------------
 \usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
 % do bibliografii na hiperlinki.
 
@@ -126,9 +124,12 @@
 
 % ---------------------------------------------------------------------
 % Tytuł i autor tekstu
-\title{Informatyka --~błędy i~uwagi}
+\title{Arytmetyka i~teoria liczb \\
+  Błędy i~uwagi}
 
 \author{Kamil Ziemian}
+
+
 % \date{}
 % ---------------------------------------------------------------------
 
@@ -150,7 +151,7 @@
 
 
 % ######################################
-\maketitle  % Tytuł całego tekstu
+\maketitle % Tytuł całego tekstu
 % ######################################
 
 
@@ -158,51 +159,80 @@
 
 
 % ############################
-\Work{ % Autorzy i tytuł dzieła
-  B. W. Kernighan, D. M. Ritchie \\
-  „Język ANSI C”, \cite{KernighanRitchieJezykANSIC2001} }
-
-
-% ##################
-\CenterBoldFont{Błędy}
-
-
-\begin{center}
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    28  & & 13 & +32 767) & +32 767 \\
-    % & & & & \\
-    211 & 13 & & następnego & danego \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-
-\end{center}
-
-% \noindent\\
-
-\vspace{\spaceTwo}
-% ############################
-
-
-
-
-
-
-
-
-
-
-% ############################
 \Work{ % Autor i tytuł dzieła
-  Mickey Petersen \\
-  „Mastering Emacs”, \cite{PetersenMasteringEmacs2016} }
+  Jacek Gancarzewicz \\
+  „Arytmetyka”, \cite{GancarzewiczArytmetyka2000}}
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+\start W~książce do oznaczenia najważniejszych zbiorów używa~się fontów
+pogrubionych: $\mathbf{N}$, $\mathbf{Z}$, $\mathbf{Q}$, etc. W~tych
+notatkach będziemy używali standardowych fontów „blackboard bold”: $\Nbb$,
+$\Zbb$, $\Qbb$,~etc. Wyjątkiem będzie sytuacja, gdy w~danym miejscu
+książki został użyty zły symbol, wtedy będziemy dążyć, by wygląd wzoru który
+będziemy poprawiać, bym maksymalnie podobny do oryginału w~książce.
+
+
+
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+
+\start \Str{}
+
+% \vspace{\spaceFour}
+
+
+
+
+% \vspace{\spaceFour}
+
+
+
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \vspace{\spaceFour}
+
+
+
+
+
+
+
 
 
 % ##################
@@ -218,8 +248,17 @@
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    112 & 3 & & C-M-d & C-M-n \\
-    113 & 5 & & the commands & these commands \\
+    10  &  2 & & ” $p$ & „$p$ \\
+    10  & 13 & & fałszywe, Są & fałszywe. Są \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
     % & & & & \\
     % & & & & \\
     \hline
@@ -227,12 +266,9 @@
 
 \end{center}
 
-% \noindent\\
-% \textbf{Str. 77, wiersz 15.}\\
-% \textbf{Jest:} stosował będę już\ldots \\
-% \textbf{Powinno być:} będę używał\ldots \\
-
 \vspace{\spaceTwo}
+
+
 % ############################
 
 
@@ -244,10 +280,11 @@
 
 
 
-% ####################################################################
-% ####################################################################
+% #####################################################################
+% #####################################################################
 % Bibliografia
-\bibliographystyle{alpha}
+
+\bibliographystyle{plalpha}
 
 \bibliography{MathComScienceBooks}{}
 
