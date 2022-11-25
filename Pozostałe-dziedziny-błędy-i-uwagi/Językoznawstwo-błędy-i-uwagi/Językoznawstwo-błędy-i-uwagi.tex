@@ -297,23 +297,23 @@ Możemy teraz powrócić do problemu reguły~(1). Ma ona postać
   \label{eq:Lyons-Wstep-do-jezykoznawstwa-07}
   \Sigma \to S,
 \end{equation}
-gdzie $S$ jest odpowiednim symbolem. Dlaczego ta reguła jest traktowana
-w~sposób specjalny i~Lyons wyłączył ją z~poprzednich rozważań? Najbardziej
-prawdopodobne wyjaśnienie jak wiedzę jest takie, że~symbol $\Sigma$ ma
-w~przedstawianej tu teorii specjalny status teorii specjalny status.
-Nie jest to symbol oznaczający jakąś część danego języka, lecz stan
-początkowy procedury przepisywania, który służy tylko do tego by
-wygenerować formułę $\Sigma( S )$, gdzie $S$ jest symbolem oznaczający jakąś
-część rozważanego języka. I~ten specjalny status symbolu $\Sigma$ wymusza osobne
-traktowanie reguły wedle której jest on przepisywany.
+gdzie $S$ jest odpowiednio wybranym symbolem bądź rządkiem symboli. Dlaczego ta reguła jest traktowana
+w~sposób specjalny i~Lyons wyłączył ją z~analizy, którą omawialiśmy poprzednio?
+Najbardziej prawdopodobne wyjaśnienie jak wiedzę jest takie, że~symbol $\Sigma$ ma
+w~przedstawianym tu systemie przepisywania.
 
-Inaczej mówiąc, aby teoria była ścisła, musimy zostać podany osobny zestaw
-reguł dla przepisywania symboli oznaczających elementy danego języka,
-a~osobny dla symboli które nie oznaczają elementów tego języka. Wydaje~się
-rozsądne przyjęcie, że~Lyons założył, choć nie napisałem tego jawnie,
-iż~jedynym symbolem systemu przepisywania, który nie oznacza części języka
-jest symbol $\Sigma$, zaś jedyną regułą, która pozwala ten symbol przepisać jest
-reguła \eqref{eq:Lyons-Wstep-do-jezykoznawstwa-07}.
+Jak~się wydaje, prezentowany tu system ma na calu ilustrować działanie gramatyki generatywnej, poprzez podanie przykładu
+systemu, który generuje pojedyncze zdanie samodzielne. Symbol $\Sigma$ oznacza właśnie pojedyncze zdanie samodzielne i w opisywanym
+systemie pojawia się tylko raz, na początku procedury przepisywania. Wszystkie inne symbole
+w~tym systemie oznaczają jednostki językowowe niższego poziomu niż zdanie samodzielne.
+Możliwe więc, że~gdyby symbol $\Sigma$ objąć tym samym zestawe reguł co pozostałe symbole, doprowadziłoby
+to do powstania nieścisłości w~formaliźmie, bądź prowadziłoby to do pewnych nieporządanych reguł przepisywania.
+Ta pierwsza możliwość jest zdecydowanie bardziej prawdopodobna.
+
+Należy dodać, że~system ten jest rozwbudowywany w~toku książki i~w~podrozdziale 6.2.9, na stronie 250,
+wprowadzony jest system, w~którym symbol zdania samodzielnego $\Sigma$ pojawia~się na wyjściu jednej z~reguł
+przepisywania. Tym samym system ten pozwala tworzyć to co w~tradycyjnej terminologi określa~się jako zdania
+złożone.
 
 \vspace{\spaceFour}
 
