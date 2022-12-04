@@ -694,7 +694,8 @@ dokonamy sprzężenia zespolonego obu stron drugiej z~tych równości,
 dostaniemy podany w~książce wzór $A \bar{A}^{ T } = \matUnit$. Nie mogę
 mieć pewności, czemu autor zdecydował~się zapisać te zależności w~takiej
 formie, mogę jedynie podejrzewać, że~chodziło o~to by wyprowadzone z~nich
-wzór (2.9) przyjęły bardziej symetryczną postać.
+wzory, które można znaleźć pod numerem (2.9), przyjęły bardziej symetryczną
+postać.
 
 Jeżeli teraz dokonamy obustronnego sprzężenia zespolonego równości
 $A^{ T } \bar{A} = \matUnit$ to dostaniemy $\bar{A}^{ T } A = \matUnit$, co
@@ -709,125 +710,130 @@ popularnej formie $A^{ * } = A^{ -1 }$.
 
 
 
-% \start \Str{32} W~tym miejscu warto się zatrzymać nad wzorem
-% \begin{equation}
-%   \label{eq:Wojtynski-07}
-%   \omega( x, y ) = x^{ T } \Omega \, y,
-% \end{equation}
-% który rozpatrywać będziemy tylko w~kontekście przestrzeni $\Cbb^{ n }$,
-% zwracając tylko uwagę, że~przedstawione tu rozumowanie można uogólnić
-% na~dowolną skończenie wymiarową przestrzeń wektorową.
+\Str{32} W~tym miejscu warto się zatrzymać nad wzorem
+\begin{equation}
+  \label{eq:Wojtynski-07}
+  \omega( x, y ) = x^{ T } \Omega \, y,
+\end{equation}
+który rozpatrywać będziemy tylko w~kontekście przestrzeni $\Cbb^{ n }$,
+jedynie zwracając tylko uwagę na to, że~przedstawione tu rozumowanie można
+w~prosty sposób uogólnić na~dowolną skończenie wymiarową przestrzeń
+wektorową nad $\Rbb$ i~$\Cbb$. Przypadek przestrzeni wektorowej nad ciałem
+nieprzemiennym, zob. dyskusja strony ??? w~tych notatkach, to osoby
+problem, którym nie będziemy~się zajmować.
 
-% Po pierwsze zwróćmy uwagę, że~$x$ po lewej stronie tego wzoru oznacza coś
-% innego, niż po prawej. Po lewej $x$ oznacza ciąg (kolumnę) liczb $n$ liczb
-% zespolonych, podczas gdy po prawej stronie oznacza on kolumnę, zapewne inną
-% od poprzedniej, liczb zespolonych daną zależnościami
-% \begin{equation}
-%   \label{eq:Wojtynski-08}
-%   x =
-%   \begin{bmatrix}
-%     x_{ 1 } \\
-%     x_{ 2 } \\
-%     \vdots \\
-%     x_{ n }
-%   \end{bmatrix}, \quad
-%   x = \sum_{ i = 1 }^{ n } x_{ i } \, e_{ i },
-% \end{equation}
-% gdzie $e_{ 1 }, e_{ 2 }, \ldots, e_{ n }$ jest pewną bazą przestrzeni $\Cbb^{ n }$.
-% Oznaczenia te są nieporęczne, czego świadectwem jest to, iż~we wzorze
-% \eqref{eq:Wojtynski-08} ponownie ten sam symbol „$x$” oznacza dwa różne
-% byty matematyczne.
+Po pierwsze zauważmy, że~$x$ po lewej stronie tego wzoru oznacza coś
+innego, niż po prawej. Po lewej $x$ oznacza ciąg (kolumnę) liczb $n$ liczb
+zespolonych, podczas gdy po prawej stronie oznacza on kolumnę, zapewne inną
+od poprzedniej, liczb zespolonych daną zależnościami
+\begin{equation}
+  \label{eq:Wojtynski-08}
+  x =
+  \begin{bmatrix}
+    x_{ 1 } \\
+    x_{ 2 } \\
+    \vdots \\
+    x_{ n }
+  \end{bmatrix}, \quad
+  x = \sum_{ i = 1 }^{ n } x_{ i } \, e_{ i },
+\end{equation}
+gdzie $e_{ 1 }, e_{ 2 }, \ldots, e_{ n }$ jest pewną bazą przestrzeni $\Cbb^{ n }$.
+Oznaczenia te są nieporęczne, czego świadectwem jest to, iż~we wzorze
+\eqref{eq:Wojtynski-08} ponownie ten sam symbol $x$ oznacza dwa różne
+byty matematyczne.
 
-% By uniknąć dalszego zamieszania, wektory należące do
-% $\Cbb^{ n }$ będziemy oznaczać czcionką pogrubioną, a~kolumny ich
-% współrzędnych w~pewnej bazie, czcionką prostą. Mamy więc
-% $\vecxbold, \vecybold, \vecebold_{ 1 }, \vecebold_{ 2 }, \ldots, \vecebold_{ n }
-% \in \Cbb$, oraz
-% \begin{equation}
-%   \label{eq:Wojtynski-09}
-%   x =
-%   \begin{bmatrix}
-%     x_{ 1 } \\
-%     x_{ 2 } \\
-%     \vdots \\
-%     x_{ n }
-%   \end{bmatrix}, \quad
-%   \vecxbold = \sum_{ i = 1 }^{ n } x_{ i } \vecebold_{ i }.
-% \end{equation}
-% Wzór \eqref{eq:Wojtynski-07} zapiszemy teraz jako
-% \begin{equation}
-%   \label{eq:Wojtynski-10}
-%   \omega( \vecxbold, \vecybold ) = x^{ T } \Omega \, y.
-% \end{equation}
+By uniknąć dalszego zamieszania, wektory należące do
+$\Cbb^{ n }$ będziemy oznaczać czcionką pogrubioną, a~kolumny ich
+współrzędnych w~pewnej bazie, czcionką prostą. Mamy więc
+$\vecxbold, \vecybold, \vecebold_{ 1 }, \vecebold_{ 2 }, \ldots, \vecebold_{ n }
+\in \Cbb$, oraz
+\begin{equation}
+  \label{eq:Wojtynski-09}
+  x =
+  \begin{bmatrix}
+    x_{ 1 } \\
+    x_{ 2 } \\
+    \vdots \\
+    x_{ n }
+  \end{bmatrix}, \quad
+  \vecxbold = \sum_{ i = 1 }^{ n } x_{ i } \vecebold_{ i }.
+\end{equation}
+Wzór \eqref{eq:Wojtynski-07} zapiszemy teraz jako
+\begin{equation}
+  \label{eq:Wojtynski-10}
+  \omega( \vecxbold, \vecybold ) = x^{ T } \Omega \, y.
+\end{equation}
 
-% Weźmy teraz $\vecxbold = \vecebold_{ i }$, $\vecybold = \vecebold_{ j }$.
-% Z~wzoru \eqref{eq:Wojtynski-09} wynika teraz, że~$x_{ l } = \delta^{ l }_{ i }$,
-% $y_{ m } = \delta^{ m }_{ j }$ (konwencja jest wprowadzona na stronie~33 książki
-% Wojtyńskiego) i~tym samym
-% \begin{equation}
-%   \label{eq:Wojtynski-11}
-%   \omega( \vecebold_{ i }, \vecebold_{ j } ) = x^{ T } \Omega \, y =
-%   \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } x_{ l } \, \Omega_{ l m } \, y_{ m } =
-%   \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } \delta^{ i }_{ l } \, \Omega_{ l m } \, \delta^{ j }_{ m } =
-%   \Omega_{ i j },
-% \end{equation}
-% gdzie $\Omega_{ l m }$ oznacza wyraz macierzy $\Omega$ znajdujący~się na przecięciu
-% $l$-tego wiersza i~$m$-tej kolumny. Tym samym otrzymaliśmy bardzo przydatny
-% wzór
-% \begin{equation}
-%   \label{eq:Wojtynski-12}
-%   \Omega_{ i j } = \omega( \vecebold_{ i }, \vecebold_{ j } ).
-% \end{equation}
+Weźmy teraz $\vecxbold = \vecebold_{ i }$, $\vecybold = \vecebold_{ j }$.
+Z~wzoru \eqref{eq:Wojtynski-09} wynika teraz, że~$x_{ l } = \delta^{ l }_{ i }$,
+$y_{ m } = \delta^{ m }_{ j }$ (ta konwekcja zapisu symbolu $\delta^{ i }_{ j }$ została
+wprowadzona na stronie~33 książki Wojtyńskiego) i~tym samym
+\begin{equation}
+  \label{eq:Wojtynski-11}
+  \omega( \vecebold_{ i }, \vecebold_{ j } ) = x^{ T } \Omega \, y =
+  \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } x_{ l } \, \Omega_{ l m } \, y_{ m } =
+  \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } \delta^{ i }_{ l } \, \Omega_{ l m } \, \delta^{ j }_{ m } =
+  \Omega_{ i j },
+\end{equation}
+gdzie $\Omega_{ l m }$ oznacza wyraz macierzy $\Omega$ znajdujący~się na przecięciu
+$l$-tego wiersza i~$m$-tej kolumny. Tym samym otrzymaliśmy bardzo przydatny
+wzór
+\begin{equation}
+  \label{eq:Wojtynski-12}
+  \Omega_{ i j } = \omega( \vecebold_{ i }, \vecebold_{ j } ).
+\end{equation}
 
-% W~książce Wojtyńskiego i~w~tych notatkach, przyjęliśmy następującą linię
-% rozumowanie. Przyjmujemy, iż~istnieje macierz $\Omega$ dla której zachodzi wzór
-% \eqref{eq:Wojtynski-10} i~na podstawie tego wyprowadziliśmy zależność
-% \eqref{eq:Wojtynski-12}. Możemy jednak przyjąć za punkt wyjścia własności
-% formy $\omega( \vecxbold, \vecybold )$, by następnie udowodnić, że~zachodzi wzór
-% \eqref{eq:Wojtynski-10}, przy czym elementy macierzy $\Omega$ w~nim występującej
-% spełniają zależność \eqref{eq:Wojtynski-12}.
+W~książce Wojtyńskiego i~w~tych notatkach przyjęliśmy następującą linię
+rozumowanie. Przyjmujemy, iż~istnieje macierz $\Omega$ dla której zachodzi wzór
+\eqref{eq:Wojtynski-10} i~na podstawie tego wyprowadziliśmy zależność
+\eqref{eq:Wojtynski-12}. Możemy jednak przyjąć za punkt wyjścia własności
+formy $\omega( \vecxbold, \vecybold )$, by następnie udowodnić, że~zachodzi wzór
+\eqref{eq:Wojtynski-10}, przy czym elementy macierzy $\Omega$ w~nim występującej
+spełniają zależność \eqref{eq:Wojtynski-12}.
 
-% To oraz inne zagadnienia, takie jak przedstawienie form dwuliniowych,
-% półtoraliniowych, etc., za pomocą wzoru analogicznego do
-% \eqref{eq:Wojtynski-10} są wyczerpująco omówione w~wielu książkach do
-% algebry liniowej, nie będziemy się tutaj dłużej nad nimi
-% zatrzymywać.\footnote{Warto by napisać w~jakich książkach można znaleźć
-%   omówienie tych problemów.}
+To oraz inne zagadnienia, takie jak przedstawienie form dwuliniowych,
+półtoraliniowych, etc., za pomocą wzoru analogicznego do
+\eqref{eq:Wojtynski-10} są wyczerpująco omówione w~wielu książkach do
+algebry liniowej, nie będziemy się tutaj dłużej nad nimi
+zatrzymywać.\footnote{Warto by napisać w~jakich książkach można znaleźć
+  omówienie tych problemów.}
 
-% \vspace{\spaceFour}
-
-
-
-
-% \start \StrWd{32}{13} Nie mam pojęcia o~co chodzi w~stwierdzeniu
-% „gdzie $n = \dim \Kbb^{ n }$”.
-
-% \vspace{\spaceFour}
+\vspace{\spaceFour}
 
 
 
 
+\StrWd{32}{13} Nie mam pojęcia o~co chodzi w~stwierdzeniu
+„gdzie $n = \dim \Kbb^{ n }$”.
 
-% \start \StrWd{33}{10} W~niewianie wyglądającym wzorze $\left(
-%   \frac{ e_{ 1 } }{ \sqrt{ \alpha } }, \frac{ e_{ 2 } }{ \sqrt{ \alpha } } \right)$
-% ukryta jest trudność, wynikająca z~tego, że~pierwiastek kwadratowy na
-% płaszczyźnie zespolonej jest zawsze funkcją dwuznaczną\footnote{Pierwiastek
-%   z~zera to jak wiadomo wyjątek.}. Trzeba więc przyjąć jakąś konwencję,
-% która będzie nam mówiła, ile dokładnie wynosi $\sqrt{ \alpha }$, gdzie
-% $\alpha \in \Cbb$ i~możemy spokojnie kontynuować rozważania.
-
-% \vspace{\spaceFour}
+\vspace{\spaceFour}
 
 
 
 
 
-% \start \StrWd{33}{5} Podany tu wzór $\dim Y^{ \perp } = n - 2$ jest niewątpliwie
-% prawdziwy, w~tym jednak momencie nie potrafię zrozumieć poprawności jego
-% dowodu. Do problemu tego należy wrócić, po odświeżeniu sobie informacji
-% z~algebry liniowej o~wymiarach przestrzeni wektorowych i~formach liniowych.
+\StrWd{33}{10} W~niewinnie wyglądającym wzorze $\left(
+  \frac{ e_{ 1 } }{ \sqrt{ \alpha } }, \frac{ e_{ 2 } }{ \sqrt{ \alpha } } \right)$
+ukryta jest trudność, wynikająca z~tego, że~pierwiastek kwadratowy na
+płaszczyźnie zespolonej jest zawsze funkcją
+dwuwartościową\footnote{Pierwiastek z~zera to jak wiadomo wyjątek.}.
+Trzeba więc przyjąć jakąś konwencję, która będzie nam mówiła, ile dokładnie
+wynosi $\sqrt{ \alpha }$, gdzie $\alpha \in \Cbb$ i~możemy spokojnie kontynuować
+rozważania.
 
-% \vspace{\spaceFour}
+\vspace{\spaceFour}
+
+
+
+
+
+\StrWd{33}{5} Podany tu wzór $\dim Y^{ \perp } = n - 2$ jest niewątpliwie
+prawdziwy, w~tym jednak momencie nie potrafię zrozumieć dlaczego jego
+dowodu jest poprawny. Do problemu tego należy wrócić, po odświeżeniu sobie
+informacji z~algebry liniowej o~wymiarach przestrzeni wektorowych i~formach
+liniowych.
+
+\vspace{\spaceFour}
 
 
 
