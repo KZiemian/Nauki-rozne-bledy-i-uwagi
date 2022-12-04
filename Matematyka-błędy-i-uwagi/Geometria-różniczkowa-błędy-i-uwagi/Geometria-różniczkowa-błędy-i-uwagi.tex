@@ -101,8 +101,10 @@
 % ------------------------------
 % Ustawienia różnych parametrów tekstu
 % ------------------------------
-\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
+\renewcommand{\arraystretch}{1.4} % Ustawienie szerokości odstępów między
 % wierszami w tabelach.
+
+\renewcommand{\baselinestretch}{1.1}
 
 
 
@@ -125,7 +127,7 @@
 % ---------------------------------------------------------------------
 % Tytuł i autor dzieła
 \title{Geometria różniczkowa \\
-  Błędy i~uwagi}
+  {\Large Błędy i~uwagi}}
 
 \author{Kamil Ziemian}
 
@@ -161,16 +163,20 @@
 
 % ############################
 \Work{ % Autor i tytuł dzieła
-  William M. Boothby \\
-  „An~Introduction to~Differentiable Manifolds and~Riemannian
-  Geometry”, \cite{BoothbyIntroductionToDifferentiableManifolds1986}}
+  William M. Boothby \\[0.3em]
+  \textit{An~Introduction to~Differentiable Manifolds and~Riemannian
+    Geometry}, \cite{BoothbyIntroductionToDifferentiableManifolds1986}}
+
+\vspace{0em}
 
 
 % ##################
 \CenterBoldFont{Uwagi do konkretnych stron}
 
+\vspace{0em}
 
-\start \StrWd{233}{3} Zamiast $dy/dx$ powinno być $d g( x )/dx$.
+
+\StrWd{233}{3} Zamiast $dy/dx$ powinno być $d g( x )/dx$.
 To~mogłoby ograniczyć nieporozumienia związane z~tym wzorem.
 
 \vspace{\spaceFour}
@@ -187,7 +193,6 @@ To~mogłoby ograniczyć nieporozumienia związane z~tym wzorem.
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -204,29 +209,38 @@ To~mogłoby ograniczyć nieporozumienia związane z~tym wzorem.
 \end{center}
 
 \vspace{\spaceTwo}
-% ############################
-
-
-
-
-
-
-
 
 
 
 % ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\newpage
+
 \Work{ % Autorzy i tytuł dzieła
   J. Gancarzewicz, B. Opozda \\
-  „Wstęp do geometrii różniczkowej”,
+  \textit{Wstęp do geometrii różniczkowej},
   \cite{GancarzewiczOpozdaWstepDoGeometriiRozniczkowej2003}}
+
+\vspace{0em}
 
 
 % ##################
 \CenterBoldFont{Uwagi}
 
+\vspace{0em}
 
-\start \Str{17} Nazwa \textbf{płaszczyzna styczna} pochodzi stąd,
+
+\Str{17} Nazwa \textbf{płaszczyzna styczna} pochodzi stąd,
 że~zawiera ona wektor styczny do krzywej $\vectbold$, ponadto jeśli dana
 krzywa bez punktów wyprostowania jest płaska, to zawiera~się właśnie
 w~tej płaszczyźnie. \textbf{Płaszczyzna prostopadła} jest natomiast
@@ -239,12 +253,12 @@ wyjaśnić skąd~się wzięła nazwa \textbf{płaszczyzna prostująca}.
 
 
 
-\start \Str{31} \textbf{Twierdzenie 3.7.} W~dowodzie faktu, że~z~równości
-typu $\vectbold \cdot \vectbold' = 0$ wynik, iż~moduł $\vectbold$ jest stały,
-oprócz wzorów (3.5) przyjmowano chyba milcząco, że~dla każdej wartości
-parametru $s$ wektory $\vectbold$, $\vecnbold$ i~$\vecbbold$ są ortogonalne,
-co jednak nie jest udowodnione. Z~dowodem relacji ortogonalności sprawa
-wygląda chyba podobnie. \Dok
+\Str{31} \textbf{Twierdzenie 3.7.} W~dowodzie faktu, że~z~równości
+typu $\vectbold \cdot \vectbold' = 0$ wynika, iż~moduł $\vectbold$ jest stały,
+oprócz wykorzystania wzorów (3.5) przyjęto chyba milcząco, że~dla każdej
+wartości parametru $s$ wektory $\vectbold$, $\vecnbold$ i~$\vecbbold$ są
+ortogonalne, co jednak nie jest udowodnione. Z~dowodem relacji
+ortogonalności sprawa wygląda chyba podobnie. \Dok
 
 \vspace{\spaceFour}
 
@@ -252,7 +266,7 @@ wygląda chyba podobnie. \Dok
 
 
 
-\start \Str{35} W~żadnym z~podanych tu przykładów, nie udowodniono,
+\Str{35} W~żadnym z~podanych tu przykładów, nie udowodniono,
 że~budowane mapy, jako odwzorowania,~są homomorfizmami między
 odpowiednimi przestrzeniami topologicznymi. Pokazanie tego nie~może
 być jednak trudne. \Dok
@@ -264,7 +278,11 @@ być jednak trudne. \Dok
 
 
 % ##################
+\newpage
+
 \CenterBoldFont{Błędy}
+
+\vspace{-0.5em}
 
 
 \begin{center}
@@ -283,6 +301,14 @@ być jednak trudne. \Dok
            & $\left( \frac{ 4 r^{ 2 } u_{ 1 } }{ \norm{ u }^{ 2 } },
              \ldots, \frac{ 4 r^{ 2 } u_{ n } }{ \norm{ u }^{ 2 } }
              \right)$ \\
+    40  & &  3 & $( \frac { v_{ 1 } }{ u_{ i } }, \ldots,
+                 \frac{ v_{ i - 1 } }{ u_{ i } },
+                 \frac{ v_{ i + 1 } }{ u_{ i } }, \ldots,
+                 \frac{ v_{ n + 1 } }{ u_{ i } } )$
+           & $( \frac{ v_{ 1 } }{ v_{ i } }, \ldots,
+             \frac{ v_{ i - 1 } }{ v_{ i } },
+             \frac{ v_{ i + 1 } }{ v_{ i } }, \ldots,
+             \frac{ v_{ n + 1 } }{ v_{ i } } )$ \\
     41  & & 14 & oraz$( 1, \bar{ z } )$ & oraz $( 1, \bar{ z } )$ \\
     44  & 17 & & $( ( \varphi( x ) )$ & $( \varphi( x ) )$ \\
     49  & &  4 & $\frac{ \partial ( \varphi^{ i } \circ \varphi ) }{ u^{ j } }$
@@ -297,14 +323,7 @@ być jednak trudne. \Dok
 \vspace{\spaceTwo}
 
 
-\noindent
-\StrWd{40}{3} \\
-\Jest
-$( \frac { v_{ 1 } }{ u_{ i } }, \ldots, \frac{ v_{ i - 1 } }{ u_{ i } },
-\frac{ v_{ i + 1 } }{ u_{ i } }, \ldots, \frac{ v_{ n + 1 } }{ u_{ i } } )$ \\
-\Powin
-$( \frac{ v_{ 1 } }{ v_{ i } }, \ldots, \frac{ v_{ i - 1 } }{ v_{ i } },
-\frac{ v_{ i + 1 } }{ v_{ i } }, \ldots, \frac{ v_{ n + 1 } }{ v_{ i } } )$ \\
+
 
 
 % ############################
@@ -319,20 +338,26 @@ $( \frac{ v_{ 1 } }{ v_{ i } }, \ldots, \frac{ v_{ i - 1 } }{ v_{ i } },
 
 
 % ############################
+\newpage
+
 \Work{ % Autor i tytuł dzieła
   Bogusław Gdowski \\
   \textit{Elementy geometrii różniczkowej z~zadaniami},
   \cite{GdowskiElementGeometriiRozniczkowejZZadaniami1999}}
 
+\vspace{0em}
+
 
 % ##################
 \CenterBoldFont{Uwagi}
 
+\vspace{0em}
 
-\start \Str{5} Ponieważ autor nie wyjaśnił, co~dokładnie rozumie przez
+
+\Str{5} Ponieważ autor nie wyjaśnił, co~dokładnie rozumie przez
 przestrzeń euklidesową $E_{ 3 }$ (że~jest ona trójwymiarowa, jest
-tu~kwestią drugorzędną), nie jest od~razu jasne czym różni~się ona
-od~zbioru wszystkich swoich wektorów $E_{ 3 }^{ \;* }$.
+tu~kwestią drugorzędną), nie jest od~razu jasne, czym różni~się ona
+od~zbioru wszystkich swoich wektorów $E_{ 3 }^{ \; * }$.
 
 \vspace{\spaceFour}
 
@@ -340,12 +365,12 @@ od~zbioru wszystkich swoich wektorów $E_{ 3 }^{ \;* }$.
 
 
 
-\start \Str{7} Poprawniej i~lepiej tłumaczącym co~się naprawdę dzieje,
-byłoby zapisywać równania parametryczne w~formie
-$\boldsymbol{ x( u ) } = \boldsymbol{ u }$, analogicznie dla~innych
-zmiennych, niż~$\boldsymbol{ x } = \boldsymbol{ u }$. Można to~jednak
-zrozumieć stosowanie takiej konwencji jako kwestię uproszczenie notacji
-i~zwyczaju.
+\Str{7} Zapisanie równania parametrycznego w~formie
+$\boldsymbol{ x( u ) } = \boldsymbol{ u }$ analogicznie jak to jest
+w~przypadku innych zmiennych, nie zaś w~postaci $\boldsymbol{ x } =
+\mathbf{ u }$, byłoby nie tylko poprawniejsze, ale też lepiej
+tłumaczyłoby co~się naprawdę dzieje. Wybór takie notacji można jednak
+wytłumaczyć pragnieniem skrócenia zapisu oraz względami zwyczajowymi.
 
 \vspace{\spaceFour}
 
@@ -354,7 +379,11 @@ i~zwyczaju.
 
 
 % ##################
+\newpage
+
 \CenterBoldFont{Błędy}
+
+\vspace{-0.5em}
 
 
 \begin{center}
@@ -367,11 +396,12 @@ i~zwyczaju.
     & Od góry & Od dołu & & \\
     \hline
     6   & 17 & & $X \in E_{ 3 }$ & $X \subset E_{ 3 }$ \\
+    6   & & 5-6 & funkcjami jednej zmiennej rzeczywistej
+           & \textbf{\textit{funkcjami jednej zmiennej rzeczywistej}} \\
     11  & 11 & & $\boldsymbol{u_{ 0 }}$ & $\boldsymbol{u_{ 0 }} \in \Rbb$ \\
     15  & &  3 & zbiorem & podzbiorem \\
     18  &  3 & & $\boldsymbol{u_{ 0 }} + + \boldsymbol{h_{ 0 }}$
            & $\boldsymbol{u_{ 0 }} + \boldsymbol{h_{ 0 }}$ \\
-           % & & & & \\
            % & & & & \\
            % & & & & \\
            % & & & & \\
@@ -381,12 +411,9 @@ i~zwyczaju.
 
 \end{center}
 
-\noindent
-\StrWd{6}{6--5} \\
-\Jest  funkcjami jednej zmiennej rzeczywistej \\
-\Powin \textbf{\textit{funkcjami jednej zmiennej rzeczywistej}} \\
-
 \vspace{\spaceTwo}
+
+
 % ############################
 
 
@@ -460,22 +487,28 @@ i~zwyczaju.
   \textit{Grupy i~algebry Liego},
   \cite{WojtynskiGrupyIAlgebryLiego1986}}
 
+\vspace{0em}
+
 
 % ##################
 \CenterBoldFont{Uwagi}
 
+\vspace{0em}
 
-\start W~książce do oznaczenia ciał używa się fontów pogrubionych:
+
+W~książce do oznaczenia ciał używa się fontów pogrubionych:
 $\mathbf{K}$, $\mathbf{R}$, $\mathbf{C}$, etc. W~tych notatkach będziemy
 używali standardowych fontów „blackboard bold”: $\Kbb$, $\Rbb$, $\Cbb$, etc.
 Wyjątkiem będzie sytuacja, gdy w~danym miejscu książki został użyty zły
 symbol, wtedy będziemy dążyć, by wygląd wzoru który będziemy poprawiać, bym
 maksymalnie podobny do oryginału w~książce.
 
-Podobni będziemy postępować z~symbolami, które obecnie zapisuje się za
+Podobnie będziemy postępować z~symbolami, które obecnie zapisuje się za
 pomocą czcionki kaligraficznej. Będziemy więc w~tych notatkach oznaczać
-klasę funkcji różniczkowalnych nie symbolem $C^{ k }$, lecz $\Ccal^{ k }$,
+klasę funkcji różniczkowalnych nie symbolem $C^{ k }$ lecz $\Ccal^{ k }$,
 etc.
+
+\vspace{\spaceFour}
 
 
 
@@ -484,12 +517,14 @@ etc.
 % ##################
 \CenterBoldFont{Uwagi do konkretnych stron}
 
+\vspace{0em}
 
-\start \Str{13} W~tym miejscu powinniśmy zaznaczyć, że~dla prostoty zapisu
+
+\Str{13} W~tym miejscu powinniśmy zaznaczyć, że~dla prostoty zapisu
 będziemy często opuszczać symbol działania dwuargumentowego i~zamiast pisać
 $x \cdot y$, dla $x, y \in X$, będziemy pisali po prostu $x y$.
 
-Reguły jaką stosował Wojtyński decydując~się w~danym miejscu zostawić, bądź
+Reguły jakie stosował Wojtyński decydując~się w~danym miejscu zostawić bądź
 opuścić symbol $\cdot$ pozostają dla mnie zagadką. W~miarę jednak swoich
 możliwości będę starał się wskazać w~tych notatkach, w~których miejscach
 pisownię wzorów należałoby ujednolicić.
@@ -500,10 +535,10 @@ pisownię wzorów należałoby ujednolicić.
 
 
 
-\start \Str{13} Definicja zbiorów $V$ stanowiących bazę otoczeń punktu
-$( x_{ \varphi } )$ jest trochę myląca na pierwszy rzut oka, bo mówi tylko
+\Str{13} Definicja zbiorów $V$ stanowiących bazę otoczeń punktu
+$( x_{ \varphi } )$ jest na pierwszy rzut oka myląca, bo mówi wyłącznie
 o~zachowaniu tylko skończonej ilości elementów składowych punktu
-$( y_{ \phi } )$. Wstałoby ją opisać w~sposób bardziej przejrzysty, w~tym
+$( y_{ \phi } )$. Dałoby~się ją opisać w~sposób bardziej przejrzysty, w~tym
 jednak momencie brakuje mi do tego wiedzy z~topologii.
 
 \vspace{\spaceFour}
@@ -512,7 +547,7 @@ jednak momencie brakuje mi do tego wiedzy z~topologii.
 
 
 
-\start \Str{14} Definicja zbioru $A \cdot B$ byłaby bardziej precyzyjna, gdy
+\Str{14} Definicja zbioru $A \cdot B$ byłaby bardziej precyzyjna, gdy
 została zapisana w~poniższej postaci.
 \begin{equation}
   \label{eq:Wojtynski-01}
@@ -525,8 +560,8 @@ została zapisana w~poniższej postaci.
 
 
 
-\start \Str{19} Warto zaznaczyć, że~naturalne włożenie ciała skalarów
-$\Kbb$ w~algebrę $A$, które oznaczamy $\omega_{ 0 }$, dla przypadku gdy $A$ jest
+\Str{19} Warto zaznaczyć, że~naturalne włożenie ciała skalarów
+$\Kbb$ w~algebrę $A$, które oznaczamy $\omega_{ 0 }$, dla przypadku, gdy $A$ jest
 algebrą z~jedynką, ma postać
 \begin{equation}
   \label{eq:Wojtynski-02}
@@ -545,11 +580,11 @@ przyjmujemy
 
 
 
-\start \Str{21} Po lewej stronie wzoru (1.6) mamy wyrażenie
-$| x_{ i } \, y_{ i } |$, jednak bardziej zgodne ze wzorem (1.5) na stronie 20,
-byłoby umieszczenie w~tym miejscu $| x_{ i } \, \bar{y}_{ i } |$. Oczywiście,
-oba te wyrażenia są równe, więc nie chodzi o~poprawność podanego wzoru,
-tylko o~elegancję matematyczną.
+\Str{21} Po lewej stronie wzoru (1.6) mamy wyrażenie
+$| x_{ i } \, y_{ i } |$, jednak bardziej zgodne ze wzorem (1.5) na stronie
+20 byłoby umieszczenie w~tym miejscu $| x_{ i } \, \bar{y}_{ i } |$.
+Oczywiście oba te wyrażenia są równe, więc nie chodzi o~poprawność
+podanego wzoru, tylko o~elegancję matematyczną.
 
 \vspace{\spaceFour}
 
@@ -557,7 +592,8 @@ tylko o~elegancję matematyczną.
 
 
 
-\start \textbf{Str. 21, wiersze 12, 13.} Wiersze te zostały bardzo brzydko
+\noindent
+\textbf{Str. 21, wiersze 12, 13.} Wiersze te zostały bardzo brzydko
 sformatowane.
 
 \vspace{\spaceFour}
@@ -566,7 +602,7 @@ sformatowane.
 
 
 
-\start \Str{22} We wzorze (1.7) jak zwykle musimy przyjąć, że~$\Vert h \Vert \neq 0$.
+\Str{22} We wzorze (1.7) jak zwykle musimy przyjąć, że~$\Vert h \Vert \neq 0$.
 
 \vspace{\spaceFour}
 
@@ -574,7 +610,7 @@ sformatowane.
 
 
 
-\start \Str{25} Definicja 1.33 byłaby bardziej logiczna, gdyby najpierw
+\Str{25} Definicja 1.33 byłaby bardziej logiczna, gdyby najpierw
 została podana definicja przestrzeni lokalnie łukowo spójnej, a~dopiero
 potem lokalnie jednospójnej.
 
@@ -584,7 +620,7 @@ potem lokalnie jednospójnej.
 
 
 
-\start \Str{31} Na początku tej strony czytamy „pierwsza podprzestrzeń ma
+\Str{31} Na początku tej strony czytamy „pierwsza podprzestrzeń ma
 wymiar zespolony $( n^{ 2 } - n ) / 2$”. Ponieważ może zachodzić wątpliwość,
 którą przestrzeń określamy jako „pierwszą”, zanotujemy, że~przez pierwszą
 przestrzeń należy rozumieć przestrzeń macierzy z~zerowymi współczynnikami na
@@ -597,7 +633,7 @@ z~zerowymi współczynnikami poza diagonalą.
 
 
 
-\start \Str{31} Dowód tego, że~odwzorowanie
+\Str{31} Dowód tego, że~odwzorowanie
 $\GL( n, \Kbb ) \ni A \mapsto \widetilde{A} \in \GL( n, \Kbb )$ jest izomorfizmem,
 byłby prostszy, gdyby zostało jawnie powiedziane, że~odwzorowanie to jest
 inwolucją.
@@ -608,15 +644,14 @@ inwolucją.
 
 
 
-\start \Str{31} Aby udowodnić, że~dla macierzy
-$A \in \OStraightBold( n, \Rbb )$ zachodzi $| a_{ i, j } | \leq 1$, dla
-$i, j = 1, 2, \ldots, n$, należy w~równości
+\Str{31} Aby udowodnić, że~dla macierzy $A \in \OStraightBold( n, \Rbb )$
+zachodzi $| a_{ i, j } | \leq 1$, dla $i, j = 1, 2, \ldots, n$, należy w~równości
 \begin{equation}
   \label{eq:Wojtynski-04}
   \sum_{ j = 1 }^{ n } a_{ j i } \, a_{ j k } = \delta_{ k }^{ i }, \quad
   i, k = 1, 2, \ldots, n,
 \end{equation}
-podstawić $i = k$, do prowadzi do
+podstawić $i = k$, co prowadzi do
 \begin{equation}
   \label{eq:Wojtynski-05}
   \sum_{ j = 1 }^{ n } a_{ j i } \, a_{ j i } =
@@ -624,7 +659,7 @@ podstawić $i = k$, do prowadzi do
   ( a_{ 1 i } )^{ 2 } + ( a_{ 2 i } )^{ 2 } + \ldots + ( a_{ n i } )^{ 2 } =
   \delta^{ i }_{ i } = 1.
 \end{equation}
-Ponieważ wszystkie współczynniki $a_{ i j }$, gdzie $i, j = 1, 2, \ldots, n$, są
+Ponieważ wszystkie współczynniki $a_{ i j }$, dla $i, j = 1, 2, \ldots, n$, są
 rzeczywiste, otrzymuje od razu nierówność
 \begin{equation}
   \label{eq:Wojtynski-06}
@@ -643,8 +678,8 @@ trochę bardziej jasnym i~zupełnym.
 
 
 
-\start \Str{31} Czy warunek $A A^{ T } = \matUnit$ wynika z~warunku
-$A^{ T } A = \matUnit$, gdy $A$ jest macierzą kwadratową wymiaru $n$?
+\Str{31} Czy warunek $A A^{ T } = \matUnit$ wynika z~warunku
+$A^{ T } A = \matUnit$, jeśli $A$ jest macierzą kwadratową wymiaru~$n$?
 
 \vspace{\spaceFour}
 
@@ -652,14 +687,14 @@ $A^{ T } A = \matUnit$, gdy $A$ jest macierzą kwadratową wymiaru $n$?
 
 
 
-\start \Str{32} Bezpośrednie przekształcenie wzoru
+\Str{32} Bezpośrednie przekształcenie wzoru
 $\bar{A} = \widetilde{A} = ( A^{ T } )^{ -1 }$ prowadzi do dwóch zależności:
 $A^{ T } \bar{A} = \matUnit$, $\bar{A} A^{ T } = \matUnit$. Dopiero gdy
-dokonamy sprzężenia zespolonego obu stron drugiej z~tych równości dostanie
-podany w~książce wzór $A \bar{A}^{ T } = \matUnit$. Nie mogę mieć pewności,
-czemu autor zdecydował~się zapisać te zależności w~takiej formie, mogę
-jedynie podejrzewać, że~chodziło o~to by wyprowadzone z~nich wzory (2.9)
-przyjęły bardziej symetryczną postać.
+dokonamy sprzężenia zespolonego obu stron drugiej z~tych równości,
+dostaniemy podany w~książce wzór $A \bar{A}^{ T } = \matUnit$. Nie mogę
+mieć pewności, czemu autor zdecydował~się zapisać te zależności w~takiej
+formie, mogę jedynie podejrzewać, że~chodziło o~to by wyprowadzone z~nich
+wzór (2.9) przyjęły bardziej symetryczną postać.
 
 Jeżeli teraz dokonamy obustronnego sprzężenia zespolonego równości
 $A^{ T } \bar{A} = \matUnit$ to dostaniemy $\bar{A}^{ T } A = \matUnit$, co
@@ -674,1106 +709,1106 @@ popularnej formie $A^{ * } = A^{ -1 }$.
 
 
 
-\start \Str{32} W~tym miejscu warto się zatrzymać nad wzorem
-\begin{equation}
-  \label{eq:Wojtynski-07}
-  \omega( x, y ) = x^{ T } \Omega \, y,
-\end{equation}
-który rozpatrywać będziemy tylko w~kontekście przestrzeni $\Cbb^{ n }$,
-zwracając tylko uwagę, że~przedstawione tu rozumowanie można uogólnić
-na~dowolną skończenie wymiarową przestrzeń wektorową.
-
-Po pierwsze zwróćmy uwagę, że~$x$ po lewej stronie tego wzoru oznacza coś
-innego, niż po prawej. Po lewej $x$ oznacza ciąg (kolumnę) liczb $n$ liczb
-zespolonych, podczas gdy po prawej stronie oznacza on kolumnę, zapewne inną
-od poprzedniej, liczb zespolonych daną zależnościami
-\begin{equation}
-  \label{eq:Wojtynski-08}
-  x =
-  \begin{bmatrix}
-    x_{ 1 } \\
-    x_{ 2 } \\
-    \vdots \\
-    x_{ n }
-  \end{bmatrix}, \quad
-  x = \sum_{ i = 1 }^{ n } x_{ i } \, e_{ i },
-\end{equation}
-gdzie $e_{ 1 }, e_{ 2 }, \ldots, e_{ n }$ jest pewną bazą przestrzeni $\Cbb^{ n }$.
-Oznaczenia te są nieporęczne, czego świadectwem jest to, iż~we wzorze
-\eqref{eq:Wojtynski-08} ponownie ten sam symbol „$x$” oznacza dwa różne
-byty matematyczne.
-
-By uniknąć dalszego zamieszania, wektory należące do
-$\Cbb^{ n }$ będziemy oznaczać czcionką pogrubioną, a~kolumny ich
-współrzędnych w~pewnej bazie, czcionką prostą. Mamy więc
-$\vecxbold, \vecybold, \vecebold_{ 1 }, \vecebold_{ 2 }, \ldots, \vecebold_{ n }
-\in \Cbb$, oraz
-\begin{equation}
-  \label{eq:Wojtynski-09}
-  x =
-  \begin{bmatrix}
-    x_{ 1 } \\
-    x_{ 2 } \\
-    \vdots \\
-    x_{ n }
-  \end{bmatrix}, \quad
-  \vecxbold = \sum_{ i = 1 }^{ n } x_{ i } \vecebold_{ i }.
-\end{equation}
-Wzór \eqref{eq:Wojtynski-07} zapiszemy teraz jako
-\begin{equation}
-  \label{eq:Wojtynski-10}
-  \omega( \vecxbold, \vecybold ) = x^{ T } \Omega \, y.
-\end{equation}
-
-Weźmy teraz $\vecxbold = \vecebold_{ i }$, $\vecybold = \vecebold_{ j }$.
-Z~wzoru \eqref{eq:Wojtynski-09} wynika teraz, że~$x_{ l } = \delta^{ l }_{ i }$,
-$y_{ m } = \delta^{ m }_{ j }$ (konwencja jest wprowadzona na stronie~33 książki
-Wojtyńskiego) i~tym samym
-\begin{equation}
-  \label{eq:Wojtynski-11}
-  \omega( \vecebold_{ i }, \vecebold_{ j } ) = x^{ T } \Omega \, y =
-  \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } x_{ l } \, \Omega_{ l m } \, y_{ m } =
-  \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } \delta^{ i }_{ l } \, \Omega_{ l m } \, \delta^{ j }_{ m } =
-  \Omega_{ i j },
-\end{equation}
-gdzie $\Omega_{ l m }$ oznacza wyraz macierzy $\Omega$ znajdujący~się na przecięciu
-$l$-tego wiersza i~$m$-tej kolumny. Tym samym otrzymaliśmy bardzo przydatny
-wzór
-\begin{equation}
-  \label{eq:Wojtynski-12}
-  \Omega_{ i j } = \omega( \vecebold_{ i }, \vecebold_{ j } ).
-\end{equation}
-
-W~książce Wojtyńskiego i~w~tych notatkach, przyjęliśmy następującą linię
-rozumowanie. Przyjmujemy, iż~istnieje macierz $\Omega$ dla której zachodzi wzór
-\eqref{eq:Wojtynski-10} i~na podstawie tego wyprowadziliśmy zależność
-\eqref{eq:Wojtynski-12}. Możemy jednak przyjąć za punkt wyjścia własności
-formy $\omega( \vecxbold, \vecybold )$, by następnie udowodnić, że~zachodzi wzór
-\eqref{eq:Wojtynski-10}, przy czym elementy macierzy $\Omega$ w~nim występującej
-spełniają zależność \eqref{eq:Wojtynski-12}.
-
-To oraz inne zagadnienia, takie jak przedstawienie form dwuliniowych,
-półtoraliniowych, etc., za pomocą wzoru analogicznego do
-\eqref{eq:Wojtynski-10} są wyczerpująco omówione w~wielu książkach do
-algebry liniowej, nie będziemy się tutaj dłużej nad nimi
-zatrzymywać.\footnote{Warto by napisać w~jakich książkach można znaleźć
-  omówienie tych problemów.}
-
-\vspace{\spaceFour}
-
-
-
-
-\start \StrWd{32}{13} Nie mam pojęcia o~co chodzi w~stwierdzeniu
-„gdzie $n = \dim \Kbb^{ n }$”.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\start \StrWd{33}{10} W~niewianie wyglądającym wzorze $\left(
-  \frac{ e_{ 1 } }{ \sqrt{ \alpha } }, \frac{ e_{ 2 } }{ \sqrt{ \alpha } } \right)$
-ukryta jest trudność, wynikająca z~tego, że~pierwiastek kwadratowy na
-płaszczyźnie zespolonej jest zawsze funkcją dwuznaczną\footnote{Pierwiastek
-  z~zera to jak wiadomo wyjątek.}. Trzeba więc przyjąć jakąś konwencję,
-która będzie nam mówiła, ile dokładnie wynosi $\sqrt{ \alpha }$, gdzie
-$\alpha \in \Cbb$ i~możemy spokojnie kontynuować rozważania.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\start \StrWd{33}{5} Podany tu wzór $\dim Y^{ \perp } = n - 2$ jest niewątpliwie
-prawdziwy, w~tym jednak momencie nie potrafię zrozumieć poprawności jego
-dowodu. Do problemu tego należy wrócić, po odświeżeniu sobie informacji
-z~algebry liniowej o~wymiarach przestrzeni wektorowych i~formach liniowych.
-
-\vspace{\spaceFour}
-
-
-
-\start \Str{33-34} Podany tu dowód sprowadzania formy symplektycznej do
-postaci kanonicznej zawiera dużą lukę, bowiem w~algorytmie sprowadzania do
-postaci kanonicznej został pominięty bardzo ważny krok. Wyjaśnienie jak
-należy poprawić przedstawiony algorytm, poprzedzimy ogólną dyskusją problemu.
-
-Przyjmijmy, że~tak jak w~książce, forma symplektyczna $\omega$ jest zadana na
-przestrzeni $\Cbb^{ n }$. Niech $n = 2k$, gdzie $k \in \Nbb \setminus \{ 0 \}$. Wiemy
-już, że~formy symplektyczne istnieją tylko na przestrzeni o~wymiarze
-parzystym więc takie $k$ istnieje. Przejdźmy do momentu, gdy macierz formy symplektycznej ma postać
-\begin{equation}
-  \label{eq:Wojtynski-13}
-  \Omega =
-  \begin{pmatrix}
-    \hphantom{-} 0 & 1 & \hphantom{-} 0 & \ldots \\
-    -1 & 0 & \hphantom{-} 0 & \ldots \\
-    \hphantom{-} 0 & 0 & \hphantom{-} 0 & \matUnit \\
-    \hphantom{-} 0 & 0 & -\matUnit & 0 \\
-  \end{pmatrix}
-\end{equation}
-Ta macierz nie wygląda najlepiej, acz stworzenie lepszej w~systemie \LaTeX{}
-odłożymy na kiedy indziej\footnote{Oby to kiedy indziej kiedyś nadeszło.}.
-Na razie zauważymy, że~symbol $\ldots$ oznacza, iż~ostatni podany jawnie symbol
-w~macierzy powtarza~się w danym wierszu, aż~do jego końca. Do tego w~trzecim
-i~czwartym wierszu każdy symbol oznacza blok macierzowy o~rozmiarach
-$( k - 1 ) \times ( k - 1 )$. Symbol $\matUnit$ oznacza macierz jednostkową, zaś
-$0$ macierz której elementami są wyłącznie zera. Jak już mówiliśmy, nie
-wygląda to ładnie, ale na razie musi wystarczyć.
-
-By ułatwić rachunki, przyjmujemy iż wyrażenie
-\begin{equation}
-  \label{eq:Wojtynski-14}
-  d_{ i } \leftrightarrow d_{ j },
-\end{equation}
-oznacza przejście do ze starej bazy $d_{ 1 }, d_{ 2 }, \ldots, d_{ n }$ nowej bazy
-$d'_{ 1 }, d'_{ 2 }, \ldots, d'_{ n }$ danej jako
-\begin{subequations}
-  \begin{align}
-    \label{eq:Wojtynski-15-A}
-    &d'_{ i } = d_{ j }, \\
-    \label{eq:Wojtynski-15-B}
-    &d'_{ j } = d_{ i }, \\
-    \label{eq:Wojtynski-15-C}
-    &d'_{ l } = d_{ l },
-  \end{align}
-\end{subequations}
-dla $l \notin \{ i, j \}$. Oprócz tego będziemy zwykle opuszczać prim
-w~oznaczeniach nowej bazy, gdyż nie powinno to wprowadzać dwuznaczności,
-a~poważnie uprości to zapis.
-
-Wedle tego co pisze w~książce, gdy macierz jest formie
-\eqref{eq:Wojtynski-06} to wystarczy wykonać jedną operację zmiany bazy,
-$d_{ 2 } \leftrightarrow d_{ k + 1 }$, by uzyskać postać kanoniczną, co jest nieprawdą.
-W~istocie potrzebne jest $k - 1$ operacji tego typu, które zaraz opiszemy.
-Zwróćmy uwagę, że~dla $n = 2$, $k = 1$ czy potrzebnych jest $1 - 1 = 0$
-operacja. Rzeczywiście, macierz \eqref{eq:Wojtynski-06} przyjmuje postać
-\begin{equation}
-  \label{eq:Wojtynski-16}
-  \Omega =
-  \begin{pmatrix}
-    \hphantom{-} 0 & 1 \\
-    -1 & 0
-  \end{pmatrix}.
-\end{equation}
-Gdy $n = 4$, $k = 2$, więc potrzebne jest $k - 1 = 1$ operacja zmiany bazy,
-którą jest właśnie operacja $d_{ 2 } \leftrightarrow d_{ k + 1 }$. Widzimy więc, że~dopiero
-dla $n = 6$, $k = 3$ przedstawiony w~książce algorytm przestaje dawać
-porządny wynik.
-
-Zauważmy teraz, że~ze względu na definicję wyrazów macierzy $\Omega$
-\begin{equation}
-  \label{eq:Wojtynski-17}
-  \Omega_{ l m } = \omega( d_{ l }, d_{ m } ),
-\end{equation}
-wynika, że~operacja $d_{ i } \leftrightarrow d_{ j }$ na poziomie macierzy sprowadza~się do
-\begin{enumerate}
-
-\item Zamiany miejscami $i$-tego wiersza z~$j$-tym.
-
-\item Zamiany miejscami $i$-tej kolumny z~$j$-tą.
-
-\end{enumerate}
-By to pokazać, wybierzmy najpierw $l \notin \{ i, j \}$. Wówczas wyrazy
-$\Omega_{ l m }$ dla $l \notin \{ i, j \}$ nie ulegają zmianie. Dla $m = i$, mamy zaś
-\begin{equation}
-  \label{eq:Wojtynski-18}
-  \Omega'_{ l i } = \omega( d'_{ l }, d'_{ i } ) = \omega( d_{ l }, d_{ j } ) =
-  \Omega_{ l j }.
-\end{equation}
-Analogiczny rachunek pokazuje, że~$\Omega'_{ k j } = \Omega_{ k i }$. Weźmy teraz
-$l = i$ i~$m \notin \{ i, j \}$. Prowadzi to do
-\begin{equation}
-  \label{eq:Wojtynski-19}
-  \Omega'_{ i m } = \omega( d'_{ i }, d'_{ m } ) = \omega( d_{ j }, d_{ m } ) =
-  \Omega_{ j m }.
-\end{equation}
-Przejdźmy teraz do przypadku $k = l$, $l = m$. Mamy wtedy
-\begin{equation}
-  \label{eq:Wojtynski-20}
-  \Omega'_{ i j } = \omega( d'_{ i }, d'_{ j } ) = \omega( d_{ j }, d_{ i } ) =
-  \Omega_{ j i }.
-\end{equation}
-Analogicznie przebiega rachunek pokazujący, że
-\begin{equation}
-  \label{eq:Wojtynski-21}
-  \Omega'_{ j i } = \Omega_{ i j }.
-\end{equation}
-Wzory \eqref{eq:Wojtynski-18}--\eqref{eq:Wojtynski-21} stanowią indeksowy
-zapis reguł 1 i~2.
-
-Jesteśmy teraz gotowi uzupełnić podany w~książce algorytm sprowadzania
-formy do postaci kanonicznej. W~momencie w~którym sprawdziliśmy macierz
-formy symplektycznej do postaci \eqref{eq:Wojtynski-07} należy wykonać
-$k - 1$ operacji zmiany bazy:
-\begin{subequations}
-  \begin{align}
-    \label{eq:Wojtynski-22-A}
-    d_{ 2 } &\leftrightarrow d_{ k + 1 }, \\
-    \label{eq:Wojtynski-22-B}
-    d_{ 2 } &\leftrightarrow d_{ 3 }, \\
-    \label{eq:Wojtynski-22-C}
-    d_{ 3 } &\leftrightarrow d_{ 4 }, \\
-    \label{eq:Wojtynski-22-D}
-    &\hspace{0.65em} \vdots \\
-    \label{eq:Wojtynski-22-E}
-    d_{ k - 1 } &\leftrightarrow d_{ k }.
-  \end{align}
-\end{subequations}
-Nie podamy w~pełni formalnego dowodu tej procedury, gdyż wymagałby on
-żmudnego operowania na~wskaźnikach, które zapewne nie wyjaśnia wiele,
-zamiast tego, pokażemy jak ta procedure działa dla przypadku $n = 8$.
-Zanim jednak to tego przejdziemy, pokażemy jak taki formalny dowód mógłby
-wyglądać.
-
-Niech $\Omega^{ 0 }$ oznacza macierz formy symplektycznej w~postaci kanonicznej.
-Jej elementy dane są jako
-\begin{equation}
-  \label{eq:Wojtynski-23}
-  \Omega^{ 0 }_{ l m } =
-  \begin{cases}
-    -\delta^{ l }_{ m - l }, \quad l = 1, 2, \ldots, k, \\
-    \hphantom{-} \delta^{ l - k }_{ m }, \quad l = k + 1, k + 2, \ldots, k.
-  \end{cases}
-\end{equation}
-We wzorach powyżej symbol $\delta^{ i }_{ j }$ oznacza symbol Kroneckera, nie zaś
-jak w~książce (zob. str.~33) macierz-kolumnę o~wyrazach danych przez
-odpowiednie wartości przyjmowane przez ten symbol. Jeżeli teraz zapiszemy
-w~notacji wskaźnikowej wyrazy macierzy $\Omega$, wzór \eqref{eq:Wojtynski-07}, to
-dzięki wzorom \eqref{eq:Wojtynski-18}--\eqref{eq:Wojtynski-21}, poprzez
-dokładną analizę, będziemy w~stanie pokazać, że~ciąg zmian baz
-\eqref{eq:Wojtynski-22-A}--\eqref{eq:Wojtynski-22-E} prowadzi od macierzy
-$\Omega$ do macierzy $\Omega^{ 0 }$. Na koniec zauważmy, że~ponieważ jak pokazano na
-stronie 33, macierz $\Omega$ jest antysymetryczna, wystarczy pokazać, że~ta
-procedure prowadzi do dobre postaci wyrazów $\Omega_{ l m }$, dla $l \leq m$ (albo
-$l \geq m$).
-
-Przejdźmy teraz to ilustracji działania procedury
-\eqref{eq:Wojtynski-22-A}--\eqref{eq:Wojtynski-22-E} dla przypadku $n = 8$,
-$k = 4$. W~momencie początkowym nasza macierz ma postać
-\begin{equation}
-  \label{eq:Wojtynski-24}
-  \Omega =
-  \begin{pmatrix}
-    \hphantom{-} 0 & 1 & \hphantom{-} 0 & \hphantom{-} 0
-    & \hphantom{-} 0 & 0 & 0 & 0 \\
-    -1 & 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
-                         & 0 & 0 & 0 \\
-    \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0
-                     & \hphantom{-} 0 & 1 & 0 & 0 \\
-    \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0
-                     & \hphantom{-} 0 & 0 & 1 & 0 \\
-    \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0
-                     & \hphantom{-} 0 & 0 & 0 & 1 \\
-    \hphantom{-} 0 & 0 & -1 & \hphantom{-} 0 & \hphantom{-} 0
-                         & 0 & 0 & 0 \\
-    \hphantom{-} 0 & 0 & \hphantom{-} 0 & -1 & \hphantom{-} 0
-                         & 0 & 0 & 0 \\
-    \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0 & -1
-                         & 0 & 0 & 0
-  \end{pmatrix}.
-\end{equation}
-Musimy teraz dokonać zmian baz $d_{ 2 } \leftrightarrow d_{ 5 }$,
-$d_{ 2 } \leftrightarrow d_{ 3 }$, $d_{ 3 } \leftrightarrow d_{ 4 }$, przy czym będziemy korzystali
-z~reguł 1~i~2 podanych wcześniej.
-\begin{equation}
-  \label{eq:Wojtynski-25}
-  \begin{split}
-    &\begin{pmatrix}
-       \hphantom{-} 0 & 1 & \hphantom{-} 0 & \hphantom{-} 0
-       & \hphantom{-} 0 & 0 & 0 & 0 \\
-       -1 & 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
-                        & 0 & 0 & 0 \\
-       \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0
-       & \hphantom{-} 0 & 1 & 0 & 0 \\
-       \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0
-       & \hphantom{-} 0 & 0 & 1 & 0 \\
-       \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0
-       & \hphantom{-} 0 & 0 & 0 & 1 \\
-       \hphantom{-} 0 & 0 & -1 & \hphantom{-} 0 & \hphantom{-} 0
-                        & 0 & 0 & 0 \\
-       \hphantom{-} 0 & 0 & \hphantom{-} 0 & -1 & \hphantom{-} 0
-                        & 0 & 0 & 0 \\
-       \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0 & -1
-                        & 0 & 0 & 0
-     \end{pmatrix}
-      \xrightarrow[ d_{ 2 } \, \leftrightarrow \, d_{ 5 } ]{}
-      \begin{pmatrix}
-        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
-        & 1 & 0 & 0 & 0 \\
-        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
-        & 0 & 0 & 0 & 1 \\
-        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
-        & 0 & 1 & 0 & 0 \\
-        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
-        & 0 & 0 & 1 & 0 \\
-        -1 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & 0 & 0 & 0
-                    & 0 \\
-        \hphantom{-} 0 & \hphantom{-} 0 & -1 & \hphantom{-} 0 & 0 & 0 & 0
-                    & 0 \\
-        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & -1 & 0 & 0 & 0
-                    & 0 \\
-        \hphantom{-} 0 & -1 & \hphantom{-} 0 & \hphantom{-} 0 & 0 & 0 & 0
-                    & 0 \\
-      \end{pmatrix}
-      \xrightarrow[ d_{ 2 } \, \leftrightarrow \, d_{ 3 } ]{ } \\[1em]
-    &\xrightarrow[ d_{ 2 } \, \leftrightarrow \, d_{ 3 } ]{ }
-      \begin{pmatrix}
-        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
-        & 1 & 0 & 0 & 0 \\
-        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
-        & 0 & 1 & 0 & 0 \\
-        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
-        & 0 & 0 & 0 & 1 \\
-        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
-        & 0 & 0 & 1 & 0 \\
-        -1 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & 0 & 0 & 0
-                    & 0 \\
-        \hphantom{-} 0 & -1 & \hphantom{-} 0 & \hphantom{-} 0 & 0 & 0 & 0
-                    & 0 \\
-        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & -1 & 0 & 0 & 0
-                    & 0 \\
-        \hphantom{-} 0 & \hphantom{-} 0 & -1 & \hphantom{-} 0 & 0 & 0 & 0
-                    & 0
-      \end{pmatrix}
-      \xrightarrow[ d_{ 3 } \, \leftrightarrow \, d_{ 4 } ]{}
-      \begin{pmatrix}
-        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
-        & \hphantom{-} 0 & 1 & 0 & 0 & 0 \\
-        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
-        & \hphantom{-} 0 & 0 & 1 & 0 & 0 \\
-        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
-        & \hphantom{-} 0 & 0 & 0 & 1 & 0 \\
-        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
-        & \hphantom{-} 0 & 0 & 0 & 0 & 1 \\
-        -1 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & 0
-                             & 0 & 0 & 0 \\
-        \hphantom{-} 0 & -1 & \hphantom{-} 0 & \hphantom{-} 0 & 0
-                             & 0 & 0 & 0 \\
-        \hphantom{-} 0 & \hphantom{-} 0 & -1 & \hphantom{-} 0 & 0 & 0
-                                 & 0 & 0 \\
-        \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & -1 & 0 & 0
-        & 0 & 0 \\
-      \end{pmatrix}
-  \end{split}
-\end{equation}
-Ten przykład powinien dobrze ilustrować, w~jaki sposób działa podany
-algorytm sprowadzania formy symplektycznej do postaci kanonicznej.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\start \StrWg{34}{7--8} Znajdujące~się tu zdanie „Formę mającą postać (2.11)
-nazywamy \textit{formą symplektyczną}.” jest niefortunnie sformułowane.
-W~istocie formę nazywamy formą symplektyczną, jeśli w~pewnej bazie
-przyjmuje postać daną wzorem (2.11).
-
-Stwierdzenie~2.11 pokazuje, że~każda dwuliniowa, antysymetryczna
-i~nieosobliwa forma, jest formą symplektyczną. Teraz udowodnimy odwrotną
-implikację, mianowicie, iż~każda forma symplektyczna jest antysymetryczna
-i~nieosobliwa.
-
-Z~definicji, każda form symplektyczna jest formą dwuliniową i~istnieje baza
-przestrzeni $\Cbb^{ n }$, gdzie $n = 2k$, taka że
-\begin{equation}
-  \label{eq:Wojtynski-26}
-  \omega( \vecxbold, \vecybold ) =
-  \sum_{ i = 1 }^{ k } x_{ i } \, y_{ k + i } - y_{ i } \, x_{ k + i }, \qquad
-  \vecxbold = \sum_{ i = 1 }^{ n } x_{ i } \, \vecebold_{ i }, \;\;
-  \vecybold = \sum_{ i = 1 }^{ n } y_{ i } \, \vecebold_{ i }.
-\end{equation}
-Z~tego od razu wynika, że~$\omega$ jest formą antysymetryczna. Teraz wystarczy
-pokazać, że~jeśli $\omega( \vecxbold, \vecybold ) = 0$ dla każdego
-$\vecybold \in \Cbb^{ n }$, to $\vecxbold = \vecZeroBold$. Załóżmy, że~dany
-jest taki $\vecxbold$ i~weźmy $\vecybold = ( \delta^{ i }_{ j } )$, gdzie
-$1 \leq j \leq k$. Obliczmy teraz
-\begin{equation}
-  \label{eq:Wojtynski-27}
-  \omega( \vecxbold, \vecybold ) =
-  \sum_{ i = 1 }^{ k } x_{ i } \, y_{ k + i } - y_{ i } \, x_{ k + i } =
-  \sum_{ i = 1 }^{ k } x_{ i } \, \delta^{ k + i }_{ j } - \delta^{ i }_{ j } \, x_{ k + i } =
-  -x_{ k + j } = 0.
-\end{equation}
-Widzimy więc, że~$x_{ i } = 0$, dla $k + 1 \leq i \leq n$. Analogicznie biorąc
-$\vecebold = ( \delta^{ i }_{ k + j } )$, przy $1 \leq j \leq k$, dowodzimy,
-że~$x_{ i } = 0$, dla $1 \leq i \leq k$, tym samym pokazaliśmy,
-że~$\vecxbold = \vecZeroBold$. To~kończy dowód twierdzenia, iż~każda forma
-symplektyczna, jest dwuliniową, antysymetryczną i~nieosobliwą.
-
-\vspace{\spaceFour}
-
-
-
-
-\start \textbf{Str. 34, wiersze (od dołu) 1--3.} Znajdujemy tu informację,
-że~$n$-tą zespoloną (rzeczywistą) liniową grupę symplektyczną, którą
-oznaczamy jako $\Sp( n, \Cbb )$ ($\Sp( n, \Rbb )$), definiujemy
-jako podgrupę $\GL( 2n, \Cbb )$ ($\GL( 2n, \Rbb )$) składającą~się
-z~macierzy nieosobliwych stopnia $2n$ zachowujących macierz
-\begin{equation}
-  \label{eq:Wojtynski-28}
-  \Omega =
-  \begin{pmatrix}
-    \hphantom{-} 0 & \matUnit \\
-    -\matUnit & 0
-  \end{pmatrix},
-\end{equation}
-przy czym $\Omega$ jest macierzą kwadratową stopnia $2n$. Rozumiemy przez to,
-że~macierz $A$ należy do $\Sp( n, \Rbb )$ ($\Sp( n, \Cbb )$), jeśli
-\begin{equation}
-  \label{eq:Wojtynski-29}
-  A^{ T } \, \Omega \, A = \Omega.
-\end{equation}
-Dodatkowe zaznaczanie, że~$A$ musi być macierzą nieosobliwą, kładzie na tą
-własność tak silny nacisk, iż~może prowadzić do nieporozumień.
-
-Zauważmy, że~macierz $A$ musi być macierzą nieosobliwą z~dwóch powodów. Po
-pierwsze, bo $A \in \GL( n, \Cbb)$ ($A \in \GL( n, \Rbb )$), a~z~definicji
-każda macierz tego typu jest nieosobliwa. Po drugie, jak zostało to
-zauważone wcześniej na tej stronie książki Wojtyńskiego, jeśli macierz $A$
-zachowuje nieosobliwą macierz, to sama jest nieosobliwa, macierz $\Omega$ jest
-zaś nieosobliwa. Dowód nieosobliwości macierz $\Omega$ można uzyskać na wiele
-sposobów, choćby modyfikując podany w~tych notatkach dowód tego, że~forma
-symplektyczna, czyli taka która w~pewnej bazie przyjmuje postać
-\eqref{eq:Wojtynski-26}, jest nieosobliwa w~podanym na~32 sensie.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\start \Str{34} W~lewej dolnej i~prawej górnej ćwiartce przedstawione tu
-macierzy brakuje symbolu $0$. Kiedyś można by~się zastanowić nad
-wygenerowanie w~\LaTeX{} macierzy, która lepiej ilustrowałaby problem.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\start \StrWg{34}{8} Aby definicja przestrzeni $\spFrak( n, \Kbb )$ była
-ścisła, należy doprecyzować czym jest pojawiająca~się w~niej forma $\omega$.
-Należy bowiem przyjąć, że~$\omega$ nie jest dowolną formą symplektyczną, czyli
-taką która w~\textit{pewnej} bazie przyjmuje postać
-\eqref{eq:Wojtynski-26}, lecz taką która przyjmuje tą postać w~bazie
-kanonicznej. Inaczej mówiąc, jeśli
-\begin{equation}
-  \label{eq:Wojtynski-30}
-  \vecxbold = ( x_{ 1 }, x_{ 2 }, \ldots, x_{ 2n } ) \in \Kbb^{ 2n }, \quad
-  \vecybold = ( y_{ 1 }, y_{ 2 }, \ldots, y_{ 2n } ) \in \Kbb^{ 2n },
-\end{equation}
-to zachodzi
-\begin{equation}
-  \label{eq:Wojtynski-31}
-  \omega( \vecxbold, \vecybold ) =
-  \sum_{ i = 1 }^{ n } x_{ i } \, y_{ n + i } - y_{ i } \, x_{ n + i }.
-\end{equation}
-
-\vspace{\spaceFour}
-
-
-
-
-
-\start \Str{38} Z~nie do końca jasnych dla mnie powodów, gdy na tej stronie
-przedstawiono kwaterniony jako dwuwymiarową przestrzeń wektorową nad nad
-$\Cbb$, zdefiniowano kombinację liniową kwaterniowów bazowych $e_{ 0 }$
-i~$e_{ 2 }$ w~taki sposób, że~współczynniki zespolone mnożą je z~prawej
-strony:
-\begin{equation}
-  \label{eq:Wojtynski-32}
-  q = e_{ 0 } \, z + e_{ 2 } \, w, \quad z, \, w \in \Cbb.
-\end{equation}
-Podejrzewam, że~chodzi o~to, iż~nieprzemienność mnożenie kwaternionów
-sprawia, iż~to jak definiujemy działanie macierzy z~$\lFrak( n, \Hbb )$ na
-wektor z~przestrzeni $\Hbb^{ n }$ ma kilka nieoczywistych konsekwencji dla
-innych części teorii, co może sprawić iż ta nietypowa notacja okazuje~się
-mieć sporo zalet. Zagadnienie to omówimy bardziej szczegółowo w~dalszej
-części notatek, tu zaś poprzestaniemy na wskazaniu, iż~w~tej notacji
-własność jednorodność odwzorowania $A : V \to V$ zapisujemy jako
-\begin{equation}
-  \label{eq:Wojtynski-33}
-  A ( v \alpha ) = ( A v ) \alpha, \quad \alpha \in \Kbb, \, v \in V,
-\end{equation}
-nie zaś jak w~standardowej notacji
-\begin{equation}
-  \label{eq:Wojtynski-34}
-  A \alpha v = \alpha A v.
-\end{equation}
-
-Ostatecznie, to czy mnożenie zapisujemy z~lewej czy z~prawej strony jest
-tylko kwestią konwencji i~całą teorię da~się zdefiniować w~sposób spójny
-wybierając jedną z nich. W~tej kwestii warto jednak zauważyć to,
-iż~wybierając mnożenie kwaternionów bazowych z~lewej strony, musielibyśmy
-zmienić wzór (2.20) z~książki, czyli
-\begin{equation}
-  \label{eq:Wojtynski-35}
-  q =
-  e_{ 0 } \, ( t_{ 0 } \, e_{ 0 } + t_{ 1 } \, e_{ 1 } )
-  + e_{ 2 } \, ( t_{ 2 } \, e_{ 0 } - t_{ 3 } e_{ 1 } ),
-\end{equation}
-na
-\begin{equation}
-  \label{eq:Wojtynski-36}
-  q =
-  ( t_{ 0 } \, e_{ 0 } + t_{ 1 } \, e_{ 1 } ) \, e_{ 0 }
-  + ( t_{ 2 } \, e_{ 0 } + t_{ 3 } \, e_{ 1 } ) \, e_{ 2 }.
-\end{equation}
-Pod pewnym względami wzór \eqref{eq:Wojtynski-35} wygląda bardziej
-naturalnie.
-
-Na koniec zwróćmy uwagę na to, że~skoro liczby zespolone są podciałem
-kwaternionów, to niezależnie czy mnożenie kwaternionów bazowych określimy
-z~prawej, czy lewej strony, możemy zawsze przenieść liczbę zespoloną
-z~prawej strony kwaternionu bazowe na lewą i~na odwrót. W~tym kontekście
-warto podać dwa użyteczne wzory:
-\begin{subequations}
-  \begin{align}
-    \label{eq:Wojtynski-37-A}
-    &e_{ 0 } \, z = z \, e_{ 0 }, \\
-    \label{eq:Wojtynski-38-B}
-    &e_{ 2 } \, z = \bar{z} \, e_{ 2 },
-  \end{align}
-\end{subequations}
-gdzie $z \in \Cbb$.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\start \Str{39} Podane tu wyjaśnienie dlaczego odwzorowanie $S$
-przekształca odwzorowania liniowe przestrzeni $\Hbb^{ n }$ w~odwzorowania
-liniowe przestrzeni $\Cbb^{ 2n }$ jest niepotrzebnie zagmatwane. Postaram~się
-przedstawić dowód tego faktu w~sposób jaśniejszy, najpierw jednak
-umieścimy cały problem w~szerszym kontekście. Do opisu tego problemu
-można użyć formalizmu teorii kategorii i~choć takie rozwiązanie ma wiele
-zalet, to~jednak zastosowanie go tutaj, może nas oddalić od bardzo
-konkretnego problemu grup macierzy, którym~się zajmujemy, a~to jest rzeczą
-nieporządną.
-
-Zacznijmy od tego, że~główną cechą odróżniającą kwaterniony $\Hbb$ od liczb
-rzeczywistych i~zespolonych, jest nieprzemienność ich mnożenia. Mimo tego,
-przestrzenie macierzy $\lFrak( n, \Kbb )$, gdzie $\Kbb$ może oznaczać
-$\Rbb$, $\Cbb$ lub~$\Hbb$, posiadają wiele wspólnych cech algebraicznych.
-Aby je zwięźle opisać, wprowadzimy trochę terminologii. Przyjmiemy,
-że~struktura algebraiczna posiadająca wszystkie cechy ciała, ale w~której
-mnożenie nie musi być przemienne, będziemy nazywać \textbf{ciałem
-  nieprzemiennych} oraz że~zarówno przestrzenie wektorowe jak i~algebry mogą
-być zarówno nad ciałem przemiennym jak i~nieprzemiennych. Wówczas
-$\lFrak( n, \Rbb )$ i~$\lFrak( n, \Cbb )$ są łącznymi, nieprzemiennymi
-algebrami wedle standardowych definicji. Strukturę algebry nieprzemiennej
-wyznacza mnożenie przez elementy z~ciała, dodawanie i~mnożenie macierzy.
-Opisanie struktur $\lFrak( n, \Hbb )$ wymaga wprowadzenia nowych pojęć.
-
-Niech $V$ będzie przestrzenią wektorową na ciałem $\Kbb$, na której jest
-zadane jest działanie wewnętrzne
-\begin{equation}
-  \label{eq:Wojtynsi-39}
-  \cdot : V \times V \ni ( v, w ) \mapsto v \cdot w \in V.
-\end{equation}
-Rozpatrzmy teraz dwie potencjalne własności tego działania:
-\begin{subequations}
-  \begin{align}
-    \label{eq:Wojtynski-40-A}
-    &( \alpha \, v + \beta \, w ) \cdot p  =  \alpha \, ( v \cdot p ) + \beta \, ( w \cdot p ), \\
-    \label{eq:Wojtynski-40-B}
-    &v \cdot ( \alpha \, w + \beta \, p ) = \alpha \, ( v \cdot w ) + \beta \, ( v \cdot p ),
-  \end{align}
-\end{subequations}
-gdzie $\alpha, \beta \in \Kbb$, $v, w, p \in V$. Jeśli dla danej przestrzeni $V$ wzór
-\eqref{eq:Wojtynski-40-A} zachodzi dla wszystkich możliwych przypadków,
-to~przestrzeń tą nazywamy \textbf{lewej algebrą}. Definicje \textbf{lewej
-  algebry łącznej}, \textbf{lewej algebry przemiennej}, etc., są
-prostymi uogólnieniami definicji dla standardowej algebry, nie ma więc
-potrzeby byśmy je tutaj podawali. Analogicznie, jeśli dla wszystkich
-możliwych przypadków zachodzi wzór \eqref{eq:Wojtynski-40-B} to $V$ nazywamy
-\textbf{prawą algebrą}. Zdefiniowanie \textbf{prawej algebry łącznej}
-i~innych możliwych jej typów, nie powinno teraz sprawiać żadnego problemu.
-Łatwo zauważyć, że jeśli dana przestrzeń jest jednocześnie algebrą lewą
-i~prawą, to jest ona algebrą w~standardowym sensie tego słowa.
-
-W~dalszym ciągu tych notatek pokażemy~że $\lFrak( n, \Hbb )$ jest prawą
-algebrą nad $\Hbb$, ale nie jest lewą algebrą bo nie spełnia warunku
-\eqref{eq:Wojtynski-40-A}.?????
-
-Dokładniej omówimy to zagadnienie poniżej, warto~się jednak teraz
-zastanowić, co ta sytuacja nam mówi. Czy powinniśmy zmienić definicję
-„algebry nad ciałem nieprzemiennym”, tak by usunąć z~niej jedną wymaganą
-własność, tak iż $\lFrak( n, \Hbb )$ stanie~się przykładem takiej algebry?
-Czy też należy zostawić definicje takie jakimi są, stwierdzają tylko,
-iż~$\lFrak( n, \Hbb )$ jest bytem, któremu niewiele brakuje, by był
-odpowiednią algebrą nad ciałem nieprzemiennym? Nie umiem w~tej chwili
-odpowiedzieć na to pytanie. Niezależnie od tego, użycie pojęcie „łącznej
-nieprzemiennej algebry nad ciałem przemiennym (nieprzemiennym)”, wydaje~się
-być dobrym krokiem do zrozumienia problemu.
-
-Naszą analizę rozpoczniemy od usystematyzowania oznaczeń. Za Wojtyńskim
-przyjmujemy następującą, prawostronną, konwekcję mnożenia elementów
-$\Kbb^{ n }$ przez elementy z~$\Kbb$
-\begin{equation}
-  % Numeracja wzorów.
-  \label{eq:Wojtynski-36}
-  v \alpha = ( v_{ 1 } \alpha, v_{ 2 } \alpha, \ldots, v_{ n } \alpha ), \quad
-  \alpha \in \Kbb, \, v \in \Kbb^{ n }.
-\end{equation}
-Ponadto dla macierzy $A \in \lFrak( n, \Kbb )$ o~elementach $a_{ ij }$,
-$i, j = 1, 2, \ldots, n$ przyjmujemy dodatkowe oznaczenie
-\begin{equation}
-  \label{eq:Wojtynski-37}
-  A = [ a_{ i j } ].
-\end{equation}
-Mnożenie macierzy przez element z~$\Kbb$ oraz sumę dwóch macierzy
-definiujemy w~zwykły sposób.
-\begin{subequations}
-  \begin{align}
-    \label{eq:Wojtynski-38-A}
-    A \alpha &= [ a_{ i j } \, \alpha ], \\
-    \label{eq:Wojtynski-38-B}
-    A + B &= [ a_{ i j } + b_{ i j } ],
-  \end{align}
-\end{subequations}
-gdzie, $\alpha \in \Kbb$,
-$A = [ a_{ i j } ]$, $B = [ b_{ i j } ] \in \lFrak( n, \Kbb )$.
-Również podążając za Wojtyńskim, działanie macierzy na wektor z~$\Kbb^{ n }$
-definiujemy jako
-\begin{equation}
-  \label{eq:Wojtynski-39}
-  ( A v )_{ i } = \sum_{ j = 1 }^{ n } a_{ i j } \, v_{ j },
-\end{equation}
-gdzie $v \in \Kbb^{ n }$, $A \in \lFrak( n, \Kbb )$. Teraz operację mnożenia
-dwóch macierzy z~$\lFrak( n, \Kbb )$ możemy określić jako
-\begin{equation}
-  \label{eq:Wojtynski-40}
-  A \cdot B = \left[ \sum_{ l = 1 }^{ n } a_{ i l } \, b_{ l j } \right].
-\end{equation}
-Dla uczynienia rozważań bardziej precyzyjnymi, przez pewien czas mnożenie
-macierzy będziemy jawnie oznaczać symbolem $\cdot$.
-
-Teraz przejdziemy do dowodu tego, że~$\lFrak( n, \Kbb )$ stanowi
-nieprzemienną algebrę. Z~rozmysłem odkładamy na~później rozważanie
-o~związku macierzy $\lFrak( n, \Kbb )$ z~odwzorowaniami liniowymi na
-$\Kbb^{ n }$. Jak~się okazuje, ten problem posiada kilka własnych niuansów
-wartych osobnej dyskusji. Pierwszym krokiem jest udowodnienie,
-że~$\lFrak( n, \Kbb )$ z~działaniami zdefiniowanymi
-w~\eqref{eq:Wojtynski-38-A}--\eqref{eq:Wojtynski-38-B} jest przestrzenią
-wektorową. Niech $A \in \lFrak( n, \Kbb )$. Własność
-\begin{equation}
-  \label{eq:Wojtynski-41}
-  A \, 1 = A,
-\end{equation}
-gdzie $1$ jest elementem neutralnym mnożenia w~$\Kbb$ wynika wprost
-z~definicji mnożenia macierzy przez element z~ciała $\Kbb$ podanej
-w~\eqref{eq:Wojtynski-38-A} oraz własności mnożenia w~ciele $\Kbb$.
-Podobnie własność
-\begin{equation}
-  \label{eq:Wojtynski-42}
-  A \, ( \beta \, \alpha ) = ( A \, \beta ) \, \alpha, \quad \alpha, \beta \in \Kbb,
-\end{equation}
-wynika, jak poprzednio z~definicji mnożenia macierzy przez element z~ciała
-oraz łączności mnożenia w~ciele $\Kbb$. W~dalszym ciągu nie będziemy jawnie
-przywoływać miejsc w~których korzystamy z~definicji
-\eqref{eq:Wojtynski-38-A}--\eqref{eq:Wojtynski-38-B}, pozostaniemy przy
-przytaczaniu potrzebnych własności z~ciała $\Kbb$. Z~rozdzielności dodawania
-względem mnożenia w~ciele $\Kbb$ wynikają dwie poniższe własności
-\begin{subequations}
-  \begin{align}
-    \label{eq:Wojtynski-43-A}
-    &A \, ( \alpha + \beta ) = A \, \alpha + A \, \beta, \\
-    \label{eq:Wojtynski-43-B}
-    &( A + B ) \, \alpha = A \, \alpha + B \, \beta,
-  \end{align}
-\end{subequations}
-gdzie $A, B \in \lFrak( n, \Kbb )$ i~$\alpha, \beta \in \Kbb$. Korzystając teraz
-z~tego, że~dodawanie w~$\Kbb$ jest łączne, przemienne i~dla każdego
-elementu $a \in \Kbb$ istnieje element odwrotny względem dodawania $-a$,
-dowodzimy
-\begin{subequations}
-  \begin{align}
-    \label{eq:Wojtynski-44-A}
-    &( A + B ) + C = A + ( B + C ), \\
-    \label{eq:Wojtynski-44-B}
-    &A + B = B + A, \\
-    \label{eq:Wojtynski-44-C}
-    &A + ( -A ) = 0,
-  \end{align}
-\end{subequations}
-gdzie $A, B, C \in \lFrak( n, \Kbb )$, zaś $0 \in \lFrak( n, \Kbb )$ to
-macierz zerowa\footnote{Macierz, której wszystkie elementy są równe
-  elementowi neutralnemu dodawania w~ciele $\Kbb$.}. Udowodniliśmy więc,
-że~$\lFrak( n, \Kbb )$ jest przestrzenią wektorową i~nigdzie w~dowodzie
-przemienność, lub jej brak, mnożenia nie odgrywa żadnej roli.
-
-Teraz przejdziemy do dowodu tego, że~$\lFrak( n, \Kbb )$ wraz z~działaniem
-mnożenia macierzy \eqref{eq:Wojtynski-40} jest łączną, nieprzemienną
-algebrą. Jak powiedzieliśmy wcześniej, nieprzemienność mnożenia macierzy
-jest dobrze znana, nie będziemy~się więc nad nią zatrzymywać. Łączność
-mnożenia macierzy
-\begin{equation}
-  \label{eq:Wojtynski-45}
-  ( A \cdot B ) \cdot C = A \cdot ( B \cdot C ),
-\end{equation}
-wynika z~definicji operacji mnożenia macierzy \eqref{eq:Wojtynski-40} oraz
-z~łączności mnożenia w~ciele $\Kbb$. Własność
-\begin{equation}
-  \label{eq:Wojtynski-46}
-  A \cdot ( B \, \alpha + C \, \beta ) = A \cdot ( B \, \alpha ) + A \cdot ( C \, \beta ) =
-  ( A \cdot B ) \, \alpha + ( A \cdot C ) \, \beta.
-\end{equation}
-wynika z~definicji mnożenia macierzy oraz łączności i~rozdzielności
-mnożenia względem dodawania w~ciele $\Kbb$. Jednak
-\begin{equation}
-  \label{eq:Wojtynski-47}
-  ( A \, \alpha + B \, \beta ) \cdot C \neq
-  ( A \cdot C ) \, \alpha + ( B \cdot C ) \, \beta =
-  A \cdot ( C \, \alpha ) + B \cdot ( C \, \beta ).
-\end{equation}
-Równość pomiędzy członem drugim i~trzecim powyższego wyrażenia, wynika
-z~definicji wstępujących tam działań oraz łączności i~rozdzielności
-mnożenia w~$\Kbb$. By zobaczyć, że~równość między dwoma pierwszy członami
-w~ogólności nie zachodzi, wystarczy rozpatrzyć prosty przykład. Niech
-$\matUnit \in \lFrak( n, \Kbb )$ będzie macierzą jednostkową zdefiniowaną
-w~standardowy sposób. Dla $A = B = \matUnit$, $C = \matUnit \, e_{ 2 }$
-i~$\alpha = \beta = \frac{ 1 }{ 2 } e_{ 1 }$ mamy
-\begin{subequations}
-  \begin{align}
-    \label{eq:Wojtynski-48-A}
-    &( A \, \alpha + B \, \beta ) \cdot C = \matUnit \, e_{ 1 } \, e_{ 2 }, \\
-    \label{eq:Wojtynski-48-B}
-    &( A \cdot C ) \, \alpha + ( B \cdot C ) \, \beta = \matUnit \, e_{ 2 } \, e_{ 1 } =
-      -\matUnit \, e_{ 1 } \, e_{ 2 }.
-  \end{align}
-\end{subequations}
-Gdyby oprócz wszystkich udowodnionych dotychczas własności, zachodziła
-jeszcze równość we wzorze \eqref{eq:Wojtynski-47}, to~$\lFrak( n, \Kbb )$
-byłoby łączną, nieprzemienną algebrą. O~problemie tym wspominaliśmy już
-na początku naszych rozważań nad strukturą algebraiczną zbiorów
-$\lFrak( n, \Kbb )$. Jak widać po tym przykładzie, problem ten pojawia~się
-bo mnożenie kwaternionów nie jest przemienne.
-
-Ponieważ ten wynik może być zaskakujący dla osób, dla których liczby
-rzeczywiste są synonimem wszystkich „systemów liczbowych”, zatrzymamy~się
-dłużej nad pewnym konsekwencjami nieprzemienność mnożenia kwaternionów Dla
-wszystkich macierzy $\lFrak( n, \Kbb )$, gdzie $\Kbb$ oznacza $\Rbb$ lub
-$\Cbb$, zachodzi własność
-\begin{equation}
-  \label{eq:Wojtynski-49}
-  ( \matUnit \alpha ) A = A ( \matUnit \alpha ), \quad
-  \alpha \in \Kbb, \, A \in \lFrak( n, \Kbb ),
-\end{equation}
-gdzie $\matUnit$ ponownie oznacza macierz jednostkową. Jednak
-\begin{equation}
-  \label{eq:Wojtynski-50}
-  ( \matUnit \alpha ) A \neq A ( \matUnit \alpha ), \quad
-  \alpha \in \Hbb, \, A \in \lFrak( n, \Hbb ).
-\end{equation}
-Prosty przykład ilustrujący tą własność otrzymuje przez wzięcie
-$\alpha = e_{ 1 }$, $A = \matUnit \, e_{ 2 }$. Warto zauważyć, że~jeśli
-$\alpha = t \, e_{ 0 }$, $t \in \Rbb$, to dla wszystkich macierz
-$A \in \lFrak( n, \Hbb )$ zachodzi $( \matUnit \alpha ) A = A ( \matUnit \alpha )$.
-
-Inną własnością odróżniającą macierze z~$\lFrak( n, \Hbb )$ od tych
-z~$\lFrak( n, \Rbb )$ i~$\lFrak( n, \Cbb )$ jest to,
-że~zachodzi
-\begin{equation}
-  \label{eq:Wojtynski-51}
-  A ( v \, \alpha ) = ( A v ) \, \alpha,
-\end{equation}
-gdzie $\alpha \in \Hbb,$ $v \in \Hbb^{ n }$, $A \in \lFrak( n, \Hbb )$. Fakt ten
-ponownie wynika z~definicji działań oraz łączności i~rozdzielności mnożenia
-względem dodawania w~$\Kbb$. Jednakże
-\begin{equation}
-  \label{eq:Wojtynski-52}
-  ( A \, \alpha ) v \neq ( A v ) \, \alpha.
-\end{equation}
-Prosty przykład dla którego możemy to zobaczyć to $\alpha = e_{ 2 }$,
-$v = ( e_{ 3 }, 0, 0, \ldots, 0 )$, $A = \matUnit e_{ 2 }$. Dla podkreślenia tego,
-jak bardzo „nienaturalną” jest ta ostatnia własność, zapiszemy ją w~notacji, w~której mnożenie przez liczby obywa~się z~lewej strony.
-\begin{equation}
-  \label{eq:Wojtynski-53}
-  ( \alpha A ) v \neq A ( \alpha v ).
-\end{equation}
-Prosty przykład dla którego można to zobaczyć to  (tu też używamy
-konwencji mnożenia przez liczbę z~lewej strony).
-
-W~tym miejscu musimy zwrócić uwagę no to, że~to wzór \eqref{eq:Wojtynski-51}
-wyraża fakt, iż~macierz~$A$ reprezentuje pewno odwzorowanie jednorodnym,
-nie zaś wzór \eqref{eq:Wojtynski-52}. Pozorny problem może wyniknąć stąd,
-że~mnożenie kwaternionów nie jest przemienne, więc konkretny sposób w~jaki
-definiujemy działanie macierzy $A$ na wektor $v \in \Hbb^{ n }$ ma znaczenie
-dla naszej teorii. Wojtyński zdefiniował je kładąc
-\begin{equation}
-  \label{eq:Wojtynski-52}
-  ( A v )_{ i } = \sum_{ j }^{ n } a_{ i j } \, v_{ j }, \quad
-  A = [ a_{ ij } ] \in \lFrak( n, \Hbb ).
-\end{equation}
-Takie określenie odwzorowanie $A$ jest jednorodne, gdy mnożenie wektorów
-z~$\Hbb^{ n }$ przez elementy z~$\Hbb$ jest zdefiniowane z~prawej strony.
-Gdybyśmy zdefiniowali mnożenie przez te elementy z~lewej strony, to
-by działanie macierzy na wektor $v$ było jednorodne, musielibyśmy
-zdefiniować je jako
-\begin{equation}
-  \label{eq:Wojtynski-53}
-  ( A v )_{ i } = \sum_{ j }^{ n } v_{ j } \, a_{ i j }.
-\end{equation}
-
-Wiemy już, że~odwzorowanie zadane przez macierz $A \in \lFrak( n, \Kbb )$
-wzorem \eqref{eq:Wojtynski-39} jest jednorodne nad $\Hbb$ i~tym samym
-jednorodne nad $\Rbb$ i~$\Cbb$, które są podciałami $\Hbb$\footnote{Użyta
-  tu terminologi może być ścisła, ale może być też trochę nieścisła. Nie
-  umiem tego teraz ustalić. Niezależnie od tego sama treść matematyczna
-  powinna być na tyle jasna, że~możemy na takim sformułowaniu poprzestać.}.
-Teraz możemy przejść do dowodu, że~jest ono addytywne i~tym samym liniowe.
-Dowód faktu, że
-\begin{equation}
-  \label{eq:Wojtynski-54}
-  A ( v + w ) = A v + A w, \quad v, \, w \in \Hbb^{ n },
-\end{equation}
-przebiega wedle standardowego schematu, z~wykorzystaniem tego, że~w~ciele
-$\Hbb$ dodawania jest rozdzielne względem mnożenia.
-
-W~tym momencie wiemy już, że~każda macierz z~$\lFrak( n, \Hbb )$
-reprezentuje odwzorowanie liniowe nad $\Hbb$. Odwrotnie, każde odwzorowanie
-liniowe wyznacza pewną macierz. Oznaczmy bowiem
-\begin{equation}
-  \label{eq:Wojtynski-55}
-  E_{ i } = ( 0, 0, \ldots, 0, e_{ 0 }, 0, \ldots, 0 ),
-\end{equation}
-gdzie $e_{ 0 }$ znajduje~się na $i$-tej pozycji. Wówczas dla dowolnego
-$v \in \Hbb^{ n }$ mamy
-\begin{equation}
-  \label{eq:Wojtynski-56}
-  ????
-\end{equation}
-
-Przejdźmy teraz do dowodu tego, że~$\lFrak( n, \Kbb )$ tworzy algebrę,
-gdzie $\Rbb$, $\Cbb$ lub $\Hbb$. By udowodnić własności
-\begin{equation}
-  \label{eq:Wojtynski-43}
-  ( A + B ) v = A v + B v,
-\end{equation}
-wystarczy by dodawanie było rozdzielne względem mnożenia, co jest prawdą
-we~wszystkich rozważanych typach $\Kbb$. Ponieważ dowód tego faktu jest
-prosty, nie będziemy go tu przytaczać jawnie.
-
-\vspace{\spaceFour}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-% ##################
-\newpage
-
-\CenterBoldFont{Błędy}
-
-
-\begin{center}
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    5   & & 10 & klasa grup & klasa \\
-    7   & &  4 & sumę & \textit{sumę} \\
-    7   & &  1 & $M_{ 1 } \ldots M_{ k }$ & $M_{ 1 }, \ldots, M_{ k }$ \\
-    8   &  3 & & $( m,\; n )$ & $( m, n )$ \\
-    8   & 17 & & $n \in N$ & $m \in M$ \\
-    8   & 17 & & $f( m ) \in M$ & $f( m ) \in N$ \\
-    8   & 18 & & $f( n )$ & $f( m )$ \\
-    9   & &  4 & $x_{ 1 },\;\; x_{ 2 } \in X$ & $x_{ 1 },\, x_{ 2 } \in X$ \\
-    9   & &  4 & albo & lub \\
-    10  &  4 & & $y_{ 0 } \succ x$($y_{ 0 } \prec x$)
-           & $x \prec y_{ 0 }$ ($y_{ 0 } \prec x$) \\
-    10  & 14 & & \textit{to istnieje w~$X$} & \textit{to w~$X$ istniej} \\
-    10  & &  9 & $U \subset \Omega_{ x_{ 0 } }$ & $U \in \Omega_{ x_{ 0 } }$ \\
-    11  & 10 & & $\rho( X, Y )$ & $\rho( x, y )$ \\
-    11  & &  5 & zbioru & niepustego zbioru \\
-    13  &  6 & & $y_{ \varphi } \in X_{ \varphi }$ & $x_{ \varphi } \in X_{ \varphi }$ \\
-    14  &  1 & & $x_{ 1 },\;\; x_{ 2 } \in X$ & $x_{ 1 },\, x_{ 2 } \in X$ \\
-    14  &  6 & & $x e_{ + }$ & $x \, e_{ + }$ \\
-    14  & 18 & & $\mu\big( x, \mu( x, y ) \big)$
-           & $\mu\big( x, \mu( y, z ) \big)$ \\
-    14  & 21 & & $\mathbf{x} \in \mathbf{X}$ & $x \in X$ \\
-    15  & &  5 & $\mu \omega( x_{ 1 }, y )$ & $\mu \, \omega( x_{ 2 }, y )$ \\
-    17  &  7 & & $W$ modulo $V$, & $W$, \\
-    17  &  7 & & $\tau( x_{ j }, y_{ k } )$
-           & $\tau( x_{ j }, y_{ k } ) = \pi( x_{ j } \otimes y_{ k } )$ \\
-    18  & &  1 & $X^{ k } \times X^{ m }$ & $X^{ \otimes k } \times X^{ \otimes m }$ \\
-    18  & &  1 & $X^{ k } \otimes X^{ m }$ & $X^{ \otimes k } \otimes X^{ \otimes m }$ \\
-    20  & 19 & & $\overline{ F( y, x ) }$ & $\overline{ F( y, x ) }$. \\
-    20  & 20 & & (tj. & Tj. \\
-    20  & 20 & & $\Rbb$)) & $\Rbb$) \\[0.3em]
-    21  &  5 & & $\displaystyle
-                 \frac{ \overline{ \langle x, y \rangle } }{ | \langle x, y \rangle | }$
-           & $\displaystyle
-             \frac{ \overline{ \langle x', y \rangle } }{ | \langle x', y \rangle | }$ \\
-    21  &  5 & & $\langle x, y \rangle \neq 0$ & $\langle x', y \rangle \neq 0$ \\
-    23  &  4 & & $\lambda ( A_{ 1 } x )$ & $\lambda \big( A_{ 1 }( x ) \big)$ \\
-    23  & &  3 & $f( x_{ 1 }, \ldots x_{ n } )$ & $f( x_{ 1 }, \ldots, x_{ n } )$ \\
-    23  & &  3 & $x_{ 1 }^{ \, k_{ 1 } }, \ldots x_{ n }^{ \, k_{ n } }$
-           & $x_{ 1 }^{ \, k_{ 1 } } \ldots x_{ n }^{ \, k_{ n } }$ \\
-    23  & &  3 & $( x_{ 1 } \ldots x_{ n } )$ & $( x_{ 1 }, \ldots, x_{ n } )$ \\
-    24  & 15 & & $( a, b ) \in \Omega$ & $( a, b ) \in \Omega$, \\
-    24  & & 12 & $\Ccal^{ 1 }$ & $\Ccal^{ k }$ \\
-    25  &  9 & & $1 / 2 \leq t$ & $1 / 2 < t$ \\
-    \hline
-  \end{tabular}
-
-
-
-
-
-  \newpage
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    25  & 12 & & $i_{ x_{ 0 } }( t ) = 0$ & $i_{ x_{ 0 } }( t ) = x_{ 0 }$ \\
-    26  & &  4 & 46 & 47 \\
-    26  & &  1 & $x \in X$ & $a \in B$ \\
-    27  &  2 & & $= d$ & $= u$ \\
-    29  &  9 & & $\textrm{Gl}( n, \Cbb )$ & $\GL( n, \Cbb )$ \\
-    29  & &  9 & $( A B )^{ T } = B^{ T } A^{ T }$
-           & $( A \cdot B )^{ T } = B^{ T } \cdot A^{ T }$ \\
-    29  & &  8 & $\overline{ A B }$ & $\overline{ A \cdot B }$ \\
-    29  &  7 & & $( A B )^{ * }$ & $( A \cdot B )^{ * }$ \\
-    30  & & 16 & $\oFrak( n, \Cbb )$ & $\oFrak_{ + }( n, \Cbb )$ \\
-    30  & & 10 & $*$ -- operacją & $*$ operacją \\
-    31  &  5 & & $a_{ i i } = -\bar{a}_{ i i }$
-           & $-a_{ i i } = \bar{a}_{ i i }$ \\
-    31  & 13 & & $\widetilde{ ( A B ) }$ & $\widetilde{ ( A \cdot B ) }$ \\
-    31  & &  7 & \big(($A \in \OStraightBold( n, \Rbb )$\big)
-           & \big($A \in \OStraightBold( n, \Rbb )$\big) \\
-    32  & &  2 & (2.9) & (2.10) \\
-    36  &  8 & & $\End( \Kbb^{ 2n } )$ & $\lFrak( 2n, \Kbb )$ \\
-    36  &  8 & & $\omega( xAy )$ & $\omega( x, Ay )$ \\
-    37  &  9 & & $e_{ i } ( e_{ j }, e_{ k } )$
-           & $e_{ i } \cdot ( e_{ j } \cdot e_{ k } )$ \\
-    37  &  9 & & $( e_{ i }, e_{ j } ) e_{ k }$
-           & $( e_{ i } \cdot e_{ j } ) \cdot e_{ k }$ \\
-    37  & &  8 & $q \cdot \frac{ 1 }{ \Vert q^{ 2 } \Vert } \bar{q}$
-           & $\bar{q} \cdot \frac{ 1 }{ \Vert q^{ 2 } \Vert } q$ \\
-    37  & &  8 & $\bar{q} q$ & $\bar{q} \cdot q$ \\
-    37  & &  4 & $\Vert q_{ 1 } q_{ 2 } \Vert$ & $\Vert q_{ 1 } \cdot q_{ 2 } \Vert$ \\
-    39  &  8 & & $z_{ n + 1 }$ & $z_{ n + i }$ \\
-    39  & &  8 & $\langle s^{ -1 }( z ), \, s^{ -1 }( w ) \rangle_{ \Hbb } =$
-           & zachodzi $\langle s^{ -1 }( z ), \, s^{ -1 }( w ) \rangle_{ \Hbb } =$ \\
-    50  & &  8 & $e_{ i } ( e_{ j } \cdot e_{ k } )$
-           & $e_{ i } \cdot ( e_{ j } \cdot e_{ k } )$ \\
-           % & &  &  &  \\
-           % & & & & \\
-           % & & & & \\
-           % & & & & \\
-    \hline
-  \end{tabular}
-
-
-
-
-
-  \newpage
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    % & &  & & \\
-    76  & 16 & & $\displaystyle \frac{ \partial ( \varphi \circ f_{ 2 } ) }{ \partial x_{ j } }$
-& $\displaystyle \frac{ \partial ( \varphi \circ f_{ 2 } ) }{ \partial x_{ j } }( 0 )$ \\
-    99  &  2 & & $[ a, b ] \in \mathbf{K}$ & $[ a, b ] \in M$ \\
-    99  &  4 & & $[ a, b ] \in \mathbf{K}$ & $[ a, b ] \in M$ \\
-    99  &  4 & & $[ b, a ] \in \mathbf{K}$ & $[ b, a ] \in M$ \\
-    99  & & 13 & $*$ & Działanie $*$ \\
-    100 & &  9 & $\mathbf{K} \leq L_{ 2 }$ & $M \leq L_{ 2 }$ \\
-    100 & &  9 & $f^{ -1 }( \mathbf{K} )$ & $f^{ - 1}( M )$ \\
-    100 & &  6 & $a_{ i } = f^{ -1 }( b_{ i } )$
-           & $a_{ i } \in f^{ -1 }( b_{ i } )$ \\
-    100 & &  5 & $\mathbf{K}$ & $M$ \\
-    100 & &  4 & $f^{ -1 }( K )$ & $f^{ -1 }( M )$ \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-
-\end{center}
-
-\vspace{\spaceTwo}
-
-
-\noindent
-\StrWg{18}{5} \\
-\Jest  $\displaystyle \omega\Big( \big( \sum_{ i } x_{ i } \otimes y_{ i } ),
-\sum_{ j } x_{ j } \otimes y_{ j } )$ \\
-\Powin $\displaystyle \omega\Big( \sum_{ i } x_{ i } \otimes y_{ i },
-\sum_{ j } v_{ j } \otimes w_{ j } \Big)$ \\
-\StrWg{18}{5} \\
-\Jest  $\displaystyle \mu( x_{ i }, x_{ j } ) \otimes \nu( y_{ i }, y_{ j } )$ \\
-\Powin $\displaystyle \mu( x_{ i }, v_{ j } ) \otimes \nu( y_{ i }, w_{ j } )$ \\
-\StrWg{19}{11} \\
-\Jest  $\rho( x_{ 1 } ) \cdot \rho( x_{ 2 } ) \ldots \rho( x_{ n } )$ \\
-\Powin $\rho( x_{ 1 } ) \cdot \rho( x_{ 2 } ) \cdot \ldots \cdot \rho( x_{ n } )$ \\
-\StrWd{31}{4} \\
-\Jest  $A \in \OStraightBold( n, \Rbb )$ \\
-\Powin $A \in \OStraightBold( n, \Rbb )$ zachodzi \\
-\StrWd{34}{6} \\
-\Jest  \textit{$n$-tą grupą symplektyczną} (oznaczaną $\Sp( n )$)
-nazywamy \\
-\Powin Przez \textit{$n$-tą grupę symplektyczną} (oznaczaną $\Sp( n )$)
-będziemy rozumieć \\
-\StrWd{34}{3} \\
-\Jest  \textit{$N$-tą zespoloną} (rzeczywistą) \textit{liniową grupą
-  symplektyczną} (oznaczenia $\Sp( n, \Cbb )$, $\Sp( n, \Rbb )$) \\
-nazywamy \\
-\Powin Przez \textit{$n$-tą zespoloną} (rzeczywistą) \textit{liniową grupę
-  symplektyczną} (oznaczenia $\Sp( n, \Cbb )$, $\Sp( n, \Rbb )$) będziemy
-rozumieć \\
-\StrWd{35}{3} \\
-\Jest  czyli $\bar{A}^{ T } \cdot A = \matUnit$ lub inaczej
-$\bar{A}^{ T } = A^{ -1 }$, czyli $\widetilde{A} = A^{ -1 }$ \\[0.5em]
-\Powin czyli $\bar{A} = \Big( A^{ T } \Big)^{ -1 }$, co można zapisać jako
-$\widetilde{A} = \bar{A}$ \\
-\StrWg{38}{3} \\[0.5em]
-\Jest  $\displaystyle \big( \sum_{ i = 0 }^{ 3 } t_{ i } e_{ i } )$ \\
-\Powin $\displaystyle \big( \sum_{ i = 0 }^{ 3 } t_{ i } e _{ i } \big)$ \\[0.5em]
-\StrWg{38}{7} \\
-\Jest  $e_{ 0 } \, ( t_{ 0 } + t_{ 1 } \, e_{ 1 } )
-+ e_{ 2 } \, ( t_{ 2 } - t_{ 3 } \, e_{ 1 } )$ \\[0.5em]
-\Powin $e_{ 0 } ( t_{ 0 } \, e_{ 0 } + t_{ 1 } \, e_{ 1 } )
-+ e_{ 2 } \, ( t_{ 2 } \, e_{ 0 } - t_{ 3 } \, e_{ 1 } )$ \\
+% \start \Str{32} W~tym miejscu warto się zatrzymać nad wzorem
+% \begin{equation}
+%   \label{eq:Wojtynski-07}
+%   \omega( x, y ) = x^{ T } \Omega \, y,
+% \end{equation}
+% który rozpatrywać będziemy tylko w~kontekście przestrzeni $\Cbb^{ n }$,
+% zwracając tylko uwagę, że~przedstawione tu rozumowanie można uogólnić
+% na~dowolną skończenie wymiarową przestrzeń wektorową.
+
+% Po pierwsze zwróćmy uwagę, że~$x$ po lewej stronie tego wzoru oznacza coś
+% innego, niż po prawej. Po lewej $x$ oznacza ciąg (kolumnę) liczb $n$ liczb
+% zespolonych, podczas gdy po prawej stronie oznacza on kolumnę, zapewne inną
+% od poprzedniej, liczb zespolonych daną zależnościami
+% \begin{equation}
+%   \label{eq:Wojtynski-08}
+%   x =
+%   \begin{bmatrix}
+%     x_{ 1 } \\
+%     x_{ 2 } \\
+%     \vdots \\
+%     x_{ n }
+%   \end{bmatrix}, \quad
+%   x = \sum_{ i = 1 }^{ n } x_{ i } \, e_{ i },
+% \end{equation}
+% gdzie $e_{ 1 }, e_{ 2 }, \ldots, e_{ n }$ jest pewną bazą przestrzeni $\Cbb^{ n }$.
+% Oznaczenia te są nieporęczne, czego świadectwem jest to, iż~we wzorze
+% \eqref{eq:Wojtynski-08} ponownie ten sam symbol „$x$” oznacza dwa różne
+% byty matematyczne.
+
+% By uniknąć dalszego zamieszania, wektory należące do
+% $\Cbb^{ n }$ będziemy oznaczać czcionką pogrubioną, a~kolumny ich
+% współrzędnych w~pewnej bazie, czcionką prostą. Mamy więc
+% $\vecxbold, \vecybold, \vecebold_{ 1 }, \vecebold_{ 2 }, \ldots, \vecebold_{ n }
+% \in \Cbb$, oraz
+% \begin{equation}
+%   \label{eq:Wojtynski-09}
+%   x =
+%   \begin{bmatrix}
+%     x_{ 1 } \\
+%     x_{ 2 } \\
+%     \vdots \\
+%     x_{ n }
+%   \end{bmatrix}, \quad
+%   \vecxbold = \sum_{ i = 1 }^{ n } x_{ i } \vecebold_{ i }.
+% \end{equation}
+% Wzór \eqref{eq:Wojtynski-07} zapiszemy teraz jako
+% \begin{equation}
+%   \label{eq:Wojtynski-10}
+%   \omega( \vecxbold, \vecybold ) = x^{ T } \Omega \, y.
+% \end{equation}
+
+% Weźmy teraz $\vecxbold = \vecebold_{ i }$, $\vecybold = \vecebold_{ j }$.
+% Z~wzoru \eqref{eq:Wojtynski-09} wynika teraz, że~$x_{ l } = \delta^{ l }_{ i }$,
+% $y_{ m } = \delta^{ m }_{ j }$ (konwencja jest wprowadzona na stronie~33 książki
+% Wojtyńskiego) i~tym samym
+% \begin{equation}
+%   \label{eq:Wojtynski-11}
+%   \omega( \vecebold_{ i }, \vecebold_{ j } ) = x^{ T } \Omega \, y =
+%   \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } x_{ l } \, \Omega_{ l m } \, y_{ m } =
+%   \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } \delta^{ i }_{ l } \, \Omega_{ l m } \, \delta^{ j }_{ m } =
+%   \Omega_{ i j },
+% \end{equation}
+% gdzie $\Omega_{ l m }$ oznacza wyraz macierzy $\Omega$ znajdujący~się na przecięciu
+% $l$-tego wiersza i~$m$-tej kolumny. Tym samym otrzymaliśmy bardzo przydatny
+% wzór
+% \begin{equation}
+%   \label{eq:Wojtynski-12}
+%   \Omega_{ i j } = \omega( \vecebold_{ i }, \vecebold_{ j } ).
+% \end{equation}
+
+% W~książce Wojtyńskiego i~w~tych notatkach, przyjęliśmy następującą linię
+% rozumowanie. Przyjmujemy, iż~istnieje macierz $\Omega$ dla której zachodzi wzór
+% \eqref{eq:Wojtynski-10} i~na podstawie tego wyprowadziliśmy zależność
+% \eqref{eq:Wojtynski-12}. Możemy jednak przyjąć za punkt wyjścia własności
+% formy $\omega( \vecxbold, \vecybold )$, by następnie udowodnić, że~zachodzi wzór
+% \eqref{eq:Wojtynski-10}, przy czym elementy macierzy $\Omega$ w~nim występującej
+% spełniają zależność \eqref{eq:Wojtynski-12}.
+
+% To oraz inne zagadnienia, takie jak przedstawienie form dwuliniowych,
+% półtoraliniowych, etc., za pomocą wzoru analogicznego do
+% \eqref{eq:Wojtynski-10} są wyczerpująco omówione w~wielu książkach do
+% algebry liniowej, nie będziemy się tutaj dłużej nad nimi
+% zatrzymywać.\footnote{Warto by napisać w~jakich książkach można znaleźć
+%   omówienie tych problemów.}
+
+% \vspace{\spaceFour}
+
+
+
+
+% \start \StrWd{32}{13} Nie mam pojęcia o~co chodzi w~stwierdzeniu
+% „gdzie $n = \dim \Kbb^{ n }$”.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \start \StrWd{33}{10} W~niewianie wyglądającym wzorze $\left(
+%   \frac{ e_{ 1 } }{ \sqrt{ \alpha } }, \frac{ e_{ 2 } }{ \sqrt{ \alpha } } \right)$
+% ukryta jest trudność, wynikająca z~tego, że~pierwiastek kwadratowy na
+% płaszczyźnie zespolonej jest zawsze funkcją dwuznaczną\footnote{Pierwiastek
+%   z~zera to jak wiadomo wyjątek.}. Trzeba więc przyjąć jakąś konwencję,
+% która będzie nam mówiła, ile dokładnie wynosi $\sqrt{ \alpha }$, gdzie
+% $\alpha \in \Cbb$ i~możemy spokojnie kontynuować rozważania.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \start \StrWd{33}{5} Podany tu wzór $\dim Y^{ \perp } = n - 2$ jest niewątpliwie
+% prawdziwy, w~tym jednak momencie nie potrafię zrozumieć poprawności jego
+% dowodu. Do problemu tego należy wrócić, po odświeżeniu sobie informacji
+% z~algebry liniowej o~wymiarach przestrzeni wektorowych i~formach liniowych.
+
+% \vspace{\spaceFour}
+
+
+
+% \start \Str{33-34} Podany tu dowód sprowadzania formy symplektycznej do
+% postaci kanonicznej zawiera dużą lukę, bowiem w~algorytmie sprowadzania do
+% postaci kanonicznej został pominięty bardzo ważny krok. Wyjaśnienie jak
+% należy poprawić przedstawiony algorytm, poprzedzimy ogólną dyskusją problemu.
+
+% Przyjmijmy, że~tak jak w~książce, forma symplektyczna $\omega$ jest zadana na
+% przestrzeni $\Cbb^{ n }$. Niech $n = 2k$, gdzie $k \in \Nbb \setminus \{ 0 \}$. Wiemy
+% już, że~formy symplektyczne istnieją tylko na przestrzeni o~wymiarze
+% parzystym więc takie $k$ istnieje. Przejdźmy do momentu, gdy macierz formy symplektycznej ma postać
+% \begin{equation}
+%   \label{eq:Wojtynski-13}
+%   \Omega =
+%   \begin{pmatrix}
+%     \hphantom{-} 0 & 1 & \hphantom{-} 0 & \ldots \\
+%     -1 & 0 & \hphantom{-} 0 & \ldots \\
+%     \hphantom{-} 0 & 0 & \hphantom{-} 0 & \matUnit \\
+%     \hphantom{-} 0 & 0 & -\matUnit & 0 \\
+%   \end{pmatrix}
+% \end{equation}
+% Ta macierz nie wygląda najlepiej, acz stworzenie lepszej w~systemie \LaTeX{}
+% odłożymy na kiedy indziej\footnote{Oby to kiedy indziej kiedyś nadeszło.}.
+% Na razie zauważymy, że~symbol $\ldots$ oznacza, iż~ostatni podany jawnie symbol
+% w~macierzy powtarza~się w danym wierszu, aż~do jego końca. Do tego w~trzecim
+% i~czwartym wierszu każdy symbol oznacza blok macierzowy o~rozmiarach
+% $( k - 1 ) \times ( k - 1 )$. Symbol $\matUnit$ oznacza macierz jednostkową, zaś
+% $0$ macierz której elementami są wyłącznie zera. Jak już mówiliśmy, nie
+% wygląda to ładnie, ale na razie musi wystarczyć.
+
+% By ułatwić rachunki, przyjmujemy iż wyrażenie
+% \begin{equation}
+%   \label{eq:Wojtynski-14}
+%   d_{ i } \leftrightarrow d_{ j },
+% \end{equation}
+% oznacza przejście do ze starej bazy $d_{ 1 }, d_{ 2 }, \ldots, d_{ n }$ nowej bazy
+% $d'_{ 1 }, d'_{ 2 }, \ldots, d'_{ n }$ danej jako
+% \begin{subequations}
+%   \begin{align}
+%     \label{eq:Wojtynski-15-A}
+%     &d'_{ i } = d_{ j }, \\
+%     \label{eq:Wojtynski-15-B}
+%     &d'_{ j } = d_{ i }, \\
+%     \label{eq:Wojtynski-15-C}
+%     &d'_{ l } = d_{ l },
+%   \end{align}
+% \end{subequations}
+% dla $l \notin \{ i, j \}$. Oprócz tego będziemy zwykle opuszczać prim
+% w~oznaczeniach nowej bazy, gdyż nie powinno to wprowadzać dwuznaczności,
+% a~poważnie uprości to zapis.
+
+% Wedle tego co pisze w~książce, gdy macierz jest formie
+% \eqref{eq:Wojtynski-06} to wystarczy wykonać jedną operację zmiany bazy,
+% $d_{ 2 } \leftrightarrow d_{ k + 1 }$, by uzyskać postać kanoniczną, co jest nieprawdą.
+% W~istocie potrzebne jest $k - 1$ operacji tego typu, które zaraz opiszemy.
+% Zwróćmy uwagę, że~dla $n = 2$, $k = 1$ czy potrzebnych jest $1 - 1 = 0$
+% operacja. Rzeczywiście, macierz \eqref{eq:Wojtynski-06} przyjmuje postać
+% \begin{equation}
+%   \label{eq:Wojtynski-16}
+%   \Omega =
+%   \begin{pmatrix}
+%     \hphantom{-} 0 & 1 \\
+%     -1 & 0
+%   \end{pmatrix}.
+% \end{equation}
+% Gdy $n = 4$, $k = 2$, więc potrzebne jest $k - 1 = 1$ operacja zmiany bazy,
+% którą jest właśnie operacja $d_{ 2 } \leftrightarrow d_{ k + 1 }$. Widzimy więc, że~dopiero
+% dla $n = 6$, $k = 3$ przedstawiony w~książce algorytm przestaje dawać
+% porządny wynik.
+
+% Zauważmy teraz, że~ze względu na definicję wyrazów macierzy $\Omega$
+% \begin{equation}
+%   \label{eq:Wojtynski-17}
+%   \Omega_{ l m } = \omega( d_{ l }, d_{ m } ),
+% \end{equation}
+% wynika, że~operacja $d_{ i } \leftrightarrow d_{ j }$ na poziomie macierzy sprowadza~się do
+% \begin{enumerate}
+
+% \item Zamiany miejscami $i$-tego wiersza z~$j$-tym.
+
+% \item Zamiany miejscami $i$-tej kolumny z~$j$-tą.
+
+% \end{enumerate}
+% By to pokazać, wybierzmy najpierw $l \notin \{ i, j \}$. Wówczas wyrazy
+% $\Omega_{ l m }$ dla $l \notin \{ i, j \}$ nie ulegają zmianie. Dla $m = i$, mamy zaś
+% \begin{equation}
+%   \label{eq:Wojtynski-18}
+%   \Omega'_{ l i } = \omega( d'_{ l }, d'_{ i } ) = \omega( d_{ l }, d_{ j } ) =
+%   \Omega_{ l j }.
+% \end{equation}
+% Analogiczny rachunek pokazuje, że~$\Omega'_{ k j } = \Omega_{ k i }$. Weźmy teraz
+% $l = i$ i~$m \notin \{ i, j \}$. Prowadzi to do
+% \begin{equation}
+%   \label{eq:Wojtynski-19}
+%   \Omega'_{ i m } = \omega( d'_{ i }, d'_{ m } ) = \omega( d_{ j }, d_{ m } ) =
+%   \Omega_{ j m }.
+% \end{equation}
+% Przejdźmy teraz do przypadku $k = l$, $l = m$. Mamy wtedy
+% \begin{equation}
+%   \label{eq:Wojtynski-20}
+%   \Omega'_{ i j } = \omega( d'_{ i }, d'_{ j } ) = \omega( d_{ j }, d_{ i } ) =
+%   \Omega_{ j i }.
+% \end{equation}
+% Analogicznie przebiega rachunek pokazujący, że
+% \begin{equation}
+%   \label{eq:Wojtynski-21}
+%   \Omega'_{ j i } = \Omega_{ i j }.
+% \end{equation}
+% Wzory \eqref{eq:Wojtynski-18}--\eqref{eq:Wojtynski-21} stanowią indeksowy
+% zapis reguł 1 i~2.
+
+% Jesteśmy teraz gotowi uzupełnić podany w~książce algorytm sprowadzania
+% formy do postaci kanonicznej. W~momencie w~którym sprawdziliśmy macierz
+% formy symplektycznej do postaci \eqref{eq:Wojtynski-07} należy wykonać
+% $k - 1$ operacji zmiany bazy:
+% \begin{subequations}
+%   \begin{align}
+%     \label{eq:Wojtynski-22-A}
+%     d_{ 2 } &\leftrightarrow d_{ k + 1 }, \\
+%     \label{eq:Wojtynski-22-B}
+%     d_{ 2 } &\leftrightarrow d_{ 3 }, \\
+%     \label{eq:Wojtynski-22-C}
+%     d_{ 3 } &\leftrightarrow d_{ 4 }, \\
+%     \label{eq:Wojtynski-22-D}
+%     &\hspace{0.65em} \vdots \\
+%     \label{eq:Wojtynski-22-E}
+%     d_{ k - 1 } &\leftrightarrow d_{ k }.
+%   \end{align}
+% \end{subequations}
+% Nie podamy w~pełni formalnego dowodu tej procedury, gdyż wymagałby on
+% żmudnego operowania na~wskaźnikach, które zapewne nie wyjaśnia wiele,
+% zamiast tego, pokażemy jak ta procedure działa dla przypadku $n = 8$.
+% Zanim jednak to tego przejdziemy, pokażemy jak taki formalny dowód mógłby
+% wyglądać.
+
+% Niech $\Omega^{ 0 }$ oznacza macierz formy symplektycznej w~postaci kanonicznej.
+% Jej elementy dane są jako
+% \begin{equation}
+%   \label{eq:Wojtynski-23}
+%   \Omega^{ 0 }_{ l m } =
+%   \begin{cases}
+%     -\delta^{ l }_{ m - l }, \quad l = 1, 2, \ldots, k, \\
+%     \hphantom{-} \delta^{ l - k }_{ m }, \quad l = k + 1, k + 2, \ldots, k.
+%   \end{cases}
+% \end{equation}
+% We wzorach powyżej symbol $\delta^{ i }_{ j }$ oznacza symbol Kroneckera, nie zaś
+% jak w~książce (zob. str.~33) macierz-kolumnę o~wyrazach danych przez
+% odpowiednie wartości przyjmowane przez ten symbol. Jeżeli teraz zapiszemy
+% w~notacji wskaźnikowej wyrazy macierzy $\Omega$, wzór \eqref{eq:Wojtynski-07}, to
+% dzięki wzorom \eqref{eq:Wojtynski-18}--\eqref{eq:Wojtynski-21}, poprzez
+% dokładną analizę, będziemy w~stanie pokazać, że~ciąg zmian baz
+% \eqref{eq:Wojtynski-22-A}--\eqref{eq:Wojtynski-22-E} prowadzi od macierzy
+% $\Omega$ do macierzy $\Omega^{ 0 }$. Na koniec zauważmy, że~ponieważ jak pokazano na
+% stronie 33, macierz $\Omega$ jest antysymetryczna, wystarczy pokazać, że~ta
+% procedure prowadzi do dobre postaci wyrazów $\Omega_{ l m }$, dla $l \leq m$ (albo
+% $l \geq m$).
+
+% Przejdźmy teraz to ilustracji działania procedury
+% \eqref{eq:Wojtynski-22-A}--\eqref{eq:Wojtynski-22-E} dla przypadku $n = 8$,
+% $k = 4$. W~momencie początkowym nasza macierz ma postać
+% \begin{equation}
+%   \label{eq:Wojtynski-24}
+%   \Omega =
+%   \begin{pmatrix}
+%     \hphantom{-} 0 & 1 & \hphantom{-} 0 & \hphantom{-} 0
+%     & \hphantom{-} 0 & 0 & 0 & 0 \\
+%     -1 & 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+%                          & 0 & 0 & 0 \\
+%     \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0
+%                      & \hphantom{-} 0 & 1 & 0 & 0 \\
+%     \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0
+%                      & \hphantom{-} 0 & 0 & 1 & 0 \\
+%     \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0
+%                      & \hphantom{-} 0 & 0 & 0 & 1 \\
+%     \hphantom{-} 0 & 0 & -1 & \hphantom{-} 0 & \hphantom{-} 0
+%                          & 0 & 0 & 0 \\
+%     \hphantom{-} 0 & 0 & \hphantom{-} 0 & -1 & \hphantom{-} 0
+%                          & 0 & 0 & 0 \\
+%     \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0 & -1
+%                          & 0 & 0 & 0
+%   \end{pmatrix}.
+% \end{equation}
+% Musimy teraz dokonać zmian baz $d_{ 2 } \leftrightarrow d_{ 5 }$,
+% $d_{ 2 } \leftrightarrow d_{ 3 }$, $d_{ 3 } \leftrightarrow d_{ 4 }$, przy czym będziemy korzystali
+% z~reguł 1~i~2 podanych wcześniej.
+% \begin{equation}
+%   \label{eq:Wojtynski-25}
+%   \begin{split}
+%     &\begin{pmatrix}
+%        \hphantom{-} 0 & 1 & \hphantom{-} 0 & \hphantom{-} 0
+%        & \hphantom{-} 0 & 0 & 0 & 0 \\
+%        -1 & 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+%                         & 0 & 0 & 0 \\
+%        \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0
+%        & \hphantom{-} 0 & 1 & 0 & 0 \\
+%        \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0
+%        & \hphantom{-} 0 & 0 & 1 & 0 \\
+%        \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0
+%        & \hphantom{-} 0 & 0 & 0 & 1 \\
+%        \hphantom{-} 0 & 0 & -1 & \hphantom{-} 0 & \hphantom{-} 0
+%                         & 0 & 0 & 0 \\
+%        \hphantom{-} 0 & 0 & \hphantom{-} 0 & -1 & \hphantom{-} 0
+%                         & 0 & 0 & 0 \\
+%        \hphantom{-} 0 & 0 & \hphantom{-} 0 & \hphantom{-} 0 & -1
+%                         & 0 & 0 & 0
+%      \end{pmatrix}
+%       \xrightarrow[ d_{ 2 } \, \leftrightarrow \, d_{ 5 } ]{}
+%       \begin{pmatrix}
+%         \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+%         & 1 & 0 & 0 & 0 \\
+%         \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+%         & 0 & 0 & 0 & 1 \\
+%         \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+%         & 0 & 1 & 0 & 0 \\
+%         \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+%         & 0 & 0 & 1 & 0 \\
+%         -1 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & 0 & 0 & 0
+%                     & 0 \\
+%         \hphantom{-} 0 & \hphantom{-} 0 & -1 & \hphantom{-} 0 & 0 & 0 & 0
+%                     & 0 \\
+%         \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & -1 & 0 & 0 & 0
+%                     & 0 \\
+%         \hphantom{-} 0 & -1 & \hphantom{-} 0 & \hphantom{-} 0 & 0 & 0 & 0
+%                     & 0 \\
+%       \end{pmatrix}
+%       \xrightarrow[ d_{ 2 } \, \leftrightarrow \, d_{ 3 } ]{ } \\[1em]
+%     &\xrightarrow[ d_{ 2 } \, \leftrightarrow \, d_{ 3 } ]{ }
+%       \begin{pmatrix}
+%         \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+%         & 1 & 0 & 0 & 0 \\
+%         \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+%         & 0 & 1 & 0 & 0 \\
+%         \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+%         & 0 & 0 & 0 & 1 \\
+%         \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+%         & 0 & 0 & 1 & 0 \\
+%         -1 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & 0 & 0 & 0
+%                     & 0 \\
+%         \hphantom{-} 0 & -1 & \hphantom{-} 0 & \hphantom{-} 0 & 0 & 0 & 0
+%                     & 0 \\
+%         \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & -1 & 0 & 0 & 0
+%                     & 0 \\
+%         \hphantom{-} 0 & \hphantom{-} 0 & -1 & \hphantom{-} 0 & 0 & 0 & 0
+%                     & 0
+%       \end{pmatrix}
+%       \xrightarrow[ d_{ 3 } \, \leftrightarrow \, d_{ 4 } ]{}
+%       \begin{pmatrix}
+%         \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+%         & \hphantom{-} 0 & 1 & 0 & 0 & 0 \\
+%         \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+%         & \hphantom{-} 0 & 0 & 1 & 0 & 0 \\
+%         \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+%         & \hphantom{-} 0 & 0 & 0 & 1 & 0 \\
+%         \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0
+%         & \hphantom{-} 0 & 0 & 0 & 0 & 1 \\
+%         -1 & \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & 0
+%                              & 0 & 0 & 0 \\
+%         \hphantom{-} 0 & -1 & \hphantom{-} 0 & \hphantom{-} 0 & 0
+%                              & 0 & 0 & 0 \\
+%         \hphantom{-} 0 & \hphantom{-} 0 & -1 & \hphantom{-} 0 & 0 & 0
+%                                  & 0 & 0 \\
+%         \hphantom{-} 0 & \hphantom{-} 0 & \hphantom{-} 0 & -1 & 0 & 0
+%         & 0 & 0 \\
+%       \end{pmatrix}
+%   \end{split}
+% \end{equation}
+% Ten przykład powinien dobrze ilustrować, w~jaki sposób działa podany
+% algorytm sprowadzania formy symplektycznej do postaci kanonicznej.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \start \StrWg{34}{7--8} Znajdujące~się tu zdanie „Formę mającą postać (2.11)
+% nazywamy \textit{formą symplektyczną}.” jest niefortunnie sformułowane.
+% W~istocie formę nazywamy formą symplektyczną, jeśli w~pewnej bazie
+% przyjmuje postać daną wzorem (2.11).
+
+% Stwierdzenie~2.11 pokazuje, że~każda dwuliniowa, antysymetryczna
+% i~nieosobliwa forma, jest formą symplektyczną. Teraz udowodnimy odwrotną
+% implikację, mianowicie, iż~każda forma symplektyczna jest antysymetryczna
+% i~nieosobliwa.
+
+% Z~definicji, każda form symplektyczna jest formą dwuliniową i~istnieje baza
+% przestrzeni $\Cbb^{ n }$, gdzie $n = 2k$, taka że
+% \begin{equation}
+%   \label{eq:Wojtynski-26}
+%   \omega( \vecxbold, \vecybold ) =
+%   \sum_{ i = 1 }^{ k } x_{ i } \, y_{ k + i } - y_{ i } \, x_{ k + i }, \qquad
+%   \vecxbold = \sum_{ i = 1 }^{ n } x_{ i } \, \vecebold_{ i }, \;\;
+%   \vecybold = \sum_{ i = 1 }^{ n } y_{ i } \, \vecebold_{ i }.
+% \end{equation}
+% Z~tego od razu wynika, że~$\omega$ jest formą antysymetryczna. Teraz wystarczy
+% pokazać, że~jeśli $\omega( \vecxbold, \vecybold ) = 0$ dla każdego
+% $\vecybold \in \Cbb^{ n }$, to $\vecxbold = \vecZeroBold$. Załóżmy, że~dany
+% jest taki $\vecxbold$ i~weźmy $\vecybold = ( \delta^{ i }_{ j } )$, gdzie
+% $1 \leq j \leq k$. Obliczmy teraz
+% \begin{equation}
+%   \label{eq:Wojtynski-27}
+%   \omega( \vecxbold, \vecybold ) =
+%   \sum_{ i = 1 }^{ k } x_{ i } \, y_{ k + i } - y_{ i } \, x_{ k + i } =
+%   \sum_{ i = 1 }^{ k } x_{ i } \, \delta^{ k + i }_{ j } - \delta^{ i }_{ j } \, x_{ k + i } =
+%   -x_{ k + j } = 0.
+% \end{equation}
+% Widzimy więc, że~$x_{ i } = 0$, dla $k + 1 \leq i \leq n$. Analogicznie biorąc
+% $\vecebold = ( \delta^{ i }_{ k + j } )$, przy $1 \leq j \leq k$, dowodzimy,
+% że~$x_{ i } = 0$, dla $1 \leq i \leq k$, tym samym pokazaliśmy,
+% że~$\vecxbold = \vecZeroBold$. To~kończy dowód twierdzenia, iż~każda forma
+% symplektyczna, jest dwuliniową, antysymetryczną i~nieosobliwą.
+
+% \vspace{\spaceFour}
+
+
+
+
+% \start \textbf{Str. 34, wiersze (od dołu) 1--3.} Znajdujemy tu informację,
+% że~$n$-tą zespoloną (rzeczywistą) liniową grupę symplektyczną, którą
+% oznaczamy jako $\Sp( n, \Cbb )$ ($\Sp( n, \Rbb )$), definiujemy
+% jako podgrupę $\GL( 2n, \Cbb )$ ($\GL( 2n, \Rbb )$) składającą~się
+% z~macierzy nieosobliwych stopnia $2n$ zachowujących macierz
+% \begin{equation}
+%   \label{eq:Wojtynski-28}
+%   \Omega =
+%   \begin{pmatrix}
+%     \hphantom{-} 0 & \matUnit \\
+%     -\matUnit & 0
+%   \end{pmatrix},
+% \end{equation}
+% przy czym $\Omega$ jest macierzą kwadratową stopnia $2n$. Rozumiemy przez to,
+% że~macierz $A$ należy do $\Sp( n, \Rbb )$ ($\Sp( n, \Cbb )$), jeśli
+% \begin{equation}
+%   \label{eq:Wojtynski-29}
+%   A^{ T } \, \Omega \, A = \Omega.
+% \end{equation}
+% Dodatkowe zaznaczanie, że~$A$ musi być macierzą nieosobliwą, kładzie na tą
+% własność tak silny nacisk, iż~może prowadzić do nieporozumień.
+
+% Zauważmy, że~macierz $A$ musi być macierzą nieosobliwą z~dwóch powodów. Po
+% pierwsze, bo $A \in \GL( n, \Cbb)$ ($A \in \GL( n, \Rbb )$), a~z~definicji
+% każda macierz tego typu jest nieosobliwa. Po drugie, jak zostało to
+% zauważone wcześniej na tej stronie książki Wojtyńskiego, jeśli macierz $A$
+% zachowuje nieosobliwą macierz, to sama jest nieosobliwa, macierz $\Omega$ jest
+% zaś nieosobliwa. Dowód nieosobliwości macierz $\Omega$ można uzyskać na wiele
+% sposobów, choćby modyfikując podany w~tych notatkach dowód tego, że~forma
+% symplektyczna, czyli taka która w~pewnej bazie przyjmuje postać
+% \eqref{eq:Wojtynski-26}, jest nieosobliwa w~podanym na~32 sensie.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \start \Str{34} W~lewej dolnej i~prawej górnej ćwiartce przedstawione tu
+% macierzy brakuje symbolu $0$. Kiedyś można by~się zastanowić nad
+% wygenerowanie w~\LaTeX{} macierzy, która lepiej ilustrowałaby problem.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \start \StrWg{34}{8} Aby definicja przestrzeni $\spFrak( n, \Kbb )$ była
+% ścisła, należy doprecyzować czym jest pojawiająca~się w~niej forma $\omega$.
+% Należy bowiem przyjąć, że~$\omega$ nie jest dowolną formą symplektyczną, czyli
+% taką która w~\textit{pewnej} bazie przyjmuje postać
+% \eqref{eq:Wojtynski-26}, lecz taką która przyjmuje tą postać w~bazie
+% kanonicznej. Inaczej mówiąc, jeśli
+% \begin{equation}
+%   \label{eq:Wojtynski-30}
+%   \vecxbold = ( x_{ 1 }, x_{ 2 }, \ldots, x_{ 2n } ) \in \Kbb^{ 2n }, \quad
+%   \vecybold = ( y_{ 1 }, y_{ 2 }, \ldots, y_{ 2n } ) \in \Kbb^{ 2n },
+% \end{equation}
+% to zachodzi
+% \begin{equation}
+%   \label{eq:Wojtynski-31}
+%   \omega( \vecxbold, \vecybold ) =
+%   \sum_{ i = 1 }^{ n } x_{ i } \, y_{ n + i } - y_{ i } \, x_{ n + i }.
+% \end{equation}
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \start \Str{38} Z~nie do końca jasnych dla mnie powodów, gdy na tej stronie
+% przedstawiono kwaterniony jako dwuwymiarową przestrzeń wektorową nad nad
+% $\Cbb$, zdefiniowano kombinację liniową kwaterniowów bazowych $e_{ 0 }$
+% i~$e_{ 2 }$ w~taki sposób, że~współczynniki zespolone mnożą je z~prawej
+% strony:
+% \begin{equation}
+%   \label{eq:Wojtynski-32}
+%   q = e_{ 0 } \, z + e_{ 2 } \, w, \quad z, \, w \in \Cbb.
+% \end{equation}
+% Podejrzewam, że~chodzi o~to, iż~nieprzemienność mnożenie kwaternionów
+% sprawia, iż~to jak definiujemy działanie macierzy z~$\lFrak( n, \Hbb )$ na
+% wektor z~przestrzeni $\Hbb^{ n }$ ma kilka nieoczywistych konsekwencji dla
+% innych części teorii, co może sprawić iż ta nietypowa notacja okazuje~się
+% mieć sporo zalet. Zagadnienie to omówimy bardziej szczegółowo w~dalszej
+% części notatek, tu zaś poprzestaniemy na wskazaniu, iż~w~tej notacji
+% własność jednorodność odwzorowania $A : V \to V$ zapisujemy jako
+% \begin{equation}
+%   \label{eq:Wojtynski-33}
+%   A ( v \alpha ) = ( A v ) \alpha, \quad \alpha \in \Kbb, \, v \in V,
+% \end{equation}
+% nie zaś jak w~standardowej notacji
+% \begin{equation}
+%   \label{eq:Wojtynski-34}
+%   A \alpha v = \alpha A v.
+% \end{equation}
+
+% Ostatecznie, to czy mnożenie zapisujemy z~lewej czy z~prawej strony jest
+% tylko kwestią konwencji i~całą teorię da~się zdefiniować w~sposób spójny
+% wybierając jedną z nich. W~tej kwestii warto jednak zauważyć to,
+% iż~wybierając mnożenie kwaternionów bazowych z~lewej strony, musielibyśmy
+% zmienić wzór (2.20) z~książki, czyli
+% \begin{equation}
+%   \label{eq:Wojtynski-35}
+%   q =
+%   e_{ 0 } \, ( t_{ 0 } \, e_{ 0 } + t_{ 1 } \, e_{ 1 } )
+%   + e_{ 2 } \, ( t_{ 2 } \, e_{ 0 } - t_{ 3 } e_{ 1 } ),
+% \end{equation}
+% na
+% \begin{equation}
+%   \label{eq:Wojtynski-36}
+%   q =
+%   ( t_{ 0 } \, e_{ 0 } + t_{ 1 } \, e_{ 1 } ) \, e_{ 0 }
+%   + ( t_{ 2 } \, e_{ 0 } + t_{ 3 } \, e_{ 1 } ) \, e_{ 2 }.
+% \end{equation}
+% Pod pewnym względami wzór \eqref{eq:Wojtynski-35} wygląda bardziej
+% naturalnie.
+
+% Na koniec zwróćmy uwagę na to, że~skoro liczby zespolone są podciałem
+% kwaternionów, to niezależnie czy mnożenie kwaternionów bazowych określimy
+% z~prawej, czy lewej strony, możemy zawsze przenieść liczbę zespoloną
+% z~prawej strony kwaternionu bazowe na lewą i~na odwrót. W~tym kontekście
+% warto podać dwa użyteczne wzory:
+% \begin{subequations}
+%   \begin{align}
+%     \label{eq:Wojtynski-37-A}
+%     &e_{ 0 } \, z = z \, e_{ 0 }, \\
+%     \label{eq:Wojtynski-38-B}
+%     &e_{ 2 } \, z = \bar{z} \, e_{ 2 },
+%   \end{align}
+% \end{subequations}
+% gdzie $z \in \Cbb$.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \start \Str{39} Podane tu wyjaśnienie dlaczego odwzorowanie $S$
+% przekształca odwzorowania liniowe przestrzeni $\Hbb^{ n }$ w~odwzorowania
+% liniowe przestrzeni $\Cbb^{ 2n }$ jest niepotrzebnie zagmatwane. Postaram~się
+% przedstawić dowód tego faktu w~sposób jaśniejszy, najpierw jednak
+% umieścimy cały problem w~szerszym kontekście. Do opisu tego problemu
+% można użyć formalizmu teorii kategorii i~choć takie rozwiązanie ma wiele
+% zalet, to~jednak zastosowanie go tutaj, może nas oddalić od bardzo
+% konkretnego problemu grup macierzy, którym~się zajmujemy, a~to jest rzeczą
+% nieporządną.
+
+% Zacznijmy od tego, że~główną cechą odróżniającą kwaterniony $\Hbb$ od liczb
+% rzeczywistych i~zespolonych, jest nieprzemienność ich mnożenia. Mimo tego,
+% przestrzenie macierzy $\lFrak( n, \Kbb )$, gdzie $\Kbb$ może oznaczać
+% $\Rbb$, $\Cbb$ lub~$\Hbb$, posiadają wiele wspólnych cech algebraicznych.
+% Aby je zwięźle opisać, wprowadzimy trochę terminologii. Przyjmiemy,
+% że~struktura algebraiczna posiadająca wszystkie cechy ciała, ale w~której
+% mnożenie nie musi być przemienne, będziemy nazywać \textbf{ciałem
+%   nieprzemiennych} oraz że~zarówno przestrzenie wektorowe jak i~algebry mogą
+% być zarówno nad ciałem przemiennym jak i~nieprzemiennych. Wówczas
+% $\lFrak( n, \Rbb )$ i~$\lFrak( n, \Cbb )$ są łącznymi, nieprzemiennymi
+% algebrami wedle standardowych definicji. Strukturę algebry nieprzemiennej
+% wyznacza mnożenie przez elementy z~ciała, dodawanie i~mnożenie macierzy.
+% Opisanie struktur $\lFrak( n, \Hbb )$ wymaga wprowadzenia nowych pojęć.
+
+% Niech $V$ będzie przestrzenią wektorową na ciałem $\Kbb$, na której jest
+% zadane jest działanie wewnętrzne
+% \begin{equation}
+%   \label{eq:Wojtynsi-39}
+%   \cdot : V \times V \ni ( v, w ) \mapsto v \cdot w \in V.
+% \end{equation}
+% Rozpatrzmy teraz dwie potencjalne własności tego działania:
+% \begin{subequations}
+%   \begin{align}
+%     \label{eq:Wojtynski-40-A}
+%     &( \alpha \, v + \beta \, w ) \cdot p  =  \alpha \, ( v \cdot p ) + \beta \, ( w \cdot p ), \\
+%     \label{eq:Wojtynski-40-B}
+%     &v \cdot ( \alpha \, w + \beta \, p ) = \alpha \, ( v \cdot w ) + \beta \, ( v \cdot p ),
+%   \end{align}
+% \end{subequations}
+% gdzie $\alpha, \beta \in \Kbb$, $v, w, p \in V$. Jeśli dla danej przestrzeni $V$ wzór
+% \eqref{eq:Wojtynski-40-A} zachodzi dla wszystkich możliwych przypadków,
+% to~przestrzeń tą nazywamy \textbf{lewej algebrą}. Definicje \textbf{lewej
+%   algebry łącznej}, \textbf{lewej algebry przemiennej}, etc., są
+% prostymi uogólnieniami definicji dla standardowej algebry, nie ma więc
+% potrzeby byśmy je tutaj podawali. Analogicznie, jeśli dla wszystkich
+% możliwych przypadków zachodzi wzór \eqref{eq:Wojtynski-40-B} to $V$ nazywamy
+% \textbf{prawą algebrą}. Zdefiniowanie \textbf{prawej algebry łącznej}
+% i~innych możliwych jej typów, nie powinno teraz sprawiać żadnego problemu.
+% Łatwo zauważyć, że jeśli dana przestrzeń jest jednocześnie algebrą lewą
+% i~prawą, to jest ona algebrą w~standardowym sensie tego słowa.
+
+% W~dalszym ciągu tych notatek pokażemy~że $\lFrak( n, \Hbb )$ jest prawą
+% algebrą nad $\Hbb$, ale nie jest lewą algebrą bo nie spełnia warunku
+% \eqref{eq:Wojtynski-40-A}.?????
+
+% Dokładniej omówimy to zagadnienie poniżej, warto~się jednak teraz
+% zastanowić, co ta sytuacja nam mówi. Czy powinniśmy zmienić definicję
+% „algebry nad ciałem nieprzemiennym”, tak by usunąć z~niej jedną wymaganą
+% własność, tak iż $\lFrak( n, \Hbb )$ stanie~się przykładem takiej algebry?
+% Czy też należy zostawić definicje takie jakimi są, stwierdzają tylko,
+% iż~$\lFrak( n, \Hbb )$ jest bytem, któremu niewiele brakuje, by był
+% odpowiednią algebrą nad ciałem nieprzemiennym? Nie umiem w~tej chwili
+% odpowiedzieć na to pytanie. Niezależnie od tego, użycie pojęcie „łącznej
+% nieprzemiennej algebry nad ciałem przemiennym (nieprzemiennym)”, wydaje~się
+% być dobrym krokiem do zrozumienia problemu.
+
+% Naszą analizę rozpoczniemy od usystematyzowania oznaczeń. Za Wojtyńskim
+% przyjmujemy następującą, prawostronną, konwekcję mnożenia elementów
+% $\Kbb^{ n }$ przez elementy z~$\Kbb$
+% \begin{equation}
+%   % Numeracja wzorów.
+%   \label{eq:Wojtynski-36}
+%   v \alpha = ( v_{ 1 } \alpha, v_{ 2 } \alpha, \ldots, v_{ n } \alpha ), \quad
+%   \alpha \in \Kbb, \, v \in \Kbb^{ n }.
+% \end{equation}
+% Ponadto dla macierzy $A \in \lFrak( n, \Kbb )$ o~elementach $a_{ ij }$,
+% $i, j = 1, 2, \ldots, n$ przyjmujemy dodatkowe oznaczenie
+% \begin{equation}
+%   \label{eq:Wojtynski-37}
+%   A = [ a_{ i j } ].
+% \end{equation}
+% Mnożenie macierzy przez element z~$\Kbb$ oraz sumę dwóch macierzy
+% definiujemy w~zwykły sposób.
+% \begin{subequations}
+%   \begin{align}
+%     \label{eq:Wojtynski-38-A}
+%     A \alpha &= [ a_{ i j } \, \alpha ], \\
+%     \label{eq:Wojtynski-38-B}
+%     A + B &= [ a_{ i j } + b_{ i j } ],
+%   \end{align}
+% \end{subequations}
+% gdzie, $\alpha \in \Kbb$,
+% $A = [ a_{ i j } ]$, $B = [ b_{ i j } ] \in \lFrak( n, \Kbb )$.
+% Również podążając za Wojtyńskim, działanie macierzy na wektor z~$\Kbb^{ n }$
+% definiujemy jako
+% \begin{equation}
+%   \label{eq:Wojtynski-39}
+%   ( A v )_{ i } = \sum_{ j = 1 }^{ n } a_{ i j } \, v_{ j },
+% \end{equation}
+% gdzie $v \in \Kbb^{ n }$, $A \in \lFrak( n, \Kbb )$. Teraz operację mnożenia
+% dwóch macierzy z~$\lFrak( n, \Kbb )$ możemy określić jako
+% \begin{equation}
+%   \label{eq:Wojtynski-40}
+%   A \cdot B = \left[ \sum_{ l = 1 }^{ n } a_{ i l } \, b_{ l j } \right].
+% \end{equation}
+% Dla uczynienia rozważań bardziej precyzyjnymi, przez pewien czas mnożenie
+% macierzy będziemy jawnie oznaczać symbolem $\cdot$.
+
+% Teraz przejdziemy do dowodu tego, że~$\lFrak( n, \Kbb )$ stanowi
+% nieprzemienną algebrę. Z~rozmysłem odkładamy na~później rozważanie
+% o~związku macierzy $\lFrak( n, \Kbb )$ z~odwzorowaniami liniowymi na
+% $\Kbb^{ n }$. Jak~się okazuje, ten problem posiada kilka własnych niuansów
+% wartych osobnej dyskusji. Pierwszym krokiem jest udowodnienie,
+% że~$\lFrak( n, \Kbb )$ z~działaniami zdefiniowanymi
+% w~\eqref{eq:Wojtynski-38-A}--\eqref{eq:Wojtynski-38-B} jest przestrzenią
+% wektorową. Niech $A \in \lFrak( n, \Kbb )$. Własność
+% \begin{equation}
+%   \label{eq:Wojtynski-41}
+%   A \, 1 = A,
+% \end{equation}
+% gdzie $1$ jest elementem neutralnym mnożenia w~$\Kbb$ wynika wprost
+% z~definicji mnożenia macierzy przez element z~ciała $\Kbb$ podanej
+% w~\eqref{eq:Wojtynski-38-A} oraz własności mnożenia w~ciele $\Kbb$.
+% Podobnie własność
+% \begin{equation}
+%   \label{eq:Wojtynski-42}
+%   A \, ( \beta \, \alpha ) = ( A \, \beta ) \, \alpha, \quad \alpha, \beta \in \Kbb,
+% \end{equation}
+% wynika, jak poprzednio z~definicji mnożenia macierzy przez element z~ciała
+% oraz łączności mnożenia w~ciele $\Kbb$. W~dalszym ciągu nie będziemy jawnie
+% przywoływać miejsc w~których korzystamy z~definicji
+% \eqref{eq:Wojtynski-38-A}--\eqref{eq:Wojtynski-38-B}, pozostaniemy przy
+% przytaczaniu potrzebnych własności z~ciała $\Kbb$. Z~rozdzielności dodawania
+% względem mnożenia w~ciele $\Kbb$ wynikają dwie poniższe własności
+% \begin{subequations}
+%   \begin{align}
+%     \label{eq:Wojtynski-43-A}
+%     &A \, ( \alpha + \beta ) = A \, \alpha + A \, \beta, \\
+%     \label{eq:Wojtynski-43-B}
+%     &( A + B ) \, \alpha = A \, \alpha + B \, \beta,
+%   \end{align}
+% \end{subequations}
+% gdzie $A, B \in \lFrak( n, \Kbb )$ i~$\alpha, \beta \in \Kbb$. Korzystając teraz
+% z~tego, że~dodawanie w~$\Kbb$ jest łączne, przemienne i~dla każdego
+% elementu $a \in \Kbb$ istnieje element odwrotny względem dodawania $-a$,
+% dowodzimy
+% \begin{subequations}
+%   \begin{align}
+%     \label{eq:Wojtynski-44-A}
+%     &( A + B ) + C = A + ( B + C ), \\
+%     \label{eq:Wojtynski-44-B}
+%     &A + B = B + A, \\
+%     \label{eq:Wojtynski-44-C}
+%     &A + ( -A ) = 0,
+%   \end{align}
+% \end{subequations}
+% gdzie $A, B, C \in \lFrak( n, \Kbb )$, zaś $0 \in \lFrak( n, \Kbb )$ to
+% macierz zerowa\footnote{Macierz, której wszystkie elementy są równe
+%   elementowi neutralnemu dodawania w~ciele $\Kbb$.}. Udowodniliśmy więc,
+% że~$\lFrak( n, \Kbb )$ jest przestrzenią wektorową i~nigdzie w~dowodzie
+% przemienność, lub jej brak, mnożenia nie odgrywa żadnej roli.
+
+% Teraz przejdziemy do dowodu tego, że~$\lFrak( n, \Kbb )$ wraz z~działaniem
+% mnożenia macierzy \eqref{eq:Wojtynski-40} jest łączną, nieprzemienną
+% algebrą. Jak powiedzieliśmy wcześniej, nieprzemienność mnożenia macierzy
+% jest dobrze znana, nie będziemy~się więc nad nią zatrzymywać. Łączność
+% mnożenia macierzy
+% \begin{equation}
+%   \label{eq:Wojtynski-45}
+%   ( A \cdot B ) \cdot C = A \cdot ( B \cdot C ),
+% \end{equation}
+% wynika z~definicji operacji mnożenia macierzy \eqref{eq:Wojtynski-40} oraz
+% z~łączności mnożenia w~ciele $\Kbb$. Własność
+% \begin{equation}
+%   \label{eq:Wojtynski-46}
+%   A \cdot ( B \, \alpha + C \, \beta ) = A \cdot ( B \, \alpha ) + A \cdot ( C \, \beta ) =
+%   ( A \cdot B ) \, \alpha + ( A \cdot C ) \, \beta.
+% \end{equation}
+% wynika z~definicji mnożenia macierzy oraz łączności i~rozdzielności
+% mnożenia względem dodawania w~ciele $\Kbb$. Jednak
+% \begin{equation}
+%   \label{eq:Wojtynski-47}
+%   ( A \, \alpha + B \, \beta ) \cdot C \neq
+%   ( A \cdot C ) \, \alpha + ( B \cdot C ) \, \beta =
+%   A \cdot ( C \, \alpha ) + B \cdot ( C \, \beta ).
+% \end{equation}
+% Równość pomiędzy członem drugim i~trzecim powyższego wyrażenia, wynika
+% z~definicji wstępujących tam działań oraz łączności i~rozdzielności
+% mnożenia w~$\Kbb$. By zobaczyć, że~równość między dwoma pierwszy członami
+% w~ogólności nie zachodzi, wystarczy rozpatrzyć prosty przykład. Niech
+% $\matUnit \in \lFrak( n, \Kbb )$ będzie macierzą jednostkową zdefiniowaną
+% w~standardowy sposób. Dla $A = B = \matUnit$, $C = \matUnit \, e_{ 2 }$
+% i~$\alpha = \beta = \frac{ 1 }{ 2 } e_{ 1 }$ mamy
+% \begin{subequations}
+%   \begin{align}
+%     \label{eq:Wojtynski-48-A}
+%     &( A \, \alpha + B \, \beta ) \cdot C = \matUnit \, e_{ 1 } \, e_{ 2 }, \\
+%     \label{eq:Wojtynski-48-B}
+%     &( A \cdot C ) \, \alpha + ( B \cdot C ) \, \beta = \matUnit \, e_{ 2 } \, e_{ 1 } =
+%       -\matUnit \, e_{ 1 } \, e_{ 2 }.
+%   \end{align}
+% \end{subequations}
+% Gdyby oprócz wszystkich udowodnionych dotychczas własności, zachodziła
+% jeszcze równość we wzorze \eqref{eq:Wojtynski-47}, to~$\lFrak( n, \Kbb )$
+% byłoby łączną, nieprzemienną algebrą. O~problemie tym wspominaliśmy już
+% na początku naszych rozważań nad strukturą algebraiczną zbiorów
+% $\lFrak( n, \Kbb )$. Jak widać po tym przykładzie, problem ten pojawia~się
+% bo mnożenie kwaternionów nie jest przemienne.
+
+% Ponieważ ten wynik może być zaskakujący dla osób, dla których liczby
+% rzeczywiste są synonimem wszystkich „systemów liczbowych”, zatrzymamy~się
+% dłużej nad pewnym konsekwencjami nieprzemienność mnożenia kwaternionów Dla
+% wszystkich macierzy $\lFrak( n, \Kbb )$, gdzie $\Kbb$ oznacza $\Rbb$ lub
+% $\Cbb$, zachodzi własność
+% \begin{equation}
+%   \label{eq:Wojtynski-49}
+%   ( \matUnit \alpha ) A = A ( \matUnit \alpha ), \quad
+%   \alpha \in \Kbb, \, A \in \lFrak( n, \Kbb ),
+% \end{equation}
+% gdzie $\matUnit$ ponownie oznacza macierz jednostkową. Jednak
+% \begin{equation}
+%   \label{eq:Wojtynski-50}
+%   ( \matUnit \alpha ) A \neq A ( \matUnit \alpha ), \quad
+%   \alpha \in \Hbb, \, A \in \lFrak( n, \Hbb ).
+% \end{equation}
+% Prosty przykład ilustrujący tą własność otrzymuje przez wzięcie
+% $\alpha = e_{ 1 }$, $A = \matUnit \, e_{ 2 }$. Warto zauważyć, że~jeśli
+% $\alpha = t \, e_{ 0 }$, $t \in \Rbb$, to dla wszystkich macierz
+% $A \in \lFrak( n, \Hbb )$ zachodzi $( \matUnit \alpha ) A = A ( \matUnit \alpha )$.
+
+% Inną własnością odróżniającą macierze z~$\lFrak( n, \Hbb )$ od tych
+% z~$\lFrak( n, \Rbb )$ i~$\lFrak( n, \Cbb )$ jest to,
+% że~zachodzi
+% \begin{equation}
+%   \label{eq:Wojtynski-51}
+%   A ( v \, \alpha ) = ( A v ) \, \alpha,
+% \end{equation}
+% gdzie $\alpha \in \Hbb,$ $v \in \Hbb^{ n }$, $A \in \lFrak( n, \Hbb )$. Fakt ten
+% ponownie wynika z~definicji działań oraz łączności i~rozdzielności mnożenia
+% względem dodawania w~$\Kbb$. Jednakże
+% \begin{equation}
+%   \label{eq:Wojtynski-52}
+%   ( A \, \alpha ) v \neq ( A v ) \, \alpha.
+% \end{equation}
+% Prosty przykład dla którego możemy to zobaczyć to $\alpha = e_{ 2 }$,
+% $v = ( e_{ 3 }, 0, 0, \ldots, 0 )$, $A = \matUnit e_{ 2 }$. Dla podkreślenia tego,
+% jak bardzo „nienaturalną” jest ta ostatnia własność, zapiszemy ją w~notacji, w~której mnożenie przez liczby obywa~się z~lewej strony.
+% \begin{equation}
+%   \label{eq:Wojtynski-53}
+%   ( \alpha A ) v \neq A ( \alpha v ).
+% \end{equation}
+% Prosty przykład dla którego można to zobaczyć to  (tu też używamy
+% konwencji mnożenia przez liczbę z~lewej strony).
+
+% W~tym miejscu musimy zwrócić uwagę no to, że~to wzór \eqref{eq:Wojtynski-51}
+% wyraża fakt, iż~macierz~$A$ reprezentuje pewno odwzorowanie jednorodnym,
+% nie zaś wzór \eqref{eq:Wojtynski-52}. Pozorny problem może wyniknąć stąd,
+% że~mnożenie kwaternionów nie jest przemienne, więc konkretny sposób w~jaki
+% definiujemy działanie macierzy $A$ na wektor $v \in \Hbb^{ n }$ ma znaczenie
+% dla naszej teorii. Wojtyński zdefiniował je kładąc
+% \begin{equation}
+%   \label{eq:Wojtynski-52}
+%   ( A v )_{ i } = \sum_{ j }^{ n } a_{ i j } \, v_{ j }, \quad
+%   A = [ a_{ ij } ] \in \lFrak( n, \Hbb ).
+% \end{equation}
+% Takie określenie odwzorowanie $A$ jest jednorodne, gdy mnożenie wektorów
+% z~$\Hbb^{ n }$ przez elementy z~$\Hbb$ jest zdefiniowane z~prawej strony.
+% Gdybyśmy zdefiniowali mnożenie przez te elementy z~lewej strony, to
+% by działanie macierzy na wektor $v$ było jednorodne, musielibyśmy
+% zdefiniować je jako
+% \begin{equation}
+%   \label{eq:Wojtynski-53}
+%   ( A v )_{ i } = \sum_{ j }^{ n } v_{ j } \, a_{ i j }.
+% \end{equation}
+
+% Wiemy już, że~odwzorowanie zadane przez macierz $A \in \lFrak( n, \Kbb )$
+% wzorem \eqref{eq:Wojtynski-39} jest jednorodne nad $\Hbb$ i~tym samym
+% jednorodne nad $\Rbb$ i~$\Cbb$, które są podciałami $\Hbb$\footnote{Użyta
+%   tu terminologi może być ścisła, ale może być też trochę nieścisła. Nie
+%   umiem tego teraz ustalić. Niezależnie od tego sama treść matematyczna
+%   powinna być na tyle jasna, że~możemy na takim sformułowaniu poprzestać.}.
+% Teraz możemy przejść do dowodu, że~jest ono addytywne i~tym samym liniowe.
+% Dowód faktu, że
+% \begin{equation}
+%   \label{eq:Wojtynski-54}
+%   A ( v + w ) = A v + A w, \quad v, \, w \in \Hbb^{ n },
+% \end{equation}
+% przebiega wedle standardowego schematu, z~wykorzystaniem tego, że~w~ciele
+% $\Hbb$ dodawania jest rozdzielne względem mnożenia.
+
+% W~tym momencie wiemy już, że~każda macierz z~$\lFrak( n, \Hbb )$
+% reprezentuje odwzorowanie liniowe nad $\Hbb$. Odwrotnie, każde odwzorowanie
+% liniowe wyznacza pewną macierz. Oznaczmy bowiem
+% \begin{equation}
+%   \label{eq:Wojtynski-55}
+%   E_{ i } = ( 0, 0, \ldots, 0, e_{ 0 }, 0, \ldots, 0 ),
+% \end{equation}
+% gdzie $e_{ 0 }$ znajduje~się na $i$-tej pozycji. Wówczas dla dowolnego
+% $v \in \Hbb^{ n }$ mamy
+% \begin{equation}
+%   \label{eq:Wojtynski-56}
+%   ????
+% \end{equation}
+
+% Przejdźmy teraz do dowodu tego, że~$\lFrak( n, \Kbb )$ tworzy algebrę,
+% gdzie $\Rbb$, $\Cbb$ lub $\Hbb$. By udowodnić własności
+% \begin{equation}
+%   \label{eq:Wojtynski-43}
+%   ( A + B ) v = A v + B v,
+% \end{equation}
+% wystarczy by dodawanie było rozdzielne względem mnożenia, co jest prawdą
+% we~wszystkich rozważanych typach $\Kbb$. Ponieważ dowód tego faktu jest
+% prosty, nie będziemy go tu przytaczać jawnie.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% % ##################
+% \newpage
+
+% \CenterBoldFont{Błędy}
+
+
+% \begin{center}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     5   & & 10 & klasa grup & klasa \\
+%     7   & &  4 & sumę & \textit{sumę} \\
+%     7   & &  1 & $M_{ 1 } \ldots M_{ k }$ & $M_{ 1 }, \ldots, M_{ k }$ \\
+%     8   &  3 & & $( m,\; n )$ & $( m, n )$ \\
+%     8   & 17 & & $n \in N$ & $m \in M$ \\
+%     8   & 17 & & $f( m ) \in M$ & $f( m ) \in N$ \\
+%     8   & 18 & & $f( n )$ & $f( m )$ \\
+%     9   & &  4 & $x_{ 1 },\;\; x_{ 2 } \in X$ & $x_{ 1 },\, x_{ 2 } \in X$ \\
+%     9   & &  4 & albo & lub \\
+%     10  &  4 & & $y_{ 0 } \succ x$($y_{ 0 } \prec x$)
+%            & $x \prec y_{ 0 }$ ($y_{ 0 } \prec x$) \\
+%     10  & 14 & & \textit{to istnieje w~$X$} & \textit{to w~$X$ istniej} \\
+%     10  & &  9 & $U \subset \Omega_{ x_{ 0 } }$ & $U \in \Omega_{ x_{ 0 } }$ \\
+%     11  & 10 & & $\rho( X, Y )$ & $\rho( x, y )$ \\
+%     11  & &  5 & zbioru & niepustego zbioru \\
+%     13  &  6 & & $y_{ \varphi } \in X_{ \varphi }$ & $x_{ \varphi } \in X_{ \varphi }$ \\
+%     14  &  1 & & $x_{ 1 },\;\; x_{ 2 } \in X$ & $x_{ 1 },\, x_{ 2 } \in X$ \\
+%     14  &  6 & & $x e_{ + }$ & $x \, e_{ + }$ \\
+%     14  & 18 & & $\mu\big( x, \mu( x, y ) \big)$
+%            & $\mu\big( x, \mu( y, z ) \big)$ \\
+%     14  & 21 & & $\mathbf{x} \in \mathbf{X}$ & $x \in X$ \\
+%     15  & &  5 & $\mu \omega( x_{ 1 }, y )$ & $\mu \, \omega( x_{ 2 }, y )$ \\
+%     17  &  7 & & $W$ modulo $V$, & $W$, \\
+%     17  &  7 & & $\tau( x_{ j }, y_{ k } )$
+%            & $\tau( x_{ j }, y_{ k } ) = \pi( x_{ j } \otimes y_{ k } )$ \\
+%     18  & &  1 & $X^{ k } \times X^{ m }$ & $X^{ \otimes k } \times X^{ \otimes m }$ \\
+%     18  & &  1 & $X^{ k } \otimes X^{ m }$ & $X^{ \otimes k } \otimes X^{ \otimes m }$ \\
+%     20  & 19 & & $\overline{ F( y, x ) }$ & $\overline{ F( y, x ) }$. \\
+%     20  & 20 & & (tj. & Tj. \\
+%     20  & 20 & & $\Rbb$)) & $\Rbb$) \\[0.3em]
+%     21  &  5 & & $\displaystyle
+%                  \frac{ \overline{ \langle x, y \rangle } }{ | \langle x, y \rangle | }$
+%            & $\displaystyle
+%              \frac{ \overline{ \langle x', y \rangle } }{ | \langle x', y \rangle | }$ \\
+%     21  &  5 & & $\langle x, y \rangle \neq 0$ & $\langle x', y \rangle \neq 0$ \\
+%     23  &  4 & & $\lambda ( A_{ 1 } x )$ & $\lambda \big( A_{ 1 }( x ) \big)$ \\
+%     23  & &  3 & $f( x_{ 1 }, \ldots x_{ n } )$ & $f( x_{ 1 }, \ldots, x_{ n } )$ \\
+%     23  & &  3 & $x_{ 1 }^{ \, k_{ 1 } }, \ldots x_{ n }^{ \, k_{ n } }$
+%            & $x_{ 1 }^{ \, k_{ 1 } } \ldots x_{ n }^{ \, k_{ n } }$ \\
+%     23  & &  3 & $( x_{ 1 } \ldots x_{ n } )$ & $( x_{ 1 }, \ldots, x_{ n } )$ \\
+%     24  & 15 & & $( a, b ) \in \Omega$ & $( a, b ) \in \Omega$, \\
+%     24  & & 12 & $\Ccal^{ 1 }$ & $\Ccal^{ k }$ \\
+%     25  &  9 & & $1 / 2 \leq t$ & $1 / 2 < t$ \\
+%     \hline
+%   \end{tabular}
+
+
+
+
+
+%   \newpage
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     25  & 12 & & $i_{ x_{ 0 } }( t ) = 0$ & $i_{ x_{ 0 } }( t ) = x_{ 0 }$ \\
+%     26  & &  4 & 46 & 47 \\
+%     26  & &  1 & $x \in X$ & $a \in B$ \\
+%     27  &  2 & & $= d$ & $= u$ \\
+%     29  &  9 & & $\textrm{Gl}( n, \Cbb )$ & $\GL( n, \Cbb )$ \\
+%     29  & &  9 & $( A B )^{ T } = B^{ T } A^{ T }$
+%            & $( A \cdot B )^{ T } = B^{ T } \cdot A^{ T }$ \\
+%     29  & &  8 & $\overline{ A B }$ & $\overline{ A \cdot B }$ \\
+%     29  &  7 & & $( A B )^{ * }$ & $( A \cdot B )^{ * }$ \\
+%     30  & & 16 & $\oFrak( n, \Cbb )$ & $\oFrak_{ + }( n, \Cbb )$ \\
+%     30  & & 10 & $*$ -- operacją & $*$ operacją \\
+%     31  &  5 & & $a_{ i i } = -\bar{a}_{ i i }$
+%            & $-a_{ i i } = \bar{a}_{ i i }$ \\
+%     31  & 13 & & $\widetilde{ ( A B ) }$ & $\widetilde{ ( A \cdot B ) }$ \\
+%     31  & &  7 & \big(($A \in \OStraightBold( n, \Rbb )$\big)
+%            & \big($A \in \OStraightBold( n, \Rbb )$\big) \\
+%     32  & &  2 & (2.9) & (2.10) \\
+%     36  &  8 & & $\End( \Kbb^{ 2n } )$ & $\lFrak( 2n, \Kbb )$ \\
+%     36  &  8 & & $\omega( xAy )$ & $\omega( x, Ay )$ \\
+%     37  &  9 & & $e_{ i } ( e_{ j }, e_{ k } )$
+%            & $e_{ i } \cdot ( e_{ j } \cdot e_{ k } )$ \\
+%     37  &  9 & & $( e_{ i }, e_{ j } ) e_{ k }$
+%            & $( e_{ i } \cdot e_{ j } ) \cdot e_{ k }$ \\
+%     37  & &  8 & $q \cdot \frac{ 1 }{ \Vert q^{ 2 } \Vert } \bar{q}$
+%            & $\bar{q} \cdot \frac{ 1 }{ \Vert q^{ 2 } \Vert } q$ \\
+%     37  & &  8 & $\bar{q} q$ & $\bar{q} \cdot q$ \\
+%     37  & &  4 & $\Vert q_{ 1 } q_{ 2 } \Vert$ & $\Vert q_{ 1 } \cdot q_{ 2 } \Vert$ \\
+%     39  &  8 & & $z_{ n + 1 }$ & $z_{ n + i }$ \\
+%     39  & &  8 & $\langle s^{ -1 }( z ), \, s^{ -1 }( w ) \rangle_{ \Hbb } =$
+%            & zachodzi $\langle s^{ -1 }( z ), \, s^{ -1 }( w ) \rangle_{ \Hbb } =$ \\
+%     50  & &  8 & $e_{ i } ( e_{ j } \cdot e_{ k } )$
+%            & $e_{ i } \cdot ( e_{ j } \cdot e_{ k } )$ \\
+%            % & &  &  &  \\
+%            % & & & & \\
+%            % & & & & \\
+%            % & & & & \\
+%     \hline
+%   \end{tabular}
+
+
+
+
+
+%   \newpage
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     % & &  & & \\
+%     76  & 16 & & $\displaystyle \frac{ \partial ( \varphi \circ f_{ 2 } ) }{ \partial x_{ j } }$
+% & $\displaystyle \frac{ \partial ( \varphi \circ f_{ 2 } ) }{ \partial x_{ j } }( 0 )$ \\
+%     99  &  2 & & $[ a, b ] \in \mathbf{K}$ & $[ a, b ] \in M$ \\
+%     99  &  4 & & $[ a, b ] \in \mathbf{K}$ & $[ a, b ] \in M$ \\
+%     99  &  4 & & $[ b, a ] \in \mathbf{K}$ & $[ b, a ] \in M$ \\
+%     99  & & 13 & $*$ & Działanie $*$ \\
+%     100 & &  9 & $\mathbf{K} \leq L_{ 2 }$ & $M \leq L_{ 2 }$ \\
+%     100 & &  9 & $f^{ -1 }( \mathbf{K} )$ & $f^{ - 1}( M )$ \\
+%     100 & &  6 & $a_{ i } = f^{ -1 }( b_{ i } )$
+%            & $a_{ i } \in f^{ -1 }( b_{ i } )$ \\
+%     100 & &  5 & $\mathbf{K}$ & $M$ \\
+%     100 & &  4 & $f^{ -1 }( K )$ & $f^{ -1 }( M )$ \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+
+% \end{center}
+
+% \vspace{\spaceTwo}
+
+
+% \noindent
+% \StrWg{18}{5} \\
+% \Jest  $\displaystyle \omega\Big( \big( \sum_{ i } x_{ i } \otimes y_{ i } ),
+% \sum_{ j } x_{ j } \otimes y_{ j } )$ \\
+% \Powin $\displaystyle \omega\Big( \sum_{ i } x_{ i } \otimes y_{ i },
+% \sum_{ j } v_{ j } \otimes w_{ j } \Big)$ \\
+% \StrWg{18}{5} \\
+% \Jest  $\displaystyle \mu( x_{ i }, x_{ j } ) \otimes \nu( y_{ i }, y_{ j } )$ \\
+% \Powin $\displaystyle \mu( x_{ i }, v_{ j } ) \otimes \nu( y_{ i }, w_{ j } )$ \\
+% \StrWg{19}{11} \\
+% \Jest  $\rho( x_{ 1 } ) \cdot \rho( x_{ 2 } ) \ldots \rho( x_{ n } )$ \\
+% \Powin $\rho( x_{ 1 } ) \cdot \rho( x_{ 2 } ) \cdot \ldots \cdot \rho( x_{ n } )$ \\
+% \StrWd{31}{4} \\
+% \Jest  $A \in \OStraightBold( n, \Rbb )$ \\
+% \Powin $A \in \OStraightBold( n, \Rbb )$ zachodzi \\
+% \StrWd{34}{6} \\
+% \Jest  \textit{$n$-tą grupą symplektyczną} (oznaczaną $\Sp( n )$)
+% nazywamy \\
+% \Powin Przez \textit{$n$-tą grupę symplektyczną} (oznaczaną $\Sp( n )$)
+% będziemy rozumieć \\
+% \StrWd{34}{3} \\
+% \Jest  \textit{$N$-tą zespoloną} (rzeczywistą) \textit{liniową grupą
+%   symplektyczną} (oznaczenia $\Sp( n, \Cbb )$, $\Sp( n, \Rbb )$) \\
+% nazywamy \\
+% \Powin Przez \textit{$n$-tą zespoloną} (rzeczywistą) \textit{liniową grupę
+%   symplektyczną} (oznaczenia $\Sp( n, \Cbb )$, $\Sp( n, \Rbb )$) będziemy
+% rozumieć \\
+% \StrWd{35}{3} \\
+% \Jest  czyli $\bar{A}^{ T } \cdot A = \matUnit$ lub inaczej
+% $\bar{A}^{ T } = A^{ -1 }$, czyli $\widetilde{A} = A^{ -1 }$ \\[0.5em]
+% \Powin czyli $\bar{A} = \Big( A^{ T } \Big)^{ -1 }$, co można zapisać jako
+% $\widetilde{A} = \bar{A}$ \\
+% \StrWg{38}{3} \\[0.5em]
+% \Jest  $\displaystyle \big( \sum_{ i = 0 }^{ 3 } t_{ i } e_{ i } )$ \\
+% \Powin $\displaystyle \big( \sum_{ i = 0 }^{ 3 } t_{ i } e _{ i } \big)$ \\[0.5em]
+% \StrWg{38}{7} \\
+% \Jest  $e_{ 0 } \, ( t_{ 0 } + t_{ 1 } \, e_{ 1 } )
+% + e_{ 2 } \, ( t_{ 2 } - t_{ 3 } \, e_{ 1 } )$ \\[0.5em]
+% \Powin $e_{ 0 } ( t_{ 0 } \, e_{ 0 } + t_{ 1 } \, e_{ 1 } )
+% + e_{ 2 } \, ( t_{ 2 } \, e_{ 0 } - t_{ 3 } \, e_{ 1 } )$ \\
 
 % ############################
 
