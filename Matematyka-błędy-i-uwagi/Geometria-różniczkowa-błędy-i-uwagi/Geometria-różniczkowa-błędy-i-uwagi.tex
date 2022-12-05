@@ -1288,7 +1288,7 @@ warto podać dwa kilka użytecznych wzorów:
     &\bar{q} = e_{ 0 } \, \bar{z}_{ 1 } - e_{ 2 } \, z_{ 2 }, \\
     \label{eq:Wojtynski-37-B}
     &e_{ 0 } \, z = z \, e_{ 0 }, \\
-    \label{eq:Wojtynski-38-C}
+    \label{eq:Wojtynski-37-C}
     &e_{ 2 } \, z = \bar{z} \, e_{ 2 },
   \end{align}
 \end{subequations}
@@ -1300,321 +1300,323 @@ gdzie $q = e_{ 0 } \, z_{ 1 } + e_{ 2 } \, z_{ 2 }$, $z, z_{ 1 }, z_{ 2 } \in \C
 
 
 
-% \Str{39} Podane tu wyjaśnienie dlaczego odwzorowanie $S$ przekształca
-% odwzorowania liniowe przestrzeni $\Hbb^{ n }$ w~odwzorowania liniowe
-% przestrzeni $\Cbb^{ 2n }$ jest niepotrzebnie zagmatwane. Postaram~się
-% przedstawić dowód tego faktu w~sposób jaśniejszy, najpierw jednak
-% umieścimy cały problem w~szerszym kontekście. Do opisu tego problemu
-% można użyć formalizmu teorii kategorii i~choć takie rozwiązanie ma wiele
-% zalet, to~jednak zastosowanie go tutaj, może nas oddalić od bardzo
-% konkretnego problemu grup macierzy, którym~się zajmujemy, a~to jest rzeczą
-% nieporządną.
+\Str{39} Podane tu wyjaśnienie dlaczego odwzorowanie $S$ przekształca
+odwzorowania liniowe przestrzeni $\Hbb^{ n }$ w~odwzorowania liniowe
+przestrzeni $\Cbb^{ 2n }$ jest niepotrzebnie zagmatwane. Postaram~się
+przedstawić dowód tego faktu w~sposób jaśniejszy, najpierw jednak
+umieścimy cały problem w~szerszym kontekście. Do opisu tego problemu
+można użyć formalizmu teorii kategorii i~choć takie rozwiązanie ma wiele
+zalet, to~jednak zastosowanie go tutaj, może nas oddalić od bardzo
+konkretnego problemu grup macierzy, którym~się zajmujemy, a~to jest rzeczą
+nieporządną.
 
-% Zacznijmy od tego, że~główną cechą odróżniającą kwaterniony $\Hbb$ od liczb
-% rzeczywistych i~zespolonych, jest nieprzemienność ich mnożenia. Mimo tego,
-% przestrzenie macierzy $\lFrak( n, \Kbb )$, gdzie $\Kbb$ może oznaczać
-% $\Rbb$, $\Cbb$ lub~$\Hbb$, posiadają wiele wspólnych cech algebraicznych.
-% Aby je zwięźle opisać, wprowadzimy trochę terminologii. Przyjmiemy,
-% że~struktura algebraiczna posiadająca wszystkie cechy ciała, ale w~której
-% mnożenie nie musi być przemienne, będziemy nazywać \textbf{ciałem
-%   nieprzemiennych} oraz że~zarówno przestrzenie wektorowe jak i~algebry mogą
-% być zarówno nad ciałem przemiennym jak i~nieprzemiennych. Wówczas
-% $\lFrak( n, \Rbb )$ i~$\lFrak( n, \Cbb )$ są łącznymi, nieprzemiennymi
-% algebrami wedle standardowych definicji. Strukturę algebry nieprzemiennej
-% wyznacza mnożenie przez elementy z~ciała, dodawanie i~mnożenie macierzy.
-% Opisanie struktur $\lFrak( n, \Hbb )$ wymaga wprowadzenia nowych pojęć.
+Zacznijmy od tego, że~główną cechą odróżniającą kwaterniony $\Hbb$ od liczb
+rzeczywistych i~zespolonych, jest nieprzemienność ich mnożenia. Mimo tego,
+przestrzenie macierzy $\lFrak( n, \Kbb )$, gdzie $\Kbb$ może oznaczać
+$\Rbb$, $\Cbb$ lub~$\Hbb$, posiadają wiele wspólnych cech algebraicznych.
+Aby je zwięźle opisać, wprowadzimy trochę terminologii. Przyjmiemy,
+że~struktura algebraiczna posiadająca wszystkie cechy ciała, ale w~której
+mnożenie nie musi być przemienne, będziemy nazywać \textbf{ciałem
+  nieprzemiennych} oraz że~zarówno przestrzenie wektorowe jak i~algebry mogą
+być zarówno nad ciałem przemiennym jak i~nieprzemiennych. Wówczas
+$\lFrak( n, \Rbb )$ i~$\lFrak( n, \Cbb )$ są łącznymi, nieprzemiennymi
+algebrami wedle standardowych definicji. Strukturę algebry nieprzemiennej
+wyznacza mnożenie przez elementy z~ciała, dodawanie i~mnożenie macierzy.
+Opisanie struktur $\lFrak( n, \Hbb )$ wymaga wprowadzenia nowych pojęć.
 
-% Niech $V$ będzie przestrzenią wektorową na ciałem $\Kbb$, na której jest
-% zadane jest działanie wewnętrzne
-% \begin{equation}
-%   \label{eq:Wojtynsi-39}
-%   \cdot : V \times V \ni ( v, w ) \mapsto v \cdot w \in V.
-% \end{equation}
-% Rozpatrzmy teraz dwie potencjalne własności tego działania:
-% \begin{subequations}
-%   \begin{align}
-%     \label{eq:Wojtynski-40-A}
-%     &( \alpha \, v + \beta \, w ) \cdot p  =  \alpha \, ( v \cdot p ) + \beta \, ( w \cdot p ), \\
-%     \label{eq:Wojtynski-40-B}
-%     &v \cdot ( \alpha \, w + \beta \, p ) = \alpha \, ( v \cdot w ) + \beta \, ( v \cdot p ),
-%   \end{align}
-% \end{subequations}
-% gdzie $\alpha, \beta \in \Kbb$, $v, w, p \in V$. Jeśli dla danej przestrzeni $V$ wzór
-% \eqref{eq:Wojtynski-40-A} zachodzi dla wszystkich możliwych przypadków,
-% to~przestrzeń tą nazywamy \textbf{lewej algebrą}. Definicje \textbf{lewej
-%   algebry łącznej}, \textbf{lewej algebry przemiennej}, etc., są
-% prostymi uogólnieniami definicji dla standardowej algebry, nie ma więc
-% potrzeby byśmy je tutaj podawali. Analogicznie, jeśli dla wszystkich
-% możliwych przypadków zachodzi wzór \eqref{eq:Wojtynski-40-B} to $V$ nazywamy
-% \textbf{prawą algebrą}. Zdefiniowanie \textbf{prawej algebry łącznej}
-% i~innych możliwych jej typów, nie powinno teraz sprawiać żadnego problemu.
-% Łatwo zauważyć, że jeśli dana przestrzeń jest jednocześnie algebrą lewą
-% i~prawą, to jest ona algebrą w~standardowym sensie tego słowa.
+Niech $V$ będzie przestrzenią wektorową na ciałem $\Kbb$, na której jest
+zadane jest działanie wewnętrzne
+\begin{equation}
+  \label{eq:Wojtynsi-38}
+  \cdot : V \times V \ni ( v, w ) \mapsto v \cdot w \in V.
+\end{equation}
+Rozpatrzmy teraz dwie potencjalne własności tego działania:
+\begin{subequations}
+  \begin{align}
+    \label{eq:Wojtynski-39-A}
+    &( \alpha \, v + \beta \, w ) \cdot p  =  \alpha \, ( v \cdot p ) + \beta \, ( w \cdot p ), \\
+    \label{eq:Wojtynski-39-B}
+    &v \cdot ( \alpha \, w + \beta \, p ) = \alpha \, ( v \cdot w ) + \beta \, ( v \cdot p ),
+  \end{align}
+\end{subequations}
+gdzie $\alpha, \beta \in \Kbb$, $v, w, p \in V$. Jeśli dla danej przestrzeni $V$ wzór
+\eqref{eq:Wojtynski-39-A} zachodzi dla wszystkich możliwych przypadków,
+to~przestrzeń tą nazywamy \textbf{lewej algebrą}. Definicje \textbf{lewej
+  algebry łącznej}, \textbf{lewej algebry przemiennej}, etc., są
+prostymi uogólnieniami definicji dla standardowej algebry, nie ma więc
+potrzeby byśmy je tutaj podawali. Analogicznie, jeśli dla wszystkich
+możliwych przypadków zachodzi wzór \eqref{eq:Wojtynski-39-B} to $V$ nazywamy
+\textbf{prawą algebrą}. Zdefiniowanie \textbf{prawej algebry łącznej}
+i~innych możliwych jej typów, nie powinno teraz sprawiać żadnego problemu.
+Łatwo zauważyć, że jeśli dana przestrzeń jest jednocześnie algebrą lewą
+i~prawą, to jest ona algebrą w~standardowym sensie tego słowa.
 
-% W~dalszym ciągu tych notatek pokażemy~że $\lFrak( n, \Hbb )$ jest prawą
-% algebrą nad $\Hbb$, ale nie jest lewą algebrą bo nie spełnia warunku
-% \eqref{eq:Wojtynski-40-A}.?????
+W~dalszym ciągu tych notatek pokażemy~że $\lFrak( n, \Hbb )$ jest prawą
+algebrą nad $\Hbb$, ale nie jest lewą algebrą bo nie spełnia warunku
+\eqref{eq:Wojtynski-39-A}.
 
-% Dokładniej omówimy to zagadnienie poniżej, warto~się jednak teraz
-% zastanowić, co ta sytuacja nam mówi. Czy powinniśmy zmienić definicję
-% „algebry nad ciałem nieprzemiennym”, tak by usunąć z~niej jedną wymaganą
-% własność, tak iż $\lFrak( n, \Hbb )$ stanie~się przykładem takiej algebry?
-% Czy też należy zostawić definicje takie jakimi są, stwierdzają tylko,
-% iż~$\lFrak( n, \Hbb )$ jest bytem, któremu niewiele brakuje, by był
-% odpowiednią algebrą nad ciałem nieprzemiennym? Nie umiem w~tej chwili
-% odpowiedzieć na to pytanie. Niezależnie od tego, użycie pojęcie „łącznej
-% nieprzemiennej algebry nad ciałem przemiennym (nieprzemiennym)”, wydaje~się
-% być dobrym krokiem do zrozumienia problemu.
+Naszą analizę rozpoczniemy od usystematyzowania oznaczeń. Za Wojtyńskim
+przyjmujemy następującą, prawostronną, konwekcję mnożenia elementów
+$\Kbb^{ n }$ przez elementy z~$\Kbb$
+\begin{equation}
+  \label{eq:Wojtynski-40}
+  v \alpha = ( v_{ 1 } \alpha, v_{ 2 } \alpha, \ldots, v_{ n } \alpha ), \quad
+  \alpha \in \Kbb, \, v \in \Kbb^{ n }.
+\end{equation}
+Ponadto dla macierzy $A \in \lFrak( n, \Kbb )$ o~elementach $a_{ ij }$,
+$i, j = 1, 2, \ldots, n$ przyjmujemy dodatkowe oznaczenie
+\begin{equation}
+  \label{eq:Wojtynski-41}
+  A = [ a_{ i j } ].
+\end{equation}
+Mnożenie macierzy przez element z~$\Kbb$ oraz sumę dwóch macierzy
+definiujemy w~następujący sposób.
+\begin{subequations}
+  \begin{align}
+    \label{eq:Wojtynski-42-A}
+    A \alpha &= [ a_{ i j } \, \alpha ], \\
+    \label{eq:Wojtynski-42-B}
+    A + B &= [ a_{ i j } + b_{ i j } ],
+  \end{align}
+\end{subequations}
+gdzie, $\alpha \in \Kbb$, $A = [ a_{ i j } ]$,
+$B = [ b_{ i j } ] \in \lFrak( n, \Kbb )$.
+Również podążając za Wojtyńskim, działanie macierzy na wektor z~$\Kbb^{ n }$
+definiujemy jako
+\begin{equation}
+  \label{eq:Wojtynski-43}
+  ( A v )_{ i } = \sum_{ j = 1 }^{ n } a_{ i j } \, v_{ j },
+\end{equation}
+gdzie $v \in \Kbb^{ n }$, $A \in \lFrak( n, \Kbb )$. Teraz operację mnożenia
+dwóch macierzy z~$\lFrak( n, \Kbb )$ możemy określić jako
+\begin{equation}
+  \label{eq:Wojtynski-44}
+  A \cdot B = \left[ \sum_{ l = 1 }^{ n } a_{ i l } \, b_{ l j } \right].
+\end{equation}
+Dla uczynienia rozważań bardziej precyzyjnymi, przez pewien czas mnożenie
+macierzy będziemy jawnie oznaczać symbolem $\cdot$.
 
-% Naszą analizę rozpoczniemy od usystematyzowania oznaczeń. Za Wojtyńskim
-% przyjmujemy następującą, prawostronną, konwekcję mnożenia elementów
-% $\Kbb^{ n }$ przez elementy z~$\Kbb$
-% \begin{equation}
-%   % Numeracja wzorów.
-%   \label{eq:Wojtynski-36}
-%   v \alpha = ( v_{ 1 } \alpha, v_{ 2 } \alpha, \ldots, v_{ n } \alpha ), \quad
-%   \alpha \in \Kbb, \, v \in \Kbb^{ n }.
-% \end{equation}
-% Ponadto dla macierzy $A \in \lFrak( n, \Kbb )$ o~elementach $a_{ ij }$,
-% $i, j = 1, 2, \ldots, n$ przyjmujemy dodatkowe oznaczenie
-% \begin{equation}
-%   \label{eq:Wojtynski-37}
-%   A = [ a_{ i j } ].
-% \end{equation}
-% Mnożenie macierzy przez element z~$\Kbb$ oraz sumę dwóch macierzy
-% definiujemy w~zwykły sposób.
-% \begin{subequations}
-%   \begin{align}
-%     \label{eq:Wojtynski-38-A}
-%     A \alpha &= [ a_{ i j } \, \alpha ], \\
-%     \label{eq:Wojtynski-38-B}
-%     A + B &= [ a_{ i j } + b_{ i j } ],
-%   \end{align}
-% \end{subequations}
-% gdzie, $\alpha \in \Kbb$,
-% $A = [ a_{ i j } ]$, $B = [ b_{ i j } ] \in \lFrak( n, \Kbb )$.
-% Również podążając za Wojtyńskim, działanie macierzy na wektor z~$\Kbb^{ n }$
-% definiujemy jako
-% \begin{equation}
-%   \label{eq:Wojtynski-39}
-%   ( A v )_{ i } = \sum_{ j = 1 }^{ n } a_{ i j } \, v_{ j },
-% \end{equation}
-% gdzie $v \in \Kbb^{ n }$, $A \in \lFrak( n, \Kbb )$. Teraz operację mnożenia
-% dwóch macierzy z~$\lFrak( n, \Kbb )$ możemy określić jako
-% \begin{equation}
-%   \label{eq:Wojtynski-40}
-%   A \cdot B = \left[ \sum_{ l = 1 }^{ n } a_{ i l } \, b_{ l j } \right].
-% \end{equation}
-% Dla uczynienia rozważań bardziej precyzyjnymi, przez pewien czas mnożenie
-% macierzy będziemy jawnie oznaczać symbolem $\cdot$.
+Teraz przejdziemy do dowodu tego, że~$\lFrak( n, \Kbb )$ stanowi
+nieprzemienną algebrę. Z~rozmysłem odkładamy na~później rozważanie
+o~związku macierzy $\lFrak( n, \Kbb )$ z~odwzorowaniami liniowymi na
+$\Kbb^{ n }$. Jak~się okazuje, ten problem posiada kilka własnych niuansów
+wartych osobnej dyskusji. Pierwszym krokiem jest udowodnienie,
+że~$\lFrak( n, \Kbb )$ z~działaniami zdefiniowanymi
+w~\eqref{eq:Wojtynski-42-A}--\eqref{eq:Wojtynski-42-B} jest przestrzenią
+wektorową. Niech $A \in \lFrak( n, \Kbb )$. Własność
+\begin{equation}
+  \label{eq:Wojtynski-45}
+  A \, 1 = A,
+\end{equation}
+gdzie $1$ jest elementem neutralnym mnożenia w~$\Kbb$ wynika wprost
+z~definicji mnożenia macierzy przez element z~ciała $\Kbb$ podanej
+w~\eqref{eq:Wojtynski-42-A} oraz własności mnożenia w~ciele $\Kbb$.
+Podobnie własność
+\begin{equation}
+  \label{eq:Wojtynski-46}
+  A \, ( \beta \, \alpha ) = ( A \, \beta ) \, \alpha, \quad \alpha, \beta \in \Kbb,
+\end{equation}
+wynika, jak poprzednio z~definicji mnożenia macierzy przez element z~ciała
+oraz łączności mnożenia w~ciele $\Kbb$. W~dalszym ciągu nie będziemy jawnie
+przywoływać miejsc w~których korzystamy z~definicji
+\eqref{eq:Wojtynski-42-A}--\eqref{eq:Wojtynski-42-B}, pozostaniemy przy
+przytaczaniu potrzebnych własności z~ciała $\Kbb$. Z~rozdzielności dodawania
+względem mnożenia w~ciele $\Kbb$ wynikają dwie poniższe własności
+\begin{subequations}
+  \begin{align}
+    \label{eq:Wojtynski-47-A}
+    &A \, ( \alpha + \beta ) = A \, \alpha + A \, \beta, \\
+    \label{eq:Wojtynski-47-B}
+    &( A + B ) \, \alpha = A \, \alpha + B \, \beta,
+  \end{align}
+\end{subequations}
+gdzie $A, B \in \lFrak( n, \Kbb )$ i~$\alpha, \beta \in \Kbb$. Korzystając teraz
+z~tego, że~dodawanie w~$\Kbb$ jest łączne, przemienne i~dla każdego
+elementu $a \in \Kbb$ istnieje element odwrotny względem dodawania $-a$,
+dowodzimy
+\begin{subequations}
+  \begin{align}
+    \label{eq:Wojtynski-48-A}
+    &( A + B ) + C = A + ( B + C ), \\
+    \label{eq:Wojtynski-48-B}
+    &A + B = B + A, \\
+    \label{eq:Wojtynski-48-C}
+    &A + ( -A ) = 0,
+  \end{align}
+\end{subequations}
+gdzie $A, B, C \in \lFrak( n, \Kbb )$, zaś $0 \in \lFrak( n, \Kbb )$ to
+macierz zerowa\footnote{Macierz, której wszystkie elementy są równe
+  elementowi neutralnemu dodawania w~ciele $\Kbb$.}. Udowodniliśmy więc,
+że~$\lFrak( n, \Kbb )$ jest przestrzenią wektorową i~nigdzie w~dowodzie
+przemienność, lub jej brak, mnożenia nie odgrywa żadnej roli.
 
-% Teraz przejdziemy do dowodu tego, że~$\lFrak( n, \Kbb )$ stanowi
-% nieprzemienną algebrę. Z~rozmysłem odkładamy na~później rozważanie
-% o~związku macierzy $\lFrak( n, \Kbb )$ z~odwzorowaniami liniowymi na
-% $\Kbb^{ n }$. Jak~się okazuje, ten problem posiada kilka własnych niuansów
-% wartych osobnej dyskusji. Pierwszym krokiem jest udowodnienie,
-% że~$\lFrak( n, \Kbb )$ z~działaniami zdefiniowanymi
-% w~\eqref{eq:Wojtynski-38-A}--\eqref{eq:Wojtynski-38-B} jest przestrzenią
-% wektorową. Niech $A \in \lFrak( n, \Kbb )$. Własność
-% \begin{equation}
-%   \label{eq:Wojtynski-41}
-%   A \, 1 = A,
-% \end{equation}
-% gdzie $1$ jest elementem neutralnym mnożenia w~$\Kbb$ wynika wprost
-% z~definicji mnożenia macierzy przez element z~ciała $\Kbb$ podanej
-% w~\eqref{eq:Wojtynski-38-A} oraz własności mnożenia w~ciele $\Kbb$.
-% Podobnie własność
-% \begin{equation}
-%   \label{eq:Wojtynski-42}
-%   A \, ( \beta \, \alpha ) = ( A \, \beta ) \, \alpha, \quad \alpha, \beta \in \Kbb,
-% \end{equation}
-% wynika, jak poprzednio z~definicji mnożenia macierzy przez element z~ciała
-% oraz łączności mnożenia w~ciele $\Kbb$. W~dalszym ciągu nie będziemy jawnie
-% przywoływać miejsc w~których korzystamy z~definicji
-% \eqref{eq:Wojtynski-38-A}--\eqref{eq:Wojtynski-38-B}, pozostaniemy przy
-% przytaczaniu potrzebnych własności z~ciała $\Kbb$. Z~rozdzielności dodawania
-% względem mnożenia w~ciele $\Kbb$ wynikają dwie poniższe własności
-% \begin{subequations}
-%   \begin{align}
-%     \label{eq:Wojtynski-43-A}
-%     &A \, ( \alpha + \beta ) = A \, \alpha + A \, \beta, \\
-%     \label{eq:Wojtynski-43-B}
-%     &( A + B ) \, \alpha = A \, \alpha + B \, \beta,
-%   \end{align}
-% \end{subequations}
-% gdzie $A, B \in \lFrak( n, \Kbb )$ i~$\alpha, \beta \in \Kbb$. Korzystając teraz
-% z~tego, że~dodawanie w~$\Kbb$ jest łączne, przemienne i~dla każdego
-% elementu $a \in \Kbb$ istnieje element odwrotny względem dodawania $-a$,
-% dowodzimy
-% \begin{subequations}
-%   \begin{align}
-%     \label{eq:Wojtynski-44-A}
-%     &( A + B ) + C = A + ( B + C ), \\
-%     \label{eq:Wojtynski-44-B}
-%     &A + B = B + A, \\
-%     \label{eq:Wojtynski-44-C}
-%     &A + ( -A ) = 0,
-%   \end{align}
-% \end{subequations}
-% gdzie $A, B, C \in \lFrak( n, \Kbb )$, zaś $0 \in \lFrak( n, \Kbb )$ to
-% macierz zerowa\footnote{Macierz, której wszystkie elementy są równe
-%   elementowi neutralnemu dodawania w~ciele $\Kbb$.}. Udowodniliśmy więc,
-% że~$\lFrak( n, \Kbb )$ jest przestrzenią wektorową i~nigdzie w~dowodzie
-% przemienność, lub jej brak, mnożenia nie odgrywa żadnej roli.
+Teraz przejdziemy do dowodu tego, że~$\lFrak( n, \Kbb )$ wraz z~działaniem
+mnożenia macierzy \eqref{eq:Wojtynski-44} jest łączną, nieprzemienną
+algebrą. Jak powiedzieliśmy wcześniej, nieprzemienność mnożenia macierzy
+jest dobrze znana, nie będziemy~się więc nad nią zatrzymywać. Łączność
+mnożenia macierzy
+\begin{equation}
+  \label{eq:Wojtynski-49}
+  ( A \cdot B ) \cdot C = A \cdot ( B \cdot C ),
+\end{equation}
+wynika z~definicji operacji mnożenia macierzy \eqref{eq:Wojtynski-40} oraz
+z~łączności mnożenia w~ciele $\Kbb$. Własność
+\begin{equation}
+  \label{eq:Wojtynski-50}
+  A \cdot ( B \, \alpha + C \, \beta ) = A \cdot ( B \, \alpha ) + A \cdot ( C \, \beta ) =
+  ( A \cdot B ) \, \alpha + ( A \cdot C ) \, \beta,
+\end{equation}
+wynika z~definicji mnożenia macierzy oraz łączności i~rozdzielności
+mnożenia względem dodawania w~ciele $\Kbb$. Jednak
+\begin{equation}
+  \label{eq:Wojtynski-51}
+  ( A \, \alpha + B \, \beta ) \cdot C \neq
+  ( A \cdot C ) \, \alpha + ( B \cdot C ) \, \beta =
+  A \cdot ( C \, \alpha ) + B \cdot ( C \, \beta ).
+\end{equation}
+Równość pomiędzy członem drugim i~trzecim powyższego wyrażenia, wynika
+z~definicji wstępujących tam działań oraz łączności i~rozdzielności
+mnożenia w~$\Kbb$. By zobaczyć, że~równość między dwoma pierwszy członami
+w~ogólności nie zachodzi, wystarczy rozpatrzyć prosty przykład. Niech
+$\matUnit \in \lFrak( n, \Kbb )$ będzie macierzą jednostkową zdefiniowaną
+w~standardowy sposób. Dla $A = B = \matUnit$, $C = \matUnit \, e_{ 2 }$
+i~$\alpha = \beta = \frac{ 1 }{ 2 } e_{ 1 }$ mamy
+\begin{subequations}
+  \begin{align}
+    \label{eq:Wojtynski-52-A}
+    &( A \, \alpha + B \, \beta ) \cdot C = \matUnit \, e_{ 1 } \, e_{ 2 }, \\
+    \label{eq:Wojtynski-52-B}
+    &( A \cdot C ) \, \alpha + ( B \cdot C ) \, \beta = \matUnit \, e_{ 2 } \, e_{ 1 } =
+      -\matUnit \, e_{ 1 } \, e_{ 2 }.
+  \end{align}
+\end{subequations}
+Gdyby oprócz wszystkich udowodnionych dotychczas własności, zachodziła
+jeszcze równość we wzorze \eqref{eq:Wojtynski-51}, to~$\lFrak( n, \Kbb )$
+byłoby łączną, nieprzemienną algebrą nad ciałem nieprzemiennym.
+O~problemie tym wspominaliśmy już na początku naszych rozważań nad
+strukturą algebraiczną zbiorów $\lFrak( n, \Kbb )$. Jak widać po tym
+przykładzie, problem ten pojawia~się bo mnożenie kwaternionów nie jest
+przemienne.
 
-% Teraz przejdziemy do dowodu tego, że~$\lFrak( n, \Kbb )$ wraz z~działaniem
-% mnożenia macierzy \eqref{eq:Wojtynski-40} jest łączną, nieprzemienną
-% algebrą. Jak powiedzieliśmy wcześniej, nieprzemienność mnożenia macierzy
-% jest dobrze znana, nie będziemy~się więc nad nią zatrzymywać. Łączność
-% mnożenia macierzy
-% \begin{equation}
-%   \label{eq:Wojtynski-45}
-%   ( A \cdot B ) \cdot C = A \cdot ( B \cdot C ),
-% \end{equation}
-% wynika z~definicji operacji mnożenia macierzy \eqref{eq:Wojtynski-40} oraz
-% z~łączności mnożenia w~ciele $\Kbb$. Własność
-% \begin{equation}
-%   \label{eq:Wojtynski-46}
-%   A \cdot ( B \, \alpha + C \, \beta ) = A \cdot ( B \, \alpha ) + A \cdot ( C \, \beta ) =
-%   ( A \cdot B ) \, \alpha + ( A \cdot C ) \, \beta.
-% \end{equation}
-% wynika z~definicji mnożenia macierzy oraz łączności i~rozdzielności
-% mnożenia względem dodawania w~ciele $\Kbb$. Jednak
-% \begin{equation}
-%   \label{eq:Wojtynski-47}
-%   ( A \, \alpha + B \, \beta ) \cdot C \neq
-%   ( A \cdot C ) \, \alpha + ( B \cdot C ) \, \beta =
-%   A \cdot ( C \, \alpha ) + B \cdot ( C \, \beta ).
-% \end{equation}
-% Równość pomiędzy członem drugim i~trzecim powyższego wyrażenia, wynika
-% z~definicji wstępujących tam działań oraz łączności i~rozdzielności
-% mnożenia w~$\Kbb$. By zobaczyć, że~równość między dwoma pierwszy członami
-% w~ogólności nie zachodzi, wystarczy rozpatrzyć prosty przykład. Niech
-% $\matUnit \in \lFrak( n, \Kbb )$ będzie macierzą jednostkową zdefiniowaną
-% w~standardowy sposób. Dla $A = B = \matUnit$, $C = \matUnit \, e_{ 2 }$
-% i~$\alpha = \beta = \frac{ 1 }{ 2 } e_{ 1 }$ mamy
-% \begin{subequations}
-%   \begin{align}
-%     \label{eq:Wojtynski-48-A}
-%     &( A \, \alpha + B \, \beta ) \cdot C = \matUnit \, e_{ 1 } \, e_{ 2 }, \\
-%     \label{eq:Wojtynski-48-B}
-%     &( A \cdot C ) \, \alpha + ( B \cdot C ) \, \beta = \matUnit \, e_{ 2 } \, e_{ 1 } =
-%       -\matUnit \, e_{ 1 } \, e_{ 2 }.
-%   \end{align}
-% \end{subequations}
-% Gdyby oprócz wszystkich udowodnionych dotychczas własności, zachodziła
-% jeszcze równość we wzorze \eqref{eq:Wojtynski-47}, to~$\lFrak( n, \Kbb )$
-% byłoby łączną, nieprzemienną algebrą. O~problemie tym wspominaliśmy już
-% na początku naszych rozważań nad strukturą algebraiczną zbiorów
-% $\lFrak( n, \Kbb )$. Jak widać po tym przykładzie, problem ten pojawia~się
-% bo mnożenie kwaternionów nie jest przemienne.
+Ponieważ ten wynik może być zaskakujący dla osób, dla których liczby
+rzeczywiste są synonimem wszystkich „systemów liczbowych”, zatrzymamy~się
+dłużej nad pewnym konsekwencjami nieprzemienność mnożenia kwaternionów Dla
+wszystkich macierzy $\lFrak( n, \Kbb )$, gdzie $\Kbb$ oznacza $\Rbb$ lub
+$\Cbb$, zachodzi własność
+\begin{equation}
+  \label{eq:Wojtynski-53}
+  ( \matUnit \alpha ) A = A ( \matUnit \alpha ), \quad
+  \alpha \in \Kbb, \, A \in \lFrak( n, \Kbb ),
+\end{equation}
+gdzie $\matUnit$ ponownie oznacza macierz jednostkową. Jednak
+\begin{equation}
+  \label{eq:Wojtynski-54}
+  ( \matUnit \alpha ) A \neq A ( \matUnit \alpha ), \quad
+  \alpha \in \Hbb, \, A \in \lFrak( n, \Hbb ).
+\end{equation}
+Prosty przykład ilustrujący tą własność otrzymuje przez wzięcie
+$\alpha = e_{ 1 }$, $A = \matUnit \, e_{ 2 }$. Warto zauważyć, że~jeśli
+$\alpha = t \, e_{ 0 }$, $t \in \Rbb$, to dla wszystkich macierz
+$A \in \lFrak( n, \Hbb )$ zachodzi $( \matUnit \alpha ) A = A ( \matUnit \alpha )$.
 
-% Ponieważ ten wynik może być zaskakujący dla osób, dla których liczby
-% rzeczywiste są synonimem wszystkich „systemów liczbowych”, zatrzymamy~się
-% dłużej nad pewnym konsekwencjami nieprzemienność mnożenia kwaternionów Dla
-% wszystkich macierzy $\lFrak( n, \Kbb )$, gdzie $\Kbb$ oznacza $\Rbb$ lub
-% $\Cbb$, zachodzi własność
-% \begin{equation}
-%   \label{eq:Wojtynski-49}
-%   ( \matUnit \alpha ) A = A ( \matUnit \alpha ), \quad
-%   \alpha \in \Kbb, \, A \in \lFrak( n, \Kbb ),
-% \end{equation}
-% gdzie $\matUnit$ ponownie oznacza macierz jednostkową. Jednak
-% \begin{equation}
-%   \label{eq:Wojtynski-50}
-%   ( \matUnit \alpha ) A \neq A ( \matUnit \alpha ), \quad
-%   \alpha \in \Hbb, \, A \in \lFrak( n, \Hbb ).
-% \end{equation}
-% Prosty przykład ilustrujący tą własność otrzymuje przez wzięcie
-% $\alpha = e_{ 1 }$, $A = \matUnit \, e_{ 2 }$. Warto zauważyć, że~jeśli
-% $\alpha = t \, e_{ 0 }$, $t \in \Rbb$, to dla wszystkich macierz
-% $A \in \lFrak( n, \Hbb )$ zachodzi $( \matUnit \alpha ) A = A ( \matUnit \alpha )$.
+Inną własnością odróżniającą macierze z~$\lFrak( n, \Hbb )$ od tych
+z~$\lFrak( n, \Rbb )$ i~$\lFrak( n, \Cbb )$ jest to,
+że~zachodzi
+\begin{equation}
+  \label{eq:Wojtynski-55}
+  A ( v \, \alpha ) = ( A v ) \, \alpha,
+\end{equation}
+gdzie $\alpha \in \Hbb,$ $v \in \Hbb^{ n }$, $A \in \lFrak( n, \Hbb )$. Fakt ten
+ponownie wynika z~definicji działań oraz łączności i~rozdzielności mnożenia
+względem dodawania w~$\Kbb$. Jednakże
+\begin{equation}
+  \label{eq:Wojtynski-56}
+  ( A \, \alpha ) v \neq ( A v ) \, \alpha.
+\end{equation}
+Prosty przykład dla którego możemy to zobaczyć to $\alpha = e_{ 2 }$,
+$v = ( e_{ 3 }, 0, 0, \ldots, 0 )$, $A = \matUnit e_{ 1 }$. Dla podkreślenia tego,
+jak bardzo „nienaturalną” jest ta ostatnia własność, zapiszemy ją
+w~notacji, w~której mnożenie przez liczby obywa~się z~lewej strony.
+\begin{equation}
+  \label{eq:Wojtynski-57}
+  ( \alpha A ) v \neq A ( \alpha v ).
+\end{equation}
 
-% Inną własnością odróżniającą macierze z~$\lFrak( n, \Hbb )$ od tych
-% z~$\lFrak( n, \Rbb )$ i~$\lFrak( n, \Cbb )$ jest to,
-% że~zachodzi
-% \begin{equation}
-%   \label{eq:Wojtynski-51}
-%   A ( v \, \alpha ) = ( A v ) \, \alpha,
-% \end{equation}
-% gdzie $\alpha \in \Hbb,$ $v \in \Hbb^{ n }$, $A \in \lFrak( n, \Hbb )$. Fakt ten
-% ponownie wynika z~definicji działań oraz łączności i~rozdzielności mnożenia
-% względem dodawania w~$\Kbb$. Jednakże
-% \begin{equation}
-%   \label{eq:Wojtynski-52}
-%   ( A \, \alpha ) v \neq ( A v ) \, \alpha.
-% \end{equation}
-% Prosty przykład dla którego możemy to zobaczyć to $\alpha = e_{ 2 }$,
-% $v = ( e_{ 3 }, 0, 0, \ldots, 0 )$, $A = \matUnit e_{ 2 }$. Dla podkreślenia tego,
-% jak bardzo „nienaturalną” jest ta ostatnia własność, zapiszemy ją w~notacji, w~której mnożenie przez liczby obywa~się z~lewej strony.
-% \begin{equation}
-%   \label{eq:Wojtynski-53}
-%   ( \alpha A ) v \neq A ( \alpha v ).
-% \end{equation}
-% Prosty przykład dla którego można to zobaczyć to  (tu też używamy
-% konwencji mnożenia przez liczbę z~lewej strony).
+W~tym miejscu musimy zwrócić uwagę no to, że~to wzór \eqref{eq:Wojtynski-55}
+wyraża fakt, iż~macierz~$A$ reprezentuje pewno odwzorowanie jednorodnym,
+nie zaś wzór \eqref{eq:Wojtynski-56}. Pewne nieporozumienie może wynikać
+stąd, że~mnożenie kwaternionów nie jest przemienne, więc konkretny sposób
+w~jaki definiujemy działanie macierzy $A$ na wektor $v \in \Hbb^{ n }$ ma
+znaczenie dla naszej teorii. Wojtyński zdefiniował je kładąc
+\begin{equation}
+  \label{eq:Wojtynski-58}
+  ( A v )_{ i } = \sum_{ j }^{ n } a_{ i j } \, v_{ j }, \quad
+  A = [ a_{ ij } ] \in \lFrak( n, \Hbb ).
+\end{equation}
+Takie określenie odwzorowanie $A$ jest jednorodne, gdy mnożenie wektorów
+z~$\Hbb^{ n }$ przez elementy z~$\Hbb$ jest zdefiniowane z~prawej strony.
+Gdybyśmy zdefiniowali mnożenie wektorów z~$\Hbb^{ n }$ przez te elementy
+ciała z~lewej strony, to by działanie macierzy na wektor $v$ było
+jednorodne, musielibyśmy zdefiniować je jako
+\begin{equation}
+  \label{eq:Wojtynski-59}
+  ( A v )_{ i } = \sum_{ j }^{ n } v_{ j } \, a_{ i j }.
+\end{equation}
 
-% W~tym miejscu musimy zwrócić uwagę no to, że~to wzór \eqref{eq:Wojtynski-51}
-% wyraża fakt, iż~macierz~$A$ reprezentuje pewno odwzorowanie jednorodnym,
-% nie zaś wzór \eqref{eq:Wojtynski-52}. Pozorny problem może wyniknąć stąd,
-% że~mnożenie kwaternionów nie jest przemienne, więc konkretny sposób w~jaki
-% definiujemy działanie macierzy $A$ na wektor $v \in \Hbb^{ n }$ ma znaczenie
-% dla naszej teorii. Wojtyński zdefiniował je kładąc
-% \begin{equation}
-%   \label{eq:Wojtynski-52}
-%   ( A v )_{ i } = \sum_{ j }^{ n } a_{ i j } \, v_{ j }, \quad
-%   A = [ a_{ ij } ] \in \lFrak( n, \Hbb ).
-% \end{equation}
-% Takie określenie odwzorowanie $A$ jest jednorodne, gdy mnożenie wektorów
-% z~$\Hbb^{ n }$ przez elementy z~$\Hbb$ jest zdefiniowane z~prawej strony.
-% Gdybyśmy zdefiniowali mnożenie przez te elementy z~lewej strony, to
-% by działanie macierzy na wektor $v$ było jednorodne, musielibyśmy
-% zdefiniować je jako
-% \begin{equation}
-%   \label{eq:Wojtynski-53}
-%   ( A v )_{ i } = \sum_{ j }^{ n } v_{ j } \, a_{ i j }.
-% \end{equation}
+Wiemy już, że~odwzorowanie zadane przez macierz $A \in \lFrak( n, \Kbb )$
+wzorem \eqref{eq:Wojtynski-43} jest jednorodne nad $\Hbb$ i~tym samym
+jednorodne nad $\Rbb$ i~$\Cbb$, które są podciałami $\Hbb$\footnote{Użyta
+  tu terminologi może być w~pełni ścisła, na ten moment nie umiem tego
+  jednak ustalić. Nie umiem tego teraz ustalić. Niezależnie od tego sama
+  treść matematyczna powinna być na tyle jasna, że~możemy na takim
+  sformułowaniu poprzestać.}. Teraz możemy przejść do dowodu, że~jest ono
+addytywne i~tym samym liniowe. Wykazanie, że
+\begin{equation}
+  \label{eq:Wojtynski-60}
+  A ( v + w ) = A v + A w, \quad v, \, w \in \Hbb^{ n },
+\end{equation}
+przebiega wedle standardowego schematu, z~wykorzystaniem tego, że~w~ciele
+$\Hbb$ dodawania jest rozdzielne względem mnożenia.
 
-% Wiemy już, że~odwzorowanie zadane przez macierz $A \in \lFrak( n, \Kbb )$
-% wzorem \eqref{eq:Wojtynski-39} jest jednorodne nad $\Hbb$ i~tym samym
-% jednorodne nad $\Rbb$ i~$\Cbb$, które są podciałami $\Hbb$\footnote{Użyta
-%   tu terminologi może być ścisła, ale może być też trochę nieścisła. Nie
-%   umiem tego teraz ustalić. Niezależnie od tego sama treść matematyczna
-%   powinna być na tyle jasna, że~możemy na takim sformułowaniu poprzestać.}.
-% Teraz możemy przejść do dowodu, że~jest ono addytywne i~tym samym liniowe.
-% Dowód faktu, że
-% \begin{equation}
-%   \label{eq:Wojtynski-54}
-%   A ( v + w ) = A v + A w, \quad v, \, w \in \Hbb^{ n },
-% \end{equation}
-% przebiega wedle standardowego schematu, z~wykorzystaniem tego, że~w~ciele
-% $\Hbb$ dodawania jest rozdzielne względem mnożenia.
+W~tym momencie wiemy już, że~każda macierz z~$\lFrak( n, \Hbb )$
+reprezentuje odwzorowanie liniowe nad $\Hbb$. Odwrotnie, każde odwzorowanie
+liniowe wyznacza pewną macierz. Zanim przejdziemy do dowodu tego ostatniego twierdzenia, wprowadzimy odpowiednią notację.
 
-% W~tym momencie wiemy już, że~każda macierz z~$\lFrak( n, \Hbb )$
-% reprezentuje odwzorowanie liniowe nad $\Hbb$. Odwrotnie, każde odwzorowanie
-% liniowe wyznacza pewną macierz. Oznaczmy bowiem
-% \begin{equation}
-%   \label{eq:Wojtynski-55}
-%   E_{ i } = ( 0, 0, \ldots, 0, e_{ 0 }, 0, \ldots, 0 ),
-% \end{equation}
-% gdzie $e_{ 0 }$ znajduje~się na $i$-tej pozycji. Wówczas dla dowolnego
-% $v \in \Hbb^{ n }$ mamy
-% \begin{equation}
-%   \label{eq:Wojtynski-56}
-%   ????
-% \end{equation}
+Wzorując~się na książce Gancarzewicza
+\cite{GancarzewiczAlgebraLiniowa2004}, przestrzeń odwzorowań liniowych
+z~przestrzeni wektorowej $X$ do przestrzeni wektorowej $Y$ będziemy
+oznaczać symbolem $\Hom( X, Y )$. W~szczególnym przypadku, gdy $X = Y$
+przestrzeń tą będziemy oznaczać symbolem $\End( X )$. Podzbiór $\End( X )$
+złożony z~automorfizmów, będziemy oznaczać symbolem $\GL( X )$. Mamy
+nadzieję, że~ten ostatni symbol nie będzie~się mylić z~symbolem pełnej
+zespolonej (rzeczywistej) grupy liniowej wymiaru~$n$: $\GL( n, \Rbb )$
+($\GL( n, \Cbb )$).
 
-% Przejdźmy teraz do dowodu tego, że~$\lFrak( n, \Kbb )$ tworzy algebrę,
-% gdzie $\Rbb$, $\Cbb$ lub $\Hbb$. By udowodnić własności
-% \begin{equation}
-%   \label{eq:Wojtynski-43}
-%   ( A + B ) v = A v + B v,
-% \end{equation}
-% wystarczy by dodawanie było rozdzielne względem mnożenia, co jest prawdą
-% we~wszystkich rozważanych typach $\Kbb$. Ponieważ dowód tego faktu jest
-% prosty, nie będziemy go tu przytaczać jawnie.
+Niech teraz $f \in \End( \Hbb^{ n } )$ i~oznaczmy
+\begin{equation}
+  \label{eq:Wojtynski-55}
+  E_{ i } = ( 0, 0, \ldots, 0, e_{ 0 }, 0, \ldots, 0 ) \in \Hbb^{ n },
+\end{equation}
+gdzie $e_{ 0 }$ znajduje~się na $i$-tej pozycji. Wówczas dla dowolnego
+$v \in \Hbb^{ n }$ mamy
+\begin{equation}
+  \label{eq:Wojtynski-56}
+  v = \sum_{ i = 1 }^{ n } E_{ i } \, v_{ i }.
+\end{equation}
+??????????????????????????????
+Przestrzeń ????
 
-% \vspace{\spaceFour}
+Przejdźmy teraz do dowodu tego, że~$\lFrak( n, \Kbb )$ tworzy algebrę,
+gdzie $\Rbb$, $\Cbb$ lub $\Hbb$. By udowodnić własności
+\begin{equation}
+  \label{eq:Wojtynski-43}
+  ( A + B ) v = A v + B v,
+\end{equation}
+wystarczy by dodawanie było rozdzielne względem mnożenia, co jest prawdą
+we~wszystkich rozważanych typach $\Kbb$. Ponieważ dowód tego faktu jest
+prosty, nie będziemy go tu przytaczać jawnie.
+
+\vspace{\spaceFour}
 
 
 
@@ -1714,6 +1716,7 @@ gdzie $q = e_{ 0 } \, z_{ 1 } + e_{ 2 } \, z_{ 2 }$, $z, z_{ 1 }, z_{ 2 } \in \C
     26  & &  1 & $x \in X$ & $a \in B$ \\
     27  &  2 & & $= d$ & $= u$ \\
     29  &  9 & & $\textrm{Gl}( n, \Cbb )$ & $\GL( n, \Cbb )$ \\
+    29  & 10 & & $\textrm{Gl}( n, \Cbb )$ & $\GL( n, \Cbb )$ \\
     29  & &  9 & $( A B )^{ T } = B^{ T } A^{ T }$
            & $( A \cdot B )^{ T } = B^{ T } \cdot A^{ T }$ \\
     29  & &  8 & $\overline{ A B }$ & $\overline{ A \cdot B }$ \\
@@ -1732,8 +1735,6 @@ gdzie $q = e_{ 0 } \, z_{ 1 } + e_{ 2 } \, z_{ 2 }$, $z, z_{ 1 }, z_{ 2 } \in \C
     36  &  8 & & $\omega( xAy )$ & $\omega( x, Ay )$ \\
     37  &  9 & & $e_{ i } ( e_{ j }, e_{ k } )$
            & $e_{ i } \cdot ( e_{ j } \cdot e_{ k } )$ \\
-    37  &  9 & & $( e_{ i }, e_{ j } ) e_{ k }$
-           & $( e_{ i } \cdot e_{ j } ) \cdot e_{ k }$ \\
     \hline
   \end{tabular}
 
@@ -1746,9 +1747,11 @@ gdzie $q = e_{ 0 } \, z_{ 1 } + e_{ 2 } \, z_{ 2 }$, $z, z_{ 1 }, z_{ 2 } \in \C
   \begin{tabular}{|c|c|c|c|c|}
     \hline
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
+    & Powinno być \\ \cline{2-3}
+           & Od góry & Od dołu & & \\
     \hline
+    37  &  9 & & $( e_{ i }, e_{ j } ) e_{ k }$
+           & $( e_{ i } \cdot e_{ j } ) \cdot e_{ k }$ \\
     37  & &  8 & $q \cdot \frac{ 1 }{ \Vert q^{ 2 } \Vert } \bar{q}$
            & $\bar{q} \cdot \frac{ 1 }{ \Vert q^{ 2 } \Vert } q$ \\
     37  & &  8 & $\bar{q} q$ & $\bar{q} \cdot q$ \\
@@ -1768,14 +1771,14 @@ gdzie $q = e_{ 0 } \, z_{ 1 } + e_{ 2 } \, z_{ 2 }$, $z, z_{ 1 }, z_{ 2 } \in \C
            % & & & & \\
            % & & & & \\
            % & & & & \\
-    % & &  & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
+           % & &  & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
     \hline
   \end{tabular}
 
