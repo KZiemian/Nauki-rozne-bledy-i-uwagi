@@ -1248,12 +1248,13 @@ części notatek, tu zaś poprzestaniemy na wskazaniu, iż~w~tej notacji
 własność jednorodność odwzorowania $A : V \to V$ zapisujemy jako
 \begin{equation}
   \label{eq:Wojtynski-33}
-  A ( v \alpha ) = ( A v ) \alpha, \quad \alpha \in \Kbb, \, v \in V,
+  A ( \vecvbold \alpha ) = ( A \vecvbold ) \alpha, \quad
+  \alpha \in \Kbb, \, \vecvbold \in V,
 \end{equation}
 nie zaś jak w~standardowej notacji
 \begin{equation}
   \label{eq:Wojtynski-34}
-  A \alpha v = \alpha A v.
+  A \alpha \vecvbold = \alpha A \vecvbold.
 \end{equation}
 
 Ostatecznie, to czy mnożenie zapisujemy z~lewej czy z~prawej strony jest
@@ -1328,23 +1329,26 @@ Niech $V$ będzie przestrzenią wektorową na ciałem $\Kbb$, na której jest
 zadane jest działanie wewnętrzne
 \begin{equation}
   \label{eq:Wojtynsi-38}
-  \cdot : V \times V \ni ( v, w ) \mapsto v \cdot w \in V.
+  \cdot : V \times V \ni ( \vecvbold, \vecwbold ) \mapsto \vecvbold \cdot \vecwbold \in V.
 \end{equation}
 Rozpatrzmy teraz dwie potencjalne własności tego działania:
 \begin{subequations}
   \begin{align}
     \label{eq:Wojtynski-39-A}
-    &( \alpha \, v + \beta \, w ) \cdot p  =  \alpha \, ( v \cdot p ) + \beta \, ( w \cdot p ), \\
+    &( \alpha \, \vecvbold + \beta \, \vecwbold ) \cdot \vecpbold =
+      \alpha \, ( \vecvbold \cdot \vecpbold ) + \beta \, ( \vecwbold \cdot \vecpbold ), \\
     \label{eq:Wojtynski-39-B}
-    &v \cdot ( \alpha \, w + \beta \, p ) = \alpha \, ( v \cdot w ) + \beta \, ( v \cdot p ),
+    &\vecvbold \cdot ( \alpha \, \vecwbold + \beta \, \vecpbold ) =
+      \alpha \, ( \vecvbold \cdot \vecwbold ) + \beta \, ( \vecvbold \cdot \vecpbold ),
   \end{align}
 \end{subequations}
-gdzie $\alpha, \beta \in \Kbb$, $v, w, p \in V$. Jeśli dla danej przestrzeni $V$ wzór
-\eqref{eq:Wojtynski-39-A} zachodzi dla wszystkich możliwych przypadków,
-to~przestrzeń tą nazywamy \textbf{lewą półalgebrą}. Definicje \textbf{lewej
-  półalgebry łącznej}, \textbf{lewej półalgebry przemiennej}, etc., są
-prostymi uogólnieniami definicji dla standardowej algebry, nie ma więc
-potrzeby byśmy je tutaj podawali. Analogicznie, jeśli dla wszystkich
+gdzie $\alpha, \beta \in \Kbb$, $\vecvbold, \vecwbold, \vecpbold \in V$. Jeśli dla
+danej przestrzeni $V$ wzór \eqref{eq:Wojtynski-39-A} zachodzi dla
+wszystkich możliwych przypadków, to~przestrzeń tą nazywamy \textbf{lewą
+  półalgebrą}. Definicje \textbf{lewej półalgebry łącznej}, \textbf{lewej
+  półalgebry przemiennej}, etc., są prostymi uogólnieniami definicji dla
+standardowej algebry, nie ma więc potrzeby byśmy je tutaj podawali.
+Analogicznie, jeśli dla wszystkich
 możliwych przypadków zachodzi wzór \eqref{eq:Wojtynski-39-B} to $V$ nazywamy
 \textbf{prawą półalgebrą}. Zdefiniowanie \textbf{prawej półalgebry łącznej}
 i~innych możliwych jej typów, nie powinno teraz sprawiać żadnego problemu.
@@ -1360,8 +1364,8 @@ przyjmujemy następującą, prawostronną, konwekcję mnożenia elementów
 $\Kbb^{ n }$ przez elementy z~$\Kbb$
 \begin{equation}
   \label{eq:Wojtynski-40}
-  v \alpha = ( v_{ 1 } \alpha, v_{ 2 } \alpha, \ldots, v_{ n } \alpha ), \quad
-  \alpha \in \Kbb, \, v \in \Kbb^{ n }.
+  \vecvbold \alpha = ( v_{ 1 } \, \alpha, v_{ 2 } \, \alpha, \ldots, v_{ n } \, \alpha ), \quad
+  \alpha \in \Kbb, \, \vecvbold \in \Kbb^{ n }.
 \end{equation}
 Ponadto dla macierzy $A \in \lFrak( n, \Kbb )$ o~elementach $a_{ ij }$,
 $i, j = 1, 2, \ldots, n$ przyjmujemy dodatkowe oznaczenie
@@ -1385,7 +1389,7 @@ Również podążając za Wojtyńskim, działanie macierzy na wektor z~$\Kbb^{ n
 definiujemy jako
 \begin{equation}
   \label{eq:Wojtynski-43}
-  ( A v )_{ i } = \sum_{ j = 1 }^{ n } a_{ i j } \, v_{ j },
+  ( A \vecvbold )_{ i } = \sum_{ j = 1 }^{ n } a_{ i j } \, v_{ j },
 \end{equation}
 gdzie $v \in \Kbb^{ n }$, $A \in \lFrak( n, \Kbb )$. Teraz operację mnożenia
 dwóch macierzy z~$\lFrak( n, \Kbb )$ możemy określić jako
@@ -1528,22 +1532,24 @@ z~$\lFrak( n, \Rbb )$ i~$\lFrak( n, \Cbb )$ jest to,
 że~zachodzi
 \begin{equation}
   \label{eq:Wojtynski-55}
-  A ( v \, \alpha ) = ( A v ) \, \alpha,
+  A ( \vecvbold \, \alpha ) = ( A \vecvbold ) \, \alpha,
 \end{equation}
-gdzie $\alpha \in \Hbb,$ $v \in \Hbb^{ n }$, $A \in \lFrak( n, \Hbb )$. Fakt ten
-ponownie wynika z~definicji działań oraz łączności i~rozdzielności mnożenia
+gdzie $\alpha \in \Hbb,$ $\vecvbold \in \Hbb^{ n }$, $A \in \lFrak( n, \Hbb )$. Fakt
+ten ponownie wynika z~definicji działań oraz łączności i~rozdzielności
+mnożenia
 względem dodawania w~$\Kbb$. Jednakże
 \begin{equation}
   \label{eq:Wojtynski-56}
-  ( A \, \alpha ) v \neq ( A v ) \, \alpha.
+  ( A \, \alpha ) \vecvbold \neq ( A \, \vecvbold ) \, \alpha.
 \end{equation}
 Prosty przykład dla którego możemy to zobaczyć to $\alpha = e_{ 2 }$,
-$v = ( e_{ 3 }, 0, 0, \ldots, 0 )$, $A = \matUnit e_{ 1 }$. Dla podkreślenia tego,
+$\vecvbold = ( e_{ 3 }, 0, 0, \ldots, 0 )$, $A = \matUnit e_{ 1 }$. Dla
+podkreślenia tego,
 jak bardzo „nienaturalną” jest ta ostatnia własność, zapiszemy ją
 w~notacji, w~której mnożenie przez liczby obywa~się z~lewej strony.
 \begin{equation}
   \label{eq:Wojtynski-57}
-  ( \alpha A ) v \neq A ( \alpha v ).
+  ( \alpha \, A ) \vecvbold \neq A ( \alpha \, \vecvbold ).
 \end{equation}
 
 W~tym miejscu musimy zwrócić uwagę no to, że~to wzór \eqref{eq:Wojtynski-55}
@@ -1554,7 +1560,7 @@ w~jaki definiujemy działanie macierzy $A$ na wektor $v \in \Hbb^{ n }$ ma
 znaczenie dla naszej teorii. Wojtyński zdefiniował je kładąc
 \begin{equation}
   \label{eq:Wojtynski-58}
-  ( A v )_{ i } = \sum_{ j }^{ n } a_{ i j } \, v_{ j }, \quad
+  ( A \, \vecvbold )_{ i } = \sum_{ j }^{ n } a_{ i j } \, v_{ j }, \quad
   A = [ a_{ ij } ] \in \lFrak( n, \Hbb ).
 \end{equation}
 Takie określenie odwzorowanie $A$ jest jednorodne, gdy mnożenie wektorów
@@ -1564,7 +1570,7 @@ ciała z~lewej strony, to by działanie macierzy na wektor $v$ było
 jednorodne, musielibyśmy zdefiniować je jako
 \begin{equation}
   \label{eq:Wojtynski-59}
-  ( A v )_{ i } = \sum_{ j }^{ n } v_{ j } \, a_{ i j }.
+  ( A \, \vecvbold )_{ i } = \sum_{ j }^{ n } v_{ j } \, a_{ i j }.
 \end{equation}
 
 Wiemy już, że~odwzorowanie zadane przez macierz $A \in \lFrak( n, \Kbb )$
@@ -1577,7 +1583,8 @@ jednorodne nad $\Rbb$ i~$\Cbb$, które są podciałami $\Hbb$\footnote{Użyta
 addytywne i~tym samym liniowe. Wykazanie, że
 \begin{equation}
   \label{eq:Wojtynski-60}
-  A ( v + w ) = A v + A w, \quad v, \, w \in \Hbb^{ n },
+  A ( \vecvbold + \vecwbold ) = A \, \vecvbold + A \, \vecwbold, \quad
+  \vecvbold, \, \vecwbold \in \Hbb^{ n },
 \end{equation}
 przebiega wedle standardowego schematu, z~wykorzystaniem tego, że~w~ciele
 $\Hbb$ dodawania jest rozdzielne względem mnożenia.
@@ -1596,19 +1603,132 @@ nadzieję, że~ten ostatni symbol nie będzie~się mylić z~symbolem pełnej
 zespolonej (rzeczywistej) grupy liniowej wymiaru~$n$: $\GL( n, \Rbb )$
 ($\GL( n, \Cbb )$).
 
-Niech teraz $f \in \End( \Hbb^{ n } )$ i~oznaczmy
+Niech $f \in \End( \Hbb^{ n } )$. Z~definicji odwzorowania liniowego zachodzi
 \begin{equation}
-  \label{eq:Wojtynski-55}
-  E_{ i } = ( 0, 0, \ldots, 0, e_{ 0 }, 0, \ldots, 0 ) \in \Hbb^{ n },
+  \label{eq:Wojtynski-61}
+  f( \vecvbold_{ 1 } \, \alpha + \vecvbold_{ 2 } \, \beta ) =
+  f( \vecvbold_{ 1 } ) \, \alpha + f( \vecvbold_{ 2 } ) \, \beta.
+\end{equation}
+Oznaczmy teraz
+\begin{equation}
+  \label{eq:Wojtynski-62}
+  \vecEbold_{ i } = ( 0, 0, \ldots, 0, e_{ 0 }, 0, \ldots, 0 ) \in \Hbb^{ n },
 \end{equation}
 gdzie $e_{ 0 }$ znajduje~się na $i$-tej pozycji. Wówczas dla dowolnego
-$v \in \Hbb^{ n }$ mamy
+$\vecvbold \in \Hbb^{ n }$ mamy
 \begin{equation}
-  \label{eq:Wojtynski-56}
-  v = \sum_{ i = 1 }^{ n } E_{ i } \, v_{ i }.
+  \label{eq:Wojtynski-63}
+  \vecvbold = \sum_{ i = 1 }^{ n } \vecEbold_{ i } \, v_{ i }.
 \end{equation}
-??????????????????????????????
-Przestrzeń ????
+Obliczmy teraz $f( \vecvbold )$.
+\begin{equation}
+  \label{eq:Wojtynski-64}
+  f( \vecvbold ) =
+  f\left( \sum_{ j = 1 }^{ n } \vecEbold_{ j } \, v_{ j } \right) =
+  \sum_{ j = 1 }^{ n } f( \vecEbold_{ j } ) \, v_{ j }.
+\end{equation}
+Rozłóżmy teraz wektor $f( \vecEbold_{ i } )$ na wektory bazy
+$\vecEbold_{ i }$ dla $i = 1, 2, \ldots, n$.
+\begin{equation}
+  \label{eq:Wojtynski-65}
+  f( \vecEbold_{ j } ) = \sum_{ i = 1 }^{ n } f_{ i j } \, \vecEbold_{ j }.
+\end{equation}
+Teraz, standardowo, przyporządkowujemy odwzorowaniu $f \in \End( \Hbb^{ n } )$
+macierz $[ f_{ i j } ] \in \lFrak( n, \Hbb )$, odwzorowanie to oznaczymy jako
+\begin{equation}
+  \label{eq:Wojtynski-66}
+  \End( \Hbb^{ n } ) \ni f \mapsto M( f ) \in \lFrak( n, \Hbb ).
+\end{equation}
+Zauważmy, że~dzięki istnieniu bazy kanonicznej $\vecEbold_{ i }$ wzór
+\eqref{eq:Wojtynski-58} określa odwzorowanie
+\begin{equation}
+  \label{eq:Wojtynski-67}
+  \lFrak( n, \Hbb ) \ni A \mapsto L( A ) \in \End( \Hbb^{ n } ).
+\end{equation}
+Używając standardowych metod pokazujemy, że~$M$ i~$L$ są wzajemnie
+odwrotnymi bijekcjami. Ze~względu na brak czasu i~wielką ilość materiału do
+przerobienia przed nami, nie będziemy się dłużej zatrzymywać nad tym
+zagadnieniem.
+
+Na razie nic nie powiedzieliśmy o~tym, czy odwzorowania $M$ i~$L$ są izomorfizmami odpowiednich struktur algebraicznych, a~to dlatego, że~nieprzemienność mnożenia kwaternionów prowadzi do analogicznych komplikacji w~zdefiniowaniu na $\End( \Hbb^{ n } )$ struktury algebry, jak napotkaliśmy w~przypadku przestrzeni $\lFrak( n, \Hbb )$. Zanim jednak przejdziemy do omówienia tego problemu, przyjrzymy~się zagadnieniu izomorfizmu półalgebr.
+
+Niech $X$ i~$Y$ będzie prawymi półalgebrami nad tym samym ciałem w~których mnożenie przez element z~ciała wykonuje~się z~prawej strony\footnote{Analogiczne
+  rozumowanie można przeprowadzić dla lewych półalgebr, a~także dla
+  półalgebr w~których mnożenie przez element ciała wykonujemy z~lewej
+  strony.} oraz działaniem wewnętrznymi oznaczanymi odpowiednio $\cdot_{ X }$
+i~$\cdot_{ Y }$. \textbf{Homomorfizmem półalgebr}\footnote{Nie wiem czy wybór tej nazwy jest zgodny z ogólnie przyjętymi kryteriami nazewnictwa w~algebrze.} nazywamy takie odwzorowanie liniowe
+$f \in \Hom( X, Y )$, że~zachodzi
+\begin{equation}
+  \label{eq:Wojtynski-68}
+  f( \vecxbold \cdot_{ X } \vecybold ) =
+  f( \vecxbold ) \cdot_{ Y } f( \vecybold ), \quad
+  \vecxbold, \vecybold \in X.
+\end{equation}
+Jeżeli odwzorowanie $f$ jest izomorfizmem, to nazywam je
+\textbf{izomorfizmem półalgebr}.
+
+W~dalszym ciągu dla uczynienia rozważań bardziej ścisłymi, będziemy używać
+w~dalszym ciągu jawnie używać symboli $\cdot_{ X }$ i~$\cdot_{ Y }$ dla oznaczenia
+możenia wewnętrznego w~przestrzeniach $X$ i~$Y$, lecz działanie dodawania
+w~tych przestrzeniach będziemy zawsze oznaczać tym samym symbolem $+$. Używanie symboli $+_{ X }$ i~$+_{ Y }$ nie wydaje się nam szczególnie potrzebne.
+
+Zwróćmy teraz uwagę na dwie rzeczy. Po pierwsze, jeśli $f \in \Hom( X, Y )$ jest izomorfizmem prawych półalgebr, to $f^{ -1 } \in \Hom( Y, X )$ również jest izomorfizmem prawych półalgebr. Choć dowód tego faktu oparty jest na standardowej technice, przytoczymy go tutaj dla jasności wywodu. Wiadomo, że jeśli $f \in \Hom( X, Y )$ jest izomorfizmem przestrzeni wektorowych, to odwrotna bijekcja też jest izomorfizmem przestrzeni wektorowych. Rozpatrzmy $\vecybold_{ 1 }, \vecybold_{ 2 } \in Y$. Istnieją $\vecxbold_{ 1 }, \vecxbold_{ 2 } \in X$, taki że $f( \vecxbold_{ 1 } ) = \vecybold_{ 1 }$, $f( \vecxbold _{ 2 } ) = \vecybold_{ 2 }$ lub równoważnie $f^{ -1 }( \vecybold_{ 1 } ) = \vecxbold_{ 1 }$, $f^{ -1 }( \vecybold_{ 2 } ) = \vecxbold_{ 1 }$. Mamy
+\begin{equation}
+  \label{eq:Wojtynski-69}
+  f( \vecxbold_{ 1 } \cdot_{ X } \vecxbold_{ 2 } ) =
+  f( \vecxbold_{ 1 } ) \cdot_{ Y } f( \vecxbold_{ 2 } ) =
+  \vecybold_{ 1 } \cdot_{ Y } \vecybold_{ 2 }.
+\end{equation}
+Zadziałajmy odwzorowanie $f^{ -1 }$ na obie strony powyższej równości.
+\begin{equation}
+  \label{eq:Wojtynski-70}
+  \vecxbold_{ 1 } \cdot_{ X } \vecxbold_{ 2 } =
+  f^{ -1 }( \vecybold_{ 1 } \cdot_{ Y } \vecybold_{ 2 } ).
+\end{equation}
+Powyższą równość możemy przepisać jako
+\begin{equation}
+  \label{eq:Wojtynski-71}
+  f^{ -1 }( \vecybold_{ 1 } \cdot_{ Y } \vecybold_{ 2 } ) =
+  f^{ -1 }( \vecybold_{ 1 } ) \cdot_{ X } f^{ -1 }( \vecybold_{ 2 } ).
+\end{equation}
+
+Po drugie, jeśli $X$ jest prawą półalgebrą, a~$Y$ jest przestrzenią wektorową, jak zwykle nad tym samym działem, która posiada działanie wewnętrzne $\cdot_{ Y }$ oraz istnieje izomorfizm liniowy $f : X \to Y$, to $Y$ jest prawą półalgebrą. Dowód tej własności przebiega w~następujący sposób.
+Rozpatrzmy wyrażenie
+\begin{equation}
+  \label{eq:Wojtynski-72}
+  \vecybold_{ 1 } \cdot ( \vecybold_{ 2 } + \vecybold_{ 3 } ), \quad
+  \vecybold_{ 1 }, \vecybold_{ 2 }, \vecybold_{ 3 } \in Y.
+\end{equation}
+Istnieją takie $\vecxbold_{ 1 }, \vecxbold_{ 2 }, \vecxbold_{ 3 } \in X$, takie że $f( \vecxbold_{ 1 } ) = \vecybold_{ 1 }$, $f( \vecxbold_{ 2 } ) = \vecybold_{ 2 }$, $f( \vecxbold_{ 3 } ) = \vecybold_{ 3 }$. Obliczmy
+\begin{equation}
+  \label{eq:Wojtynski-73}
+  f\big( \vecxbold_{ 1 }
+  \cdot_{ X } ( \vecxbold_{ 2 } + \vecxbold_{ 3 } ) \big) =
+  f( \vecxbold_{ 1 } ) \cdot_{ Y } f( \vecxbold_{ 2 } + \vecxbold_{ 3 } ) =
+  f( \vecxbold_{ 1 } ) \cdot_{ Y } \big( f( \vecxbold_{ 2 } )
+  + f( \vecxbold_{ 3 } ) \big) =
+  \vecybold_{ 1 } \cdot_{ Y } ( \vecybold_{ 2 } + \vecybold_{ 3 } ).
+\end{equation}
+Z~drugiej strony
+\begin{equation}
+  \label{eq:12}
+  \begin{split}
+    f\big( \vecxbold_{ 1 }
+    \cdot_{ X } ( \vecxbold_{ 2 } + \vecxbold_{ 3 } ) \big)
+    &=
+      f( \vecxbold_{ 1 } \cdot_{ X } \vecxbold_{ 2 }
+      + \vecxbold_{ 1 } \cdot_{ X } \vecxbold_{ 3 } ) =
+      f( \vecxbold_{ 1 } \cdot_{ X } \vecxbold_{ 2 } )
+      + f( \vecxbold_{ 1 } \cdot_{ X } \vecxbold_{ 3 } ) = \\
+    &=
+      f( \vecxbold_{ 1 } ) \cdot_{ Y } f( \vecxbold_{ 2 } )
+      + f( \vecxbold_{ 1 } ) \cdot_{ Y } f( \vecxbold_{ 3 } ) =
+      \vecybold_{ 1 } \cdot_{ Y } \vecybold_{ 2 }
+      + \vecybold_{ 1 } \cdot_{ Y } \vecybold_{ 3 }.
+  \end{split}
+\end{equation}
+?????
+
 
 Przejdźmy teraz do dowodu tego, że~$\lFrak( n, \Kbb )$ tworzy algebrę,
 gdzie $\Rbb$, $\Cbb$ lub $\Hbb$. By udowodnić własności
