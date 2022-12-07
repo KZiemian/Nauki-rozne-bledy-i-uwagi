@@ -1391,7 +1391,7 @@ definiujemy jako
   \label{eq:Wojtynski-43}
   ( A \vecvbold )_{ i } = \sum_{ j = 1 }^{ n } a_{ i j } \, v_{ j },
 \end{equation}
-gdzie $v \in \Kbb^{ n }$, $A \in \lFrak( n, \Kbb )$. Teraz operację mnożenia
+gdzie $\vecvbold \in \Kbb^{ n }$, $A \in \lFrak( n, \Kbb )$. Teraz operację mnożenia
 dwóch macierzy z~$\lFrak( n, \Kbb )$ możemy określić jako
 \begin{equation}
   \label{eq:Wojtynski-44}
@@ -1649,6 +1649,127 @@ Używając standardowych metod pokazujemy, że~$M$ i~$L$ są wzajemnie
 odwrotnymi bijekcjami. Ze~względu na brak czasu i~wielką ilość materiału do
 przerobienia przed nami, nie będziemy się dłużej zatrzymywać nad tym
 zagadnieniem.
+
+Teraz zajmiemy~się strukturą algebraiczną $\End( \Hbb^{ n } )$, która jest
+bardzo nieoczywista. W~używanej notacji fakt, że $f \in \End( \Hbb^{ n } )$
+jest odwzorowanie liniowym zapisujemy jako
+\begin{equation}
+  \label{eq:Wojtynski-68}
+  f( \vecvbold \, \alpha + \vecwbold \, \beta ) =
+  f( \vecvbold ) \, \alpha + f( \vecwbold ) \, \beta, \quad
+  \alpha, \beta \in \Hbb, \, \vecvbold, \vecwbold \in \Hbb^{ n }.
+\end{equation}
+Dodawanie dozorowań liniowych definiujemy w~standardowy sposób.
+\begin{equation}
+  \label{eq:Wojtynski-69}
+  ( f + g )( \vecvbold ) = f( \vecvbold ) + g( \vecvbold ), \quad
+  \vecvbold \in \Hbb^{ n }, \, f, g \in \End( \Hbb^{ n } ).
+\end{equation}
+Jak łatwo sprawdzić suma dwóch odwzorowań liniowych jest liniowa.
+Również złożenie odwzorowań liniowych jest liniowe.
+\begin{equation}
+  \label{eq:Wojtynski-70}
+  \begin{split}
+    ( f \circ g )( \vecvbold \, \alpha + \vecwbold \, \beta )
+    &=
+      f\big( g( \vecvbold \, \alpha + \vecwbold \, \beta ) \big) =
+      f\big( g( \vecvbold ) \, \alpha + g( \vecwbold ) \, \beta \big) =
+      f\big( g( \vecvbold ) \, \alpha \big)
+      + f\big( g( \vecvbold ) \, \beta \big) = \\
+    &=
+      f\big( g( \vecvbold ) \big) \, \alpha
+      + f\big( g( \vecwbold ) \big) \, \beta =
+      ( f \circ g )( \vecvbold ) \, \alpha + ( f \circ g )( \vecwbold ) \, \beta.
+  \end{split}
+\end{equation}
+
+Pozostaje nam rozpatrzyć przypadek iloczynu odwzorowanie liniowego przez element z~$\Hbb$. Wedle standardowej definicji określamy ten iloczyn za~pomocą wzoru
+\begin{equation}
+  \label{eq:Wojtynski-71}
+  ( f \, \alpha )( \vecvbold ) = \big( f( \vecvbold ) \big) \, \alpha, \quad
+  \alpha \in \Hbb, \, \vecvbold \in \Hbb^{ n }.
+\end{equation}
+Okazuje~się, że~$f \, \alpha$ nie jest odwzorowaniem liniowym, bowiem
+\begin{equation}
+  \label{eq:Wojtynski-72}
+  ( f \, \alpha )( \vecvbold \, \beta ) = f( \vecvbold \, \beta ) \, \alpha =
+  \big( f( \vecvbold ) \, \beta \big) \, \alpha =
+  f( \vecvbold ) \, ( \beta \, \alpha ),
+\end{equation}
+gdzie w~ostatnim kroku skorzystaliśmy z własności prawdziwej dla
+wszystkich przestrzeni wektorowych:
+$( v \, \beta ) \, \alpha = v \, ( \beta \, \alpha )$ dla $\alpha, \beta \in \Hbb$, $v \in V$. By ją
+udowodnić dla $\Hbb^{ n }$ wystarczy skorzystać z~łączności mnożenia
+kwaternionów. Jeśli $f \, \alpha$ byłoby odwzorowanie liniowym to musiałoby zachodzić
+\begin{equation}
+  \label{eq:Wojtynski-73}
+  ( f \, \alpha )( \vecvbold \, \beta ) =
+  \big( ( f \, \alpha )( \vecvbold ) \big) \, \beta =
+  \big( f( \vecvbold ) \, \alpha \big) \, \beta =
+  f( \vecvbold ) \, ( \alpha \, \beta ).
+\end{equation}
+Biorąc $\alpha = e_{ 1 }$, $\beta = e_{ 2 }$ w~równościach \eqref{eq:Wojtynski-72}
+i~\eqref{eq:Wojtynski-73} dostajemy
+\begin{equation}
+  \label{eq:Wojtynski-74}
+  f( \vecvbold ) \, ( e_{ 2 } \, e_{ 1 } ) =
+  f( \vecvbold ) \, ( e_{ 1 } \, e_{ 2 } ) =
+  -f( \vecvbold ) \, ( e_{ 2 } \, e_{ 1 } ).
+\end{equation}
+Tę zależność możemy przekształcić do postaci
+\begin{equation}
+  \label{eq:Wojtynski-75}
+  f( \vecvbold ) \, 2 ( e_{ 2 } \, e_{ 1 } ) = 0.
+\end{equation}
+Mnożąc obie strony przez kwaternion odwrotny do $e_{ 2 } \, e_{ 1 }$
+dostajemy
+\begin{equation}
+  \label{eq:Wojtynski-76}
+  f( \vecvbold ) \, 2 = 0.
+\end{equation}
+Mam więc dwie możliwości. Albo nasze ciało jest charakterystyki 2,
+czyli~$2 = 1 + 1 = 0$, albo $f( \vecvbold ) = 0$. Jak wiemy kwaterniony nie
+są ciałem o~charakterystyce $\infty$, więc musi zachodzić drugi warunek.
+
+Widzimy więc, że~nieprzemienność mnożenia kwaternionów, sprawia
+iż~w~ogólności nie jest możliwe przekształcenie \eqref{eq:Wojtynski-72}
+w~\eqref{eq:Wojtynski-73} i~tym samym $f \, \alpha$ nie będzie odwzorowaniem
+liniowym. Chyba, że~ograniczymy się do przypadku $\alpha \in \Rbb$, wtedy bowiem
+dla dowolnego $\beta \in \Hbb$ zachodzi $\alpha \, \beta = \beta \, \alpha$, jednak tej sytuacji nie będziemy dalej rozważać.
+
+Widzimy więc, że~$\End( \Hbb^{ n } )$ \textit{nie} jest przestrzenią
+wektorową. Jak wszystko wskazuje, zbiór ten z~działaniami dodawania i~składania odwzorowań jest pierścieniem, jednak dokładne rozpatrzenie tego problemu zaprowadziłoby nas zbyt daleko od właściwego problemu który~się
+zajmujemy. Z~tego wynika, że~nie może istnieć odpowiedni izomorfizm między
+$\lFrak( n, \Hbb )$ ze~strukturą przestrzeni wektorowej
+i~zbiorowi $\End( \Hbb^{ n } )$ z~jego strukturą algebraiczną. Możliwe,
+że~oba te obiekty są izomorficzne, jeśli oba zostaną wyposażone w~strukturę
+pierścienia, ale to pozostaje poza zakresem tych rozważań.
+
+Powstaje teraz ważne pytanie: czemu zbiór macierzy $\lFrak( n, \Hbb )$ ma strukturę przestrzeni wektorowej, a~$\End( \Hbb^{ n } )$ nie? Okazuje~się,
+że~definicja mnożenia macierzy przez element z~$\Hbb$ \eqref{eq:Wojtynski-42-A} oraz działania macierzy na element $\Hbb^{ n }$ \eqref{eq:Wojtynski-43}, zostały tak dobrane, iż pozwalają obejść problem
+nieprzemienność mnożenia kwaternionów. W~tym miejscu należy zauważyć, iż definicja \eqref{eq:Wojtynski-42-A} \textit{nie} jest zgodna ze~standardową definicją mnożenia odwzorowania liniowego przez element z~ciała, która została podana w~\eqref{eq:Wojtynski-72}. Zgodnie z~obecną definicją obecnie przyjętą dla $\alpha \in \Hbb$ i~$A \in \lFrak( n, \Hbb )$ mamy
+\begin{equation}
+  \label{eq:Wojtynski-77}
+  \big( ( A \, \alpha ) \, \vecvbold \big)_{ i } =
+  \sum_{ j = 1 } ( A_{ i j } \, \alpha ) \, v_{ j },
+\end{equation}
+podczas, gdy definicja \eqref{eq:Wojtynski-71} prowadziłaby do wzoru
+\begin{equation}
+  \label{eq:Wojtynsk-78}
+  \big( ( A \, \alpha ) \, \vecvbold \big)_{ i } =
+  \sum_{ j = 1 }^{ n } A_{ i j } \, v_{ j } \, \alpha.
+\end{equation}
+
+Pozostawimy teraz rozważanie bogatych struktur algebraicznych określonych
+na zbiorach $\lFrak( n, \Hbb )$ i~$\End( \Hbb^{ n } )$, zamiast tego
+zajmiemy się strukturami stosunkowo skromnymi. Pokażemy mianowicie, że~oba te
+zbiory z~działaniami, odpowiednio, mnożenia macierzy i~składania odwzorowań
+tworzą monoidy\footnote{Przypomnijmy, że monoid różni się od grupy tym, iż
+  nie zakładamy istnienia elementów odwrotnych.}. Z~tego od razu będzie
+wynikało, że~zbiory $\GL( n, \Hbb )$ i~$\Aut( \Hbb^{ n } )$ (zbiór
+automorfizmów liniowych $\Hbb^{ n }$) tworzą grupy. Przypadek $\End( \Hbb^{ n } )$ jest bardzo prosty. Jak wiadomo składanie odwzorowań jest zawsze łączne, zaś elementem neutralnym jest odwzorowanie identycznościowe $\id$.
+
+Przejdźmy teraz do przypadku $\lFrak( n, \Hbb )$. Elementem neutralnym jest macierz $I = [ \delta^{ i }_{ j } \, e_{ 0 } ]$.
 
 Na razie nic nie powiedzieliśmy o~tym, czy odwzorowania $M$ i~$L$ są izomorfizmami odpowiednich struktur algebraicznych, a~to dlatego, że~nieprzemienność mnożenia kwaternionów prowadzi do analogicznych komplikacji w~zdefiniowaniu na $\End( \Hbb^{ n } )$ struktury algebry, jak napotkaliśmy w~przypadku przestrzeni $\lFrak( n, \Hbb )$. Zanim jednak przejdziemy do omówienia tego problemu, przyjrzymy~się zagadnieniu izomorfizmu półalgebr.
 
