@@ -101,13 +101,15 @@
 % ------------------------------
 % Ustawienia różnych parametrów tekstu
 % ------------------------------
+\renewcommand{\baselinestretch}{1.1}
+
 \renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
 % wierszami w tabelach.
 
 
 
 % ------------------------------
-% Pakiet "hyperref"
+% Pakiet „hyperref”
 % Polecano by umieszczać go na końcu preambuły.
 % ------------------------------
 \usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
@@ -128,6 +130,8 @@
   Błędy i~uwagi}
 
 \author{Kamil Ziemian}
+
+
 % \date{}
 % ---------------------------------------------------------------------
 
@@ -159,19 +163,19 @@
 % ############################
 \Work{ % Autorzy i tytuł dzieła
   Jos\'{e} M.~Gracia-Bondia, Joseph C.~V\'{a}rilly, H\'{e}ctor Figueroa \\
-  „Elements~of Noncommutative Geometry”,
-  \cite{GraciaBondiaVarillyFigueroaNoncommutativeGeometry} }
+  \textit{Elements~of Noncommutative Geometry},
+  \cite{GraciaBondiaVarillyFigueroaNoncommutativeGeometry}}
+
+\vspace{0em}
 
 
 % ##################
 \CenterBoldFont{Uwagi do konkretnych stron}
 
-% \noi \tb{Konkretne strony}
-
-% \vspace{\spaceFour}
+\vspace{0em}
 
 
-\start \Str{34} Autorzy rozważają tu~normę na~algebrze
+\Str{34} Autorzy rozważają tu~normę na~algebrze
 Banacha\footnote{Przedstawione tu~informacje pochodzą głównie
   od~Arkadiusza Bochniaka i~Błażeja Ruby.} W~książce Deitmar’a
 i~Echterhoff’a (\cite{DeitmarEcherhoffPrinciplesOfHarmonicAnalysis2009},
@@ -194,7 +198,6 @@ która jest znacznie prostsza koncepcyjnie, niż~ta~podana tutaj.
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\

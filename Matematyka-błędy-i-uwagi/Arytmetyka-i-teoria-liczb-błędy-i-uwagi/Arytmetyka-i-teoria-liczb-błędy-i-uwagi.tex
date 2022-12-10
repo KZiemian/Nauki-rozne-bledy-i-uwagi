@@ -101,6 +101,8 @@
 % ------------------------------
 % Ustawienia różnych parametrów tekstu
 % ------------------------------
+\renewcommand{\baselinestretch}{1.1}
+
 \renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
 % wierszami w tabelach.
 
@@ -161,19 +163,26 @@
 % ############################
 \Work{ % Autor i tytuł dzieła
   Jacek Gancarzewicz \\
-  „Arytmetyka”, \cite{GancarzewiczArytmetyka2000}}
+  \textit{Arytmetyka}, \cite{GancarzewiczArytmetyka2000}}
+
+\vspace{0em}
 
 
 % ##################
 \CenterBoldFont{Uwagi}
 
+\vspace{0em}
 
-\start W~książce do oznaczenia najważniejszych zbiorów używa~się fontów
+
+\noindent
+W~książce do oznaczenia najważniejszych zbiorów używa~się fontów
 pogrubionych: $\mathbf{N}$, $\mathbf{Z}$, $\mathbf{Q}$, etc. W~tych
 notatkach będziemy używali standardowych fontów „blackboard bold”: $\Nbb$,
 $\Zbb$, $\Qbb$,~etc. Wyjątkiem będzie sytuacja, gdy w~danym miejscu
 książki został użyty zły symbol, wtedy będziemy dążyć, by wygląd wzoru który
-będziemy poprawiać, bym maksymalnie podobny do oryginału w~książce.
+będziemy poprawiać, był maksymalnie podobny do oryginału w~książce.
+
+\vspace{\spaceFour}
 
 
 
@@ -182,8 +191,28 @@ będziemy poprawiać, bym maksymalnie podobny do oryginału w~książce.
 % ##################
 \CenterBoldFont{Uwagi do konkretnych stron}
 
+\vspace{0em}
 
-\start \Str{7}
+
+\Str{7} Na tej stronie można zauważyć, że~w~tej książeczce odstępy po kropce
+może być bardzo duży. Nie wiem czy jest to wynik użytych ustawień \LaTeX a,
+takich jak włączenie lub nie opcji \texttt{\textbackslash frenchspacing},
+czy jakiś innych czynników. Niezależnie od tego, tego typu konwekcji
+i~błędów edytorskich nie będziemy zapisywać w~tych notatkach, czyniąc
+wyjątek dla tych, które są jawnie błędne lub wyglądają bardzo źle.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\Str{10} Na tej stronie możemy zaobserwować, że~w~książeczce użyta jest
+konwencja wedle której cudzysłów zapisujemy jako ”cytowany tekst”, wydaje
+mi~się, że~jest to francuska konwencja zapisu. W~naszej ocenie lepiej
+wygląda stosowana w~Polsce konwencja zapisu: „cytowany tekst”. Z~tego
+powodu, gdy będziemy poprawiać jakiś fragment tekstu, w~którym znajduje~się
+cudzysłów, w~poprawionej wersji będziemy stosować tę drugą konwencję.
 
 \vspace{\spaceFour}
 
@@ -195,11 +224,6 @@ będziemy poprawiać, bym maksymalnie podobny do oryginału w~książce.
 
 
 
-% \vspace{\spaceFour}
-
-
-
-
 
 % \vspace{\spaceFour}
 
@@ -237,23 +261,29 @@ będziemy poprawiać, bym maksymalnie podobny do oryginału w~książce.
 
 
 % ##################
+\newpage
+
 \CenterBoldFont{Błędy}
+
+\vspace{\spaceFive}
 
 
 \begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
     10  &  2 & & ” $p$ & „$p$ \\
+    10  &  3 & & ” $p$ & „$p$ \\
+    10  &  4 & & ” $p$ & „$p$ \\
+    10  &  6 & & ” $p$ & „$p$ \\
     10  & 13 & & fałszywe, Są & fałszywe. Są \\
     12  & &  5 & $n_{ n }$ & $n_{ 0 }$ \\
-    % & & & & \\
-    % & & & & \\
+    14  &  5 & & $x \in X \, , y \in Y$ & $x \in X, \, y \in Y$ \\
+    16  &  2 & & można) & można \\n
     % & & & & \\
     % & & & & \\
     % & & & & \\

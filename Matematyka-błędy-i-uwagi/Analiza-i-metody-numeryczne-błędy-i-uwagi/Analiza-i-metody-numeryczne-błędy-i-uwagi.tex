@@ -43,7 +43,7 @@
 % ------------------------------
 % Często przydatne pakiety
 % ------------------------------
-\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+% \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
 \usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
 % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
@@ -61,7 +61,7 @@
 % \usepackage{siunitx} % Dla prostszego pisania jednostek fizycznych
 \usepackage{upgreek} % Ładniejsze greckie litery
 % Przykładowa składnia: pi = \uppi
-\usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
+% \usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
 \usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
 % na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
 % nie wiem.
@@ -101,13 +101,15 @@
 % ------------------------------
 % Ustawienia różnych parametrów tekstu
 % ------------------------------
+\renewcommand{\baselinestretch}{1.1}
+
 \renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
 % wierszami w tabelach.
 
 
 
 % ------------------------------
-% Pakiet "hyperref"
+% Pakiet „hyperref”
 % Polecano by umieszczać go na końcu preambuły.
 % ------------------------------
 \usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
@@ -124,10 +126,12 @@
 
 % ---------------------------------------------------------------------
 % Tytuł i autor tekstu
-\title{Geometria nieprzemienna \\
-  Błędy i~uwagi}
+\title{Analiza i~metody numeryczne \\
+  {\Large Błędy i~uwagi}}
 
 \author{Kamil Ziemian}
+
+
 % \date{}
 % ---------------------------------------------------------------------
 
@@ -158,50 +162,59 @@
 
 % ############################
 \Work{ % Autorzy i tytuł dzieła
-  Jos\'{e} M.~Gracia-Bondia, Joseph C.~V\'{a}rilly, H\'{e}ctor Figueroa \\
-  „Elements~of Noncommutative Geometry”,
-  \cite{GraciaBondiaVarillyFigueroaNoncommutativeGeometry} }
+  Anthony Ralston \\[0.3em]
+  \textit{Wstęp do analizy numerycznej},
+  \cite{RalstonWstepDoAnalizyNumerycznej1983}}
+
+\vspace{0em}
 
 
 % ##################
 \CenterBoldFont{Uwagi do konkretnych stron}
 
-% \noi \tb{Konkretne strony}
-
-% \vspace{\spaceFour}
+\vspace{0em}
 
 
-\start \Str{34} Autorzy rozważają tu~normę na~algebrze
-Banacha\footnote{Przedstawione tu~informacje pochodzą głównie
-  od~Arkadiusza Bochniaka i~Błażeja Ruby.} W~książce Deitmar’a
-i~Echterhoff’a (\cite{DeitmarEcherhoffPrinciplesOfHarmonicAnalysis2009},
-str.~43) rozważają oni algebrę ujednostkowioną z~normą
-\begin{equation}
-  \label{eq:GraciaBondiaEtAl--01}
-  \norm{ ( a,\, \lambda ) } = \Vert a \Vert + \absOne{ \lambda },
-\end{equation}
-która jest znacznie prostsza koncepcyjnie, niż~ta~podana tutaj.
+% \Str{34} Autorzy rozważają tu~normę na~algebrze
+% Banacha\footnote{Przedstawione tu~informacje pochodzą głównie
+%   od~Arkadiusza Bochniaka i~Błażeja Ruby.} W~książce Deitmar’a
+% i~Echterhoff’a (\cite{DeitmarEcherhoffPrinciplesOfHarmonicAnalysis2009},
+% str.~43) rozważają oni algebrę ujednostkowioną z~normą
+% \begin{equation}
+%   \label{eq:GraciaBondiaEtAl--01}
+%   \norm{ ( a,\, \lambda ) } = \Vert a \Vert + \absOne{ \lambda },
+% \end{equation}
+% która jest znacznie prostsza koncepcyjnie, niż~ta~podana tutaj.
 
 
 
 
 
 % ##################
+\newpage
+
 \CenterBoldFont{Błędy}
+
+\vspace{\spaceFive}
 
 
 \begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    %     & & & & \\
-    %     & & & & \\
-    %     & & & & \\
+    14  & 19 & & $x - x^{ ( d ) } |$ & $\abs{ x - x^{ ( d ) } }$ \\
+    14  & 20 & & $x( ^{ -3 } )$ & $x^{ ( -3 ) }$ \\
+    14  & 20 & & $x( ^{ -7 } )$ & $x^{ ( -7 ) }$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
     \hline
   \end{tabular}
 
