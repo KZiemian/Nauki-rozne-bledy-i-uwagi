@@ -91,6 +91,8 @@
 % ------------------------------
 % Ustawienia różnych parametrów tekstu
 % ------------------------------
+\renewcommand{\baselinestretch}{1.1}
+
 \renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
 % wierszami w tabelach.
 
@@ -114,9 +116,12 @@
 
 % ---------------------------------------------------------------------
 % Tytuł, autor, data
-\title{Filozofia~-- błędy i~uwagi}
+\title{Filozofia \\
+  {\Large błędy i~uwagi}}
 
-% \author{}
+\author{Kamil Ziemian}
+
+
 % \date{}
 % ---------------------------------------------------------------------
 
@@ -1436,8 +1441,8 @@ być „reakcje”?
 % ############################
 \Work{ % Autor i tytuł dzieła
   Reinhart Koselleck \\
-  „Krytyka i~kryzys. Studium patogenezy świata mieszczańskiego”,
-  \cite{KoselleckKrytykaIKryzys2015} }
+  \textit{Krytyka i~kryzys. Studium patogenezy świata mieszczańskiego},
+  \cite{KoselleckKrytykaIKryzys2015}}
 
 
 % ##################
@@ -1532,9 +1537,9 @@ jest nie tylko niepoprawne, ale~również bardzo źle wygląda.
 % ############################
 \Work{ % Autor i tytuł dzieła
   Nakamura Hajime \\
-  „Systemy myślenia ludów Wschodu. \\
-  Indie, Chiny, Tybet, Japonia”,
-  \cite{NakamuraSystemyMysleniaLudowWschodu2005} }
+  \textit{Systemy myślenia ludów Wschodu} \\
+  \textit{Indie, Chiny, Tybet, Japonia},
+  \cite{NakamuraSystemyMysleniaLudowWschodu2005}}
 
 
 % ##################
@@ -1635,8 +1640,8 @@ w~tekście.
 % ############################
 \Work{ % Autor i tytuł dzieła
   Frederick Copleston S. J. \\
-  „Historia filozofii. Tom~I: Grecja i~Rzym”,
-  \cite{CoplestonHistoriaFilozofiiTomI2004} }
+  \textit{Historia filozofii. Tom~I: Grecja i~Rzym},
+  \cite{CoplestonHistoriaFilozofiiTomI2004}}
 
 
 % ##################
@@ -1766,8 +1771,8 @@ ktoś robił to dosłownie.
 % ############################
 \Work{ % Autor i tytuł dzieła
   Roger Penrose \\
-  „Moda, wiara i~fantazja w~nowej fizyce Wszechświata”,
-  \cite{PenroseModaWiaraIFantazja2017} }
+  \textit{Moda, wiara i~fantazja w~nowej fizyce Wszechświata},
+  \cite{PenroseModaWiaraIFantazja2017}}
 
 
 % ##################
@@ -1903,7 +1908,6 @@ dla~osoby niezorientowanej w~analizie zespolonej.
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -1962,7 +1966,13 @@ dla~osoby niezorientowanej w~analizie zespolonej.
 % #####################################################################
 % #####################################################################
 % Bibliografia
-\bibliographystyle{plalpha} \bibliography{DEUSPhilBooks}{}
+
+\bibliographystyle{plalpha}
+
+\bibliography{DEUSPhilBooks}{}
+
+
+
 
 
 % ############################
