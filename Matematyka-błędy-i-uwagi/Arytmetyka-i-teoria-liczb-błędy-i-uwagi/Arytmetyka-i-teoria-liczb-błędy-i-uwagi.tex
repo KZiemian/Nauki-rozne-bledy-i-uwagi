@@ -109,7 +109,7 @@
 
 
 % ------------------------------
-% Pakiet "hyperref"
+% Pakiet „hyperref”
 % Polecano by umieszczać go na końcu preambuły.
 % ------------------------------
 \usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
@@ -219,19 +219,55 @@ cudzysłów, w~poprawionej wersji będziemy stosować tę drugą konwencję.
 
 
 
-% \vspace{\spaceFour}
+
+\StrWd{20}{8} Duży odstęp po tą linią to chyba błąd edytorski.
+
+\vspace{\spaceFour}
 
 
 
 
 
-% \vspace{\spaceFour}
+\Str{20} Podane tu wyjaśnienie definicji rekurencyjnej jest niełatwe
+w~zrozumieniu i~może nawet nie być poprawne. Warto by ją poprawić.
+
+\vspace{\spaceFour}
 
 
 
 
 
-% \vspace{\spaceFour}
+\Str{23} Na tej stronie podany jest wzór
+\begin{equation}
+  \label{eq:Gancarzewicz-Arytmetyka-01}
+  a_{ n } =
+  \frac{ 1 }{ \sqrt{ 5 } }
+  \Big\{ \Big( \frac{ 1 + \sqrt{ 5 } }{ 2 } \Big)^{ n }
+  - \Big( \frac{ 1 - \sqrt{5} }{ 2 } \Big)^{ n } \Big\}
+\end{equation}
+nie wygląda najlepiej, ze względu na to jak wysokość nawiasów ma~się
+do wysokości zawartych w~nich wyrażeń. Według mnie, znaczniej lepiej
+wyglądały on, gdyby został zapisany w~następujący sposób
+\begin{equation}
+  \label{eq:Gancarzewicz-Arytmetyka-01}
+  a_{ n } =
+  \frac{ 1 }{ \sqrt{ 5 } }
+  \left\{ \left( \frac{ 1 + \sqrt{ 5 } }{ 2 } \right)^{ n }
+  - \left( \frac{ 1 - \sqrt{5} }{ 2 } \right)^{ n } \right\},
+\end{equation}
+ewentualnie
+\begin{equation}
+  \label{eq:Gancarzewicz-Arytmetyka-2}
+  a_{ n } =
+  \frac{ 1 }{ \sqrt{ 5 } }
+  \left\{ \left( \tfrac{ 1 + \sqrt{ 5 } }{ 2 } \right)^{ n }
+  - \left( \tfrac{ 1 - \sqrt{5} }{ 2 } \right)^{ n } \right\}.
+\end{equation}
+
+W~dalszych ciągu tych notatek, poza wyjątkowymi sytuacjami nie będziemy
+odnosić~się do tego typu problemów typograficznych.
+
+\vspace{\spaceFour}
 
 
 
@@ -283,13 +319,13 @@ cudzysłów, w~poprawionej wersji będziemy stosować tę drugą konwencję.
     10  & 13 & & fałszywe, Są & fałszywe. Są \\
     12  & &  5 & $n_{ n }$ & $n_{ 0 }$ \\
     14  &  5 & & $x \in X \, , y \in Y$ & $x \in X, \, y \in Y$ \\
-    16  &  2 & & można) & można \\n
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
+    15  &  4 & & $f( x' ) \, ,$ & $f( x' ),$ \\
+    16  &  2 & & można) & można \\
+    20  &  3 & & $a_{ n }$m, & $a_{ n }$, \\
+    21  & 17 & & $25, \ldots \ldots$ & $25, \ldots$ \\
+    21  & &  7 & $640, \ldots \ldots$ & $640, \ldots$ \\
     56  & &  8 & $\displaystyle \sum_{ = 0 }^{ s }$
-& $\displaystyle \sum_{ i = 0 }^{ s }$ \\
-    % & & & & \\
+    & $\displaystyle \sum_{ i = 0 }^{ s }$ \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
