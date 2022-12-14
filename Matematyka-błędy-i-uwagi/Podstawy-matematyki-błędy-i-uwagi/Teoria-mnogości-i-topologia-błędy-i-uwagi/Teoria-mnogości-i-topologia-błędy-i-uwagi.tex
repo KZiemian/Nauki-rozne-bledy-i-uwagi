@@ -1,0 +1,480 @@
+% ---------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ------------------------------
+\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
+% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ------------------------------
+% MARGINS
+% ------------------------------
+\setmarginsrb
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
+
+
+
+% ------------------------------
+% Często używane pakiety
+% ------------------------------
+% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+% ------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ------------------------------
+\let\lll\undefined  % Amsmath gryzie się z pakietami do języka
+% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm}  % Dalsze wsparcie od AMS
+\usepackage{upgreek}  % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+\usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
+% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% nie wiem.
+
+
+
+% ------------------------------
+% Wspaniały pakiet PGF/TikZ
+% ------------------------------
+% \usepackage{tikz}
+
+% \usetikzlibrary{decorations.markings}  % Włączenie konkretnych bibliotek
+% % pakietu TikZ
+
+
+
+% ---------------
+% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
+% ---------------
+\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
+% „theorem” do pisania twierdzeń matematycznych
+\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+\newtheorem{corollary}{Wniosek}
+
+
+
+% ------------------------------
+% Pakiety których pliki *.sty mają być w tym samym katalogu co ten plik
+% ------------------------------
+\usepackage{latexgeneralcommands}
+\usepackage{mathcommands}
+% \usepackage{calculuscommands}
+
+
+
+
+% ---------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% ---------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ------------------------------
+% Ustawienia różnych parametrów tekstu
+% ------------------------------
+\renewcommand{\baselinestretch}{1.1}
+
+\renewcommand{\arraystretch}{1.4}  % Ustawienie szerokości odstępów między
+% wierszami w tabelach
+
+
+
+
+
+% ------------------------------
+% Pakiet „hyperref”
+% Polecano by umieszczać go na końcu preambuły
+% ------------------------------
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł i autor tekstu
+\title{Teoria mnogości i~topologia \\
+  {\Large Błędy i~uwagi}}
+
+\author{Kamil Ziemian}
+
+
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle  % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+% % ######################################
+% \section{XIX szkoła analizy matematycznej}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Kazimierz Kuratowski \\
+  \textit{Wstęp do~teorii mnogości i~topologii},
+  \cite{KuratowskiWstepTeoriiMnogosciITopologii2004}}
+
+\vspace{0em}
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+\vspace{0em}
+
+
+\noindent
+Brak ,,gramatyki'' pisania zdań złożonych logicznych. Jest to jednak usprawiedliwione względami dydaktycznymi.
+
+\vspace{\spaceFour}
+
+
+
+
+
+
+
+
+
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+
+Nie wspomniano o rozdzielności dodawania zbiorów względem mnożenia. Jest to w zadaniach.
+
+
+\Str{10} Należy uwzględnić dwa typy dowodu używające negacji logicznej.
+Pierwszy to~dowód przez \textbf{kontrapozycję}, opierający~się
+na~tożsamości
+\begin{equation}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-01}
+  ( \alpha \Rightarrow \beta ) \equiv ( \neg \beta \Rightarrow \neg \alpha).
+\end{equation}
+Drugi to~dowód \textbf{nie wprost}, opierający~się na~tożsamości
+\begin{equation}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-02}
+  ( \alpha \Rightarrow \beta ) \equiv \neg ( \alpha \land \neg \beta ).
+\end{equation}
+
+Pomimo tego, Kuratowski przypisał wszystkie dowody „niewprost” zasadzie kontrapozycji.
+
+\vspace{\spaceFour}
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+\vspace{\spaceFive}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    11  &  3 & & \textbf{7.} & \textbf{7a.} \\
+    11  &  4 & & \textbf{7a.} & \textbf{7b.} \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+Nie wspomniano o rozdzielności dodawania zbiorów względem mnożenia. Jest to w zadaniach.
+
+% ############################
+
+
+
+% % ##################
+% \newpage
+
+% \CenterBoldFont{Błędy}
+
+% \vspace{\spaceFive}
+
+
+% \begin{center}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+
+% \end{center}
+
+\vspace{\spaceTwo}
+
+
+% ############################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% % ##################
+% \CenterBoldFont{Błędy}
+
+
+% \begin{center}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     % & & & & \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+
+
+
+
+
+%   % \begin{tabular}{|c|c|c|c|c|}
+%   %   \hline
+%   %   & \multicolumn{2}{c|}{} & & \\
+%   %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%   %                             & Powinno być \\ \cline{2-3}
+%   %   & Od góry & Od dołu & & \\
+%   %   \hline
+%   %   & & & & \\
+%   %   \hline
+%   % \end{tabular}
+
+% \end{center}
+
+
+% \noindent
+% \StrWd{}{} \\
+% \Jest   \\
+% \Powin  \\
+
+
+% \vspace{\spaceTwo}
+% % ############################
+
+
+
+
+
+
+
+
+
+
+% % ############################
+% \newpage
+
+% \Work{ % Autorzy i tytuł dzieła
+%   J. Jost, X. Li-Jost \\
+%   \textit{Calculus of Variations},
+%   \cite{JostLiJostCalculusOfVariations1998}}
+
+% \vspace{0em}
+
+% % ##################
+% \CenterBoldFont{Uwagi}
+
+% \vspace{0em}
+
+
+% \Str{6} Dowód podstawowego lematu rachunku wariacyjnego jest
+% poprawny, acz mało elegancko zrobiony.
+
+
+% % % ##################
+% % \CenterBoldFont{Błędy}
+
+
+% % \begin{center}
+
+% %   \begin{tabular}{|c|c|c|c|c|}
+% %     \hline
+% %     & \multicolumn{2}{c|}{} & & \\
+% %     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+% %                               & Powinno być \\ \cline{2-3}
+% %     & Od góry & Od dołu & & \\
+% %     \hline
+% %     & & & & \\
+% %     & & & & \\
+% %     \hline
+% %   \end{tabular}
+
+% % \end{center}
+
+% \vspace{\spaceTwo}
+
+
+% % ############################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+% Bibliografia
+\bibliographystyle{plalpha}
+
+\bibliography{MathComScienceBooks}{}
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
