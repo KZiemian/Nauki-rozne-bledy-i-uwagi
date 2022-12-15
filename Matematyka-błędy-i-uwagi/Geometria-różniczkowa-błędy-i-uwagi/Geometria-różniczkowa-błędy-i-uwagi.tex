@@ -229,7 +229,7 @@ To~mogłoby ograniczyć nieporozumienia związane z~tym wzorem.
 \newpage
 
 \Work{ % Autorzy i tytuł dzieła
-  J. Gancarzewicz, B. Opozda \\
+  Jacek Gancarzewicz, Barbara Opozda \\
   \textit{Wstęp do geometrii różniczkowej},
   \cite{GancarzewiczOpozdaWstepDoGeometriiRozniczkowej2003}}
 
@@ -510,9 +510,6 @@ pomocą czcionki kaligraficznej. Będziemy więc w~tych notatkach oznaczać
 klasę funkcji różniczkowalnych nie symbolem $C^{ k }$ lecz $\Ccal^{ k }$,
 etc.
 
-
-?????????? Sprawdzić indeksy delt.
-
 \vspace{\spaceFour}
 
 
@@ -724,8 +721,9 @@ który rozpatrywać będziemy tylko w~kontekście przestrzeni $\Cbb^{ n }$,
 jedynie zwracając tylko uwagę na to, że~przedstawione tu rozumowanie można
 w~prosty sposób uogólnić na~dowolną skończenie wymiarową przestrzeń
 wektorową nad $\Rbb$ i~$\Cbb$. Przypadek przestrzeni wektorowej nad ciałem
-nieprzemiennym, zob. dyskusja strony ??? w~tych notatkach, to osoby
-problem, którym nie będziemy~się zajmować.
+nieprzemiennym, to osoby problem, którym nie będziemy~się zajmować. Pewne
+informacje o~szczególny przypadku przestrzeni nich są zawarte w~tych
+notatkach w~uwagach do strony~39.
 
 Po pierwsze zauważmy, że~$x$ po lewej stronie tego wzoru oznacza coś
 innego, niż po prawej. Po lewej $x$ oznacza ciąg (kolumnę) liczb $n$ liczb
@@ -770,14 +768,14 @@ Wzór \eqref{eq:Wojtynski-07} zapiszemy teraz jako
 \end{equation}
 
 Weźmy teraz $\vecxbold = \vecebold_{ i }$, $\vecybold = \vecebold_{ j }$.
-Z~wzoru \eqref{eq:Wojtynski-09} wynika teraz, że~$x_{ l } = \delta^{ i }_{ l }$,
+Z~wzoru \eqref{eq:Wojtynski-09} wynika teraz, że~$x_{ l } = \delta^{ l }_{ i }$,
 $y_{ m } = \delta^{ m }_{ j }$ (ta konwekcja zapisu symbolu $\delta^{ i }_{ j }$ została
 wprowadzona na stronie~33 książki Wojtyńskiego) i~tym samym
 \begin{equation}
   \label{eq:Wojtynski-11}
   \omega( \vecebold_{ i }, \vecebold_{ j } ) = x^{ T } \Omega \, y =
   \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } x_{ l } \, \Omega_{ l m } \, y_{ m } =
-  \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } \delta^{ i }_{ l } \, \Omega_{ l m } \, \delta^{ j }_{ m } =
+  \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } \delta^{ i }_{ l } \, \Omega_{ l m } \, \delta^{ m }_{ j } =
   \Omega_{ i j },
 \end{equation}
 gdzie $\Omega_{ l m }$ oznacza wyraz macierzy $\Omega$ znajdujący~się na przecięciu
@@ -982,8 +980,8 @@ Jej elementy dane są jako
   \label{eq:Wojtynski-23}
   \Omega^{ 0 }_{ l m } =
   \begin{cases}
-    -\delta^{ l }_{ m - l }, \quad l = 1, 2, \ldots, k, \\
-    \hphantom{-} \delta^{ l - k }_{ m }, \quad l = k + 1, k + 2, \ldots, k.
+    \hphantom{-} \delta^{ l }_{ m - k }, \quad l = 1, 2, \ldots, k, \\
+    -\delta^{ l - k }_{ m }, \quad l = k + 1, k + 2, \ldots, n.
   \end{cases}
 \end{equation}
 We wzorach powyżej symbol $\delta^{ i }_{ j }$ oznacza symbol Kroneckera, nie zaś
@@ -1149,7 +1147,7 @@ $1 \leq j \leq k$. Obliczmy teraz
   -x_{ k + j } = 0.
 \end{equation}
 Widzimy więc, że~$x_{ i } = 0$, dla $k + 1 \leq i \leq n$. Analogicznie biorąc
-$\vecebold = ( \delta^{ i }_{ k + j } )$ przy $1 \leq j \leq k$, dowodzimy,
+$\vecybold = ( \delta^{ i }_{ k + j } )$ przy $1 \leq j \leq k$, dowodzimy,
 że~$x_{ i } = 0$ dla $1 \leq i \leq k$. Tym samym pokazaliśmy,
 że~$\vecxbold = \vecZeroBold$. To~kończy dowód twierdzenia, iż~każda forma
 symplektyczna jest dwuliniową, antysymetryczną i~nieosobliwą.
@@ -1257,7 +1255,7 @@ własność jednorodność odwzorowania $A : V \to V$ zapisujemy jako
 nie zaś jak w~standardowej notacji
 \begin{equation}
   \label{eq:Wojtynski-34}
-  A \alpha \vecvbold = \alpha A \vecvbold.
+  A \, \alpha \, \vecvbold = \alpha \, A \, \vecvbold.
 \end{equation}
 
 Ostatecznie, to czy mnożenie zapisujemy z~lewej czy z~prawej strony jest
@@ -1289,11 +1287,11 @@ warto podać dwa kilka użytecznych wzorów:
 \begin{subequations}
   \begin{align}
     \label{eq:Wojtynski-37-A}
-    &\bar{q} = e_{ 0 } \, \bar{z}_{ 1 } - e_{ 2 } \, z_{ 2 }, \\
+    \bar{q} &= e_{ 0 } \, \bar{z}_{ 1 } - e_{ 2 } \, z_{ 2 }, \\
     \label{eq:Wojtynski-37-B}
-    &e_{ 0 } \, z = z \, e_{ 0 }, \\
+    e_{ 0 } \, z &= z \, e_{ 0 }, \\
     \label{eq:Wojtynski-37-C}
-    &e_{ 2 } \, z = \bar{z} \, e_{ 2 },
+    e_{ 2 } \, z &= \bar{z} \, e_{ 2 },
   \end{align}
 \end{subequations}
 gdzie $q = e_{ 0 } \, z_{ 1 } + e_{ 2 } \, z_{ 2 }$, $z, z_{ 1 }, z_{ 2 } \in \Cbb$.
@@ -1634,7 +1632,7 @@ Obliczmy teraz $f( \vecvbold )$.
 \begin{equation}
   \label{eq:Wojtynski-64}
   f( \vecvbold ) =
-  f\left( \sum_{ j = 1 }^{ n } \vecEbold_{ j } \, v_{ j } \right) =
+  f\!\left( \sum_{ j = 1 }^{ n } \vecEbold_{ j } \, v_{ j } \right) =
   \sum_{ j = 1 }^{ n } f( \vecEbold_{ j } ) \, v_{ j }.
 \end{equation}
 Rozłóżmy teraz wektor $f( \vecEbold_{ i } )$ na wektory bazy
@@ -1865,7 +1863,7 @@ W~tym celu obliczmy $M( \id )$:
   \sum_{ j = 1 }^{ n } \sum_{ i = 1 }^{ n } \vecEbold_{ i } \, e_{ 0 } \,
   \delta^{ j }_{ i } \, v_{ j },
 \end{equation}
-co dowodzi, że~$M( \id ) = [ e_{ 0 } \, \delta^{ j }_{ i } ]$. Przejdźmy do
+co dowodzi, że~$M( \id ) = [ e_{ 0 } \, \delta^{ i }_{ j } ]$. Przejdźmy do
 zbadania $M( f \circ g )$.
 \begin{equation}
   \label{eq:Wojtynski-82}
