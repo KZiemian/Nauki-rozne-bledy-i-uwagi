@@ -1937,26 +1937,26 @@ by~na jej podstawie wyznaczyć macierz $A' = [ a'_{ i j } ]$,
 $a_{ i j } \in \Cbb$, o~wymiarach $2n \times 2n$, należy~się uciec do bezpośrednich
 rachunków. Do tego celu określamy w~$\Cbb^{ 2n }$ standardową bazę
 \begin{equation}
-  \label{eq:Wojtynski-84}
+  \label{eq:Wojtynski-87}
   \veccbold_{ i } = \big( \delta^{ l }_{ i } \big), \quad
   i = 1, 2, \ldots, 2n.
 \end{equation}
 Analogicznie dla przestrzeni $\Hbb^{ n }$ nad $\Hbb$ określamy bazę
 \begin{equation}
-  \label{eq:Wojtynski-85}
+  \label{eq:Wojtynski-88}
   \vechbold_{ i } = \big( e_{ 0 } \, \delta^{ l }_{ i } \big), \quad
   i = 1, 2, \ldots, n,
 \end{equation}
 Będziemy również potrzebowali skorzystać z~następującej notacji
 \begin{equation}
-  \label{eq:Wojtynski-86}
+  \label{eq:Wojtynski-89}
   q = e_{ 0 } \, P_{ 1 }( q ) + e_{ 2 } \, P_{ 2 }( q ), \quad
   q \in \Hbb.
 \end{equation}
 
 Obliczmy teraz
 \begin{equation}
-  \label{eq:Wojtynski-87}
+  \label{eq:Wojtynski-90}
   s^{ -1 }( \veccbold_{ i } ) =
   \begin{cases}
     \vechbold_{ i } = ( e_{ 0 } \, \delta^{ l }_{ i } ), &i = 1, 2, \ldots, n \\
@@ -1966,7 +1966,7 @@ Obliczmy teraz
 \end{equation}
 Rozpatrzmy przypadek $i = 1, 2, \ldots, n$. Mamy
 \begin{equation}
-  \label{eq:Wojtynski-88}
+  \label{eq:Wojtynski-91}
   \big( A \circ s^{ -1 } \big)( \veccbold_{ i } ) =
   \sum_{ k = 1 }^{ n } \vechbold_{ k } \sum_{ l = 1 }^{ n }
   a_{ k l } \, e_{ 0 } \, \delta^{ l }_{ i } =
@@ -1974,7 +1974,7 @@ Rozpatrzmy przypadek $i = 1, 2, \ldots, n$. Mamy
 \end{equation}
 Dla przypadku $i = n + 1, n + 2, \ldots, n + 3$ mamy
 \begin{equation}
-  \label{eq:Wojtynski-89}
+  \label{eq:Wojtynski-92}
   \big( A \circ s^{ -1 } \big)( \veccbold_{ i } ) =
   \sum_{ k = 1 }^{ n } \vechbold_{ k } \sum_{ l = 1 }^{ n }
   a_{ k l } \, e_{ 2 } \, \delta^{ l }_{ i } =
@@ -1982,13 +1982,13 @@ Dla przypadku $i = n + 1, n + 2, \ldots, n + 3$ mamy
 \end{equation}
 Z~definicji $S$ wynika, że
 \begin{equation}
-  \label{eq:Wojtynski-90}
+  \label{eq:Wojtynski-93}
   s( \vechbold_{ i } \, q ) =
   \veccbold_{ i } \, P_{ 1 }( q ) + \veccbold_{ i + n } \, P_{ 2 }( q ).
 \end{equation}
 Ponieważ $s$ jest funkcją addytywną, możemy teraz obliczyć
 \begin{equation}
-  \label{eq:Wojtynski-91}
+  \label{eq:Wojtynski-94}
   \big( s \circ A \circ s^{ -1 } \big)( \veccbold_{ i } ) =
   s\left( \sum_{ k = 1 }^{ n } \vechbold_{ k } \, a_{ k i } \right) =
   \sum_{ k = 1 }^{ n } \big( \veccbold_{ k } \, P_{ 1 }( a_{ k i } )
@@ -1996,7 +1996,7 @@ Ponieważ $s$ jest funkcją addytywną, możemy teraz obliczyć
 \end{equation}
 dla $i = 1, 2, \ldots, n$. Analogicznie dostajemy
 \begin{equation}
-  \label{eq:Wojtynski-92}
+  \label{eq:Wojtynski-95}
   \big( s \circ A \circ s^{ -1 } \big)( \veccbold_{ i } ) =
   s\left( \sum_{ k = 1 }^{ n } \vechbold_{ k } \, a_{ k i } \right) =
   \sum_{ k = 1 }^{ n } \big( \veccbold_{ k } \, P_{ 1 }( a_{ k i } \, e_{ 2 } )
@@ -2005,7 +2005,7 @@ dla $i = 1, 2, \ldots, n$. Analogicznie dostajemy
 dla $i = n + 1, n + 2, \ldots, 2n$. Otrzymujemy tym samym wzór na wyrazy
 $a'_{ i j }$ macierzy $A' = M\!\left( s \circ L( A ) \circ s^{ -1 } \right)$.
 \begin{equation}
-  \label{eq:Wojtynski-93}
+  \label{eq:Wojtynski-96}
   a'_{ i j } =
   \begin{cases}
     P_{ 1 }( a_{ i j } ), &i = 1, 2, \ldots, n, \qquad \qquad \quad
