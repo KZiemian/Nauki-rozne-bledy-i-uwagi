@@ -1207,6 +1207,17 @@ wygenerowaniem w~\LaTeX{} macierzy, która lepiej ilustrowałaby problem.
 
 
 
+\Str{34} Na tej stronie przyjęliśmy milcząco utożsamienie odwzorowania
+liniowego z~odpowiadającą mu macierzą. W~większości przypadków nie prowadzi
+to do nieporozumień, jednak jak pokazują to notatki do strony 34,
+zignorowanie tego rozróżnienia, może prowadzić do poważnych nieporozumień.
+
+\vspace{\spaceFour}
+
+
+
+
+
 \StrWg{34}{8} Aby definicja przestrzeni $\spFrak( n, \Kbb )$ była
 ścisła, należy doprecyzować czym jest pojawiająca~się w~niej forma $\omega$.
 Należy bowiem przyjąć, że~$\omega$ nie jest dowolną formą symplektyczną, czyli
@@ -1295,6 +1306,30 @@ warto podać dwa kilka użytecznych wzorów:
   \end{align}
 \end{subequations}
 gdzie $q = e_{ 0 } \, z_{ 1 } + e_{ 2 } \, z_{ 2 }$, $z, z_{ 1 }, z_{ 2 } \in \Cbb$.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\Str{39} Na tej stronie zdefiniowano kwaternionowe macierze symplektyczne
+jako macierze należące do $\GL( n, \Hbb )$, dla których zachodzi
+zależność\footnote{Utożsamiamy tu macierz z~odpowiadającym jej
+  odwzorowaniem liniowym.}
+\begin{equation}
+  \label{eq:Wojtynski-38}
+  \langle A \, a, A \, b \rangle_{ \Hbb } = \langle a, \, b \rangle_{ \Hbb }.
+\end{equation}
+Ta definicja zwalnia nas z~potrzeby sprawdzania, czy $A$ przedstawia
+izomorfizm, jest to bowiem prawdą na mocy definicji. Powstaje jednak
+pytanie, czy każda macierz spełniająca relację \eqref{eq:Wojtynski-38}
+przedstawia izomorfizm?
+
+W~przypadku macierzy o~elementach z~$\Rbb$ lub $\Cbb$ odpowiedź jest
+twierdząca, możemy bowiem skorzystać ze znanych własności wyznacznika.
+Jednak wcale nie jest pewne, że~wszystkie potrzebne własności obowiązują
+dla macierzy o~elementach kwaternionowych.
 
 \vspace{\spaceFour}
 
@@ -1790,7 +1825,7 @@ odwzorowań tworzą monoidy\footnote{Przypomnijmy, że monoid różni się od
 razu będzie wynikało, że~zbiory $\GL( n, \Hbb )$ i~$\Aut( \Hbb^{ n } )$
 (zbiór automorfizmów liniowych $\Hbb^{ n }$) tworzą grupy. Dokładniej
 monoidami są $( \lFrak( n, \Hbb ), I, \cdot )$
-i~$( \End( \Hbb^{ n } ), \id, \circ )$, gdzie $I = [ e_{ 0 } \, \delta^{ j }_{ i } ]$ to
+i~$( \End( \Hbb^{ n } ), \id, \circ )$, gdzie $I = [ e_{ 0 } \, \delta^{ i }_{ j } ]$ to
 macierz jednostkowa, $\cdot$ to działanie mnożenia macierzy określone we~wzorze \eqref{eq:Wojtynski-44}, $\id$ to odwzorowanie identycznościowe
 na~$\Hbb^{ n }$:
 \begin{equation}
@@ -1803,10 +1838,11 @@ Przypadek $\End( \Hbb^{ n } )$ jest bardzo prosty, bo jak wiadomo składanie
 odwzorowań jest zawsze łączne, zaś pokazanie, że $\id$ jest elementem
 neutralnym nie sprawia żadnych trudności. Przejdźmy teraz do przypadku
 $\lFrak( n, \Hbb )$. Jedyny problem jaki może~się pojawić przy dowodzeniu,
-że~$I = [ e_{ 0 } \, \delta^{ j }_{ i } ]$ jest elementem neutralnym względem
-mnożenia macierzy, jest złe zapisanie sumy po indeksach. Wedle konwencji
-przyjętej przez Wojtyńskiego w~zapisie $\delta^{ j }_{ i }$, $i$ oznacza numer
-wiersza, a~$j$ numer kolumny.
+że~$I = [ e_{ 0 } \, \delta^{ i }_{ j } ]$ jest elementem neutralnym względem
+mnożenia macierzy, jest złe zapisanie sumy po indeksach, ze względu na to,
+że~inną konwencja obowiązuje, gdy symbol delty występuje w~zapisie wektora,
+jak $( \delta^{ i }_{ j } )$, inny gdy pojawia~się w~zapisie macierzy,
+jak $[ \delta^{ i }_{ j } ]$.
 
 Przejdźmy teraz do problemu łączności mnożenia macierzy. Łączność tego
 działania oznacza, że~zachodzi $( A \cdot B ) \cdot C = A \cdot ( B \cdot C )$ dla
@@ -1972,7 +2008,7 @@ Rozpatrzmy przypadek $i = 1, 2, \ldots, n$. Mamy
   a_{ k l } \, e_{ 0 } \, \delta^{ l }_{ i } =
   \sum_{ k = 1 }^{ n } \vechbold_{ k } \, a_{ k i }.
 \end{equation}
-Dla przypadku $i = n + 1, n + 2, \ldots, n + 3$ mamy
+Dla przypadku $i = n + 1, n + 2, \ldots, 2n$ mamy
 \begin{equation}
   \label{eq:Wojtynski-92}
   \big( A \circ s^{ -1 } \big)( \veccbold_{ i } ) =
@@ -2018,6 +2054,42 @@ $a'_{ i j }$ macierzy $A' = M\!\left( s \circ L( A ) \circ s^{ -1 } \right)$.
                                        j = n + 1, n + 2, \ldots, 2n.
   \end{cases}
 \end{equation}
+
+Na koniec chcemy ponownie zwrócić uwagę na to, że~Wojtyński często zapisuje
+$s \circ A \circ s^{ -1 }$ twierdząc, iż jest to macierz. Jak wspomnieliśmy bardziej
+precyzyjnym zapisem byłoby $M\!( s \circ L( A ) \circ s^{ -1 } )$, mamy jednak
+nadzieję, że~po podanych tu wyjaśnieniach, rozpoznanie co jest gdzie
+w~rozważaniach mamy odwzorowanie liniowe, a~gdzie odpowiadającą mu macierz,
+nie sprawi problemu.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\Str{40} Na tej stronie użyta jest notacja
+\begin{equation}
+  \label{eq:Wojtynski-97}
+  A \, ( a ) \, q,
+\end{equation}
+gdzie $a \in \Hbb^{ n }$, $q \in \Hbb$, $A \in \lFrak( n, \Hbb )$, przy czym
+utożsamiamy macierz $A$ z~odpowiadającym jej odwzorowaniem liniowym.
+Notacja ta ma wyrażać, że~najpierw $A$ działa na wektor $a$ i~dopiero wynik
+tej operacji mnożymy przez liczbę $q$. Według mnie znacznie lepiej wyraża
+to notacja.
+\begin{equation}
+  \label{eq:Wojtynski-98}
+  ( A \, a ) \, q.
+\end{equation}
+
+
+
+
+
+
+
+
 
 
 
@@ -2168,10 +2240,11 @@ $a'_{ i j }$ macierzy $A' = M\!\left( s \circ L( A ) \circ s^{ -1 } \right)$.
     39  &  8 & & $z_{ n + 1 }$ & $z_{ n + i }$ \\
     39  & &  8 & $\langle s^{ -1 }( z ), \, s^{ -1 }( w ) \rangle_{ \Hbb } =$
            & zachodzi $\langle s^{ -1 }( z ), \, s^{ -1 }( w ) \rangle_{ \Hbb } =$ \\
+    39  & & 10 & $\bar{z}_{ n + 1 }$ & $\bar{z}_{ n + i }$ \\
+    39  & &  7 & $\varphi\big( s( a ), s( b ) \big)$
+           & $\overline{ \varphi\big( s( a ), s( b ) \big) }$ \\
     50  & &  8 & $e_{ i } ( e_{ j } \cdot e_{ k } )$
            & $e_{ i } \cdot ( e_{ j } \cdot e_{ k } )$ \\
-           % & &  &  &  \\
-           % & & & & \\
            % & & & & \\
            % & & & & \\
            % & &  & & \\
