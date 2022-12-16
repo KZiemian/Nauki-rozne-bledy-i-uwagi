@@ -1710,7 +1710,8 @@ gdzie w~ostatnim kroku skorzystaliśmy z własności prawdziwej dla
 wszystkich przestrzeni wektorowych:
 $( v \, \beta ) \, \alpha = v \, ( \beta \, \alpha )$ dla $\alpha, \beta \in \Hbb$, $v \in V$. By ją
 udowodnić dla $\Hbb^{ n }$ wystarczy skorzystać z~łączności mnożenia
-kwaternionów. Jeśli $f \, \alpha$ byłoby odwzorowanie liniowym to musiałoby zachodzić
+kwaternionów. Jeśli $f \, \alpha$ byłoby odwzorowanie liniowym to musiałoby
+zachodzić
 \begin{equation}
   \label{eq:Wojtynski-73}
   ( f \, \alpha )( \vecvbold \, \beta ) =
@@ -1866,7 +1867,7 @@ W~tym celu obliczmy $M( \id )$:
 co dowodzi, że~$M( \id ) = [ e_{ 0 } \, \delta^{ i }_{ j } ]$. Przejdźmy do
 zbadania $M( f \circ g )$.
 \begin{equation}
-  \label{eq:Wojtynski-82}
+  \label{eq:Wojtynski-84}
   \begin{split}
     ( f \circ g )( \vecvbold )
     &=
@@ -1888,7 +1889,7 @@ kwaternionów: przemienności, łączności i~rozdzielności względem dodawanie
 oraz własności mnożenia wektora przez elementy ciała. Równość ta pokazuje,
 że
 \begin{equation}
-  \label{eq:Wojtynski-82}
+  \label{eq:Wojtynski-85}
   M( f \circ g ) = \left[ \sum_{ k = 1 } f_{ i k } \, g_{ k j } \right] =
   [ f_{ i j } ] \cdot [ g_{ k l } ] = M( f ) \cdot M( g ).
 \end{equation}
@@ -1907,87 +1908,116 @@ byty.
 
 Przejdźmy teraz do omówienia odwzorowanie $s : \Cbb^{ 2n } \to \Hbb^{ n }$.
 Jest to izomorfizm liniowy $\Cbb^{ 2n }$ i~$\Hbb^{ n }$ traktowanych
-jako przestrzenie wektorowe nad $\Cbb$. W~$\Cbb^{ 2n }$ określamy standardową bazę
+jako przestrzenie wektorowe nad $\Cbb$. Wedle tego co pisze w~książce
+Wojtyńskiego $S( A ) = s \circ A \circ s^{ -1 }$ jest transformacją przekształcającą
+macierz $A \in \lFrak( n, \Hbb )$ w~macierz $S( A ) \in \lFrak( 2n, \Cbb )$.
+Jest to jednak pewna nieścisłość. W~istocie $S$ przekształca endomorfizm
+$\Hbb^{ n }$ w~endomorfizm $\Cbb^{ n }$
+\begin{equation}
+  \label{eq:Wojtynski-86}
+  \End( \Hbb^{ 2 } ) \ni f \mapsto S( f ) = s \circ f \circ s^{ -1 } \in \End( \Cbb^{ 2n } ).
+\end{equation}
+To, że~$S( f )$ jest odwzorowaniem liniowym nad $\Cbb$ wynika wprost
+z~tego, że~jest ono złożeniem odwzorowań liniowych. Widzimy więc, że~dowód
+liniowości nad $\Cbb$ odwzorowanie $S( f )$, który w~książce jest
+przeprowadzony w~sposób dziwny i~chaotyczny, jest natychmiastowy, jeśli
+tylko odpowiednio uporządkujemy pojęcia. Należy jednak zwrócić uwagę,
+że~dla nas najważniejsze są nie przestrzenie odwzorowań liniowych, lecz
+przestrzenie macierzy, więc musimy kontynuować nasze rozważania w~tym
+kierunku.
 
-$S : \lFrak( n, \Hbb ) \to \lFrak( 2n, \Cbb )$, które określimy w~sposób bardziej formalny, niż zostało to zrobione w~książce.
+Pokażemy teraz, jak można obliczyć macierz
+$A' = M\!\left( s \circ L( A ) \circ s^{ -1 } \right)$. Ponieważ $s$ i~$s^{ -1 }$
+\textit{nie} są odwzorowaniami liniowymi między $\Cbb^{ 2n }$ jako
+przestrzeni wektorowej nad $\Cbb$ i~$\Hbb^{ n }$ jako przestrzenie
+wektorowej na $\Hbb$, bo są to przestrzenie nad różnymi ciałami, więc nie
+można oczekiwać, by dało~się je wyrazić za pomocą macierzy. Jeśli więc mamy
+daną macierz $A = [ a_{ i j } ]$, $a_{ i j } \in \Hbb$, o~wymiarach $n \times n$, to
+by~na jej podstawie wyznaczyć macierz $A' = [ a'_{ i j } ]$,
+$a_{ i j } \in \Cbb$, o~wymiarach $2n \times 2n$, należy~się uciec do bezpośrednich
+rachunków. Do tego celu określamy w~$\Cbb^{ 2n }$ standardową bazę
+\begin{equation}
+  \label{eq:Wojtynski-84}
+  \veccbold_{ i } = \big( \delta^{ l }_{ i } \big), \quad
+  i = 1, 2, \ldots, 2n.
+\end{equation}
+Analogicznie dla przestrzeni $\Hbb^{ n }$ nad $\Hbb$ określamy bazę
+\begin{equation}
+  \label{eq:Wojtynski-85}
+  \vechbold_{ i } = \big( e_{ 0 } \, \delta^{ l }_{ i } \big), \quad
+  i = 1, 2, \ldots, n,
+\end{equation}
+Będziemy również potrzebowali skorzystać z~następującej notacji
+\begin{equation}
+  \label{eq:Wojtynski-86}
+  q = e_{ 0 } \, P_{ 1 }( q ) + e_{ 2 } \, P_{ 2 }( q ), \quad
+  q \in \Hbb.
+\end{equation}
 
-% W~dalszym ciągu dla uczynienia rozważań bardziej ścisłymi, będziemy używać
-% w~dalszym ciągu jawnie używać symboli $\cdot_{ X }$ i~$\cdot_{ Y }$ dla oznaczenia
-% możenia wewnętrznego w~przestrzeniach $X$ i~$Y$, lecz działanie dodawania
-% w~tych przestrzeniach będziemy zawsze oznaczać tym samym symbolem $+$. Używanie symboli $+_{ X }$ i~$+_{ Y }$ nie wydaje się nam szczególnie potrzebne.
-
-% Zwróćmy teraz uwagę na dwie rzeczy. Po pierwsze, jeśli $f \in \Hom( X, Y )$ jest izomorfizmem prawych półalgebr, to $f^{ -1 } \in \Hom( Y, X )$ również jest izomorfizmem prawych półalgebr. Choć dowód tego faktu oparty jest na standardowej technice, przytoczymy go tutaj dla jasności wywodu. Wiadomo, że jeśli $f \in \Hom( X, Y )$ jest izomorfizmem przestrzeni wektorowych, to odwrotna bijekcja też jest izomorfizmem przestrzeni wektorowych. Rozpatrzmy $\vecybold_{ 1 }, \vecybold_{ 2 } \in Y$. Istnieją $\vecxbold_{ 1 }, \vecxbold_{ 2 } \in X$, taki że $f( \vecxbold_{ 1 } ) = \vecybold_{ 1 }$, $f( \vecxbold _{ 2 } ) = \vecybold_{ 2 }$ lub równoważnie $f^{ -1 }( \vecybold_{ 1 } ) = \vecxbold_{ 1 }$, $f^{ -1 }( \vecybold_{ 2 } ) = \vecxbold_{ 1 }$. Mamy
-% \begin{equation}
-%   \label{eq:Wojtynski-69}
-%   f( \vecxbold_{ 1 } \cdot_{ X } \vecxbold_{ 2 } ) =
-%   f( \vecxbold_{ 1 } ) \cdot_{ Y } f( \vecxbold_{ 2 } ) =
-%   \vecybold_{ 1 } \cdot_{ Y } \vecybold_{ 2 }.
-% \end{equation}
-% Zadziałajmy odwzorowanie $f^{ -1 }$ na obie strony powyższej równości.
-% \begin{equation}
-%   \label{eq:Wojtynski-70}
-%   \vecxbold_{ 1 } \cdot_{ X } \vecxbold_{ 2 } =
-%   f^{ -1 }( \vecybold_{ 1 } \cdot_{ Y } \vecybold_{ 2 } ).
-% \end{equation}
-% Powyższą równość możemy przepisać jako
-% \begin{equation}
-%   \label{eq:Wojtynski-71}
-%   f^{ -1 }( \vecybold_{ 1 } \cdot_{ Y } \vecybold_{ 2 } ) =
-%   f^{ -1 }( \vecybold_{ 1 } ) \cdot_{ X } f^{ -1 }( \vecybold_{ 2 } ).
-% \end{equation}
-
-% Po drugie, jeśli $X$ jest prawą półalgebrą, a~$Y$ jest przestrzenią
-% wektorową, jak zwykle nad tym samym działem, która posiada działanie
-% wewnętrzne $\cdot_{ Y }$ oraz istnieje izomorfizm liniowy $f : X \to Y$, to $Y$
-% jest prawą półalgebrą. Dowód tej własności przebiega w~następujący sposób.
-% Rozpatrzmy wyrażenie
-% \begin{equation}
-%   \label{eq:Wojtynski-72}
-%   \vecybold_{ 1 } \cdot ( \vecybold_{ 2 } + \vecybold_{ 3 } ), \quad
-%   \vecybold_{ 1 }, \vecybold_{ 2 }, \vecybold_{ 3 } \in Y.
-% \end{equation}
-% Istnieją takie $\vecxbold_{ 1 }, \vecxbold_{ 2 }, \vecxbold_{ 3 } \in X$, takie że $f( \vecxbold_{ 1 } ) = \vecybold_{ 1 }$, $f( \vecxbold_{ 2 } ) = \vecybold_{ 2 }$, $f( \vecxbold_{ 3 } ) = \vecybold_{ 3 }$. Obliczmy
-% \begin{equation}
-%   \label{eq:Wojtynski-73}
-%   f\big( \vecxbold_{ 1 }
-%   \cdot_{ X } ( \vecxbold_{ 2 } + \vecxbold_{ 3 } ) \big) =
-%   f( \vecxbold_{ 1 } ) \cdot_{ Y } f( \vecxbold_{ 2 } + \vecxbold_{ 3 } ) =
-%   f( \vecxbold_{ 1 } ) \cdot_{ Y } \big( f( \vecxbold_{ 2 } )
-%   + f( \vecxbold_{ 3 } ) \big) =
-%   \vecybold_{ 1 } \cdot_{ Y } ( \vecybold_{ 2 } + \vecybold_{ 3 } ).
-% \end{equation}
-% Z~drugiej strony
-% \begin{equation}
-%   \label{eq:12}
-%   \begin{split}
-%     f\big( \vecxbold_{ 1 }
-%     \cdot_{ X } ( \vecxbold_{ 2 } + \vecxbold_{ 3 } ) \big)
-%     &=
-%       f( \vecxbold_{ 1 } \cdot_{ X } \vecxbold_{ 2 }
-%       + \vecxbold_{ 1 } \cdot_{ X } \vecxbold_{ 3 } ) =
-%       f( \vecxbold_{ 1 } \cdot_{ X } \vecxbold_{ 2 } )
-%       + f( \vecxbold_{ 1 } \cdot_{ X } \vecxbold_{ 3 } ) = \\
-%     x&=
-%       f( \vecxbold_{ 1 } ) \cdot_{ Y } f( \vecxbold_{ 2 } )
-%       + f( \vecxbold_{ 1 } ) \cdot_{ Y } f( \vecxbold_{ 3 } ) =
-%       \vecybold_{ 1 } \cdot_{ Y } \vecybold_{ 2 }
-%       + \vecybold_{ 1 } \cdot_{ Y } \vecybold_{ 3 }.
-%   \end{split}
-% \end{equation}
-% ?????
-
-
-% Przejdźmy teraz do dowodu tego, że~$\lFrak( n, \Kbb )$ tworzy algebrę,
-% gdzie $\Rbb$, $\Cbb$ lub $\Hbb$. By udowodnić własności
-% \begin{equation}
-%   \label{eq:Wojtynski-43}
-%   ( A + B ) v = A v + B v,
-% \end{equation}
-% wystarczy by dodawanie było rozdzielne względem mnożenia, co jest prawdą
-% we~wszystkich rozważanych typach $\Kbb$. Ponieważ dowód tego faktu jest
-% prosty, nie będziemy go tu przytaczać jawnie.
-
-% \vspace{\spaceFour}
+Obliczmy teraz
+\begin{equation}
+  \label{eq:Wojtynski-87}
+  s^{ -1 }( \veccbold_{ i } ) =
+  \begin{cases}
+    \vechbold_{ i } = ( e_{ 0 } \, \delta^{ l }_{ i } ), &i = 1, 2, \ldots, n \\
+    \vechbold_{ i } \, e_{ 2 } = ( e_{ 2 } \, \delta^{ l }_{ i } ),
+    &i = n + 1, n + 2, \ldots, 2n.
+  \end{cases}
+\end{equation}
+Rozpatrzmy przypadek $i = 1, 2, \ldots, n$. Mamy
+\begin{equation}
+  \label{eq:Wojtynski-88}
+  \big( A \circ s^{ -1 } \big)( \veccbold_{ i } ) =
+  \sum_{ k = 1 }^{ n } \vechbold_{ k } \sum_{ l = 1 }^{ n }
+  a_{ k l } \, e_{ 0 } \, \delta^{ l }_{ i } =
+  \sum_{ k = 1 }^{ n } \vechbold_{ k } \, a_{ k i }.
+\end{equation}
+Dla przypadku $i = n + 1, n + 2, \ldots, n + 3$ mamy
+\begin{equation}
+  \label{eq:Wojtynski-89}
+  \big( A \circ s^{ -1 } \big)( \veccbold_{ i } ) =
+  \sum_{ k = 1 }^{ n } \vechbold_{ k } \sum_{ l = 1 }^{ n }
+  a_{ k l } \, e_{ 2 } \, \delta^{ l }_{ i } =
+  \sum_{ k = 1 }^{ n } \vechbold_{ k } \, a_{ k i } \, e_{ 2 }.
+\end{equation}
+Z~definicji $S$ wynika, że
+\begin{equation}
+  \label{eq:Wojtynski-90}
+  s( \vechbold_{ i } \, q ) =
+  \veccbold_{ i } \, P_{ 1 }( q ) + \veccbold_{ i + n } \, P_{ 2 }( q ).
+\end{equation}
+Ponieważ $s$ jest funkcją addytywną, możemy teraz obliczyć
+\begin{equation}
+  \label{eq:Wojtynski-91}
+  \big( s \circ A \circ s^{ -1 } \big)( \veccbold_{ i } ) =
+  s\left( \sum_{ k = 1 }^{ n } \vechbold_{ k } \, a_{ k i } \right) =
+  \sum_{ k = 1 }^{ n } \big( \veccbold_{ k } \, P_{ 1 }( a_{ k i } )
+  + \veccbold_{ k + n } \, P_{ 2 }( a_{ k i } ) \big),
+\end{equation}
+dla $i = 1, 2, \ldots, n$. Analogicznie dostajemy
+\begin{equation}
+  \label{eq:Wojtynski-92}
+  \big( s \circ A \circ s^{ -1 } \big)( \veccbold_{ i } ) =
+  s\left( \sum_{ k = 1 }^{ n } \vechbold_{ k } \, a_{ k i } \right) =
+  \sum_{ k = 1 }^{ n } \big( \veccbold_{ k } \, P_{ 1 }( a_{ k i } \, e_{ 2 } )
+  + \veccbold_{ k + n } \, P_{ 2 }( a_{ k i } \, e_{ 2 } ) \big),
+\end{equation}
+dla $i = n + 1, n + 2, \ldots, 2n$. Otrzymujemy tym samym wzór na wyrazy
+$a'_{ i j }$ macierzy $A' = M\!\left( s \circ L( A ) \circ s^{ -1 } \right)$.
+\begin{equation}
+  \label{eq:Wojtynski-93}
+  a'_{ i j } =
+  \begin{cases}
+    P_{ 1 }( a_{ i j } ), &i = 1, 2, \ldots, n, \qquad \qquad \quad
+                            j = 1, 2, \ldots, n, \\
+    P_{ 2 }( a_{ i j } ), &i = 1, 2, \ldots, n, \qquad \qquad \quad
+                            j = n + 1, n + 2, \ldots, n, \\
+    P_{ 1 }( a_{ i j } \, e_{ 2 } ), &i = n + 1, n + 2, \ldots, 2n, \quad
+                                       j = 1, 2, \ldots, n \\
+    P_{ 2 }( a_{ i j } \, e_{ 2 } ), &i = n + 1, n + 2, \ldots, 2n, \quad
+                                       j = n + 1, n + 2, \ldots, 2n.
+  \end{cases}
+\end{equation}
 
 
 
