@@ -287,8 +287,23 @@ przyjąć, iż rozważamy tylko sytuację $a \neq 0 \neq b$.
 
 
 
-\Str{25} Relacje rekurencji dla współczynników Newtona sprawiają wiele
-w~wywodzie. Dokończ.????
+\Str{25--26} W~opis trójkąta Pascala wkradłą się pewna nieścisłość. Minowicie by
+narysować pierwszą linię zawierającą tylko symbol $\binom{ 0 }{ 0 }$ musimy wiedzieć
+ile on wynosi, a~nie jest wcale jasne, czy jego wartość wynika przeprowadzonych 
+do tej pory rozważań. Jeśli nie to należy przyjąć, że~z~definicji
+\begin{equation}
+  \label{Gancarzewicz-Arytmetyka-03}
+  \binom{ 0 }{ 0 } := 1.
+\end{equation}
+
+Drugi problem dotyczy stwierdzenia, że~gdy znamy $n$-tą linię ,,to następną $( n + 1 )$-szą linię
+budujemy tak, że~dodajemy po dwa kolejne współczynniki z~poprzedniej linii. Bardziej poprawne byłoby
+stwierdzenie, iż~na początku i~końcu $( n + 1 )$-szej linii zapisujemy wartość symboli 
+$\binom{ n + 1 }{ 0 } = \binom{ n + 1 }{ n + 1 } = 1$, pozostałe zaś współczynniki otrzymujemy
+dodając dwa kolejne współczynniki z~linii $n$-tej, tak jak pokazano to na rysunku. Kwestia tego,
+gdzie jest początek i~koniec linii, gdzie musimy wpisać wartości symboli $\binom{ n + 1 }{ 0 }$ 
+i~$\binom{ n + 1 }{ n + 1 }$ w~praktyce nie stanowi problemu, dlatego nie będziemy~się w~ten problem
+zagłębiać.
 
 \vspace{\spaceFour}
 
@@ -296,7 +311,27 @@ w~wywodzie. Dokończ.????
 
 
 
-% \vspace{\spaceFour}
+\Str{26} Przedstawiony tu rysunek z~trójkątem Pascala można by uczynić ładniejszym na wiele różnych sposobów.
+
+\vspace{\spaceFour}
+
+
+
+
+\StrWg{41}{11} Odwołanie do przypisu w~tej linii wygląda naprawdę brzydko, 
+ale nie wiem jak można byłoby to poprawić.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\Str{42} Według mnie symbol $\mod$ oznaczający \textbf{równość dwóch liczb modulo $k$}
+wygląda znacznie lepiej, niż używany w~tej książce symbol $mod$. Dlatego też w~tych notatkach
+zawsze będę~się posługiwał pierwszą z~podanych wersji.
+
+\vspace{\spaceFour}
 
 
 
@@ -343,11 +378,18 @@ w~wywodzie. Dokończ.????
     31  & &  8 & $T( n )$ & $T( 2 )$ \\
     33  &  7 & & $\left( \frac{ 1 - \sqrt{ 5 } }{ 2 } \right.$
     & $\left( \frac{ 1 - \sqrt{ 5 } }{ 2 } \right)$ \\
+    41  &  9 & & $p a$ & $a \, p$ \\
+    41  & &  1 & $a p$ & $a \, p$ \\
+    41  & &  5 & $ba \, p = a \, ( b p )$ & $a \, p , c = a \, ( p \, c )$ \\
+    42  &  7 & & $a \, p q$ & $a \, p \, q$ \\
+    42  &  8 & & $p = \pm 1$ & $p = q = \pm 1$ \\
+    42  &  7 & & $pq$ & $p \, q$ \\
+    42  & 10 & & że & dowodzą,~że \\
+    42  & &  3 & $a_{ 2 } ( mod \, k ) \, ,$ & $a_{ 2 } \, ( \mod \, k ),$ \\
     53  &  6 & & $\cdots 10^{ k } c_{ k }$ & $\cdots + 10^{ k } \, c_{ k }$ \\
     53  & &  3 & $, 10^{ i } c_{ i }$ & $10^{ i } \, c_{ i }$ \\
     56  & &  8 & $\displaystyle \sum_{ = 0 }^{ s }$
       & $\displaystyle \sum_{ i = 0 }^{ s }$ \\
-    % & & & & \\
     % & & & & \\
     % & & & & \\
     \hline
