@@ -239,14 +239,14 @@ Przez ,,zasadę kontrapozycji'' powinno~się rozumieć, tą drugą, mocniejszą 
 Mamy nadzieję, że~będzie on prostsze w~zrozumieniu i~użyciu.}, nazwane dowodami 
 ,,przez sprowadzenie do niedorzeczności'', przypisano zasadzie kontrapozycji: 
 \begin{equation}
-  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-01}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-03}
   ( \alpha \Rightarrow \beta ) \equiv ( \neg \beta \Rightarrow \neg \alpha).
 \end{equation}
 W~rzeczywistości pod nazwą ,,dowody nie wprost'' kryją się dwa typy dowodów, z~których
 jeden opiera~się na podanej powyżej tożsamości. Drugi typ dowodu, który będziemy nazywać 
 \textbf{dowodem przez sprowadzenie do niedorzeczności}, opierajsię na poniższej tożsamości
 \begin{equation}
-  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-02}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-04}
   ( \alpha \Rightarrow \beta ) \equiv \neg \big( \alpha \land ( \neg \beta ) \big).
 \end{equation}
 
@@ -258,6 +258,98 @@ jeden opiera~się na podanej powyżej tożsamości. Drugi typ dowodu, który bę
 
 \StrWg{10}{13} Odniesinie do przypisu numer~$1$ w~tym wierszu wygląda dość brzydko. W~tym momencie 
 nie mam dobrej idei jak to poprawić.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\Str{14} Często przyjmuje~się inną konwecję nazewniczą i~przez \texbf{podzbiory
+właściwe zbioru $A$} uznaje~się wszystkie podzbiory $A$ różne od~$A$ i~$\emptyset$.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\Str{14} Na tej stronie podana jest następująca implikacja
+\begin{equation}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-05}
+  ( A \subset B ) \land ( B \subset A ) \Rightarrow ( A = B ).
+\end{equation}
+W~istocie od razu możemy otrzymać mocniejszy twierdzenie:
+\begin{equation}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-06}
+  ( A \subset B ) \land ( B \subset A ) \equiv ( A = B ).
+\end{equation}
+
+\vspace{\spaceFour}
+
+
+
+
+
+\Str{15--16} Gdy wprowadzamy pojęcie ,,przestrzeni'' w~której, czyli takiego zbioru
+że~wszystkie rozważane zbiory są jego podzbiorami, pojawia~się dodatkowym problem logiczny.
+Oznaczmy naszą przesztrzeń przez $X$ i~rozważmy formułę
+\begin{equation}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-06}
+  x \in A.
+\end{equation}
+Wydaje się, że~poprawna postać tej formuły to
+\begin{equation}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-07}
+  ( x \in X ) \land ( x \in A ),
+\end{equation}
+jednak dla wygody zwykle opuszcza~się pierwszy człon powyższego iloczynu logicznego.
+
+Powstaje jednak pytanie, czy praca w~ramach danej przestrzeni nie wymaga doprecyzowania
+innych formuł logicznych? Oraz czy wzór \eqref{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-07}
+zawiera wszystkie potrzebne modyfikacje, jakie musimy wprowadzić dla formuły $x \in A$.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\Str{16} Niech $X$ oznacza przestrzeń w~której pracujemy. Wprowadzamy oznaczenie
+\begin{equation}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-08}
+  A^{ c } := X \setminus A,
+\end{equation}
+gdzie $\setminus$ oznacza różnicę zbiorów. Teraz możemy zapisać wzór (28)
+obecny na tej stronie jako
+\begin{equation}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-09}
+  ( B^{ c } \subset A^{ c } ) \Rightarrow ( A \subset B ).
+\end{equation}
+Tak jak w~poprzednich przypadkach wypadkach, w~prosty sposób można
+udowodnić silniejszą tożsamość:
+\begin{equation}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-10}
+  ( B^{ c } \subset A^{ c } ) \equiv ( A \subset B ).
+\end{equation}
+
+\vspace{\spaceFour}
+
+
+
+
+
+\Str{18} Zarysowano tu związek między rachunkiem zdań, algebrą zbiorów i~algebrą Boole'a.
+Obawiam~się, że~taka skrótowa forma tych relacji może wprowadzać w~błąd i~prowadzić do nieporozumień.
+Zanim więc przystąpi~się do wyciągania z~tego konkretnych wniosków, musimy bardziej szczegółowo
+przebadać te relacje.
+
+\vspace{\spaceFour}
+
+
+
+
+
 
 
 
@@ -284,8 +376,8 @@ nie mam dobrej idei jak to poprawić.
     5   & &  6 & to & do \\
     11  &  3 & & \textbf{7.} & \textbf{7a.} \\
     11  &  4 & & \textbf{7a.} & \textbf{7b.} \\
-    % & & & & \\
-    % & & & & \\
+    15  & 15 & & 7a, & 7b, \\
+    16  & 12 & & (3), (23) i~(2) & (2), (3) i~(23) \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
