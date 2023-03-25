@@ -14,7 +14,7 @@
 *~
 
 # ignore Emacs auxiliary files
-.#~
+.#*
 
 # ignore auxiliary catalogs
 auto/
