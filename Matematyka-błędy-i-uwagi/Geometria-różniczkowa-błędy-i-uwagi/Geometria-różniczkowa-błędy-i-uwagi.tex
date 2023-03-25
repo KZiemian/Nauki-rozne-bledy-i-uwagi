@@ -29,14 +29,14 @@
 % MARGINS
 % ------------------------------
 \setmarginsrb
-{ 0.7in} % left margin
-{ 0.6in} % top margin
-{ 0.7in} % right margin
-{ 0.8in} % bottom margin
-{  20pt} % head height
-{0.25in} % head sep
-{   9pt} % foot height
-{ 0.3in} % foot sep
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
 
 
 
@@ -229,7 +229,7 @@ To~mogłoby ograniczyć nieporozumienia związane z~tym wzorem.
 \newpage
 
 \Work{ % Autorzy i tytuł dzieła
-  J. Gancarzewicz, B. Opozda \\
+  Jacek Gancarzewicz, Barbara Opozda \\
   \textit{Wstęp do geometrii różniczkowej},
   \cite{GancarzewiczOpozdaWstepDoGeometriiRozniczkowej2003}}
 
@@ -510,9 +510,6 @@ pomocą czcionki kaligraficznej. Będziemy więc w~tych notatkach oznaczać
 klasę funkcji różniczkowalnych nie symbolem $C^{ k }$ lecz $\Ccal^{ k }$,
 etc.
 
-
-?????????? Sprawdzić indeksy delt.
-
 \vspace{\spaceFour}
 
 
@@ -724,8 +721,9 @@ który rozpatrywać będziemy tylko w~kontekście przestrzeni $\Cbb^{ n }$,
 jedynie zwracając tylko uwagę na to, że~przedstawione tu rozumowanie można
 w~prosty sposób uogólnić na~dowolną skończenie wymiarową przestrzeń
 wektorową nad $\Rbb$ i~$\Cbb$. Przypadek przestrzeni wektorowej nad ciałem
-nieprzemiennym, zob. dyskusja strony ??? w~tych notatkach, to osoby
-problem, którym nie będziemy~się zajmować.
+nieprzemiennym, to osoby problem, którym nie będziemy~się zajmować. Pewne
+informacje o~szczególny przypadku przestrzeni nich są zawarte w~tych
+notatkach w~uwagach do strony~39.
 
 Po pierwsze zauważmy, że~$x$ po lewej stronie tego wzoru oznacza coś
 innego, niż po prawej. Po lewej $x$ oznacza ciąg (kolumnę) liczb $n$ liczb
@@ -770,14 +768,14 @@ Wzór \eqref{eq:Wojtynski-07} zapiszemy teraz jako
 \end{equation}
 
 Weźmy teraz $\vecxbold = \vecebold_{ i }$, $\vecybold = \vecebold_{ j }$.
-Z~wzoru \eqref{eq:Wojtynski-09} wynika teraz, że~$x_{ l } = \delta^{ i }_{ l }$,
+Z~wzoru \eqref{eq:Wojtynski-09} wynika teraz, że~$x_{ l } = \delta^{ l }_{ i }$,
 $y_{ m } = \delta^{ m }_{ j }$ (ta konwekcja zapisu symbolu $\delta^{ i }_{ j }$ została
 wprowadzona na stronie~33 książki Wojtyńskiego) i~tym samym
 \begin{equation}
   \label{eq:Wojtynski-11}
   \omega( \vecebold_{ i }, \vecebold_{ j } ) = x^{ T } \Omega \, y =
   \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } x_{ l } \, \Omega_{ l m } \, y_{ m } =
-  \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } \delta^{ i }_{ l } \, \Omega_{ l m } \, \delta^{ j }_{ m } =
+  \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } \delta^{ i }_{ l } \, \Omega_{ l m } \, \delta^{ m }_{ j } =
   \Omega_{ i j },
 \end{equation}
 gdzie $\Omega_{ l m }$ oznacza wyraz macierzy $\Omega$ znajdujący~się na przecięciu
@@ -982,8 +980,8 @@ Jej elementy dane są jako
   \label{eq:Wojtynski-23}
   \Omega^{ 0 }_{ l m } =
   \begin{cases}
-    -\delta^{ l }_{ m - l }, \quad l = 1, 2, \ldots, k, \\
-    \hphantom{-} \delta^{ l - k }_{ m }, \quad l = k + 1, k + 2, \ldots, k.
+    \hphantom{-} \delta^{ l }_{ m - k }, \quad l = 1, 2, \ldots, k, \\
+    -\delta^{ l - k }_{ m }, \quad l = k + 1, k + 2, \ldots, n.
   \end{cases}
 \end{equation}
 We wzorach powyżej symbol $\delta^{ i }_{ j }$ oznacza symbol Kroneckera, nie zaś
@@ -1149,7 +1147,7 @@ $1 \leq j \leq k$. Obliczmy teraz
   -x_{ k + j } = 0.
 \end{equation}
 Widzimy więc, że~$x_{ i } = 0$, dla $k + 1 \leq i \leq n$. Analogicznie biorąc
-$\vecebold = ( \delta^{ i }_{ k + j } )$ przy $1 \leq j \leq k$, dowodzimy,
+$\vecybold = ( \delta^{ i }_{ k + j } )$ przy $1 \leq j \leq k$, dowodzimy,
 że~$x_{ i } = 0$ dla $1 \leq i \leq k$. Tym samym pokazaliśmy,
 że~$\vecxbold = \vecZeroBold$. To~kończy dowód twierdzenia, iż~każda forma
 symplektyczna jest dwuliniową, antysymetryczną i~nieosobliwą.
@@ -1209,6 +1207,17 @@ wygenerowaniem w~\LaTeX{} macierzy, która lepiej ilustrowałaby problem.
 
 
 
+\Str{34} Na tej stronie przyjęliśmy milcząco utożsamienie odwzorowania
+liniowego z~odpowiadającą mu macierzą. W~większości przypadków nie prowadzi
+to do nieporozumień, jednak jak pokazują to notatki do strony 34,
+zignorowanie tego rozróżnienia, może prowadzić do poważnych nieporozumień.
+
+\vspace{\spaceFour}
+
+
+
+
+
 \StrWg{34}{8} Aby definicja przestrzeni $\spFrak( n, \Kbb )$ była
 ścisła, należy doprecyzować czym jest pojawiająca~się w~niej forma $\omega$.
 Należy bowiem przyjąć, że~$\omega$ nie jest dowolną formą symplektyczną, czyli
@@ -1257,7 +1266,7 @@ własność jednorodność odwzorowania $A : V \to V$ zapisujemy jako
 nie zaś jak w~standardowej notacji
 \begin{equation}
   \label{eq:Wojtynski-34}
-  A \alpha \vecvbold = \alpha A \vecvbold.
+  A \, \alpha \, \vecvbold = \alpha \, A \, \vecvbold.
 \end{equation}
 
 Ostatecznie, to czy mnożenie zapisujemy z~lewej czy z~prawej strony jest
@@ -1289,14 +1298,38 @@ warto podać dwa kilka użytecznych wzorów:
 \begin{subequations}
   \begin{align}
     \label{eq:Wojtynski-37-A}
-    &\bar{q} = e_{ 0 } \, \bar{z}_{ 1 } - e_{ 2 } \, z_{ 2 }, \\
+    \bar{q} &= e_{ 0 } \, \bar{z}_{ 1 } - e_{ 2 } \, z_{ 2 }, \\
     \label{eq:Wojtynski-37-B}
-    &e_{ 0 } \, z = z \, e_{ 0 }, \\
+    e_{ 0 } \, z &= z \, e_{ 0 }, \\
     \label{eq:Wojtynski-37-C}
-    &e_{ 2 } \, z = \bar{z} \, e_{ 2 },
+    e_{ 2 } \, z &= \bar{z} \, e_{ 2 },
   \end{align}
 \end{subequations}
 gdzie $q = e_{ 0 } \, z_{ 1 } + e_{ 2 } \, z_{ 2 }$, $z, z_{ 1 }, z_{ 2 } \in \Cbb$.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\Str{39} Na tej stronie zdefiniowano kwaternionowe macierze symplektyczne
+jako macierze należące do $\GL( n, \Hbb )$, dla których zachodzi
+zależność\footnote{Utożsamiamy tu macierz z~odpowiadającym jej
+  odwzorowaniem liniowym.}
+\begin{equation}
+  \label{eq:Wojtynski-38}
+  \langle A \, a, A \, b \rangle_{ \Hbb } = \langle a, \, b \rangle_{ \Hbb }.
+\end{equation}
+Ta definicja zwalnia nas z~potrzeby sprawdzania, czy $A$ przedstawia
+izomorfizm, jest to bowiem prawdą na mocy definicji. Powstaje jednak
+pytanie, czy każda macierz spełniająca relację \eqref{eq:Wojtynski-38}
+przedstawia izomorfizm?
+
+W~przypadku macierzy o~elementach z~$\Rbb$ lub $\Cbb$ odpowiedź jest
+twierdząca, możemy bowiem skorzystać ze znanych własności wyznacznika.
+Jednak wcale nie jest pewne, że~wszystkie potrzebne własności obowiązują
+dla macierzy o~elementach kwaternionowych.
 
 \vspace{\spaceFour}
 
@@ -1331,28 +1364,28 @@ Opisanie struktur $\lFrak( n, \Hbb )$ wymaga wprowadzenia nowych pojęć.
 Niech $V$ będzie przestrzenią wektorową na ciałem $\Kbb$, na której jest
 zadane jest działanie wewnętrzne
 \begin{equation}
-  \label{eq:Wojtynsi-38}
+  \label{eq:Wojtynsi-39}
   \cdot : V \times V \ni ( \vecvbold, \vecwbold ) \mapsto \vecvbold \cdot \vecwbold \in V.
 \end{equation}
 Rozpatrzmy teraz dwie potencjalne własności tego działania:
 \begin{subequations}
   \begin{align}
-    \label{eq:Wojtynski-39-A}
+    \label{eq:Wojtynski-40-A}
     &( \alpha \, \vecvbold + \beta \, \vecwbold ) \cdot \vecpbold =
       \alpha \, ( \vecvbold \cdot \vecpbold ) + \beta \, ( \vecwbold \cdot \vecpbold ), \\
-    \label{eq:Wojtynski-39-B}
+    \label{eq:Wojtynski-40-B}
     &\vecvbold \cdot ( \alpha \, \vecwbold + \beta \, \vecpbold ) =
       \alpha \, ( \vecvbold \cdot \vecwbold ) + \beta \, ( \vecvbold \cdot \vecpbold ),
   \end{align}
 \end{subequations}
 gdzie $\alpha, \beta \in \Kbb$, $\vecvbold, \vecwbold, \vecpbold \in V$. Jeśli dla
-danej przestrzeni $V$ wzór \eqref{eq:Wojtynski-39-A} zachodzi dla
+danej przestrzeni $V$ wzór \eqref{eq:Wojtynski-40-A} zachodzi dla
 wszystkich możliwych przypadków, to~przestrzeń tą nazywamy \textbf{lewą
   półalgebrą}. Definicje \textbf{lewej półalgebry łącznej}, \textbf{lewej
   półalgebry przemiennej}, etc., są prostymi uogólnieniami definicji dla
 standardowej algebry, nie ma więc potrzeby byśmy je tutaj podawali.
 Analogicznie, jeśli dla wszystkich
-możliwych przypadków zachodzi wzór \eqref{eq:Wojtynski-39-B} to $V$ nazywamy
+możliwych przypadków zachodzi wzór \eqref{eq:Wojtynski-40-B} to $V$ nazywamy
 \textbf{prawą półalgebrą}. Zdefiniowanie \textbf{prawej półalgebry łącznej}
 i~innych możliwych jej typów, nie powinno teraz sprawiać żadnego problemu.
 Łatwo zauważyć, że jeśli dana przestrzeń jest jednocześnie algebrą lewą
@@ -1360,20 +1393,20 @@ i~prawą, to jest ona algebrą w~standardowym sensie tego słowa.
 
 W~dalszym ciągu tych notatek pokażemy~że $\lFrak( n, \Hbb )$ jest prawą
 algebrą nad $\Hbb$, ale nie jest lewą półalgebrą bo nie spełnia warunku
-\eqref{eq:Wojtynski-39-A}.
+\eqref{eq:Wojtynski-40-A}.
 
 Naszą analizę rozpoczniemy od usystematyzowania oznaczeń. Za Wojtyńskim
 przyjmujemy następującą, prawostronną, konwekcję mnożenia elementów
 $\Kbb^{ n }$ przez elementy z~$\Kbb$
 \begin{equation}
-  \label{eq:Wojtynski-40}
+  \label{eq:Wojtynski-41}
   \vecvbold \alpha = ( v_{ 1 } \, \alpha, v_{ 2 } \, \alpha, \ldots, v_{ n } \, \alpha ), \quad
   \alpha \in \Kbb, \, \vecvbold \in \Kbb^{ n }.
 \end{equation}
 Ponadto dla macierzy $A \in \lFrak( n, \Kbb )$ o~elementach $a_{ ij }$,
 $i, j = 1, 2, \ldots, n$ przyjmujemy dodatkowe oznaczenie
 \begin{equation}
-  \label{eq:Wojtynski-41}
+  \label{eq:Wojtynski-42}
   A = [ a_{ i j } ].
 \end{equation}
 Przyjmujemy przy ty, że jeśli w~nawiasach kwadratowych oznaczających macierz
@@ -1383,9 +1416,9 @@ wiersza, a~indeks dolny numer kolumny macierzy. Mnożenie macierzy przez
 element z~$\Kbb$ oraz sumę dwóch macierzy definiujemy w~następujący sposób.
 \begin{subequations}
   \begin{align}
-    \label{eq:Wojtynski-42-A}
+    \label{eq:Wojtynski-43-A}
     A \alpha &= [ a_{ i j } \, \alpha ], \\
-    \label{eq:Wojtynski-42-B}
+    \label{eq:Wojtynski-43-B}
     A + B &= [ a_{ i j } + b_{ i j } ],
   \end{align}
 \end{subequations}
@@ -1394,13 +1427,13 @@ $B = [ b_{ i j } ] \in \lFrak( n, \Kbb )$.
 Również podążając za Wojtyńskim, działanie macierzy na wektor z~$\Kbb^{ n }$
 definiujemy jako
 \begin{equation}
-  \label{eq:Wojtynski-43}
+  \label{eq:Wojtynski-44}
   ( A \vecvbold )_{ i } = \sum_{ j = 1 }^{ n } a_{ i j } \, v_{ j },
 \end{equation}
 gdzie $\vecvbold \in \Kbb^{ n }$, $A \in \lFrak( n, \Kbb )$. Teraz operację
 mnożenia dwóch macierzy z~$\lFrak( n, \Kbb )$ możemy określić jako
 \begin{equation}
-  \label{eq:Wojtynski-44}
+  \label{eq:Wojtynski-45}
   A \cdot B = \left[ \sum_{ l = 1 }^{ n } a_{ i l } \, b_{ l j } \right].
 \end{equation}
 Dla uczynienia rozważań bardziej precyzyjnymi, przez pewien czas mnożenie
@@ -1415,7 +1448,7 @@ wartych osobnej dyskusji. Pierwszym krokiem jest udowodnienie,
 w~\eqref{eq:Wojtynski-42-A}--\eqref{eq:Wojtynski-42-B} jest przestrzenią
 wektorową. Niech $A \in \lFrak( n, \Kbb )$. Własność
 \begin{equation}
-  \label{eq:Wojtynski-45}
+  \label{eq:Wojtynski-46}
   A \, 1 = A,
 \end{equation}
 gdzie $1$ jest elementem neutralnym mnożenia w~$\Kbb$ wynika wprost
@@ -1423,20 +1456,20 @@ z~definicji mnożenia macierzy przez element z~ciała $\Kbb$ podanej
 w~\eqref{eq:Wojtynski-42-A} oraz własności mnożenia w~ciele $\Kbb$.
 Podobnie własność
 \begin{equation}
-  \label{eq:Wojtynski-46}
+  \label{eq:Wojtynski-47}
   A \, ( \beta \, \alpha ) = ( A \, \beta ) \, \alpha, \quad \alpha, \beta \in \Kbb,
 \end{equation}
 wynika, jak poprzednio z~definicji mnożenia macierzy przez element z~ciała
 oraz łączności mnożenia w~ciele $\Kbb$. W~dalszym ciągu nie będziemy jawnie
 przywoływać miejsc w~których korzystamy z~definicji
-\eqref{eq:Wojtynski-42-A}--\eqref{eq:Wojtynski-42-B}, pozostaniemy przy
+\eqref{eq:Wojtynski-43-A}--\eqref{eq:Wojtynski-43-B}, pozostaniemy przy
 przytaczaniu potrzebnych własności z~ciała $\Kbb$. Z~rozdzielności dodawania
 względem mnożenia w~ciele $\Kbb$ wynikają dwie poniższe własności
 \begin{subequations}
   \begin{align}
-    \label{eq:Wojtynski-47-A}
+    \label{eq:Wojtynski-48-A}
     &A \, ( \alpha + \beta ) = A \, \alpha + A \, \beta, \\
-    \label{eq:Wojtynski-47-B}
+    \label{eq:Wojtynski-48-B}
     &( A + B ) \, \alpha = A \, \alpha + B \, \beta,
   \end{align}
 \end{subequations}
@@ -1446,11 +1479,11 @@ elementu $a \in \Kbb$ istnieje element odwrotny względem dodawania $-a$,
 dowodzimy
 \begin{subequations}
   \begin{align}
-    \label{eq:Wojtynski-48-A}
+    \label{eq:Wojtynski-49-A}
     &( A + B ) + C = A + ( B + C ), \\
-    \label{eq:Wojtynski-48-B}
+    \label{eq:Wojtynski-49-B}
     &A + B = B + A, \\
-    \label{eq:Wojtynski-48-C}
+    \label{eq:Wojtynski-49-C}
     &A + ( -A ) = 0,
   \end{align}
 \end{subequations}
@@ -1461,25 +1494,25 @@ macierz zerowa\footnote{Macierz, której wszystkie elementy są równe
 przemienność, lub jej brak, mnożenia nie odgrywa żadnej roli.
 
 Teraz przejdziemy do dowodu tego, że~$\lFrak( n, \Kbb )$ wraz z~działaniem
-mnożenia macierzy \eqref{eq:Wojtynski-44} jest łączną, nieprzemienną
+mnożenia macierzy \eqref{eq:Wojtynski-45} jest łączną, nieprzemienną
 algebrą. Jak powiedzieliśmy wcześniej, nieprzemienność mnożenia macierzy
 jest dobrze znana, nie będziemy~się więc nad nią zatrzymywać. Łączność
 mnożenia macierzy
 \begin{equation}
-  \label{eq:Wojtynski-49}
+  \label{eq:Wojtynski-50}
   ( A \cdot B ) \cdot C = A \cdot ( B \cdot C ),
 \end{equation}
-wynika z~definicji operacji mnożenia macierzy \eqref{eq:Wojtynski-40} oraz
+wynika z~definicji operacji mnożenia macierzy \eqref{eq:Wojtynski-45} oraz
 z~łączności mnożenia w~ciele $\Kbb$. Własność
 \begin{equation}
-  \label{eq:Wojtynski-50}
+  \label{eq:Wojtynski-51}
   A \cdot ( B \, \alpha + C \, \beta ) = A \cdot ( B \, \alpha ) + A \cdot ( C \, \beta ) =
   ( A \cdot B ) \, \alpha + ( A \cdot C ) \, \beta,
 \end{equation}
 wynika z~definicji mnożenia macierzy oraz łączności i~rozdzielności
 mnożenia względem dodawania w~ciele $\Kbb$. Jednak
 \begin{equation}
-  \label{eq:Wojtynski-51}
+  \label{eq:Wojtynski-52}
   ( A \, \alpha + B \, \beta ) \cdot C \neq
   ( A \cdot C ) \, \alpha + ( B \cdot C ) \, \beta =
   A \cdot ( C \, \alpha ) + B \cdot ( C \, \beta ).
@@ -1493,22 +1526,22 @@ w~standardowy sposób. Dla $A = B = \matUnit$, $C = \matUnit \, e_{ 2 }$
 i~$\alpha = \beta = \frac{ 1 }{ 2 } e_{ 1 }$ mamy
 \begin{subequations}
   \begin{align}
-    \label{eq:Wojtynski-52-A}
+    \label{eq:Wojtynski-53-A}
     &( A \, \alpha + B \, \beta ) \cdot C = \matUnit \, e_{ 1 } \, e_{ 2 }, \\
-    \label{eq:Wojtynski-52-B}
+    \label{eq:Wojtynski-53-B}
     &( A \cdot C ) \, \alpha + ( B \cdot C ) \, \beta = \matUnit \, e_{ 2 } \, e_{ 1 } =
       -\matUnit \, e_{ 1 } \, e_{ 2 }.
   \end{align}
 \end{subequations}
 Gdyby oprócz wszystkich udowodnionych dotychczas własności, zachodziła
-jeszcze równość we wzorze \eqref{eq:Wojtynski-51}, to~$\lFrak( n, \Kbb )$
+jeszcze równość we wzorze \eqref{eq:Wojtynski-52}, to~$\lFrak( n, \Kbb )$
 byłoby łączną, nieprzemienną algebrą nad ciałem nieprzemiennym.
 O~problemie tym wspominaliśmy już na początku naszych rozważań nad
 strukturą algebraiczną zbiorów $\lFrak( n, \Kbb )$. Jak widać po tym
 przykładzie, problem ten pojawia~się bo mnożenie kwaternionów nie jest
 przemienne.
 
-Zwróćmy uwagę na to, że~gdyby we wzorze \eqref{eq:Wojtynski-42-A}
+Zwróćmy uwagę na to, że~gdyby we wzorze \eqref{eq:Wojtynski-43-A}
 zdefiniowaliśmy mnożenie macierzy $A \in \lFrak( n, \Hbb )$ przez kwaternion
 z~lewej strony, a~nie jak obecnie z~prawej, to wówczas $\lFrak( n, \Hbb )$
 byłoby lewą półalgebrą, nie zaś jako obecnie prawą półalgebrą. Ponieważ
@@ -1522,13 +1555,13 @@ dłużej nad pewnym konsekwencjami nieprzemienność mnożenia kwaternionów Dla
 wszystkich macierzy $\lFrak( n, \Kbb )$, gdzie $\Kbb$ oznacza $\Rbb$ lub
 $\Cbb$, zachodzi własność
 \begin{equation}
-  \label{eq:Wojtynski-53}
+  \label{eq:Wojtynski-54}
   ( \matUnit \alpha ) A = A ( \matUnit \alpha ), \quad
   \alpha \in \Kbb, \, A \in \lFrak( n, \Kbb ),
 \end{equation}
 gdzie $\matUnit$ ponownie oznacza macierz jednostkową. Jednak
 \begin{equation}
-  \label{eq:Wojtynski-54}
+  \label{eq:Wojtynski-55}
   ( \matUnit \alpha ) A \neq A ( \matUnit \alpha ), \quad
   \alpha \in \Hbb, \, A \in \lFrak( n, \Hbb ).
 \end{equation}
@@ -1541,7 +1574,7 @@ Inną własnością odróżniającą macierze z~$\lFrak( n, \Hbb )$ od tych
 z~$\lFrak( n, \Rbb )$ i~$\lFrak( n, \Cbb )$ jest to,
 że~zachodzi
 \begin{equation}
-  \label{eq:Wojtynski-55}
+  \label{eq:Wojtynski-56}
   A ( \vecvbold \, \alpha ) = ( A \vecvbold ) \, \alpha,
 \end{equation}
 gdzie $\alpha \in \Hbb,$ $\vecvbold \in \Hbb^{ n }$, $A \in \lFrak( n, \Hbb )$. Fakt
@@ -1549,7 +1582,7 @@ ten ponownie wynika z~definicji działań oraz łączności i~rozdzielności
 mnożenia
 względem dodawania w~$\Kbb$. Jednakże
 \begin{equation}
-  \label{eq:Wojtynski-56}
+  \label{eq:Wojtynski-57}
   ( A \, \alpha ) \vecvbold \neq ( A \, \vecvbold ) \, \alpha.
 \end{equation}
 Prosty przykład dla którego możemy to zobaczyć to $\alpha = e_{ 2 }$,
@@ -1558,7 +1591,7 @@ podkreślenia tego,
 jak bardzo „nienaturalną” jest ta ostatnia własność, zapiszemy ją
 w~notacji, w~której mnożenie przez liczby obywa~się z~lewej strony.
 \begin{equation}
-  \label{eq:Wojtynski-57}
+  \label{eq:Wojtynski-58}
   ( \alpha \, A ) \vecvbold \neq A ( \alpha \, \vecvbold ).
 \end{equation}
 
@@ -1569,7 +1602,7 @@ stąd, że~mnożenie kwaternionów nie jest przemienne, więc konkretny sposób
 w~jaki definiujemy działanie macierzy $A$ na wektor $v \in \Hbb^{ n }$ ma
 znaczenie dla naszej teorii. Wojtyński zdefiniował je kładąc
 \begin{equation}
-  \label{eq:Wojtynski-58}
+  \label{eq:Wojtynski-59}
   ( A \, \vecvbold )_{ i } = \sum_{ j }^{ n } a_{ i j } \, v_{ j }, \quad
   A = [ a_{ ij } ] \in \lFrak( n, \Hbb ).
 \end{equation}
@@ -1579,7 +1612,7 @@ Gdybyśmy zdefiniowali mnożenie wektorów z~$\Hbb^{ n }$ przez te elementy
 ciała z~lewej strony, to by działanie macierzy na wektor $v$ było
 jednorodne, musielibyśmy zdefiniować je jako
 \begin{equation}
-  \label{eq:Wojtynski-59}
+  \label{eq:Wojtynski-60}
   ( A \, \vecvbold )_{ i } = \sum_{ j }^{ n } v_{ j } \, a_{ i j }.
 \end{equation}
 
@@ -1592,7 +1625,7 @@ jednorodne nad $\Rbb$ i~$\Cbb$, które są podciałami $\Hbb$\footnote{Użyta
   sformułowaniu poprzestać.}. Teraz możemy przejść do dowodu, że~jest ono
 addytywne i~tym samym liniowe. Wykazanie, że
 \begin{equation}
-  \label{eq:Wojtynski-60}
+  \label{eq:Wojtynski-61}
   A ( \vecvbold + \vecwbold ) = A \, \vecvbold + A \, \vecwbold, \quad
   \vecvbold, \, \vecwbold \in \Hbb^{ n },
 \end{equation}
@@ -1615,44 +1648,44 @@ zespolonej (rzeczywistej) grupy liniowej wymiaru~$n$: $\GL( n, \Rbb )$
 
 Niech $f \in \End( \Hbb^{ n } )$. Z~definicji odwzorowania liniowego zachodzi
 \begin{equation}
-  \label{eq:Wojtynski-61}
+  \label{eq:Wojtynski-62}
   f( \vecvbold_{ 1 } \, \alpha + \vecvbold_{ 2 } \, \beta ) =
   f( \vecvbold_{ 1 } ) \, \alpha + f( \vecvbold_{ 2 } ) \, \beta.
 \end{equation}
 Oznaczmy teraz
 \begin{equation}
-  \label{eq:Wojtynski-62}
+  \label{eq:Wojtynski-63}
   \vecEbold_{ i } = ( 0, 0, \ldots, 0, e_{ 0 }, 0, \ldots, 0 ) \in \Hbb^{ n },
 \end{equation}
 gdzie $e_{ 0 }$ znajduje~się na $i$-tej pozycji. Wówczas dla dowolnego
 $\vecvbold \in \Hbb^{ n }$ mamy
 \begin{equation}
-  \label{eq:Wojtynski-63}
+  \label{eq:Wojtynski-64}
   \vecvbold = \sum_{ i = 1 }^{ n } \vecEbold_{ i } \, v_{ i }.
 \end{equation}
 Obliczmy teraz $f( \vecvbold )$.
 \begin{equation}
-  \label{eq:Wojtynski-64}
+  \label{eq:Wojtynski-65}
   f( \vecvbold ) =
-  f\left( \sum_{ j = 1 }^{ n } \vecEbold_{ j } \, v_{ j } \right) =
+  f\!\left( \sum_{ j = 1 }^{ n } \vecEbold_{ j } \, v_{ j } \right) =
   \sum_{ j = 1 }^{ n } f( \vecEbold_{ j } ) \, v_{ j }.
 \end{equation}
 Rozłóżmy teraz wektor $f( \vecEbold_{ i } )$ na wektory bazy
 $\vecEbold_{ i }$ dla $i = 1, 2, \ldots, n$.
 \begin{equation}
-  \label{eq:Wojtynski-65}
+  \label{eq:Wojtynski-66}
   f( \vecEbold_{ j } ) = \sum_{ i = 1 }^{ n } \vecEbold_{ j } \, f_{ i j }.
 \end{equation}
 Teraz, standardowo, przyporządkowujemy odwzorowaniu $f \in \End( \Hbb^{ n } )$
 macierz $[ f_{ i j } ] \in \lFrak( n, \Hbb )$, odwzorowanie to oznaczymy jako
 \begin{equation}
-  \label{eq:Wojtynski-66}
+  \label{eq:Wojtynski-67}
   \End( \Hbb^{ n } ) \ni f \mapsto M( f ) \in \lFrak( n, \Hbb ).
 \end{equation}
 Zauważmy, że~dzięki istnieniu bazy kanonicznej $\vecEbold_{ i }$ wzór
-\eqref{eq:Wojtynski-58} określa odwzorowanie
+\eqref{eq:Wojtynski-59} określa odwzorowanie
 \begin{equation}
-  \label{eq:Wojtynski-67}
+  \label{eq:Wojtynski-68}
   \lFrak( n, \Hbb ) \ni A \mapsto L( A ) \in \End( \Hbb^{ n } ).
 \end{equation}
 Używając standardowych metod pokazujemy, że~$M$ i~$L$ są wzajemnie
@@ -1664,21 +1697,21 @@ Teraz zajmiemy~się strukturą algebraiczną $\End( \Hbb^{ n } )$, która jest
 bardzo nieoczywista. W~używanej notacji fakt, że $f \in \End( \Hbb^{ n } )$
 jest odwzorowanie liniowym zapisujemy jako
 \begin{equation}
-  \label{eq:Wojtynski-68}
+  \label{eq:Wojtynski-69}
   f( \vecvbold \, \alpha + \vecwbold \, \beta ) =
   f( \vecvbold ) \, \alpha + f( \vecwbold ) \, \beta, \quad
   \alpha, \beta \in \Hbb, \, \vecvbold, \vecwbold \in \Hbb^{ n }.
 \end{equation}
 Dodawanie dozorowań liniowych definiujemy w~standardowy sposób.
 \begin{equation}
-  \label{eq:Wojtynski-69}
+  \label{eq:Wojtynski-70}
   ( f + g )( \vecvbold ) = f( \vecvbold ) + g( \vecvbold ), \quad
   \vecvbold \in \Hbb^{ n }, \, f, g \in \End( \Hbb^{ n } ).
 \end{equation}
 Jak łatwo sprawdzić suma dwóch odwzorowań liniowych jest liniowa.
 Również złożenie odwzorowań liniowych jest liniowe.
 \begin{equation}
-  \label{eq:Wojtynski-70}
+  \label{eq:Wojtynski-71}
   \begin{split}
     ( f \circ g )( \vecvbold \, \alpha + \vecwbold \, \beta )
     &=
@@ -1697,13 +1730,13 @@ Pozostaje nam rozpatrzyć przypadek iloczynu odwzorowanie liniowego przez
 element z~$\Hbb$. Wedle standardowej definicji określamy ten iloczyn
 za~pomocą wzoru
 \begin{equation}
-  \label{eq:Wojtynski-71}
+  \label{eq:Wojtynski-72}
   ( f \, \alpha )( \vecvbold ) = \big( f( \vecvbold ) \big) \, \alpha, \quad
   \alpha \in \Hbb, \, \vecvbold \in \Hbb^{ n }.
 \end{equation}
 Okazuje~się, że~$f \, \alpha$ nie jest odwzorowaniem liniowym, bowiem
 \begin{equation}
-  \label{eq:Wojtynski-72}
+  \label{eq:Wojtynski-73}
   ( f \, \alpha )( \vecvbold \, \beta ) = f( \vecvbold \, \beta ) \, \alpha =
   \big( f( \vecvbold ) \, \beta \big) \, \alpha =
   f( \vecvbold ) \, ( \beta \, \alpha ),
@@ -1712,31 +1745,32 @@ gdzie w~ostatnim kroku skorzystaliśmy z własności prawdziwej dla
 wszystkich przestrzeni wektorowych:
 $( v \, \beta ) \, \alpha = v \, ( \beta \, \alpha )$ dla $\alpha, \beta \in \Hbb$, $v \in V$. By ją
 udowodnić dla $\Hbb^{ n }$ wystarczy skorzystać z~łączności mnożenia
-kwaternionów. Jeśli $f \, \alpha$ byłoby odwzorowanie liniowym to musiałoby zachodzić
+kwaternionów. Jeśli $f \, \alpha$ byłoby odwzorowanie liniowym to musiałoby
+zachodzić
 \begin{equation}
-  \label{eq:Wojtynski-73}
+  \label{eq:Wojtynski-74}
   ( f \, \alpha )( \vecvbold \, \beta ) =
   \big( ( f \, \alpha )( \vecvbold ) \big) \, \beta =
   \big( f( \vecvbold ) \, \alpha \big) \, \beta =
   f( \vecvbold ) \, ( \alpha \, \beta ).
 \end{equation}
-Biorąc $\alpha = e_{ 1 }$, $\beta = e_{ 2 }$ w~równościach \eqref{eq:Wojtynski-72}
-i~\eqref{eq:Wojtynski-73} dostajemy
+Biorąc $\alpha = e_{ 1 }$, $\beta = e_{ 2 }$ w~równościach \eqref{eq:Wojtynski-73}
+i~\eqref{eq:Wojtynski-74} dostajemy
 \begin{equation}
-  \label{eq:Wojtynski-74}
+  \label{eq:Wojtynski-75}
   f( \vecvbold ) \, ( e_{ 2 } \, e_{ 1 } ) =
   f( \vecvbold ) \, ( e_{ 1 } \, e_{ 2 } ) =
   -f( \vecvbold ) \, ( e_{ 2 } \, e_{ 1 } ).
 \end{equation}
 Tę zależność możemy przekształcić do postaci
 \begin{equation}
-  \label{eq:Wojtynski-75}
+  \label{eq:Wojtynski-76}
   f( \vecvbold ) \, 2 ( e_{ 2 } \, e_{ 1 } ) = 0.
 \end{equation}
 Mnożąc obie strony przez kwaternion odwrotny do $e_{ 2 } \, e_{ 1 }$
 dostajemy
 \begin{equation}
-  \label{eq:Wojtynski-76}
+  \label{eq:Wojtynski-77}
   f( \vecvbold ) \, 2 = 0.
 \end{equation}
 Mam więc dwie możliwości. Albo nasze ciało jest charakterystyki 2,
@@ -1744,8 +1778,8 @@ czyli~$2 = 1 + 1 = 0$, albo $f( \vecvbold ) = 0$. Jak wiemy kwaterniony nie
 są ciałem o~charakterystyce $\infty$, więc musi zachodzić drugi warunek.
 
 Widzimy więc, że~nieprzemienność mnożenia kwaternionów, sprawia
-iż~w~ogólności nie jest możliwe przekształcenie \eqref{eq:Wojtynski-72}
-w~\eqref{eq:Wojtynski-73} i~tym samym $f \, \alpha$ nie będzie odwzorowaniem
+iż~w~ogólności nie jest możliwe przekształcenie \eqref{eq:Wojtynski-73}
+w~\eqref{eq:Wojtynski-74} i~tym samym $f \, \alpha$ nie będzie odwzorowaniem
 liniowym. Chyba, że~ograniczymy się do przypadku $\alpha \in \Rbb$, wtedy bowiem
 dla dowolnego $\beta \in \Hbb$ zachodzi $\alpha \, \beta = \beta \, \alpha$, jednak tej sytuacji
 nie będziemy dalej rozważać.
@@ -1763,21 +1797,21 @@ pierścienia, ale to pozostaje poza zakresem tych rozważań.
 Powstaje teraz ważne pytanie: czemu zbiór macierzy $\lFrak( n, \Hbb )$ ma
 strukturę przestrzeni wektorowej, a~$\End( \Hbb^{ n } )$ nie? Okazuje~się,
 że~definicja mnożenia macierzy przez element z~$\Hbb$
-\eqref{eq:Wojtynski-42-A} oraz działania macierzy na element $\Hbb^{ n }$
-\eqref{eq:Wojtynski-43}, zostały tak dobrane, iż pozwalają obejść problem
+\eqref{eq:Wojtynski-43-A} oraz działania macierzy na element $\Hbb^{ n }$
+\eqref{eq:Wojtynski-44}, zostały tak dobrane, iż pozwalają obejść problem
 nieprzemienność mnożenia kwaternionów. W~tym miejscu należy zauważyć, iż
-definicja \eqref{eq:Wojtynski-42-A} \textit{nie} jest zgodna ze~standardową
+definicja \eqref{eq:Wojtynski-43-A} \textit{nie} jest zgodna ze~standardową
 definicją mnożenia odwzorowania liniowego przez element z~ciała, która
-została podana w~\eqref{eq:Wojtynski-72}. Zgodnie z~obecną definicją
+została podana w~\eqref{eq:Wojtynski-73}. Zgodnie z~obecną definicją
 obecnie przyjętą dla $\alpha \in \Hbb$ i~$A \in \lFrak( n, \Hbb )$ mamy
 \begin{equation}
-  \label{eq:Wojtynski-77}
+  \label{eq:Wojtynski-78}
   \big( ( A \, \alpha ) \, \vecvbold \big)_{ i } =
   \sum_{ j = 1 } ( a_{ i j } \, \alpha ) \, v_{ j },
 \end{equation}
 podczas, gdy definicja \eqref{eq:Wojtynski-71} prowadziłaby do wzoru
 \begin{equation}
-  \label{eq:Wojtynsk-78}
+  \label{eq:Wojtynsk-79}
   \big( ( A \, \alpha ) \, \vecvbold \big)_{ i } =
   \sum_{ j = 1 }^{ n } a_{ i j } \, v_{ j } \, \alpha.
 \end{equation}
@@ -1791,11 +1825,11 @@ odwzorowań tworzą monoidy\footnote{Przypomnijmy, że monoid różni się od
 razu będzie wynikało, że~zbiory $\GL( n, \Hbb )$ i~$\Aut( \Hbb^{ n } )$
 (zbiór automorfizmów liniowych $\Hbb^{ n }$) tworzą grupy. Dokładniej
 monoidami są $( \lFrak( n, \Hbb ), I, \cdot )$
-i~$( \End( \Hbb^{ n } ), \id, \circ )$, gdzie $I = [ e_{ 0 } \, \delta^{ j }_{ i } ]$ to
-macierz jednostkowa, $\cdot$ to działanie mnożenia macierzy określone we~wzorze \eqref{eq:Wojtynski-44}, $\id$ to odwzorowanie identycznościowe
+i~$( \End( \Hbb^{ n } ), \id, \circ )$, gdzie $I = [ e_{ 0 } \, \delta^{ i }_{ j } ]$ to
+macierz jednostkowa, $\cdot$ to działanie mnożenia macierzy określone we~wzorze \eqref{eq:Wojtynski-45}, $\id$ to odwzorowanie identycznościowe
 na~$\Hbb^{ n }$:
 \begin{equation}
-  \label{eq:Wojtynski-79}
+  \label{eq:Wojtynski-80}
   \id( \vecvbold ) = \vecvbold, \quad \vecvbold \in \Hbb^{ n },
 \end{equation}
 zaś $\circ$ oznacza operację składania odwzorowań.
@@ -1804,17 +1838,18 @@ Przypadek $\End( \Hbb^{ n } )$ jest bardzo prosty, bo jak wiadomo składanie
 odwzorowań jest zawsze łączne, zaś pokazanie, że $\id$ jest elementem
 neutralnym nie sprawia żadnych trudności. Przejdźmy teraz do przypadku
 $\lFrak( n, \Hbb )$. Jedyny problem jaki może~się pojawić przy dowodzeniu,
-że~$I = [ e_{ 0 } \, \delta^{ j }_{ i } ]$ jest elementem neutralnym względem
-mnożenia macierzy, jest złe zapisanie sumy po indeksach. Wedle konwencji
-przyjętej przez Wojtyńskiego w~zapisie $\delta^{ j }_{ i }$, $i$ oznacza numer
-wiersza, a~$j$ numer kolumny.
+że~$I = [ e_{ 0 } \, \delta^{ i }_{ j } ]$ jest elementem neutralnym względem
+mnożenia macierzy, jest złe zapisanie sumy po indeksach, ze względu na to,
+że~inną konwencja obowiązuje, gdy symbol delty występuje w~zapisie wektora,
+jak $( \delta^{ i }_{ j } )$, inny gdy pojawia~się w~zapisie macierzy,
+jak $[ \delta^{ i }_{ j } ]$.
 
 Przejdźmy teraz do problemu łączności mnożenia macierzy. Łączność tego
 działania oznacza, że~zachodzi $( A \cdot B ) \cdot C = A \cdot ( B \cdot C )$ dla
 $A, B, C \in \lFrak( n, \Hbb )$. Niech $A = [ a_{ i j } ]$, $B = [ b_{ i j } ]$,
 $C = [ c_{ i j } ]$. Wówczas mamy
 \begin{equation}
-  \label{eq:Wojtynski-80}
+  \label{eq:Wojtynski-81}
   \begin{split}
     ( A \cdot B ) \cdot C
     &=
@@ -1845,12 +1880,12 @@ działań wewnętrznych, zaś $e_{ A }$, $e_{ B }$ to elementy neutralne względ
 tych działań. Odwzorowanie $f : M_{ A } \to M_{ B }$ jest homomorfizmem
 monoidów jeśli dla wszystkich $m_{ 1 }, m_{ 2 } \in M_{ A }$ zachodzi
 \begin{equation}
-  \label{eq:Wojtynski-81}
+  \label{eq:Wojtynski-82}
   f( m_{ 1 } \cdot_{ A } m_{ 2 } ) = f( m_{ 1 } ) \cdot_{ B } f( m_{ 2 } ),
 \end{equation}
 oraz zachodzi
 \begin{equation}
-  \label{eq:Wojtynski-82}
+  \label{eq:Wojtynski-83}
   f( e_{ A } ) = e_{ B }.
 \end{equation}
 
@@ -1858,17 +1893,17 @@ W~tym miejscu udowodnimy $L : \lFrak( n, \Hbb ) \to \End( \Hbb^{ n } )$
 i~$M : \End( \Hbb^{ n } ) \to \lFrak( n, \Hbb )$ są izomorfizmami monoidów.
 W~tym celu obliczmy $M( \id )$:
 \begin{equation}
-  \label{eq:Wojtynski-83}
+  \label{eq:Wojtynski-84}
   \id( \vecvbold ) =
   \id\left( \sum_{ j = 1 }^{ n } \vecEbold_{ j } \, v_{ j } \right) =
   \sum_{ j = 1 }^{ n } \id( \vecEbold_{ j } ) \, v_{ j } =
   \sum_{ j = 1 }^{ n } \sum_{ i = 1 }^{ n } \vecEbold_{ i } \, e_{ 0 } \,
   \delta^{ j }_{ i } \, v_{ j },
 \end{equation}
-co dowodzi, że~$M( \id ) = [ e_{ 0 } \, \delta^{ j }_{ i } ]$. Przejdźmy do
+co dowodzi, że~$M( \id ) = [ e_{ 0 } \, \delta^{ i }_{ j } ]$. Przejdźmy do
 zbadania $M( f \circ g )$.
 \begin{equation}
-  \label{eq:Wojtynski-82}
+  \label{eq:Wojtynski-85}
   \begin{split}
     ( f \circ g )( \vecvbold )
     &=
@@ -1890,7 +1925,7 @@ kwaternionów: przemienności, łączności i~rozdzielności względem dodawanie
 oraz własności mnożenia wektora przez elementy ciała. Równość ta pokazuje,
 że
 \begin{equation}
-  \label{eq:Wojtynski-82}
+  \label{eq:Wojtynski-86}
   M( f \circ g ) = \left[ \sum_{ k = 1 } f_{ i k } \, g_{ k j } \right] =
   [ f_{ i j } ] \cdot [ g_{ k l } ] = M( f ) \cdot M( g ).
 \end{equation}
@@ -1909,87 +1944,153 @@ byty.
 
 Przejdźmy teraz do omówienia odwzorowanie $s : \Cbb^{ 2n } \to \Hbb^{ n }$.
 Jest to izomorfizm liniowy $\Cbb^{ 2n }$ i~$\Hbb^{ n }$ traktowanych
-jako przestrzenie wektorowe nad $\Cbb$. W~$\Cbb^{ 2n }$ określamy standardową bazę
+jako przestrzenie wektorowe nad $\Cbb$. Wedle tego co pisze w~książce
+Wojtyńskiego $S( A ) = s \circ A \circ s^{ -1 }$ jest transformacją przekształcającą
+macierz $A \in \lFrak( n, \Hbb )$ w~macierz $S( A ) \in \lFrak( 2n, \Cbb )$.
+Jest to jednak pewna nieścisłość. W~istocie $S$ przekształca endomorfizm
+$\Hbb^{ n }$ w~endomorfizm $\Cbb^{ n }$
+\begin{equation}
+  \label{eq:Wojtynski-87}
+  \End( \Hbb^{ 2 } ) \ni f \mapsto S( f ) = s \circ f \circ s^{ -1 } \in \End( \Cbb^{ 2n } ).
+\end{equation}
+To, że~$S( f )$ jest odwzorowaniem liniowym nad $\Cbb$ wynika wprost
+z~tego, że~jest ono złożeniem odwzorowań liniowych. Widzimy więc, że~dowód
+liniowości nad $\Cbb$ odwzorowanie $S( f )$, który w~książce jest
+przeprowadzony w~sposób dziwny i~chaotyczny, jest natychmiastowy, jeśli
+tylko odpowiednio uporządkujemy pojęcia. Należy jednak zwrócić uwagę,
+że~dla nas najważniejsze są nie przestrzenie odwzorowań liniowych, lecz
+przestrzenie macierzy, więc musimy kontynuować nasze rozważania w~tym
+kierunku.
 
-$S : \lFrak( n, \Hbb ) \to \lFrak( 2n, \Cbb )$, które określimy w~sposób bardziej formalny, niż zostało to zrobione w~książce.
+Pokażemy teraz, jak można obliczyć macierz
+$A' = M\!\left( s \circ L( A ) \circ s^{ -1 } \right)$. Ponieważ $s$ i~$s^{ -1 }$
+\textit{nie} są odwzorowaniami liniowymi między $\Cbb^{ 2n }$ jako
+przestrzeni wektorowej nad $\Cbb$ i~$\Hbb^{ n }$ jako przestrzenie
+wektorowej na $\Hbb$, bo są to przestrzenie nad różnymi ciałami, więc nie
+można oczekiwać, by dało~się je wyrazić za pomocą macierzy. Jeśli więc mamy
+daną macierz $A = [ a_{ i j } ]$, $a_{ i j } \in \Hbb$, o~wymiarach $n \times n$, to
+by~na jej podstawie wyznaczyć macierz $A' = [ a'_{ i j } ]$,
+$a_{ i j } \in \Cbb$, o~wymiarach $2n \times 2n$, należy~się uciec do bezpośrednich
+rachunków. Do tego celu określamy w~$\Cbb^{ 2n }$ standardową bazę
+\begin{equation}
+  \label{eq:Wojtynski-88}
+  \veccbold_{ i } = \big( \delta^{ l }_{ i } \big), \quad
+  i = 1, 2, \ldots, 2n.
+\end{equation}
+Analogicznie dla przestrzeni $\Hbb^{ n }$ nad $\Hbb$ określamy bazę
+\begin{equation}
+  \label{eq:Wojtynski-89}
+  \vechbold_{ i } = \big( e_{ 0 } \, \delta^{ l }_{ i } \big), \quad
+  i = 1, 2, \ldots, n,
+\end{equation}
+Będziemy również potrzebowali skorzystać z~następującej notacji
+\begin{equation}
+  \label{eq:Wojtynski-90}
+  q = e_{ 0 } \, P_{ 1 }( q ) + e_{ 2 } \, P_{ 2 }( q ), \quad
+  q \in \Hbb.
+\end{equation}
 
-% W~dalszym ciągu dla uczynienia rozważań bardziej ścisłymi, będziemy używać
-% w~dalszym ciągu jawnie używać symboli $\cdot_{ X }$ i~$\cdot_{ Y }$ dla oznaczenia
-% możenia wewnętrznego w~przestrzeniach $X$ i~$Y$, lecz działanie dodawania
-% w~tych przestrzeniach będziemy zawsze oznaczać tym samym symbolem $+$. Używanie symboli $+_{ X }$ i~$+_{ Y }$ nie wydaje się nam szczególnie potrzebne.
+Obliczmy teraz
+\begin{equation}
+  \label{eq:Wojtynski-91}
+  s^{ -1 }( \veccbold_{ i } ) =
+  \begin{cases}
+    \vechbold_{ i } = ( e_{ 0 } \, \delta^{ l }_{ i } ), &i = 1, 2, \ldots, n \\
+    \vechbold_{ i } \, e_{ 2 } = ( e_{ 2 } \, \delta^{ l }_{ i } ),
+    &i = n + 1, n + 2, \ldots, 2n.
+  \end{cases}
+\end{equation}
+Rozpatrzmy przypadek $i = 1, 2, \ldots, n$. Mamy
+\begin{equation}
+  \label{eq:Wojtynski-92}
+  \big( A \circ s^{ -1 } \big)( \veccbold_{ i } ) =
+  \sum_{ k = 1 }^{ n } \vechbold_{ k } \sum_{ l = 1 }^{ n }
+  a_{ k l } \, e_{ 0 } \, \delta^{ l }_{ i } =
+  \sum_{ k = 1 }^{ n } \vechbold_{ k } \, a_{ k i }.
+\end{equation}
+Dla przypadku $i = n + 1, n + 2, \ldots, 2n$ mamy
+\begin{equation}
+  \label{eq:Wojtynski-93}
+  \big( A \circ s^{ -1 } \big)( \veccbold_{ i } ) =
+  \sum_{ k = 1 }^{ n } \vechbold_{ k } \sum_{ l = 1 }^{ n }
+  a_{ k l } \, e_{ 2 } \, \delta^{ l }_{ i } =
+  \sum_{ k = 1 }^{ n } \vechbold_{ k } \, a_{ k i } \, e_{ 2 }.
+\end{equation}
+Z~definicji $S$ wynika, że
+\begin{equation}
+  \label{eq:Wojtynski-94}
+  s( \vechbold_{ i } \, q ) =
+  \veccbold_{ i } \, P_{ 1 }( q ) + \veccbold_{ i + n } \, P_{ 2 }( q ).
+\end{equation}
+Ponieważ $s$ jest funkcją addytywną, możemy teraz obliczyć
+\begin{equation}
+  \label{eq:Wojtynski-95}
+  \big( s \circ A \circ s^{ -1 } \big)( \veccbold_{ i } ) =
+  s\left( \sum_{ k = 1 }^{ n } \vechbold_{ k } \, a_{ k i } \right) =
+  \sum_{ k = 1 }^{ n } \big( \veccbold_{ k } \, P_{ 1 }( a_{ k i } )
+  + \veccbold_{ k + n } \, P_{ 2 }( a_{ k i } ) \big),
+\end{equation}
+dla $i = 1, 2, \ldots, n$. Analogicznie dostajemy
+\begin{equation}
+  \label{eq:Wojtynski-96}
+  \big( s \circ A \circ s^{ -1 } \big)( \veccbold_{ i } ) =
+  s\left( \sum_{ k = 1 }^{ n } \vechbold_{ k } \, a_{ k i } \right) =
+  \sum_{ k = 1 }^{ n } \big( \veccbold_{ k } \, P_{ 1 }( a_{ k i } \, e_{ 2 } )
+  + \veccbold_{ k + n } \, P_{ 2 }( a_{ k i } \, e_{ 2 } ) \big),
+\end{equation}
+dla $i = n + 1, n + 2, \ldots, 2n$. Otrzymujemy tym samym wzór na wyrazy
+$a'_{ i j }$ macierzy $A' = M\!\left( s \circ L( A ) \circ s^{ -1 } \right)$.
+\begin{equation}
+  \label{eq:Wojtynski-97}
+  a'_{ i j } =
+  \begin{cases}
+    P_{ 1 }( a_{ i j } ), &i = 1, 2, \ldots, n, \qquad \qquad \quad
+                            j = 1, 2, \ldots, n, \\
+    P_{ 2 }( a_{ i j } ), &i = 1, 2, \ldots, n, \qquad \qquad \quad
+                            j = n + 1, n + 2, \ldots, n, \\
+    P_{ 1 }( a_{ i j } \, e_{ 2 } ), &i = n + 1, n + 2, \ldots, 2n, \quad
+                                       j = 1, 2, \ldots, n \\
+    P_{ 2 }( a_{ i j } \, e_{ 2 } ), &i = n + 1, n + 2, \ldots, 2n, \quad
+                                       j = n + 1, n + 2, \ldots, 2n.
+  \end{cases}
+\end{equation}
 
-% Zwróćmy teraz uwagę na dwie rzeczy. Po pierwsze, jeśli $f \in \Hom( X, Y )$ jest izomorfizmem prawych półalgebr, to $f^{ -1 } \in \Hom( Y, X )$ również jest izomorfizmem prawych półalgebr. Choć dowód tego faktu oparty jest na standardowej technice, przytoczymy go tutaj dla jasności wywodu. Wiadomo, że jeśli $f \in \Hom( X, Y )$ jest izomorfizmem przestrzeni wektorowych, to odwrotna bijekcja też jest izomorfizmem przestrzeni wektorowych. Rozpatrzmy $\vecybold_{ 1 }, \vecybold_{ 2 } \in Y$. Istnieją $\vecxbold_{ 1 }, \vecxbold_{ 2 } \in X$, taki że $f( \vecxbold_{ 1 } ) = \vecybold_{ 1 }$, $f( \vecxbold _{ 2 } ) = \vecybold_{ 2 }$ lub równoważnie $f^{ -1 }( \vecybold_{ 1 } ) = \vecxbold_{ 1 }$, $f^{ -1 }( \vecybold_{ 2 } ) = \vecxbold_{ 1 }$. Mamy
-% \begin{equation}
-%   \label{eq:Wojtynski-69}
-%   f( \vecxbold_{ 1 } \cdot_{ X } \vecxbold_{ 2 } ) =
-%   f( \vecxbold_{ 1 } ) \cdot_{ Y } f( \vecxbold_{ 2 } ) =
-%   \vecybold_{ 1 } \cdot_{ Y } \vecybold_{ 2 }.
-% \end{equation}
-% Zadziałajmy odwzorowanie $f^{ -1 }$ na obie strony powyższej równości.
-% \begin{equation}
-%   \label{eq:Wojtynski-70}
-%   \vecxbold_{ 1 } \cdot_{ X } \vecxbold_{ 2 } =
-%   f^{ -1 }( \vecybold_{ 1 } \cdot_{ Y } \vecybold_{ 2 } ).
-% \end{equation}
-% Powyższą równość możemy przepisać jako
-% \begin{equation}
-%   \label{eq:Wojtynski-71}
-%   f^{ -1 }( \vecybold_{ 1 } \cdot_{ Y } \vecybold_{ 2 } ) =
-%   f^{ -1 }( \vecybold_{ 1 } ) \cdot_{ X } f^{ -1 }( \vecybold_{ 2 } ).
-% \end{equation}
+Na koniec chcemy ponownie zwrócić uwagę na to, że~Wojtyński często zapisuje
+$s \circ A \circ s^{ -1 }$ twierdząc, iż jest to macierz. Jak wspomnieliśmy bardziej
+precyzyjnym zapisem byłoby $M\!( s \circ L( A ) \circ s^{ -1 } )$, mamy jednak
+nadzieję, że~po podanych tu wyjaśnieniach, rozpoznanie co jest gdzie
+w~rozważaniach mamy odwzorowanie liniowe, a~gdzie odpowiadającą mu macierz,
+nie sprawi problemu.
 
-% Po drugie, jeśli $X$ jest prawą półalgebrą, a~$Y$ jest przestrzenią
-% wektorową, jak zwykle nad tym samym działem, która posiada działanie
-% wewnętrzne $\cdot_{ Y }$ oraz istnieje izomorfizm liniowy $f : X \to Y$, to $Y$
-% jest prawą półalgebrą. Dowód tej własności przebiega w~następujący sposób.
-% Rozpatrzmy wyrażenie
-% \begin{equation}
-%   \label{eq:Wojtynski-72}
-%   \vecybold_{ 1 } \cdot ( \vecybold_{ 2 } + \vecybold_{ 3 } ), \quad
-%   \vecybold_{ 1 }, \vecybold_{ 2 }, \vecybold_{ 3 } \in Y.
-% \end{equation}
-% Istnieją takie $\vecxbold_{ 1 }, \vecxbold_{ 2 }, \vecxbold_{ 3 } \in X$, takie że $f( \vecxbold_{ 1 } ) = \vecybold_{ 1 }$, $f( \vecxbold_{ 2 } ) = \vecybold_{ 2 }$, $f( \vecxbold_{ 3 } ) = \vecybold_{ 3 }$. Obliczmy
-% \begin{equation}
-%   \label{eq:Wojtynski-73}
-%   f\big( \vecxbold_{ 1 }
-%   \cdot_{ X } ( \vecxbold_{ 2 } + \vecxbold_{ 3 } ) \big) =
-%   f( \vecxbold_{ 1 } ) \cdot_{ Y } f( \vecxbold_{ 2 } + \vecxbold_{ 3 } ) =
-%   f( \vecxbold_{ 1 } ) \cdot_{ Y } \big( f( \vecxbold_{ 2 } )
-%   + f( \vecxbold_{ 3 } ) \big) =
-%   \vecybold_{ 1 } \cdot_{ Y } ( \vecybold_{ 2 } + \vecybold_{ 3 } ).
-% \end{equation}
-% Z~drugiej strony
-% \begin{equation}
-%   \label{eq:12}
-%   \begin{split}
-%     f\big( \vecxbold_{ 1 }
-%     \cdot_{ X } ( \vecxbold_{ 2 } + \vecxbold_{ 3 } ) \big)
-%     &=
-%       f( \vecxbold_{ 1 } \cdot_{ X } \vecxbold_{ 2 }
-%       + \vecxbold_{ 1 } \cdot_{ X } \vecxbold_{ 3 } ) =
-%       f( \vecxbold_{ 1 } \cdot_{ X } \vecxbold_{ 2 } )
-%       + f( \vecxbold_{ 1 } \cdot_{ X } \vecxbold_{ 3 } ) = \\
-%     x&=
-%       f( \vecxbold_{ 1 } ) \cdot_{ Y } f( \vecxbold_{ 2 } )
-%       + f( \vecxbold_{ 1 } ) \cdot_{ Y } f( \vecxbold_{ 3 } ) =
-%       \vecybold_{ 1 } \cdot_{ Y } \vecybold_{ 2 }
-%       + \vecybold_{ 1 } \cdot_{ Y } \vecybold_{ 3 }.
-%   \end{split}
-% \end{equation}
-% ?????
+\vspace{\spaceFour}
 
 
-% Przejdźmy teraz do dowodu tego, że~$\lFrak( n, \Kbb )$ tworzy algebrę,
-% gdzie $\Rbb$, $\Cbb$ lub $\Hbb$. By udowodnić własności
-% \begin{equation}
-%   \label{eq:Wojtynski-43}
-%   ( A + B ) v = A v + B v,
-% \end{equation}
-% wystarczy by dodawanie było rozdzielne względem mnożenia, co jest prawdą
-% we~wszystkich rozważanych typach $\Kbb$. Ponieważ dowód tego faktu jest
-% prosty, nie będziemy go tu przytaczać jawnie.
 
-% \vspace{\spaceFour}
+
+
+\Str{40} Na tej stronie użyty jest zapis
+\begin{equation}
+  \label{eq:Wojtynski-98}
+  A \, ( a ) \, q,
+\end{equation}
+gdzie $a \in \Hbb^{ n }$, $q \in \Hbb$, $A \in \lFrak( n, \Hbb )$, przy czym
+utożsamiamy macierz $A$ z~odpowiadającym jej odwzorowaniem liniowym.
+Notacja ta ma wyrażać, że~najpierw $A$ działa na wektor $a$ i~dopiero wynik
+tej operacji mnożymy przez liczbę $q$. Według mnie znacznie lepiej wyraża
+to notacja
+\begin{equation}
+  \label{eq:Wojtynski-99}
+  ( A \, a ) \, q.
+\end{equation}
+
+
+
+
+
+????? Skończylem czytać na na stronie 40. Ponowną lekturę należy zacząć od podrozdziału ,,Odwzorowanie wykładnicze''
+zaczynającego się na tej stronie.
+
+
 
 
 
@@ -2140,10 +2241,11 @@ $S : \lFrak( n, \Hbb ) \to \lFrak( 2n, \Cbb )$, które określimy w~sposób bard
     39  &  8 & & $z_{ n + 1 }$ & $z_{ n + i }$ \\
     39  & &  8 & $\langle s^{ -1 }( z ), \, s^{ -1 }( w ) \rangle_{ \Hbb } =$
            & zachodzi $\langle s^{ -1 }( z ), \, s^{ -1 }( w ) \rangle_{ \Hbb } =$ \\
+    39  & & 10 & $\bar{z}_{ n + 1 }$ & $\bar{z}_{ n + i }$ \\
+    39  & &  7 & $\varphi\big( s( a ), s( b ) \big)$
+           & $\overline{ \varphi\big( s( a ), s( b ) \big) }$ \\
     50  & &  8 & $e_{ i } ( e_{ j } \cdot e_{ k } )$
            & $e_{ i } \cdot ( e_{ j } \cdot e_{ k } )$ \\
-           % & &  &  &  \\
-           % & & & & \\
            % & & & & \\
            % & & & & \\
            % & &  & & \\

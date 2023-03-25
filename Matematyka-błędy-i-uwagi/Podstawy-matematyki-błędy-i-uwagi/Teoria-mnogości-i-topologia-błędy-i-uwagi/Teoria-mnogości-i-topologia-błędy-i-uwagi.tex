@@ -1,0 +1,594 @@
+% ---------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% ---------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ------------------------------
+\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
+% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ------------------------------
+% MARGINS
+% ------------------------------
+\setmarginsrb
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
+
+
+
+% ------------------------------
+% Często używane pakiety
+% ------------------------------
+% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+% ------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ------------------------------
+\let\lll\undefined  % Amsmath gryzie się z pakietami do języka
+% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm}  % Dalsze wsparcie od AMS
+\usepackage{upgreek}  % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+\usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
+% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% nie wiem.
+
+
+
+% ------------------------------
+% Wspaniały pakiet PGF/TikZ
+% ------------------------------
+% \usepackage{tikz}
+
+% \usetikzlibrary{decorations.markings}  % Włączenie konkretnych bibliotek
+% % pakietu TikZ
+
+
+
+% ---------------
+% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
+% ---------------
+\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
+% „theorem” do pisania twierdzeń matematycznych
+\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+\newtheorem{corollary}{Wniosek}
+
+
+
+% ------------------------------
+% Pakiety których pliki *.sty mają być w tym samym katalogu co ten plik
+% ------------------------------
+\usepackage{latexgeneralcommands}
+\usepackage{mathcommands}
+% \usepackage{calculuscommands}
+
+
+
+
+% ---------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% ---------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ------------------------------
+% Ustawienia różnych parametrów tekstu
+% ------------------------------
+\renewcommand{\baselinestretch}{1.1}
+
+\renewcommand{\arraystretch}{1.4}  % Ustawienie szerokości odstępów między
+% wierszami w tabelach
+
+
+
+
+
+% ------------------------------
+% Pakiet „hyperref”
+% Polecano by umieszczać go na końcu preambuły
+% ------------------------------
+\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł i autor tekstu
+\title{Teoria mnogości i~topologia \\
+  {\Large Błędy i~uwagi}}
+
+\author{Kamil Ziemian}
+
+
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle  % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+% % ######################################
+% \section{XIX szkoła analizy matematycznej}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+
+
+
+% ############################
+\Work{ % Autor i tytuł dzieła
+  Kazimierz Kuratowski \\
+  \textit{Wstęp do~teorii mnogości i~topologii},
+  \cite{KuratowskiWstepTeoriiMnogosciITopologii2004}}
+
+\vspace{0em}
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych rozdziałów}
+
+\vspace{0em}
+
+
+\noindent
+\textbf{Rozdział I.} Ten bardzo krótki rozdział jest tylko skromnym zarysem pewnego działu logiki matematycznej, dlatego powinniśmy podchodzić do jego treści
+z~wyrozumiałością i~przechodzić do porządku dziennego nad większością rzeczy, które możemy uznać za jego niedociągnięcia. W~pewnych szczególnych przypadkach,
+gdy uproszczenia w~nim zawarte uznamy za zbyt wielkie, omówione to zostanie w~,,Uwagach do konkretnych stron''.
+
+\vspace{\spaceFour}
+
+
+
+
+
+
+
+
+
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+\vspace{0em}
+
+
+
+Nie wspomniano o rozdzielności dodawania zbiorów względem mnożenia. Jest to w zadaniach.
+
+\Str{10} Z~jakiegoś powodu \textbf{zasadą kontrapozycji} została tu nazwana tożsamość
+\begin{equation}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-01}
+  ( \neg \beta \Rightarrow \neg \alpha ) \Rightarrow ( \alpha \Rightarrow \beta ),
+\end{equation}
+podczas gdy zachodzi jej mocniejsze wersja
+\begin{equation}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-02}
+  ( \alpha \Rightarrow \beta ) \equiv ( \neg \beta \Rightarrow \neg \alpha ).
+\end{equation}
+Przez ,,zasadę kontrapozycji'' powinno~się rozumieć, tą drugą, mocniejszą wersję tożsamości.
+
+\vspace{\spaceFour}
+
+
+
+\Str{10} W~tym miejscu wszystkie dowody 
+,,nie wprost''\footnote{Stosujemy tu nazewnictwo różniące~się od tego w~książce. 
+Mamy nadzieję, że~będzie on prostsze w~zrozumieniu i~użyciu.}, nazwane dowodami 
+,,przez sprowadzenie do niedorzeczności'', przypisano zasadzie kontrapozycji: 
+\begin{equation}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-03}
+  ( \alpha \Rightarrow \beta ) \equiv ( \neg \beta \Rightarrow \neg \alpha).
+\end{equation}
+W~rzeczywistości pod nazwą ,,dowody nie wprost'' kryją się dwa typy dowodów, z~których
+jeden opiera~się na podanej powyżej tożsamości. Drugi typ dowodu, który będziemy nazywać 
+\textbf{dowodem przez sprowadzenie do niedorzeczności}, opierajsię na poniższej tożsamości
+\begin{equation}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-04}
+  ( \alpha \Rightarrow \beta ) \equiv \neg \big( \alpha \land ( \neg \beta ) \big).
+\end{equation}
+
+\vspace{\spaceFour}
+
+
+
+
+
+\StrWg{10}{13} Odniesinie do przypisu numer~$1$ w~tym wierszu wygląda dość brzydko. W~tym momencie 
+nie mam dobrej idei jak to poprawić.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\Str{14} Często przyjmuje~się inną konwecję nazewniczą i~przez \texbf{podzbiory
+właściwe zbioru $A$} uznaje~się wszystkie podzbiory $A$ różne od~$A$ i~$\emptyset$.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\Str{14} Na tej stronie podana jest następująca implikacja
+\begin{equation}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-05}
+  ( A \subset B ) \land ( B \subset A ) \Rightarrow ( A = B ).
+\end{equation}
+W~istocie od razu możemy otrzymać mocniejszy twierdzenie:
+\begin{equation}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-06}
+  ( A \subset B ) \land ( B \subset A ) \equiv ( A = B ).
+\end{equation}
+
+\vspace{\spaceFour}
+
+
+
+
+
+\Str{15--16} Gdy wprowadzamy pojęcie ,,przestrzeni'' w~której, czyli takiego zbioru
+że~wszystkie rozważane zbiory są jego podzbiorami, pojawia~się dodatkowym problem logiczny.
+Oznaczmy naszą przesztrzeń przez $X$ i~rozważmy formułę
+\begin{equation}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-06}
+  x \in A.
+\end{equation}
+Wydaje się, że~poprawna postać tej formuły to
+\begin{equation}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-07}
+  ( x \in X ) \land ( x \in A ),
+\end{equation}
+jednak dla wygody zwykle opuszcza~się pierwszy człon powyższego iloczynu logicznego.
+
+Powstaje jednak pytanie, czy praca w~ramach danej przestrzeni nie wymaga doprecyzowania
+innych formuł logicznych? Oraz czy wzór \eqref{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-07}
+zawiera wszystkie potrzebne modyfikacje, jakie musimy wprowadzić dla formuły $x \in A$.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\Str{16} Niech $X$ oznacza przestrzeń w~której pracujemy. Wprowadzamy oznaczenie
+\begin{equation}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-08}
+  A^{ c } := X \setminus A,
+\end{equation}
+gdzie $\setminus$ oznacza różnicę zbiorów. Teraz możemy zapisać wzór (28)
+obecny na tej stronie jako
+\begin{equation}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-09}
+  ( B^{ c } \subset A^{ c } ) \Rightarrow ( A \subset B ).
+\end{equation}
+Tak jak w~poprzednich przypadkach wypadkach, w~prosty sposób można
+udowodnić silniejszą tożsamość:
+\begin{equation}
+  \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-10}
+  ( B^{ c } \subset A^{ c } ) \equiv ( A \subset B ).
+\end{equation}
+
+\vspace{\spaceFour}
+
+
+
+
+
+\Str{18} Zarysowano tu związek między rachunkiem zdań, algebrą zbiorów i~algebrą Boole'a.
+Obawiam~się, że~taka skrótowa forma tych relacji może wprowadzać w~błąd i~prowadzić do nieporozumień.
+Zanim więc przystąpi~się do wyciągania z~tego konkretnych wniosków, musimy bardziej szczegółowo
+przebadać te relacje.
+
+\vspace{\spaceFour}
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+\vspace{\spaceFive}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    5   & & 19 & porządkowyh & porządkowych \\
+    5   & &  6 & to & do \\
+    11  &  3 & & \textbf{7.} & \textbf{7a.} \\
+    11  &  4 & & \textbf{7a.} & \textbf{7b.} \\
+    15  & 15 & & 7a, & 7b, \\
+    16  & 12 & & (3), (23) i~(2) & (2), (3) i~(23) \\
+    % & & & & \\
+    24  &  9 & & $\lor a \in \{ x : \psi( x ) \} ]$ & $\lor [ a \in \{ x : \psi( x ) \} ]$ \\
+    % & & & & \\
+    51  & 17 & & $f( A_{ l } )$ & $f( A_{ 1 } )$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  % \newpage
+
+  %   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+\StrWg{13}{2} \\
+\Jest  Mamy więc na rysunku 2 $A \cap B = \emptyset$, a~na rysunku 3 $B - A = \emptyset$. \\
+\Powin Dla rysunku 2 mam tym $A \cap B = \emptyset$, a~dla rysunku 3 zachodzi $B - A = \emptyset$. \\
+
+% ############################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% % ##################
+% \CenterBoldFont{Błędy}
+
+
+% \begin{center}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     % & & & & \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+
+
+
+
+
+%   % \begin{tabular}{|c|c|c|c|c|}
+%   %   \hline
+%   %   & \multicolumn{2}{c|}{} & & \\
+%   %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%   %                             & Powinno być \\ \cline{2-3}
+%   %   & Od góry & Od dołu & & \\
+%   %   \hline
+%   %   & & & & \\
+%   %   \hline
+%   % \end{tabular}
+
+% \end{center}
+
+
+% \noindent
+% \StrWd{}{} \\
+% \Jest   \\
+% \Powin  \\
+
+
+% \vspace{\spaceTwo}
+% % ############################
+
+
+
+
+
+
+
+
+
+
+% % ############################
+% \newpage
+
+% \Work{ % Autorzy i tytuł dzieła
+%    \\
+%   \textit{},
+%   \cite{}}
+
+% \vspace{0em}
+
+
+% % ##################
+% \CenterBoldFont{Uwagi}
+
+% \vspace{0em}
+
+
+% \Str{} 
+
+
+% % % ##################
+% % \CenterBoldFont{Błędy}
+
+
+% % \begin{center}
+
+% %   \begin{tabular}{|c|c|c|c|c|}
+% %     \hline
+% %     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+% %                               & Powinno być \\ \cline{2-3}
+% %     & Od góry & Od dołu & & \\
+% %     \hline
+% %     & & & & \\
+% %     & & & & \\
+% %     \hline
+% %   \end{tabular}
+
+% % \end{center}
+
+% \vspace{\spaceTwo}
+
+
+% % ############################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+% Bibliografia
+
+\bibliographystyle{plalpha}
+
+\bibliography{MathComScienceBooks}{}
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
