@@ -43,9 +43,9 @@
 % ------------------------------
 % Często przydatne pakiety
 % ------------------------------
-\usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+% \usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
+% % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
 
@@ -65,6 +65,7 @@
 \usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
 % na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
 % nie wiem.
+\usepackage{siunitx}
 
 
 
@@ -172,12 +173,283 @@
 
 
 
+Omawiają mechanikę Newtona warto przedyskutować następujące zagadnienie.
+Występujące w~fizyce wielkości zwykle nie są reprezentowane liczbami, lecz
+liczbami posiadającymi jednostki fizycznie, lub jak to często mówimy
+wymiar fizyczny, czyli sekundy, metry, metry na sekundę, etc.
+Pozwala to nam napisać
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-01}
+  60 \, \si{s} = 1 \, \si{min},
+\end{equation}
+gdzie $\si{s}$ oznaczają sekundy, a~$\si{min}$ minuty, mimo że ewidentnie
+$60$ nie jest równe $1$. Powstaje więc pytanie, jak można matematycznie
+sformalizować pojęcie liczby posiadającej jednostki fizyczne? Dla większości
+fizyków zajmowanie~się tym byłoby zapewne stratą czasu, gdyż „jest
+oczywiste” jak rozumieć wielkość fizyczną posiadającą odpowiedni wymiar,
+uważamy jednak, że~patrząc od strony formalizmu matematycznego problem
+ten jest interesując, dlatego warto~się nim zająć.
+
+Przedstawimy teraz pewien sposób sformalizowania tego zagadnienia. Zapewne
+nie jest on optymalny, powinien jednak wystarczyć na początek. Ponadto
+przedstawiona konstrukcja nie bierze pod uwagę dwóch ważnych zagadnień. Po
+pierwsze, czy wielkości obecne którymi operuje~się w~fizyce powinny być
+reprezentowane zbiorem liczb rzeczywistych $\Rbb$, czy jakimś innym?
+Przykładowo, czy fizyce mógłby wystarczyć zbiór liczb wymiernych $\Qbb$?
+
+Drugi ważne pytanie powiązane jest z~pierwszym. Czy jeśli formalizm fizyczny
+ma~się opierać na liczbach rzeczywistych, to czy do reprezentowania każdej
+wielkości fizycznej potrzebny jest cały zbiór $\Rbb$, czy dla niektórych
+wystarczający jest np. zbiór dodatnich liczb rzeczywistych:
+$\Rbb_{ + } = \{ x \in \Rbb \, | \, x > 0 \}$? Można bowiem argumentować,
+że~wielkości takie jak masa obiektu fizycznego powinny być zawsze dodatnie,
+$m > 0$, a~temperatura zawsze większa od zera bezwzględnego, czyli zbiór
+liczb rzeczywistych rozciągający~się od minus do plus nieskończoności jest
+zbyt duży w~stosunku do naszych realnych potrzeb.
+
+Choć oba te problemy mają swoją wagę, nie będziemy~się wdawać tu w~trudną
+dyskusję na ich temat. Dla prostoty przyjmiemy, że~wszystkie wielkości
+fizyczne powinny być modelowane na pełnym zbiorze $\Rbb$ i~podamy
+pewną szczególną formalizację liczb rzeczywistych posiadających jednostki.
+
+W~naszym podejściu przyjmujemy ponadto, że~wszystkie rozważane jednostki
+opierają~się na trzech podstawowych wielkościach: mierze długości, czasu
+i~masy. Uogólnienie podanych tu konstrukcji na przypadek systemu z~większą
+ilością podstawowych jednostek nie powinno stanowić wielkiego problemu.
+Zaczynami więc od wprowadzenia trzech symboli $L$, $T$ i~$M$, które
+oznaczają odpowiednio koncepcje długości, czasu i~masy. Podkreślamy,
+że~chodzi tu o~koncepcje, nie konkretne wielkości fizyczne. W~szczególności
+skoro $L$ oznacza koncepcję długości, to nie przypisujemy temu symbolowi,
+ani wielkości liczbowej, ani jednostek. Powinno być dość jasne, że~można
+sensownie mówić o~długości stołu, ale nie ma sensu pytać~się o~to czy
+sama koncepcja długości ma długość $30 \, \si{cm}$ czy nie\footnote{Dla
+  rozwiania pewnych wątpliwości, można oczywiście pytać~się o~długość
+  symbolu „$L$”, ale to co innego niż pytanie~się o~długość tego co symbol
+  ten oznacza.}.
+
+Rozważmy teraz zbiór\footnote{Od ang. \textit{units}.}
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-02}
+  U_{ 0 } = \{ I, L, T, M \}.
+\end{equation}
+i~rozważmy grupę przemienną generowaną przez ten zbiór, przy czym $I$ ma
+być jej elementem neutralnym. Grupę tą oznaczmy $U$. Tutaj wchodzimy
+w~jeden z~bardziej wątpliwych punktów całej konstrukcji, gdyż nie jestem
+pewien, czy dobrze korzystamy z~konstrukcji grupy generowanej przez
+dowolny, skończony zbiór. W~tej jednak chwili nie widzę powodu, dla
+którego ta przeprowadzona w~trochę naiwny sposób konstrukcja miałaby
+być błędna.
+
+Grupa $G$ składa~się ze wszystkich możliwych, skończonych kombinacji
+elementów $L$, $T$, $M$ i~elementów do nich odwrotnych $L^{ -1 }$, $T^{ -1 }$
+i~$M^{ -1 }$ oraz elementu neutralnego $I$. Zawiera więc ona przykładowo
+elementy
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-03}
+  \begin{split}
+    &L, L^{ 2 }, L^{ 3 }, L^{ 4 }, L^{ -1 }, L^{ -2 }, L^{ -3 },
+    T^{ 1 }, T^{ 2 }, T^{ 3 }, T^{ 4 }, T^{ -1 }, T^{ -2 }, T^{ -3 }, T^{ -3 }, \\
+    &M^{ 1 }, M^{ 2 }, M^{ 3 }, M^{ -1 }, M^{ -2 }, M^{ -3 },
+    L T, L T^{ -1 }, M L, M L^{ -1 }, M L^{ -2 }, \ldots
+  \end{split}
+\end{equation}
+Wprowadzając notację
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-04}
+  u^{ -1 } = \frac{ 1 }{ u } = 1 / u, \quad u \in U,
+\end{equation}
+oraz analogiczne jak dla ułamków wymiernych prawa operowania ułamkami
+utworzonymi z~elementów grupy $U$ możemy zapisać pewne elementy
+występujące w~\eqref{eq:Mechanika-Rozwazania-ogolne-03} w~bardziej znajomej
+postaci:
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-05}
+  L T^{ -1 } = \frac{ L }{ T }, \quad
+  M L^{ -1 } = \frac{ M }{ L }, \quad
+  M L^{ -2 } = \frac{ M }{ L^{ 2 } }, \quad \ldots
+\end{equation}
+Każdemu elementowi $u \in U$ przyporządkowujemy jednowymiarową przestrzeń
+wektorową nad $\Rbb$, którą będziemy oznaczać jako $V_{ u }$. Zbiór
+wszystkim tych przestrzeni wektorowych będziemy oznaczać przez $S_{ U }$.
+Dla przestrzeni $V_{ I }$ określamy wyróżniony wektor bazy $e_{ I }$, który
+pozwala nam zdefiniować kanoniczny izomorfizm $V_{ I }$ z~$\Rbb$:
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-06}
+  \omega : V_{ I } \ni v = \alpha \, e_{ I } \mapsto \alpha \in \Rbb.
+\end{equation}
+Tym samym możemy uznać, iż~$V_{ I }$ reprezentuje przestrzeń wielkości
+bezwymiarowych.
+
+Niech teraz będą dane $u_{ 1 }, u_{ 2 } \in U$. Każdej parze taki przestrzeni
+przyporządkowujemy pewien rodzaj iloczynu, który będziemy oznaczać
+$\psi_{ u_{ 1 }, \, u_{ 2 } }$.
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-07}
+  \psi_{ u_{ 1 }, \, u_{ 2 } } :
+  V_{ u_{ 1 } } \times V_{ u_{ 2 } } \to V_{ u_{ 1 } u_{ 2 } },
+\end{equation}
+gdzie $V_{ u_{ 1 } u _{ 2 } }$ oznacza przestrzeń przyporządkowaną elementowi
+$u_{ 1 } u_{ 2 } \in U$. Od $\psi_{ u_{ 1 }, \, u_{ 2 } }$ żądamy był on
+odwzorowaniem dwuliniowym. Aby doprecyzować te odwzorowania w~każdej
+przestrzeni $V_{ u }$ wybieramy w~dowolny sposób jeden niezerowy wektor,
+oznaczmy go $e_{ u }$, i~kładziemy
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-08}
+  \psi_{ u_{ 1 }, \, u_{ 2 } }( e_{ u_{ 1 } }, e_{ u_{ 2 } } ) = e_{ u_{ 1 } u_{ 2 } }.
+\end{equation}
+
+Wprowadzamy również operację dzielenia elementu z~$V_{ u_{ 1 } }$ przez
+niezerowy element z~$V_{ u_{ 2 } }$:
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-08}
+  \varphi_{ u_{ 1 },\, u_{ 2 } } :
+  V_{ u_{ 1 } } \times ( V_{ u_{ 2 } } \setminus \{ 0 \} ) \to V_{ u_{ 1 } / u_{ 2 } }.
+\end{equation}
+Od $\varphi_{ u_{ 1 }, \, u_{ 2 } }$ żądamy by posiadało następujące własności
+\begin{subequations}
+  \begin{align}
+    \label{eq:Mechanika-Rozwazania-ogolne-09-A}
+    \varphi_{ u_{ 1 }, \, u_{ 2 } }( \alpha \, v_{ 1 } + \beta \, v_{ 2 }, w )
+    &= \alpha \, \varphi_{ u_{ 1 }, \, u_{ 2 } }( v_{ 1 }, w )
+      + \beta \, \varphi_{ u_{ 1 }, \, u_{ 2 } }( v_{ 2 }, w ), \\
+    \label{eq:Mechanika-Rozwazania-ogolne-09-B}
+    \varphi_{ u_{ 1 }, \, u_{ 2 } }( v, \lambda \, w )
+    &= \frac{ 1 }{ \lambda } \, \varphi_{ u_{ 1 }, \, u_{ 2 } }( v, w ), \\
+    \label{eq:Mechanika-Rozwazania-ogolne-09-C}
+    \varphi_{ u, \, u }( v_{ u }, v_{ u } ) &= I \in V_{ I },
+  \end{align}
+\end{subequations}
+gdzie $u, u_{ 1 }, u_{ 2 } \in U$, $v_{ u } \in V_{ u }$,
+$v, v_{ 1 }, v_{ 2 } \in V_{ u_{ 1 } }$, $w \in V_{ u_{ 2 } }$, $w \neq 0$,
+$\alpha, \beta, \lambda \in \Rbb$ i~$\lambda \neq 0$. Podobnie jak poprzednio żądamy by zachodziło
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-12}
+  \varphi_{ u_{ 1 }, \, u_{ 2 } }( e_{ u_{ 1 } }, e_{ u_{ 2 } } ) = e_{ u_{ 1 } / u_{ 2 } }.
+\end{equation}
+
+Przystąpimy teraz do udowodnienia własności odwzorowań
+$\psi_{ u_{ 1 }, u_{ 2 } }$ i~$\varphi_{ u_{ 1 }, u_{ 2 } }$, które pozwalają stwierdzić,
+że~zachowują~się one jak mnożenie i~dzielenie liczb rzeczywistych. Na
+początek przeanalizujemy analog łączności mnożenia liczb rzeczywistych.
+\begin{equation}
+  \label{eq:Arnold-MetodyMatematyczneETC-01}
+  \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
+  \psi_{ u_{ 1 }, u_{ 2 } }( v_{ 1 }, v_{ 2 } ), v_{ 3 } \big)
+  =
+  \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }\big(
+  v_{ 1 }, \psi_{ u_{ 2 }, u_{ 3 } }( v_{ 2 }, v_{ 3 } ) \big),
+\end{equation}
+gdzie $u_{ 1 }, u_{ 2 }, u_{ 3 } \in U$ $v_{ 1 } \in V_{ u_{ 1 } }$,
+$v_{ 2 } \in V_{ u_{ 2 } }$, $v_{ 3 } \in V_{ u_{ 3 } }$. Główny problem z~tą
+tożsamością i~jej dowodem polega na tym, że~notacja staje~się dość
+zawiła. Jeśli bowiem zapiszemy $v_{ 1 } = \alpha \, e_{ u_{ 1 } }$,
+$v_{ 2 } = \beta \, e_{ u_{ 2 } }$, $v_{ 3 } = \gamma \, e_{ u_{ 3 } }$, to dostajemy
+\begin{subequations}
+  \begin{align}
+    \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
+    \psi_{ u_{ 1 }, \, u_{ 2 } }( v_{ 1 }, v_{ 2 } ), v_{ 3 } \big)
+    &=
+      \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
+      \psi_{ u_{ 1 }, \, u_{ 2 } }( \alpha \, e_{ u_{ 1 } }, \beta \, e_{ u_{ 2 } } ),
+      \gamma \, e_{ u_{ 3 } } \big) = \\
+    &=
+      \alpha \beta \gamma \, \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
+      \psi_{ u_{ 1 }, \, u_{ 2 } }( e_{ u_{ 1 } }, e_{ u_{ 2 } } ),
+      e_{ u_{ 3 } } \big), \\
+    \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }\big(
+    e_{ u_{ 1 } },
+    \psi_{ u_{ 2 }, \, u_{ 3 } }( e_{ u_{ 2 } }, e_{ u_{ 3 } } ) \big)
+    &=
+      \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }\big(
+      \alpha \, e_{ u_{ 1 } },
+      \psi_{ u_{ 2 }, \, u_{ 3 } }( \beta \, e_{ u_{ 2 } }, \gamma \, e_{ u_{ 3 } } )
+      \big) \\
+    &=
+      \alpha \beta \gamma \, \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }\big(
+      e_{ u_{ 1 } },
+      \psi_{ u_{ 2 }, \, u_{ 3 } }( e_{ u_{ 2 } }, e_{ u_{ 3 } } ) \big).
+  \end{align}
+\end{subequations}
+Widzimy więc, że~aby zakończyć dowód tej własności wystarczy wykazać
+równości
+\begin{equation}
+  \label{eq:Arnold-MetodyMatematyczneETC-01}
+  \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
+  \psi_{ u_{ 1 }, \, u_{ 2 } }( e_{ u_{ 1 } }, e_{ u_{ 2 } } ), e_{ u_{ 3 } }
+  \big)
+  =
+  \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }\big(
+  e_{ u_{ 1 } }, \psi_{ u_{ 2 }, \, u_{ 3 } }( e_{ u_{ 2 } }, e_{ u_{ 3 } } )
+  \big).
+\end{equation}
+Lewa strona tej zależności jest równa
+\begin{equation}
+  \label{eq:Arnold-MetodyMatematyczneETC-01}
+  \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
+  \psi_{ u_{ 1 }, \, u_{ 2 } }( e_{ u_{ 1 } }, e_{ u_{ 2 } } ), e_{ u_{ 3 } }
+  \big) =
+  \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big( e_{ u_{ 1 } u_{ 2 } }, e_{ u_{ 3 } }
+  \big) =
+  e_{ ( u_{ 1 } u_{ 2 } ) u_{ 3 } },
+\end{equation}
+zaś prawa
+\begin{equation}
+  \label{eq:Arnold-MetodyMatematyczneETC-01}
+  \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }\big(
+  e_{ u_{ 1 } }, \psi_{ u_{ 2 }, \, u_{ 3 } }( e_{ u_{ 2 } }, e_{ u_{ 3 } } )
+  \big) =
+  \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }( e_{ u_{ 1 } }, e_{ u_{ 2 } u_{ 3 } } ) =
+  e_{ u_{ 1 } ( u_{ 2 } u_{ 3 } ) }.
+\end{equation}
+Tym samym równość \eqref{???} wynika z~łączności mnożenia w~grupie $U$,
+a~zatem prawdziwa jest też równość \eqref{????} wyrażająca analog łączności
+mnożenia w~zbiorze $S_{ U }$..
+
+Ten schemat powinien nam pozwolić opisać wszystkie podstawowe operacje
+wykonywane na~wielkościach fizycznych posiadających jednostki, co
+zilustrujemy to kilkoma przykładami. Na początku wybieramy odpowiednie bazy
+w~przestrzeniach $V_{ L }$, $V_{ T }$ i~$V_{ M }$. Niech tymi bazami będą
+$e_{ \si{m} } \in V_{ L }$, $e_{ \si{s} } \in V_{ T }$, $e_{ \si{kg} }$, gdzie
+wektor
+$e_{ \si{m} }$ będziemy interpretować jako oznaczający metr, $e_{ s }$ jako
+sekundę, a~$e_{ \si{kg} }$ jako oznaczający kilogram. Jeżeli teraz mamy dwa
+wektory $v_{ 1 }, v_{ 2 } \in V_{ L }$, $v_{ 1 } = 10 \, e_{ \si{m} }$,
+$v_{ 2 } = 5 \, e_{ \si{m} }$, to
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-10}
+  v_{ 1 } + v_{ 2 } = 10 \, e_{ \si{m} } + 5 \, e_{ \si{m} } =
+  15 \, e_{ \si{m} } \in V_{ L }.
+\end{equation}
+W~notacji do której jesteśmy bardziej przyzwyczajeni, choć z~nietypowym
+użyciem symbolu $v$, powyższa równość przyjęłaby formę
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-11}
+  v_{ 1 } + v_{ 2 } = 10 \, \si{m} + 5 \, \si{m} = 15 \, \si{m}.
+\end{equation}
+Weźmy teraz $v = 10 \, e_{ \si{m} } \in V_{ L }$
+i~$w = 5 \, e_{ \si{s} }\in V_{ T }$. Możemy teraz obliczyć
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-11}
+  \varphi_{ L, \, T }( v, w ) =
+  \varphi_{ L, \, T }( 10 \, e_{ \si{m} }, 5 \, e_{ \si{s} } ) =
+  10 \varphi_{ L, \, T }( e_{ \si{m} }, 5 \, e_{ \si{s} } ) =
+  10 \cdot \frac{ 1 }{ 5 } \varphi_{ L, \, T }( e_{ \si{m} }, e_{ \si{s} } ) =
+  2 \varphi_{ L, \, T }( e_{ \si{m} }, e_{ \si{s} } ).
+\end{equation}
+Wektor $\varphi_{ L, T }( e_{ \si{m} }, e_{ \si{s} } )$ będziemy interpretowali jako
+
+
+
+
+
 
 
 
 
 % ######################################
-\section{Kanoniczne prace}
+\newpage
+
+\section{Kanoniczne prace o~mechanice Newtona}
 % Tytuł danego działu
 
 \vspace{\spaceTwo}
@@ -200,7 +472,6 @@
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -215,8 +486,15 @@
 
 \end{center}
 
-
 \vspace{\spaceTwo}
+
+
+
+
+
+
+
+
 % ############################
 
 
@@ -338,6 +616,70 @@ założenie o~ciągłości $g$ wydaje się bardzo nienaturalne. Wydaje się,
     214 & & 6 & rotacja & rotacją \\
     225 & 13 & & $H( \partial L / \partial \dot{ \vecpbold }, \vecqbold )$
            & $H( \partial L / \partial \dot{ \vecqbold }, \vecqbold )$ \\
+    % 242 &  3 & & \textit{Jacobiego} & Jacobiego \\
+    % 268 & &  8 & $g$ & $\vecgbold$ \\
+    % 291 & & & & \\ % Jak się pisze w LaTeXu cyrlicą?
+    % 351 &  1 & & $P_{ * }TM_{ X }$ & $P_{ * }TM_{ x }$ \\
+    % 351 &  1 & & $T\gFrak_{ p }^{ * })$ & $T\gFrak_{ p }^{ * }$ \\
+    % 373 & 18 & & A.~Arez & A.~Avez \\
+    % 395 & & 11 & \textit{Poincar\'{e}'s} & \textit{Poincar\'{e}s} \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  \newpage
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & od góry & od dołu & & \\
+    \hline
+    % 12  & &  2 & matematycz netak & matematyczne tak \\
+    % 18  &  3 & & $\Phi( \vecxbold, \dot{ \vecxbold } )$
+    %        & % $\mathbf{F}( \mathbf{ x }, \dot{ \mathbf{ x } } )$
+    % \\
+    % 19  & &  1 & $\vecgbold\, \vecxbold$ & $-\vecgbold\, \vecxbold$ \\
+    % 23  &  4 & & $f( \dot{ x } )$ & $f( x )$ \\
+    % 24  &  1 & & Narysujem y & Narysujemy \\
+    % 34  & &  2 & zorientowane & zorientowanej \\
+    % 37  & & 10 & $\ddot{ \vecrbold } - r \dot{ \varphi }^{ 2 }$
+    %        & $\ddot{ r } - r \dot{ \varphi }^{ 2 }$ \\
+    % 37  & &  6 & $\dot{ r } -$ & $\ddot{ r } -$ \\
+    % 60  & 10 & & napsać & napisać \\
+    % 61  & &  8 & $\sqrt{ ( \dot{ q }_{ 1 }^{ 2 } + \dot{ q }_{ 2 }^{ 2 }
+    %              + \dot{ q }_{ 3 }^{ 2 } ) }$
+    %        & $\frac{ 1 }{ 2 } m ( \dot{ q }_{ 1 }^{ 2 } + \dot{ q }_{ 2 }^{ 2 }
+    %          + \dot{ q }_{ 3 }^{ 2 } )$ \\
+    % 62  &  2 & & $m\, \dot{ \vecrbold }$ & $m\, \dot{ r }$ \\
+    % 64  & &  8 & $G( x, p )$ & $G( x_{ 0 }, p )$ \\
+    % 77  & &  9 & $S^{ 2 }$ & $S^{ 1 }$ \\
+    % % & & & & \\
+    % % & & & & \\
+    % % & & & & \\
+    % % & & & & \\
+    % 81  &  5 & & $TM$ & $TM_{ x }$ \\
+    % 81  &  9 & & $\mathbf{ \eta_{ i } }$ & $\eta_{ i }$ \\
+    % 81  & &  5 & związką & wiązką \\
+    % 81  & &  3 & $\vectbold_{ 0 }$ & $t_{ 0 }$ \\
+    % 82  & 15 & & $m_{ 1 }${  }, & $m_{ 1 }$ \\
+    % 86  &  2 & & \textit{Lagrange’a, to $( M, L )$}
+    %        & \textit{Lagrange’a $( M, L )$, to} \\
+    % 98  & &  3 & $\omega^{ 2 }$ & $\omega_{ 0 }^{ 2 }$ \\
+    % 124 & 13 & & $\mathbf{Q}$ & $Q$ \\
+    % 165 & &  9 & postc & postaci \\
+    % 169 & & 10 & Prykład & Przykład \\
+    % 170 & 8 & & k-wymiaro & k-wymiro- \\
+    % 181 & & 15 & obszru & obszaru \\
+    % 186 & & 11 & $T^{ * } V$ & $T^{ * } V_{ x }$ \\
+    % 188 & 1 & & ednoparametrowa & jednoparametrowa \\
+    % 214 & & 6 & rotacja & rotacją \\
+    % 225 & 13 & & $H( \partial L / \partial \dot{ \vecpbold }, \vecqbold )$
+    %        & $H( \partial L / \partial \dot{ \vecqbold }, \vecqbold )$ \\
     242 &  3 & & \textit{Jacobiego} & Jacobiego \\
     268 & &  8 & $g$ & $\vecgbold$ \\
     % 291 & & & & \\ % Jak się pisze w LaTeXu cyrlicą?
@@ -382,6 +724,8 @@ założenie o~ciągłości $g$ wydaje się bardzo nienaturalne. Wydaje się,
 
 
 % ############################
+\newpage
+
 \Work{ % Autorzy i tytuł dzieła
   Roman Stanisław Ingarden, Andrzej Jamiołkowski \\
   \textit{Mechanika klasyczna},
@@ -474,6 +818,8 @@ współrzędnych\ldots
 
 
 % ############################
+\newpage
+
 \Work{ % Autorzy i tytuł dzieła
   J. I. Nejmark, N. A. Fufajew \\
   \textit{Dynamika układów nieholonomicznych},
@@ -1224,6 +1570,8 @@ poniższego twierdzenia.
 
 
 % ############################
+\newpage
+
 \Work{ % Autor i tytuł dzieła
   Bogdan Skalmierski \\
   \textit{Mechanika z~wytrzymałością materiałów},
@@ -1281,7 +1629,6 @@ $\vecebold_{ 1 }$ do~$\vecebold_{ 2 }$.
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -1362,10 +1709,12 @@ $( \dot{ x }_{ 1 } \vecibold + \dot{ x }_{ 2 } \vecjbold )
 
 
 % ############################
+\newpage
+
 \Work{ % Autor i tytuł dzieła
   Bogdan Skalmierski \\
   \textit{Mechanika. Tom I: Podstawy mechaniki klasycznej},
-  \cite{SkalmierskiPodstawyMechanikiKlasycznejTomI1998}}
+  \cite{SkalmierskiMechanikPodstawyETCVolI1998}}
 
 
 % ##################
