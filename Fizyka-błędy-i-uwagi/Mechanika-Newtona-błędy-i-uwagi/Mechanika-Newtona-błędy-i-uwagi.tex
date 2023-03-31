@@ -174,15 +174,15 @@
 
 
 Omawiają mechanikę Newtona warto przedyskutować następujące zagadnienie.
-Występujące w~fizyce wielkości zwykle nie są reprezentowane liczbami, lecz
-liczbami posiadającymi jednostki fizycznie, lub jak to często mówimy
-wymiar fizyczny, czyli sekundy, metry, metry na sekundę, etc.
-Pozwala to nam napisać
+Występujące w~fizyce wielkości zwykle nie są reprezentowane po prostu
+liczbami, lecz liczbami posiadającymi jednostki fizycznie, lub jak to
+często mówimy wymiar fizyczny, taki jak sekundy, metry, metry na sekundę,
+etc. Pozwala to nam napisać
 \begin{equation}
   \label{eq:Mechanika-Rozwazania-ogolne-01}
   60 \, \si{s} = 1 \, \si{min},
 \end{equation}
-gdzie $\si{s}$ oznaczają sekundy, a~$\si{min}$ minuty, mimo że ewidentnie
+gdzie $\si{s}$ oznacza sekundę, a~$\si{min}$ minutę, mimo że ewidentnie
 $60$ nie jest równe $1$. Powstaje więc pytanie, jak można matematycznie
 sformalizować pojęcie liczby posiadającej jednostki fizyczne? Dla większości
 fizyków zajmowanie~się tym byłoby zapewne stratą czasu, gdyż „jest
@@ -196,7 +196,6 @@ przedstawiona konstrukcja nie bierze pod uwagę dwóch ważnych zagadnień. Po
 pierwsze, czy wielkości obecne którymi operuje~się w~fizyce powinny być
 reprezentowane zbiorem liczb rzeczywistych $\Rbb$, czy jakimś innym?
 Przykładowo, czy fizyce mógłby wystarczyć zbiór liczb wymiernych $\Qbb$?
-
 Drugi ważne pytanie powiązane jest z~pierwszym. Czy jeśli formalizm fizyczny
 ma~się opierać na liczbach rzeczywistych, to czy do reprezentowania każdej
 wielkości fizycznej potrzebny jest cały zbiór $\Rbb$, czy dla niektórych
@@ -209,13 +208,15 @@ zbyt duży w~stosunku do naszych realnych potrzeb.
 
 Choć oba te problemy mają swoją wagę, nie będziemy~się wdawać tu w~trudną
 dyskusję na ich temat. Dla prostoty przyjmiemy, że~wszystkie wielkości
-fizyczne powinny być modelowane na pełnym zbiorze $\Rbb$ i~podamy
-pewną szczególną formalizację liczb rzeczywistych posiadających jednostki.
+fizyczne powinny być modelowane na pełnym zbiorze $\Rbb$ i~bazując
+na tym założeniu podamy pewną szczególną formalizację liczb rzeczywistych
+posiadających jednostki.
 
 W~naszym podejściu przyjmujemy ponadto, że~wszystkie rozważane jednostki
-opierają~się na trzech podstawowych wielkościach: mierze długości, czasu
-i~masy. Uogólnienie podanych tu konstrukcji na przypadek systemu z~większą
-ilością podstawowych jednostek nie powinno stanowić wielkiego problemu.
+opierają~się na trzech podstawowych wielkościach: mierze długości,
+mierze czasu i~mierze masy. Uogólnienie podanych tu konstrukcji na
+przypadek systemu z~większą ilością podstawowych wielkości nie powinno
+stanowić wielkiego problemu.
 Zaczynami więc od wprowadzenia trzech symboli $L$, $T$ i~$M$, które
 oznaczają odpowiednio koncepcje długości, czasu i~masy. Podkreślamy,
 że~chodzi tu o~koncepcje, nie konkretne wielkości fizyczne. W~szczególności
@@ -301,21 +302,21 @@ oznaczmy go $e_{ u }$, i~kładziemy
 Wprowadzamy również operację dzielenia elementu z~$V_{ u_{ 1 } }$ przez
 niezerowy element z~$V_{ u_{ 2 } }$:
 \begin{equation}
-  \label{eq:Mechanika-Rozwazania-ogolne-08}
+  \label{eq:Mechanika-Rozwazania-ogolne-09}
   \varphi_{ u_{ 1 },\, u_{ 2 } } :
   V_{ u_{ 1 } } \times ( V_{ u_{ 2 } } \setminus \{ 0 \} ) \to V_{ u_{ 1 } / u_{ 2 } }.
 \end{equation}
 Od $\varphi_{ u_{ 1 }, \, u_{ 2 } }$ żądamy by posiadało następujące własności
 \begin{subequations}
   \begin{align}
-    \label{eq:Mechanika-Rozwazania-ogolne-09-A}
+    \label{eq:Mechanika-Rozwazania-ogolne-10-A}
     \varphi_{ u_{ 1 }, \, u_{ 2 } }( \alpha \, v_{ 1 } + \beta \, v_{ 2 }, w )
     &= \alpha \, \varphi_{ u_{ 1 }, \, u_{ 2 } }( v_{ 1 }, w )
       + \beta \, \varphi_{ u_{ 1 }, \, u_{ 2 } }( v_{ 2 }, w ), \\
-    \label{eq:Mechanika-Rozwazania-ogolne-09-B}
+    \label{eq:Mechanika-Rozwazania-ogolne-10-B}
     \varphi_{ u_{ 1 }, \, u_{ 2 } }( v, \lambda \, w )
     &= \frac{ 1 }{ \lambda } \, \varphi_{ u_{ 1 }, \, u_{ 2 } }( v, w ), \\
-    \label{eq:Mechanika-Rozwazania-ogolne-09-C}
+    \label{eq:Mechanika-Rozwazania-ogolne-10-C}
     \varphi_{ u, \, u }( v_{ u }, v_{ u } ) &= I \in V_{ I },
   \end{align}
 \end{subequations}
@@ -323,7 +324,7 @@ gdzie $u, u_{ 1 }, u_{ 2 } \in U$, $v_{ u } \in V_{ u }$,
 $v, v_{ 1 }, v_{ 2 } \in V_{ u_{ 1 } }$, $w \in V_{ u_{ 2 } }$, $w \neq 0$,
 $\alpha, \beta, \lambda \in \Rbb$ i~$\lambda \neq 0$. Podobnie jak poprzednio żądamy by zachodziło
 \begin{equation}
-  \label{eq:Mechanika-Rozwazania-ogolne-12}
+  \label{eq:Mechanika-Rozwazania-ogolne-11}
   \varphi_{ u_{ 1 }, \, u_{ 2 } }( e_{ u_{ 1 } }, e_{ u_{ 2 } } ) = e_{ u_{ 1 } / u_{ 2 } }.
 \end{equation}
 
@@ -332,7 +333,7 @@ $\psi_{ u_{ 1 }, u_{ 2 } }$ i~$\varphi_{ u_{ 1 }, u_{ 2 } }$, które pozwalają 
 że~zachowują~się one jak mnożenie i~dzielenie liczb rzeczywistych. Na
 początek przeanalizujemy analog łączności mnożenia liczb rzeczywistych.
 \begin{equation}
-  \label{eq:Arnold-MetodyMatematyczneETC-01}
+  \label{eq:Mechanika-Rozwazania-ogolne-12}
   \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
   \psi_{ u_{ 1 }, u_{ 2 } }( v_{ 1 }, v_{ 2 } ), v_{ 3 } \big)
   =
@@ -345,35 +346,43 @@ tożsamością i~jej dowodem polega na tym, że~notacja staje~się dość
 zawiła. Jeśli bowiem zapiszemy $v_{ 1 } = \alpha \, e_{ u_{ 1 } }$,
 $v_{ 2 } = \beta \, e_{ u_{ 2 } }$, $v_{ 3 } = \gamma \, e_{ u_{ 3 } }$, to dostajemy
 \begin{subequations}
-  \begin{align}
-    \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
-    \psi_{ u_{ 1 }, \, u_{ 2 } }( v_{ 1 }, v_{ 2 } ), v_{ 3 } \big)
-    &=
+  \begin{equation}
+    \label{eq:Mechanika-Rozwazania-ogolne-13-A}
+    \begin{split}
       \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
-      \psi_{ u_{ 1 }, \, u_{ 2 } }( \alpha \, e_{ u_{ 1 } }, \beta \, e_{ u_{ 2 } } ),
-      \gamma \, e_{ u_{ 3 } } \big) = \\
-    &=
-      \alpha \beta \gamma \, \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
-      \psi_{ u_{ 1 }, \, u_{ 2 } }( e_{ u_{ 1 } }, e_{ u_{ 2 } } ),
-      e_{ u_{ 3 } } \big), \\
-    \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }\big(
-    e_{ u_{ 1 } },
-    \psi_{ u_{ 2 }, \, u_{ 3 } }( e_{ u_{ 2 } }, e_{ u_{ 3 } } ) \big)
-    &=
+      \psi_{ u_{ 1 }, \, u_{ 2 } }( v_{ 1 }, v_{ 2 } ), v_{ 3 } \big)
+      &=
+        \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
+        \psi_{ u_{ 1 }, \, u_{ 2 } }( \alpha \, e_{ u_{ 1 } }, \beta \, e_{ u_{ 2 } } ),
+        \gamma \, e_{ u_{ 3 } } \big) = \\
+      &=
+        \alpha \beta \gamma \, \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
+        \psi_{ u_{ 1 }, \, u_{ 2 } }( e_{ u_{ 1 } }, e_{ u_{ 2 } } ),
+        e_{ u_{ 3 } } \big),
+    \end{split}
+  \end{equation}
+  \begin{equation}
+    \label{eq:Mechanika-Rozwazania-ogolne-13-B}
+    \begin{split}
       \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }\big(
-      \alpha \, e_{ u_{ 1 } },
-      \psi_{ u_{ 2 }, \, u_{ 3 } }( \beta \, e_{ u_{ 2 } }, \gamma \, e_{ u_{ 3 } } )
-      \big) \\
-    &=
-      \alpha \beta \gamma \, \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }\big(
       e_{ u_{ 1 } },
-      \psi_{ u_{ 2 }, \, u_{ 3 } }( e_{ u_{ 2 } }, e_{ u_{ 3 } } ) \big).
-  \end{align}
+      \psi_{ u_{ 2 }, \, u_{ 3 } }( e_{ u_{ 2 } }, e_{ u_{ 3 } } ) \big)
+      &=
+        \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }\big(
+        \alpha \, e_{ u_{ 1 } },
+        \psi_{ u_{ 2 }, \, u_{ 3 } }( \beta \, e_{ u_{ 2 } }, \gamma \, e_{ u_{ 3 } } )
+        \big) = \\
+      &=
+        \alpha \beta \gamma \, \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }\big(
+        e_{ u_{ 1 } },
+        \psi_{ u_{ 2 }, \, u_{ 3 } }( e_{ u_{ 2 } }, e_{ u_{ 3 } } ) \big).
+    \end{split}
+  \end{equation}
 \end{subequations}
 Widzimy więc, że~aby zakończyć dowód tej własności wystarczy wykazać
 równości
 \begin{equation}
-  \label{eq:Arnold-MetodyMatematyczneETC-01}
+  \label{eq:Mechanika-Rozwazania-ogolne-14}
   \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
   \psi_{ u_{ 1 }, \, u_{ 2 } }( e_{ u_{ 1 } }, e_{ u_{ 2 } } ), e_{ u_{ 3 } }
   \big)
@@ -382,9 +391,9 @@ równości
   e_{ u_{ 1 } }, \psi_{ u_{ 2 }, \, u_{ 3 } }( e_{ u_{ 2 } }, e_{ u_{ 3 } } )
   \big).
 \end{equation}
-Lewa strona tej zależności jest równa
+Lewa strona tej zależności wynosi
 \begin{equation}
-  \label{eq:Arnold-MetodyMatematyczneETC-01}
+  \label{eq:Mechanika-Rozwazania-ogolne-15}
   \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
   \psi_{ u_{ 1 }, \, u_{ 2 } }( e_{ u_{ 1 } }, e_{ u_{ 2 } } ), e_{ u_{ 3 } }
   \big) =
@@ -392,7 +401,7 @@ Lewa strona tej zależności jest równa
   \big) =
   e_{ ( u_{ 1 } u_{ 2 } ) u_{ 3 } },
 \end{equation}
-zaś prawa
+natomiast prawa
 \begin{equation}
   \label{eq:Arnold-MetodyMatematyczneETC-01}
   \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }\big(
@@ -403,7 +412,41 @@ zaś prawa
 \end{equation}
 Tym samym równość \eqref{???} wynika z~łączności mnożenia w~grupie $U$,
 a~zatem prawdziwa jest też równość \eqref{????} wyrażająca analog łączności
-mnożenia w~zbiorze $S_{ U }$..
+mnożenia w~zbiorze $S_{ U }$. Analogiczny rachunek pokazuje, że~zachodzi
+analog przemienności mnożenia
+\begin{equation}
+  \label{eq:Arnold-MetodyMatematyczneETC-01}
+  \psi_{ u_{ 1 }, \, u_{ 2 } }( v_{ 1 }, v_{ 2 } ) =
+  \psi_{ u_{ 2 }, \, u_{ 1 } }( v_{ 2 }, v_{ 1 } ),
+\end{equation}
+gdzie $u_{ 1 }, u_{ 2 } \in U$, $v_{ 1 } \in V_{ u_{ 1 } }$
+i~$v_{ 2 } \in V_{ u_{ 2 } }$. Używają analogicznej metody dowodzimy analogu
+prawa łączności dla operacji „dzielenia”
+\begin{equation}
+  \label{eq:Arnold-MetodyMatematyczneETC-01}
+  \varphi_{ u_{ 1 } / u_{ 2 }, \, u_{ 3 } }\big(
+  \varphi_{ u_{ 1 }, \, u_{ 2 } }( v_{ 1 }, v_{ 2 } ), v_{ 3 } \big) =
+  \varphi_{ u_{ 1 }, \, u_{ 2 } / u_{ 3 } }\big(
+  v_{ 1 }, \varphi_{ u_{ 2 }, \, u_{ 3 } }( v_{ 2 }, v_{ 3 } ) \big)
+\end{equation}
+oraz analog prawa rozdzielności
+\begin{equation}
+  \label{eq:Arnold-MetodyMatematyczneETC-01}
+  \psi_{ u_{ 1 } / u_{ 2 }, \, q_{ 1 } / q_{ 2 } }\big(
+  \varphi_{ u_{ 1 }, \, u_{ 2 } }( v_{ 1 }, v_{ 2 } ),
+  \varphi_{ q_{ 1 }, \, q_{ 2 } }( w_{ 1 }, w_{ 2 } ) \big) =
+  \varphi_{ u_{ 1 } q_{ 1 } / ( u_{ 2 } q_{ 2 } ) }\big(
+  \psi_{ u_{ 1 }, \, q_{ 1 } }( v_{ 1 }, w_{ 1 } ),
+  \psi_{ u_{ 2 }, \, q_{ 2 } }( v_{ 2 }, w_{ 2 } ) \big),
+\end{equation}
+gdzie $u_{ 1 }, u_{ 2 }, q_{ 1 }, q_{ 2 } \in U$, $v_{ 1 } \in V_{ u_{ 1 } }$,
+$v_{ 2 } \in V_{ u_{ 2 } }$, $w_{ 1 } \in V_{ q_{ 1 } }$ i~$w_{ 2 } \in v_{ q_{ 2 } }$.
+
+Korzystając udowodnionych przed chwilą zależności oraz własności mnożenia
+przez liczby w~przestrzeniach wektorowych, możemy udowodnić wiele innych
+zależności, analogicznych dla mnożenia i~dzielenia liczb rzeczywistych.
+Ponieważ metoda dowodzenia powinna być w~tym momencie jasna, nie
+będziemy~się zagłębiać w~szczegółowe dowody.
 
 Ten schemat powinien nam pozwolić opisać wszystkie podstawowe operacje
 wykonywane na~wielkościach fizycznych posiadających jednostki, co
@@ -436,7 +479,9 @@ i~$w = 5 \, e_{ \si{s} }\in V_{ T }$. Możemy teraz obliczyć
   10 \cdot \frac{ 1 }{ 5 } \varphi_{ L, \, T }( e_{ \si{m} }, e_{ \si{s} } ) =
   2 \varphi_{ L, \, T }( e_{ \si{m} }, e_{ \si{s} } ).
 \end{equation}
-Wektor $\varphi_{ L, T }( e_{ \si{m} }, e_{ \si{s} } )$ będziemy interpretowali jako
+Wektor $\varphi_{ L, \, T }( e_{ \si{m} }, e_{ \si{s} } )$ będziemy interpretowali
+jako metr nad sekundę.
+
 
 
 
