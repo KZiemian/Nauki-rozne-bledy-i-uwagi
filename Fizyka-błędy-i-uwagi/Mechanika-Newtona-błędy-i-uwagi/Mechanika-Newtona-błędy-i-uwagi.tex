@@ -220,7 +220,7 @@ stanowić wielkiego problemu.
 Zaczynami więc od wprowadzenia trzech symboli $L$, $T$ i~$M$, które
 oznaczają odpowiednio koncepcje długości, czasu i~masy. Podkreślamy,
 że~chodzi tu o~koncepcje, nie konkretne wielkości fizyczne. W~szczególności
-skoro $L$ oznacza koncepcję długości, to nie przypisujemy temu symbolowi,
+ponieważ $L$ oznacza koncepcję długości, to nie przypisujemy temu symbolowi,
 ani wielkości liczbowej, ani jednostek. Powinno być dość jasne, że~można
 sensownie mówić o~długości stołu, ale nie ma sensu pytać~się o~to czy
 sama koncepcja długości ma długość $30 \, \si{cm}$ czy nie\footnote{Dla
@@ -228,12 +228,13 @@ sama koncepcja długości ma długość $30 \, \si{cm}$ czy nie\footnote{Dla
   symbolu „$L$”, ale to co innego niż pytanie~się o~długość tego co symbol
   ten oznacza.}.
 
-Rozważmy teraz zbiór\footnote{Od ang. \textit{units}.}
+Rozważmy teraz zbiór\footnote{Od ang. \textit{units}.} czterech różnych
+symboli
 \begin{equation}
   \label{eq:Mechanika-Rozwazania-ogolne-02}
   U_{ 0 } = \{ I, L, T, M \}.
 \end{equation}
-i~rozważmy grupę przemienną generowaną przez ten zbiór, przy czym $I$ ma
+i~utwórzmy grupę przemienną generowaną przez ten zbiór, przy czym $I$ ma
 być jej elementem neutralnym. Grupę tą oznaczmy $U$. Tutaj wchodzimy
 w~jeden z~bardziej wątpliwych punktów całej konstrukcji, gdyż nie jestem
 pewien, czy dobrze korzystamy z~konstrukcji grupy generowanej przez
@@ -248,8 +249,9 @@ elementy
 \begin{equation}
   \label{eq:Mechanika-Rozwazania-ogolne-03}
   \begin{split}
-    &L, L^{ 2 }, L^{ 3 }, L^{ 4 }, L^{ -1 }, L^{ -2 }, L^{ -3 },
-    T^{ 1 }, T^{ 2 }, T^{ 3 }, T^{ 4 }, T^{ -1 }, T^{ -2 }, T^{ -3 }, T^{ -3 }, \\
+    &L, L^{ 2 }, L^{ 3 }, L^{ 4 }, L^{ -1 }, L^{ -2 }, L^{ -3 }, L^{ -4 },
+      T^{ 1 }, T^{ 2 }, T^{ 3 }, T^{ 4 }, T^{ -1 }, T^{ -2 }, T^{ -3 },
+      T^{ -3 }, T^{ -4 }, \\
     &M^{ 1 }, M^{ 2 }, M^{ 3 }, M^{ -1 }, M^{ -2 }, M^{ -3 },
     L T, L T^{ -1 }, M L, M L^{ -1 }, M L^{ -2 }, \ldots
   \end{split}
@@ -298,7 +300,6 @@ oznaczmy go $e_{ u }$, i~kładziemy
   \label{eq:Mechanika-Rozwazania-ogolne-08}
   \psi_{ u_{ 1 }, \, u_{ 2 } }( e_{ u_{ 1 } }, e_{ u_{ 2 } } ) = e_{ u_{ 1 } u_{ 2 } }.
 \end{equation}
-
 Wprowadzamy również operację dzielenia elementu z~$V_{ u_{ 1 } }$ przez
 niezerowy element z~$V_{ u_{ 2 } }$:
 \begin{equation}
@@ -330,8 +331,9 @@ $\alpha, \beta, \lambda \in \Rbb$ i~$\lambda \neq 0$. Podobnie jak poprzednio ż
 
 Przystąpimy teraz do udowodnienia własności odwzorowań
 $\psi_{ u_{ 1 }, u_{ 2 } }$ i~$\varphi_{ u_{ 1 }, u_{ 2 } }$, które pozwalają stwierdzić,
-że~zachowują~się one jak mnożenie i~dzielenie liczb rzeczywistych. Na
-początek przeanalizujemy analog łączności mnożenia liczb rzeczywistych.
+że~zachowują~się one jak mnożenie i~dzielenie liczb rzeczywistych.
+W~pierwszym rzędzie zbadamy własność analogiczną do łączności mnożenia
+liczb rzeczywistych.
 \begin{equation}
   \label{eq:Mechanika-Rozwazania-ogolne-12}
   \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
@@ -340,11 +342,11 @@ początek przeanalizujemy analog łączności mnożenia liczb rzeczywistych.
   \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }\big(
   v_{ 1 }, \psi_{ u_{ 2 }, u_{ 3 } }( v_{ 2 }, v_{ 3 } ) \big),
 \end{equation}
-gdzie $u_{ 1 }, u_{ 2 }, u_{ 3 } \in U$ $v_{ 1 } \in V_{ u_{ 1 } }$,
+gdzie $u_{ 1 }, u_{ 2 }, u_{ 3 } \in U$, $v_{ 1 } \in V_{ u_{ 1 } }$,
 $v_{ 2 } \in V_{ u_{ 2 } }$, $v_{ 3 } \in V_{ u_{ 3 } }$. Główny problem z~tą
 tożsamością i~jej dowodem polega na tym, że~notacja staje~się dość
-zawiła. Jeśli bowiem zapiszemy $v_{ 1 } = \alpha \, e_{ u_{ 1 } }$,
-$v_{ 2 } = \beta \, e_{ u_{ 2 } }$, $v_{ 3 } = \gamma \, e_{ u_{ 3 } }$, to dostajemy
+zawiła. Zapiszemy $v_{ 1 } = \alpha \, e_{ u_{ 1 } }$,
+$v_{ 2 } = \beta \, e_{ u_{ 2 } }$, $v_{ 3 } = \gamma \, e_{ u_{ 3 } }$.
 \begin{subequations}
   \begin{equation}
     \label{eq:Mechanika-Rozwazania-ogolne-13-A}
@@ -411,17 +413,16 @@ natomiast prawa
   e_{ u_{ 1 } ( u_{ 2 } u_{ 3 } ) }.
 \end{equation}
 Tym samym równość \eqref{???} wynika z~łączności mnożenia w~grupie $U$,
-a~zatem prawdziwa jest też równość \eqref{????} wyrażająca analog łączności
-mnożenia w~zbiorze $S_{ U }$. Analogiczny rachunek pokazuje, że~zachodzi
-analog przemienności mnożenia
+to zaś dowodzi \eqref{????}. Analogiczny rachunek pokazuje, że~zachodzi
+swoista „przemienności mnożenia”:
 \begin{equation}
   \label{eq:Arnold-MetodyMatematyczneETC-01}
   \psi_{ u_{ 1 }, \, u_{ 2 } }( v_{ 1 }, v_{ 2 } ) =
   \psi_{ u_{ 2 }, \, u_{ 1 } }( v_{ 2 }, v_{ 1 } ),
 \end{equation}
 gdzie $u_{ 1 }, u_{ 2 } \in U$, $v_{ 1 } \in V_{ u_{ 1 } }$
-i~$v_{ 2 } \in V_{ u_{ 2 } }$. Używają analogicznej metody dowodzimy analogu
-prawa łączności dla operacji „dzielenia”
+i~$v_{ 2 } \in V_{ u_{ 2 } }$. Używają analogicznej metody dowodzimy
+„prawa łączności dla operacji dzielenia”
 \begin{equation}
   \label{eq:Arnold-MetodyMatematyczneETC-01}
   \varphi_{ u_{ 1 } / u_{ 2 }, \, u_{ 3 } }\big(
@@ -429,35 +430,37 @@ prawa łączności dla operacji „dzielenia”
   \varphi_{ u_{ 1 }, \, u_{ 2 } / u_{ 3 } }\big(
   v_{ 1 }, \varphi_{ u_{ 2 }, \, u_{ 3 } }( v_{ 2 }, v_{ 3 } ) \big)
 \end{equation}
-oraz analog prawa rozdzielności
+oraz „prawa rozdzielności mnożenia względem dzielenia i~dzielenia
+względem mnożenia”:
 \begin{equation}
   \label{eq:Arnold-MetodyMatematyczneETC-01}
   \psi_{ u_{ 1 } / u_{ 2 }, \, q_{ 1 } / q_{ 2 } }\big(
   \varphi_{ u_{ 1 }, \, u_{ 2 } }( v_{ 1 }, v_{ 2 } ),
   \varphi_{ q_{ 1 }, \, q_{ 2 } }( w_{ 1 }, w_{ 2 } ) \big) =
-  \varphi_{ u_{ 1 } q_{ 1 } / ( u_{ 2 } q_{ 2 } ) }\big(
+  \varphi_{ u_{ 1 } q_{ 1 }, \, u_{ 2 } q_{ 2 } }\big(
   \psi_{ u_{ 1 }, \, q_{ 1 } }( v_{ 1 }, w_{ 1 } ),
   \psi_{ u_{ 2 }, \, q_{ 2 } }( v_{ 2 }, w_{ 2 } ) \big),
 \end{equation}
 gdzie $u_{ 1 }, u_{ 2 }, q_{ 1 }, q_{ 2 } \in U$, $v_{ 1 } \in V_{ u_{ 1 } }$,
-$v_{ 2 } \in V_{ u_{ 2 } }$, $w_{ 1 } \in V_{ q_{ 1 } }$ i~$w_{ 2 } \in v_{ q_{ 2 } }$.
+$v_{ 2 } \in V_{ u_{ 2 } }$, $w_{ 1 } \in V_{ q_{ 1 } }$ i~$w_{ 2 } \in V_{ q_{ 2 } }$.
 
 Korzystając udowodnionych przed chwilą zależności oraz własności mnożenia
-przez liczby w~przestrzeniach wektorowych, możemy udowodnić wiele innych
-zależności, analogicznych dla mnożenia i~dzielenia liczb rzeczywistych.
-Ponieważ metoda dowodzenia powinna być w~tym momencie jasna, nie
-będziemy~się zagłębiać w~szczegółowe dowody.
+wektorów przez liczby w~przestrzeniach wektorowych, możemy udowodnić wiele
+innych własności funkcji $\psi_{ u_{ 1 }, \, u_{ 2 } }$ i~$\varphi_{ u_{ 1 }, \, u_{ 2 } }$,
+analogicznych dla mnożenia i~dzielenia liczb rzeczywistych.
+Ponieważ metoda dowodzenia ich powinna być w~tym momencie jasna, nie
+będziemy~się zagłębiać w~szczegółowe dowody, chyba, że~zmuszą nas do~tego
+konkretne problemy.
 
-Ten schemat powinien nam pozwolić opisać wszystkie podstawowe operacje
-wykonywane na~wielkościach fizycznych posiadających jednostki, co
-zilustrujemy to kilkoma przykładami. Na początku wybieramy odpowiednie bazy
-w~przestrzeniach $V_{ L }$, $V_{ T }$ i~$V_{ M }$. Niech tymi bazami będą
-$e_{ \si{m} } \in V_{ L }$, $e_{ \si{s} } \in V_{ T }$, $e_{ \si{kg} }$, gdzie
-wektor
-$e_{ \si{m} }$ będziemy interpretować jako oznaczający metr, $e_{ s }$ jako
-sekundę, a~$e_{ \si{kg} }$ jako oznaczający kilogram. Jeżeli teraz mamy dwa
-wektory $v_{ 1 }, v_{ 2 } \in V_{ L }$, $v_{ 1 } = 10 \, e_{ \si{m} }$,
-$v_{ 2 } = 5 \, e_{ \si{m} }$, to
+Przedstawiony powyżej schemat powinien nam pozwolić opisać wszystkie
+podstawowe operacje wykonywane na~wielkościach fizycznych posiadających
+jednostki, co~zilustrujemy kilkoma przykładami. Na początku wybieramy
+odpowiednie bazy w~przestrzeniach $V_{ L }$, $V_{ T }$ i~$V_{ M }$. Niech
+tymi bazami będą $e_{ \si{m} } \in V_{ L }$, $e_{ \si{s} } \in V_{ T }$,
+$e_{ \si{kg} }$, gdzie wektor $e_{ \si{m} }$ będziemy interpretować jako
+oznaczający metr, $e_{ s }$ jako sekundę, a~$e_{ \si{kg} }$ jako oznaczający
+kilogram. Jeżeli teraz mamy dwa wektory $v_{ 1 }, v_{ 2 } \in V_{ L }$,
+$v_{ 1 } = 10 \, e_{ \si{m} }$, $v_{ 2 } = 5 \, e_{ \si{m} }$, to
 \begin{equation}
   \label{eq:Mechanika-Rozwazania-ogolne-10}
   v_{ 1 } + v_{ 2 } = 10 \, e_{ \si{m} } + 5 \, e_{ \si{m} } =
@@ -480,7 +483,35 @@ i~$w = 5 \, e_{ \si{s} }\in V_{ T }$. Możemy teraz obliczyć
   2 \varphi_{ L, \, T }( e_{ \si{m} }, e_{ \si{s} } ).
 \end{equation}
 Wektor $\varphi_{ L, \, T }( e_{ \si{m} }, e_{ \si{s} } )$ będziemy interpretowali
-jako metr nad sekundę.
+jako metr nad sekundę i~zapisywali za pomocą standardowej notacji
+jako
+\begin{equation}
+  \label{eq:Arnold-MetodyMatematyczneETC-01}
+  \varphi_{ L, \, T }( e_{ \si{m} }, e_{ \si{s} } ) = \frac{ \si{m} }{ \si{s} }.
+\end{equation}
+Wykazane powyżej „prawa łączności i~rozdzielności”
+gwarantują, że~otrzymane wyniki nie zależą od~kolejności wykonywania
+działań, tak jak tego oczekiwaliśmy.
+
+Zauważmy, że~w~obecnym formalizmie, zmiana jednostek danej wielkości
+fizycznej sprowadza~się do zmiany bazy w~przestrzeniach $V_{ L }$, $V_{ T }$
+i~$V_{ M }$. Przykładowo zmiana jednostki czasu z~sekund na minuty
+sprowadza~się do przejścia do bazy
+\begin{equation}
+  \label{eq:Arnold-MetodyMatematyczneETC-01}
+  e_{ \si{min} } = 60 \, e_{ \si{s} }, \quad
+  e_{ \si{s} }   = \frac{ 1 }{ 60 } e_{ \si{min} }.
+\end{equation}
+
+Podane wyżej rozważania dotyczyły wielkości które mogą być reprezentowane,
+przez jedną liczbę rzeczywistą wraz z~jednostkami fizycznymi, zwyczajowo
+wielkości takie określa~się jako „wielkości skalarne” lub „skalary”. Nie
+obejmują one choćby taki obiektów fizycznych posiadających jednostki, jak
+wektor pola elektrycznego $\vecE( \vecx, t )$ w~chwili $t$ i~w~punkcie
+$\vecx$, jednak uogólnienie go na takie przypadki nie powinno stanowić
+problemu, dlatego je pominiemy. Jeśli problemy które napotkamy będą
+wymagały pewnych zmian lub uogólnień w~przedstawionym tu formalizmie,
+będziemy~się starali do~niego powrócić i~zmodyfikować w~odpowiedni sposób.
 
 
 
