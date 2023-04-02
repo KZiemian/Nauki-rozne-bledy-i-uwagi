@@ -184,8 +184,69 @@
 
 
 \noindent
-\StrWg{4}{7--8} Zbigniew Rudy uświadomił mi, że jest pewien problem
-z~podanym tu stwierdzeniem „
+\StrWierszeG{4}{7--8} Zbigniew Rudy uświadomił mi, że jest pewien problem
+z~podanym tu stwierdzeniem „algorytm jest ciągiem kroków obliczeniowych
+przekształcających dane wejściowe w~wyjściowe”. Chodzi o~to, że~słowo
+„ciąg” sugeruje, że~kroki obliczeniowe wykonuje~się jeden po drugim
+w~określonej kolejności, co nie jest prawdą dla tak ważnych
+dziś\footnote{Piszę to w~2023 roku.} algorytmów równoległych. W~ich przypadku
+przynajmniej część obliczeń wykonuje~się w~tym samym czasie w~różnych
+jednostkach obliczeniowych. W~szczególności nie jest ustalone, który krok
+obliczeń równoległych wykona~się przed którym. Dodatkowo jeśli przy
+pierwszym wykonywaniu algorytmu równoległego najpierw wykona~się krok~$A$,
+a~potem~$B$, to przy następnym jego wykonywaniu może~się zdarzyć, iż~krok~$B$
+wykona~się przed krokiem $A$.
+
+\vspace{\spaceFour}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\noindent
+\Str{1171} Trzeba poważnie przemyśleć co to znaczy, że~w~zależności
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-01}
+  \sum_{ k = 1 }^{ n } \Theta\big( f( k ) ) =
+  \Theta\left( \sum_{ k = 1 }^{ n } f( k ) \right),
+\end{equation}
+symbol $\Theta$ po lewej stronie oznacza oszacowanie asymptotyczne
+w~zmiennej~$k$, zaś po prawej w~zmiennej $n$. Wydaje mi~się, że~coś jest
+z~tym nie w~porządku.
+
+\vspace{\spaceFour}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
