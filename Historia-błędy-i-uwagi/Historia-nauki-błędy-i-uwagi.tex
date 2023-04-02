@@ -29,14 +29,14 @@
 % MARGINS
 % ------------------------------
 \setmarginsrb
-{ 0.7in} % left margin
-{ 0.6in} % top margin
-{ 0.7in} % right margin
-{ 0.8in} % bottom margin
-{  20pt} % head height
-{0.25in} % head sep
-{   9pt} % foot height
-{ 0.3in} % foot sep
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
 
 
 
@@ -45,9 +45,9 @@
 % ------------------------------
 % Często używane pakiety
 % ------------------------------
-\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+% \usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
 
@@ -91,15 +91,17 @@
 % ------------------------------
 % Ustawienia różnych parametrów tekstu
 % ------------------------------
-\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
+\renewcommand{\baselinestretch}{1.1}
+
+\renewcommand{\arraystretch}{1.4} % Ustawienie szerokości odstępów między
 % wierszami w tabelach.
 
 
 
-% ----------------------------
+% ------------------------------
 % Pakiet „hyperref”
 % Polecano by umieszczać go na końcu preambuły
-% ----------------------------
+% ------------------------------
 \usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
 % do bibliografii na hiperlinki
 
@@ -112,13 +114,16 @@
 
 
 
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Tytuł, autor, data
-\title{Historia nauki --~błędy i~uwagi}
+\title{Historia nauki \\
+  {\Large Błędy i~uwagi}}
 
 \author{Kamil Ziemian}
+
+
 % \date{}
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 
 
 
@@ -145,15 +150,20 @@
 % ##################
 \Work{ % Autor i tytuł dzieła
   Nicolas Bourbaki \\
-  „Elementy historii matematyki”,
-  \cite{BourbakiElementyHistoriiMatematyki1980} }
+  \textit{Elementy historii matematyki},
+  \cite{BourbakiElementyHistoriiMatematyki1980}}
+
+\vspace{0em}
 
 
 % ##################
 \CenterBoldFont{Uwagi}
 
+\vspace{0em}
 
-\start \Str{63} Dziwne, że~autorzy formułują tu własność systemów
+
+\noindent
+\Str{63} Dziwne, że~autorzy formułują tu własność systemów
 liczbowych pisząc, że~iloraz $b_{ n } / b_{ n - 1 }$ jest równy tej
 samej liczbie~$b$, zamiast po~prostu stwierdzić,
 iż~$b_{ n } = b \, b_{ n - 1 }$.
@@ -162,7 +172,10 @@ iż~$b_{ n } = b \, b_{ n - 1 }$.
 
 
 
-\start \Str{68} Autorzy piszą tu w~taki sposób, jakby Grecy
+
+
+\noindent
+\Str{68} Autorzy piszą tu w~taki sposób, jakby Grecy
 i~rachmistrzowie byli dwoma zupełnie różnymi grupami ludzi.
 Najprawdopodobniej jednak rachmistrzowie sami byli Grekami.
 
@@ -170,15 +183,19 @@ Najprawdopodobniej jednak rachmistrzowie sami byli Grekami.
 
 
 
-\start \StrWd{243}{6} Mały nawias okrągły za~duży źle wygląda. Nie
-wiem jednak jak w~tej chwile jak zmodyfikować tekst, by ten problem
-naprawić.
+
+
+\noindent
+\StrWd{243}{6} Mniejszy nawias okrągły jest za~duży, przez co źle wygląda.
+W~tej chwili nie wiem jednak zmodyfikować tekst, by ten problem naprawić.
 
 
 
 
 
 % ##################
+\newpage
+
 \CenterBoldFont{Błędy}
 
 
@@ -186,7 +203,6 @@ naprawić.
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -219,8 +235,23 @@ naprawić.
     73  & 10 & & wieku~($^{ 1 }$) & wieku($^{ 1 }$) \\
     73  & & 12 & roli; & roli, \\
     74  & 12 & & Jordana-H\"{o}ldera”~($^{ 1 }$)
-           & Jordana-H\"{o}ldera”($^{ 1 }$) \\
+    & Jordana-H\"{o}ldera”($^{ 1 }$) \\
     74  & 15 & & ]139b] & [139b] \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  \newpage
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
     82  & &  9 & \textit{metafizycznego}”; & \textit{metafizycznego}”); \\
     83  & 12 & & Hamilton ($^{ 1 }$) & Hamilton($^{ 1 }$) \\
     84  & &  6 & a~m.~in. & m.~in. \\
@@ -231,20 +262,6 @@ naprawić.
     90  & &  4 & niekwadratowych ($^{ 1 }$) & niekwadratowych($^{ 1 }$) \\
     91  &  6 & & niewymierna ($^{ 1 }$) & niewymierna($^{ 1 }$) \\
     91  & & 17 & okręgi ($^{ 2 }$) & okręgi($^{ 2 }$) \\
-    \hline
-  \end{tabular}
-
-
-
-
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
     92  &  1 & & wiemy ($^{ 1 }$) & wiemy($^{ 1 }$) \\
     92  & 14 & & algebraicznych ($^{ 2 }$) & algebraicznych($^{ 2 }$) \\
     93  & 10 & & niewiele ($^{ 1 }$) & niewiele($^{ 1 }$) \\
@@ -268,6 +285,21 @@ naprawić.
     100 & & 18 & pierwiastków ($^{ 1 }$) & pierwiastków($^{ 1 }$) \\
     101 &  1 & & Gaussa ($^{ 1 }$) & Gaussa($^{ 1 }$) \\
     101 &  7 & & pierwszego ($^{ 2 }$) & pierwszego($^{ 2 }$) \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  \newpage
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
     102 &  8 & & Abel ($^{ 2 }$) & Abel($^{ 2 }$) \\
     103 & 10 & & równania) ($^{ 2 }$) & równania)($^{ 2 }$) \\
     106 &  1 & & topologicznej ($^{ 1 }$) & topologicznej($^{ 1 }$) \\
@@ -286,20 +318,6 @@ naprawić.
     115 &  9 & & rzędu~~($^{ 1 }$) & rzędu($^{ 1 }$) \\
     115 & 18 & & później ($^{ 2 }$) & później($^{ 2 }$) \\
     116 &  1 & & wieku ($^{ 1 }$) & wieku($^{ 1 }$) \\
-    \hline
-  \end{tabular}
-
-
-
-
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
     116 & 15 & & jedności ($^{ 2 }$) & jedności($^{ 2 }$) \\
     117 &  2 & & [150b] ($^{ 1 }$) & [150b]($^{ 1 }$) \\
     118 & &  9 & algebrze ($^{ 1 }$) & algebrze($^{ 1 }$) \\
@@ -314,9 +332,24 @@ naprawić.
     124 & & 10 & \textit{skończona} ($^{ 1 }$)
            & \textit{skończona}($^{ 1 }$) \\
     125 &  6 & & podstawowe”~~($^{ 1 }$) & podstawowe”($^{ 1 }$) \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  \newpage
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
     126 & 18 & & 1880 ($^{ 1 }$) & 1880($^{ 1 }$) \\
-    127 & &  6 & $\mathbb{Z}[ \sqrt{ -3 } ]$) ($^{ 1 }$)
-           & $\mathbb{Z}[ \sqrt{ -3 } ]$)($^{ 1 }$) \\
+    127 & &  6 & $\Zbb[ \sqrt{ -3 } ]$) ($^{ 1 }$)
+           & $\Zbb[ \sqrt{ -3 } ]$)($^{ 1 }$) \\
     128 &  1 & & $\mathbb{Z}[ \theta, \theta' ]$ ($^{ 1 }$)
            & $\mathbb{Z}[ \theta, \theta' ]$($^{ 1 }$) \\
     129 &  8 & & postacią ($^{ 1 }$) & postacią($^{ 1 }$) \\
@@ -343,6 +376,29 @@ naprawić.
     155 &  3 & & centrum ($^{ 2 }$) & centrum($^{ 2 }$) \\
     155 & &  7 & teorii ($^{ 3 }$) & teorii($^{ 3 }$) \\
     156 & &  9 & uwagi ($^{ 1 }$) & uwagi($^{ 1 }$) \\
+    157 &  1 & & algebra ($^{ 1 }$) & algebra($^{ 1 }$) \\
+    157 &  3 & & ówdzie ($^{ 2 }$) & ówdzie($^{ 2 }$) \\
+    157 & 13 & & minimalnemu ($^{ 3 }$) & minimalnemu($^{ 3 }$) \\
+    157 & 20 & & liniowej ($^{ 4 }$) & liniowej($^{ 4 }$) \\
+    % 191 & & 11 & geometrycznej ($^{ 3 }$) & geometrycznej($^{ 3 }$) \\
+    % 194 & 13 & & arytmetyczno-geometrycznej~~($^{ 1 }$)
+    %        & arytmetyczno-geometrycznej($^{ 1 }$) \\
+    % 196 & &  8 & rzeczywiste ($^{ 1 }$) & rzeczywiste($^{ 1 }$) \\
+    % 199 &  9 & & ciągłość) ($^{ 1 }$) & ciągłość)($^{ 1 }$) \\
+    % 201 &  8 & & wymiaru) ($^{ 1 }$) & wymiaru)($^{ 1 }$) \\
+    % 202 &  9 & & płaszczyzny ($^{ 1 }$) & płaszczyzny($^{ 1 }$) \\
+    % 202 & &  6 & 1764) ($^{ 2 }$) & 1764)($^{ 2 }$) \\
+    % 203 &  8 & & algebry~~($^{ 1 }$) & algebry($^{ 1 }$) \\
+    % 208 &  4 & & parazwarta ($^{ 1 }$) & parazwarta($^{ 1 }$) \\
+    % 215 &  3 & & wierze ($^{ 1 }$) & wierze($^{ 1 }$) \\
+    % % & & & & \\
+    % 227 &  6 & & całkowaniu~~($^{ 1 }$) & całkowaniu($^{ 1 }$) \\
+    % 242 &  3 & & 599)) & 599) \\
+    % % & & & & \\
+    % 252 & & 12 & Euler czasem nawet & nawet Euler czasem \\
+    % % & & & & \\
+    % 279 &  2 & & rozszerzenia~($^{ 1 }$) & rozszerzenia($^{ 1 }$) \\
+    % % & & & & \\
     \hline
   \end{tabular}
 
@@ -350,17 +406,14 @@ naprawić.
 
 
 
+  \newpage
+
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    157 &  1 & & algebra ($^{ 1 }$) & algebra($^{ 1 }$) \\
-    157 &  3 & & ówdzie ($^{ 2 }$) & ówdzie($^{ 2 }$) \\
-    157 & 13 & & minimalnemu ($^{ 3 }$) & minimalnemu($^{ 3 }$) \\
-    157 & 20 & & liniowej ($^{ 4 }$) & liniowej($^{ 4 }$) \\
     158 & & 17 & homologicznej ($^{ 1 }$) & homologicznej($^{ 1 }$) \\
     158 & & 15 & minimalnego ($^{ 2 }$) & minimalnego($^{ 2 }$) \\
     159 & 13 & & dydaktycznych ($^{ 1 }$) & dydaktycznych($^{ 1 }$) \\
@@ -392,6 +445,66 @@ naprawić.
            & arytmetyczno-geometrycznej($^{ 1 }$) \\
     196 & &  8 & rzeczywiste ($^{ 1 }$) & rzeczywiste($^{ 1 }$) \\
     199 &  9 & & ciągłość) ($^{ 1 }$) & ciągłość)($^{ 1 }$) \\
+    % 201 &  8 & & wymiaru) ($^{ 1 }$) & wymiaru)($^{ 1 }$) \\
+    % 202 &  9 & & płaszczyzny ($^{ 1 }$) & płaszczyzny($^{ 1 }$) \\
+    % 202 & &  6 & 1764) ($^{ 2 }$) & 1764)($^{ 2 }$) \\
+    % 203 &  8 & & algebry~~($^{ 1 }$) & algebry($^{ 1 }$) \\
+    % 208 &  4 & & parazwarta ($^{ 1 }$) & parazwarta($^{ 1 }$) \\
+    % 215 &  3 & & wierze ($^{ 1 }$) & wierze($^{ 1 }$) \\
+    % % & & & & \\
+    % 227 &  6 & & całkowaniu~~($^{ 1 }$) & całkowaniu($^{ 1 }$) \\
+    % 242 &  3 & & 599)) & 599) \\
+    % % & & & & \\
+    % 252 & & 12 & Euler czasem nawet & nawet Euler czasem \\
+    % % & & & & \\
+    % 279 &  2 & & rozszerzenia~($^{ 1 }$) & rozszerzenia($^{ 1 }$) \\
+    % % & & & & \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  \newpage
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % 158 & & 17 & homologicznej ($^{ 1 }$) & homologicznej($^{ 1 }$) \\
+    % 158 & & 15 & minimalnego ($^{ 2 }$) & minimalnego($^{ 2 }$) \\
+    % 159 & 13 & & dydaktycznych ($^{ 1 }$) & dydaktycznych($^{ 1 }$) \\
+    % 160 &  6 & & euklidesowego~~($^{ 1 }$) & euklidesowego($^{ 1 }$) \\
+    % 160 & 14 & & odróżnienia ($^{ 2 }$) & odróżnienia($^{ 2 }$) \\
+    % 162 &  2 & & 249)) & 259) \\
+    % 162 &  6 & & wieku ($^{ 1 }$) & wieku($^{ 1 }$) \\
+    % 162 & 12 & & przeciwnego ($^{ 2 }$) & przeciwnego($^{ 2 }$) \\
+    % 164 &  1 & & niezmiennikiem ($^{ 1 }$) & niezmiennikiem($^{ 1 }$) \\
+    % 164 &  5 & & oczywistego ($^{ 2 }$) & oczywistego($^{ 2 }$) \\
+    % 166 &  4 & & 315) ($^{ 1 }$) & 315)($^{ 1 }$) \\
+    % 167 & 14 & & algebraicznej ($^{ 1 }$) & algebraicznej($^{ 1 }$) \\
+    % 167 & & 10 & 371) ($^{ 2 }$) & 371)($^{ 2 }$) \\
+    % 168 & 10 & & U~~Ponceleta & U~Ponceleta \\
+    % 168 & &  9 & rezultatów ($^{ 1 }$) & rezultatów($^{ 1 }$) \\
+    % 169 &  3 & & 515) ($^{ 1 }$) & 515)($^{ 1 }$) \\
+    % 170 &  5 & & jej ($^{ 1 }$) & jej($^{ 1 }$) \\
+    % 171 & & 13 & podobieństw ($^{ 1 }$) & podobieństw($^{ 1 }$) \\
+    % 173 & 14 & & niezmienników ($^{ 2 }$) & niezmienników($^{ 2 }$) \\
+    % 182 & &  4 & stwarzając & dające \\
+    % 187 & 12 & & poprzedników ($^{ 1 }$) & poprzedników($^{ 1 }$) \\
+    % 187 & 14 & & odkrycia ($^{ 2 }$) & odkrycia($^{ 2 }$) \\
+    % 188 & 16 & & jedności ($^{ 1 }$) & jedności($^{ 1 }$) \\
+    % 189 & & 18 & wielkość ($^{ 2 }$) & wielkość($^{ 2 }$) \\
+    % 190 &  6 & & wygodnej ($^{ 1 }$) & wygodnej($^{ 1 }$) \\
+    % 191 &  4 & & niewymierność ($^{ 1 }$) & niewymierność($^{ 1 }$) \\
+    % 191 & & 11 & geometrycznej ($^{ 3 }$) & geometrycznej($^{ 3 }$) \\
+    % 194 & 13 & & arytmetyczno-geometrycznej~~($^{ 1 }$)
+    %        & arytmetyczno-geometrycznej($^{ 1 }$) \\
+    % 196 & &  8 & rzeczywiste ($^{ 1 }$) & rzeczywiste($^{ 1 }$) \\
+    % 199 &  9 & & ciągłość) ($^{ 1 }$) & ciągłość)($^{ 1 }$) \\
     201 &  8 & & wymiaru) ($^{ 1 }$) & wymiaru)($^{ 1 }$) \\
     202 &  9 & & płaszczyzny ($^{ 1 }$) & płaszczyzny($^{ 1 }$) \\
     202 & &  6 & 1764) ($^{ 2 }$) & 1764)($^{ 2 }$) \\
@@ -410,6 +523,8 @@ naprawić.
   \end{tabular}
 
 \end{center}
+
+\vspace{\spaceTwo}
 
 
 \noindent
@@ -436,305 +551,305 @@ przez 25 lat \\
 \Jest  pytanie takie postawić \\
 \Powin postawić takie pytanie \\
 
-\vspace{\spaceTwo}
-% ############################
-
-
-
-
-
-
-
-
-
 
 % ############################
-\Work{ % Autor i tytuł dzieła
-  C. B. Boyer \\
-  „Historia rachunku różniczkowego i~całkowego \\
-  i~rozwój jego pojęć”,
-  \cite{BoyerHistoriaRachunkuRozniczkowegoICalkowego1964} }
 
 
-% ##################
-\CenterBoldFont{Uwagi}
 
 
-\start W~całej książce angielskie zwarte i~treściwe słowo „calculus”
-jest zastąpione długim polskim terminem „rachunek różniczkowy
-i~całkowy”, co często prowadzi do bardzo niezgrabnych stylistycznie
-zdań. Lepiej byłoby wprowadzi do książki, obok powyższego, termin
-„analiza matematyczna”, który można ładnie skrócić do „analizy”.
 
-\vspace{\spaceThree}
 
 
 
 
 
-% ##################
-\CenterBoldFont{Uwagi do konkretnych stron}
+% % ############################
+% \Work{ % Autor i tytuł dzieła
+%   C. B. Boyer \\
+%   „Historia rachunku różniczkowego i~całkowego \\
+%   i~rozwój jego pojęć”,
+%   \cite{BoyerHistoriaRachunkuRozniczkowegoICalkowego1964} }
 
 
-\start \StrWd{18}{2} Umieszczenie w~tym samym zdaniu stwierdzenia
-o~ścisłym sformułowaniu analizy już u~jej początków oraz faktu,
-że~matematycy byli niewrażliwi na pewne subtelności, jest dość
-karkołomne. Nie wspominając już o~tym, że~te „subtelności” były
-często bardzo poważne.
+% % ##################
+% \CenterBoldFont{Uwagi}
 
-\vspace{\spaceFour}
 
+% \start W~całej książce angielskie zwarte i~treściwe słowo „calculus”
+% jest zastąpione długim polskim terminem „rachunek różniczkowy
+% i~całkowy”, co często prowadzi do bardzo niezgrabnych stylistycznie
+% zdań. Lepiej byłoby wprowadzi do książki, obok powyższego, termin
+% „analiza matematyczna”, który można ładnie skrócić do „analizy”.
 
+% \vspace{\spaceThree}
 
-\start \StrWd{19}{18} Użyte tu określenie „mistycyzm imaginacyjnej
-spekulacji” jest wyraźnie niesprawiedliwe w~stosunku do metafizyki,
-najważniejszego działu filozofii. Nie~zmienia tego fakt, że~Boyer mógł
-mieć na myśli tylko transcendentalną metafizykę ze~szkoły Kanta.
 
-\vspace{\spaceFour}
 
 
 
-\start \Str{23} Stwierdzenie, że pewne podstawowe idea zostały
-usunięte z~analizy matematycznej, szerzej zaś, z~matematyki, są~mocno
-wątpliwe.
+% % ##################
+% \CenterBoldFont{Uwagi do konkretnych stron}
 
-\vspace{\spaceFour}
 
+% \start \StrWd{18}{2} Umieszczenie w~tym samym zdaniu stwierdzenia
+% o~ścisłym sformułowaniu analizy już u~jej początków oraz faktu,
+% że~matematycy byli niewrażliwi na pewne subtelności, jest dość
+% karkołomne. Nie wspominając już o~tym, że~te „subtelności” były
+% często bardzo poważne.
 
+% \vspace{\spaceFour}
 
-\start \StrWd{26}{6} Nazwanie podanych wyżej pojęć „sztucznymi”,
-ciężko jest mi nazwać czymś innym, niż nieczułością na piękno
-matematyki.
 
-\vspace{\spaceFour}
 
+% \start \StrWd{19}{18} Użyte tu określenie „mistycyzm imaginacyjnej
+% spekulacji” jest wyraźnie niesprawiedliwe w~stosunku do metafizyki,
+% najważniejszego działu filozofii. Nie~zmienia tego fakt, że~Boyer mógł
+% mieć na myśli tylko transcendentalną metafizykę ze~szkoły Kanta.
 
+% \vspace{\spaceFour}
 
-\start \Str{28} Ponieważ drugie wydanie tej książki ukazało~się w~1949~r.,
-autor nie mógł wiedzieć, że~w~latach 60 XX w., głównie za sprawą
-prac Abrahama Robinsona zostanie sformułowana analiza niestandardowa,
-oparta na ścisły pojęciu nieskończenie małych liczb.
 
 
+% \start \Str{23} Stwierdzenie, że pewne podstawowe idea zostały
+% usunięte z~analizy matematycznej, szerzej zaś, z~matematyki, są~mocno
+% wątpliwe.
 
+% \vspace{\spaceFour}
 
 
-% ##################
-\CenterBoldFont{Błędy}
 
+% \start \StrWd{26}{6} Nazwanie podanych wyżej pojęć „sztucznymi”,
+% ciężko jest mi nazwać czymś innym, niż nieczułością na piękno
+% matematyki.
 
-\begin{center}
+% \vspace{\spaceFour}
 
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    29  & &  4 & [(376] & ([376] \\
-    42  & 13 & & [402 & [402] \\
-    % & & & & \\
-    % & & & & \\
-    \hline
-  \end{tabular}
 
-\end{center}
 
-\vspace{\spaceTwo}
-% ############################
+% \start \Str{28} Ponieważ drugie wydanie tej książki ukazało~się w~1949~r.,
+% autor nie mógł wiedzieć, że~w~latach 60 XX w., głównie za sprawą
+% prac Abrahama Robinsona zostanie sformułowana analiza niestandardowa,
+% oparta na ścisły pojęciu nieskończenie małych liczb.
 
 
 
 
 
+% % ##################
+% \CenterBoldFont{Błędy}
 
 
+% \begin{center}
 
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     29  & &  4 & [(376] & ([376] \\
+%     42  & 13 & & [402 & [402] \\
+%     % & & & & \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
 
+% \end{center}
 
-% ############################
-\Work{ % Redaktor i tytuł dzieła
-  Red. A.P.~Juszkiewicz \\
-  \textit{Historia matematyki. Tom III: Matematyka XVIII stulecia} \\
-  \cite{}}
+% \vspace{\spaceTwo}
+% % ############################
 
 
-%% % ##################
-%% \CenterBoldFont{Uwagi}
 
 
-%% \start W~całej książce angielskie zwarte i~treściwe słowo „calculus”
-%% jest zastąpione długim polskim terminem „rachunek różniczkowy
-%% i~całkowy”, co często prowadzi do bardzo niezgrabnych stylistycznie
-%% zdań. Lepiej byłoby wprowadzi do książki, obok powyższego, termin
-%% „analiza matematyczna”, który można ładnie skrócić do „analizy”.
 
-%% \vspace{\spaceThree}
 
 
 
 
 
-%% % ##################
-%% \CenterBoldFont{Uwagi do konkretnych stron}
+% % ############################
+% \Work{ % Redaktor i tytuł dzieła
+%   Red. A.P.~Juszkiewicz \\
+%   \textit{Historia matematyki. Tom III: Matematyka XVIII stulecia} \\
+%   \cite{}}
 
 
-%% \start \StrWd{18}{2} Umieszczenie w~tym samym zdaniu stwierdzenia
-%% o~ścisłym sformułowaniu analizy już u~jej początków oraz faktu,
-%% że~matematycy byli niewrażliwi na pewne subtelności, jest dość
-%% karkołomne. Nie wspominając już o~tym, że~te „subtelności” były
-%% często bardzo poważne.
+% %% % ##################
+% %% \CenterBoldFont{Uwagi}
 
-%% \vspace{\spaceFour}
 
+% %% \start W~całej książce angielskie zwarte i~treściwe słowo „calculus”
+% %% jest zastąpione długim polskim terminem „rachunek różniczkowy
+% %% i~całkowy”, co często prowadzi do bardzo niezgrabnych stylistycznie
+% %% zdań. Lepiej byłoby wprowadzi do książki, obok powyższego, termin
+% %% „analiza matematyczna”, który można ładnie skrócić do „analizy”.
 
+% %% \vspace{\spaceThree}
 
-%% \start \StrWd{19}{18} Użyte tu określenie „mistycyzm imaginacyjnej
-%% spekulacji” jest wyraźnie niesprawiedliwe w~stosunku do metafizyki,
-%% najważniejszego działu filozofii. Nie~zmienia tego fakt, że~Boyer mógł
-%% mieć na myśli tylko transcendentalną metafizykę ze~szkoły Kanta.
 
-%% \vspace{\spaceFour}
 
 
 
-%% \start \Str{23} Stwierdzenie, że pewne podstawowe idea zostały
-%% usunięte z~analizy matematycznej, szerzej zaś, z~matematyki, są~mocno
-%% wątpliwe.
+% %% % ##################
+% %% \CenterBoldFont{Uwagi do konkretnych stron}
 
-%% \vspace{\spaceFour}
 
+% %% \start \StrWd{18}{2} Umieszczenie w~tym samym zdaniu stwierdzenia
+% %% o~ścisłym sformułowaniu analizy już u~jej początków oraz faktu,
+% %% że~matematycy byli niewrażliwi na pewne subtelności, jest dość
+% %% karkołomne. Nie wspominając już o~tym, że~te „subtelności” były
+% %% często bardzo poważne.
 
+% %% \vspace{\spaceFour}
 
-%% \start \StrWd{26}{6} Nazwanie podanych wyżej pojęć „sztucznymi”,
-%% ciężko jest mi nazwać czymś innym, niż nieczułością na piękno
-%% matematyki.
 
-%% \vspace{\spaceFour}
 
+% %% \start \StrWd{19}{18} Użyte tu określenie „mistycyzm imaginacyjnej
+% %% spekulacji” jest wyraźnie niesprawiedliwe w~stosunku do metafizyki,
+% %% najważniejszego działu filozofii. Nie~zmienia tego fakt, że~Boyer mógł
+% %% mieć na myśli tylko transcendentalną metafizykę ze~szkoły Kanta.
 
+% %% \vspace{\spaceFour}
 
-%% \start \Str{28} Ponieważ drugie wydanie tej książki ukazało~się w~1949~r.,
-%% autor nie mógł wiedzieć, że~w~latach 60 XX w., głównie za sprawą
-%% prac Abrahama Robinsona zostanie sformułowana analiza niestandardowa,
-%% oparta na ścisły pojęciu nieskończenie małych liczb.
 
 
+% %% \start \Str{23} Stwierdzenie, że pewne podstawowe idea zostały
+% %% usunięte z~analizy matematycznej, szerzej zaś, z~matematyki, są~mocno
+% %% wątpliwe.
 
+% %% \vspace{\spaceFour}
 
 
-% ##################
-\CenterBoldFont{Błędy}
 
+% %% \start \StrWd{26}{6} Nazwanie podanych wyżej pojęć „sztucznymi”,
+% %% ciężko jest mi nazwać czymś innym, niż nieczułością na piękno
+% %% matematyki.
 
-\begin{center}
+% %% \vspace{\spaceFour}
 
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    264 & & 10 & jej własnymi środkami & środkami spoza niej samej \\
-    267 & &  6 & znał & znał go \\
-    283 & & 17 & drugiej. Maclaurin & drugiej, Maclaurin \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    \hline
-  \end{tabular}
 
-\end{center}
 
-\vspace{\spaceTwo}
+% %% \start \Str{28} Ponieważ drugie wydanie tej książki ukazało~się w~1949~r.,
+% %% autor nie mógł wiedzieć, że~w~latach 60 XX w., głównie za sprawą
+% %% prac Abrahama Robinsona zostanie sformułowana analiza niestandardowa,
+% %% oparta na ścisły pojęciu nieskończenie małych liczb.
 
 
 
 
 
+% % ##################
+% \CenterBoldFont{Błędy}
 
-% ############################
 
+% \begin{center}
 
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     264 & & 10 & jej własnymi środkami & środkami spoza niej samej \\
+%     267 & &  6 & znał & znał go \\
+%     283 & & 17 & drugiej. Maclaurin & drugiej, Maclaurin \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
 
+% \end{center}
 
+% \vspace{\spaceTwo}
 
 
 
 
 
 
+% % ############################
 
-% ############################
-\Work{ % Autor i tytuł dzieła
-  R. Rhodes \\
-  „Jak powstała bomba atomowa”, \cite{Rhodes00} }
 
 
-% ##################
-\CenterBoldFont{Błędy}
 
 
-\begin{center}
 
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    719 & &  6 & 1993 & 1933 \\
-    % & & & & \\
-    % & & & & \\
-    \hline
-  \end{tabular}
 
-\end{center}
 
-\vspace{\spaceTwo}
-% ############################
 
 
 
+% % ############################
+% \Work{ % Autor i tytuł dzieła
+%   R. Rhodes \\
+%   „Jak powstała bomba atomowa”, \cite{Rhodes00} }
 
 
+% % ##################
+% \CenterBoldFont{Błędy}
 
 
+% \begin{center}
 
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     719 & &  6 & 1993 & 1933 \\
+%     % & & & & \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
 
+% \end{center}
 
-% ############################
-\Work{ % Autor i tytuł dzieła
-  A. K. Wróblewski \\
-  „Historia fizyki”, \cite{Wroblewski06} }
+% \vspace{\spaceTwo}
+% % ############################
 
 
-% ##################
-\CenterBoldFont{Błędy}
 
 
-\begin{center}
 
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{Wiersz} & & \\ \cline{2-3}
-    Strona & Od góry & Od dołu & Jest & Powinno być \\
-    & (kolumna) & (kolumna) & & \\
-    \hline
-    203 & 3 (2) & & Jacob 'sGravesande'a & Jacob's Gravesande'a \\
-    % & & & & \\
-    \hline
-  \end{tabular}
 
-\end{center}
 
-\vspace{\spaceTwo}
-% ############################
+
+
+
+% % ############################
+% \Work{ % Autor i tytuł dzieła
+%   A. K. Wróblewski \\
+%   „Historia fizyki”, \cite{Wroblewski06} }
+
+
+% % ##################
+% \CenterBoldFont{Błędy}
+
+
+% \begin{center}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{Wiersz} & & \\ \cline{2-3}
+%     Strona & Od góry & Od dołu & Jest & Powinno być \\
+%     & (kolumna) & (kolumna) & & \\
+%     \hline
+%     203 & 3 (2) & & Jacob 'sGravesande'a & Jacob's Gravesande'a \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+
+% \end{center}
+
+% \vspace{\spaceTwo}
+% % ############################
 
 
 
@@ -748,6 +863,7 @@ oparta na ścisły pojęciu nieskończenie małych liczb.
 % ####################################################################
 % ####################################################################
 % Bibliografia
+
 \bibliographystyle{plalpha}
 
 \bibliography{HistoryBooks}{}
