@@ -83,6 +83,7 @@
 % Mają być w tym samym katalogu to ten plik .tex
 % ------------------------------
 \usepackage{latexgeneralcommands}
+\usepackage{mathcommands}
 
 
 
@@ -175,6 +176,120 @@
 \vspace{0em}
 
 
+\noindent W~nauce o~algorytmach w~jej dzisiejszym stanie ważne miejsce
+zajmuje badanie następujące pytanie. Jeśli algorytm pobiera $n \in \Nbb$
+danych wejściowych, jak można oszacować od góry i~od dołu ilość operacji
+jaką algorytm wykona by uzyskać pożądanych rezultat? W~innym sformułowaniu
+zamiast pytać~się ilość operacji, pytamy~się o~oszacowanie czasu jaki zajmie
+wykonanie algorytmu, jednak to zagadnienie zwykle jest sprowadzane do tego
+samego problemu matematycznego, który różni~się od poprzedniego tylko
+wartością pewnych stałych liczbowych.
+
+Prowadzi to w~naturalny sposób do badania funkcji typu
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-01}
+  f : \Nbb \to \Rbb.
+\end{equation}
+Ponieważ jednak nie ma sensu mówić, przynajmniej w~normalnych warunkach, ani
+o~ujemnej liczbie kroków jakie wykona algorytm, ani o~ujemny czasie jego
+trwania, więc możemy~się ograniczyć do badania funkcji o~wartościach
+nieujemnych.
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-02}
+  f : \Nbb \to \Rbb_{ + }, \quad
+  \Rbb_{ + } := \{ x \in \Rbb \, | \, x \geq 0 \}.
+\end{equation}
+Przypadek gdy $f( n_{ 0 } ) = 0$, dla pewnego $n_{ 0 }$, czyli algorytm
+w~ogóle nie będzie musiał niczego robić, wydaje~się dziwny, ale~dla
+uproszczenia rozważań warto dopuścić występowanie takich funkcji. Opisują
+one przypadek, gdy rozwiązanie jest od razu dane, więc nie musimy nic robić
+by je uzyskać.
+
+Ze względu na to, że~ilość operacji wykonywanych przez algorytm przy
+dowolnej ilości danych wejściowych, też jest liczbą naturalną,
+a~przynajmniej piszącemu te słowa nie jest znany
+przypadek, gdzie byłoby inaczej, to możemy ograniczyć rozważaną klasę
+funkcji. Mianowicie do funkcji, które są postaci
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-03}
+  f( n ) = C g( n ), \qquad
+  C > 0, \quad
+  g : \Nbb \to \Nbb.
+\end{equation}
+W~szczególności sama $f$ może przyjmować tylko wartości naturalne.
+
+Wydaje~się, że~dla autorów tej książki było tak oczywiste, że~rozważane
+funkcje są nieujemne, iż~zapomnieli oni napisać jawnie, że~należy przyjmować,
+iż~wszystkie rozważane funkcje są nieujemne, chyba że wskazano inaczej. Tym
+samym podają wyniki, które są prawdziwe tylko gdy operujemy funkcjami
+nieujemnymi, ale~nigdzie nie jest to napisane jawnie.
+
+Przyjrzyjmy~się choćby dodatkowi~A w~tej książce. Na jego początku jest mowa
+o~sumach i~szeregach które posiadają wyrazy ujemne, lecz potem prawie bez
+wyjątku analizowane są tylko szeregi o~wyrazach dodatnich. Należałoby
+sprawdzić, czy~któreś z~podanych w~tym rozdziale twierdzeń nie jest
+prawdziwe, tylko dla takich sum oraz szeregów, bo inaczej czytelnik może
+zostać wprowadzony w~błąd.
+
+Warte uwagi jest to, że~w~tym dodatku liczby ujemne prawie~się nie
+pojawiają, a~nawet gdy~się pojawiają, to może to być rezultatem z~rozkładu
+pewnej liczby \textit{dodatniej} na różnicę dwóch liczb. Tak jest na
+stronie~1173, gdzie analizowana jest suma teleskopowa o~wyrazie ogólnym
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-04}
+  a_{ k } = \frac{ 1 }{ k ( k + 1 ) } =
+  \frac{ 1 }{ k } - \frac{ 1 }{ k + 1 }.
+\end{equation}
+
+Innym założeniem które mogło ujść autorom niezauważenie, jest przyjęcie,
+że~dla każdej funkcji $f : \Nbb \to \Rbb_{ + }$ zachodzi
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-05}
+  \forall \, n \in \Nbb, \quad
+  f( n ) \geq 1,
+\end{equation}
+tym samym za pomocą notacji asymptotycznej wprowadzonej na stronie ??? tej
+książki możemy zapisać
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-06}
+  1 = O\left( f( n ) \right).
+\end{equation}
+Założenie to jest naturalne, bowiem należy~się spodziewać, iż dla dowolnej
+ilości danych wyjściowych, może z~wyjątkiem $n = 1$, każdy algorytm wykona
+co najmniej jedną operację. Problem ile zajmie czas wykonanie danego
+algorytmu jest bardziej subtelny, bowiem zależy od tego w~jakich jednostkach
+mierzymy czas wykonania operacji, lecz można przypuszczać, iż~autorzy
+książki i~tutaj przyjęli warunek analogiczny
+do~\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-05}. Po prostu dlatego,
+że~argument „każdy algorytm wykonuje co najmniej jedną operację”, ma tak
+ogromną siłę perswazji.
+
+Łatwo jednak podać funkcję, która nie spełnia warunku
+\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-06}. Weźmy
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-07}
+  f( n ) =
+  \begin{cases}
+    1, & n = 0, \\
+    \frac{ 1 }{ n }, & n \geq 1,
+  \end{cases}
+\end{equation}
+dla której mamy
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-08}
+  1 \neq O\!\left( \tfrac{ 1 }{ n } \right), \quad
+  \frac{ 1 }{ n } = O( 1 ).
+\end{equation}
+Dla ścisłości rozważań należy więc warunek
+\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-05} przyjąć jawnie.
+
+\vspace{\spaceFour}
+
+
+
+
+
+
 
 
 
@@ -221,7 +336,7 @@ wykona~się przed krokiem $A$.
 \noindent
 \Str{1171} Trzeba poważnie przemyśleć co to znaczy, że~w~zależności
 \begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-01}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-09}
   \sum_{ k = 1 }^{ n } \Theta\big( f( k ) \big) =
   \Theta\left( \sum_{ k = 1 }^{ n } f( k ) \right),
 \end{equation}
@@ -230,6 +345,97 @@ w~zmiennej~$k$, zaś po prawej w~zmiennej $n$. Wydaje mi~się, że~coś jest
 z~tym nie w~porządku.
 
 \vspace{\spaceFour}
+
+
+
+
+
+\noindent
+\Str{1175--1176} Przeanalizujmy jeszcze raz dokładnie, błędny dowód fałszywej
+zależności $\sum_{ k = 1 }^{ n } = O( n )$, zaczynając od ścisłej rachunków.
+
+Dla $n = 1$ nam
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-10}
+  \sum_{ k = 1 }^{ 1 } = 1,
+\end{equation}
+dla $n = 2$ dostajemy
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-11}
+  \sum_{ k = 1 }^{ 2 } k = \sum_{ k = 1 }^{ 1 } k + 2 = 1 + 2 = 1.5 \cdot 2,
+\end{equation}
+w~trzecim kroku mamy
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-12}
+  \sum_{ k = 1 }^{ 3 } k = \sum_{ k = 1 }^{ 2 } k + 3 = 1.5 \cdot 2 + 3 = 2 \cdot 3,
+\end{equation}
+zaś w~czwartym
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-13}
+  \sum_{ k = 1 }^{ 4 } k = 2 \cdot 3 + 4 = 2.5 \cdot 4.
+\end{equation}
+
+Przyjmijmy teraz, że~mamy stałą $c_{ n }$, taką~że zachodzi
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-14}
+  \sum_{ k = 1 }^{ n } k = c_{ n } n.
+\end{equation}
+Stąd dostajemy
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-15}
+  \sum_{ k = 1 }^{ n + 1 } k = \sum_{ k = 1 }^{ n } k + n + 1 = c_{ n } n + n + 1 =
+  \frac{ ( c_{ n } + 1 ) n + 1 }{ n + 1 } ( n + 1 ),
+\end{equation}
+czyli
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-16}
+  c_{ n + 1 } = \frac{ ( c_{ n } + 1 ) n + 1 }{ n + 1 },
+\end{equation}
+przy czym $c_{ 1 } = 1$. Można sprawdzić, że~rozwiązaniem tego problemu,
+dobrze znanym ze wzoru na sumę postępu arytmetycznego, jest
+$c_{ n } = 0.5 ( n + 1 )$, czyli inaczej mówiąc
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-17}
+  c_{ n + 1 } = c_{ n } + 0.5,
+\end{equation}
+co jest zgodne z~wzorami
+\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-10}-\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-13}.
+Widzimy więc, że~nie istnieje taka liczba $C$ by dla każdego $n$ zachodziło
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-18}
+  \sum_{ k = 1 }^{ n } k \leq C n.
+\end{equation}
+
+Co więc było źródłem błędu w~podanym tu niepoprawnym dowodzie? Otóż w~kroku
+indukcyjnym zawsze~dowodzimy naszego twierdzenia $T( n + 1 )$ przy
+założeniu, że~prawdziwe jest twierdzenie $T( n )$, dla pewnego
+\textit{ustalonego}~$n$. Zaś dla ustalonego $n$ zawsze istnieje liczba
+$C \geq 0$, taka~że zachodzi
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-19}
+  \sum_{ k = 1 }^{ n } k \leq C n.
+\end{equation}
+Natomiast notacja asymptotyczna, jak sama nazwa wskazuje, mówi o~zachowaniu
+asymptotycznym funkcji, czyli, że~funkcja spełnia pewną własność dla
+wszystkich $n \geq n_{ 0 }$, gdzie $n_{ 0 }$ jest pewną ustaloną liczbą. Zatem
+gdy dowodzimy kroku indukcyjnego możemy z~twierdzenia $T( n )$ przy
+ustalonym $n$ wywnioskować, że~nierówność typu
+\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-19} jest prawdziwa dla
+ustalonego $n$, ewentualnie dla liczb $0, 1, 2, \ldots, n$, gdzie $n$ jest
+cały czas ustalone. Widzimy więc, że~na podstawie założenie $T( n )$
+w~kroku indukcyjnym nie jesteśmy w~stanie nic powiedzieć o~zachowaniu
+asymptotycznym danej funkcji, a~właśnie takiego rozumowania użyliśmy
+w~przytoczonym tu dowodzie.
+
+Płynie stąd wniosek, że~w~dowodach indukcyjnych najlepiej całkowicie unikać
+notacji asymptotycznej. W~ostateczność, z~dużą dozą ostrożności można
+korzystać w~nich z~relacji asymptotycznych, które zostały udowodnione innymi
+metodami.
+
+To co zostało powiedziane powyżej, nie przeczy oczywiście temu, że~stosując
+w~sposób niedozwolony symbole asymptotyczne w~dowodach indukcyjnych otrzymano
+wiele poprawnych twierdzeń. Takie sytuacje zapewne zdarzają~się dość
+często.
 
 
 
