@@ -289,6 +289,17 @@ Dla ścisłości rozważań należy więc warunek
 
 
 
+\noindent
+W~tym dziele pojawia~się termin „asymptotycznie dokładne oszacowanie funkcji
+$f( n )$”. Wedle tego co zrozumiałem, znalezienie takiego asymptotycznie
+dokładnego oszacowania takiej funkcji $g( n )$, że~zachodzi
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-09}
+  f( n ) = \Theta\big( g( n ) \big).
+\end{equation}
+
+
+
 
 
 
@@ -336,7 +347,7 @@ wykona~się przed krokiem $A$.
 \noindent
 \Str{1171} Trzeba poważnie przemyśleć co to znaczy, że~w~zależności
 \begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-09}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-10}
   \sum_{ k = 1 }^{ n } \Theta\big( f( k ) \big) =
   \Theta\left( \sum_{ k = 1 }^{ n } f( k ) \right),
 \end{equation}
@@ -356,53 +367,53 @@ zależności $\sum_{ k = 1 }^{ n } = O( n )$, zaczynając od ścisłej rachunkó
 
 Dla $n = 1$ nam
 \begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-10}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-11}
   \sum_{ k = 1 }^{ 1 } = 1,
 \end{equation}
 dla $n = 2$ dostajemy
 \begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-11}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-12}
   \sum_{ k = 1 }^{ 2 } k = \sum_{ k = 1 }^{ 1 } k + 2 = 1 + 2 = 1.5 \cdot 2,
 \end{equation}
 w~trzecim kroku mamy
 \begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-12}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-13}
   \sum_{ k = 1 }^{ 3 } k = \sum_{ k = 1 }^{ 2 } k + 3 = 1.5 \cdot 2 + 3 = 2 \cdot 3,
 \end{equation}
 zaś w~czwartym
 \begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-13}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-14}
   \sum_{ k = 1 }^{ 4 } k = 2 \cdot 3 + 4 = 2.5 \cdot 4.
 \end{equation}
 
 Przyjmijmy teraz, że~mamy stałą $c_{ n }$, taką~że zachodzi
 \begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-14}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-15}
   \sum_{ k = 1 }^{ n } k = c_{ n } n.
 \end{equation}
 Stąd dostajemy
 \begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-15}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-16}
   \sum_{ k = 1 }^{ n + 1 } k = \sum_{ k = 1 }^{ n } k + n + 1 = c_{ n } n + n + 1 =
   \frac{ ( c_{ n } + 1 ) n + 1 }{ n + 1 } ( n + 1 ),
 \end{equation}
 czyli
 \begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-16}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-17}
   c_{ n + 1 } = \frac{ ( c_{ n } + 1 ) n + 1 }{ n + 1 },
 \end{equation}
 przy czym $c_{ 1 } = 1$. Można sprawdzić, że~rozwiązaniem tego problemu,
 dobrze znanym ze wzoru na sumę postępu arytmetycznego, jest
 $c_{ n } = 0.5 ( n + 1 )$, czyli inaczej mówiąc
 \begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-17}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-18}
   c_{ n + 1 } = c_{ n } + 0.5,
 \end{equation}
 co jest zgodne z~wzorami
-\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-10}-\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-13}.
+\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-11}-\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-14}.
 Widzimy więc, że~nie istnieje taka liczba $C$ by dla każdego $n$ zachodziło
 \begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-18}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-19}
   \sum_{ k = 1 }^{ n } k \leq C n.
 \end{equation}
 
@@ -412,7 +423,7 @@ założeniu, że~prawdziwe jest twierdzenie $T( n )$, dla pewnego
 \textit{ustalonego}~$n$. Zaś dla ustalonego $n$ zawsze istnieje liczba
 $C \geq 0$, taka~że zachodzi
 \begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-19}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-20}
   \sum_{ k = 1 }^{ n } k \leq C n.
 \end{equation}
 Natomiast notacja asymptotyczna, jak sama nazwa wskazuje, mówi o~zachowaniu
@@ -437,9 +448,49 @@ w~sposób niedozwolony symbole asymptotyczne w~dowodach indukcyjnych otrzymano
 wiele poprawnych twierdzeń. Takie sytuacje zapewne zdarzają~się dość
 często.
 
+\vspace{\spaceFour}
 
 
 
+
+
+\noindent
+\Str{1178} Przeliczmy tutaj oszacowanie od~dołu postępu arytmetycznego
+dla przypadku $n$~nieparzystego. Wówczas $\frac{ n - 1 }{ 2 }$
+i~$\frac{ n + 1 }{ 2 }$ są liczbami naturalnymi. Tym samym możemy przepisać
+rozpatrywaną sumę w~następujący sposób.
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-21}
+  \begin{split}
+    \sum_{ k = 1 }^{ n } k &=
+    \sum_{ k = 1 }^{ ( n - 1 ) / 2 } k + \sum_{ k = ( n + 1 ) / 2 }^{ n } k \geq
+    \sum_{ k = 1 }^{ ( n - 1 ) / 2 } 0 + \sum_{ k = ( n + 1 ) / 2 }^{ n } k \geq
+    \sum_{ k = ( n + 1 ) / 2 }^{ n } \frac{ n + 1 }{ 2 } = \\
+    &= \left( \frac{ n + 1 }{ 2 } \right)^{ 2 } = \Omega( n^{ 2 } ).
+  \end{split}
+\end{equation}
+
+\vspace{\spaceFour}
+
+
+
+
+
+\noindent
+\Str{1187} Należy nadmienić, że~n-tki są uporządkowane tak samo jak para
+uporządkowana. Tym samym
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-22}
+  \begin{split}
+    &( a_{ 1 }, a_{ 2 }, \ldots, a_{ i - 1 }, a_{ i }, a_{ i + 1 }, \ldots, a_{ j - 1 },
+    a_{ j }, a_{ j + 1 }, \ldots, a_{ n } ) \neq \\
+    &\neq ( a_{ 1 }, a_{ 2 }, \ldots, a_{ i - 1 }, a_{ j }, a_{ i + 1 }, \ldots,
+    a_{ j - 1 }, a_{ i }, a_{ j + 1 }, \ldots, a_{ n } ),
+  \end{split}
+\end{equation}
+przy założeniu $a_{ i } \neq a_{ j }$.
+
+\vspace{\spaceFour}
 
 
 
