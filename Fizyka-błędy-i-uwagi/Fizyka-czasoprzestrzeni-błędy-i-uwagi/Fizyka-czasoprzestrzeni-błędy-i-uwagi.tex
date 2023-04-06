@@ -1,5 +1,3 @@
-% Autor: Kamil Ziemian
-
 % ---------------------------------------------------------------------
 % Podstawowe ustawienia i pakiety
 % ---------------------------------------------------------------------
@@ -45,9 +43,9 @@
 % ------------------------------
 % Często przydatne pakiety
 % ------------------------------
-\usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+% \usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
+% % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
 
@@ -71,11 +69,14 @@
 
 
 % ------------------------------
-% Tworzenie otoczeń „Twierdzenie”, „Definicja”, „Lemat”, etc.
-\newtheorem{twr}{Twierdzenie}  % Komenda wprowadzająca otoczenie
-% „twr” do pisania twierdzeń matematycznych
-\newtheorem{defin}{Definicja}  % Analogicznie jak powyżej
-\newtheorem{wni}{Wniosek}
+% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
+% ------------------------------
+% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
+% matematycznych
+\newtheorem{theorem}{Twierdzenie}
+% Analogicznie jak powyżej
+\newtheorem{definition}{Definicja}
+\newtheorem{corollary}{Wniosek}
 
 
 
@@ -104,7 +105,9 @@
 % ------------------------------
 % Ustawienia różnych parametrów tekstu
 % ------------------------------
-\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
+\renewcommand{\baselinestretch}{1.1}
+
+\renewcommand{\arraystretch}{1.4} % Ustawienie szerokości odstępów między
 % wierszami w tabelach.
 
 
@@ -128,9 +131,11 @@
 % ---------------------------------------------------------------------
 % Tytuł, autor, data
 \title{Fizyka czasoprzestrzenni \\
-  Błędy i~uwagi}
+  {\Large Błędy i~uwagi}}
 
-% \author{}
+\author{Kamil Ziemian}
+
+
 % \date{}
 % ---------------------------------------------------------------------
 
