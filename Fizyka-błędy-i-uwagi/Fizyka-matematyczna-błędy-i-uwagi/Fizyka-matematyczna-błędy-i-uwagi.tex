@@ -71,11 +71,14 @@
 
 
 
-% ##########
-% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
-% „theorem” do pisania twierdzeń matematycznych
-\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+% ------------------------------
+% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
+% ------------------------------
+% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
+% matematycznych.
+\newtheorem{theorem}{Twierdzenie}
+% Analogicznie jak powyżej
+\newtheorem{definition}{Definicja}
 \newtheorem{corollary}{Wniosek}
 
 
@@ -104,13 +107,15 @@
 % ------------------------------
 % Ustawienia różnych parametrów tekstu
 % ------------------------------
-\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+\renewcommand{\baselinestretch}{1.1}
+
+% Ustawienie szerokości odstępów między wierszami w tabelach.
+\renewcommand{\arraystretch}{1.4}
 
 
 
 % ------------------------------
-% Pakiet "hyperref"
+% Pakiet „hyperref”
 % Polecano by umieszczać go na końcu preambuły.
 % ------------------------------
 \usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
@@ -128,9 +133,11 @@
 % ---------------------------------------------------------------------
 % Tytuł, autor, data
 \title{Fizyka matematyczna \\
-  Błędy i~uwagi}
+  {\Large Błędy i~uwagi}}
 
-% \author{}
+\author{Kamil Ziemian}
+
+
 % \date{}
 % ---------------------------------------------------------------------
 
@@ -162,7 +169,7 @@
 % ####################
 \Work{ % Autorzy i tytuł dziełą
   R.~Curant, D.~Hilbert \\
-  „Methods~of Mathematical Physics”, \cite{} }
+  \textit{Methods~of Mathematical Physics}, \cite{}}
 
 
 % ##################
@@ -173,7 +180,6 @@
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -195,6 +201,8 @@
 \end{center}
 
 \vspace{\spaceOne}
+
+
 % ############################
 
 
@@ -209,27 +217,38 @@
 % ##############################
 \Work{ % Autor i tytuł dzieła
   Walter Thirring \\
-  „Fizyka matematyczna. Tom~I: Klasyczne układy dynamiczne”,
-  \cite{ThirringFizykaMatematycznaVolI1985} }
+  \textit{Fizyka matematyczna} \\
+  \textit{Tom~I: Klasyczne układy dynamiczne},
+  \cite{ThirringFizykaMatematycznaVolI1985}}
+
+\vspace{0em}
 
 
 % ##################
 \CenterBoldFont{Uwagi do konkretnych stron}
 
+\vspace{0em}
 
+
+\noindent
 \Str{18} W~definicji (2.1,1) brakuje założenia o~istnieniu wektora zerowego. ?????
 
 \vspace{\spaceFour}
 
 
 
-\StrWg{45}{1} Nie wiem jak w~sposób zgrabny napisać, że~wektor $( 0, 0, \ldots, 0 )$ ma długość $n - 1$.
+
+\noindent
+\StrWg{45}{1} Nie wiem jak w~sposób zgrabny napisać, że~wektor
+$( 0, 0, \ldots, 0 )$ ma długość $n - 1$.
 
 
 
 
 
 % ##################
+\newpage
+
 \CenterBoldFont{Błędy}
 
 
@@ -237,7 +256,6 @@
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -276,6 +294,8 @@
 
 \end{center}
 
+\vspace{\spaceTwo}
+
 
 \noindent
 \StrWd{10}{7} \\
@@ -304,7 +324,7 @@ pralelyzowalna. \\
 
 
 
-\vspace{\spaceTwo}
+
 % ############################
 
 
@@ -317,15 +337,24 @@ pralelyzowalna. \\
 
 
 % ##############################
+\newpage
+
 \Work{ % Autor i tytuł dzieła
   Walter Thirring \\
-  „Fizyka matematyczna. Tom~III: Mechanika kwantowa atomów i~cząsteczek”,
-  \cite{ThirringFizykaMatematycznaVolIV1987} }
+  \textit{Fizyka matematyczna} \\
+  \textit{Tom~III: Mechanika kwantowa atomów} \\
+  \textit{i~cząsteczek}, \cite{ThirringFizykaMatematycznaVolIV1987}}
+
+\vspace{0em}
 
 
 % ##################
-\CenterBoldFont{Uwagi do konkretnych stron}
+\CenterBoldFont{Uwagi do~konkretnych stron}
 
+\vspace{0em}
+
+
+\noindent
 \Str{18} W~definicji (2.1,1) brakuje założenia o~istnieniu wektora zerowego. ?????
 
 \vspace{\spaceFour}
@@ -335,6 +364,8 @@ pralelyzowalna. \\
 
 
 % ##################
+\newpage
+
 \CenterBoldFont{Błędy}
 
 
@@ -342,7 +373,6 @@ pralelyzowalna. \\
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -364,8 +394,10 @@ pralelyzowalna. \\
 
 \end{center}
 
-
 \vspace{\spaceTwo}
+
+
+
 % ############################
 
 
@@ -380,6 +412,7 @@ pralelyzowalna. \\
 % #####################################################################
 % #####################################################################
 % Bibliografia
+
 \bibliographystyle{plalpha}
 
 \bibliography{PhilNaturBooks}{}
