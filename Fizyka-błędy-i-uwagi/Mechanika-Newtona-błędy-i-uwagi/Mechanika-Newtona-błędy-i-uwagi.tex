@@ -72,9 +72,11 @@
 % ------------------------------
 % Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
 % ------------------------------
-\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
-% „theorem” do pisania twierdzeń matematycznych
-\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
+% matematycznych.
+\newtheorem{theorem}{Twierdzenie}
+% Analogicznie jak powyżej
+\newtheorem{definition}{Definicja}
 \newtheorem{corollary}{Wniosek}
 
 
@@ -107,8 +109,8 @@
 % ------------------------------
 \renewcommand{\baselinestretch}{1.1}
 
-\renewcommand{\arraystretch}{1.4} % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+% Ustawienie szerokości odstępów między wierszami w tabelach.
+\renewcommand{\arraystretch}{1.4}
 
 
 
@@ -654,7 +656,7 @@ założenie o~ciągłości $g$ wydaje się bardzo nienaturalne. Wydaje się,
     \hline
     12  & &  2 & matematycz netak & matematyczne tak \\
     18  &  3 & & $\Phi( \vecxbold, \dot{ \vecxbold } )$
-           & % $\mathbf{F}( \mathbf{ x }, \dot{ \mathbf{ x } } )$
+    & % $\mathbf{F}( \mathbf{ x }, \dot{ \mathbf{ x } } )$
     \\
     19  & &  1 & $\vecgbold\, \vecxbold$ & $-\vecgbold\, \vecxbold$ \\
     23  &  4 & & $f( \dot{ x } )$ & $f( x )$ \\
@@ -671,10 +673,6 @@ założenie o~ciągłości $g$ wydaje się bardzo nienaturalne. Wydaje się,
     62  &  2 & & $m\, \dot{ \vecrbold }$ & $m\, \dot{ r }$ \\
     64  & &  8 & $G( x, p )$ & $G( x_{ 0 }, p )$ \\
     77  & &  9 & $S^{ 2 }$ & $S^{ 1 }$ \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
     81  &  5 & & $TM$ & $TM_{ x }$ \\
     81  &  9 & & $\mathbf{ \eta_{ i } }$ & $\eta_{ i }$ \\
     81  & &  5 & związką & wiązką \\
@@ -693,14 +691,6 @@ założenie o~ciągłości $g$ wydaje się bardzo nienaturalne. Wydaje się,
     214 & & 6 & rotacja & rotacją \\
     225 & 13 & & $H( \partial L / \partial \dot{ \vecpbold }, \vecqbold )$
            & $H( \partial L / \partial \dot{ \vecqbold }, \vecqbold )$ \\
-    % 242 &  3 & & \textit{Jacobiego} & Jacobiego \\
-    % 268 & &  8 & $g$ & $\vecgbold$ \\
-    % 291 & & & & \\ % Jak się pisze w LaTeXu cyrlicą?
-    % 351 &  1 & & $P_{ * }TM_{ X }$ & $P_{ * }TM_{ x }$ \\
-    % 351 &  1 & & $T\gFrak_{ p }^{ * })$ & $T\gFrak_{ p }^{ * }$ \\
-    % 373 & 18 & & A.~Arez & A.~Avez \\
-    % 395 & & 11 & \textit{Poincar\'{e}'s} & \textit{Poincar\'{e}s} \\
-    % & & & & \\
     \hline
   \end{tabular}
 
@@ -716,47 +706,6 @@ założenie o~ciągłości $g$ wydaje się bardzo nienaturalne. Wydaje się,
                               & Powinno być \\ \cline{2-3}
     & od góry & od dołu & & \\
     \hline
-    % 12  & &  2 & matematycz netak & matematyczne tak \\
-    % 18  &  3 & & $\Phi( \vecxbold, \dot{ \vecxbold } )$
-    %        & % $\mathbf{F}( \mathbf{ x }, \dot{ \mathbf{ x } } )$
-    % \\
-    % 19  & &  1 & $\vecgbold\, \vecxbold$ & $-\vecgbold\, \vecxbold$ \\
-    % 23  &  4 & & $f( \dot{ x } )$ & $f( x )$ \\
-    % 24  &  1 & & Narysujem y & Narysujemy \\
-    % 34  & &  2 & zorientowane & zorientowanej \\
-    % 37  & & 10 & $\ddot{ \vecrbold } - r \dot{ \varphi }^{ 2 }$
-    %        & $\ddot{ r } - r \dot{ \varphi }^{ 2 }$ \\
-    % 37  & &  6 & $\dot{ r } -$ & $\ddot{ r } -$ \\
-    % 60  & 10 & & napsać & napisać \\
-    % 61  & &  8 & $\sqrt{ ( \dot{ q }_{ 1 }^{ 2 } + \dot{ q }_{ 2 }^{ 2 }
-    %              + \dot{ q }_{ 3 }^{ 2 } ) }$
-    %        & $\frac{ 1 }{ 2 } m ( \dot{ q }_{ 1 }^{ 2 } + \dot{ q }_{ 2 }^{ 2 }
-    %          + \dot{ q }_{ 3 }^{ 2 } )$ \\
-    % 62  &  2 & & $m\, \dot{ \vecrbold }$ & $m\, \dot{ r }$ \\
-    % 64  & &  8 & $G( x, p )$ & $G( x_{ 0 }, p )$ \\
-    % 77  & &  9 & $S^{ 2 }$ & $S^{ 1 }$ \\
-    % % & & & & \\
-    % % & & & & \\
-    % % & & & & \\
-    % % & & & & \\
-    % 81  &  5 & & $TM$ & $TM_{ x }$ \\
-    % 81  &  9 & & $\mathbf{ \eta_{ i } }$ & $\eta_{ i }$ \\
-    % 81  & &  5 & związką & wiązką \\
-    % 81  & &  3 & $\vectbold_{ 0 }$ & $t_{ 0 }$ \\
-    % 82  & 15 & & $m_{ 1 }${  }, & $m_{ 1 }$ \\
-    % 86  &  2 & & \textit{Lagrange’a, to $( M, L )$}
-    %        & \textit{Lagrange’a $( M, L )$, to} \\
-    % 98  & &  3 & $\omega^{ 2 }$ & $\omega_{ 0 }^{ 2 }$ \\
-    % 124 & 13 & & $\mathbf{Q}$ & $Q$ \\
-    % 165 & &  9 & postc & postaci \\
-    % 169 & & 10 & Prykład & Przykład \\
-    % 170 & 8 & & k-wymiaro & k-wymiro- \\
-    % 181 & & 15 & obszru & obszaru \\
-    % 186 & & 11 & $T^{ * } V$ & $T^{ * } V_{ x }$ \\
-    % 188 & 1 & & ednoparametrowa & jednoparametrowa \\
-    % 214 & & 6 & rotacja & rotacją \\
-    % 225 & 13 & & $H( \partial L / \partial \dot{ \vecpbold }, \vecqbold )$
-    %        & $H( \partial L / \partial \dot{ \vecqbold }, \vecqbold )$ \\
     242 &  3 & & \textit{Jacobiego} & Jacobiego \\
     268 & &  8 & $g$ & $\vecgbold$ \\
     % 291 & & & & \\ % Jak się pisze w LaTeXu cyrlicą?

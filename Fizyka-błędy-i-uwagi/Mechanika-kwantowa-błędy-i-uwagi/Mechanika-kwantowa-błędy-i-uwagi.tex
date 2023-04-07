@@ -1,5 +1,3 @@
-% Autor: Kamil Ziemian
-
 % ---------------------------------------------------------------------
 % Podstawowe ustawienia i pakiety
 % ---------------------------------------------------------------------
@@ -46,8 +44,8 @@
 % Często przydatne pakiety
 % ------------------------------
 % \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% \usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
+% % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
 
@@ -70,12 +68,15 @@
 
 
 
-% ##########
-% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-\newtheorem{twr}{Twierdzenie}  % Komenda wprowadzająca otoczenie
-% ,,twr'' do pisania twierdzeń matematycznych
-\newtheorem{defin}{Definicja}  % Analogicznie jak powyżej
-\newtheorem{wni}{Wniosek}
+% ------------------------------
+% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
+% ------------------------------
+% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
+% matematycznych.
+\newtheorem{theorem}{Twierdzenie}
+% Analogicznie jak powyżej
+\newtheorem{definition}{Definicja}
+\newtheorem{corollary}{Wniosek}
 
 
 
@@ -102,13 +103,15 @@
 % ------------------------------
 % Ustawienia różnych parametrów tekstu
 % ------------------------------
-\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+\renewcommand{\baselinestretch}{1.1}
+
+% Ustawienie szerokości odstępów między wierszami w tabelach.
+\renewcommand{\arraystretch}{1.4}
 
 
 
 % ------------------------------
-% Pakiet "hyperref"
+% Pakiet „hyperref”
 % Polecano by umieszczać go na końcu preambuły.
 % ------------------------------
 \usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
@@ -126,9 +129,11 @@
 % ---------------------------------------------------------------------
 % Tytuł tekstu
 \title{Mechanika kwantowa \\
-  Błędy i~uwagi}
+  {\Large Błędy i~uwagi}}
 
-% \author{}
+\author{Kamil Ziemian}
+
+
 % \date{}
 % ---------------------------------------------------------------------
 
@@ -168,14 +173,19 @@
 % ############################
 \Work{ % Autor i tytuł dzieła
   Ramamurti Shankar \\
-  „Mechanika kwantowa”, \cite{ShankarMechanikaKwantowa2006} }
+  \textit{Mechanika kwantowa}, \cite{ShankarMechanikaKwantowa2006}}
+
+\vspace{0em}
 
 
 % ##################
 \CenterBoldFont{Uwagi}
 
+\vspace{0em}
 
-\start \Str{74} Na rysunku 1.8 b) aby otrzymać poprawny wykres
+
+\noindent
+\Str{74} Na rysunku 1.8 b) aby otrzymać poprawny wykres
 pochodnej funkcji Gaussa należy odbić wykres przedstawiony względem osi
 $y = 0$.
 
@@ -186,6 +196,8 @@ $y = 0$.
 
 
 % ##################
+\newpage
+
 \CenterBoldFont{Błędy}
 
 
@@ -193,7 +205,6 @@ $y = 0$.
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -248,13 +259,19 @@ $k$, a operator $X$ jak $-i d / d k$\ldots
 
 
 % ############################
+\newpage
+
 \Work{ % Autorzy i tytuł dzieła
   L. I. Schiff \\
-  „Mechanika kwantowa”, \cite{Sch87} }
+  \textit{Mechanika kwantowa}, \cite{SchiffMechanikaKwantowe1987}}
+
+\vspace{0em}
 
 
 % ##################
 \CenterBoldFont{Uwagi}
+
+\vspace{0em}
 
 
 \noindent
@@ -311,6 +328,8 @@ mówiąc inaczej jeśli w~układzie mamy energię Fermiego.
 
 
 % ##################
+\noindent
+
 \CenterBoldFont{Błędy}
 
 
@@ -318,7 +337,6 @@ mówiąc inaczej jeśli w~układzie mamy energię Fermiego.
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -337,6 +355,8 @@ mówiąc inaczej jeśli w~układzie mamy energię Fermiego.
 
 \end{center}
 
+\vspace{\spaceTwo}
+
 
 \noindent
 \StrWg{21}{16} \\
@@ -347,38 +367,48 @@ mówiąc inaczej jeśli w~układzie mamy energię Fermiego.
 \Powin w~obszarze przez te ścianki zajętym\ldots \\
 
 
-\vspace{\spaceTwo}
-% ############################
-
-
-
-
-
-
-
-
-
 
 % ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\newpage
+
 \Work{ % Autorzy i tytuł dzieła
   Marian Grabowski, Roman S.~Ingarden \\
-  „Mechanika kwantowa. Ujęcie w~przestrzeni Hilberta”,
-  \cite{GrabowskiIngardenMechanikaKwantowa1987} }
+  \textit{Mechanika kwantowa. Ujęcie w~przestrzeni Hilberta},
+  \cite{GrabowskiIngardenMechanikaKwantowa1987}}
+
+\vspace{0em}
 
 
 % ##################
 \CenterBoldFont{Uwagi do konkretnych stron}
 
+\vspace{0em}
 
-W książce powinna być jawnie zamieszczona informacja, że każda skończenie wymiarowa
-podprzestrzeń przestrzeni Hilberta (ogólniej: przestrzeni unormowanej), jest
-domknięta. Wynika to, choćby z tego, że każda podprzestrzeń
-skończenie wymiarowa jest lokalnie zwarta.
+
+\noindent
+W~książce powinna być jawnie zamieszczona informacja, że każda skończenie
+wymiarowa podprzestrzeń przestrzeni Hilberta (ogólniej: przestrzeni
+unormowanej), jest domknięta. Wynika to, choćby z tego, że każda
+podprzestrzeń skończenie wymiarowa jest lokalnie zwarta.
 
 \vspace{\spaceFour}
 
 
 
+
+
+\noindent
 Str. Jest tu przykład rozumowania z ogromną dziurą. Nie możemy
 korzystać z własności przestrzeni Hilberta dopóki nie udowodnimy, że
 jest to przestrzeń Hilberta.
@@ -387,6 +417,9 @@ jest to przestrzeń Hilberta.
 
 
 
+
+
+\noindent
 \Str{27} Jest tu pewne zamieszanie odnośnie jednoznaczności
 rozkładu. Rozkład na element najbliższy w danej podprzestrzeni i
 część ortogonalną musi być jednoznaczny, jeśli istnieje, ze względu
@@ -399,19 +432,24 @@ $\Mcal \cup \Mcal^{ \bot } = \{ \emptyset \}$.
 
 
 
-\Str{27} Przedstawione tu pojęcie zupełności jest trochę
-mylące. Podana tu definicja zupełności odpowiada pojęciu
-\textit{totalności} omówionej w książce Waltera Thirring „Fizyka
-matematyczna. Tom III”. Przede wszystkim z podanej definicji zbioru
-zupełnego nie wynika, że każdy wektor z $\Hcal$ można
-przedstawić jako szereg elementów tego zbioru. Stąd właśnie Thirring
-rozróżnia pojęcie totalności i zupełności.
+
+
+\noindent
+\Str{27} Przedstawione tu pojęcie zupełności jest trochę mylące. Podana tu
+definicja zupełności odpowiada pojęciu \textit{totalności} omówionej
+w~książce Waltera Thirring \textit{Fizyka matematyczna. Tom~III}. Przede
+wszystkim z podanej definicji zbioru zupełnego nie wynika, że każdy wektor
+z~$\Hcal$ można przedstawić jako szereg elementów tego zbioru. Stąd właśnie
+Thirring rozróżnia pojęcie totalności i zupełności.
 
 \vspace{\spaceFour}
 
 
 
-\Str{27} W dowodach Wniosków I i II, jest dwa razy użyte
+
+
+\noindent
+\Str{27} W dowodach Wniosków I oraz II, jest dwa razy użyte
 twierdzenie, że wektor ortogonalny do danego zbioru jest też
 ortogonalny do jego domknięcia, w dowodzie pierwszego wniosku
 wyrażone słownie, w drugim za pomocą wzorów. Warto byłoby zrobić to
@@ -421,6 +459,8 @@ bardzie elegancko.
 
 
 
+
+\noindent
 \Str{28} W dowodzie wniosku I.2. jest coś dziwnego. Uwaga, że
 należy przyjrzeć się uzyskanym sumom prostym i wywnioskować z nich,
 iż $[ \Mcal ]=( \Mcal^{ \bot } )^{ \bot }$, równie
@@ -440,6 +480,9 @@ $A_{ 1 } \oplus A_{ 2 }$ nie jest sumą prostą.
 
 
 
+
+
+\noindent
 \Str{38} Pojawia się tu pojęcie operatora ograniczonego, które
 jest wprowadzone dopiero na stronie 39.
 
@@ -447,6 +490,9 @@ jest wprowadzone dopiero na stronie 39.
 
 
 
+
+
+\noindent
 \Str{40} W dowodzie lematu II.1, gdy mowa jest o udowodnieniu
 pierwszej równości w punkcie a), w istocie udowodniono równość:
 \begin{equation}
@@ -458,6 +504,9 @@ pierwszej równości w punkcie a), w istocie udowodniono równość:
 
 
 
+
+
+\noindent
 \Str{46} Punkty twierdzenia są ustawione w dziwnej kolejności,
 biorąc pod uwagę logikę dowodu.
 
@@ -465,6 +514,9 @@ biorąc pod uwagę logikę dowodu.
 
 
 
+
+
+\noindent
 \Str{48} Z tego, że dana liczba nie należy do widma, nie wynika
 że nie istnieje dla niej rezolwenta.
 
@@ -472,6 +524,9 @@ biorąc pod uwagę logikę dowodu.
 
 
 
+
+
+\noindent
 \Str{49} Drugie stwierdzenie z punktu (\romannumeral4), jest już
   zawarte w punkcie (\romannumeral2).
 
@@ -479,6 +534,9 @@ biorąc pod uwagę logikę dowodu.
 
 
 
+
+
+\noindent
 \Str{52} Użyte tu pojęcie funkcji charakterystycznej, nie jest
 chyba nigdzie w książce przedstawione.
 
@@ -486,14 +544,21 @@ chyba nigdzie w książce przedstawione.
 
 
 
-\Str{57} Warto byłoby omówić szerszej pojęcie domkniętego
-rozszerzenia operatora, domykalności operatora i jego domknięcia. W~szczególności z twierdzenia o wykresie domkniętym wynika, że
-domknięcie operatora jest zawsze operatorem ograniczonym.
+
+
+\noindent
+\Str{57} Warto byłoby omówić szerszej pojęcie domkniętego rozszerzenia
+operatora, domykalności operatora i jego domknięcia. W~szczególności
+z~twierdzenia o wykresie domkniętym wynika, że~domknięcie operatora jest
+zawsze operatorem ograniczonym.
 
 \vspace{\spaceFour}
 
 
 
+
+
+\noindent
 \Str{58} Uwaga o twierdzeniu II (\romannumeral3) jest zupełnie
 niezrozumiała.
 
@@ -501,13 +566,19 @@ niezrozumiała.
 
 
 
-\Str{58} Zdefiniowaniu rezolwenty i widma operatora
-nieograniczonego powinno zostać poświęcone więcej miejsca.
+
+
+\noindent
+\Str{58} Zdefiniowaniu rezolwenty i~widma operatora nieograniczonego powinno
+zostać poświęcone więcej miejsca.
 
 \vspace{\spaceFour}
 
 
 
+
+
+\noindent
 \Str{58} Nie dodano, że widmo nieograniczonego operatora
 domykalnego, definiujemy jako widmo jego domknięcia.
 
@@ -515,29 +586,40 @@ domykalnego, definiujemy jako widmo jego domknięcia.
 
 
 
-\Str{58} Jedyność wektora $\eta$ wynika już z lematu Riesza.
+
+
+\noindent
+\Str{58} Jedyność wektora $\eta$ wynika już z~lematu Riesza.
 
 \vspace{\spaceFour}
 
 
 
-\Str{80} Ustalenie takiej wartości stałej $C$, ani w ogóle
-ustalenie jej wartości, nie jest potrzebne w rozważanym zagadnieniu.
+
+
+\noindent
+\Str{80} Ustalenie takiej wartości stałej $C$, ani w~ogóle ustalenie jej
+wartości, nie jest potrzebne w rozważanym zagadnieniu.
 
 \vspace{\spaceFour}
 
 
 
-\Str{313} Nie wspomniano tu w jakim sensie dane ciągi funkcji
-mają być zbieżne. Osoba znająca teorię całki Lebesgue'a wie, że
-wystarczy założyć zbieżność punktową, a nawet tylko zbieżność
-punktową prawie wszędzie.
+
+
+\noindent
+\Str{313} Nie wspomniano tu w jakim sensie dane ciągi funkcji mają być
+zbieżne. Osoba znająca teorię całki Lebesgue’a wie, że~wystarczy założyć
+zbieżność punktową, a~nawet tylko zbieżność punktową prawie wszędzie.
 
 \vspace{\spaceFour}
 
 
 
-\Str{315} W twierdzeniu Lebesgue'a o zbieżności majoryzowanej
+
+
+\noindent
+\Str{315} W twierdzeniu Lebesgue’a o~zbieżności majoryzowanej
 brakuje założenia o~zbieżności rozważanego ciągu funkcji.
 
 
@@ -545,6 +627,8 @@ brakuje założenia o~zbieżności rozważanego ciągu funkcji.
 
 
 % ##################
+\newpage
+
 \CenterBoldFont{Błędy}
 
 
@@ -552,7 +636,6 @@ brakuje założenia o~zbieżności rozważanego ciągu funkcji.
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -577,12 +660,14 @@ brakuje założenia o~zbieżności rozważanego ciągu funkcji.
     313 & 16 & & $A_{ 0 } \ldots \cup A_{ n }$
            & $A_{ 0 } \cup \ldots \cup A_{ n }$ \\
     315 & 3 & & $A^{ 0 } \leq f_{ 1 }( x )$ & $A: 0 \leq f_{ 1 }( x )$ \\
-    318 & & 7 & Caucy'ego & Cauchy'ego \\
+    318 & & 7 & Caucy’ego & Cauchy’ego \\
     % & & & & \\
     \hline
   \end{tabular}
 
 \end{center}
+
+\vspace{\spaceTwo}
 
 
 \noindent
@@ -605,7 +690,7 @@ brakuje założenia o~zbieżności rozważanego ciągu funkcji.
 \Str{311} \ldots dla każdego $i$. Jeżeli\ldots
 
 
-\vspace{\spaceTwo}
+
 % ############################
 
 
@@ -638,6 +723,7 @@ brakuje założenia o~zbieżności rozważanego ciągu funkcji.
 % #####################################################################
 % #####################################################################
 % Bibliografia
+
 \bibliographystyle{plalpha}
 
 \bibliography{PhilNaturBooks}{}

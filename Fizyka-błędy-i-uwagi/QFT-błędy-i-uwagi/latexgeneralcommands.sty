@@ -28,7 +28,8 @@
 % Kolory
 
 % Kolory z tematu beamera Metropolis Matthias Vogelgesang
-\definecolor{DarkOrange}{HTML}{EB811B}
+% Uncomment only if your files use `xcolor' packages.
+% \definecolor{DarkOrange}{HTML}{EB811B}
 
 
 
@@ -51,9 +52,10 @@
 % \newcommand{\noi}{\noindent}
 
 % Numeracja stron i rozdziałów
-\newcommand{\Str}[1]{\noindent \textbf{Str.~#1.}}
-\newcommand{\StrWg}[2]{\noindent \textbf{Str.~#1, wiersz~#2.}}
-\newcommand{\StrWd}[2]{\noindent \textbf{Str.~#1, wiersz~#2 (od dołu).}}
+\newcommand{\Str}[1]{\textbf{Str.~#1.}}
+\newcommand{\StrWg}[2]{\textbf{Str.~#1, wiersz~#2.}}
+\newcommand{\StrWierszeG}[2]{\textbf{Str.~#1, wiersze~#2.}}
+\newcommand{\StrWd}[2]{\textbf{Str.~#1, wiersz~#2 (od dołu).}}
 
 % Do poprawiania błędów
 \newcommand{\Dow}{\textbf{Dowód}} % To niezbyt pasuje do opisu POPRAW
