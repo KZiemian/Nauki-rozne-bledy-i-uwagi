@@ -107,8 +107,8 @@
 % ------------------------------
 \renewcommand{\baselinestretch}{1.1}
 
-\renewcommand{\arraystretch}{1.4} % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+% Ustawienie szerokości odstępów między wierszami w tabelach.
+\renewcommand{\arraystretch}{1.4}
 
 
 
@@ -161,8 +161,6 @@
 \maketitle % Tytuł całego tekstu
 % ######################################
 
-% „P\ldots” oznacza, że w wydaniu ,,\ldots'' błąd został poprawiony.\\
-
 
 
 
@@ -170,35 +168,47 @@
 % ############################
 \Work{ % Autor i tytuł dzieła
   Wojciech Kopczyński, Andrzej Trautman \\
-  „Czasoprzestrzeń i~grawitacja”,
-  \cite{KopczynskiTrautmanCzasoprzetrzenIGrawitacja1984} }
+  \textit{Czasoprzestrzeń i~grawitacja},
+  \cite{KopczynskiTrautmanCzasoprzetrzenIGrawitacja1984}}
 
+\vspace{0em}
 
 
 % ##################
-\CenterBoldFont{Uwagi do konkretnych stron}
+\CenterBoldFont{Uwagi do~konkretnych stron}
+
+\vspace{0em}
 
 
-\start \Str{33} Według mi~się, że~$l$ przebiega tylko zakres
-$0, n - 1$, ale~to trzeba sprawdzić.
+\noindent
+\Str{33} Według mi~się, że~$l$ przebiega tylko zakres $0, n - 1$, ale~to
+trzeba sprawdzić.
 
 \vspace{\spaceFour}
 
 
 
-\start \Str{37-38}
+
+
+\noindent
+\Str{37-38}
 
 \vspace{\spaceFour}
 
 
 
-\start \Str{51}
+
+
+\noindent
+\Str{51}
 
 
 
 
 
 % ##################
+\newpage
+
 \CenterBoldFont{Błędy}
 
 
@@ -206,7 +216,6 @@ $0, n - 1$, ale~to trzeba sprawdzić.
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -239,51 +248,69 @@ $0, n - 1$, ale~to trzeba sprawdzić.
 
 
 % ############################
+\newpage
+
 \Work{ % Autor i tytuł dzieła
   Bernard F. Schutz \\
-  „Wstęp do ogólnej teorii względności”,
-  \cite{SchutzWstepDoOgolnejTeoriiWzglednosci2002} }
+  \textit{Wstęp do ogólnej teorii względności},
+  \cite{SchutzWstepDoOgolnejTeoriiWzglednosci2002}}
+
+\vspace{0em}
 
 
 % ##################
 \CenterBoldFont{Uwagi do konkretnych stron}
 
-
-\start \Str{35} Wyprowadzenie transformacji Lorentza nie wydaje się
-poprawne. Brakuje argumentu który by implikował relację $\sigma = \alpha$.
-
-\vspace{\spaceFour}
+\vspace{0em}
 
 
-
-\start \Str{62} Dowód, że foton ma zerową masę powinien być
-opatrzony większym komentarzem, opiera się on bowiem na
-interpretacji składowych czterowektora podanej dla cząstki z~niezerową masą. Dlatego nie można jej tak po prostu przenieść dla
-czterowektora świetlnego. Z drugiej strony sama interpretacja
-składowych czterowektora o niezerowej masie, nie została
-potraktowana jako postulat lub uzasadniona fizycznie, lecz po prostu
-podana. Może tu też warto byłoby dodać jakiś komentarz.
+\noindent
+\Str{35} Wyprowadzenie transformacji Lorentza nie wydaje się poprawne.
+Brakuje argumentu który by implikował relację $\sigma = \alpha$.
 
 \vspace{\spaceFour}
 
 
 
-\start \Str{106} Warto byłoby dodać komentarz wyjaśniający dlaczego
+
+
+\noindent
+\Str{62} Dowód, że foton ma zerową masę powinien być opatrzony większym
+komentarzem, opiera się on bowiem na interpretacji składowych czterowektora
+podanej dla cząstki z~niezerową masą. Dlatego nie można jej tak po prostu
+przenieść dla czterowektora świetlnego. Z drugiej strony sama interpretacja
+składowych czterowektora o niezerowej masie, nie została potraktowana jako
+postulat lub uzasadniona fizycznie, lecz po prostu podana. Może tu też warto
+byłoby dodać jakiś komentarz.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\noindent
+\Str{106} Warto byłoby dodać komentarz wyjaśniający dlaczego
 wielkości termodynamiczne (określane tu jako skalarne) definiuje~się
-zawsze w układzie CW danego fragmentu płynu.
+zawsze w~układzie CW \textsc{cw} danego fragmentu płynu.
 
 \vspace{\spaceFour}
 
 
 
-\start \Str{108} Zdanie „gdy przewodzone jest ciepło, energia
-będzie niosła pęd” wymaga głębszego zastanowienia.
+
+
+\noindent
+\Str{108} Zdanie „gdy przewodzone jest ciepło, energia będzie niosła pęd”
+wymaga głębszego zastanowienia.
 
 
 
 
 
 % ##################
+\newpage
+
 \CenterBoldFont{Błędy}
 
 
@@ -291,7 +318,6 @@ będzie niosła pęd” wymaga głębszego zastanowienia.
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -302,7 +328,7 @@ będzie niosła pęd” wymaga głębszego zastanowienia.
     41 & & 10 & zagara & zegara \\
     82 & & 1 & $( a \quad b \quad \ldots )$ & $( a \: b \: \ldots )$ \\
     83 & 2 & & $( a \quad b \quad \ldots )$ & $( a \: b \: \ldots )$ \\
-    143 & & 4 & $B\indices{^\mu_\nu_{;\, \beta}}$ & $B\indices{^\mu_\nu_{,\, \beta}}$ \\
+    143 & & 4 & $B\indices{^\mu_{ v ; \, \beta }}$ & $B\indices{ ^\mu_{ \nu, \, \beta } }$ \\
     % & & & & \\
     \hline
   \end{tabular}
@@ -323,10 +349,12 @@ będzie niosła pęd” wymaga głębszego zastanowienia.
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+\newpage
+
+\Work{ % Autorzy i tytuł dzieła
   S. W. Hawking, G. F. R. Ellis \\
-  „The Large Scale Structure of Space-Time”,
-  \cite{HawkingEllisLargeScaleStructureOfSpaceTime1973} }
+  \textit{The Large Scale Structure of Space-Time},
+  \cite{HawkingEllisLargeScaleStructureOfSpaceTime1973}}
 
 
 % ##################
@@ -337,13 +365,14 @@ będzie niosła pęd” wymaga głębszego zastanowienia.
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu &  &  \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+    & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
     \hline
     % & & & & \\
     24 & 9 & & $( y, 0 )$ & $( 0, y )$ \\
-    31 & & 13 & $\tensor[]{\Phi}{ _{c'}^{c'} }$ & $\tensor[]{\Phi}{ _{c'}^{c} }$ \\
+    31 & & 13 & $\tensor[]{\Phi}{ _{c'}^{ c' } }$
+    & $\tensor[]{\Phi}{ _{c'}^{ c } }$ \\
     31 & & 12 & $E_{ b }$ & $\Ebold_{ b }$ \\
     31 & & 10 & $E_{ b' }$ & $\Ebold_{ b' }$ \\
     31 & & 6 & $E_{ b' }$ & $\Ebold_{ b' }$ \\
@@ -367,14 +396,20 @@ będzie niosła pęd” wymaga głębszego zastanowienia.
 
 
 % ############################
+\newpage
+
 \Work{ % Autor i tytuł dzieła
   Richard P. Feynman \\
-  „Wykłady z grawitacji”, \\
+  \textit{Wykłady z grawitacji},
   wydanie \romannumeral1, FWG }
+
+\vspace{0em}
 
 
 % ##################
 \CenterBoldFont{Błędy}
+
+\vspace{0em}
 
 
 Str. 7. \ldots wynoszący,
@@ -382,8 +417,10 @@ $\sqrt{ ( 4 \pi e^{ 2 } / \hbar c) } = 0.31$\ldots ????????????
 
 % \end{center}
 
-
 \vspace{\spaceTwo}
+
+
+
 % ############################
 
 
@@ -398,7 +435,13 @@ $\sqrt{ ( 4 \pi e^{ 2 } / \hbar c) } = 0.31$\ldots ????????????
 % #####################################################################
 % #####################################################################
 % Bibliografia
-\bibliographystyle{alpha} \bibliography{PhilNaturBooks}{}
+
+\bibliographystyle{alpha}
+
+\bibliography{PhilNaturBooks}{}
+
+
+
 
 
 % ############################
