@@ -1,5 +1,3 @@
-% Autor: Kamil Ziemian
-
 % ---------------------------------------------------------------------
 % Podstawowe ustawienia i pakiety
 % ---------------------------------------------------------------------
@@ -16,9 +14,9 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ----------------------------
+% ------------------------------
 \usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
 % \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
 % grafiki.
@@ -42,12 +40,12 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Często przydatne pakiety
-% ----------------------------
+% ------------------------------
 % \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% \usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
+% % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
 
@@ -70,12 +68,15 @@
 
 
 
-% ##########
-% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-\newtheorem{twr}{Twierdzenie}  % Komenda wprowadzająca otoczenie
-% ,,twr'' do pisania twierdzeń matematycznych
-\newtheorem{defin}{Definicja}  % Analogicznie jak powyżej
-\newtheorem{wni}{Wniosek}
+% ------------------------------
+% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
+% ------------------------------
+% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
+% matematycznych.
+\newtheorem{theorem}{Twierdzenie}
+% Analogicznie jak powyżej
+\newtheorem{definition}{Definicja}
+\newtheorem{corollary}{Wniosek}
 
 
 
@@ -103,13 +104,15 @@
 % ------------------------------
 % Ustawienia różnych parametrów tekstu
 % ------------------------------
-\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+\renewcommand{\baselinestretch}{1.1}
+
+% Ustawienie szerokości odstępów między wierszami w tabelach.
+\renewcommand{\arraystretch}{1.4}
 
 
 
 % ------------------------------
-% Pakiet "hyperref"
+% Pakiet „hyperref”
 % Polecano by umieszczać go na końcu preambuły.
 % ------------------------------
 \usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
@@ -127,9 +130,11 @@
 % ---------------------------------------------------------------------
 % Tytuł, autor, data
 \title{Wprowadzenie do~fizyki \\
-  Błędy i~uwagi}
+  {\Large Błędy i~uwagi}}
 
-% \author{}
+\author{Kamil Ziemian}
+
+
 % \date{}
 % ---------------------------------------------------------------------
 
@@ -163,8 +168,6 @@
 % Tytuł danego działu
 
 \vspace{\spaceTwo}
-% \vspace{\spaceThree}
-
 % ######################################
 
 
@@ -172,8 +175,11 @@
 % ############################
 \Work{ % Autorzy i tytuł dzieła
   Richard P.~Feynman, Robert B.~Leighton, Matthew Sands \\
-  „Feynmana wykłady z~fizyki. Tom~I: mechanika, szczególna teoria
-  względności”, \cite{FeynmanEtAlWykladyZFizykiVolI2004} }
+  \textit{Feynmana wykłady z~fizyki} \\
+  \textit{Tom~I: Mechanika, szczególna teoria względności},
+  \cite{FeynmanEtAlWykladyZFizykiVolI2004}}
+
+\vspace{0em}
 
 
 % ##################
@@ -184,7 +190,6 @@
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -216,16 +221,27 @@
 
 
 % ############################
+\newpage
+
 \Work{ % Autorzy i tytuł dzieła
   Richard P.~Feynman, Robert B.~Leighton, Matthew Sands \\
-  „Feynmana wykłady z fizyki. Tom 2, część~1: ”, \cite{} }
+  \textit{Feynmana wykłady z~fizyki} \\
+  \textit{Tom 2, część~1: }, \cite{}}
+
+\vspace{0em}
 
 
 % ##################
-\CenterBoldFont{Uwagi do konkretnych stron}
+\CenterBoldFont{Uwagi do~konkretnych stron}
+
+\vspace{0em}
 
 
-\start \Str{65} Stwierdzenie, że pole elektryczne i magnetyczne są niezwiązane dopóki ładunki i prądy są statyczne, jest pewnym uproszczeniem. Jakkolwiek może być ono pedagogicznie uzasadnione to jednak warto byłoby dodać jakiś komentarz dla bardziej dociekliwych czytelników.
+\noindent
+\Str{65} Stwierdzenie, że pole elektryczne i magnetyczne są niezwiązane
+dopóki ładunki i prądy są statyczne, jest pewnym uproszczeniem. Jakkolwiek
+może być ono pedagogicznie uzasadnione to jednak warto byłoby dodać jakiś
+komentarz dla bardziej dociekliwych czytelników.
 
 
 
@@ -239,7 +255,6 @@
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -253,8 +268,10 @@
 
 \end{center}
 
-
 \vspace{\spaceTwo}
+
+
+
 % ############################
 
 
@@ -269,6 +286,7 @@
 % #####################################################################
 % #####################################################################
 % Bibliografia
+
 \bibliographystyle{plalpha}
 
 \bibliography{PhilNaturBooks}{}

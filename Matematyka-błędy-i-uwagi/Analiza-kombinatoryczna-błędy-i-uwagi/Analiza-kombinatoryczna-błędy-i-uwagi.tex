@@ -68,11 +68,14 @@
 
 
 
-% ##########
-% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
-% „theorem” do pisania twierdzeń matematycznych
-\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+% ------------------------------
+% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
+% ------------------------------
+% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
+% matematycznych.
+\newtheorem{theorem}{Twierdzenie}
+% Analogicznie jak powyżej
+\newtheorem{definition}{Definicja}
 \newtheorem{corollary}{Wniosek}
 
 
@@ -101,13 +104,15 @@
 % ------------------------------
 % Ustawienia różnych parametrów tekstu
 % ------------------------------
-\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+\renewcommand{\baselinestretch}{1.1}
+
+% Ustawienie szerokości odstępów między wierszami w tabelach.
+\renewcommand{\arraystretch}{1.4}
 
 
 
 % ------------------------------
-% Pakiet "hyperref"
+% Pakiet „hyperref”
 % Polecano by umieszczać go na końcu preambuły.
 % ------------------------------
 \usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
@@ -161,15 +166,20 @@
 % ############################
 \Work{ % Autorzy i tytuł dzieła
   Witold Lipski, Wiktor Marek \\
-  „Analiza kombinatoryczna”,
-  \cite{LipskiMarekAnalizaKombinatoryczna1986} }
+  \textit{Analiza kombinatoryczna},
+  \cite{LipskiMarekAnalizaKombinatoryczna1986}}
+
+\vspace{0em}
 
 
 % ##################
-\CenterBoldFont{Uwagi do konkretnych stron}
+\CenterBoldFont{Uwagi do~konkretnych stron}
+
+\vspace{0em}
 
 
-\start \Str{8-9} Jest tutaj mowa o~tym, że zbiór z~powtórzeniami może
+\noindent
+\Str{8-9} Jest tutaj mowa o~tym, że zbiór z~powtórzeniami może
 zawierać, przykładowo, $s$ nierozróżnialnych elementów $a$. Stwierdzenie,
 że~mogą istnieć matematyczne obiekty nierozróżnialne, ale jednak stanowiące
 osobne byty, prosi~się o~głębszą filozoficzną analizę.
@@ -260,7 +270,8 @@ cząstki kwantowe, spróbujemy do tego tematu wrócić.
 
 
 
-\start \textbf{Str.~9, wiersze 21--22.} W~tym miejscu użyto dość niezręcznego
+\noindent
+\textbf{Str.~9, wiersze 21--22.} W~tym miejscu użyto dość niezręcznego
 sformułowania, że~zbiór z~powtórzeniami będziemy „reprezentować jako ciąg
 jego elementów”, ujęty w~nawiasy okrągłe. W~matematyce słowo „ciąg” zwykle
 oznacza obiekt, w~którym kolejność elementów ma znaczenie, ciąg
@@ -293,7 +304,6 @@ jest bez znaczenia.
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -324,6 +334,7 @@ jest bez znaczenia.
 % #####################################################################
 % #####################################################################
 % Bibliografia
+
 \bibliographystyle{plalpha}
 
 \bibliography{MathComScienceBooks}{}

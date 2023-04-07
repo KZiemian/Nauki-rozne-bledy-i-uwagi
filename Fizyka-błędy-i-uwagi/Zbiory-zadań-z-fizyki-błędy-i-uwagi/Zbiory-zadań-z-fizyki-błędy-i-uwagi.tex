@@ -1,5 +1,3 @@
-% Autor: Kamil Ziemian
-
 % ---------------------------------------------------------------------
 % Podstawowe ustawienia i pakiety
 % ---------------------------------------------------------------------
@@ -31,23 +29,23 @@
 % MARGINS
 % ------------------------------
 \setmarginsrb
-{ 0.7in} % left margin
-{ 0.6in} % top margin
-{ 0.7in} % right margin
-{ 0.8in} % bottom margin
-{  20pt} % head height
-{0.25in} % head sep
-{   9pt} % foot height
-{ 0.3in} % foot sep
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
 
 
 
 % ------------------------------
 % Często przydatne pakiety
 % ------------------------------
-\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+% \usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
 
@@ -70,11 +68,14 @@
 
 
 
-% ##########
-% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
-% „theorem” do pisania twierdzeń matematycznych
-\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+% ------------------------------
+% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
+% ------------------------------
+% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
+% matematycznych.
+\newtheorem{theorem}{Twierdzenie}
+% Analogicznie jak powyżej
+\newtheorem{definition}{Definicja}
 \newtheorem{corollary}{Wniosek}
 
 
@@ -103,13 +104,15 @@
 % ------------------------------
 % Ustawienia różnych parametrów tekstu
 % ------------------------------
-\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+\renewcommand{\baselinestretch}{1.1}
+
+% Ustawienie szerokości odstępów między wierszami w tabelach.
+\renewcommand{\arraystretch}{1.4}
 
 
 
 % ------------------------------
-% Pakiet "hyperref"
+% Pakiet „hyperref”
 % Polecano by umieszczać go na końcu preambuły.
 % ------------------------------
 \usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
@@ -127,7 +130,7 @@
 % ---------------------------------------------------------------------
 % Tytuł tekstu
 \title{Zbiory zadań z~fizyki \\
-  Błędy i~uwagi}
+  {\Large Błędy i~uwagi}}
 
 % \author{}
 % \date{}
@@ -161,7 +164,7 @@
 % ############################
 \Work{ % Autor i tytuł dzieła
   J. Jędrzejewski, W. Kruczek, A. Kujawski \\
-  „Zbiór zadań z fizyki”, wydanie \romannumeral5?, \cite{} }
+  \textit{Zbiór zadań z~fizyki}, wydanie \romannumeral5?, \cite{}}
 
 
 
@@ -179,7 +182,6 @@
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -194,8 +196,9 @@
 
 \end{center}
 
-
 \vspace{\spaceTwo}
+
+
 % ############################
 
 
@@ -210,6 +213,7 @@
 % #####################################################################
 % #####################################################################
 % Bibliografia
+
 \bibliographystyle{plalpha}
 
 \bibliography{PhilNaturBooks}{}

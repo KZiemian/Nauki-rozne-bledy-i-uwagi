@@ -68,12 +68,15 @@
 
 
 
-% ##########
-% Tworzenie otoczeń „Twierdzenie”, „Definicja”, „Lemat”, etc.
-\newtheorem{twr}{Twierdzenie}  % Komenda wprowadzająca otoczenie
-% „twr” do pisania twierdzeń matematycznych
-\newtheorem{defin}{Definicja}  % Analogicznie jak powyżej
-\newtheorem{wni}{Wniosek}
+% ------------------------------
+% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
+% ------------------------------
+% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
+% matematycznych.
+\newtheorem{theorem}{Twierdzenie}
+% Analogicznie jak powyżej
+\newtheorem{definition}{Definicja}
+\newtheorem{corollary}{Wniosek}
 
 
 
@@ -100,13 +103,15 @@
 % ------------------------------
 % Ustawienia różnych parametrów tekstu
 % ------------------------------
-\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+\renewcommand{\baselinestretch}{1.1}
+
+% Ustawienie szerokości odstępów między wierszami w tabelach.
+\renewcommand{\arraystretch}{1.4}
 
 
 
 % ------------------------------
-% Pakiet "hyperref"
+% Pakiet „hyperref”
 % Polecano by umieszczać go na końcu preambuły.
 % ------------------------------
 \usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
@@ -124,7 +129,7 @@
 % ---------------------------------------------------------------------
 % Tytuł i autor tekstu
 \title{Algebra \\
-  Błędy i~uwagi}
+  {\Large Błędy i~uwagi}}
 
 \author{Kamil Ziemian}
 
@@ -163,9 +168,13 @@
   Andrzej Białynicki-Birula \\
   \textit{Zarys algebry}, \cite{BialynickiBirulaZarysAlgebry1987}}
 
+\vspace{0em}
+
 
 % ##################
 \CenterBoldFont{Uwagi}
+
+\vspace{0em}
 
 
 \noindent
@@ -204,7 +213,6 @@ przedstawiona tu teoria pozostaje w~mocy.
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -234,6 +242,7 @@ przedstawiona tu teoria pozostaje w~mocy.
 
 \end{center}
 
+\vspace{\spaceTwo}
 
 
 Str. 37. \ldots$j k = -k j$\ldots \\
@@ -242,22 +251,24 @@ Str. 80. Istotnie, $h \in \varphi_{ x }^{ -1 }( g x )$\ldots \\
 Str. 81. \ldots orbit $H x_{ 1 } \cup \ldots \cup H x_{ l } \, .$
 
 
-\vspace{\spaceTwo}
-% ############################
-
-
-
-
-
-
-
-
-
 
 % ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\newpage
+
 \Work{ % Autor i tytuł dzieła
   M. Hamermesh \\
-  „Teoria grup w zastosowaniu do zagadnień fizycznych”, ABB }
+  \textit{Teoria grup w zastosowaniu do zagadnień fizycznych}, }
 
 
 
@@ -269,6 +280,8 @@ $$ \mathbf{ x } = \mathbf{ a }^{ -1 } \mathbf{ x }' \, ,$$
 
 
 \vspace{\spaceTwo}
+
+
 % ############################
 
 
@@ -282,10 +295,10 @@ $$ \mathbf{ x } = \mathbf{ a }^{ -1 } \mathbf{ x }' \, ,$$
 
 % ######################################
 \newpage
+
 \section{Algebra liniowa}
 
 \vspace{\spaceTwo}
-
 % ######################################
 
 
@@ -293,17 +306,23 @@ $$ \mathbf{ x } = \mathbf{ a }^{ -1 } \mathbf{ x }' \, ,$$
 % ############################
 \Work{ % Autor i tytuł dzieła
   Henryk Arodź, Krzysztof Rościszewski \\
-  „Algebra i geometria analityczna w~zadaniach”, \cite{AR} }
+  \textit{Algebra i geometria analityczna w~zadaniach}, \cite{}}
+
+\vspace{0em}
 
 
 % ##################
-\CenterBoldFont{Uwagi}
+\CenterBoldFont{Uwagi do~konkretnych stron}
+
+\vspace{0em}
 
 
 Str. 64. Brakuje macierzy $\mathbf{I} \, .$
 
 
 % ##################
+\newpage
+
 \CenterBoldFont{Błędy}
 
 
@@ -325,6 +344,8 @@ Str. 64. Brakuje macierzy $\mathbf{I} \, .$
 
 \end{center}
 
+\vspace{\spaceTwo}
+
 
 Str. 15.
 $$\sqrt[ n ]{ z } = \sqrt[ n ]{ | z | } \exp( i \frac{ \varphi + 2 k
@@ -333,7 +354,7 @@ Str. 15. \ldots $Re \; z = a$\ldots \\
 Str. 74. (14) $6 \boldsymbol{ \gamma } \, ,$ \\
 
 
-\vspace{\spaceTwo}
+
 % ############################
 
 
@@ -348,22 +369,29 @@ Str. 74. (14) $6 \boldsymbol{ \gamma } \, ,$ \\
 % ############################
 \Work{ % Autor i tytuł dzieła
   Jacek Gancarzewicz \\
-  „Algebra liniowa i~jej zastosowania”,
-  \cite{GancarzewiczAlgebraLiniowa2004} }
+  \textit{Algebra liniowa i~jej zastosowania},
+  \cite{GancarzewiczAlgebraLiniowa2004}}
 
+\vspace{0em}
 
 
 % ##################
 \CenterBoldFont{Uwagi}
 
+\vspace{0em}
 
-\start \Str{11}
+
+\noindent
+\Str{11}
 
 \vspace{\spaceFour}
 
 
 
-\start \Str{34} Alternatywny, prosty dowód podpunkt (2) twierdzenia
+
+
+\noindent
+\Str{34} Alternatywny, prosty dowód podpunkt (2) twierdzenia
 3.7, polega na przyjęciu, że~$x \neq 0$ i~pomnożeniu równość $xy = 0$
 z~lewej strony przez $x^{ -1 }$.
 
@@ -371,13 +399,18 @@ z~lewej strony przez $x^{ -1 }$.
 
 
 
-W pierwszym rozdziale nie określono znaku permutacji
-identycznościowej.
+
+
+\noindent
+W pierwszym rozdziale nie określono znaku permutacji identycznościowej.
 
 \vspace{\spaceFour}
 
 
 
+
+
+\noindent
 Nie określono operacji odejmowania wektorów. Z definicji jest
 to:$$x - y := x + ( -y ) \, .$$
 
@@ -385,6 +418,9 @@ to:$$x - y := x + ( -y ) \, .$$
 
 
 
+
+
+\noindent
 Problem sumowania po pustym zbiorze wskaźników nie został omówiony.
 Powinno oczywiście być $\sum_{ \substack{ \iota \in \emptyset } } v_{ \iota } = 0 \, .$
 
@@ -392,6 +428,9 @@ Powinno oczywiście być $\sum_{ \substack{ \iota \in \emptyset } } v_{ \iota } 
 
 
 
+
+
+\noindent
 Str. 40. Jest pewna luka w dowodzie drugiej wersji zasadniczego
 twierdzenia algebry. Procedura dzielenia pokazuje bowiem, że po n
 krokach wielomian jest stopnia 0, czyli musi być stałą, nie pokazano
@@ -406,18 +445,27 @@ wtedy i tylko wtedy gdy wszystkie ich współczynniki są równe.
 
 
 
+
+
+\noindent
 Str. 60. W ostatniej permutacji trzeba jedną 7 zastąpić 4.
 
 \vspace{\spaceFour}
 
 
 
+
+
+\noindent
 Str. 76. Błąd w numeracji podpunktów twierdzenia.
 
 \vspace{\spaceFour}
 
 
 
+
+
+\noindent
 Str. 341. W twierdzeniu 45.1 powinno być $n \geq 1 \, .$ Dla n = 0
 istnieje 0 punktów afonicznie niezależnych.
 
@@ -426,6 +474,8 @@ istnieje 0 punktów afonicznie niezależnych.
 
 
 % ##################
+\newpage
+
 \CenterBoldFont{Błędy}
 
 
@@ -433,15 +483,14 @@ istnieje 0 punktów afonicznie niezależnych.
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
     28  & & 13 & $x \neq 0$ & $x \neq y$ \\
-    34  & & 12 & $x( y y^{ -1 } x^{ -1 }$ & $x( y y^{ -1 } ) x^{ -1 }$ \\
+    34  & & 12 & $x ( y y^{ -1 } x^{ -1 }$ & $x ( y y^{ -1 } ) x^{ -1 }$ \\
     53  &  6 & & $\Real( ( \eta \eta' ) \eta'' ) )$
-           & $\Real( ( \eta \eta' ) \eta'' )$ \\
+           & $\Real\big( ( \eta \eta' ) \eta'' \big)$ \\
     59  & 16 & & $x_{ 3 }$ & $x_{ 1 }$ \\
     % & & & & \\
     % & & & & \\
@@ -461,12 +510,7 @@ istnieje 0 punktów afonicznie niezależnych.
 
 \end{center}
 
-
 \vspace{\spaceTwo}
-% ############################
-
-
-
 
 
 \noindent
@@ -581,6 +625,14 @@ Str. 363. \ldots należą do $M( 0; F )$\ldots \\
 Str. 364. \ldots oraz $v = p( f |_{ U } ) ( v ) \in U_{ 1 }$\ldots \\
 
 
+% ############################
+
+
+
+
+
+
+
 
 
 
@@ -591,10 +643,12 @@ Str. 364. \ldots oraz $v = p( f |_{ U } ) ( v ) \in U_{ 1 }$\ldots \\
 
 
 % ############################
+\newpage
+
 \Work{ % Autor i tytuł dzieła
   Andrzej Herdegen \\
-  „Algebra liniowa i~geometria”,
-  \cite{HerdegenAlgebraLiniowaIGeometria10} }
+  \textit{Algebra liniowa i~geometria},
+  \cite{HerdegenAlgebraLiniowaIGeometria10}}
 
 
 % ##################
@@ -641,9 +695,11 @@ Str. 364. \ldots oraz $v = p( f |_{ U } ) ( v ) \in U_{ 1 }$\ldots \\
 
 
 % ############################
+\newpage
+
 \Work{ % Autor i tytuł dzieła
   Andrzej Staruszkiewicz \\
-  „Algebra i~geometria. Wykłady dla fizyków. Tom I”, \cite{ASAG} }
+  \textit{Algebra i~geometria. Wykłady dla fizyków, tom~I}, \cite{ASAG}}
 
 
 % ##################
@@ -669,6 +725,7 @@ $\textrm{rz} ( AB ) = \textrm{rz} ( B ) \, .$ \\
 % #####################################################################
 % #####################################################################
 % Bibliografia
+
 \bibliographystyle{plalpha}
 
 \bibliography{MathComScienceBooks}{}

@@ -29,23 +29,23 @@
 % MARGINS
 % ------------------------------
 \setmarginsrb
-{ 0.7in} % left margin
-{ 0.6in} % top margin
-{ 0.7in} % right margin
-{ 0.8in} % bottom margin
-{  20pt} % head height
-{0.25in} % head sep
-{   9pt} % foot height
-{ 0.3in} % foot sep
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
 
 
 
 % ------------------------------
 % Często przydatne pakiety
 % ------------------------------
-\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+% \usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
 
@@ -68,22 +68,22 @@
 
 
 
-% ----------
-% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-% ----------
-\newtheorem{twr}{Twierdzenie} % Komenda wprowadzająca otoczenie
-% ,,twr'' do pisania twierdzeń matematycznych
-\newtheorem{defin}{Definicja} % Analogicznie jak powyżej
-\newtheorem{wni}{Wniosek}
+% ------------------------------
+% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
+% ------------------------------
+% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
+% matematycznych.
+\newtheorem{theorem}{Twierdzenie}
+% Analogicznie jak powyżej
+\newtheorem{definition}{Definicja}
+\newtheorem{corollary}{Wniosek}
 
 
 
-% ----------------------------
+% ------------------------------
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
-% ----------------------------
-% \usepackage{}  % Pakiet napisany między innymi
-% dla tego pliku.
+% ------------------------------
 \usepackage{latexgeneralcommands}
 
 
@@ -100,9 +100,9 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Ustawienia różnych parametrów tekstu
-% ----------------------------
+% ------------------------------
 \renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
 % wierszami w tabelach.
 
@@ -126,7 +126,8 @@
 
 % ---------------------------------------------------------------------
 % Tytuł i autor tekstu
-\title{Informatyka --~błędy i~uwagi}
+\title{Informatyka \\
+  {\Large Błędy i~uwagi}}
 
 \author{Kamil Ziemian}
 
@@ -162,7 +163,7 @@
 % ############################
 \Work{ % Autorzy i tytuł dzieła
   B. W. Kernighan, D. M. Ritchie \\
-  „Język ANSI C”, \cite{KernighanRitchieJezykANSIC2001} }
+  \textit{Język ANSI~C}, \cite{KernighanRitchieJezykANSIC2001}}
 
 
 % ##################
@@ -173,7 +174,6 @@
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -187,9 +187,9 @@
 
 \end{center}
 
-% \noindent\\
-
 \vspace{\spaceTwo}
+
+
 % ############################
 
 
@@ -204,7 +204,7 @@
 % ############################
 \Work{ % Autor i tytuł dzieła
   Mickey Petersen \\
-  „Mastering Emacs”, \cite{PetersenMasteringEmacs2016} }
+  \textit{Mastering Emacs}, \cite{PetersenMasteringEmacs2016}}
 
 
 % ##################
@@ -215,7 +215,6 @@
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -249,6 +248,7 @@
 % ####################################################################
 % ####################################################################
 % Bibliografia
+
 \bibliographystyle{plalpha}
 
 \bibliography{MathComScienceBooks}{}
