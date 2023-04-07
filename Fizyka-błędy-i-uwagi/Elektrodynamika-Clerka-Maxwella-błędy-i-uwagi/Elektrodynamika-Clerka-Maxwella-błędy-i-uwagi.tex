@@ -1,6 +1,3 @@
-% Autor: Kamil Ziemian
-% Korekta: Wojciech Dyba
-
 % ---------------------------------------------------------------------
 % Podstawowe ustawienia i pakiety
 % ---------------------------------------------------------------------
@@ -71,11 +68,14 @@
 
 
 
-% ##########
-% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
-% „theorem” do pisania twierdzeń matematycznych
-\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+% ------------------------------
+% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
+% ------------------------------
+% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
+% matematycznych.
+\newtheorem{theorem}{Twierdzenie}
+% Analogicznie jak powyżej
+\newtheorem{definition}{Definicja}
 \newtheorem{corollary}{Wniosek}
 
 
@@ -104,13 +104,15 @@
 % ------------------------------
 % Ustawienia różnych parametrów tekstu
 % ------------------------------
-\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+\renewcommand{\baselinestretch}{1.1}
+
+% Ustawienie szerokości odstępów między wierszami w tabelach.
+\renewcommand{\arraystretch}{1.4}
 
 
 
 % ------------------------------
-% Pakiet "hyperref"
+% Pakiet „hyperref”
 % Polecano by umieszczać go na końcu preambuły.
 % ------------------------------
 \usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
@@ -128,9 +130,11 @@
 % ---------------------------------------------------------------------
 % Tytuł
 \title{Elektrodynamika Clerka Maxwella \\
-  Błędy i~uwagi}
+  {\Large Błędy i~uwagi}}
 
-% \author{}
+\author{Kamil Ziemian}
+
+
 % \date{}
 % ---------------------------------------------------------------------
 
@@ -173,14 +177,19 @@
 % ############################
 \Work{ % Autor i tytuł dzieła
   J. D. Jackson \\
-  „Elektrodynamik klasyczna”,
-  \cite{JacksonElektrodynamikaKlasyczna1987} }
+  \textit{Elektrodynamik klasyczna},
+  \cite{JacksonElektrodynamikaKlasyczna1987}}
+
+\vspace{0em}
 
 
 % ##################
 \CenterBoldFont{Uwagi}
 
+\vspace{0em}
 
+
+\noindent
 Dyskusja elektrostatyki powinna się zacząć od dyskusji problemu układu
 odniesienia.
 
@@ -188,9 +197,12 @@ odniesienia.
 
 
 
-Aby zapewnić fizyczną konsytencje teorii na początku rozdziału I
+
+
+\noindent
+Aby zapewnić fizyczną konsystencje teorii na początku rozdziału I
 powinno zostać przyjęte, że w rozważanych przypadkach nie ma obecnych
-pól magnetycznych. Nie jest to minimalny warunek konsytencji teorii,
+pól magnetycznych. Nie jest to minimalny warunek konsystencji teorii,
 ale najbardziej naturalny.
 
 \vspace{\spaceFour}
@@ -199,13 +211,10 @@ ale najbardziej naturalny.
 
 
 % ##################
-\CenterBoldFont{Uwagi do konkretnych stron}
-
-% \noi \tb{Konkretne strony}
-
-% \vspace{\spaceFour}
+\CenterBoldFont{Uwagi do~konkretnych stron}
 
 
+\noindent
 \Str{47} Powinna tu być zamieszczona dyskusja problemu określenia wartości
 pola elektrycznego, w~punkcie w~którym znajduje się ładunek punktowy.
 
@@ -214,6 +223,8 @@ pola elektrycznego, w~punkcie w~którym znajduje się ładunek punktowy.
 
 
 % ##################
+\newpage
+
 \CenterBoldFont{Błędy}
 
 
@@ -221,19 +232,23 @@ pola elektrycznego, w~punkcie w~którym znajduje się ładunek punktowy.
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    58 & 5 & & $\rho( \bold{ x }' ) \nabla^{ 2 } \bigg( \frac{ 1 }{ \sqrt{ r^{ 2 } + a^{ 2 } } } \bigg) \, d^{ 3 } x'$ & $\int \rho( \bold{ x }' ) \nabla^{ 2 } \bigg( \frac{ 1 }{ \sqrt{ r^{ 2 } + a^{ 2 } } } \bigg) \, d^{ 3 } x'$ \\
+    58 & 5 & & $\rho( \bold{ x }' ) \nabla^{ 2 } \bigg(
+               \frac{ 1 }{ \sqrt{ r^{ 2 } + a^{ 2 } } } \bigg) \, d^{ 3 } x'$
+    & $\int \rho( \bold{ x }' ) \nabla^{ 2 } \bigg(
+      \frac{ 1 }{ \sqrt{ r^{ 2 } + a^{ 2 } } } \bigg) \, d^{ 3 } x'$ \\
+      % & & & & \\
+      % & & & & \\
+      % & & & & \\
     \hline
   \end{tabular}
 
 \end{center}
+
+\vspace{\spaceTwo}
 
 
 \noindent
@@ -249,7 +264,7 @@ Str. 65. $\displaystyle w = \frac{ q^{ 2 }_{ 1 } }{ 8 \pi | \vecxbold - \vecxbol
 
 Str. 114. $\displaystyle Y_{ l m }( \theta, \varphi ) = \sqrt{ \frac{ ( 2l + 1 ) ( l - m )! }{ 4 \pi ( l + m )! } } P^{ m }_{ l }( \cos \theta ) e^{ i m \varphi }$
 
-\vspace{\spaceTwo}
+
 % ############################
 
 
@@ -262,12 +277,11 @@ Str. 114. $\displaystyle Y_{ l m }( \theta, \varphi ) = \sqrt{ \frac{ ( 2l + 1 )
 
 
 % ######################################
-\section{Fizyka klasycznych cząstek naładowanych}
-% Tytuł danego działu
+\newpage
+
+\section{Newtonowsko-einsteinowska fizyka cząstek naładowanych}
 
 \vspace{\spaceTwo}
-% \vspace{\spaceThree}
-
 % ######################################
 
 
@@ -275,19 +289,23 @@ Str. 114. $\displaystyle Y_{ l m }( \theta, \varphi ) = \sqrt{ \frac{ ( 2l + 1 )
 % ############################
 \Work{ % Autor i tytuł dzieła
   Fritz Rohrlich \\
-  „Klasyczna teoria cząstek naładowanych”,
-  \cite{RohrlichKlasycznaTeoriaCzastekNaladowanych1981} }
+  \textit{Klasyczna teoria cząstek naładowanych},
+  \cite{RohrlichKlasycznaTeoriaCzastekNaladowanych1981}}
+
+\vspace{0em}
 
 
 % ##################
 \CenterBoldFont{Uwagi}
 
+\vspace{0em}
+
 
 
 
 
 % ##################
-\CenterBoldFont{Uwagi do konkretnych stron}
+\CenterBoldFont{Uwagi do~konkretnych stron}
 
 
 
@@ -301,7 +319,6 @@ Str. 114. $\displaystyle Y_{ l m }( \theta, \varphi ) = \sqrt{ \frac{ ( 2l + 1 )
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu &  &  \\ \hline
     % & & & & \\
@@ -318,8 +335,9 @@ Str. 114. $\displaystyle Y_{ l m }( \theta, \varphi ) = \sqrt{ \frac{ ( 2l + 1 )
 
 \end{center}
 
-
 \vspace{\spaceTwo}
+
+
 % ############################
 
 
@@ -333,6 +351,7 @@ Str. 114. $\displaystyle Y_{ l m }( \theta, \varphi ) = \sqrt{ \frac{ ( 2l + 1 )
 % #####################################################################
 % #####################################################################
 % Bibliografia
+
 \bibliographystyle{plalpha}
 
 \bibliography{PhilNaturBooks}{}
