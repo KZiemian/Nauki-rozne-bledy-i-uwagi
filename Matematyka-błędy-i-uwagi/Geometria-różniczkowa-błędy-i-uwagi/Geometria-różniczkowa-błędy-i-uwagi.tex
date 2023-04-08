@@ -68,11 +68,15 @@
 
 
 
-% ##########
-% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
-% „theorem” do pisania twierdzeń matematycznych
-\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+
+% ------------------------------
+% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
+% ------------------------------
+% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
+% matematycznych.
+\newtheorem{theorem}{Twierdzenie}
+% Analogicznie jak powyżej
+\newtheorem{definition}{Definicja}
 \newtheorem{corollary}{Wniosek}
 
 
@@ -103,8 +107,8 @@
 % ------------------------------
 \renewcommand{\baselinestretch}{1.1}
 
-\renewcommand{\arraystretch}{1.4} % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+% Ustawienie szerokości odstępów między wierszami w tabelach.
+\renewcommand{\arraystretch}{1.4}
 
 
 
@@ -173,11 +177,12 @@
 
 
 % ##################
-\CenterBoldFont{Uwagi do konkretnych stron}
+\CenterBoldFont{Uwagi do~konkretnych stron}
 
 \vspace{0em}
 
 
+\noindent
 \StrWd{233}{3} Zamiast $dy/dx$ powinno być $d g( x )/dx$.
 To~mogłoby ograniczyć nieporozumienia związane z~tym wzorem.
 
@@ -242,6 +247,7 @@ To~mogłoby ograniczyć nieporozumienia związane z~tym wzorem.
 \vspace{0em}
 
 
+\noindent
 \Str{17} Nazwa \textbf{płaszczyzna styczna} pochodzi stąd,
 że~zawiera ona wektor styczny do krzywej $\vectbold$, ponadto jeśli dana
 krzywa bez punktów wyprostowania jest płaska, to zawiera~się właśnie
@@ -255,7 +261,8 @@ wyjaśnić skąd~się wzięła nazwa \textbf{płaszczyzna prostująca}.
 
 
 
-\Str{31} \textbf{Twierdzenie 3.7.} W~dowodzie faktu, że~z~równości
+\noindent
+\Str{31} \textbf{Twierdzenie~3.7.} W~dowodzie faktu, że~z~równości
 typu $\vectbold \cdot \vectbold' = 0$ wynika, iż~moduł $\vectbold$ jest stały,
 oprócz wykorzystania wzorów (3.5) przyjęto chyba milcząco, że~dla każdej
 wartości parametru $s$ wektory $\vectbold$, $\vecnbold$ i~$\vecbbold$ są
@@ -268,6 +275,7 @@ ortogonalności sprawa wygląda chyba podobnie. \Dok
 
 
 
+\noindent
 \Str{35} W~żadnym z~podanych tu przykładów, nie udowodniono,
 że~budowane mapy, jako odwzorowania,~są homomorfizmami między
 odpowiednimi przestrzeniami topologicznymi. Pokazanie tego nie~może
@@ -284,14 +292,11 @@ być jednak trudne. \Dok
 
 \CenterBoldFont{Błędy}
 
-\vspace{\spaceFive}
-
 
 \begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -356,6 +361,7 @@ być jednak trudne. \Dok
 \vspace{0em}
 
 
+\noindent
 \Str{5} Ponieważ autor nie wyjaśnił, co~dokładnie rozumie przez
 przestrzeń euklidesową $E_{ 3 }$ (że~jest ona trójwymiarowa, jest
 tu~kwestią drugorzędną), nie jest od~razu jasne, czym różni~się ona
@@ -367,6 +373,7 @@ od~zbioru wszystkich swoich wektorów $E_{ 3 }^{ \; * }$.
 
 
 
+\noindent
 \Str{7} Zapisanie równania parametrycznego w~formie
 $\boldsymbol{ x( u ) } = \boldsymbol{ u }$ analogicznie jak to jest
 w~przypadku innych zmiennych, nie zaś w~postaci $\boldsymbol{ x } =
@@ -385,14 +392,11 @@ wytłumaczyć pragnieniem skrócenia zapisu oraz względami zwyczajowymi.
 
 \CenterBoldFont{Błędy}
 
-\vspace{\spaceFive}
-
 
 \begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -431,7 +435,7 @@ wytłumaczyć pragnieniem skrócenia zapisu oraz względami zwyczajowymi.
 % \Work{ % Autor i tytuł dzieła
 %   Leszek M.~Sokołowski \\
 %   „Elementy analizy tensorowej”,
-%   \cite{SokolowskiElementyAnalizyTensorowej2010} }
+%   \cite{SokolowskiElementyAnalizyTensorowej2010}}
 
 
 % % ##################
@@ -498,6 +502,7 @@ wytłumaczyć pragnieniem skrócenia zapisu oraz względami zwyczajowymi.
 \vspace{0em}
 
 
+\noindent
 W~książce do oznaczenia ciał używa się fontów pogrubionych:
 $\mathbf{K}$, $\mathbf{R}$, $\mathbf{C}$, etc. W~tych notatkach będziemy
 używali standardowych fontów „blackboard bold”: $\Kbb$, $\Rbb$, $\Cbb$, etc.
@@ -517,11 +522,12 @@ etc.
 
 
 % ##################
-\CenterBoldFont{Uwagi do konkretnych stron}
+\CenterBoldFont{Uwagi do~konkretnych stron}
 
 \vspace{0em}
 
 
+\noindent
 \Str{13} W~tym miejscu powinniśmy zaznaczyć, że~dla prostoty zapisu
 będziemy często opuszczać symbol działania dwuargumentowego i~zamiast pisać
 $x \cdot y$, dla $x, y \in X$, będziemy pisali po prostu $x y$.
@@ -537,6 +543,7 @@ pisownię wzorów należałoby ujednolicić.
 
 
 
+\noindent
 \Str{13} Definicja zbiorów $V$ stanowiących bazę otoczeń punktu
 $( x_{ \varphi } )$ jest na pierwszy rzut oka myląca, bo mówi wyłącznie
 o~zachowaniu tylko skończonej ilości elementów składowych punktu
@@ -549,10 +556,11 @@ jednak momencie brakuje mi do tego wiedzy z~topologii.
 
 
 
+\noindent
 \Str{14} Definicja zbioru $A \cdot B$ byłaby bardziej precyzyjna, gdy
 została zapisana w~poniższej postaci.
 \begin{equation}
-  \label{eq:Wojtynski-01}
+  \label{eq:Wojtynski-GrupyETC-01}
   A \cdot B := \{ x \in X : \exists\, y \in A, \exists\, z \in B,\; x = \mu( y, z ) \}.
 \end{equation}
 
@@ -562,6 +570,7 @@ została zapisana w~poniższej postaci.
 
 
 
+\noindent
 \Str{19} Warto zaznaczyć, że~naturalne włożenie ciała skalarów
 $\Kbb$ w~algebrę $A$, które oznaczamy $\omega_{ 0 }$, dla przypadku, gdy $A$ jest
 algebrą z~jedynką, ma postać
@@ -582,6 +591,7 @@ przyjmujemy
 
 
 
+\noindent
 \Str{21} Po lewej stronie wzoru (1.6) mamy wyrażenie
 $| x_{ i } \, y_{ i } |$, jednak bardziej zgodne ze wzorem (1.5) na stronie
 20 byłoby umieszczenie w~tym miejscu $| x_{ i } \, \bar{y}_{ i } |$.
@@ -595,8 +605,7 @@ podanego wzoru, tylko o~elegancję matematyczną.
 
 
 \noindent
-\textbf{Str. 21, wiersze 12, 13.} Wiersze te zostały bardzo brzydko
-sformatowane.
+\StrWierszeG{21}{12, 13} Wiersze te zostały bardzo brzydko sformatowane.
 
 \vspace{\spaceFour}
 
@@ -604,6 +613,7 @@ sformatowane.
 
 
 
+\noindent
 \Str{22} We wzorze (1.7) jak zwykle musimy przyjąć, że~$\Vert h \Vert \neq 0$.
 
 \vspace{\spaceFour}
@@ -612,6 +622,7 @@ sformatowane.
 
 
 
+\noindent
 \Str{25} Definicja 1.33 byłaby bardziej logiczna, gdyby najpierw
 została podana definicja przestrzeni lokalnie łukowo spójnej, a~dopiero
 potem lokalnie jednospójnej.
@@ -622,6 +633,7 @@ potem lokalnie jednospójnej.
 
 
 
+\noindent
 \Str{31} Na początku tej strony czytamy „pierwsza podprzestrzeń ma
 wymiar zespolony $( n^{ 2 } - n ) / 2$”. Ponieważ może zachodzić wątpliwość,
 którą przestrzeń określamy jako „pierwszą”, zanotujemy, że~przez pierwszą
@@ -635,6 +647,7 @@ z~zerowymi współczynnikami poza diagonalą.
 
 
 
+\noindent
 \Str{31} Dowód tego, że~odwzorowanie
 $\GL( n, \Kbb ) \ni A \mapsto \widetilde{A} \in \GL( n, \Kbb )$ jest izomorfizmem,
 byłby prostszy, gdyby zostało jawnie powiedziane, że~odwzorowanie to jest
@@ -646,6 +659,7 @@ inwolucją.
 
 
 
+\noindent
 \Str{31} Aby udowodnić, że~dla macierzy $A \in \OStraightBold( n, \Rbb )$
 zachodzi $| a_{ i, j } | \leq 1$, dla $i, j = 1, 2, \ldots, n$, należy w~równości
 \begin{equation}
@@ -680,6 +694,7 @@ trochę bardziej jasnym i~zupełnym.
 
 
 
+\noindent
 \Str{31} Czy warunek $A A^{ T } = \matUnit$ wynika z~warunku
 $A^{ T } A = \matUnit$, jeśli $A$ jest macierzą kwadratową wymiaru~$n$?
 
@@ -689,6 +704,7 @@ $A^{ T } A = \matUnit$, jeśli $A$ jest macierzą kwadratową wymiaru~$n$?
 
 
 
+\noindent
 \Str{32} Bezpośrednie przekształcenie wzoru
 $\bar{A} = \widetilde{A} = ( A^{ T } )^{ -1 }$ prowadzi do dwóch zależności:
 $A^{ T } \bar{A} = \matUnit$, $\bar{A} A^{ T } = \matUnit$. Dopiero gdy
@@ -712,6 +728,7 @@ popularnej formie $A^{ * } = A^{ -1 }$.
 
 
 
+\noindent
 \Str{32} W~tym miejscu warto się zatrzymać nad wzorem
 \begin{equation}
   \label{eq:Wojtynski-07}
@@ -806,6 +823,7 @@ zatrzymywać.\footnote{Warto by napisać, w~jakich książkach można znaleźć
 
 
 
+\noindent
 \StrWd{32}{13} Nie mam pojęcia o~co chodzi w~stwierdzeniu
 „gdzie $n = \dim \Kbb^{ n }$”.
 
@@ -815,6 +833,7 @@ zatrzymywać.\footnote{Warto by napisać, w~jakich książkach można znaleźć
 
 
 
+\noindent
 \StrWd{33}{10} W~niewinnie wyglądającym wzorze $\left(
   \frac{ e_{ 1 } }{ \sqrt{ \alpha } }, \frac{ e_{ 2 } }{ \sqrt{ \alpha } } \right)$
 ukryta jest trudność, wynikająca z~tego, że~pierwiastek kwadratowy na
@@ -830,6 +849,7 @@ rozważania.
 
 
 
+\noindent
 \StrWd{33}{5} Podany tu wzór $\dim Y^{ \perp } = n - 2$ jest niewątpliwie
 prawdziwy, w~tym jednak momencie nie potrafię zrozumieć dlaczego jego
 dowodu jest poprawny. Do problemu tego należy wrócić, po odświeżeniu sobie
@@ -840,6 +860,9 @@ liniowych.
 
 
 
+
+
+\noindent
 \Str{33--34} Podany tu dowód sprowadzania formy symplektycznej do
 postaci kanonicznej zawiera dużą lukę, bowiem w~algorytmie sprowadzania do
 postaci kanonicznej został pominięty bardzo ważny krok. Wyjaśnienie jak
@@ -914,7 +937,8 @@ Zauważmy teraz, że~ze względu na definicję wyrazów macierzy $\Omega$
   \label{eq:Wojtynski-17}
   \Omega_{ l m } = \omega( d_{ l }, d_{ m } ),
 \end{equation}
-wynika, że~operacja $d_{ i } \leftrightarrow d_{ j }$ na poziomie macierzy sprowadza~się do
+wynika, że~operacja $d_{ i } \leftrightarrow d_{ j }$ na poziomie macierzy sprowadza~się
+do następujących operacji.
 \begin{enumerate}
 
 \item Zamiany miejscami $i$-tego wiersza z~$j$-tym.
@@ -1115,6 +1139,7 @@ algorytm sprowadzania formy symplektycznej do postaci kanonicznej.
 
 
 
+\noindent
 \StrWg{34}{7--8} Znajdujące~się tu zdanie „Formę mającą postać (2.11)
 nazywamy \textit{formą symplektyczną}.” jest niefortunnie sformułowane.
 W~istocie formę nazywamy formą symplektyczną, jeśli w~pewnej bazie
@@ -1159,11 +1184,11 @@ symplektyczna jest dwuliniową, antysymetryczną i~nieosobliwą.
 
 
 \noindent
-\textbf{Str. 34, wiersze (od dołu) 1--3.} Znajdujemy tu informację,
-że~$n$-tą zespoloną (rzeczywistą) liniową grupę symplektyczną, którą
-oznaczamy jako $\Sp( n, \Cbb )$ ($\Sp( n, \Rbb )$), definiujemy
-jako podgrupę $\GL( 2n, \Cbb )$ ($\GL( 2n, \Rbb )$) składającą~się
-z~macierzy nieosobliwych stopnia $2n$ zachowujących macierz
+\StrWierszeD{34}{1--3} Znajdujemy tu informację, że~$n$-tą zespoloną
+(rzeczywistą) liniową grupę symplektyczną, którą oznaczamy jako
+$\Sp( n, \Cbb )$ ($\Sp( n, \Rbb )$), definiujemy jako podgrupę
+$\GL( 2n, \Cbb )$ ($\GL( 2n, \Rbb )$) składającą~się z~macierzy
+nieosobliwych stopnia $2n$ zachowujących macierz
 \begin{equation}
   \label{eq:Wojtynski-28}
   \Omega =
@@ -1197,6 +1222,7 @@ symplektyczna, czyli taka która w~pewnej bazie przyjmuje postać
 
 
 
+\noindent
 \Str{34} W~lewej dolnej i~prawej górnej ćwiartce przedstawionej tu
 macierzy brakuje symbolu $0$. Kiedyś można by~się zastanowić nad
 wygenerowaniem w~\LaTeX{} macierzy, która lepiej ilustrowałaby problem.
@@ -1207,6 +1233,7 @@ wygenerowaniem w~\LaTeX{} macierzy, która lepiej ilustrowałaby problem.
 
 
 
+\noindent
 \Str{34} Na tej stronie przyjęliśmy milcząco utożsamienie odwzorowania
 liniowego z~odpowiadającą mu macierzą. W~większości przypadków nie prowadzi
 to do nieporozumień, jednak jak pokazują to notatki do strony 34,
@@ -1218,6 +1245,7 @@ zignorowanie tego rozróżnienia, może prowadzić do poważnych nieporozumień.
 
 
 
+\noindent
 \StrWg{34}{8} Aby definicja przestrzeni $\spFrak( n, \Kbb )$ była
 ścisła, należy doprecyzować czym jest pojawiająca~się w~niej forma $\omega$.
 Należy bowiem przyjąć, że~$\omega$ nie jest dowolną formą symplektyczną, czyli
@@ -1242,6 +1270,7 @@ to zachodzi
 
 
 
+\noindent
 \Str{38} Z~nie do końca jasnych dla mnie powodów, gdy na tej stronie
 przedstawiono kwaterniony jako dwuwymiarową przestrzeń wektorową nad nad
 $\Cbb$, zdefiniowano kombinację liniową kwaterniowów bazowych $e_{ 0 }$
@@ -1305,7 +1334,8 @@ warto podać dwa kilka użytecznych wzorów:
     e_{ 2 } \, z &= \bar{z} \, e_{ 2 },
   \end{align}
 \end{subequations}
-gdzie $q = e_{ 0 } \, z_{ 1 } + e_{ 2 } \, z_{ 2 }$, $z, z_{ 1 }, z_{ 2 } \in \Cbb$.
+gdzie
+$q = e_{ 0 } \, z_{ 1 } + e_{ 2 } \, z_{ 2 }$, $z, z_{ 1 }, z_{ 2 } \in \Cbb$.
 
 \vspace{\spaceFour}
 
@@ -1313,6 +1343,7 @@ gdzie $q = e_{ 0 } \, z_{ 1 } + e_{ 2 } \, z_{ 2 }$, $z, z_{ 1 }, z_{ 2 } \in \C
 
 
 
+\noindent
 \Str{39} Na tej stronie zdefiniowano kwaternionowe macierze symplektyczne
 jako macierze należące do $\GL( n, \Hbb )$, dla których zachodzi
 zależność\footnote{Utożsamiamy tu macierz z~odpowiadającym jej
@@ -1337,6 +1368,7 @@ dla macierzy o~elementach kwaternionowych.
 
 
 
+\noindent
 \Str{39} Podane tu wyjaśnienie dlaczego odwzorowanie $S$ przekształca
 odwzorowania liniowe przestrzeni $\Hbb^{ n }$ w~odwzorowania liniowe
 przestrzeni $\Cbb^{ 2n }$ jest niepotrzebnie zagmatwane. Postaram~się
@@ -1826,7 +1858,8 @@ razu będzie wynikało, że~zbiory $\GL( n, \Hbb )$ i~$\Aut( \Hbb^{ n } )$
 (zbiór automorfizmów liniowych $\Hbb^{ n }$) tworzą grupy. Dokładniej
 monoidami są $( \lFrak( n, \Hbb ), I, \cdot )$
 i~$( \End( \Hbb^{ n } ), \id, \circ )$, gdzie $I = [ e_{ 0 } \, \delta^{ i }_{ j } ]$ to
-macierz jednostkowa, $\cdot$ to działanie mnożenia macierzy określone we~wzorze \eqref{eq:Wojtynski-45}, $\id$ to odwzorowanie identycznościowe
+macierz jednostkowa, $\cdot$ to działanie mnożenia macierzy określone we~wzorze
+\eqref{eq:Wojtynski-45}, $\id$ to odwzorowanie identycznościowe
 na~$\Hbb^{ n }$:
 \begin{equation}
   \label{eq:Wojtynski-80}
@@ -2068,6 +2101,7 @@ nie sprawi problemu.
 
 
 
+\noindent
 \Str{40} Na tej stronie użyty jest zapis
 \begin{equation}
   \label{eq:Wojtynski-98}
@@ -2110,14 +2144,11 @@ zaczynającego się na tej stronie.
 
 \CenterBoldFont{Błędy}
 
-\vspace{\spaceFive}
-
 
 \begin{center}
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -2299,7 +2330,7 @@ zaczynającego się na tej stronie.
 \vspace{\spaceTwo}
 
 
-
+\noindent
 \StrWd{34}{6} \\
 \Jest  \textit{$n$-tą grupą symplektyczną} (oznaczaną $\Sp( n )$)
 nazywamy \\
