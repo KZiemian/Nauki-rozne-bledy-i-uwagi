@@ -68,6 +68,22 @@
 
 
 
+% ---------------
+% Wspaniały pakiet PGF/TikZ
+% ---------------
+\usepackage{tikz}
+
+% Włączenie konkretnych bibliotek pakietu TikZ.
+\usetikzlibrary{decorations.markings}
+
+% Picsy TikZa
+\usepackage{TikZPics}
+
+% Dodatkowe style TikZa
+\usepackage{TikZStyles}
+
+
+
 % ------------------------------
 % Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
 % ------------------------------
@@ -164,14 +180,14 @@
 % ############################
 \Work{ % Autorzy i tytuł dzieła
   Zbigniew Semadeni, Antoni Wiweger \\
-  \textit{Wstęp do teorii kategorii i~funktorów},
+  \textit{Wstęp do~teorii kategorii i~funktorów},
   \cite{SemadeniWiwegerWstepDoTeoriiKategoriiETC1972}}
 
 \vspace{0em}
 
 
 % ##################
-\CenterBoldFont{Uwagi do konkretnych stron}
+\CenterBoldFont{Uwagi do~konkretnych stron}
 
 \vspace{0em}
 
@@ -181,8 +197,128 @@
 
 
 \noindent
-\textbf{Str. 8, wiersze 11 i~12 (od dołu).} Wzory brzydko wystają
-ponad i~poniżej nawiasów, może da się to jakoś poprawić?
+\StrWierszeD{8}{11 i~12} Wzory brzydko wystają ponad i~poniżej nawiasów,
+może da się to jakoś poprawić?
+
+\vspace{\spaceFour}
+
+
+
+
+
+\noindent
+\Str{????} Należy wspomnieć, że~współcześnie w~teorii kategorii stosuje~się
+również inną, często dużo wygodniejszą od standardowej, konwencję zapisu
+składania odwzorowań. Wedle niej odwzorowania zapisuje~się od lewej do
+prawej w~kolejności która odpowiada temu w~jakiej kolejności napotkalibyśmy
+dane odwzorowanie przechodząc po diagramie zgodnie z~kierunek strzałek.
+
+Zgodnie z~nią złożenie odwzorowań odpowiadające diagramowi (a) na
+rysunku~(1) \eqref{fig:Semadeni-Wiweger-WstepETC-01} zapisalibyśmy wedle
+standardowej konwencji jako $\gamma \beta \alpha$, bowiem
+\begin{equation}
+  \label{eq:Semadeni-Wiweger-WstepETC-01}
+  ( \gamma \beta \alpha )( x ) = \gamma\big( \beta\big( \alpha( x ) \big) \big).
+\end{equation}
+Wedle zaś notacji strzałkowej to odwzorowanie zapiszemy jako $\alpha \beta \gamma$.
+W~przypadku diagramu (b) na~tym samym rysunku, sytuacja ma~się analogicznie.
+
+Należy zwrócić uwagę, że~jak zostało to w~książce wyjaśnione w~teorii
+kategorii starami~się unikać obliczania wartości odwzorowania dla danego
+argumentu~$x$, zamiast tego skupiamy~się na składaniu odpowiednich
+odwzorowań. W~przypadku zaś składania odwzorowań notacja strzałkowa nie jest
+wygodniejsza od standardowej i~nie prowadzi do żadnych nieporozumień.
+
+
+
+
+
+
+
+
+
+
+% ##################
+\begin{figure}
+
+  \centering
+
+  \label{fig:Semadeni-Wiweger-WstepETC-01}
+
+  \begin{tikzpicture}
+
+    \node (A 1) at (0,0) {$A$};
+
+    \node (B 1) at (1.75,0) {$B$};
+
+    \draw[diagram arrow 1] (A 1) -- (B 1);
+
+    \node at (0.875,-0.5) {$\alpha$};
+
+
+
+    \node (C 1) at (3.5,0) {$C$};
+
+    \draw[diagram arrow 1] (B 1) -- (C 1);
+
+    \node at (2.625,-0.5) {$\beta$};
+
+
+    \node (D 1) at (5.25,0) {$D$};
+
+    \draw[diagram arrow 1] (C 1) -- (D 1);
+
+    \node at (4.375,-0.5) {$\gamma$};
+
+
+
+    \node at (2.625,-1.5) {(a) Funkcja $\alpha \beta \gamma$};
+
+
+
+
+
+    \begin{scope}[xshift=8cm]
+
+      \node (A 2) at (0,0) {$A$};
+
+      \node (B 2) at (1.75,0) {$B$};
+
+      \draw[diagram arrow 1] (B 2) -- (A 2);
+
+      \node at (0.875,-0.5) {$\alpha$};
+
+
+
+      \node (C 2) at (3.5,0) {$C$};
+
+      \draw[diagram arrow 1] (C 2) -- (B 2);
+
+      \node at (2.625,-0.5) {$\beta$};
+
+
+
+      \node (D 2) at (5.25,0) {$D$};
+
+      \draw[diagram arrow 1] (D 2) -- (C 2);
+
+      \node at (4.375,-0.5) {$\gamma$};
+
+
+
+      \node at (2.625,-1.5) {(b) Funkcja $\gamma \beta \alpha$};
+
+    \end{scope}
+
+  \end{tikzpicture}
+
+  \caption{Przykłady zapisu składania odwzorowań w~notacji strzałkowej.}
+
+\end{figure}
+% ##################
+
+
+
 
 
 
