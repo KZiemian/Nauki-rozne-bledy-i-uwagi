@@ -1,5 +1,3 @@
-% Autor: Kamil Ziemian
-
 % ---------------------------------------------------------------------
 % Podstawowe ustawienia i pakiety
 % ---------------------------------------------------------------------
@@ -72,13 +70,15 @@
 
 
 
-% ----------
-% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-% ----------
-\newtheorem{twr}{Twierdzenie} % Komenda wprowadzająca otoczenie
-% ,,twr'' do pisania twierdzeń matematycznych
-\newtheorem{defin}{Definicja} % Analogicznie jak powyżej
-\newtheorem{wni}{Wniosek}
+% ------------------------------
+% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
+% ------------------------------
+% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
+% matematycznych.
+\newtheorem{theorem}{Twierdzenie}
+% Analogicznie jak powyżej
+\newtheorem{definition}{Definicja}
+\newtheorem{corollary}{Wniosek}
 
 
 
@@ -105,18 +105,20 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Ustawienia różnych parametrów tekstu
-% ----------------------------
-\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+% ------------------------------
+\renewcommand{\baselinestretch}{1.1}
+
+% Ustawienie szerokości odstępów między wierszami w tabelach.
+\renewcommand{\arraystretch}{1.4}
 
 
 
-% ----------------------------
+% ------------------------------
 % Pakiet "hyperref"
 % Polecano by umieszczać go na końcu preambuły.
-% ----------------------------
+% ------------------------------
 \usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
 % do bibliografii na hiperlinki.
 
@@ -131,9 +133,12 @@
 
 % ---------------------------------------------------------------------
 % Tytuł, autor, data
-\title{Równania różniczkowe cząstkowe~-- błędy i~uwagi}
+\title{Równania różniczkowe cząstkowe \\
+  {\Large Błędy i~uwagi}}
 
-% \author{}
+\author{Kamil Ziemian}
+
+
 % \date{}
 % ---------------------------------------------------------------------
 
@@ -165,25 +170,34 @@
 % ############################
 \Work{ % Autor i tytuł dzieła
   L.C. Evans \\
-  „Równania różniczkowe cząstkowe”,
-  \cite{EvansRowaniaRozniczoweCzastkowe2008} }
+  \textit{Równania różniczkowe cząstkowe},
+  \cite{EvansRowaniaRozniczoweCzastkowe2008}}
+
+\vspace{0em}
 
 
 % ##################
-\CenterBoldFont{Uwagi do konkretnych stron}
+\CenterBoldFont{Uwagi do~konkretnych stron}
+
+\vspace{0em}
 
 
-\start \Str{594}
+\noindent
+\Str{594}
+
+\vspace{\spaceFour}
+
+
+
+
+
+\noindent
+\Str{597} Nie rozumiem, dlaczego trzeba zakładać we~wzorze całkowania po
+włóknach, że~$f$ jest ciągła. Wydaje~się, że~całkowalność i~mierzalność
+wystarczają.
 
 \vspace{\spaceFour}
 
-
-
-\start \Str{597} Nie rozumiem, dlaczego trzeba zakładać we~wzorze
-całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
-że~całkowalność i~mierzalność wystarczają.
-
-\vspace{\spaceFour}
 
 
 
@@ -197,7 +211,6 @@ całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -227,6 +240,15 @@ całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
 \end{center}
 
 \vspace{\spaceTwo}
+
+
+
+
+
+
+
+
+
 % ############################
 
 
@@ -239,11 +261,13 @@ całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
 
 
 % ############################
+\newpage
+
 \Work{ % Autor i tytuł dzieła
   Lars H\"{o}rmander \\
-  „The Analysis of Linear Partial Differential Operators~I.
-  Distributon Theory and~Fourier Analysis”,
-  \cite{HormanderAnalysisPartialDifferentialOperators1983} }
+  \textit{The Analysis of Linear Partial Differential Operators~I} \\
+  \textit{Distributon Theory and~Fourier Analysis},
+  \cite{HormanderAnalysisPartialDifferentialOperators1983}}
 
 
 % ##################
@@ -254,7 +278,6 @@ całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -266,35 +289,46 @@ całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
 
 \end{center}
 
+\vspace{\spaceTwo}
+
+
 \noindent
 \StrWg{1}{3} \\
 \Jest  every function is not differentiable. \\
 \Powin not every function is differentiable. \\
 
-\vspace{\spaceTwo}
-% ############################
-
-
-
-
-
-
 
 
 
 
 % ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\newpage
+
 \Work{ % Autorka i tytuł dzieła
   Hanna Marcinkowska \\
-  „Wstęp do~teorii równań różniczkowych cząstkowych”,
-  \cite{MarcinkowskaWstepRownanRozniczkowychCzastkowych1986} }
+  \textit{Wstęp do~teorii równań różniczkowych cząstkowych},
+  \cite{MarcinkowskaWstepRownanRozniczkowychCzastkowych1986}}
+
+\vspace{0em}
 
 
 % ##################
-\CenterBoldFont{Uwagi do konkretnych stron}
+\CenterBoldFont{Uwagi do~konkretnych stron}
 
 
-\start \Str{15} Założenie, że~$\vectbold$ jest wektorem jednostkowym, nie
+\noindent
+\Str{15} Założenie, że~$\vectbold$ jest wektorem jednostkowym, nie
 jest w~ogóle wykorzystane w~dowodzie i~jako takie należy je odrzucić. Wzór
 \begin{equation}
   \label{eq:MarcinkowskaWDTRRCz-01}
@@ -315,9 +349,6 @@ leży na~powierzchni $\Sigma$.
 
 
 
-\start \Str{597} Nie rozumiem, dlaczego trzeba zakładać we~wzorze
-całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
-że~całkowalność i~mierzalność wystarczają.
 
 
 
@@ -331,7 +362,6 @@ całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -348,12 +378,15 @@ całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
 
 \end{center}
 
-% \noi
-% \StrWg{}{}
-% \Jest
-% \Powin
-
 \vspace{\spaceTwo}
+
+
+
+
+
+
+
+
 % ############################
 
 
@@ -366,10 +399,12 @@ całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
 
 
 % ############################
+\newpage
+
 \Work{ % Autor i tytuł dzieła
   P. Strzelecki \\
-  „Krótkie wprowadzenie do równań różniczkowych cząstkowych”,
-  \cite{StrzeleckiKrotkieWprowadzenieETC2006} }
+  \textit{Krótkie wprowadzenie do równań różniczkowych cząstkowych},
+  \cite{StrzeleckiKrotkieWprowadzenieETC2006}}
 
 
 % ##################
@@ -389,7 +424,6 @@ Str. 117.???
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -405,16 +439,30 @@ Str. 117.???
 \end{center}
 
 \vspace{\spaceTwo}
+
+
+
+
+
+
 % ############################
 
 
 
 
-% ##################
+
+
+
+
+
+
+% ############################
+\newpage
+
 \Work{ % Autorka i tytuł dzieła
   Zofia Szmydt \\
-  „Transformacja Fouriera i~równania różniczkowe liniowe”,
-  \cite{SzmydtTransformacjaFourieraIRownaniaRozniczkoweLiniowe1972} }
+  \textit{Transformacja Fouriera i~równania różniczkowe liniowe},
+  \cite{SzmydtTransformacjaFourieraIRownaniaRozniczkoweLiniowe1972}}
 
 
 % ##################
@@ -425,7 +473,6 @@ Str. 117.???
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -447,154 +494,22 @@ Str. 117.???
 
 \end{center}
 
+\vspace{\spaceTwo}
+
+
 \noindent
 \StrWg{308}{6} \\
 \Jest  Arytmetyka teoretyczna \\
-\Powin \emph{Arytmetyka teoretyczna} \\
+\Powin \textit{Arytmetyka teoretyczna} \\
 
-\vspace{\spaceTwo}
+
+
+
 % ############################
 
 
 
 
-% % ##################
-% \Work{ % Autor i tytuł dzieła
-%   L.C. Evans \\
-%   ,,Równania różniczkowe cząstkowe'',
-%   \cite{EvansRowaniaRozniczoweCzastkowe08} }
-
-
-% \CenterTB{Uwagi}
-
-% \start \Str{594}
-
-% \start \Str{597} Nie rozumiem, dlaczego trzeba zakładać we~wzorze
-% całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
-% że~całkowalność i~mierzalność wystarczają.
-
-
-% \CenterTB{Błędy}
-% \begin{center}
-%   \begin{tabular}{|c|c|c|c|c|}
-%     \hline
-%     & \multicolumn{2}{c|}{} & & \\
-%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-%                               & Powinno być \\ \cline{2-3}
-%     & Od góry & Od dołu & & \\
-%     \hline
-%     19  &  4 & & równań & tych równań \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     593 &  5 & & $a, b > 0$ & $a, b \in \mb{R}$ \\
-%     597 &  1 & & \emph{współrzędnych) iloczyn} & \emph{współrzędnych)} \\
-%     597 &  2 & & $x_{ n } >$ & $x_{ n } =$ \\
-%     %% 600 & & 4 & $x + h_{ i } e_{ i } \in U_{ \epsilon }$ &
-%     %% $x + h_{ i } e_{ i } \in U$ \\
-%     %% & & & & \\
-%     601 & & 10 & $W \: \subset \subset U$ & $W \subset \subset U$ \\
-%     601 & &  5 & $W \: \subset \subset U$ & $W \subset \subset U$ \\
-%     614 &  9 & & $u \: \in H$ & $u \in H$\\
-%     615 & &  9 & miary & miary. \\
-%     % & & & & \\
-%     \hline
-%   \end{tabular}
-% \end{center}
-
-% \vspace{\spaceTwo}
-
-
-
-
-
-% % ##################
-% \Work{ % Autor i tytuł dzieła
-%   Lars H\"{o}rmander \\
-%   ,,The Analysis of Linear Partial Differential Operators~I.
-%   Distributon Theory and~Fourier Analysis'', \cite{Hor83} }
-
-
-% \CenterTB{Błędy}
-% \begin{center}
-%   \begin{tabular}{|c|c|c|c|c|}
-%     \hline
-%     & \multicolumn{2}{c|}{} & & \\
-%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-%                               & Powinno być \\ \cline{2-3}
-%     & Od góry & Od dołu & & \\
-%     \hline
-%     6   &  5 & & $M >$ & $M =$ \\
-%     % & & & & \\
-%     \hline
-%   \end{tabular}
-% \end{center}
-% \noi \\
-% \StrWg{1}{3}
-% \Jest every function is not differentiable. \\
-% \Powin not every function is differentiable. \\
-
-% \vspace{\spaceTwo}
-
-
-
-
-
-% ##################
-\Work{ % Autorka i tytuł dzieła
-  Hanna Marcinkowska \\
-  ,,Wstęp do~teorii równań różniczkowych cząstkowych'',
-  \cite{MarcinkowskaWstepRownanRozniczkowychCzastkowych1986} }
-
-
-\CenterTB{Uwagi}
-
-\start \Str{15} Założenie, że~$\vectb$ jest wektorem jednostkowym, nie jest w~ogóle wykorzystane w~dowodzie i~jako takie należy je odrzucić. Wzór
-\begin{equation}
-  \label{eq:Marcinkowska-01}
-  t_{ n }
-  = \sum_{ j = 1 }^{ n - 1 } ( D_{ j } f\left( g_{ 1 }( s_{ 0 } ), \ldots,
-  g_{ n - 1 }( s_{ 0 } ) \right) g_{ j }'( s_{ 0 } ),
-\end{equation}
-wynika nie z~warunku $\abso{ \vectb }$, lecz z~tego, iż $g_{ j }'( s_{ 0 } ) = t_{ j }$, $j = 1, \ldots, n - 1$ i~z~tego, że krzywa
-\begin{equation}
-  \label{eq:Marcinkowska-02}
-  I \ni s \mapsto [ g_{ 1 }( s ), \ldots, g_{ n - 1 }( s ),
-  f( g_{ 1 }( s ), \ldots, g_{ n - 1 }( s ) ) ] \in \Rn
-\end{equation}
-leży na~powierzchni $\Sigma$.
-
-% \start \Str{597} Nie rozumiem, dlaczego trzeba zakładać we~wzorze
-% całkowania po włóknach, że~$f$ jest ciągła. Wydaje~się,
-% że~całkowalność i~mierzalność wystarczają.
-
-\CenterTB{Błędy}
-\begin{center}
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    8   &  9 & & $| \vecab | \;\; | \vecbb |$ & $| \vecab | \, | \vecbb |$ \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-\end{center}
-% \noi
-% \StrWg{}{}
-% \Jest
-% \Powin
-
-\vspace{\spaceTwo}
 
 
 
@@ -602,215 +517,23 @@ leży na~powierzchni $\Sigma$.
 
 
 
-% % ####################
-% \Work{
-%   P. Strzelecki \\
-%   ,,Krótkie wprowadzenie do równań różniczkowych cząstkowych'',
-%   \cite{Str06} }
-
-
-% \CenterTB{Uwagi}
-% \begin{itemize}
-% \item Str. 117.???
-%   % \item
-%   % \item
-%   % \item
-%   % \item
-%   % \item
-%   % \item
-%   % \item
-%   % \item
-%   % \item
-% \end{itemize}
-
-% \CenterTB{Błędy}
-% \begin{center}
-%   \begin{tabular}{|c|c|c|c|c|}
-%     \hline
-%     & \multicolumn{2}{c|}{} & & \\
-%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-%                               & Powinno być \\ \cline{2-3}
-%     & Od góry & Od dołu & & \\
-%     \hline
-%     117 & & & $\exp\left( \fr{ 1 }{ 1 - | x |^{ 2 } } \right)$
-%            & $\exp\left( -\fr{ 1 }{ 1 - | x |^{ 2 } } \right)$ \\
-%            % & & & & \\
-%            % & & & & \\
-%            % & & & & \\
-%     \hline
-%   \end{tabular}
-% \end{center}
-
-% \vspace{\spaceTwo}
 
 
 
 
 
-% % ##################
-% \Work{ % Autorka i tytuł dzieła
-%   Zofia Szmydt \\
-%   ,,Transformacja Fouriera i~równania różniczkowe liniowe'',
-%   \cite{SzmydtTransformacjaFourieraIRownaniaRozniczkoweLiniowe1972} }
-
-
-% \CenterTB{Błędy}
-% \begin{center}
-%   \begin{tabular}{|c|c|c|c|c|}
-%     \hline
-%     & \multicolumn{2}{c|}{} & & \\
-%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-%                               & Powinno być \\ \cline{2-3}
-%     & Od góry & Od dołu & & \\
-%     \hline
-%     13  & 13 & & ta & \emph{ta} \\
-%     % & & & & \\
-%     % & & & & \\
-%     32  & &  3 & $\boldsymbol{ \{ } q_{ k } \}$ & $\{ q_{ k } \}$ \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     \hline
-%   \end{tabular}
-% \end{center}
-% \noi
-% \StrWg{308}{6} \\
-% \Jest Arytmetyka teoretyczna \\
-% \Powin  \emph{Arytmetyka teoretyczna} \\
-
-% \vspace{\spaceTwo}
-
-
-% ####################
-\Work{ % Autor i tytuł dzieła
-  Władimir Igoriewicz Arnold \\
-  ,,Równania różniczkowe zwyczajne'',
-  \cite{ArnoldRownaniaRozniczkoweZwyczajne1975} }
-
-
-\CenterTB{Błędy}
-\begin{center}
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    5   & &  7 & 1968 - 196 & 1968 - 1969 \\
-    11  & 17 & & mechanice klasycznej & mechanice kwantowej \\
-    15  & & 16 & rozdziale 6 & rozdziale 5 \\
-    28  & 15 & & wzór (8) & wzór \\
-    34  &  9 & & $\dot{ x }_{ 1 } = x_{ 2 }$ & $\dot{ x }_{ 1 } = x_{ 1 }$ \\
-    47  & & 12 & $x_{ i } = \varphi_{ i }( x_{ 1 }, \ldots, x_{ n } )$
-           & $x_{ i } = \varphi_{ i }( y_{ 1 }, \ldots, y_{ n } )$ \\
-    53  & & 14 & obrót & obrót krzywych całkowych \\
-    56  & 12 & & osobliwym & nieosobliwym \\
-    61  &  7 & & $\xbf$, $\boldsymbol{\alpha}_{ 0 }$
-           & $\xbf$, $\boldsymbol{\alpha}$ \\
-    64  & & 11 & $\gbf( t_{ 2 }, t_{ 1 }, \xbf )
-                = \gbf^{ t_{ 2 } }_{ t_{ 1 } }( \xbf, t_{ 1 } )$
-           & $\gbf^{ t_{ 2 } }_{ t_{ 1 } }( \xbf, t_{ 1 } )
-             = \gbf( t_{ 2 }, t_{ 1 }, \xbf )$ \\
-    64  & & 10 & $( \vpb( t ), t )$ & $( t, \vpb( t ) )$ \\
-    66  & 17 & & $\vbf( t, \xbf, \dot{ \alb } )$
-           & $\vbf( t, \xbf, \alb )$ \\
-    70  & & 13 & $\pdot_{ i } = \pd{ }{ H }{ q_{ i } }$
-           & $\pdot_{ i } = -\pd{ }{ H }{ q_{ i } }$ \\
-    71  & & 15 & $\frac{ \partial \vbf_{ 0 } }{ \xbf }$
-           & $\pd{}{ \vbf_{ 0 } }{ \xbf }$ \\
-    72  &  4 & & ,,niezaburzonego'' & ,,zaburzonego'' \\
-    73  &  5 & & $\xbf( 0$ & $\xbf( 0 )$ \\
-    90  & &  3 & \emph{wraz z pochodną dla} $x = 0$ & \emph{dla} $x = 0$ \\
-    92  &  3 & & $U( x( O ) )$ & $U( x( 0 ) )$ \\
-    123 &  6 & & $^{ \Rb }A : \Cb^{ m } \to { }^{ \Rb }\Cb^{ n }$
-           & ${ }^{ \Rb }A : { }^{ \Rb }\Cb^{ m } \to { }^{ \Rb }\Cb^{ n }$ \\
-    125 &  5 & & $\mathbf{I}$ & $I$ \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-\end{center}
-\noi
-\StrWd{66}{7} \\
-\Jest \emph{tyłu do~brzegu} \\
-\Powin  \emph{tyłu nieograniczenie albo~do~brzegu} \\
-\StrWg{110}{9} \\
-\Jest sumą częściową szeregu --~iloczynu \\
-\Powin  jest sumą części wyrazów iloczynu \\
 
 
 
 
 
-% ####################
-\Work{
-  N. M. Matwiejew \\
-  ,,Metody całkowania równana różniczkowych zwyczajnych'',
-  \cite{MatwiejewMetodyCalkowaniaRownanRozniczkowychZwyczajnych82} }
 
 
-\CenterTB{Uwagi}
-
-\start \Str{15} Równanie (10) zostało bardzo elegancko wyprowadzone,
-przy założeniu, że~funkcja uwikłana dana równaniem (9) spełnia
-równanie różniczkowe (1), nie odpowiada to jednak na pytanie czy jeśli
-funkcja $y( x )$ spełnia równanie (10), to spełnia też interesujące
-nas równanie wyjściowe. Dowód tego twierdzenia jest następujący.
-Załóżmy, że $\Phi_{ y }' \neq 0$, tak by było zapewnione istnienie
-funkcji uwikłanej. Jeżeli teraz spełnione jest równanie (10), to można
-je przekształcić do postaci:
-\begin{equation}
-  \lable{Matwiejew-01}
-  -\fr{ \Phi_{ x }' }{ \Phi_{ y }' } = f( x, y ).
-\end{equation}
-Lewa strona tej równości jest równa pochodnej funkcji uwikłanej
-$y( x )$, określonej wzorem (9). \\
-\start \Str{16} \Dok \\
-\start \Str{31} \Dok
 
 
-\CenterTB{Błędy}
-\begin{center}
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    5   & &  9 & Dodzimy & Dowodzimy \\
-    5   & &  8 & potkowych & początkowych \\
-    5   & &  7 & poąątkowych & początkowych \\
-    10  & & 19 & damy & mamy \\
-    15  & & & & \\
-    % & & & & \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-\end{center}
-\noi \\
-\StrWg{15}{13}
-\Jest w~sensie ustępu \\
-\Powin w~sensie zdefiniowanym w~ustępie \\
-\StrWd{20}{2} \\
-\Jest i~nie ma rozwiązania określonego w~tym samym przedziale
-nie~identycznego z~rozwiązaniem $y = y( x )$ chociażby w~jednym
-punkcie przedziału $\abso{ x - x_{ 0 } } \leq h$ różnym
-od~punktu $x = x_{ 0 }$. \\
-\Powin i~nie istnieje inne rozwiązanie określone w~przedziale
-$\abso{ x - x_{ 0 } } \leq h_{ 1 } \leq h$ które nie byłoby równe
-rozwiązaniu $y = y( x )$ w~każdym punkcie przedziału
-$\abso{ x - x_{ 0 } } \leq h_{ 1 }$. \\
 
-\vspace{\spaceTwo}
+
+
 
 
 

@@ -1,8 +1,6 @@
-% Autor: Kamil Ziemian
-
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Podstawowe ustawienia i pakiety
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 \RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
 % sposoby używania LaTeXa. Więcej jest w l2tabu English version.
 
@@ -73,13 +71,15 @@
 
 
 
-% ----------
-% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-% ----------
-\newtheorem{twr}{Twierdzenie} % Komenda wprowadzająca otoczenie
-% ,,twr'' do pisania twierdzeń matematycznych
-\newtheorem{defin}{Definicja} % Analogicznie jak powyżej
-\newtheorem{wni}{Wniosek}
+% ------------------------------
+% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
+% ------------------------------
+% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
+% matematycznych.
+\newtheorem{theorem}{Twierdzenie}
+% Analogicznie jak powyżej
+\newtheorem{definition}{Definicja}
+\newtheorem{corollary}{Wniosek}
 
 
 
@@ -104,18 +104,20 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Ustawienia różnych parametrów tekstu
-% ----------------------------
-\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+% ------------------------------
+\renewcommand{\baselinestretch}{1.1}
+
+% Ustawienie szerokości odstępów między wierszami w tabelach.
+\renewcommand{\arraystretch}{1.4}
 
 
 
-% ----------------------------
+% ------------------------------
 % Pakiet "hyperref"
 % Polecano by umieszczać go na końcu preambuły.
-% ----------------------------
+% ------------------------------
 \usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
 % do bibliografii na hiperlinki.
 
@@ -130,9 +132,12 @@
 
 % ---------------------------------------------------------------------
 % Tytuł, autor, data
-\title{Równania różniczkowe zwyczajne~-- błędy i~uwagi}
+\title{Równania różniczkowe zwyczajne \\
+  {\Large Błędy i~uwagi}}
 
-% \author{}
+\author{Kamil Ziemian}
+
+
 % \date{}
 % ---------------------------------------------------------------------
 
@@ -164,8 +169,8 @@
 % ##############################
 \Work{ % Autor i tytuł dzieła
   Władimir Igoriewicz Arnold \\
-  „Równania różniczkowe zwyczajne”,
-  \cite{ArnoldRownaniaRozniczkoweZwyczajne1975} }
+  \textit{Równania różniczkowe zwyczajne},
+  \cite{ArnoldRownaniaRozniczkoweZwyczajne1975}}
 
 
 % ##################
@@ -176,7 +181,6 @@
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -222,6 +226,8 @@
 
 \end{center}
 
+\vspace{\spaceTwo}
+
 
 \noindent
 \StrWd{66}{7} \\
@@ -232,7 +238,7 @@
 \Powin jest sumą części wyrazów iloczynu \\
 
 
-\vspace{\spaceTwo}
+
 % ############################
 
 
@@ -247,16 +253,21 @@
 % ############################
 \Work{ % Autor i tytuł dzieła
   N. M. Matwiejew \\
-  „Metody całkowania równana różniczkowych zwyczajnych”,
-  \cite{MatwiejewMetodyCalkowaniaRownanRozniczkowychZwyczajnych1982} }
+  \textit{Metody całkowania równana różniczkowych zwyczajnych},
+  \cite{MatwiejewMetodyCalkowaniaRownanRozniczkowychZwyczajnych1982}}
+
+\vspace{0em}
 
 
 % ##################
 \CenterBoldFont{Uwagi}
 
+\vspace{0em}
 
-\start \Str{15} Równanie (10) zostało bardzo elegancko wyprowadzone,
-przy założeniu, że~funkcja uwikłana dana równaniem (9) spełnia
+
+\noindent
+\Str{15} Równanie (10) zostało bardzo elegancko wyprowadzone, przy
+założeniu, że~funkcja uwikłana dana równaniem (9) spełnia
 równanie różniczkowe (1), nie odpowiada to jednak na pytanie czy jeśli
 funkcja $y( x )$ spełnia równanie (10), to spełnia też interesujące
 nas równanie wyjściowe. Dowód tego twierdzenia jest następujący.
@@ -274,13 +285,21 @@ $y( x )$, określonej wzorem (9).
 
 
 
-\start \Str{16} \Dok \\
+
+
+\noindent
+\Str{16} \Dok \\
 
 \vspace{\spaceFour}
 
 
 
-\start \Str{31} \Dok
+
+
+\noindent
+\Str{31} \Dok
+
+
 
 
 % ##################
@@ -291,7 +310,6 @@ $y( x )$, określonej wzorem (9).
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -308,6 +326,8 @@ $y( x )$, określonej wzorem (9).
 
 \end{center}
 
+\vspace{\spaceTwo}
+
 
 \noindent
 \StrWg{15}{13}
@@ -323,7 +343,7 @@ $\absOne{ x - x_{ 0 } } \leq h_{ 1 } \leq h$ które nie byłoby równe
 rozwiązaniu $y = y( x )$ w~każdym punkcie przedziału
 $\absOne{ x - x_{ 0 } } \leq h_{ 1 }$. \\
 
-\vspace{\spaceTwo}
+
 % ############################
 
 
@@ -334,8 +354,11 @@ $\absOne{ x - x_{ 0 } } \leq h_{ 1 }$. \\
 
 
 
+
 % ####################################################################
 % ####################################################################
+% Bibliografia
+
 \bibliographystyle{plalpha}
 
 \bibliography{MathComScienceBooks}{}

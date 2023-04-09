@@ -73,12 +73,14 @@
 
 
 
-% ---------------
-% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-% ---------------
-\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
-% „theorem” do pisania twierdzeń matematycznych
-\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+% ------------------------------
+% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
+% ------------------------------
+% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
+% matematycznych.
+\newtheorem{theorem}{Twierdzenie}
+% Analogicznie jak powyżej
+\newtheorem{definition}{Definicja}
 \newtheorem{corollary}{Wniosek}
 
 
@@ -108,10 +110,8 @@
 % ------------------------------
 \renewcommand{\baselinestretch}{1.1}
 
-\renewcommand{\arraystretch}{1.4}  % Ustawienie szerokości odstępów między
-% wierszami w tabelach
-
-
+% Ustawienie szerokości odstępów między wierszami w tabelach.
+\renewcommand{\arraystretch}{1.4}
 
 
 
@@ -187,15 +187,18 @@
 
 
 % ##################
-\CenterBoldFont{Uwagi do konkretnych rozdziałów}
+\CenterBoldFont{Uwagi do~konkretnych rozdziałów}
 
 \vspace{0em}
 
 
 \noindent
-\textbf{Rozdział I.} Ten bardzo krótki rozdział jest tylko skromnym zarysem pewnego działu logiki matematycznej, dlatego powinniśmy podchodzić do jego treści
-z~wyrozumiałością i~przechodzić do porządku dziennego nad większością rzeczy, które możemy uznać za jego niedociągnięcia. W~pewnych szczególnych przypadkach,
-gdy uproszczenia w~nim zawarte uznamy za zbyt wielkie, omówione to zostanie w~,,Uwagach do konkretnych stron''.
+\textbf{Rozdział I.} Ten bardzo krótki rozdział jest tylko skromnym zarysem
+pewnego działu logiki matematycznej, dlatego powinniśmy podchodzić do jego
+treści z~wyrozumiałością i~przechodzić do porządku dziennego nad większością
+rzeczy, które możemy uznać za jego niedociągnięcia. W~pewnych szczególnych
+przypadkach, gdy uproszczenia w~nim zawarte uznamy za zbyt wielkie, omówione
+to zostanie w~„Uwagach do konkretnych stron”.
 
 \vspace{\spaceFour}
 
@@ -216,9 +219,12 @@ gdy uproszczenia w~nim zawarte uznamy za zbyt wielkie, omówione to zostanie w~,
 
 
 
-Nie wspomniano o rozdzielności dodawania zbiorów względem mnożenia. Jest to w zadaniach.
+Nie wspomniano o rozdzielności dodawania zbiorów względem mnożenia. Jest to
+w zadaniach.
 
-\Str{10} Z~jakiegoś powodu \textbf{zasadą kontrapozycji} została tu nazwana tożsamość
+\noindent
+\Str{10} Z~jakiegoś powodu \textbf{zasadą kontrapozycji} została tu nazwana
+tożsamość
 \begin{equation}
   \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-01}
   ( \neg \beta \Rightarrow \neg \alpha ) \Rightarrow ( \alpha \Rightarrow \beta ),
@@ -228,23 +234,29 @@ podczas gdy zachodzi jej mocniejsze wersja
   \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-02}
   ( \alpha \Rightarrow \beta ) \equiv ( \neg \beta \Rightarrow \neg \alpha ).
 \end{equation}
-Przez ,,zasadę kontrapozycji'' powinno~się rozumieć, tą drugą, mocniejszą wersję tożsamości.
+Przez „zasadę kontrapozycji” powinno~się rozumieć, tą drugą, mocniejszą
+wersję tożsamości.
 
 \vspace{\spaceFour}
 
 
 
-\Str{10} W~tym miejscu wszystkie dowody 
-,,nie wprost''\footnote{Stosujemy tu nazewnictwo różniące~się od tego w~książce. 
-Mamy nadzieję, że~będzie on prostsze w~zrozumieniu i~użyciu.}, nazwane dowodami 
-,,przez sprowadzenie do niedorzeczności'', przypisano zasadzie kontrapozycji: 
+
+
+\noindent
+\Str{10} W~tym miejscu wszystkie dowody
+„nie wprost”\footnote{Stosujemy tu nazewnictwo różniące~się od tego
+  w~książce. Mamy nadzieję, że~będzie on prostsze w~zrozumieniu i~użyciu.},
+nazwane dowodami „przez sprowadzenie do niedorzeczności”, przypisano
+zasadzie kontrapozycji:
 \begin{equation}
   \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-03}
   ( \alpha \Rightarrow \beta ) \equiv ( \neg \beta \Rightarrow \neg \alpha).
 \end{equation}
-W~rzeczywistości pod nazwą ,,dowody nie wprost'' kryją się dwa typy dowodów, z~których
-jeden opiera~się na podanej powyżej tożsamości. Drugi typ dowodu, który będziemy nazywać 
-\textbf{dowodem przez sprowadzenie do niedorzeczności}, opierajsię na poniższej tożsamości
+W~rzeczywistości pod nazwą „dowody nie wprost” kryją się dwa typy dowodów,
+z~których jeden opiera~się na podanej powyżej tożsamości. Drugi typ dowodu,
+który będziemy nazywać\textbf{dowodem przez sprowadzenie
+  do~niedorzeczności}, opierają się na poniższej tożsamości
 \begin{equation}
   \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-04}
   ( \alpha \Rightarrow \beta ) \equiv \neg \big( \alpha \land ( \neg \beta ) \big).
@@ -256,8 +268,9 @@ jeden opiera~się na podanej powyżej tożsamości. Drugi typ dowodu, który bę
 
 
 
-\StrWg{10}{13} Odniesinie do przypisu numer~$1$ w~tym wierszu wygląda dość brzydko. W~tym momencie 
-nie mam dobrej idei jak to poprawić.
+\noindent
+\StrWg{10}{13} Odniesienie do przypisu numer~$1$ w~tym wierszu wygląda dość
+brzydko. W~tym momencie nie mam dobrej idei jak to poprawić.
 
 \vspace{\spaceFour}
 
@@ -265,8 +278,10 @@ nie mam dobrej idei jak to poprawić.
 
 
 
-\Str{14} Często przyjmuje~się inną konwecję nazewniczą i~przez \texbf{podzbiory
-właściwe zbioru $A$} uznaje~się wszystkie podzbiory $A$ różne od~$A$ i~$\emptyset$.
+\noindent
+\Str{14} Często przyjmuje~się inną konwencję nazewniczą i~przez
+\textbf{podzbiory właściwe zbioru~$A$} uznaje~się wszystkie podzbiory~$A$
+różne od~$A$ i~$\emptyset$.
 
 \vspace{\spaceFour}
 
@@ -274,6 +289,7 @@ właściwe zbioru $A$} uznaje~się wszystkie podzbiory $A$ różne od~$A$ i~$\em
 
 
 
+\noindent
 \Str{14} Na tej stronie podana jest następująca implikacja
 \begin{equation}
   \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-05}
@@ -291,9 +307,11 @@ W~istocie od razu możemy otrzymać mocniejszy twierdzenie:
 
 
 
-\Str{15--16} Gdy wprowadzamy pojęcie ,,przestrzeni'' w~której, czyli takiego zbioru
-że~wszystkie rozważane zbiory są jego podzbiorami, pojawia~się dodatkowym problem logiczny.
-Oznaczmy naszą przesztrzeń przez $X$ i~rozważmy formułę
+\noindent
+\Str{15--16} Gdy wprowadzamy pojęcie „przestrzeni” w~której, czyli takiego
+zbioru, że~wszystkie rozważane zbiory są jego podzbiorami, pojawia~się
+dodatkowym problem logiczny. Oznaczmy naszą przestrzeń przez $X$ i~rozważmy
+formułę
 \begin{equation}
   \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-06}
   x \in A.
@@ -303,11 +321,14 @@ Wydaje się, że~poprawna postać tej formuły to
   \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-07}
   ( x \in X ) \land ( x \in A ),
 \end{equation}
-jednak dla wygody zwykle opuszcza~się pierwszy człon powyższego iloczynu logicznego.
+jednak dla wygody zwykle opuszcza~się pierwszy człon powyższego iloczynu
+logicznego.
 
-Powstaje jednak pytanie, czy praca w~ramach danej przestrzeni nie wymaga doprecyzowania
-innych formuł logicznych? Oraz czy wzór \eqref{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-07}
-zawiera wszystkie potrzebne modyfikacje, jakie musimy wprowadzić dla formuły $x \in A$.
+Powstaje jednak pytanie, czy praca w~ramach danej przestrzeni nie wymaga
+doprecyzowania innych formuł logicznych? Oraz czy wzór
+\eqref{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-07}
+zawiera wszystkie potrzebne modyfikacje, jakie musimy wprowadzić dla formuły
+$x \in A$.
 
 \vspace{\spaceFour}
 
@@ -315,7 +336,8 @@ zawiera wszystkie potrzebne modyfikacje, jakie musimy wprowadzić dla formuły $
 
 
 
-\Str{16} Niech $X$ oznacza przestrzeń w~której pracujemy. Wprowadzamy oznaczenie
+\Str{16} Niech $X$ oznacza przestrzeń w~której pracujemy. Wprowadzamy
+oznaczenie
 \begin{equation}
   \label{eq:Kuratowski-Wstep-do-teorii-mnogosci-ETC-08}
   A^{ c } := X \setminus A,
@@ -339,9 +361,10 @@ udowodnić silniejszą tożsamość:
 
 
 
-\Str{18} Zarysowano tu związek między rachunkiem zdań, algebrą zbiorów i~algebrą Boole'a.
-Obawiam~się, że~taka skrótowa forma tych relacji może wprowadzać w~błąd i~prowadzić do nieporozumień.
-Zanim więc przystąpi~się do wyciągania z~tego konkretnych wniosków, musimy bardziej szczegółowo
+\Str{18} Zarysowano tu związek między rachunkiem zdań, algebrą zbiorów
+i~algebrą Boole'a. Obawiam~się, że~taka skrótowa forma tych relacji może
+wprowadzać w~błąd i~prowadzić do nieporozumień. Zanim więc przystąpi~się
+do~wyciągania z~tego konkretnych wniosków, musimy bardziej szczegółowo
 przebadać te relacje.
 
 \vspace{\spaceFour}
@@ -441,6 +464,7 @@ przebadać te relacje.
 \vspace{\spaceTwo}
 
 
+\noindent
 \StrWg{13}{2} \\
 \Jest  Mamy więc na rysunku 2 $A \cap B = \emptyset$, a~na rysunku 3 $B - A = \emptyset$. \\
 \Powin Dla rysunku 2 mam tym $A \cap B = \emptyset$, a~dla rysunku 3 zachodzi $B - A = \emptyset$. \\
@@ -535,7 +559,7 @@ przebadać te relacje.
 % \vspace{0em}
 
 
-% \Str{} 
+% \Str{}
 
 
 % % % ##################

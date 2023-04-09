@@ -1,8 +1,6 @@
-% Autor: Kamil Ziemian
-
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Podstawowe ustawienia i pakiety
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 \RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
 % sposoby używania LaTeXa. Więcej jest w l2tabu English version.
 \documentclass[a4paper,11pt]{article}
@@ -70,13 +68,15 @@
 
 
 
-% ------------
-% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-% ------------
-\newtheorem{twr}{Twierdzenie} % Komenda wprowadzająca otoczenie
-% ,,twr'' do pisania twierdzeń matematycznych
-\newtheorem{defin}{Definicja} % Analogicznie jak powyżej
-\newtheorem{wni}{Wniosek}
+% ------------------------------
+% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
+% ------------------------------
+% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
+% matematycznych.
+\newtheorem{theorem}{Twierdzenie}
+% Analogicznie jak powyżej
+\newtheorem{definition}{Definicja}
+\newtheorem{corollary}{Wniosek}
 
 
 
@@ -105,8 +105,10 @@
 % ------------------------------
 % Ustawienia różnych parametrów tekstu
 % ------------------------------
-\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+\renewcommand{\baselinestretch}{1.1}
+
+% Ustawienie szerokości odstępów między wierszami w tabelach.
+\renewcommand{\arraystretch}{1.4}
 
 
 
@@ -128,9 +130,12 @@
 
 % ---------------------------------------------------------------------
 % Tytuł, autor, data
-\title{Rachunek prawdopodobieństwa~-- błędy i~uwagi}
+\title{Rachunek prawdopodobieństwa \\
+  {\Large Błędy i~uwagi}}
 
-% \author{}
+\author{Kamil Ziemian}
+
+
 % \date{}
 % ---------------------------------------------------------------------
 
@@ -162,15 +167,20 @@
 % ############################
 \Work{ % Autor i tytuł dzieła
   Patrick Billingsley \\
-  „Prawdopodobieństwo i~miara”,
-  \cite{BillingsleyPrawdopodobienstwoIMiara2009} }
+  \textit{Prawdopodobieństwo i~miara},
+  \cite{BillingsleyPrawdopodobienstwoIMiara2009}}
+
+\vspace{0em}
 
 
 % ##################
 \CenterBoldFont{Uwagi}
 
+\vspace{0em}
 
-\start Warto byłoby przepisać tę~książkę w~\LaTeX u. Widać bowiem,
+
+\noindent
+Warto byłoby przepisać tę~książkę w~\LaTeX u. Widać bowiem,
 że~wzory matematyczne zostały zapisane w~jakimś pochodzącym zapewne
 z~czasów PRLu systemie i~symbole są przez to~niskiej jakości, mocno
 pikselowate.
@@ -179,7 +189,10 @@ pikselowate.
 
 
 
-\start Pionowe kreski w~wykresach funkcji schodkowych, takich jak
+
+
+\noindent
+Pionowe kreski w~wykresach funkcji schodkowych, takich jak
 te~na~stronie 17, powinny być rysowane linią przerywaną, nie zaś jak
 obecnie ciągłą. Stosuje~się to oczywiście do wszystkich funkcji, które
 posiadają nieciągłość w~formie skoku.
@@ -191,24 +204,26 @@ posiadają nieciągłość w~formie skoku.
 
 
 % ##################
-\CenterBoldFont{Uwagi do konkretnych stron}
+\CenterBoldFont{Uwagi do~konkretnych stron}
 
 
-\start \Str{17} Przez liczbę dwójkowo-wymierną rozumie chyba
-Billingsley liczbę którą da~się zapisać w~postaci $p / 2^{ n }$,
-$p < 2^{ n }$.
+\noindent
+\Str{17} Przez liczbę dwójkowo-wymierną rozumie chyba Billingsley liczbę
+którą da~się zapisać w~postaci $p / 2^{ n }$, $p < 2^{ n }$.
 
 \vspace{\spaceFour}
 
 
 
-\start \Str{17} Pojęcie rzędu przedziału może stwarzać problem,
-bo~wydaje~się, że~Billingsley przyjął, iż~liczby
-$a_{ 0 }, a_{ 1 }, \ldots, a_{ n }$ tworzą podział rzędu $n$, jeśli
-każda z~nich da~się zapisać w~postaci $p / 2^{ n }$, niezależnie
-od~tego, czy jest to forma nieskracalna czy nie. Wnioskuję to z~tego,
-że~ciąg $0, 1/4, 2/4, 3/4, 1$ powinien tworzyć podział rzędu 2, jednak
-$2/4 = 1/2$.
+
+
+\noindent
+\Str{17} Pojęcie rzędu przedziału może stwarzać problem, bo~wydaje~się,
+że~Billingsley przyjął, iż~liczby $a_{ 0 }, a_{ 1 }, \ldots, a_{ n }$ tworzą
+podział rzędu $n$, jeśli każda z~nich da~się zapisać w~postaci
+$p / 2^{ n }$, niezależnie od~tego, czy jest to forma nieskracalna czy nie.
+Wnioskuję to z~tego, że~ciąg $0, 1/4, 2/4, 3/4, 1$ powinien tworzyć podział
+rzędu 2, jednak $2/4 = 1/2$.
 
 Należałoby więc rząd przedziału zdefiniować w~ten sposób, że~każdą
 z~liczb $a_{ i }$ można zapisać w~postaci $p_{ i } / 2^{ n }$ przy
@@ -229,7 +244,6 @@ pojęcie to~stanie~się jednoznaczne.
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -256,22 +270,26 @@ pojęcie to~stanie~się jednoznaczne.
 \end{center}
 
 \vspace{\spaceTwo}
-% ############################
-
-
-
-
-
-
-
-
 
 
 % ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\newpage
+
 \Work{ % Autor i tytuł dzieła
   William Feller \\
-  „Wstęp do rachunku prawdopodobieństwa. Tom I”,
-  \cite{FellerWstepDoRachunkuPrawdopodobienstwaTomI2006} }
+  \textit{Wstęp do rachunku prawdopodobieństwa. Tom~I},
+  \cite{FellerWstepDoRachunkuPrawdopodobienstwaTomI2006}}
 
 
 % ##################
@@ -282,7 +300,6 @@ pojęcie to~stanie~się jednoznaczne.
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
@@ -298,6 +315,9 @@ pojęcie to~stanie~się jednoznaczne.
 \end{center}
 
 \vspace{\spaceTwo}
+
+
+
 % ############################
 
 
@@ -312,6 +332,7 @@ pojęcie to~stanie~się jednoznaczne.
 % ####################################################################
 % ####################################################################
 % Bibliografia
+
 \bibliographystyle{plalpha}
 
 \bibliography{MathComScienceBooks}{}

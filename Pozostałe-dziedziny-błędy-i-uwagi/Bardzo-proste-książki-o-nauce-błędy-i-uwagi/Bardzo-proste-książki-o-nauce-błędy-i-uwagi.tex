@@ -1,8 +1,6 @@
-% Autor: Kamil Ziemian
-
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Podstawowe ustawienia i pakiety
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 \RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
 % sposoby używania LaTeXa. Więcej jest w l2tabu English version.
 \documentclass[a4paper,11pt]{article}
@@ -16,9 +14,9 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ----------------------------
+% ------------------------------
 \usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
 \usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
 % grafiki.
@@ -27,18 +25,18 @@
 % wprowadzane bezpośrednio w tekście.
 \usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ----------------------------
+% ------------------------------
 % MARGINS
-% ----------------------------
+% ------------------------------
 \setmarginsrb
-{ 0.7in} % left margin
-{ 0.6in} % top margin
-{ 0.7in} % right margin
-{ 0.8in} % bottom margin
-{  20pt} % head height
-{0.25in} % head sep
-{   9pt} % foot height
-{ 0.3in} % foot sep
+{ 0.7in}  % left margin
+{ 0.6in}  % top margin
+{ 0.7in}  % right margin
+{ 0.8in}  % bottom margin
+{  20pt}  % head height
+{0.25in}  % head sep
+{   9pt}  % foot height
+{ 0.3in}  % foot sep
 
 
 
@@ -82,20 +80,22 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
-% ----------------------------
+% ------------------------------
 \usepackage{latexgeneralcommands}
 % \usepackage{mathshortcuts}
 
 
 
-% ----------------------------
+% ------------------------------
 % Ustawienia różnych parametrów tekstu
-% ----------------------------
-\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+% ------------------------------
+\renewcommand{\baselinestretch}{1.1}
+
+% Ustawienie szerokości odstępów między wierszami w tabelach.
+\renewcommand{\arraystretch}{1.4}
 
 
 
@@ -159,15 +159,20 @@
 % ############################
 \Work{ % Autor i tytuł dzieła
   Shing-Tung Yau, Steve Nadis \\
-  „Geometria teorii strun. Ukryte wymiary przestrzeni”,
-  \cite{YauNadisGeometriaTeoriiStrun2012} }
+  \textit{Geometria teorii strun. Ukryte wymiary przestrzeni},
+  \cite{YauNadisGeometriaTeoriiStrun2012}}
+
+\vspace{0em}
 
 
 % ##################
-\CenterBoldFont{Uwagi do konkretnych stron}
+\CenterBoldFont{Uwagi do~konkretnych stron}
+
+\vspace{0em}
 
 
-\start \Str{10} Na tej stronie pierwszy raz jest mowa o~książce
+\noindent
+\Str{10} Na tej stronie pierwszy raz jest mowa o~książce
 \textit{Kształt wewnętrzny przestrzeni}, co jest oryginalny, angielskim
 tytułem książki w~której to czytamy. Aby~zachować porządek, należałoby
 użyć przyjętego tytułu tego tłumaczenia: \textit{Geometria teorii strun}.
@@ -176,7 +181,10 @@ użyć przyjętego tytułu tego tłumaczenia: \textit{Geometria teorii strun}.
 
 
 
-\start \Str{109} Dla osoby nie znającej analizy matematycznej,
+
+
+\noindent
+\Str{109} Dla osoby nie znającej analizy matematycznej,
 zilustrowanie zbioru czterowymiarowego za pomocą zmieniającego~się
 położenia obiektu trójwymiarowego, czyli funkcji trzech współrzędnych
 i~czasu, nie jest zbyt wielką pomocą.
@@ -212,8 +220,10 @@ dwuwymiarowy.
 
 \end{center}
 
-
 \vspace{\spaceOne}
+
+
+
 % ############################
 
 
@@ -235,6 +245,7 @@ dwuwymiarowy.
 % ####################################################################
 % ####################################################################
 % Bibliografia
+
 \bibliographystyle{plalpha}
 
 \bibliography{MathComScienceBooks}{}

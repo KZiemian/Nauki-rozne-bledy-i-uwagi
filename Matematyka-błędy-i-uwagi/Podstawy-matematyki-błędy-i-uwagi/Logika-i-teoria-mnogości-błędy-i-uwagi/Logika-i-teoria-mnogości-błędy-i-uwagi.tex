@@ -1,33 +1,33 @@
 % ---------------------------------------------------------------------
-% Basic configuraton of LaTeX document and Polish language
+% Podstawowe ustawienia i pakiety
 % ---------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag}  % Find out deprecated part of LaTeX.
-% More information in l2tabu English version.
-
-
+\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
 \documentclass[a4paper,11pt]{article}
 % {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
-\usepackage{lmodern} % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
-
-\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
 % w języku angielskim.
+\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
 
 
 
-
-
-
-
-
-
-% ---------------------------------------
-% MARGINS
-% ---------------------------------------
+% ------------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ------------------------------
+\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
+\usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+\usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
+\usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
+% wprowadzane bezpośrednio w tekście.
 \usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ------------------------------
+% Margins
+% ------------------------------
 \setmarginsrb
 { 0.7in}  % left margin
 { 0.6in}  % top margin
@@ -40,38 +40,19 @@
 
 
 
-
-
-
-
-% ---------------------------------------
-% Basic packages
-% ---------------------------------------
-\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
-% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
-% % grafiki.
-% \usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
-% \usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
-% % wprowadzane bezpośrednio w tekście.
-
-
-
-% ---------------------------------------
-% Often used packages
-% ---------------------------------------
+% ------------------------------
+% Często przydatne pakiety
+% ------------------------------
+\usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
 \usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
 % więcej, ale ja nie potrafię nic o tym powiedzieć).
 
 
 
-
-
-
-
-% ---------------------------------------
-% Packages for scientific writing
-% ---------------------------------------
-\let\lll\undefined  % Amsmath gryzie się z pakietami do języka
+% ------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ------------------------------
+\let\lll\undefined  % Amsmath gryzie się z językiem pakietami do języka
 % polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
 % oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
 \usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
@@ -80,54 +61,39 @@
 % \usepackage{siunitx}  % Do prostszego pisania jednostek fizycznych
 \usepackage{upgreek}  % Ładniejsze greckie litery
 % Przykładowa składnia: pi = \uppi
-% \usepackage{slashed}  % Pozwala w prosty sposób pisać slash Feynmana.
-\usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
+\usepackage{slashed}  % Pozwala w prosty sposób pisać slash Feynmana.
+% \usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
 % na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
 % nie wiem.
+\usepackage{tikz-cd}  % Do rysowania grafów przemiennych
 
 
 
-% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
-\newtheorem{theorem}{Twierdzenie}  % Komenda wprowadzająca otoczenie
-% „twr” do pisania twierdzeń matematycznych
-\newtheorem{definition}{Definicja}  % Analogicznie jak powyżej
+% ------------------------------
+% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
+% ------------------------------
+% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
+% matematycznych.
+\newtheorem{theorem}{Twierdzenie}
+% Analogicznie jak powyżej
+\newtheorem{definition}{Definicja}
 \newtheorem{corollary}{Wniosek}
 
 
 
-
-
-
-
-% ---------------------------------------
-% Various setting for this document
-% ---------------------------------------
-\renewcommand{\baselinestretch}{1.1}
-
-\renewcommand{\arraystretch}{1.4}  % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
-
-
-
-
-
-
-
-% ---------------------------------------
-% Packages written by us
-% ---------------------------------------
+% ------------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ------------------------------
+% \usepackage{reedsimon}  % Pakiet napisany konkretnie dla tego pliku.
 \usepackage{latexgeneralcommands}
-% \usepackage{mathshortcuts}
+\usepackage{mathcommands}
 
 
 
-
-
-
-
-% ---------------------------------------------------------------------
-% Additional setting for Polish language
-% ---------------------------------------------------------------------
+% ---------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% ---------------------------------------
 \renewcommand{\thesection}{\arabic{section}.}
 % Kropki po numerach rozdziału (polski zwyczaj topograficzny)
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}}
@@ -135,10 +101,13 @@
 
 
 
+% ------------------------------
+% Ustawienia różnych parametrów tekstu
+% ------------------------------
+\renewcommand{\baselinestretch}{1.1}
 
-
-
-
+% Ustawienie szerokości odstępów między wierszami w tabelach.
+\renewcommand{\arraystretch}{1.4}
 
 
 
@@ -161,7 +130,7 @@
 % ---------------------------------------------------------------------
 % Tytuł i autor tekstu
 \title{Logika i~teoria mnogości \\
-  Błędy i~uwagi}
+  {\Large Błędy i~uwagi}}
 
 \author{Kamil Ziemian}
 
@@ -206,16 +175,16 @@
 % ############################
 \Work{ % Autor i tytuł dzieła
   Józef W.~Bremer \\
-  „Wprowadzenie do~logiki”, \cite{BremerWprowadzenieDoLogiki2004} }
+  \textit{Wprowadzenie do~logiki}, \cite{BremerWprowadzenieDoLogiki2004}}
 
 
 % ##################
 \CenterBoldFont{Uwagi}
 
 
-\start \StrWg{132}{1} Zdanie
-„$p \vee q ( ( p \land q ) \to ( p \land q ) )$” nie ma żadnego sensu
-logicznego, musiał zostać zgubiony spójnik logiczny po~pierwszym~$q$.
+\noindent
+\StrWg{132}{1} Zdanie „$p \vee q ( ( p \land q ) \to ( p \land q ) )$” nie ma żadnego
+sensu logicznego, musiał zostać zgubiony spójnik logiczny po~pierwszym~$q$.
 Niestety nie wiem który z nich należy tam umieścić.
 
 
@@ -235,8 +204,9 @@ Niestety nie wiem który z nich należy tam umieścić.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    4   &  8 & & LATEX & \LaTeX \\
-    13  & &  8 & \textit{formalnej} & \textit{formalnej}; \\
+    \hphantom{00}4 & \hphantom{0}8 & & LATEX & \LaTeX \\
+    \hphantom{0}13 & & \hphantom{0}8 & \textit{formalnej}
+           & \textit{formalnej}; \\
     20  & & 15 & Ockhama”$^{ 7 }$. & Ockhama”$^{ 7 }$, \\
     21  & 14 & & Współczesnych & współczesnych \\
     26  & &  2 & \textit{Lwowsko-\! Warszawska}
@@ -296,10 +266,13 @@ Niestety nie wiem który z nich należy tam umieścić.
   \textit{Zarys logiki matematycznej},
   \cite{GrzegorczykZarysLogikiMatematycznej1975}}
 
+\noindent
 
 
 % ##################
-\CenterBoldFont{Uwagi do konkretnych stron}
+\CenterBoldFont{Uwagi do~konkretnych stron}
+
+\noindent
 
 
 \noindent
@@ -397,6 +370,8 @@ co zostało powyżej napisane.
 
 \end{center}
 
+\vspace{\spaceTwo}
+
 
 \noindent
 \StrWd{7}{4} \\
@@ -404,7 +379,7 @@ co zostało powyżej napisane.
 \Powin przedmioty $a_{ 1 }, a_{ 2 }, \ldots, a_{ k }$ \\
 
 
-\vspace{\spaceTwo}
+
 % ############################
 
 
@@ -421,7 +396,7 @@ co zostało powyżej napisane.
 
 \Work{ % Autor i tytuł dzieła
   Willard Van Orman Quine \\
-  „Logika matematyczna”, \cite{QuineLogikaMatematyczna1974} }
+  \textit{Logika matematyczna}, \cite{QuineLogikaMatematyczna1974}}
 
 
 % ##################
@@ -484,6 +459,7 @@ co zostało powyżej napisane.
 % ####################################################################
 % ####################################################################
 % Bibliografia
+
 \bibliographystyle{plalpha}
 
 \bibliography{MathComScienceBooks}{}
