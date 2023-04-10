@@ -73,8 +73,10 @@
 % ------------------------------
 \renewcommand{\baselinestretch}{1.1}
 
-\renewcommand{\arraystretch}{1.4} % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+% Ustawienie szerokości odstępów między wierszami w tabelach.
+\renewcommand{\arraystretch}{1.4}
+
+
 
 
 
@@ -211,6 +213,8 @@ Należałoby~by sprawdzić, czy~został poprawnie przetłumaczony.
 
 
 % ############################
+\newpage
+
 \Work{ % Autor i tytuł dzieła
   Sanctae Jak Klimak \\
   \textit{Drabina raju}, \cite{SancteJanKlimakDrabinaRaju2011}}
@@ -272,9 +276,9 @@ wolę tę drugą konwencję.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    51  &  8 & & zostawia” & zostawia \\
-    92  & 16 & & Od & „Od \\
-    122 &  9 & & punicka. & punicka.” \\
+    \hphantom{0}51 & \hphantom{0}8 & & zostawia” & zostawia \\
+    \hphantom{0}92 & 16 & & Od & „Od \\
+    122 & \hphantom{0}9 & & punicka. & punicka.” \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -312,6 +316,8 @@ wolę tę drugą konwencję.
 
 
 % ##################
+\newpage
+
 \CenterBoldFont{Błędy}
 
 % \vspace{\spaceFive}
@@ -321,42 +327,87 @@ wolę tę drugą konwencję.
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    & \multicolumn{2}{c|}{} & & \\
     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    28  &  3 & & ( 1 & (1 \\
-    31  & &  7 & \textit{WIEDZĄ~?} & \textit{WIEDZĄ?} \\
-    32  & & 13 & \textit{WIEDZĄ~?} & \textit{WIEDZĄ?} \\
-    32  & &  3 & bo-wiem & bowiem \\
-    32  & &  2 & [Mądrość]dała & [Mądrość] dała \\
-    33  & 12 & & n~i~ż~s~z~e~~władze & n~i~ż~s~z~e\, władze \\
-    33  & 14 & & n~a~d~r~z~ę~d~n~e~j~~władzy
+    28 & \hphantom{0}3 & & ( 1 & (1 \\
+    31 & & \hphantom{0}7 & \textit{WIEDZĄ~?} & \textit{WIEDZĄ?} \\
+    32 & & 13 & \textit{WIEDZĄ~?} & \textit{WIEDZĄ?} \\
+    32 & & \hphantom{0}3 & bo-wiem & bowiem \\
+    32 & & \hphantom{0}2 & [Mądrość]dała & [Mądrość] dała \\
+    33 & 12 & & n~i~ż~s~z~e~~władze & n~i~ż~s~z~e\, władze \\
+    33 & 14 & & n~a~d~r~z~ę~d~n~e~j~~władzy
            & n~a~d~r~z~ę~d~n~e~j\, władzy \\
-    33  & & 11 & \textit{PRAKTYCZNĄ~?} & \textit{PRAKTYCZNĄ?} \\
-    34  & &  1 & za & ta \\
-    35  & 13 & & ludzkiego”. & ludzkiego. \\
-    35  & &  9 & \textit{MĄDROŚCIĄ~?} & \textit{MĄDROŚCIĄ?} \\
-    36  &  3 & & jest & nie jest \\
-    37  & 19 & & \textit{BÓG~?} & \textit{BÓG?} \\
-    37  & & 14 & jest$^{ 2 }$ & jest''$^{ 2 }$ \\
-    37  &  9 & & n & na \\
-    38  & & 15 & \textit{UZASADNIAĆ~?} & \textit{UZASADNIAĆ~?} \\
-    38  & & 13 & Gdzie & „Gdzie \\
-    38  & &  3 & biskupie & o~biskupie \\
-    39  & &  1 & teologii~! & teologii! \\
-    40  & & 16 & \textit{PRZENOŚNI~?} & \textit{PRZENOŚNI?} \\
-    41  & 15 & & niewykształconych”$^{ 5 }$
+    33 & & 11 & \textit{PRAKTYCZNĄ~?} & \textit{PRAKTYCZNĄ?} \\
+    34 & & \hphantom{0}1 & za & ta \\
+    35 & 13 & & ludzkiego”. & ludzkiego. \\
+    35 & & \hphantom{0}9 & \textit{MĄDROŚCIĄ~?} & \textit{MĄDROŚCIĄ?} \\
+    36 & \hphantom{0}3 & & jest & nie jest \\
+    37 & 19 & & \textit{BÓG~?} & \textit{BÓG?} \\
+    37 & & 14 & jest$^{ 2 }$ & jest''$^{ 2 }$ \\
+    37 & \hphantom{0}9 & & n & na \\
+    38 & & 15 & \textit{UZASADNIAĆ~?} & \textit{UZASADNIAĆ~?} \\
+    38 & & 13 & Gdzie & „Gdzie \\
+    38 & & \hphantom{0}3 & biskupie & o~biskupie \\
+    39 & & \hphantom{0}1 & teologii~! & teologii! \\
+    40 & & 16 & \textit{PRZENOŚNI~?} & \textit{PRZENOŚNI?} \\
+    41 & 15 & & niewykształconych”$^{ 5 }$
            & niewykształconych”$^{ 5 }$) \\
-    41  & 20 & & i~~d~l~a & i{}\, d~l~a \\
-    42  &  5 & & \textit{ZNACZEŃ~?} & \textit{ZNACZEŃ?} \\
-    44  &  1 & & \textit{JEST~?} & \textit{JEST~?} \\
-    44  & 17 & & \textit{SIEBIE~?} & \textit{SIEBIE?} \\
-    45  & &  6 & pond & ponad \\
-    46  & 10 & & \textit{BOGA~?} & \textit{BOGA?} \\
-    47  & & 13 & \textit{ISTNIEJE~?} & \textit{ISTNIEJ?} \\
-    48  & & 16 & druga & Druga \\
+    41 & 20 & & i~~d~l~a & i{}\, d~l~a \\
+    42 & \hphantom{0}5 & & \textit{ZNACZEŃ~?} & \textit{ZNACZEŃ?} \\
+    44 & \hphantom{0}1 & & \textit{JEST~?} & \textit{JEST~?} \\
+    44 & 17 & & \textit{SIEBIE~?} & \textit{SIEBIE?} \\
+    45 & & \hphantom{0}6 & pond & ponad \\
+    46 & 10 & & \textit{BOGA~?} & \textit{BOGA?} \\
+    47 & & 13 & \textit{ISTNIEJE~?} & \textit{ISTNIEJ?} \\
+    48 & & 16 & druga & Druga \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  \newpage
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % 28  &  3 & & ( 1 & (1 \\
+    % 31  & &  7 & \textit{WIEDZĄ~?} & \textit{WIEDZĄ?} \\
+    % 32  & & 13 & \textit{WIEDZĄ~?} & \textit{WIEDZĄ?} \\
+    % 32  & &  3 & bo-wiem & bowiem \\
+    % 32  & &  2 & [Mądrość]dała & [Mądrość] dała \\
+    % 33  & 12 & & n~i~ż~s~z~e~~władze & n~i~ż~s~z~e\, władze \\
+    % 33  & 14 & & n~a~d~r~z~ę~d~n~e~j~~władzy
+    %        & n~a~d~r~z~ę~d~n~e~j\, władzy \\
+    % 33  & & 11 & \textit{PRAKTYCZNĄ~?} & \textit{PRAKTYCZNĄ?} \\
+    % 34  & &  1 & za & ta \\
+    % 35  & 13 & & ludzkiego”. & ludzkiego. \\
+    % 35  & &  9 & \textit{MĄDROŚCIĄ~?} & \textit{MĄDROŚCIĄ?} \\
+    % 36  &  3 & & jest & nie jest \\
+    % 37  & 19 & & \textit{BÓG~?} & \textit{BÓG?} \\
+    % 37  & & 14 & jest$^{ 2 }$ & jest''$^{ 2 }$ \\
+    % 37  &  9 & & n & na \\
+    % 38  & & 15 & \textit{UZASADNIAĆ~?} & \textit{UZASADNIAĆ~?} \\
+    % 38  & & 13 & Gdzie & „Gdzie \\
+    % 38  & &  3 & biskupie & o~biskupie \\
+    % 39  & &  1 & teologii~! & teologii! \\
+    % 40  & & 16 & \textit{PRZENOŚNI~?} & \textit{PRZENOŚNI?} \\
+    % 41  & 15 & & niewykształconych”$^{ 5 }$
+    %        & niewykształconych”$^{ 5 }$) \\
+    % 41  & 20 & & i~~d~l~a & i{}\, d~l~a \\
+    % 42  &  5 & & \textit{ZNACZEŃ~?} & \textit{ZNACZEŃ?} \\
+    % 44  &  1 & & \textit{JEST~?} & \textit{JEST~?} \\
+    % 44  & 17 & & \textit{SIEBIE~?} & \textit{SIEBIE?} \\
+    % 45  & &  6 & pond & ponad \\
+    % 46  & 10 & & \textit{BOGA~?} & \textit{BOGA?} \\
+    % 47  & & 13 & \textit{ISTNIEJE~?} & \textit{ISTNIEJ?} \\
+    % 48  & & 16 & druga & Druga \\
     49  & & 14 & poznania,{ }, & poznania, \\
     60  & & 16 & zak & tak \\
     % & & & & \\
@@ -438,6 +489,7 @@ problemu warto zobaczyć komentarze tłumacza na stronach 224--225.
 
 
 
+\noindent
 \StrWg{49}{1} Zdanie „Dalej: rzeczy zgodne z~naturą mają
 w~sobie doskonałość, bowiem natura posługuje~się jednostkami --~i~tak
 jest najlepiej” powinno według mnie brzmieć raczej „Rzeczy zgodne
@@ -619,15 +671,30 @@ stron.
     244 & 12 & & zasłuży. & zasłuży, \\
     268 & &  2 & \ldots InSent & InSent \\
     286 & 12 & & ma~bowiem był~on & jest \\
-    % & & & & \\
-    % & & & & \\
     315 & &  2 & Dzieje Polski w~zarysie
     & \textit{Dzieje Polski w~zarysie} \\
     317 & 12 & & Własność & własność \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  \newpage
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
     317 & 12 & & Podatki & podatki \\
     317 & 13 & & Gospodarcza & gospodarcza \\
     317 & 13 & & Korupcja & korupcja \\
     317 & 14 & & Granice & granice \\
+    % & & & & \\
+    % & & & & \\
     \hline
   \end{tabular}
 
@@ -792,11 +859,11 @@ Tu~musi być jakiś błąd.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    35  & 12 & & \textit{Części} & części \\
-    47  &  3 & & skondensowana & skondensowania \\
-    57  &  7 & & tej & tych \\
-    61  &  7 & & starta & wytarta \\
-    88  & &  8 & pomagającymi & wspomagającymi \\
+    \hphantom{0}35 & 12 & & \textit{Części} & części \\
+    \hphantom{0}47 & \hphantom{0}3 & & skondensowana & skondensowania \\
+    \hphantom{0}57 & \hphantom{0}7 & & tej & tych \\
+    \hphantom{0}61 & \hphantom{0}7 & & starta & wytarta \\
+    \hphantom{0}88 & & \hphantom{0}8 & pomagającymi & wspomagającymi \\
     117 & 13 & & 3) A~dalej & A~dalej \\
     119 & & 12 & 4) & 3) \\
     122 & & 11 & świat?” & świat? \\
@@ -804,44 +871,30 @@ Tu~musi być jakiś błąd.
     122 & & 10 & godzien” & godzien<<  % >>
     \\
     122 & & 10 & „nauczyć & >>nauczyć \\
-    122 & &  9 & wyrok” & wyrok<<  % >>
+    122 & & \hphantom{0}9 & wyrok” & wyrok<<  % >>
     \\
-    130 & &  1 & ukazały, dopóty & ukazały, \\
+    130 & & \hphantom{0}1 & ukazały, dopóty & ukazały, \\
     134 & 15 & & działo~się & było \\
     139 & & 10 & „Mądrości Bożej” & >>Mądrości Bożej<<”  % >>
     \\
-    145 &  1 & & fakt; & fakt \\
+    145 & \hphantom{0}1 & & fakt; & fakt \\
     160 & & 11 & co~innego & coś~innego \\
-    160 & &  9 & znajdziemy & znajdziemy tam \\
-    167 &  2 & & ustępowałem; & ustępowałem, \\
+    160 & & \hphantom{0}9 & znajdziemy & znajdziemy tam \\
+    167 & \hphantom{0}2 & & ustępowałem; & ustępowałem, \\
     174 & 12 & & uważa & uważam \\
-    176 &  3 & & praktycznego”\ldots „Bogate & praktycznego”, „Bogate \\
-    176 & &  5 & przeciwnik & czynnik \\
-    178 & &  8 & tak & tak~to \\
-    182 &  9 & & intuicje & intuicje odnośnie \\
+    176 & \hphantom{0}3 & & praktycznego”\ldots „Bogate
+    & praktycznego”, „Bogate \\
+    176 & & \hphantom{0}5 & przeciwnik & czynnik \\
+    178 & & \hphantom{0}8 & tak & tak~to \\
+    182 & \hphantom{0}9 & & intuicje & intuicje odnośnie \\
     182 & 13 & & znosić & zaprzeczać \\
     182 & & 11 & przeciwieństwo & przeciwieństwa \\
-    182 & &  1 & „tak” & >>tak<<  % >>
+    182 & & \hphantom{0}1 & „tak” & >>tak<<  % >>
     \\
     182 & &  1 & „nie” & >>nie<<”  % >>
     \\
     183 & 10 & & życzący & nie życzący \\
     193 & & 11 & dzieciństwem” & dzieciństwem \\
-    194 & &  8 & punkt & argument \\
-    194 & &  7 & punktem & argumentem \\
-    194 & &  7 & punktem & argumentem \\
-    195 &  3 & & pewien punkt & pewne rzeczy \\
-    199 & 11 & & 1156 & 1556 \\
-    203 & &  2 & stale & stałe \\
-    221 & &  5 & puseyizmu”. & puseyizmu. \\
-    224 & & 12 & wnioskiem. & wnioskiem”. \\
-    227 & & 11 & Liście & liście \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
     \hline
   \end{tabular}
 
@@ -858,11 +911,20 @@ Tu~musi być jakiś błąd.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    250 &  5 & & nieistniejącego & istniejącego \\
-    254 &  9 & & więzieniu. & więzieniu.'' \\
+    194 & & \hphantom{0}8 & punkt & argument \\
+    194 & & \hphantom{0}7 & punktem & argumentem \\
+    194 & & \hphantom{0}7 & punktem & argumentem \\
+    195 & \hphantom{0}3 & & pewien punkt & pewne rzeczy \\
+    199 & 11 & & 1156 & 1556 \\
+    203 & & \hphantom{0}2 & stale & stałe \\
+    221 & & \hphantom{0}5 & puseyizmu”. & puseyizmu. \\
+    224 & & 12 & wnioskiem. & wnioskiem”. \\
+    227 & & 11 & Liście & liście \\
+    250 & \hphantom{0}5 & & nieistniejącego & istniejącego \\
+    254 & \hphantom{0}9 & & więzieniu. & więzieniu.'' \\
     254 & 10 & & Boże & „Boże \\
     254 & 10 & & „Śniłem & Śniłem \\
-    259 & &  3 & mnie & niej \\
+    259 & & \hphantom{0}3 & mnie & niej \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -980,7 +1042,7 @@ z tej nocy\ldots
 \Str{41} Pierwszy akapit na tej kończy się cudzysłowem zamykającym, lecz
 nie ma w nim nigdzie cudzysłowu otwierającego.
 
-% \vspace{\spaceFour}
+\vspace{\spaceFour}
 
 
 
@@ -988,8 +1050,6 @@ nie ma w nim nigdzie cudzysłowu otwierającego.
 
 % ##################
 \CenterBoldFont{Błędy}
-
-\vspace{\spaceFive}
 
 
 \begin{center}
@@ -1000,10 +1060,10 @@ nie ma w nim nigdzie cudzysłowu otwierającego.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    17  & 12 & & \textit{Karl. Barth.} & \textit{Karl Barth.} \\
-    139 & &  6 & Tage & \textit{Tage} \\
-    153 & &  4 & (1972);(pol. & (1972); (pol. \\
-    153 & &  2 & ($^{ 2 }$1988) & (1988) \\
+    \hphantom{0}17 & 12 & & \textit{Karl. Barth.} & \textit{Karl Barth.} \\
+    139 & & \hphantom{0}6 & Tage & \textit{Tage} \\
+    153 & & \hphantom{0}4 & (1972);(pol. & (1972); (pol. \\
+    153 & & \hphantom{0}2 & ($^{ 2 }$1988) & (1988) \\
     217 & & 14 & eologa & teologa \\
     % & & & & \\
     % & & & & \\
@@ -1125,6 +1185,8 @@ i~indeks skrótów.
 
 
 % ############################
+\newpage
+
 \Work{ % Autor i tytuł dzieła
   Michael Davies \\
   \textit{Sobór Papieża Jana. Rewolucja liturgiczna}, \cite{}}
@@ -1226,12 +1288,12 @@ i~indeks skrótów.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    84  &  2 & & społeczeństwie” & „społeczeństwie” \\
+    \hphantom{0}84 & \hphantom{0}2 & & społeczeństwie” & „społeczeństwie” \\
     109 & & 15 & nacjonalizmu & racjonalizmu \\
     118 & & 10 & był & został \\
-    155 &  9 & & nie & się \\
+    155 & \hphantom{0}9 & & nie & się \\
     193 & 17 & & nie są & są \\
-    258 & &  5 & \textit{rolą} & \textit{z rolą} \\
+    258 & & \hphantom{0}5 & \textit{rolą} & \textit{z rolą} \\
     262 & 17 & & \textit{upadku} & \textit{upadku.} \\
     269 & 12 & & \textit{Quanta cura} & \textit{Quas primas} \\
     269 & 17 & & \textit{Quanta cura} & \textit{Quas primas} \\
@@ -1315,12 +1377,13 @@ teologa. Osobną sprawą jest jego związek z~tradycją tomistyczną.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    21  & 16 & & 1844--1970 & 1844--1900 \\
-    27  & &  9 & transcendentalne piękno & transcendentalnym pięknem \\
-    46  & & 13 & 1947 & 1847 \\
-    71  & & 11 & „przyjścia & >>przyjścia \\
-    71  & &  7 & domu” & domu<< \\
-    78  & 12 & & ona z~tego & z~niej \\
+    21 & 16 & & 1844--1970 & 1844--1900 \\
+    27 & & \hphantom{0}9 & transcendentalne piękno
+    & transcendentalnym pięknem \\
+    46 & & 13 & 1947 & 1847 \\
+    71 & & 11 & „przyjścia & >>przyjścia \\
+    71 & & \hphantom{0}7 & domu” & domu<< \\
+    78 & 12 & & ona z~tego & z~niej \\
     \hline
   \end{tabular}
 
@@ -1340,7 +1403,7 @@ teologa. Osobną sprawą jest jego związek z~tradycją tomistyczną.
 
 \Work{ % Autor i tytuł dzieła
   R. M. Wiltgen \\
-  \textit{Ren wpada do Tybru}, \cite{WiltgenRenWpadaDoTybru2010}}
+  \textit{Ren wpada do~Tybru}, \cite{WiltgenRenWpadaDoTybru2010}}
 
 
 % ##################
@@ -1355,10 +1418,10 @@ teologa. Osobną sprawą jest jego związek z~tradycją tomistyczną.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    18  &  5 & & dwunastu do czterech & dwunastu \\
+    18  & \hphantom{0}5 & & dwunastu do czterech & dwunastu \\
     40  & & 16 & te & że \\
-    42  &  3 & & Kantonu(Dahomej) & Kantonu (Dahomej) \\
-    44  & &  6 & konferencji,tego & konferencji, tego \\
+    42  & \hphantom{0}3 & & Kantonu(Dahomej) & Kantonu (Dahomej) \\
+    44  & & \hphantom{0}6 & konferencji,tego & konferencji, tego \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
