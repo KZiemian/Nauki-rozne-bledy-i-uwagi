@@ -467,9 +467,13 @@ rozpatrywaną sumę w~następujący sposób.
       \sum_{ k = 1 }^{ ( n - 1 ) / 2 } k + \sum_{ k = ( n + 1 ) / 2 }^{ n } k \geq
       \sum_{ k = 1 }^{ ( n - 1 ) / 2 } 0 + \sum_{ k = ( n + 1 ) / 2 }^{ n } k \geq
       \sum_{ k = ( n + 1 ) / 2 }^{ n } \frac{ n + 1 }{ 2 } = \\
-    &= \left( \frac{ n + 1 }{ 2 } \right)^{ 2 } = \Omega( n^{ 2 } ).
+    &= \left( \frac{ n + 1 }{ 2 } \right)^{ 2 } =
+      \frac{ n^{ 2 } + 2n + 1 }{ 4 } \geq
+      \left( \frac{ n }{ 2 } \right )^{ 2 } \geq \Omega( n^{ 2 } ).
   \end{split}
 \end{equation}
+By otrzymać ostatnią nierówność skorzystaliśmy z~tego, że~wszystkie
+rozpatrywane wyrazy są nieujemne.
 
 \vspace{\spaceFour}
 
