@@ -339,7 +339,83 @@ może da się to jakoś poprawić?
 
 
 \noindent
-\Str{21}
+\Str{21} Zastanówmy~się nad znaczeniem użytego na tej stronie wyrażenia
+\begin{equation}
+  \label{eq:Semadeni-Wiweger-WstepETC-02}
+  v_{ B_{ 1 }, \, B_{ 2 }, \, B_{ 3 } }^{ \Bfrak } \subset
+  v_{ B_{ 1 }, \, B_{ 2 }, \, B_{ 3 } }^{ \Ufrak },
+\end{equation}
+która ma obowiązywać dla dowolnych $B_{ 1 }, B_{ 2 }, B_{ 3 } \in \Bfrak^{ 0 }$.
+Według tego co napisano na stronie 15 tej książki,
+$v_{ A, \, B, \, C }^{ \Ufrak }$, gdzie $A, B, C \in \Ufrak$ to przekształcenie
+\begin{equation}
+  \label{eq:Semadeni-Wiweger-WstepETC-03}
+  v_{ A, \, B, \, C }^{ \Ufrak } :
+  \langle A, B \rangle_{ \Ufrak } \times \langle B, C \rangle_{ \Ufrak } \to
+  \langle A, C \rangle_{ \Ufrak }.
+\end{equation}
+Ponieważ na tejże stronie 15 jest stwierdzone, że~dla wszystkich
+$A, B \in \Ufrak$, $\langle A, B \rangle_{ \Ufrak }$ jest zbiorem. Tym samym przekształcenie
+$v_{ A, \, B, \, C }^{ \Ufrak }$ (por. str.~17 książki) można utożsamić z~trójką
+\begin{equation}
+  \label{eq:Semadeni-Wiweger-WstepETC-04}
+  \bigg( \left\{ \left(\alpha, \beta, v_{ A, \, B, \, C }^{ \Ufrak }( \alpha, \beta )
+    \right) \, \Big| \,
+    \alpha \in \langle A, B \rangle_{ \Ufrak }, \, \beta \in \langle B, C \rangle_{ \Ufrak } \right\}, \,
+  \langle A, B \rangle_{ \Ufrak } \times \langle B, C \rangle_{ \Ufrak }, \,
+  \langle A, C \rangle_{ \Ufrak } \bigg).
+\end{equation}
+Wobec tego wyrażenie \eqref{eq:Semadeni-Wiweger-WstepETC-02} należy rozumieć
+jako skrótowy zapis tego, że~dziedziny i~kodziedziny
+$v_{ B_{ 1 }, \, B_{ 2 }, \, B_{ 3 } }^{ \Ufrak }$
+oraz~$v_{ B_{ 1 }, \, B_{ 2 }, \, B_{ 3 } }^{ \Ufrak }$ są równe, oraz tego~że
+\begin{equation}
+  \label{eq:Semadeni-Wiweger-WstepETC-05}
+  \begin{split}
+    &\left\{ \left( \alpha, \beta,
+      v_{ B_{ 1 }, \, B_{ 2 }, \, B_{ 3 } }^{ \Bfrak }( \alpha, \beta )
+      \right)
+      \, \Big| \,
+      \alpha \in \langle B_{ 1 }, \, B_{ 2 } \rangle_{ \Bfrak }, \,
+      \beta \in \langle B_{ 2 }, \, B_{ 3 } \rangle_{ \Bfrak } \right\}
+      \subset \\
+    &\quad
+      \subset
+      \left\{ \left( \gamma, \delta,
+      v_{ B_{ 1 }, \, B_{ 2 }, \, B_{ 3 } }^{ \Ufrak }( \gamma, \delta )
+      \right)
+      \, \Big| \,
+      \gamma \in \langle B_{ 1 }, \, B_{ 2 } \rangle_{ \Ufrak }, \,
+      \delta \in \langle B_{ 2 }, \, B_{ 3 } \rangle_{ \Ufrak } \right\}.
+  \end{split}
+\end{equation}
+Warto zauważyć, iż~z~powyższej zależności wynika od razu warunek numer
+(\romannumeral2) na to by kategoria $\Bfrak$ była podkategorią $\Ufrak$,
+czyli~że
+\begin{equation}
+  \label{eq:Semadeni-Wiweger-WstepETC-06}
+  \langle B_{ 1 }, B_{ 2 } \rangle_{ \Bfrak } \subset \langle B_{ 1 }, B_{ 3 } \rangle_{ \Ufrak }
+\end{equation}
+dla dowolnych $B_{ 1 }, B_{ 2 } \in \Bfrak^{ 0 }$. Tym samym widzimy,
+że~warunek (\romannumeral3) implikuje warunek (\romannumeral2).
+
+Jest jednak dość oczywiste, że~w~umyśle autorów to inny wniosek z~zależności
+\eqref{eq:Semadeni-Wiweger-WstepETC-05} jest kluczowy. Ten mianowicie, że
+\begin{equation}
+  \label{eq:Semadeni-Wiweger-WstepETC-07}
+  v_{ B_{ 1 }, \, B_{ 2 }, \, B_{ 3 } }^{ \Bfrak }( \alpha, \beta ) =
+  \beta \alpha =
+  v_{ B_{ 1 }, \, B_{ 2 }, \, B_{ 3 } }^{ \Ufrak }( \alpha, \beta ),
+\end{equation}
+dla wszystkich $B_{ 1 }, B_{ 2 }, B_{ 3 } \in \Bfrak^{ 0 }$ i~dla wszystkich
+$\alpha \in \langle B_{ 1 }, B_{ 2 } \rangle_{ \Bfrak }$, $\beta \in \langle B_{ 2 }, B_{ 3 } \rangle_{ \Bfrak }$.
+Inaczej mówiąc, jeśli można złożyć przekształcenia $\alpha$, $\beta$ w~kategorii
+$\Bfrak$ to można je też złożyć w~kategorii $\Ufrak$ i~w~obu przypadkach
+otrzymujemy jako wynik to samo przekształcenie, które oznaczamy przez
+$\beta \alpha$.
+
+Tym samy wyjaśniliśmy jaki jest dokładny sens wzoru
+\eqref{eq:Semadeni-Wiweger-WstepETC-02}.
 
 \vspace{\spaceFour}
 
