@@ -7,10 +7,26 @@
 
 
 
-
+% ##################
 % Pics for drawing points
+
 \tikzset{
   point/.pic = {
     \fill (0,0) circle [radius=0.09];
   },
 }
+% ##################
+
+
+
+
+
+% ##################
+% Pics for drawing ticks on the axis
+
+\tikzset{
+  tick x axis thin 1/.pic = {
+    \draw[line width=0.4] (0,-0.125) -- (0,0.125);
+  },
+}
+% ##################
