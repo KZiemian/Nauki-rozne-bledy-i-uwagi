@@ -468,8 +468,8 @@ na sumę szeregów:
   \left( \frac{ n }{ 2 } \right)^{ 2 }.
 \end{equation}
 Zwróćmy uwagę na to, że~oszacowania od dołu \textit{nie} otrzymujemy poprzez
-zastąpienie ograniczenie wyrazów każdej sumy poprzez najmniejszy z~nich.
-W~takiej sytuacji wyrazy pierwszej sumy musielibyśmy ograniczyć przez~$1$,
+zastąpienie wyrazów każdej sumy poprzez najmniejszy z~nich. W~takiej
+sytuacji wyrazy pierwszej sumy musielibyśmy ograniczyć przez~$1$,
 zaś drugiej przez $\frac{ n }{ 2 } + 1$, jednak dla wygody rachunkowej
 użyliśmy odpowiednio $0$ i~$\frac{ n }{ 2 }$, czyli wielkości o~jeden
 mniejszych od najmniejszego wyrazów danej sumy. Zwróćmy też uwagę na to,
@@ -504,7 +504,7 @@ rozpatrywaną sumę w~następujący sposób.
     &=
       \sum_{ k = 1 }^{ ( n - 1 ) / 2 } k + \sum_{ k = ( n + 1 ) / 2 }^{ n } k \geq
       \sum_{ k = 1 }^{ ( n - 1 ) / 2 } 0 + \sum_{ k = ( n + 1 ) / 2 }^{ n } k \geq
-      \sum_{ k = ( n + 1 ) / 2 }^{ n } \frac{ n + 1 }{ 2 } = \\
+      \sum_{ k = ( n + 1 ) / 2 }^{ n } \frac{ n + 1 }{ 2 } = \\[0.5em]
     &= \left( \frac{ n + 1 }{ 2 } \right)^{ 2 } =
       \frac{ n^{ 2 } + 2n + 1 }{ 4 } >
       \left( \frac{ n }{ 2 } \right )^{ 2 } = \Omega( n^{ 2 } ).
@@ -519,7 +519,7 @@ oszacowania nie prowadzą do prostszych rachunków.
 
 By otrzymać ostatnią nierówność
 w~\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-23} skorzystaliśmy ponadto
-z~oczywistego faktu, że~ponieważ $n \geq 1$, tym samym
+z~oczywistego faktu, że~ponieważ $n \geq 1$, to zachodzi
 \begin{equation}
   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-24}
   \frac{ 2n + 1 }{ 4 } \geq \frac{ 3 }{ 4 } > 0.
@@ -551,7 +551,31 @@ jeśli $a_{ i } \neq a_{ j }$.
 
 
 
+\noindent
+\Str{1193} Na tej stronie należałoby wspomnieć, że~zarówno dla grafu
+skierowanego jak i~nieskierowanego krawędź łączącą wierzchołki $u, v \in V$
+będziemy oznaczać tym samym symbolem $( u, v )$. Choć na poziomie notacji
+nie rozróżniamy krawędzi tych dwóch typów grafu, należy pamiętać, że~dla
+grafu nieskierowanego zawsze zachodzi
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-26}
+  ( u, v ) \equiv ( v, u ).
+\end{equation}
 
+\vspace{\spaceFour}
+
+
+
+
+
+\noindent
+\Str{1194} Zgodnie z~informacjami podanymi na tej stronie, jeśli w~grafie
+skierowanym istnieje pętla wokół wierzchołka $v \in V$, czyli krawędź
+$( v, v )$, to uwzględniamy ją zarówno przy obliczaniu stopnia wyjściowego
+jak i~stopnia wejściowego tego wierzchołka. Ten fakt nie jest wcale
+oczywisty.
+
+\vspace{\spaceFour}
 
 
 
@@ -564,36 +588,36 @@ jeśli $a_{ i } \neq a_{ j }$.
 
 
 % ##################
-% \newpage
+\newpage
 
-% \CenterBoldFont{Błędy}
+\CenterBoldFont{Błędy}
 
 
-% \begin{center}
+\begin{center}
 
-%   \begin{tabular}{|c|c|c|c|c|}
-%     \hline
-%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-%                               & Powinno być \\ \cline{2-3}
-%     & Od góry & Od dołu & & \\
-%     \hline
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     % & & & & \\
-%     \hline
-%   \end{tabular}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    1195 & 12 & & spójnej & zbioru krawędzi spójnej \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
 
-% \end{center}
+\end{center}
 
 % \vspace{\spaceTwo}
 
