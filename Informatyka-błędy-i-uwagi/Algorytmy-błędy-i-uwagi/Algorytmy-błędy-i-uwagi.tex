@@ -455,25 +455,36 @@ często.
 
 
 \noindent
-\Str{1178} Przeliczmy tutaj oszacowanie od~dołu postępu arytmetycznego
-dla przypadku $n$~nieparzystego. Wówczas $\frac{ n - 1 }{ 2 }$
-i~$\frac{ n + 1 }{ 2 }$ są liczbami naturalnymi. Tym samym możemy przepisać
-rozpatrywaną sumę w~następujący sposób.
+\Str{1178} Zatrzymajmy~się na chwilę nad tym w~jaki sposób oszacowano od dołu
+sumę szeregu arytmetycznego dla~$n$ parzystego. Ponieważ wszystkie wyrazy
+rozważanego szeregu są nieujemne, więc będziemy szukać tylko nieujemnej
+funkcji $g( n )$, ograniczającej ją od dołu. By ją znaleźć rozkładamy szereg
+na sumę szeregów:
 \begin{equation}
   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-21}
-  \begin{split}
-    \sum_{ k = 1 }^{ n } k
-    &=
-      \sum_{ k = 1 }^{ ( n - 1 ) / 2 } k + \sum_{ k = ( n + 1 ) / 2 }^{ n } k \geq
-      \sum_{ k = 1 }^{ ( n - 1 ) / 2 } 0 + \sum_{ k = ( n + 1 ) / 2 }^{ n } k \geq
-      \sum_{ k = ( n + 1 ) / 2 }^{ n } \frac{ n + 1 }{ 2 } = \\
-    &= \left( \frac{ n + 1 }{ 2 } \right)^{ 2 } =
-      \frac{ n^{ 2 } + 2n + 1 }{ 4 } \geq
-      \left( \frac{ n }{ 2 } \right )^{ 2 } \geq \Omega( n^{ 2 } ).
-  \end{split}
+  \sum_{ k = 1 }^{ n } k =
+  \sum_{ k = 1 }^{ n / 2 } k + \sum_{ k = ( n / 2 ) + 1 }^{ n } k \geq
+  \sum_{ k = 1 }^{ n / 2 } 0 + \sum_{ k = ( n / 2 ) + 1 }^{ n } \frac{ n }{ 2 } =
+  \left( \frac{ n }{ 2 } \right)^{ 2 }.
 \end{equation}
-By otrzymać ostatnią nierówność skorzystaliśmy z~tego, że~wszystkie
-rozpatrywane wyrazy są nieujemne.
+Zwróćmy uwagę na to, że~oszacowania od dołu \textit{nie} otrzymujemy poprzez
+zastąpienie ograniczenie wyrazów każdej sumy poprzez najmniejszy z~nich.
+W~takiej sytuacji wyrazy pierwszej sumy musielibyśmy ograniczyć przez~$1$,
+zaś drugiej przez $\frac{ n }{ 2 } + 1$, jednak dla wygody rachunkowej
+użyliśmy odpowiednio $0$ i~$\frac{ n }{ 2 }$, czyli wielkości o~jeden
+mniejszych od najmniejszego wyrazów danej sumy. Zwróćmy też uwagę na to,
+że~gdybyśmy ograniczyli wyrazy pierwszej sumy od dołu przez $1$, to
+otrzymalibyśmy oszacowanie
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-22}
+  \sum_{ k = 1 }^{ n } \geq
+  \left( \frac{ n }{ 2 } \right)^{ 2 } + \frac{ n }{ 2 },
+\end{equation}
+które prowadzi do tego samego ograniczenia asymptotycznego $\Omega( n^{ 2 } )$.
+
+Z~naszego punktu widzenia nie ma to znaczenia, czy wyrazy konkretnej sumy
+ograniczamy od dołu przez najmniejszy z~nich, czy przez wyraz mniejszy od
+niego o~ile prowadzi to do zadowalającego dolnego oszacowania zachowania szeregu przez funkcję nieujemną.
 
 \vspace{\spaceFour}
 
@@ -482,7 +493,37 @@ rozpatrywane wyrazy są nieujemne.
 
 
 \noindent
-\Str{1178}
+\Str{1178} Przeliczmy tutaj oszacowanie od~dołu postępu arytmetycznego
+dla przypadku $n$~nieparzystego. Wówczas $\frac{ n - 1 }{ 2 }$
+i~$\frac{ n + 1 }{ 2 }$ są liczbami naturalnymi, tym samym możemy przepisać
+rozpatrywaną sumę w~następujący sposób.
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-23}
+  \begin{split}
+    \sum_{ k = 1 }^{ n } k
+    &=
+      \sum_{ k = 1 }^{ ( n - 1 ) / 2 } k + \sum_{ k = ( n + 1 ) / 2 }^{ n } k \geq
+      \sum_{ k = 1 }^{ ( n - 1 ) / 2 } 0 + \sum_{ k = ( n + 1 ) / 2 }^{ n } k \geq
+      \sum_{ k = ( n + 1 ) / 2 }^{ n } \frac{ n + 1 }{ 2 } = \\
+    &= \left( \frac{ n + 1 }{ 2 } \right)^{ 2 } =
+      \frac{ n^{ 2 } + 2n + 1 }{ 4 } >
+      \left( \frac{ n }{ 2 } \right )^{ 2 } = \Omega( n^{ 2 } ).
+  \end{split}
+\end{equation}
+Aby otrzymać oszacowanie każdej z~sum z~osobna, w~pierwszej z~nich
+ograniczyliśmy wszystkie jej wyrazy od dołu przez~$0$. Ten wybór oszacowania
+od dołu omówiliśmy już powyżej. W~przypadku drugiej sumy ograniczyliśmy
+od~dołu wszystkie jej wyrazy przez najmniejszy spośród nich, gdyż w~tym
+wypadku nie uznaliśmy to za bardziej naturalny wybór, zaś alternatywne
+oszacowania nie prowadzą do prostszych rachunków.
+
+By otrzymać ostatnią nierówność
+w~\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-23} skorzystaliśmy ponadto
+z~oczywistego faktu, że~ponieważ $n \geq 1$, tym samym
+\begin{equation}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-24}
+  \frac{ 2n + 1 }{ 4 } \geq \frac{ 3 }{ 4 } > 0.
+\end{equation}
 
 \vspace{\spaceFour}
 
@@ -494,7 +535,7 @@ rozpatrywane wyrazy są nieujemne.
 \Str{1187} Należy nadmienić, że~n-tki są uporządkowane tak samo jak para
 uporządkowana. Tym samym
 \begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-22}
+  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-25}
   \begin{split}
     &( a_{ 1 }, a_{ 2 }, \ldots, a_{ i - 1 }, a_{ i }, a_{ i + 1 }, \ldots, a_{ j - 1 },
     a_{ j }, a_{ j + 1 }, \ldots, a_{ n } ) \neq \\
@@ -502,7 +543,7 @@ uporządkowana. Tym samym
     a_{ j - 1 }, a_{ i }, a_{ j + 1 }, \ldots, a_{ n } ),
   \end{split}
 \end{equation}
-przy założeniu $a_{ i } \neq a_{ j }$.
+jeśli $a_{ i } \neq a_{ j }$.
 
 \vspace{\spaceFour}
 
