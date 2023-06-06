@@ -16,43 +16,25 @@
 
 
 
+
+
+
+
+
+
 % ############################
-% Sets
-
-% Ładniejszy zbiór pusty
-\let\oldemptyset\emptyset
-\let\emptyset\varnothing
-
-
-
-% Wartość bezwzględna i normy
-\providecommand{\abs}[1]{\lvert{ #1 }\rvert}
-
-\newcommand{\absOne}[1]{|\, { #1 } \,|}  % ABSolute value One
-\newcommand{\abstw}[1]{\left| \, { #1 } \, \right|}
-\newcommand{\absth}[1]{\left| { #1 } \right|}
-\newcommand{\absf}[1]{| { #1 } |}
-% \providecommand{\absd}[1]{\left| #1 \right|}
-% Zupełnie nie wiem, czemu to jest \providecommand
-\providecommand{\norm}[1]{\lVert{ #1 }\rVert}
-
-% ##################
-
-
-
-
-
-
-
-
-
+% Letters
+% ############################
 
 
 % ##################
-% Litery greckie
-% By \lambda była wyświetlana jako Unicode, a dawał znak \uplambda
+% Greek letters
+
+% By \lambda była wyświetlana jako Unicode, a dawał znak \uplambda.
 \let\oldlambda\Lambda
 \renewcommand{\lambda}{\uplambda}
+
+% ##################
 
 
 
@@ -86,7 +68,7 @@
 \newcommand{\Zbb}{\mathbb{Z}}
 
 
-\newcommand{\matUnit}{I}
+% ##################
 
 
 
@@ -181,6 +163,48 @@
 
 
 
+% ############################
+% Constants
+
+\newcommand{\const}{\textrm{const}}
+
+
+
+
+
+
+
+
+
+
+% ############################
+% Sets
+
+% Ładniejszy zbiór pusty
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+
+
+
+% Wartość bezwzględna i normy
+\providecommand{\abs}[1]{\lvert{ #1 }\rvert}
+
+\newcommand{\absOne}[1]{|\, { #1 } \,|}  % ABSolute value One
+\newcommand{\abstw}[1]{\left| \, { #1 } \, \right|}
+\newcommand{\absth}[1]{\left| { #1 } \right|}
+\newcommand{\absf}[1]{| { #1 } |}
+% \providecommand{\absd}[1]{\left| #1 \right|}
+% Zupełnie nie wiem, czemu to jest \providecommand
+\providecommand{\norm}[1]{\lVert{ #1 }\rVert}
+
+% ##################
+
+
+
+\newcommand{\matUnit}{I}
+
+
+
 
 % ##################
 % Functions
@@ -212,6 +236,19 @@
 % Space of functions
 \newcommand{\Hom}{\mathrm{Hom}}
 
+
+
+
+% ##################
+% Functional analysis
+
+
+\DeclareMathOperator{\Ker}{Ker}
+
+\DeclareMathOperator{\Ran}{Ran}
+
+
+% ##################
 
 
 % ##################
