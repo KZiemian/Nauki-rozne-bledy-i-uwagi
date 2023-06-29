@@ -174,6 +174,8 @@
 
 
 % ##################
+\newpage
+
 \CenterBoldFont{Błędy}
 
 
@@ -226,7 +228,7 @@
 
 \end{center}
 
-\vspace{\spaceTwo}
+\vspace{\VerSpaceSix}
 
 
 \noindent
@@ -281,7 +283,7 @@ je przekształcić do postaci:
 Lewa strona tej równości jest równa pochodnej funkcji uwikłanej
 $y( x )$, określonej wzorem (9).
 
-\vspace{\spaceFour}
+\vspace{\VerSpaceThree}
 
 
 
@@ -290,7 +292,7 @@ $y( x )$, określonej wzorem (9).
 \noindent
 \Str{16} \Dok \\
 
-\vspace{\spaceFour}
+\vspace{\VerSpaceThree}
 
 
 
@@ -326,7 +328,7 @@ $y( x )$, określonej wzorem (9).
 
 \end{center}
 
-\vspace{\spaceTwo}
+\vspace{\VerSpaceSix}
 
 
 \noindent
@@ -370,6 +372,94 @@ $\absOne{ x - x_{ 0 } } \leq h_{ 1 }$. \\
 \CenterBoldFont{Uwagi do~konkretnych stron}
 
 \vspace{0em}
+
+
+\noindent
+\Str{7} W~tym miejscu warto~się zastanowić nad tym, jak w~ścisły sposób
+zdefiniować równanie różniczkowe zwyczajne? Jak każdy taki ważny
+problem w~matematyce, podaną definicję trzeba będzie niewątpliwie rozszerzać
+i~modyfikować, tak aby objąć jej nowymi wersjami kolejne ważne problemy
+matematyczne\footnote{Przez „problem matematyczny” rozumiemy tu zagadnienie
+  matematyczne, które jawnie wymaga od nas znalezienia jego rozwiązania.
+  Przykładowo, problemem matematyczny jest zagadnienie wyznaczenia
+  funkcji $y( x )$, takiej że~jej pochodna w~punkcie $x$ jest równa
+  $\sin\!\big( y( x ) \big)$. }. Niezależnie jednak od tego, warto spróbować
+podać teraz ścisłą definicję które będzie obejmowała większość najbardziej
+podstawowych problemów matematycznych jakie napotykamy w~teorii równań
+różniczkowych zwyczajnych, nawet jeśli wiele innych będzie wykluczała.
+
+Na tej stronie możemy znaleźć informacje, że~jeśli nie jest powiedziane
+inaczej, to zakładamy, że~zarówno dziedzina jak i~przeciwdziedzina funkcji
+$y( x )$ są podzbiorami liczb rzeczywistych. Jeśli chodzi o~przeciwdziedzinę
+to możemy przyjąć, że~zawsze jest ona równa $\Rbb$, bo wybór ten nie
+powinien nigdzie grać roli. Jeśli chodzi o~dziedzinę, do sprawy tej
+powrócimy. ????
+
+Niech teraz $O$ będzie otwartym podzbiorem $\Rbb^{ n + 1 }$, przy czym
+elementy $\Rbb^{ n }$ będziemy oznaczać przez
+$( x_{ 0 }, x_{ 1 }, \ldots, x_{ n - 1 }, x_{ n } )$
+lub $x_{ 1 }, x_{ 2 }, \ldots, x_{ n }, x_{ n + 1 }$. Niech dana będzie funkcja
+$F : O \to R$. Przyjmujemy, że zależy ona w~sposób \textbf{istotny}
+(w~książce używa~się terminu „jawny”) od zmiennej $x_{ n }$, przez co
+rozumiemy następującą własność. Istnieją takie liczby
+$x_{ 0 }, x_{ 1 }, \ldots, x_{ n - 1 }, x_{ n }, x_{ n }'$, że~zachodzi
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-01}
+  F( x_{ 0 }, x_{ 1 }, \ldots, x_{ n - 1 }, x_{ n } ) \neq
+  F( x_{ 0 }, x_{ 1 }, \ldots, x_{ n - 1 }, x_{ n }' ).
+\end{equation}
+Niech teraz $A_{ 0 }$ będzie rzutem zbioru $O$ na oś $x_{ 0 }$, czyli zbiorem
+takim że~jeśli $x \in A_{ 0 }$ to istnieją takie liczby
+$x_{ 1 }, x_{ 2 }, \ldots, x_{ n - 1 }, x_{ n }$,
+że~$( x, x_{ 1 }, x_{ 2 }, \ldots, x_{ n - 1 }, x_{ n } ) \in O$. Zbiór ten będziemy
+oznaczać przez $\proj_{ 0 } O$.
+
+\textbf{Równaniem
+  różniczkowym zwyczajnym} nazywamy wyrażenie
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-02}
+  F\left( x, y( x ), y'( x ), y''( x ), \ldots, y^{ ( n ) }( x ) \right) = 0.
+\end{equation}
+\textbf{Rozwiązaniem równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-02}}
+nazywamy funkcję $y_{ 1 } : A_{ 1 } \to \Rbb$, gdzie $A_{ 1 } \subset A_{ 0 }$, która
+posiada pochodne w~do rzędu $n$ włącznie w~każdym punkcie swojej dziedziny
+i~dla której zachodzi
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-03}
+  F\left( x, y_{ 1 }( x ), y_{ 1 }'( x ), \ldots, y_{ 1 }^{ ( n ) }( x ) \right) =
+  0, \qquad
+  \forall x \in A_{ 1 }.
+\end{equation}
+
+\vspace{\VerSpaceThree}
+
+
+
+
+
+\noindent
+\Str{8} Na tej stronie napotykamy po raz pierwszy konkretne równanie
+różniczkowe
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-04}
+  y'( x ) - 2 x = 0.
+\end{equation}
+Z~równania tego w~prosty sposób odczytujemy funkcję $F$:
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-05}
+  F( x_{ 0 }, x_{ 1 }, x_{ 2 } ) = x_{ 2 } - 2 x_{ 0 }.
+\end{equation}
+Stajemy tu jednak przed problemem, jaka jest dziedzina funkcji~$F$?
+W~dalszym ciągu jeśli nie powiedziano inaczej, za dziedzinę funkcji $F$
+będziemy uważać największy zbiór na~którym jesteśmy w~stanie ją określić.
+Ponieważ zgodnie z~tym co powiedziano wcześniej, dziedzina funkcji $F$ ma
+być podzbiorem $\Rbb^{ n + 1 }$ dla pewnego $n$, dziedziną funkcji określonej
+przez \eqref{eq:Matwiejew-Metody-calkowania-ETC-05} jest $\Rbb^{ 3 }$.
+
+
+
+
+
 
 
 % \noindent
