@@ -16,37 +16,25 @@
 
 
 
-% ##################
-% Sets
-% ##################
-
-
-% Ładniejszy zbiór pusty
-\let\oldemptyset\emptyset
-\let\emptyset\varnothing
 
 
 
-% Wartość bezwzględna i normy
-\providecommand{\abs}[1]{\lvert{ #1 }\rvert}
-
-\newcommand{\absOne}[1]{|\, { #1 } \,|}  % ABSolute value One
-\newcommand{\abstw}[1]{\left| \, { #1 } \, \right|}
-\newcommand{\absth}[1]{\left| { #1 } \right|}
-\newcommand{\absf}[1]{| { #1 } |}
-% \providecommand{\absd}[1]{\left| #1 \right|}
-% Zupełnie nie wiem, czemu to jest \providecommand
-\providecommand{\norm}[1]{\lVert{ #1 }\rVert}
 
 
 
+% ############################
+% Letters
+% ############################
 
 
 % ##################
-% Litery greckie
-% By \lambda była wyświetlana jako Unicode, a dawał znak \uplambda
+% Greek letters
+
+% By \lambda była wyświetlana jako Unicode, a dawał znak \uplambda.
 \let\oldlambda\Lambda
 \renewcommand{\lambda}{\uplambda}
+
+% ##################
 
 
 
@@ -80,7 +68,7 @@
 \newcommand{\Zbb}{\mathbb{Z}}
 
 
-\newcommand{\matUnit}{I}
+% ##################
 
 
 
@@ -158,6 +146,8 @@
 % ##################
 % Fraktur letters
 
+\newcommand{\Bfrak}{\mathfrak{B}}
+
 \newcommand{\Cfrak}{\mathfrak{C}}
 
 \newcommand{\gFrak}{\mathfrak{g}}
@@ -170,6 +160,48 @@
 
 \newcommand{\Ufrak}{\mathfrak{U}}
 
+
+
+
+% ############################
+% Constants
+
+\newcommand{\const}{\textrm{const}}
+
+
+
+
+
+
+
+
+
+
+% ############################
+% Sets
+
+% Ładniejszy zbiór pusty
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+
+
+
+% Wartość bezwzględna i normy
+\providecommand{\abs}[1]{\lvert{ #1 }\rvert}
+
+\newcommand{\absOne}[1]{|\, { #1 } \,|}  % ABSolute value One
+\newcommand{\abstw}[1]{\left| \, { #1 } \, \right|}
+\newcommand{\absth}[1]{\left| { #1 } \right|}
+\newcommand{\absf}[1]{| { #1 } |}
+% \providecommand{\absd}[1]{\left| #1 \right|}
+% Zupełnie nie wiem, czemu to jest \providecommand
+\providecommand{\norm}[1]{\lVert{ #1 }\rVert}
+
+% ##################
+
+
+
+\newcommand{\matUnit}{I}
 
 
 
@@ -206,6 +238,19 @@
 
 
 
+
+% ##################
+% Functional analysis
+
+
+\DeclareMathOperator{\Ker}{Ker}
+
+\DeclareMathOperator{\Ran}{Ran}
+
+
+% ##################
+
+
 % ##################
 % Groups
 
@@ -230,56 +275,59 @@
 \newcommand{\image}{\textrm{im}}
 
 % Vectors
-\newcommand{\veca}{\vec{ a }}
+\newcommand{\veca}{\vec{a}}
 
-\newcommand{\vecb}{\vec{ b }}
+\newcommand{\vecb}{\vec{b}}
 
-\newcommand{\vecc}{\vec{ c }}
+\newcommand{\vecc}{\vec{c}}
 
-\newcommand{\vecd}{\vec{ d }}
+\newcommand{\vecd}{\vec{d}}
 
-\newcommand{\vecE}{\vec{ E }}
-\newcommand{\vece}{\vec{ e }}
+\newcommand{\vecE}{\vec{E}}
+\newcommand{\vece}{\vec{e}}
 
-\newcommand{\vecF}{\vec{ F }}
-\newcommand{\vecf}{\vec{ f }}
+\newcommand{\vecF}{\vec{F}}
+\newcommand{\vecf}{\vec{f}}
 
-\newcommand{\vecg}{\vec{ g }}
+\newcommand{\vecg}{\vec{g}}
 
-\newcommand{\vech}{\vec{ h }}
+\newcommand{\vech}{\vec{h}}
 
-\newcommand{\veck}{\vec{ k }}
+\newcommand{\veck}{\vec{k}}
 
-\newcommand{\vecJ}{\vec{ J }}
+\newcommand{\vecJ}{\vec{J}}
 
-\newcommand{\vecn}{\vec{ n }}
+\newcommand{\vecn}{\vec{n}}
 
-\newcommand{\vecP}{\vec{ P }}
-\newcommand{\vecp}{\vec{ p }}
+\newcommand{\vecP}{\vec{P}}
+\newcommand{\vecp}{\vec{p}}
 
-\newcommand{\vecq}{\vec{ q }}
+\newcommand{\vecq}{\vec{q}}
 
-\newcommand{\vecr}{\vec{ r }}
+\newcommand{\vecr}{\vec{r}}
 
-\newcommand{\vecX}{\vec{ X }}
-\newcommand{\vecx}{\vec{ x }}
+\newcommand{\vecv}{\vec{v}}
 
-\newcommand{\vecy}{\vec{ y }}
+\newcommand{\vecX}{\vec{X}}
+\newcommand{\vecx}{\vec{x}}
 
-
-
-
+\newcommand{\vecy}{\vec{y}}
 
 
 
 
-\newcommand{\vecZero}{\vec{ 0 }}
+
+
+
+
+\newcommand{\vecZero}{\vec{0}}
 
 % Funkcje wektorowe
-\newcommand{\vecxt}{\vec{ x }( t )}
+\newcommand{\vecxt}{\vec{x}( t )}
 
 
 % Vectors, bold font
+\newcommand{\vecAbold}{\mathbf{A}}
 \newcommand{\vecabold}{\mathbf{a}}
 
 \newcommand{\vecBbold}{\mathbf{B}}
@@ -294,6 +342,7 @@
 
 \newcommand{\vecgbold}{\mathbf{g}}
 
+\newcommand{\vecHbold}{\mathbf{H}}
 \newcommand{\vechbold}{\mathbf{h}}
 
 \newcommand{\vecibold}{\mathbf{i}}
@@ -471,7 +520,8 @@
 % Teoria dystrybucji
 \newcommand{\Pv}{\mathrm{Pv}}
 
-\newcommand{\sd}{\textrm{sd}}  % Stopień skalowania Steinmanna
+% Steinmann scaling degree (pl. stopień skalowania Steinmanna)
+\newcommand{\sd}{\textrm{sd}}
 
 
 
