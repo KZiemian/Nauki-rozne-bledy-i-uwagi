@@ -21,13 +21,7 @@
 % ##################
 
 
-% Ładniejszy zbiór pusty
-\let\oldemptyset\emptyset
-\let\emptyset\varnothing
-
-
 % Podstawowe oznaczenia matematyczne
-% \newcommand{\fr}{\frac}
 % \newcommand{\tfr}{\tfrac}
 % \newcommand{\tr}{\textrm}
 
@@ -79,16 +73,16 @@
 % \newcommand{\wtw}{wtedy i~tylko wtedy}
 
 
-% Wartość bezwzględna i normy
-\providecommand{\abs}[1]{\lvert{ #1 }\rvert}
+% % Wartość bezwzględna i normy
+% \providecommand{\abs}[1]{\lvert{ #1 }\rvert}
 
-\newcommand{\absOne}[1]{|\, { #1 } \,|}  % ABSolute value One
-\newcommand{\abstw}[1]{\left| \, { #1 } \, \right|}
-\newcommand{\absth}[1]{\left| { #1 } \right|}
-\newcommand{\absf}[1]{| { #1 } |}
-% \providecommand{\absd}[1]{\left| #1 \right|}
-% Zupełnie nie wiem, czemu to jest \providecommand
-\providecommand{\norm}[1]{\lVert{ #1 }\rVert}
+% \newcommand{\absOne}[1]{|\, { #1 } \,|}  % ABSolute value One
+% \newcommand{\abstw}[1]{\left| \, { #1 } \, \right|}
+% \newcommand{\absth}[1]{\left| { #1 } \right|}
+% \newcommand{\absf}[1]{| { #1 } |}
+% % \providecommand{\absd}[1]{\left| #1 \right|}
+% % Zupełnie nie wiem, czemu to jest \providecommand
+% \providecommand{\norm}[1]{\lVert{ #1 }\rVert}
 
 
 
@@ -103,8 +97,8 @@
 % \newcommand{\del}{\delta}
 % \newcommand{\Del}{\Delta}
 % By \lambda była wyświetlana jako Unicode, a dawał znak \uplambda
-\let\oldlambda\Lambda
-\renewcommand{\lambda}{\uplambda}
+% \let\oldlambda\Lambda
+% \renewcommand{\lambda}{\uplambda}
 % \newcommand{\la}{\uplambda}
 % \newcommand{\Lam}{\Lambda}
 
@@ -248,30 +242,7 @@
 
 
 
-% ##################
-% Functions
 
-\newcommand{\Ad}{\mathrm{Ad}}
-
-\newcommand{\ad}{\mathrm{ad}}
-
-\newcommand{\id}{\mathrm{id}}
-
-% ????
-\newcommand{\im}{\mathrm{im}}
-% ????
-% \newcommand{\ker}{\mathrm{ker}}
-
-
-% Complex analysis
-\DeclareMathOperator{\Arg}{Arg}
-\DeclareMathOperator{\Imag}{\mathfrak{Im}}
-\DeclareMathOperator{\Log}{Log}
-\DeclareMathOperator{\Real}{\mathfrak{Re}}
-
-
-% Space of functions
-\newcommand{\Hom}{\mathrm{Hom}}
 
 
 
@@ -293,7 +264,6 @@
 % Algebra
 % \newcommand{\ot}{\otimes}
 % \newcommand{\we}{\wedge}
-\DeclareMathOperator{\Tr}{Tr}
 
 
 
@@ -707,15 +677,6 @@
 
 
 
-% \DeclareMathOperator{\csch}{csch}
-% \DeclareMathOperator{\arcsec}{arcsec}
-% \DeclareMathOperator{\arccsc}{arcCsc}
-% \DeclareMathOperator{\arccosh}{arcCosh}
-% \DeclareMathOperator{\arcsinh}{arcsinh}
-\DeclareMathOperator{\artanh}{artanh}
-% \DeclareMathOperator{\arcsech}{arcsech}
-% \DeclareMathOperator{\arccsch}{arcCsch}
-\DeclareMathOperator{\arcoth}{arcoth}
 
 
 

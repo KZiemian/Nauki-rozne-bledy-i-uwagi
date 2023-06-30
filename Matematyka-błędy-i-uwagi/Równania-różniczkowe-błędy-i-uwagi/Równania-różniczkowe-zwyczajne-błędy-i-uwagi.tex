@@ -369,6 +369,34 @@ $\absOne{ x - x_{ 0 } } \leq h_{ 1 }$. \\
 
 
 % ##################
+\CenterBoldFont{Uwagi}
+
+\vspace{0em}
+
+\noindent
+Książka ta podąża za zwyczajem, że~jeśli argumenty danej funkcji są
+odpowiednio oczywiste, to można je opuścić. Przykładowo na stronie~7
+mamy równanie (1) postaci:
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-01}
+  F\left( x, y, y', y'', \ldots, y^{ ( n ) } \right) = 0,
+\end{equation}
+choć bardziej precyzyjne byłoby napisanie $y( x )$, $y'( x )$, etc. W~tych
+notatkach będziemy~się starać zawsze podawać jawnie argumenty od których
+zależą funkcje, by uniknąć możliwych nieporozumień.
+
+\vspace{\VerSpaceFour}
+
+
+
+
+
+
+
+
+
+
+% ##################
 \CenterBoldFont{Uwagi do~konkretnych stron}
 
 \vspace{0em}
@@ -404,7 +432,7 @@ $F : O \to R$. Przyjmujemy, że zależy ona w~sposób \textbf{istotny}
 rozumiemy następującą własność. Istnieją takie liczby
 $x_{ 0 }, x_{ 1 }, \ldots, x_{ n - 1 }, x_{ n }, x_{ n }'$, że~zachodzi
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-01}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-02}
   F( x_{ 0 }, x_{ 1 }, \ldots, x_{ n - 1 }, x_{ n } ) \neq
   F( x_{ 0 }, x_{ 1 }, \ldots, x_{ n - 1 }, x_{ n }' ).
 \end{equation}
@@ -417,7 +445,7 @@ oznaczać przez $\proj_{ 0 } O$.
 \textbf{Równaniem
   różniczkowym zwyczajnym} nazywamy wyrażenie
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-02}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-03}
   F\left( x, y( x ), y'( x ), y''( x ), \ldots, y^{ ( n ) }( x ) \right) = 0.
 \end{equation}
 \textbf{Rozwiązaniem równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-02}}
@@ -425,13 +453,13 @@ nazywamy funkcję $y_{ 1 } : A_{ 1 } \to \Rbb$, gdzie $A_{ 1 } \subset A_{ 0 }$,
 posiada pochodne w~do rzędu $n$ włącznie w~każdym punkcie swojej dziedziny
 i~dla której zachodzi
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-03}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-04}
   F\left( x, y_{ 1 }( x ), y_{ 1 }'( x ), \ldots, y_{ 1 }^{ ( n ) }( x ) \right) =
   0, \qquad
   \forall x \in A_{ 1 }.
 \end{equation}
 
-\vspace{\VerSpaceThree}
+\vspace{\VerSpaceFour}
 
 
 
@@ -441,44 +469,98 @@ i~dla której zachodzi
 \Str{8} Na tej stronie napotykamy po raz pierwszy konkretne równanie
 różniczkowe
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-04}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-05}
   y'( x ) - 2 x = 0.
 \end{equation}
 Z~równania tego w~prosty sposób odczytujemy funkcję $F$:
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-05}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-06}
   F( x_{ 0 }, x_{ 1 }, x_{ 2 } ) = x_{ 2 } - 2 x_{ 0 }.
 \end{equation}
 Stajemy tu jednak przed problemem, jaka jest dziedzina funkcji~$F$?
 W~dalszym ciągu jeśli nie powiedziano inaczej, za dziedzinę funkcji $F$
 będziemy uważać największy zbiór na~którym jesteśmy w~stanie ją określić.
 Ponieważ zgodnie z~tym co powiedziano wcześniej, dziedzina funkcji $F$ ma
-być podzbiorem $\Rbb^{ n + 1 }$ dla pewnego $n$, dziedziną funkcji określonej
+być podzbiorem $\Rbb^{ n + 1 }$ dla pewnego~$n$, dziedziną funkcji określonej
 przez \eqref{eq:Matwiejew-Metody-calkowania-ETC-05} jest $\Rbb^{ 3 }$.
 
+Pozostaje pytanie, w~jaki sposób określamy dziedzinę rozwiązania, czyli
+zbór~$A_{ 1 }$? Standardowym wyborem jest przyjęcie, że~wybieramy jako
+$A_{ 1 }$ największy odcinek otwarty $( a, b ) \subset A_{ 0 }$ w~którym jesteśmy
+w~stanie zdefiniować rozwiązanie równania. Co jednak zrobić w~przypadku
+równań takich jak równanie (?) ze strony (?), które posiada rozwiązanie
+postaci
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-07}
+  y( x ) = \frac{ 1 }{ 1 - x }.
+\end{equation}
+Funkcja ta jest określona na zbiorze $( -\infty, 1 ) \cup ( 1, +\infty )$ i~nie możemy
+w~żaden sposób wybrać jednego z~tych przedziałów jako większego od drugiego.
+Problem rozwiązań takich jak \eqref{eq:Matwiejew-Metody-calkowania-ETC-06}
+będzie omawiany w~dalszym ciągu książki, wtedy ewentualnie powrócimy do
+pojawiające~się przy nich dokładniej. W~chwili obecnej, motywowani tym
+przykładem, poprzestaniemy na stwierdzeniu, że~jeśli to jest możliwe to
+będziemy szukali rozwiązań określonych na całym zbiorze $A_{ 0 }$, co jest
+równoważne stwierdzeniu $A_{ 1 } = A_{ 0 }$, co~wyklucza wszelkie
+niejednoznaczności w~sposobie określenia dziedziny rozwiązania.
+Niewątpliwie, ze względu na swoją prostotę interpretacyjną, optymalną
+sytuacją jest $A_{ 1 } = A_{ 0 } = \Rbb$.
+
+\vspace{\VerSpaceFour}
 
 
 
 
 
+\noindent
+\Str{15} Równanie (10) na tej stronie zostało bardzo elegancko wyprowadzone,
+przy założeniu, że~funkcja uwikłana zależna od zmiennej $x$ dana związkiem
+$\Phi( x, y ) = 0$, spełnia równanie różniczkowe
+$y'( x ) = f\big( x, y( x ) \big)$. Nie poruszono jednak kwestii tego, czemu
+mamy uważać tą funkcję uwikłaną za rozwiązanie badanego równania?
+W~szczególności, jeśli jest rozwiązanie równania $\Phi( x, y ) = 0$ na funkcję
+$y( x )$, to czy ona spełnia równanie $y'( x ) = f\big( x, y( x ) \big)$?
+Przy standardowych założeniach o~funkcji $\Phi( x, y )$ odpowiedź na to
+ostatnie pytanie jest twierdząca i~dzięki temu możemy uznać funkcję daną
+równaniem uwikłanym za rozwiązanie badanego równania.
 
-% \noindent
-% \Str{15} Równanie (10) zostało bardzo elegancko wyprowadzone, przy
-% założeniu, że~funkcja uwikłana dana równaniem (9) spełnia
-% równanie różniczkowe (1), nie odpowiada to jednak na pytanie czy jeśli
-% funkcja $y( x )$ spełnia równanie (10), to spełnia też interesujące
-% nas równanie wyjściowe. Dowód tego twierdzenia jest następujący.
-% Załóżmy, że $\Phi_{ y }' \neq 0$, tak by było zapewnione istnienie
-% funkcji uwikłanej. Jeżeli teraz spełnione jest równanie (10), to można
-% je przekształcić do postaci:
-% \begin{equation}
-%   \label{MatwiejewMCRRZ-01}
-%   -\frac{ \Phi_{ x }' }{ \Phi_{ y }' } = f( x, y ).
-% \end{equation}
-% Lewa strona tej równości jest równa pochodnej funkcji uwikłanej
-% $y( x )$, określonej wzorem (9).
+Dowód tego faktu jest następujący. Załóżmy, że~funkcja $\Phi( x, y )$ spełnia
+założenia o~ciągłości i~istnieniu pochodnych, które są wymagane
+w~standardowej wersji twierdzenia o~funkcji uwikłanej. Przyjmijmy dodatkowo,
+że~$\Phi_{ y }'\big( x, y \big) \neq 0$ w~interesującym nas zakresie wartości
+zmiennej~$x$, który oznaczymy~$A$. Tym samym możemy odwikłać funkcję
+$y( x )$ dla wszystkich wartości $x \in A$. Przepiszmy teraz równanie (10)
+w~bardziej jawnej formie jako
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-08}
+  \Phi_{ x }'\big( x, y( x ) \big) +
+  \Phi_{ y }'\big( x, y( x ) \big) f\big( x, y( x ) \big) = 0.
+\end{equation}
+Równanie to przekształcamy w~oczywisty sposób do postaci
+\begin{equation}
+  \label{MatwiejewMCRRZ-01}
+  -\frac{ \Phi_{ x }'\big( x, y( x ) \big) }
+  { \Phi_{ y }'\big( x, y( x ) \big) } =
+  f\big( x, y( x ) \big).
+\end{equation}
+Jak dobrze wiadomo, lewa strona tej równości przedstawia pochodną funkcji
+uwikłanej $y'( x )$.
 
-% \vspace{\VerSpaceThree}
+Na koniec możemy zauważyć, że~zarówno wzór
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-08} jak i~dobrze znaną zależność
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-01}
+  y'( x ) =
+  -\frac{ \Phi_{ x }'\big( x, y( x ) \big) }{ \Phi_{ y }'\big( x, y'( x ) \big) },
+\end{equation}
+można wyprowadzić w~ten sam sposób, poprzez zróżniczkowanie
+i~przekształcenie zależności $\Phi\big( x, y( x ) \big) = 0$. Choć z~tego
+punktu widzenia równoważność równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-08}
+i~$y'( x ) = f\big( x, y( x ) \big)$ może~się wydawać oczywista, to woleliśmy
+przedyskutować to zagadnienie możliwie dokładnie.
+
+\vspace{\VerSpaceFour}
 
 
 
