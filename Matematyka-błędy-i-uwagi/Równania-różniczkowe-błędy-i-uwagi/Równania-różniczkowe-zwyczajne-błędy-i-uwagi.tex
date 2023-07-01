@@ -262,49 +262,6 @@
 
 
 % ##################
-\CenterBoldFont{Uwagi}
-
-\vspace{0em}
-
-
-\noindent
-\Str{15} Równanie (10) zostało bardzo elegancko wyprowadzone, przy
-założeniu, że~funkcja uwikłana dana równaniem (9) spełnia
-równanie różniczkowe (1), nie odpowiada to jednak na pytanie czy jeśli
-funkcja $y( x )$ spełnia równanie (10), to spełnia też interesujące
-nas równanie wyjściowe. Dowód tego twierdzenia jest następujący.
-Załóżmy, że $\Phi_{ y }' \neq 0$, tak by było zapewnione istnienie
-funkcji uwikłanej. Jeżeli teraz spełnione jest równanie (10), to można
-je przekształcić do postaci:
-\begin{equation}
-  \label{MatwiejewMCRRZ-01}
-  -\frac{ \Phi_{ x }' }{ \Phi_{ y }' } = f( x, y ).
-\end{equation}
-Lewa strona tej równości jest równa pochodnej funkcji uwikłanej
-$y( x )$, określonej wzorem (9).
-
-\vspace{\VerSpaceThree}
-
-
-
-
-
-\noindent
-\Str{16} \Dok \\
-
-\vspace{\VerSpaceThree}
-
-
-
-
-
-\noindent
-\Str{31} \Dok
-
-
-
-
-% ##################
 \CenterBoldFont{Błędy}
 
 
@@ -320,7 +277,7 @@ $y( x )$, określonej wzorem (9).
     5   & &  8 & potkowych & początkowych \\
     5   & &  7 & poąątkowych & początkowych \\
     10  & & 19 & damy & mamy \\
-    15  & & & & \\
+    % 15  & & & & \\
     % & & & & \\
     % & & & & \\
     \hline
@@ -382,8 +339,18 @@ mamy równanie (1) postaci:
   F\left( x, y, y', y'', \ldots, y^{ ( n ) } \right) = 0,
 \end{equation}
 choć bardziej precyzyjne byłoby napisanie $y( x )$, $y'( x )$, etc. W~tych
-notatkach będziemy~się starać zawsze podawać jawnie argumenty od których
-zależą funkcje, by uniknąć możliwych nieporozumień.
+notatkach, by uniknąć nieporozumień, we~wszystkich miejscach gdzie mowa jest
+o~wartościach jakie przyjmują funkcje dla zadanych wartości argumentów,
+będziemy~się starać podawać owe argumenty w~sposób jawny.
+
+Ty samym, jeśli będziemy rozważali w~sposób ogólny funkcje
+$y : \Rbb \to \Rbb$ to będziemy ją oznaczać symbolem $y$. Natomiast
+w~przypadkach takich jak równanie
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-02}
+  y( x )^{ 2 } = x,
+\end{equation}
+będziemy~się starali zawsze wymienić wszystkie argumenty w~sposób jawny.
 
 \vspace{\VerSpaceFour}
 
@@ -418,10 +385,35 @@ różniczkowych zwyczajnych, nawet jeśli wiele innych będzie wykluczała.
 
 Na tej stronie możemy znaleźć informacje, że~jeśli nie jest powiedziane
 inaczej, to zakładamy, że~zarówno dziedzina jak i~przeciwdziedzina funkcji
-$y( x )$ są podzbiorami liczb rzeczywistych. Jeśli chodzi o~przeciwdziedzinę
+$y$ są podzbiorami liczb rzeczywistych. Jeśli chodzi o~przeciwdziedzinę
 to możemy przyjąć, że~zawsze jest ona równa $\Rbb$, bo wybór ten nie
-powinien nigdzie grać roli. Jeśli chodzi o~dziedzinę, do sprawy tej
-powrócimy. ????
+powinien nigdzie grać roli. Jeśli chodzi o~dziedzinę danej funkcji, to
+sprawa jest bardziej złożona.
+
+Niech $A$ oznacza dziedzinę funkcji $y$. W~niniejszej książce naszym
+podstawowym wymogiem jest to, by w~każdym punkcie dziedziny $A$ istniała
+pochodna funkcji $y$, więc $A$ musi być dobrany w~taki sposób, by pojęcie
+pochodnej w~punkcie $x \in A$ miało sens. Wbrew pozorom podanie klasy zbiorów
+o~tej własności nie jest takie proste. Czy przykładowo funkcja
+$f : \Qbb \to \Qbb$ dana zależnością
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-01}
+  f( x ) = x^{ 2 },
+\end{equation}
+jest różniczkowalna?
+
+Pomimo problemów z~określeniem klasy tych zbiorów, w~większości przypadków
+przyjmuje~się, że~zbiór $A$ jest odcinkiem otwartym $( a, b )$, gdzie
+dopuszczamy sytuację, że $a$ i~$b$ mogą przyjmować wartość $\pm \infty$. Jak
+zauważono na stronie ???, nie nastręcza również problemu określenie
+funkcji~$y$ na odcinkach domkniętych z~jednej, bądź obu stron. W~przypadku
+odcinka $[ a, b )$ przez pochodną w~punkcie~$a$ rozumiemy pochodną
+prawostronną funkcji $y$ i~analogicznie postępuję w~przypadku odcinka
+$( a, b ]$. Przy czym jeśli dany jest odcinek prawostronnie domknięty
+$( a, b ]$ to musi zachodzić $-\infty < b < +\infty$, natomiast $a$ może przyjąć
+wartość $-\infty$. Analogicznie zasady stosują~się do pozostały pozostał
+przypadków odcinków jednostronnie, bądź obustronnie domkniętych. Do problemu
+kształtu dziedziny powrócimy niedługo.
 
 Niech teraz $O$ będzie otwartym podzbiorem $\Rbb^{ n + 1 }$, przy czym
 elementy $\Rbb^{ n }$ będziemy oznaczać przez
@@ -440,7 +432,7 @@ Niech teraz $A_{ 0 }$ będzie rzutem zbioru $O$ na oś $x_{ 0 }$, czyli zbiorem
 takim że~jeśli $x \in A_{ 0 }$ to istnieją takie liczby
 $x_{ 1 }, x_{ 2 }, \ldots, x_{ n - 1 }, x_{ n }$,
 że~$( x, x_{ 1 }, x_{ 2 }, \ldots, x_{ n - 1 }, x_{ n } ) \in O$. Zbiór ten będziemy
-oznaczać przez $\proj_{ 0 } O$.
+również oznaczać przez $\proj_{ 0 } O$.
 
 \textbf{Równaniem
   różniczkowym zwyczajnym} nazywamy wyrażenie
@@ -450,7 +442,7 @@ oznaczać przez $\proj_{ 0 } O$.
 \end{equation}
 \textbf{Rozwiązaniem równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-02}}
 nazywamy funkcję $y_{ 1 } : A_{ 1 } \to \Rbb$, gdzie $A_{ 1 } \subset A_{ 0 }$, która
-posiada pochodne w~do rzędu $n$ włącznie w~każdym punkcie swojej dziedziny
+posiada pochodne do rzędu $n$ włącznie w~każdym punkcie swojej dziedziny
 i~dla której zachodzi
 \begin{equation}
   \label{eq:Matwiejew-Metody-calkowania-ETC-04}
@@ -459,43 +451,21 @@ i~dla której zachodzi
   \forall x \in A_{ 1 }.
 \end{equation}
 
-\vspace{\VerSpaceFour}
-
-
-
-
-
-\noindent
-\Str{8} Na tej stronie napotykamy po raz pierwszy konkretne równanie
-różniczkowe
+Potrzebujemy teraz powrócić do problemu określenia dziedziny $A_{ 1 }$
+funkcji $y$. Jak powiedzieliśmy wcześniej, standardowo przyjmuje~się,
+że~$A_{ 1 } = ( a, b )$. Zazwyczaj żąda~się dodatkowo, by $A_{ 1 }$ był
+największym odcinkiem otwarty zawartym w~zbiorze $A_{ 0 }$, w~którym jesteśmy
+w~stanie zdefiniować rozwiązanie równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-03}. Co jednak zrobić w~przypadku
+równań takich jak równanie $y'( x ) = y( x )^{ 2 }$ omawiane na stronie (?),
+które posiada rozwiązanie postaci
 \begin{equation}
   \label{eq:Matwiejew-Metody-calkowania-ETC-05}
-  y'( x ) - 2 x = 0.
-\end{equation}
-Z~równania tego w~prosty sposób odczytujemy funkcję $F$:
-\begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-06}
-  F( x_{ 0 }, x_{ 1 }, x_{ 2 } ) = x_{ 2 } - 2 x_{ 0 }.
-\end{equation}
-Stajemy tu jednak przed problemem, jaka jest dziedzina funkcji~$F$?
-W~dalszym ciągu jeśli nie powiedziano inaczej, za dziedzinę funkcji $F$
-będziemy uważać największy zbiór na~którym jesteśmy w~stanie ją określić.
-Ponieważ zgodnie z~tym co powiedziano wcześniej, dziedzina funkcji $F$ ma
-być podzbiorem $\Rbb^{ n + 1 }$ dla pewnego~$n$, dziedziną funkcji określonej
-przez \eqref{eq:Matwiejew-Metody-calkowania-ETC-05} jest $\Rbb^{ 3 }$.
-
-Pozostaje pytanie, w~jaki sposób określamy dziedzinę rozwiązania, czyli
-zbór~$A_{ 1 }$? Standardowym wyborem jest przyjęcie, że~wybieramy jako
-$A_{ 1 }$ największy odcinek otwarty $( a, b ) \subset A_{ 0 }$ w~którym jesteśmy
-w~stanie zdefiniować rozwiązanie równania. Co jednak zrobić w~przypadku
-równań takich jak równanie (?) ze strony (?), które posiada rozwiązanie
-postaci
-\begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-07}
   y( x ) = \frac{ 1 }{ 1 - x }.
 \end{equation}
 Funkcja ta jest określona na zbiorze $( -\infty, 1 ) \cup ( 1, +\infty )$ i~nie możemy
 w~żaden sposób wybrać jednego z~tych przedziałów jako większego od drugiego.
+
 Problem rozwiązań takich jak \eqref{eq:Matwiejew-Metody-calkowania-ETC-06}
 będzie omawiany w~dalszym ciągu książki, wtedy ewentualnie powrócimy do
 pojawiające~się przy nich dokładniej. W~chwili obecnej, motywowani tym
@@ -513,6 +483,91 @@ sytuacją jest $A_{ 1 } = A_{ 0 } = \Rbb$.
 
 
 \noindent
+\Str{8} Na tej stronie napotykamy po raz pierwszy konkretne równanie
+różniczkowe
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-06}
+  y'( x ) - 2 x = 0.
+\end{equation}
+Z~równania tego w~prosty sposób odczytujemy funkcję $F$:
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-07}
+  F( x_{ 0 }, x_{ 1 }, x_{ 2 } ) = x_{ 2 } - 2 x_{ 0 }.
+\end{equation}
+Stajemy tu jednak przed problemem, jaka jest dziedzina funkcji~$F$?
+W~dalszym ciągu jeśli nie powiedziano inaczej, za dziedzinę funkcji $F$
+będziemy uważać największy zbiór na~którym jesteśmy w~stanie ją określić.
+Ponieważ zgodnie z~tym co powiedziano wcześniej, dziedzina funkcji $F$ ma
+być podzbiorem $\Rbb^{ n + 1 }$ dla pewnego~$n$, dziedziną funkcji określonej
+przez \eqref{eq:Matwiejew-Metody-calkowania-ETC-05} jest $\Rbb^{ 3 }$.
+
+Łatwo~się też przekonać, że~rozwiązaniem równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-06} jest funkcja
+$y( x ) = x^{ 2 } + C$, której dziedzina wynosi $\Rbb$.
+
+\vspace{\VerSpaceFour}
+
+
+
+
+
+\noindent
+\Str{10} Przy okazji wyprowadzania równania różniczkowe dla rodziny
+wszystkich okręgów na płaszczyźnie $x y$ napotykamy po raz pierwszy na
+pewien problem, który powróci do nas w przyszłości.
+
+\vspace{\negVerSpaceThree}
+
+
+\begin{subequations}
+
+  \begin{align}
+    \label{eq:Matwiejew-Metody-calkowania-ETC-08-A}
+    1 + \big( y'( x ) \big)^{ 2 } + \big( y( x ) - b \big) y''( x )
+    &= 0, \\
+    \label{eq:Matwiejew-Metody-calkowania-ETC-08-B}
+    3 y'( x ) y''( x ) + \big( y( x ) - b \big) y'''( x )
+    &= 0.
+  \end{align}
+
+\end{subequations}
+
+
+\noindent
+Aby usunąć z~równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-08-B}
+parametr $b$ przyjmujemy, że~$y''( x ) \neq 0$, więc możemy przepisać równanie
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-08-A} jako
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-09}
+  y( x ) - b =
+  -\frac{ 1 + \big( y'( x ) \big)^{ 2 } }{ y''( x ) }.
+\end{equation}
+Podstawiając tą zależność do \eqref{eq:Matwiejew-Metody-calkowania-ETC-08-B}
+dostajemy
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-10}
+  3 y'( x ) y''( x ) -
+  \frac{ 1 + \big( y'( x ) \big)^{ 2 } }{ y''( x ) } y'''( x ) = 0.
+\end{equation}
+Po pomnożeniu obustronnie przez $y''( x )$ dostajemy
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-11}
+  3 y'( x ) \big( y''( x ) \big)^{ 2 } -
+  \Big( 1 + \big( y'( x ) \big)^{ 2 } \Big) y'''( x ) = 0.
+\end{equation}
+Choć równanie wyprowadziliśmy przy założeniu, że~$y''( x ) \neq 0$, to końcowa
+jego postać jest dobrze określona również, gdy funkcja ta przyjmuje wartość
+zero. Powstaje więc pytania, jaki jest zakres obowiązywania tego równania?
+
+
+
+\vspace{\VerSpaceFour}
+
+
+
+
+
+\noindent
 \Str{15} Równanie (10) na tej stronie zostało bardzo elegancko wyprowadzone,
 przy założeniu, że~funkcja uwikłana zależna od zmiennej $x$ dana związkiem
 $\Phi( x, y ) = 0$, spełnia równanie różniczkowe
@@ -521,7 +576,7 @@ mamy uważać tą funkcję uwikłaną za rozwiązanie badanego równania?
 W~szczególności, jeśli jest rozwiązanie równania $\Phi( x, y ) = 0$ na funkcję
 $y( x )$, to czy ona spełnia równanie $y'( x ) = f\big( x, y( x ) \big)$?
 Przy standardowych założeniach o~funkcji $\Phi( x, y )$ odpowiedź na to
-ostatnie pytanie jest twierdząca i~dzięki temu możemy uznać funkcję daną
+nostatnie pytanie jest twierdząca i~dzięki temu możemy uznać funkcję daną
 równaniem uwikłanym za rozwiązanie badanego równania.
 
 Dowód tego faktu jest następujący. Załóżmy, że~funkcja $\Phi( x, y )$ spełnia
@@ -532,13 +587,13 @@ zmiennej~$x$, który oznaczymy~$A$. Tym samym możemy odwikłać funkcję
 $y( x )$ dla wszystkich wartości $x \in A$. Przepiszmy teraz równanie (10)
 w~bardziej jawnej formie jako
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-08}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-12}
   \Phi_{ x }'\big( x, y( x ) \big) +
   \Phi_{ y }'\big( x, y( x ) \big) f\big( x, y( x ) \big) = 0.
 \end{equation}
 Równanie to przekształcamy w~oczywisty sposób do postaci
 \begin{equation}
-  \label{MatwiejewMCRRZ-01}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-13}
   -\frac{ \Phi_{ x }'\big( x, y( x ) \big) }
   { \Phi_{ y }'\big( x, y( x ) \big) } =
   f\big( x, y( x ) \big).
@@ -547,16 +602,16 @@ Jak dobrze wiadomo, lewa strona tej równości przedstawia pochodną funkcji
 uwikłanej $y'( x )$.
 
 Na koniec możemy zauważyć, że~zarówno wzór
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-08} jak i~dobrze znaną zależność
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-12} jak i~dobrze znaną zależność
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-01}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-14}
   y'( x ) =
   -\frac{ \Phi_{ x }'\big( x, y( x ) \big) }{ \Phi_{ y }'\big( x, y'( x ) \big) },
 \end{equation}
 można wyprowadzić w~ten sam sposób, poprzez zróżniczkowanie
 i~przekształcenie zależności $\Phi\big( x, y( x ) \big) = 0$. Choć z~tego
 punktu widzenia równoważność równania
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-08}
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-12}
 i~$y'( x ) = f\big( x, y( x ) \big)$ może~się wydawać oczywista, to woleliśmy
 przedyskutować to zagadnienie możliwie dokładnie.
 
@@ -566,10 +621,10 @@ przedyskutować to zagadnienie możliwie dokładnie.
 
 
 
-% \noindent
-% \Str{16} \Dok \\
+\noindent
+\Str{16}  \\
 
-% \vspace{\spaceFour}
+\vspace{\VerSpaceFour}
 
 
 
@@ -596,10 +651,8 @@ przedyskutować to zagadnienie możliwie dokładnie.
     & Od góry & Od dołu & & \\
     \hline
     5   & &  3 & wierdzenia & twierdzenia \\
-    % 5   & &  8 & potkowych & początkowych \\
-    % 5   & &  7 & poąątkowych & początkowych \\
     % 10  & & 19 & damy & mamy \\
-    % 15  & & & & \\
+    15  & & & ono określa & określa ono \\
     % & & & & \\
     % & & & & \\
     \hline
@@ -610,10 +663,10 @@ przedyskutować to zagadnienie możliwie dokładnie.
 \vspace{\VerSpaceSix}
 
 
-% \noindent
-% \StrWg{15}{13}
-% \Jest  w~sensie ustępu \\
-% \Powin w~sensie zdefiniowanym w~ustępie \\
+\noindent
+\StrWg{15}{13}
+\Jest  w~sensie ustępu \\
+\Powin w~sensie zdefiniowanym w~ustępie \\
 % \StrWd{20}{2} \\
 % \Jest  i~nie ma rozwiązania określonego w~tym samym przedziale
 % nie~identycznego z~rozwiązaniem $y = y( x )$ chociażby w~jednym
