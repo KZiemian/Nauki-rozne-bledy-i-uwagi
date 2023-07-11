@@ -13,14 +13,47 @@
 
 
 % ##########
-% Definicje odstępów w tekście
+% Definicje pionowych odstępów w tekście
 \newcommand{\spaceOne}{3em}
 \newcommand{\spaceTwo}{2em}
 \newcommand{\spaceThree}{1em}
 \newcommand{\spaceFour}{0.5em}
 \newcommand{\spaceFive}{-0.5em}
 
+% Commands for vertical space in the text.
+\newcommand{\VerSpaceOne}{0.1em}
+\newcommand{\VerSpaceTwo}{0.25em}
+\newcommand{\VerSpaceThree}{0.5em}
+\newcommand{\VerSpaceFour}{1em}
+\newcommand{\VerSpaceFive}{1.5em}
+\newcommand{\VerSpaceSix}{2em}
 
+\newcommand{\negVerSpaceOne}{-0.5em}
+\newcommand{\negVerSpaceTwo}{-1em}
+\newcommand{\negVerSpaceThree}{-1.5em}
+\newcommand{\negVerSpaceFour}{-2em}
+
+
+% ##########
+% Commands for horizontal space in the text
+
+\newcommand{\smallHorSpaceOne}{\hspace{0.05em}}
+\newcommand{\smallHorSpaceTwo}{\hspace{0.07em}}
+\newcommand{\smallHorSpaceThree}{\hspace{0.1em}}
+\newcommand{\smallHorSpaceFour}{\hspace{0.13em}}
+
+
+
+% ##########
+% Commands for horizontal space in the text.
+
+\newcommand{\HorSpaceOne}{\hspace{0.05em}}
+\newcommand{\HorSpaceTwo}{\hspace{0.07em}}
+\newcommand{\HorSpaceThree}{\hspace{0.09em}}
+\newcommand{\HorSpaceFour}{\hspace{0.1em}}
+\newcommand{\HorSpaceFive}{\hspace{0.11em}}
+\newcommand{\HorSpaceSix}{\hspace{0.13em}}
+\newcommand{\HorSpaceSeven}{\hspace{0.15em}}
 
 
 
@@ -28,7 +61,8 @@
 % Kolory
 
 % Kolory z tematu beamera Metropolis Matthias Vogelgesang
-\definecolor{DarkOrange}{HTML}{EB811B}
+% Uncomment only if your files use `xcolor' packages.
+% \definecolor{DarkOrange}{HTML}{EB811B}
 
 
 
@@ -51,9 +85,13 @@
 % \newcommand{\noi}{\noindent}
 
 % Numeracja stron i rozdziałów
-\newcommand{\Str}[1]{\noindent \textbf{Str.~#1.}}
-\newcommand{\StrWg}[2]{\noindent \textbf{Str.~#1, wiersz~#2.}}
-\newcommand{\StrWd}[2]{\noindent \textbf{Str.~#1, wiersz~#2 (od dołu).}}
+\newcommand{\Str}[1]{\textbf{Str.~#1.}}
+% \newcommand{\StrWg}[2]{\textbf{Str.~#1, wiersz~#2.}}
+\newcommand{\StrWierszG}[2]{\textbf{Str.~#1, wiersz~#2.}}
+\newcommand{\StrWierszeG}[2]{\textbf{Str.~#1, wiersze~#2.}}
+% \newcommand{\StrWd}[2]{\textbf{Str.~#1, wiersz~#2 od~dołu.}}
+\newcommand{\StrWierszD}[2]{\textbf{Str.~#1, wiersz~#2 od~dołu.}}
+\newcommand{\StrWierszeD}[2]{\textbf{Str.~#1, wiersze #2 od~dołu.}}
 
 % Do poprawiania błędów
 \newcommand{\Dow}{\textbf{Dowód}} % To niezbyt pasuje do opisu POPRAW
