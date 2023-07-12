@@ -496,13 +496,14 @@ Z~równania tego w~prosty sposób odczytujemy funkcję $F$:
 \end{equation}
 Stajemy tu jednak przed problemem, jaka jest dziedzina funkcji~$F$?
 W~dalszym ciągu jeśli nie powiedziano inaczej, za dziedzinę funkcji $F$
-będziemy uważać największy zbiór na~którym jesteśmy w~stanie ją określić.
-Ponieważ zgodnie z~tym co powiedziano wcześniej, dziedzina funkcji $F$ ma
-być podzbiorem $\Rbb^{ n + 1 }$ dla pewnego~$n$, dziedziną funkcji określonej
-przez \eqref{eq:Matwiejew-Metody-calkowania-ETC-05} jest $\Rbb^{ 3 }$.
+definiującej równanie różniczkowe będziemy uważać największy zbiór na~którym
+jesteśmy w~stanie ją określić. Ponieważ zgodnie z~tym co powiedziano
+wcześniej, dziedzina funkcji $F$ jest podzbiorem $\Rbb^{ n + 1 }$, w~naszym
+wypadku $n = 2$, więc dla funkcji danej przez
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-05} jest ona równa $\Rbb^{ 3 }$.
 Łatwo~się też przekonać, że~rozwiązaniem równania
 \eqref{eq:Matwiejew-Metody-calkowania-ETC-06} jest funkcja
-$y( x ) = x^{ 2 } + C$, której dziedzina wynosi $\Rbb$.
+$y( x ) = x^{ 2 } + C$, której dziedzina to $\Rbb$.
 
 \vspace{\VerSpaceFour}
 
@@ -512,8 +513,14 @@ $y( x ) = x^{ 2 } + C$, której dziedzina wynosi $\Rbb$.
 
 \noindent
 \Str{10} Przy okazji wyprowadzania równania różniczkowe dla rodziny
-wszystkich okręgów na płaszczyźnie $x y$ napotykamy po raz pierwszy na
-pewien problem, który powróci do nas w przyszłości.
+wszystkich okręgów na płaszczyźnie $xy$ napotykamy po raz pierwszy na
+pewien problem, który powróci do nas w przyszłości. Naszym punktem wyjścia
+jest równania
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-08}
+  ( x - a )^{ 2 } + ( y - b )^{ 2 } = R^{ 2 }.
+\end{equation}
+Różniczkując je dwa razy otrzymujemy dwa następujące równania.
 
 \vspace{\negVerSpaceThree}
 
@@ -521,10 +528,10 @@ pewien problem, który powróci do nas w przyszłości.
 \begin{subequations}
 
   \begin{align}
-    \label{eq:Matwiejew-Metody-calkowania-ETC-08-A}
+    \label{eq:Matwiejew-Metody-calkowania-ETC-09-A}
     1 + \big( y'( x ) \big)^{ 2 } + \big( y( x ) - b \big) y''( x )
     &= 0, \\
-    \label{eq:Matwiejew-Metody-calkowania-ETC-08-B}
+    \label{eq:Matwiejew-Metody-calkowania-ETC-09-B}
     3 y'( x ) y''( x ) + \big( y( x ) - b \big) y'''( x )
     &= 0.
   \end{align}
@@ -533,24 +540,24 @@ pewien problem, który powróci do nas w przyszłości.
 
 
 \noindent
-Aby usunąć z~równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-08-B}
+Aby usunąć z~równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-09-B}
 parametr $b$ przyjmujemy, że~$y''( x ) \neq 0$, więc możemy przepisać równanie
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-08-A} jako
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-09-A} jako
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-09}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-10}
   y( x ) - b =
   -\frac{ 1 + \big( y'( x ) \big)^{ 2 } }{ y''( x ) }.
 \end{equation}
-Podstawiając tą zależność do \eqref{eq:Matwiejew-Metody-calkowania-ETC-08-B}
+Podstawiając tą zależność do \eqref{eq:Matwiejew-Metody-calkowania-ETC-09-B}
 dostajemy
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-10}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-11}
   3 y'( x ) y''( x ) -
   \frac{ 1 + \big( y'( x ) \big)^{ 2 } }{ y''( x ) } y'''( x ) = 0.
 \end{equation}
 Po pomnożeniu obustronnie przez $y''( x )$ dostajemy
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-11}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-12}
   3 y'( x ) \big( y''( x ) \big)^{ 2 } -
   \Big( 1 + \big( y'( x ) \big)^{ 2 } \Big) y'''( x ) = 0.
 \end{equation}
@@ -558,7 +565,104 @@ Choć równanie wyprowadziliśmy przy założeniu, że~$y''( x ) \neq 0$, to ko�
 jego postać jest dobrze określona również, gdy funkcja ta przyjmuje wartość
 zero. Powstaje więc pytania, jaki jest zakres obowiązywania tego równania?
 
+Równanie \eqref{eq:Matwiejew-Metody-calkowania-ETC-09-A} możemy przekształci
+przy założeniu $y( x ) - b \neq 0$ do postaci
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-13}
+  y''( x ) =
+  -\frac{ 1 + \big( y'( x ) \big)^{ 2 } }{ y( x ) - b },
+\end{equation}
+widzimy więc, że~$y''( x ) \neq 0$ jeśli tylko $y( x ) \neq b$, w~przeciwnym
+wypadku jest ona nieokreślona. Możemy stąd wyciągnąć wniosek,
+że~na mocy swojego wyprowadzenia równanie
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-12} obowiązuje dla wszystkich
+wartości $x$ dla których $y( x ) \neq b$. To~zaś prowadzi do~kilku problemów
+wartych przedyskutowania.
 
+Po~pierwsze, równanie \eqref{eq:Matwiejew-Metody-calkowania-ETC-12} nie
+zawiera stałej~$b$, gdyż naszym celem było wyprowadzenie równania
+pozbawionego stałych obecnych w~równaniu
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-08}. Biorąc więc za~punkt wyjścia
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-11} nie jesteśmy w~stanie
+sformułować na jego podstawie warunku $y( x ) \neq b$. Możliwe jednak, że~jeśli
+rozwiążemy to równanie, to jego rozwiązania będą nieokreślone jeśli $y( x )$
+przyjmie pewną wartość $D$, specyficzną dla danego rozwiązania. Już teraz
+możemy stwierdzić, iż~jest to prawdą, przynajmniej dla pewnej klasy
+rozwiązań tego równania, które w~postaci uwikłanej (zob. str.~15 omawianej
+książki\footnote{Na tej stronie omawiane jest rozwiązanie w~postaci
+  uwikłanej dla równania pierwszego rzędu, a~równanie
+  \eqref{eq:Matwiejew-Metody-calkowania-ETC-12}. Pomimo tego mamy nadzieję,
+  że~to w~jakim sensie równanie
+  \eqref{eq:Matwiejew-Metody-calkowania-ETC-08} przedstawia rozwiązanie
+  równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-12} jest wystarczająco
+  zrozumiałe i~nie wymaga dalszych komentarzy.}) jest dane przez naszą
+wyjściową zależność
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-08}. Nad analizą tej sytuacji
+zatrzymamy~się przez chwilę.
+
+Dla $x \in ( a - R, a + R )$ jesteśmy w~stanie je odwikłać na funkcję
+$y( x )$ otrzymując dwie funkcje
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-14}
+  y_{ \pm }( x ) = \pm\sqrt{ R^{ 2 } - ( x - a )^{ 2 } } + b.
+\end{equation}
+Nie jest możliwe odwikłanie tego równania na funkcję $y( x )$ w~sposób
+matematycznie spójny na~przedziale $( a + R - \delta, a + R ]$, dla pewnego
+$\delta > 0$, przy czym analogiczna sytuacja zachodzi dla przedziału
+$[ a - R, a - R + \delta )$. W~tematykę tego, czy w~takim razie nie powinniśmy
+również rozważać równania różniczkowego na funkcję $x( y )$ (zob. str.~13
+tej książki) nie będziemy~się zagłębiać. Niemniej widzimy, że
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-15}
+  \lim_{ x \nearrow a + R } y_{ \pm }( x ) = b,
+\end{equation}
+więc funkcje te możemy przedłużyć do funkcji ciągłych na przedziale
+$( a - R, a + R ]$ (analogicznie możemy postąpić dla punktu $a - R$).
+Tak przedłużone funkcje będziemy oznaczać przez $\yTilde_{ \pm }( x )$.
+Przyjmują one wartość $b$ tylko dla $x = a + R$, ale~żadna z~nich nie jest
+różniczkowalna w~punkcie $x = a + R$, bo~zachowuje~się w~ich otoczeniu jak
+$\sqrt{ x }$ w~otoczeniu punktu $x = 0$. Powyższe rozważania pomogą nam
+naświetlić drugi ważny problem.
+
+Zauważmy, że~choć równanie \eqref{eq:Matwiejew-Metody-calkowania-ETC-12}
+obowiązuje dla wszystkich $x$ taki, że~$y( x ) \neq b$, to nawet jeśli ten
+warunek jest nam z~góry znany, to zanim nie rozwiążemy tego równania, nie
+wiem dla jakich wartości zmiennej $x$ rozwiązanie przyjmie wartość $b$.
+Musimy więc najpierw rozwiązać w~odpowiedni sposób to równanie, a~następnie
+usunąć z~dziedziny rozwiązania te punkty, dla których $y( x ) = b$. Jeśli
+takie punkty rzeczywiście istnieją to powstaje następujące pytanie. Sokor
+otrzymaliśmy rozwiązanie również dla tych wartości $x$ dla
+których nie jest spełniony warunek $y( x ) \neq b$, to czy nie oznacza to,
+że~choć warunek ten był potrzebny do wyprowadzenia
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-12}, to jest on ostatecznie
+restrykcyjny i~należy przyjąć bardziej ogólną koncepcję rozwiązania?
+
+W~omawianym przykładzie, funkcje $y_{ \pm }( x )$ były zdefiniowane tylko na
+przedziale $( a - R, a + R )$, jednak dało~się je przedłużyć do funkcji
+$\yTilde_{ \pm }( x )$ ciągłych na $( a - R, a + R ]$, które są jednak
+nieróżniczkowalne w~punkcie $a + R$. Czy w~takim wypadku należy uważać
+funkcje $\yTilde_{ \pm }( x )$ za rozwiązanie odpowiedniego równania
+różniczkowego? Zwróćmy uwagę, że~rozwiązanie w~postaci uwikłanej
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-16}
+  ( x - a )^{ 2 } + ( y - b )^{ 2 } = R^{ 2 },
+\end{equation}
+przedstawia okrąg, czyli krzywą gładką w~każdym swoim punkcie, leżącą
+w~płaszczyźnie $xy$, która nie wykazuje żadnej osobliwości w~punkcie
+o~współrzędnych $( a + R, b )$. Z~tego
+punktu widzenia funkcja $\yTilde_{ + }( x )$ jest obcięciami rozwiązania
+danego funkcją uwikłaną do zbioru $( a - R, a + R ]$, które spełnia warunek
+$y \geq 0$, więc należy je uważa za pełnoprawne rozwiązanie równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-12}. Niewątpliwie, fakt,
+że~rozwiązania w~postaci uwikłanej pozwalają nam na objęciem pojęciem
+rozwiązania równania różniczkowego takich krzywych jak okręgi dane równaniem
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-16}, jest jednym z~powodów, dla
+których to pojęcie zostało wprowadzone.
+
+Przedstawiona powyżej analiza pozwala uzmysłowić, jak skomplikowanym
+zadaniem może być analiza zakresu obowiązywania danego równania
+różniczkowego oraz jego rozwiązań. Do omawiania tych zagadnień zapewne
+powrócimy jeszcze wielokrotnie w~tych notatkach.
 
 \vspace{\VerSpaceFour}
 
@@ -611,7 +715,7 @@ można wyprowadzić w~ten sam sposób, poprzez zróżniczkowanie
 i~przekształcenie zależności $\Phi\big( x, y( x ) \big) = 0$. Choć z~tego
 punktu widzenia równoważność równania
 \eqref{eq:Matwiejew-Metody-calkowania-ETC-12}
-i~$y'( x ) = f\big( x, y( x ) \big)$ może~się wydawać oczywista, to woleliśmy
+i~$y'( x ) = f\big( x, y( x ) \big)$ może~się wydawać oczywista, woleliśmy
 przedyskutować to zagadnienie możliwie dokładnie.
 
 \vspace{\VerSpaceFour}
