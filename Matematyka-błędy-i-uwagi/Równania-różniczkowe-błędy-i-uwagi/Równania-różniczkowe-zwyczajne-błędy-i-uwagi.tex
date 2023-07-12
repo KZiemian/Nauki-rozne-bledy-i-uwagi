@@ -16,9 +16,9 @@
 
 
 
-% ----------------------------
+% ------------------------------
 % Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ----------------------------
+% ------------------------------
 \usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
 \usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
 % grafiki.
@@ -27,9 +27,9 @@
 % wprowadzane bezpośrednio w tekście.
 \usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
 % za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ----------------------------
+% ------------------------------
 % MARGINS
-% ----------------------------
+% ------------------------------
 \setmarginsrb
 { 0.7in}  % left margin
 { 0.6in}  % top margin
@@ -94,9 +94,9 @@
 
 
 
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 % Dodatkowe ustawienia dla języka polskiego
-% --------------------------------------------------------------------
+% ---------------------------------------------------------------------
 \renewcommand{\thesection}{\arabic{section}.}
 % Kropki po numerach rozdziału (polski zwyczaj topograficzny)
 \renewcommand{\thesubsection}{\thesection\arabic{subsection}}
@@ -790,7 +790,129 @@ przedyskutować to zagadnienie możliwie dokładnie.
 
 
 \noindent
-\Str{16}  \\
+\Str{16} Należy przedyskutować dwa zagadnienia dotyczące rozwiązania
+równania różniczkowego
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-29}
+  y'( x ) = f\big( x, y( x ) \big),
+\end{equation}
+w~postaci parametrycznej. Po pierwsze, czy jeśli $y( x )$ jest rozwiązaniem
+tego równania, to czy można podać jego rozwiązanie w~postaci parametrycznej?
+Po drugie, jak uzasadnić, że~funkcje $\varphi( t )$ i~$\psi( t )$ spełniające
+równanie
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-30}
+  \frac{ \psi'( t ) }{ \varphi'( t ) } =
+  f\big( \varphi( t ), \psi( t ) \big),
+\end{equation}
+przedstawiając rozwiązanie równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-29}?
+
+Zanim odpowiemy na te pytania, zrobimy małą uwagę odnośnie oznaczeń.
+W~całym tym punkcie, jeśli nie powiedziano inaczej, symbol prim oznacza
+pochodną danej funkcji. W~szczególności we wzorze
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-30}, co przyjmowaliśmy domyślnie,
+symbol $\psi'( t )$ oznacza pochodną funkcji $\psi( t )$ po~czasie.
+
+Przejdźmy teraz do odpowiedzi na~pierwsze pytanie z postawionych wyżej
+pytań. Równanie różniczkowe \eqref{eq:Matwiejew-Metody-calkowania-ETC-29}
+jest określone na płaszczyźnie~$xy$, więc funkcje $\varphi( t )$ i~$\psi( t )$ możemy
+rozumieć jako odwzorowanie $\Psi( t ) : ( t_{ 0 }, t_{ 1 } ) \to \Rbb^{ 2 }$, dane
+przez
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-31}
+  \Psi( t ) = \big( \varphi( t ), \psi( t ) \big).
+\end{equation}
+Korzystając z~interpretacji równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-29} za pomocą wprowadzonego dalej
+na tej stronie i~następnych pojęcia pola kierunków oraz krzywej całkowej,
+można stwierdzić, że~funkcje $\varphi( t )$ i~$\psi( t )$ są rozwiązaniem
+rozpatrywanego równania w~postaci parametrycznej, jeśli $\Psi( t )$ wyznacza
+krzywą całkową. Jest to bardzo ładny atrakcyjny sposób rozumienia
+rozwiązania parametrycznego, dla porządku podamy alternatywną interpretacje.
+
+Mianowicie, jeśli $y( x )$ jest rozwiązaniem równania określonym dla
+$x \in ( a, b )$, to parę funkcji $\varphi( t )$, $\psi( t )$ określonych
+dla~$t \in I = ( t_{ 0 }, t_{ 1 } )$ nazywamy postacią parametryczną tego
+równania jeśli zachodzi $\varphi( I ) \subset ( a, b )$ oraz
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-32}
+  \psi( t ) = y\big( \varphi( t ) \big).
+\end{equation}
+
+Wzór \eqref{eq:Matwiejew-Metody-calkowania-ETC-32}
+pozwala nam stwierdzić, że~jeśli mamy dane rozwiązanie $y( x )$, określone
+przy tych samych warunkach co powyżej, to zawsze możemy utworzyć odpowiednie
+rozwiązanie parametryczne. Wystarczy przyjąć, że~$I = ( a, b )$,
+$\varphi( t ) = t$ (zwykle zapisuje to jako $x = t$) i~zdefiniować $\psi( t )$ jako
+$y\big( \varphi( t ) \big)$. Zauważmy, że~zachodzi wówczas
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-33}
+  \frac{ d \psi( t ) }{ d t } =
+  \frac{ d y( x ) }{ d x }\bigg|_{ x = \varphi( t ) }
+  \frac{ d \varphi( t ) }{ d t }.
+\end{equation}
+Oznaczając symbolem prim pochodną po czasie i~zakładając,
+że~$\varphi'( t ) \neq 0$ otrzymujemy zależność
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-34}
+  \frac{ d y( x ) }{ d x }\bigg|_{ x = \varphi( t ) } =
+  \frac{ \psi'( t ) }{ \varphi'( t ) }.
+\end{equation}
+Razem z~równaniami \eqref{eq:Matwiejew-Metody-calkowania-ETC-29}
+i~\eqref{eq:Matwiejew-Metody-calkowania-ETC-32} prowadzi do równania
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-35}
+  \frac{ \psi'( t ) }{ \varphi'( t ) } =
+  f\big( \varphi( t ), \psi( t ) \big).
+\end{equation}
+To kończy rozważanie na temat wyrażenia znanego rozwiązania w~postaci
+parametrycznej.
+
+Przejdźmy teraz do problemu, dlaczego możemy uważać rozwiązanie równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-30} za rozwiązania równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-29}. Przyjmijmy, że~funkcja
+$\varphi( t )$ jest różniczkowalna w~sposób ciągły. Na podstawie równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-30} wiemy, że~musi zachodzić
+$\varphi'( t )$. Na podstawie standardowych twierdzeń z~analizy matematycznej
+(zob. przykładowo \cite{FichtenholzRachunekRozniczkowyETCVolI2005}) oraz
+dobrze znanego wzoru na pochodną funkcji odwrotnej:
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-36}
+  \frac{ d f^{ -1 }( y ) }{ d y } =
+  \frac{ d f( t ) }{ d t }\bigg|_{ t = f^{ -1 }( y ) },
+\end{equation}
+istnieje w~pewnych otoczeniu wybranego punktu $t$ istniej funkcja odwrotna
+do $\varphi( t )$, którą będziemy oznaczać $\eta( x )$, która jest różniczkowalna
+i~jej pochodna wynosi
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-37}
+  \frac{ d \eta( x ) }{ d x } =
+  \frac{ 1 }{ \varphi'\big( \eta( x ) \big) }.
+\end{equation}
+Dla większej przejrzystość obliczeń użyliśmy tutaj symbolu
+$\varphi'\big( \eta( x ) \big)$ na oznaczenia wartości pochodnej $\varphi'( t )$ obliczonej
+w~punkcie $\eta( x )$.
+
+Rozpatrzmy teraz funkcję $\psi\big( \eta( x ) \big)$. Jej pochodna po zmiennej $x$
+jest równa
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-38}
+  \frac{ d \psi\big( \eta( x ) \big) }{ d x } =
+  \frac{ d \psi( t ) }{ d t }\bigg|_{ t = \eta( x ) }
+  \frac{ d \eta( x ) }{ d x } =
+  \frac{ d \psi( t ) }{ d t }\bigg|_{ t = \eta( x ) }
+  \frac{ 1 }{ \varphi'\big( \eta( x ) \big)}.
+\end{equation}
+Jeżeli teraz obliczymy wartość obu stron równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-30} dla wartości $t = \eta( x )$
+otrzymamy
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-39}
+  \frac{ \psi'\big( \eta( x ) \big) }{ \varphi'\big( \eta( x ) \big) } =
+  f\Big( x, \psi\big( \eta( x ) \big) \Big).
+\end{equation}
+Dzięki równaniu
 
 \vspace{\VerSpaceFour}
 
@@ -800,6 +922,22 @@ przedyskutować to zagadnienie możliwie dokładnie.
 
 \noindent
 \Str{31}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
