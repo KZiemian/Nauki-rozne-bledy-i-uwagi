@@ -405,15 +405,15 @@ jest różniczkowalna?
 Pomimo problemów z~określeniem klasy tych zbiorów, w~większości przypadków
 przyjmuje~się, że~zbiór $A$ jest odcinkiem otwartym $( a, b )$, gdzie
 dopuszczamy sytuację, że $a$ i~$b$ mogą przyjmować wartość $\pm \infty$. Jak
-zauważono na stronie ???, nie nastręcza również problemu określenie
-funkcji~$y$ na odcinkach domkniętych z~jednej, bądź obu stron. W~przypadku
-odcinka $[ a, b )$ przez pochodną w~punkcie~$a$ rozumiemy pochodną
-prawostronną funkcji $y$ i~analogicznie postępuję w~przypadku odcinka
-$( a, b ]$. Przy czym jeśli dany jest odcinek prawostronnie domknięty
-$( a, b ]$ to musi zachodzić $-\infty < b < +\infty$, natomiast $a$ może przyjąć
-wartość $-\infty$. Analogicznie zasady stosują~się do pozostały pozostał
-przypadków odcinków jednostronnie, bądź obustronnie domkniętych. Do problemu
-kształtu dziedziny powrócimy niedługo.
+zauważono na~stronie~14 omawianej książki, nie nastręcza również problemu
+określenie funkcji~$y$ na odcinkach domkniętych z~jednej, bądź obu stron.
+W~przypadku odcinka $[ a, b )$ przez pochodną w~punkcie~$a$ rozumiemy
+pochodną prawostronną funkcji $y$ i~analogicznie postępuję w~przypadku
+odcinka $( a, b ]$. Przy czym jeśli dany jest odcinek prawostronnie
+domknięty $( a, b ]$ to musi zachodzić $-\infty < b < +\infty$, natomiast $a$ może
+przyjąć wartość $-\infty$. Analogicznie zasady stosują~się do pozostały pozostał
+przypadków odcinków jednostronnie, bądź obustronnie domkniętych.
+Do~problemu kształtu dziedziny powrócimy niedługo.
 
 Niech teraz $O$ będzie otwartym podzbiorem $\Rbb^{ n + 2 }$, przy czym
 elementy $\Rbb^{ n + 2 }$ będziemy oznaczać przez
@@ -882,9 +882,10 @@ dobrze znanego wzoru na pochodną funkcji odwrotnej:
   \frac{ d f^{ -1 }( y ) }{ d y } =
   \frac{ d f( t ) }{ d t }\bigg|_{ t = f^{ -1 }( y ) },
 \end{equation}
-istnieje w~pewnych otoczeniu wybranego punktu $t$ istniej funkcja odwrotna
-do $\varphi( t )$, którą będziemy oznaczać $\eta( x )$, która jest różniczkowalna
-i~jej pochodna wynosi
+w~pewnych otoczeniu wybranego punktu $t$, oznaczmy je
+$J = ( t - \delta_{ 1 }, t + \delta_{ 2 } )$, gdzie $\delta_{ 1 }, \delta_{ 2 } > 0$, istniej
+funkcja odwrotna do $\varphi( t )$, oznaczać ją będziemy $\eta( x )$, która jest
+różniczkowalna i~jej pochodna wynosi
 \begin{equation}
   \label{eq:Matwiejew-Metody-calkowania-ETC-37}
   \frac{ d \eta( x ) }{ d x } =
@@ -912,7 +913,26 @@ otrzymamy
   \frac{ \psi'\big( \eta( x ) \big) }{ \varphi'\big( \eta( x ) \big) } =
   f\Big( x, \psi\big( \eta( x ) \big) \Big).
 \end{equation}
-Dzięki równaniu
+Korzystając z~\eqref{eq:Matwiejew-Metody-calkowania-ETC-38} możemy przepisać
+powyższe równanie jako
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-40}
+  \frac{ d \psi\big( \eta( x ) \big) }{ d x } =
+  f\Big( x, \psi\big( \eta( x ) \big) \big).
+\end{equation}
+Widzimy więc, że~funkcja $y( x ) = \psi\big( \eta( x ) \big)$ jest rozwiązaniem
+równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-29} określonym na zbiorze
+$\varphi( J )$. To wyjaśnia czemu funkcje $\varphi( t )$ i~$\psi( t )$ możemy uznać za
+rozwiązanie rozważanego równania różniczkowego.
+
+\vspace{\VerSpaceFour}
+
+
+
+
+
+\noindent
+\Str{16}
 
 \vspace{\VerSpaceFour}
 
