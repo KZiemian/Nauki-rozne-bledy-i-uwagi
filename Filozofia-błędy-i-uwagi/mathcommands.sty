@@ -8,6 +8,22 @@
 
 
 
+
+% ############################
+% Constants
+% ############################
+
+\newcommand{\const}{\textrm{const}}
+
+
+
+
+
+
+
+
+
+
 % ############################
 % Functions
 % ############################
@@ -19,7 +35,39 @@
 \DeclareMathOperator{\Arg}{Arg}
 
 
+\DeclareMathOperator{\Diam}{Diam}
+
+
+\DeclareMathOperator{\Imag}{\mathfrak{Im}}
+
 \DeclareMathOperator{\id}{id}
+
+
+\DeclareMathOperator{\Log}{Log}
+
+
+\DeclareMathOperator{\proj}{proj}
+
+
+\DeclareMathOperator{\Real}{\mathfrak{Re}}
+
+
+\DeclareMathOperator{\Tr}{Tr}
+
+
+
+
+
+
+
+
+
+
+% ##################
+% Spaces of functions
+% ##################
+
+
 
 
 
@@ -27,7 +75,6 @@
 % ##################
 % Various useful symbols for functions
 % ##################
-
 
 \newcommand{\yTilde}{\widetilde{y}}
 
@@ -50,18 +97,19 @@
 \let\oldlambda\Lambda
 \renewcommand{\lambda}{\uplambda}
 
-% ##################
-
 
 
 
 
 % ##################
 % Blackboard bold letters
+% ##################
 
 \newcommand{\Abb}{\mathbb{A}}
 
 \newcommand{\Cbb}{\mathbb{C}}
+
+\newcommand{\Ebb}{\mathbb{E}}
 
 \newcommand{\Fbb}{\mathbb{F}}
 
@@ -84,14 +132,12 @@
 \newcommand{\Zbb}{\mathbb{Z}}
 
 
-% ##################
-
-
 
 
 
 % ##################
 % Bold face letters
+% ##################
 
 \newcommand{\Cbold}{\mathbf{C}}
 
@@ -107,6 +153,7 @@
 
 % ##################
 % Calligraphed letters
+% ##################
 
 \newcommand{\Acal}{\mathcal{A}}
 
@@ -161,6 +208,7 @@
 
 % ##################
 % Fraktur letters
+% ##################
 
 \newcommand{\Bfrak}{\mathfrak{B}}
 
@@ -192,6 +240,7 @@
 
 % ##################
 % Vectors with arrows
+% ##################
 
 \newcommand{\veca}{\vec{a}}
 
@@ -231,145 +280,21 @@
 
 \newcommand{\vecy}{\vec{y}}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-% ############################
-% Constants
-% ############################
-
-\newcommand{\const}{\textrm{const}}
-
-
-
-
-
-
-
-
-
-
-% ############################
-% Sets
-
-% Ładniejszy zbiór pusty
-\let\oldemptyset\emptyset
-\let\emptyset\varnothing
-
-
-
-% Wartość bezwzględna i normy
-\providecommand{\abs}[1]{\lvert{ #1 }\rvert}
-
-\newcommand{\absOne}[1]{|\, { #1 } \,|}  % ABSolute value One
-\newcommand{\abstw}[1]{\left| \, { #1 } \, \right|}
-\newcommand{\absth}[1]{\left| { #1 } \right|}
-\newcommand{\absf}[1]{| { #1 } |}
-% \providecommand{\absd}[1]{\left| #1 \right|}
-% Zupełnie nie wiem, czemu to jest \providecommand
-\providecommand{\norm}[1]{\lVert{ #1 }\rVert}
-
-% ##################
-
-
-
-\newcommand{\matUnit}{I}
-
-
-
-
-% ##################
-% Functions
-
-
-% ????
-\newcommand{\End}{\mathrm{End}}
-
-\newcommand{\Aut}{\mathrm{Aut}}
-
-
-% ????
-\newcommand{\im}{\mathrm{im}}
-% ????
-% \newcommand{\ker}{\mathrm{ker}}
-
-
-\DeclareMathOperator{\proj}{proj}
-
-% Complex analysis
-\DeclareMathOperator{\Imag}{\mathfrak{Im}}
-\DeclareMathOperator{\Log}{Log}
-\DeclareMathOperator{\Real}{\mathfrak{Re}}
-
-
-% Space of functions
-\newcommand{\Hom}{\mathrm{Hom}}
-
-
-
-
-% ##################
-% Functional analysis
-
-
-\DeclareMathOperator{\Ker}{Ker}
-
-\DeclareMathOperator{\Ran}{Ran}
-
-
-% ##################
-
-
-% ##################
-% Groups
-
-
-
-
-
-
-% ##################
-% Algebra
-
-\DeclareMathOperator{\Tr}{Tr}
-
-
-
-
-
-% #############
-% Algebra liniowa
-
-% Podprzestrzenie i odwzorowania liniowe
-\newcommand{\image}{\textrm{im}}
-
-% Vectors
-
-
-
-
-
-
-
-
 \newcommand{\vecZero}{\vec{0}}
 
-% Funkcje wektorowe
-\newcommand{\vecxt}{\vec{x}( t )}
 
 
+
+
+
+
+
+
+
+% ##################
 % Vectors, bold font
+% ##################
+
 \newcommand{\vecAbold}{\mathbf{A}}
 \newcommand{\vecabold}{\mathbf{a}}
 
@@ -421,6 +346,7 @@
 \newcommand{\vecybold}{\mathbf{y}}
 
 
+
 \newcommand{\vecalphabold}{\boldsymbol{\alpha}}
 
 \newcommand{\vecrhobold}{\boldsymbol{\rho}}
@@ -430,9 +356,136 @@
 \newcommand{\vecomegabold}{\boldsymbol{\omega}}
 
 
+
 \newcommand{\vecZeroBold}{\mathbf{0}}
 
 \newcommand{\vecOneBold}{\mathbf{1}}
+
+
+
+
+
+
+
+
+
+
+% ############################
+% Sets
+% ############################
+
+
+% Better looking empty set symbol
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+
+
+
+
+
+
+% ##################
+% Symbols for operations that creates sets
+% ##################
+
+\DeclareMathOperator{\Ker}{Ker}
+
+\DeclareMathOperator{\Ran}{Ran}
+
+\DeclareMathOperator{\supp}{supp}
+
+
+
+
+
+
+
+
+% Wartość bezwzględna i normy
+\providecommand{\abs}[1]{\lvert{ #1 }\rvert}
+
+\newcommand{\absOne}[1]{|\, { #1 } \,|}  % ABSolute value One
+\newcommand{\abstw}[1]{\left| \, { #1 } \, \right|}
+\newcommand{\absth}[1]{\left| { #1 } \right|}
+\newcommand{\absf}[1]{| { #1 } |}
+% \providecommand{\absd}[1]{\left| #1 \right|}
+% Zupełnie nie wiem, czemu to jest \providecommand
+\providecommand{\norm}[1]{\lVert{ #1 }\rVert}
+
+% ##################
+
+
+
+\newcommand{\matUnit}{I}
+
+
+
+
+
+
+
+% ????
+\newcommand{\End}{\mathrm{End}}
+
+\newcommand{\Aut}{\mathrm{Aut}}
+
+
+
+
+
+
+
+% Space of functions
+\newcommand{\Hom}{\mathrm{Hom}}
+
+
+
+
+% ##################
+% Functional analysis
+
+
+
+
+
+% ##################
+
+
+% ##################
+% Groups
+
+
+
+
+
+
+% ##################
+% Algebra
+
+
+
+
+
+
+
+% #############
+% Algebra liniowa
+
+
+
+
+
+
+
+
+% Funkcje wektorowe
+\newcommand{\vecxt}{\vec{x}( t )}
+
+
+
+
+
+
 
 
 
@@ -468,7 +521,6 @@
 
 % #####
 % Oznaczenia do teorii funkcji
-\newcommand{\supp}{\mathrm{supp}\,}
 
 
 
@@ -608,7 +660,7 @@
 
 
 
-\newcommand{\Diam}{\textrm{Diam}}
+
 
 
 \newcommand{\dR}{\textrm{dR}}
