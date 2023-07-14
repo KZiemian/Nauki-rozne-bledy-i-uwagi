@@ -62,7 +62,7 @@
 \usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
 \usepackage{bm}  % Daję komendę \bm do pogrubionej czcionki matematycznej
 % \usepackage{siunitx} % Do prostszego pisania jednostek fizycznych
-% \usepackage{upgreek} % Ładniejsze greckie litery
+\usepackage{upgreek} % Ładniejsze greckie litery
 % Przykładowa składnia: pi = \uppi
 \usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
 \usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
@@ -932,7 +932,229 @@ rozwiązanie rozważanego równania różniczkowego.
 
 
 \noindent
-\Str{16}
+\Str{16--17} Warto dodać kilka słów komentarza do wprowadzonego tutaj
+pojęcia pola kierunków oraz na relacji jaki pojęcie to ma do używanego
+przez Władimira Arnolda pojęcia pola wektorowego definiujące równanie
+różniczkowe \cite{ArnoldRownaniaRozniczkoweZwyczajne1975}. Samo pole
+kierunków w~tym fragmencie notatek będziemy rozpatrywać tylko
+w~najprostszym przypadku, tym samym który jest omówiony w~książce, czyli
+gdy szukana funkcja jest odwzorowaniem $y : A \to \Rbb$,
+$A \subset \Rbb$, a~równanie które ma spełniać jest standardowej postaci:
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-41}
+  y'( x ) = f\big( x, y( x ) \big).
+\end{equation}
+W~związku z~tym pole kierunków jest zdefiniowane na
+płaszczyźnie $xy$, gdzie $x$ odpowiada zmiennej niezależnej, a~$y$
+wartościom przyjmowanym przez funkcję $y$.
+
+Zaczniemy od pewnych uwag terminologicznych. O~równaniu
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-41} i~różnych jego
+uogólnieniach będziemy mówili, że~wyznacza ono
+\textbf{ruch zadanego punktu}. Przez ruch punktu będziemy rozumieć
+rozwiązanie tego równania $y$. Natomiast przez \textbf{tor ruchu} będziemy
+rozumieć zbiór $y( A )$.
+
+Przejdźmy teraz do pola kierunków. W~jego opisie pojawiają~się długości
+odcinków i~kąty, stąd wniosek, że~określamy je na płaszczyźnie, na~której
+jest zdefiniowany iloczyn skalarny. Inaczej mówiąc, mamy do czynienia
+z~dwuwymiarową
+przestrzenią euklidesową $\Ebold^{ 2 }$, z~wybranym w~niej układem
+współrzędnych. Moglibyśmy więc podać formalizacje pola kierunków za~pomocą
+wiązki stycznej $T \Ebold^{ 2 }$, lecz nie widzimy takiej potrzeby.
+
+W~dalszym ciągu potrzebne nam będą następujące oznaczenia. Przez $v$
+będziemy oznaczali pole kierunków określone na $\Ebold^{ 2 }$, przez
+$\vecv$ będziemy określali pole wektorowe w~takim sensie jak rozumie je
+w~cytowanej wyżej pozycji Arnold, po więcej informacji odsyłamy do tej
+książki.
+
+Podanie kierunku jest równoważne z~podaniem pewnej prostej, aby~zdefiniować
+kierunek wystarczy każdemu punktowi $P$ przyporządkować dowolny wektor
+kierunkowy prostej wyznaczający dany kierunek. Tym samym pole wektorowe
+$\vecv$ określone w~obszarze $G \subset \Ebold^{ 2 }$ odpowiednie pole kierunków,
+jednak w~ogólności pole kierunków nie wyznacza w~sposób jednoznaczny pola
+wektorowego. Mając dane pole kierunków możemy zawsze podać nieskończoną
+ilość pól wektorowych, takich że wektor $\vecv( x, y )$ ma kierunek równy
+$v( x, y )$. Wystarczy bowiem znaleźć jedno takie pole $\vecv( x, y )$,
+następnie dla $\lambda \neq 0$ określić pole
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-42}
+  \vecv_{ \, \lambda }( x, y ) = \lambda \HorSpaceThree \vecv( x, y ).
+\end{equation}
+Sposób budowy pola wektorowego odpowiadającego danemu polu kierunków podamy
+dalej.
+
+Powstaje pytanie, czemu w~tym kontekście wystarczające jest rozważanie pola
+kierunków, podczas gdy Arnold musi rozważać pola wektorowe? Wynika to
+z~tego, że~tutaj analizujemy tylko najprostszy przypadek równania, w~którym
+szukana jest funkcja $y : A \to \Rbb$, $A \subset \Rbb$, podczas, gdy formalizm
+Arnolda obejmuje sytuacje, w~których szukana funkcja jest typu
+$y : A \to \Rbb^{ n }$. Przeanalizujemy teraz dokładniej oba te przypadki.
+
+Dla uproszczenia notacji, będziemy od teraz przyjmować, że~we wszystkich
+przypadkach mamy $A = ( t_{ 0 }, t_{ 1 } )$. Nie ma to wielkiego znaczenia
+dla ogólności przedstawionych rozważań. Niech szukana funkcja będzie postaci
+$y : ( t_{ 0 }, t_{ 1 } ) \to \Rbb$. Wówczas krzywa całkowa
+zawarta w~$G \subset \Ebold^{ 2 }$ i~styczna do pola kierunków
+$v( x, y ) = f( x, y )$ wyznacza nie tylko kształt toru ruchu punktu,
+którego równanie ruchu ma postać
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-41},
+ale też jaki dokładnie sposób w~jaki ten tor pokonuje. Tor ruchu dla
+badanego przypadku jest zawsze bardzo prosty, tworzy on bowiem odcinek
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-43}
+  y\big( ( t_{ 0 }, t_{ 1 } ) \big) = ( a, b )
+\end{equation}
+ (ewentualnie jeden z~odcinków
+$( a, b ]$, $[ a, b )$, $[ a, b ]$), dla pewnych $a, b \in \Rbb$,
+ewentualnie $a = -\infty$, $b = +\infty$. Wynika to z~tego, że~funkcja $y_{ 1 }( x )$
+jest ciągła, a~obraz odcinka (zbioru spójnego) przez odwzorowanie ciągłe
+jest też odcinek.
+
+Jeśli zaś chodzi o~dokładny przebieg ruchu, to~z~krzywych całkowych pola
+kierunków możemy odczytać czy jest to na przykład ruch oscylujący typu
+$y_{ 1 }( x ) = A \sin( x )$, $A \in \Rbb$, czy ruch liniowy
+$y_{ 1 }( x ) = A x$, etc. Wynika to z~tego, że~krzywa fazowa odpowiada
+definicji funkcji jako zbioru par uporządkowanych odpowiedniego iloczynu
+kartezjańskiego.
+
+Wskażmy jeszcze na jeden ważny fakt. W~tej konkretnej sytuacji do pełnego
+scharakteryzowania krzywych całkowych wystarczy znajomość kierunku do
+którego mają one być styczna. Wiemy bowiem, że~krzywa całkowa zawsze
+„biegnie od lewej do prawej”, bo to jest kierunek w~których zmienna $x$.
+Załóżmy teraz, że~przez punkt $( x, y )$ ma przechodzić gładka krzywa
+całkowa, dana przez funkcję $y_{ 1 }$. Równaniem tej krzywej jest postaci
+$x \mapsto \big( x, y( x ) \big)$, więc wektor $\vecv$ styczny do~niej w~tym
+punkcie jest dany przez
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-44}
+  \vecv \HorSpaceThree ( x, y ) =
+  \big[ 1, y'( x ) \big].
+\end{equation}
+Z~analizy matematycznej wiemy, że~jeśli $\alpha$ jest kątem pod jakim styczna do
+krzywej w~punkcie $\big( x, y( x ) \big)$, to zachodzi
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-45}
+  \tan( \alpha ) = y'( x ).
+\end{equation}
+Ponieważ zaś $\tan( \alpha )$ jest wyznaczony przez pole kierunków, pozwala nam
+to jednoznacznie wyznaczyć wektor styczny do krzywej całkowej. Możemy teraz
+skorzystać z~\eqref{eq:Matwiejew-Metody-calkowania-ETC-41} i~otrzymać wzór
+na pole wektorowe odpowiadające temu równaniu różniczkowemu:
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-46}
+  \vecv \HorSpaceThree ( x, y ) =
+  \big[ 1, f( x, y ) \big].
+\end{equation}
+Możemy teraz odwrócić rozumowanie i~stwierdzić, że~rozwiązanie równania
+różniczkowego oznacza znalezienie krzywych całkowych na płaszczyźnie $xy$,
+takich że w~każdym ich punkcie ich wektor styczny jest dany przez pole
+wektorowe zdefiniowane wzorem \eqref{eq:Matwiejew-Metody-calkowania-ETC-46}.
+
+Przyjrzyjmy~się jeszcze raz temu rozumowaniu. Ponieważ w~omawianym
+przypadku wiemy, że~pierwsza pola wektorowego zadanego przez równanie
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-42} musi~się zawsze równać jeden:
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-47}
+  \vecv_{ x }( x, y ) = 1,
+\end{equation}
+więc biorąc to pod uwagę, jesteśmy w~stanie znając wartości pola kierunków
+w~punkcie $( x, y )$, jesteśmy w~stanie odtworzyć wektor $\vecv( x, y )$.
+Warunek ten wyklucza również możliwość zastosowania transformacji takich jak
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-42}.
+
+Rozpatrzmy teraz sytuację analizowaną przez Arnolda. Niech więc będzie dane
+pole wektorowe $\vecv : G \to \Rbb^{ 2 }$, $G \subset \Rbb^{ 2 }$. Szukać będziemy
+funkcji postaci $\vecy : ( t_{ 0 }, t_{ 1 } ) \to G$, spełniający następujący
+równanie
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-48}
+  \frac{ d \vecy( t ) }{ d t } =
+  \vecf \HorSpaceOne \big( t, \vecy( t ) \big) =
+  \vecv \HorSpaceThree \big( \vecy( t ) \big),
+\end{equation}
+będące odpowiednikiem \eqref{eq:Matwiejew-Metody-calkowania-ETC-41}.
+Zwyczajowo użyliśmy symbolu $t$ dla oznaczenia parametru od którego zależy
+rozwiązanie $\vecy$. Dodatkowo współrzędne kartezjańskie w~zbiorze $G$
+będziemy oznaczać $y_{ 1 }$ i~$y_{ 2 }$. Ostatnie równanie można
+również zapisać jako
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-49}
+  \begin{bmatrix}
+    y'_{ 1 }( t ) \\
+    y'_{ 2 }( t )
+  \end{bmatrix} =
+  \begin{bmatrix}
+    v_{ 1 }\big( y_{ 1 }( t ), y_{ 2 }( t ) \big) \\
+    v_{ 2 }\big( y_{ 1 }( t ), y_{ 2 }( t ) \big)
+  \end{bmatrix}\!.
+\end{equation}
+
+Jeśli teraz weźmiemy pole wektorowe $\vecv$ i~narysujemy zarówno je samo,
+jak i~krzywe których wektory styczne w~każdym punkcie są równe wektorom
+pola $\vecv$ w~tym samym punkcie, to tym razem nie otrzymamy pełnej
+informacji o~ruchu punktu, który jest opisany równaniem
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-48}, bowiem te krzywe będą
+obrazować tylko tor danego ruchu. Przykładowo, krzywa widoczna na rysunku
+????
+pokazuje nam, że~tor ruchu punktu tworzy pewną krzywą zamkniętą, ale nic
+nie mówi nam o tym, czy punkt porusza się po niej ze stałą prędkością,
+czy też raz zwalnia, raz przyśpiesza?
+
+Aby uzyskać jak poprzednio pełną informację o~ruchu powinniśmy rozpatrywać
+krzywe w~zbiorze $( t_{ 0 }, t_{ 1 } ) \times G$, na którym określone jest pole
+wektorowe
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-50}
+  \vecv_{ \, \textrm{ext} }( t, y_{ 1 }, y_{ 2 } ) =
+  \begin{bmatrix}
+    1 \\
+    v_{ 1 }( y_{ 1 }, y_{ 2 } ) \\
+    v_{ 2 }( y_{ 1 }, y_{ 2 } )
+  \end{bmatrix}\!.
+\end{equation}
+Dopiero znalezienie odpowiednika krzywych całkowych dla tego pola da nam
+pełną informację o~ruchu, z~tego samego powodu co poprzednio: odpowiednik
+krzywej całkowej w~zbiorze $( t_{ 0 }, t_{ 1 } ) \times G$ wyznacza funkcje
+wedle definicji danej przez teorię mnogości. Powyżej podaliśmy pole
+wektorowe dla tej przestrzeni, kwestią czy można na nią uogólnić pojęcie
+pola kierunków, nie będziemy~się zajmować.
+
+Różnica między równaniem \eqref{eq:Matwiejew-Metody-calkowania-ETC-41}
+i~\eqref{eq:Matwiejew-Metody-calkowania-ETC-48} wynika głównie z~rodzaju
+funkcji, które są ich rozwiązaniami. Dokładniej z~tego, że~funkcje typu
+$y : ( t_{ 0 }, t_{ 1 } ) \to \Rbb$ są niezwykle proste, gdyż ich
+przeciwdziedzina jest niezwykle prosta. W~tym przypadku torem ruchu jest
+zawsze odcinek $( a, b )$, ewentualnie odcinek domknięty z jednej lub obu
+stron, podczas gdy w~wypadku funkcji
+$\vecy : ( t_{ 0 }, t_{ 1 } ) \to \Rbb^{ 2 }$ torami ruchu są
+gładkie krzywe, czyli obiekty geometryczne o~nieporównywalnie większym
+bogactwie kształtów i~zachowań niż odcinki.
+
+Na koniec zwróćmy uwagę na rzecz stosunkowo oczywistą. Ze~względu na to,
+że~w~poprzednim przypadku płaszczyzna $xy$ zamierała zarówno informacje
+o~przebiegu ruchu jak i~o~jego torze, to wystarczyło określić na niej pole
+kierunków. W~obecnie rozważanym przypadku, krzywe w~obszarze $G$ zawierają
+tylko informacje o~torze ruchu, skutkiem czego gdybyśmy określili pole
+kierunków, pole odcinków o~długości jeden, rozwiązania ruchu nie byłyby
+jednoznacznie wyznaczone.
+
+Możemy to zilustrować prostym przykładem. Weźmy $G = \Rbb^{ 2 }$ i~pole
+wektorowe $\vecv( y_{ 1 }, y_{ 2 } ) = ( 1, 0 )$. Łatwo sprawdzić,
+że~$\vecy_{ 1 }( t ) = [ t, 0 ]$ jest rozwiązaniem równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-49},
+ale~$\vecy_{ 2 }( t ) = [ -t, 0 ]$ już nim nie jest. Gdybyśmy zamiast tego
+rozpatrywali pole odcinków jednostkowy, takie że~w~punkcie
+$( y_{ 1 }, y_{ 2 } )$ odcinek wyznacza ten sam kierunek na którym leży
+wektor $\vecv( y_{ 1 }, y_{ 2 } )$ i~żądali od~rozwiązania tylko,
+by~wektor $\vecy'( t )$ znajdujący~się w~punkcie $\vecy( t )$ posiadał
+kierunek wyznaczony przez pole kierunków, wówczas $\vecy_{ 1 }( t )$
+i~$\vecy_{ 2 }( t )$~byłby rozwiązaniami tak postawionego problemu.
+
+Do tych rozważań należy któregoś dnia wrócić, poprawić je i~uzupełnić wedle
+tego co jest napisane w~dziele Arnolda
+\cite{ArnoldRownaniaRozniczkoweZwyczajne1975}.
 
 \vspace{\VerSpaceFour}
 
@@ -941,7 +1163,52 @@ rozwiązanie rozważanego równania różniczkowego.
 
 
 \noindent
-\Str{31}
+\Str{17} Izokliny????
+
+\vspace{\VerSpaceFour}
+
+
+
+
+
+\noindent
+\Str{18} ???
+
+\vspace{\VerSpaceFour}
+
+
+
+
+
+\noindent
+\Str{19} ???
+
+\vspace{\VerSpaceFour}
+
+
+
+
+
+\noindent
+\Str{20} ???
+
+\vspace{\VerSpaceFour}
+
+
+
+
+
+\noindent
+\Str{21} ????
+
+\vspace{\VerSpaceFour}
+
+
+
+
+
+\noindent
+\Str{31} ????
 
 
 
