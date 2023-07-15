@@ -330,6 +330,7 @@ $\absOne{ x - x_{ 0 } } \leq h_{ 1 }$. \\
 
 \vspace{0em}
 
+
 \noindent
 Książka ta podąża za zwyczajem, że~jeśli argumenty danej funkcji są
 odpowiednio oczywiste, to można je opuścić. Przykładowo na stronie~7
@@ -613,7 +614,7 @@ parametr $b$ przyjmujemy, że~$y''( x ) \neq 0$, więc możemy przepisać równa
   y( x ) - b =
   -\frac{ 1 + \big( y'( x ) \big)^{ 2 } }{ y''( x ) }.
 \end{equation}
-Podstawiając tą zależność do \eqref{eq:Matwiejew-Metody-calkowania-ETC-16-B}
+Podstawiając tą zależność do \eqref{eq:Matwiejew-Metody-calkowania-ETC-18-B}
 dostajemy
 \begin{equation}
   \label{eq:Matwiejew-Metody-calkowania-ETC-20}
@@ -936,17 +937,20 @@ rozwiązanie rozważanego równania różniczkowego.
 pojęcia pola kierunków oraz na relacji jaki pojęcie to ma do używanego
 przez Władimira Arnolda pojęcia pola wektorowego definiujące równanie
 różniczkowe \cite{ArnoldRownaniaRozniczkoweZwyczajne1975}. Samo pole
-kierunków w~tym fragmencie notatek będziemy rozpatrywać tylko
-w~najprostszym przypadku, tym samym który jest omówiony w~książce, czyli
-gdy szukana funkcja jest odwzorowaniem $y : A \to \Rbb$,
-$A \subset \Rbb$, a~równanie które ma spełniać jest standardowej postaci:
+kierunków oraz inne pojęcia dla niego wprowadzone, takie jak izokliny
+(por. str.~17 i~18), w~tych notatkach będziemy rozpatrywali, chyba
+że~powiedziano inaczej, tylko w~kontekście najprostszego przypadku, dla
+którego są wprowadzone w~tym fragmencie książki. Ten najprostszy przypadek
+przedstawia~się następująco. Szukana funkcja $y$ jest odwzorowaniem
+$y : A \to \Rbb$, gdzie $A \subset \Rbb$, a~równanie które ma spełniać podane
+jest w~standardowej postaci normalnej:
 \begin{equation}
   \label{eq:Matwiejew-Metody-calkowania-ETC-41}
   y'( x ) = f\big( x, y( x ) \big).
 \end{equation}
-W~związku z~tym pole kierunków jest zdefiniowane na
-płaszczyźnie $xy$, gdzie $x$ odpowiada zmiennej niezależnej, a~$y$
-wartościom przyjmowanym przez funkcję $y$.
+W~związku z~tym pole kierunków jest zdefiniowane na płaszczyźnie $xy$,
+gdzie $x$ odpowiada zmiennej niezależnej, a~zmienna $y$ wartościom
+przyjmowanym przez funkcję $y( x )$.
 
 Zaczniemy od pewnych uwag terminologicznych. O~równaniu
 \eqref{eq:Matwiejew-Metody-calkowania-ETC-41} i~różnych jego
@@ -993,9 +997,9 @@ Arnolda obejmuje sytuacje, w~których szukana funkcja jest typu
 $y : A \to \Rbb^{ n }$. Przeanalizujemy teraz dokładniej oba te przypadki.
 
 Dla uproszczenia notacji, będziemy od teraz przyjmować, że~we wszystkich
-przypadkach mamy $A = ( t_{ 0 }, t_{ 1 } )$. Nie ma to wielkiego znaczenia
+przypadkach mamy $A = ( x_{ 0 }, x_{ 1 } )$. Nie ma to wielkiego znaczenia
 dla ogólności przedstawionych rozważań. Niech szukana funkcja będzie postaci
-$y : ( t_{ 0 }, t_{ 1 } ) \to \Rbb$. Wówczas krzywa całkowa
+$y : ( x_{ 0 }, x_{ 1 } ) \to \Rbb$. Wówczas krzywa całkowa
 zawarta w~$G \subset \Ebold^{ 2 }$ i~styczna do pola kierunków
 $v( x, y ) = f( x, y )$ wyznacza nie tylko kształt toru ruchu punktu,
 którego równanie ruchu ma postać
@@ -1004,7 +1008,7 @@ ale też jaki dokładnie sposób w~jaki ten tor pokonuje. Tor ruchu dla
 badanego przypadku jest zawsze bardzo prosty, tworzy on bowiem odcinek
 \begin{equation}
   \label{eq:Matwiejew-Metody-calkowania-ETC-43}
-  y\big( ( t_{ 0 }, t_{ 1 } ) \big) = ( a, b )
+  y\big( ( x_{ 0 }, x_{ 1 } ) \big) = ( a, b )
 \end{equation}
  (ewentualnie jeden z~odcinków
 $( a, b ]$, $[ a, b )$, $[ a, b ]$), dla pewnych $a, b \in \Rbb$,
@@ -1024,18 +1028,23 @@ scharakteryzowania krzywych całkowych wystarczy znajomość kierunku do
 którego mają one być styczna. Wiemy bowiem, że~krzywa całkowa zawsze
 „biegnie od lewej do prawej”, bo to jest kierunek w~których zmienna $x$.
 Załóżmy teraz, że~przez punkt $( x, y )$ ma przechodzić gładka krzywa
-całkowa, dana przez funkcję $y_{ 1 }$. Równaniem tej krzywej jest postaci
-$x \mapsto \big( x, y( x ) \big)$, więc wektor $\vecv$ styczny do~niej w~tym
-punkcie jest dany przez
+całkowa, dana przez funkcję $y$. Równaniem tej krzywej jest postaci
 \begin{equation}
   \label{eq:Matwiejew-Metody-calkowania-ETC-44}
+  K : ( x - \delta, x + \delta ) \to \Rbb^{ 2 }, \quad
+  K( x ) = \big( x, y( x ) \big),
+\end{equation}
+gdzie $\delta > 0$. Wobec tego wektor $\vecv$ styczny do~tej krzywej całkowej
+w~tym punkcie jest dany przez
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-45}
   \vecv \HorSpaceThree ( x, y ) =
   \big[ 1, y'( x ) \big].
 \end{equation}
 Z~analizy matematycznej wiemy, że~jeśli $\alpha$ jest kątem pod jakim styczna do
 krzywej w~punkcie $\big( x, y( x ) \big)$, to zachodzi
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-45}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-46}
   \tan( \alpha ) = y'( x ).
 \end{equation}
 Ponieważ zaś $\tan( \alpha )$ jest wyznaczony przez pole kierunków, pozwala nam
@@ -1043,20 +1052,20 @@ to jednoznacznie wyznaczyć wektor styczny do krzywej całkowej. Możemy teraz
 skorzystać z~\eqref{eq:Matwiejew-Metody-calkowania-ETC-41} i~otrzymać wzór
 na pole wektorowe odpowiadające temu równaniu różniczkowemu:
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-46}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-47}
   \vecv \HorSpaceThree ( x, y ) =
   \big[ 1, f( x, y ) \big].
 \end{equation}
 Możemy teraz odwrócić rozumowanie i~stwierdzić, że~rozwiązanie równania
 różniczkowego oznacza znalezienie krzywych całkowych na płaszczyźnie $xy$,
 takich że w~każdym ich punkcie ich wektor styczny jest dany przez pole
-wektorowe zdefiniowane wzorem \eqref{eq:Matwiejew-Metody-calkowania-ETC-46}.
+wektorowe zdefiniowane wzorem \eqref{eq:Matwiejew-Metody-calkowania-ETC-47}.
 
 Przyjrzyjmy~się jeszcze raz temu rozumowaniu. Ponieważ w~omawianym
 przypadku wiemy, że~pierwsza pola wektorowego zadanego przez równanie
 \eqref{eq:Matwiejew-Metody-calkowania-ETC-42} musi~się zawsze równać jeden:
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-47}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-48}
   \vecv_{ x }( x, y ) = 1,
 \end{equation}
 więc biorąc to pod uwagę, jesteśmy w~stanie znając wartości pola kierunków
@@ -1069,7 +1078,7 @@ pole wektorowe $\vecv : G \to \Rbb^{ 2 }$, $G \subset \Rbb^{ 2 }$. Szukać będz
 funkcji postaci $\vecy : ( t_{ 0 }, t_{ 1 } ) \to G$, spełniający następujący
 równanie
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-48}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-49}
   \frac{ d \vecy( t ) }{ d t } =
   \vecf \HorSpaceOne \big( t, \vecy( t ) \big) =
   \vecv \HorSpaceThree \big( \vecy( t ) \big),
@@ -1080,7 +1089,7 @@ rozwiązanie $\vecy$. Dodatkowo współrzędne kartezjańskie w~zbiorze $G$
 będziemy oznaczać $y_{ 1 }$ i~$y_{ 2 }$. Ostatnie równanie można
 również zapisać jako
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-49}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-50}
   \begin{bmatrix}
     y'_{ 1 }( t ) \\
     y'_{ 2 }( t )
@@ -1106,7 +1115,7 @@ Aby uzyskać jak poprzednio pełną informację o~ruchu powinniśmy rozpatrywać
 krzywe w~zbiorze $( t_{ 0 }, t_{ 1 } ) \times G$, na którym określone jest pole
 wektorowe
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-50}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-51}
   \vecv_{ \, \textrm{ext} }( t, y_{ 1 }, y_{ 2 } ) =
   \begin{bmatrix}
     1 \\
@@ -1163,11 +1172,37 @@ tego co jest napisane w~dziele Arnolda
 
 
 \noindent
-\Str{17} Izokliny????
+\Str{17} W~świetle przykładu 3 ze~strony 19, warto zatrzymać~się dłużej
+nad podstawowymi własnościami izoklin. Przyjmijmy, że~izoklina dana jest
+przez funkcję $h( x )$ określoną na zbiorze $( x_{ 0 }, x_{ 1 } )$. Tym
+samym równanie izokliny jako krzywej jest postaci
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-52}
+  K( x ) = \big( x, h( x ) \big).
+\end{equation}
+Zgodnie z~definicją izokliny, dla pewnego $k \in \Rbb$ zachodzi
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-53}
+  k = f\big( x, h( x ) \big).
+\end{equation}
+Zauważmy, że~aby izoklina była rozwiązaniem danego równania różniczkowego
+musiałoby ponadto zachodzi
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-54}
+  h'( x ) = k.
+\end{equation}
+Przykład~3 pokazuje, że~izoklina może być rozwiązaniem równania
+różniczkowego które ją definiuje, ale jest to sytuacja dość szczególna.
+Przykład~1 ze strony~17, pokazuje że~w~przypadku równania
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-55}
+  y'( x ) = 2 x,
+\end{equation}
+żadna z~jego izoklin nie jest jego rozwiązaniem.
 
 \vspace{\VerSpaceFour}
 
-
+{\Large Od strony 17 należy zacząć ponowne czytanie książki.}
 
 
 
