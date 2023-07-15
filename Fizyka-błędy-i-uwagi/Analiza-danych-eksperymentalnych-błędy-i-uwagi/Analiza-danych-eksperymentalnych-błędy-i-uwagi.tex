@@ -58,7 +58,7 @@
 \usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
 % Mathematical Society (w skrócie AMS)
 \usepackage{amsfonts, amssymb, amscd, amsthm}  % Dalsze wsparcie od AMS
-% \usepackage{siunitx}  % Do prostszego pisania jednostek fizycznych
+\usepackage{siunitx}  % Do prostszego pisania jednostek fizycznych
 \usepackage{upgreek}  % Ładniejsze greckie litery
 % Przykładowa składnia: pi = \uppi
 % \usepackage{slashed}  % Pozwala w prosty sposób pisać slash Feynmana.
@@ -173,9 +173,148 @@
 
 \vspace{0em}
 
+\noindent
+W~notatkach do tej książki, jeśli nie powiedziano inaczej, przez wartość
+numeryczną będziemy zawsze rozumieli konkretną wartość liczbową danej
+wielkości, niezależnie od tego, czy posiada ona wymiar czy nie. Jeśli więc
+mamy daną masę $m = 10 \, \si{kg}$, to przez jej wartość numeryczną będziemy
+rozumieć $10 \, \si{kg}$. Koncepcję liczb bezwymiarowych i~posiadających
+wymiar omówiliśmy w~notatkach\footnote{W~chwili obecnej plik z~tymi notatkami
+  dostępny jest pod adresem
+  \href{https://github.com/KZiemian/Nauki-rozne-bledy-i-uwagi/blob/main/Fizyka-b\%C5\%82\%C4\%99dy-i-uwagi/Mechanika-Newtona-b\%C5\%82\%C4\%99dy-i-uwagi/Mechanika-Newtona-b\%C5\%82\%C4\%99dy-i-uwagi.tex}{https://github.com/KZiemian/Nauki-rozne-bledy-i-uwagi/blob/main/Fizyka-b\%C5\%82\%C4\%99dy-i-uwagi/Mechanika-Newtona-b\%C5\%82\%C4\%99dy-i-uwagi/Mechanika-Newtona-b\%C5\%82\%C4\%99dy-i-uwagi.tex}.}
+noszących tytuł \textit{Mechanika Newtona, błędy i~uwagi}, więc nie będziemy
+tu do tego wracać.
+
+
+
+
+
+% ##################
+\CenterBoldFont{Uwagi do~konkretnych stron}
+
+\vspace{0em}
+
 
 \noindent
-\Str{12}
+\Str{12} Według informacji zawartych w~tej książce, jeśli dokonujemy pomiaru
+na~skali przedziałowej, to jedyne operacje jakie są dopuszczone na wynikach
+pomiarów to ich dodawanie i~odejmowanie. Jednak jako przykład skali
+przedziałowej podana jest skala temperatur, co sugeruje, że~kilka innych
+operacji też powinno być dopuszczonych. Przeanalizujemy teraz tą kwestię.
+
+Zacznijmy od oczywistego stwierdzenia, że~aby operować wielkościami ze skali
+przedziałowej, takimi jak temperatura, pomiar nie zawsze jest konieczny.
+Całkowicie normalną rzeczą w~fizyce jest rozważanie obiektów o~danej~$T$,
+które nie istnieją materialnie, ale~są obiektem naszych rozmyślań. Dotyczy
+to nie tylko wielkości które należą do~pewnej skali przedziałowej,
+ale~wszystkich innych wielkości, które możemy przypisać obiektom materialnym.
+Jest też jasne, że~w~końcu chcemy odnieść nasze rozważania do materialnego
+świata i~wtedy pomiar jest niezbędny.
+
+Przejdźmy teraz do operacji, które możemy wykonywać na wielkościach ze skali
+przedziałowej, za~wzorcowy ich przykład biorąc temperaturę. Wiemy już,
+że~możemy je dodawać i~odejmować, acz książka zabrania nam ich mnożenia
+i~dzielenia. Wydaje~się jednak, że~choć nie ma sensu fizycznego mnożenie
+temperatur, to mam sens dzielenie dwóch różnicy temperatur. Przyjmijmy,
+że~$T_{ 1 } = 10 {}^{ \circ }\si{C}$, $T_{ 2 } = 20 {}^{ \circ }\si{C}$,
+$T_{ 3 } = 30 {}^{ \circ }\si{C}$, $T_{ 4 } = 50 {}^{ \circ }\si{C}$, wówczas nie widać
+przeciwwskazań by obliczyć iloraz
+\begin{equation}
+  \label{eq:RedSzydlowski-Teoria-pomiarow-01}
+  \frac{ T_{ 4 } - T_{ 3 } }{ T_{ 2 } - T_{ 1 } } = 2.
+\end{equation}
+Zależność ta wyraża prosty fakt, że~różnica temperatur $T_{ 4 } - T_{ 3 }$
+jest dwa razy większa, niż różnica $T_{ 2 } - T_{ 1 }$. To, że początek skali
+Celsjusza został wybrany w~sposób arbitralny, nie wpływa na ten wynik, bo
+różnica temperatur nie zależy od wyboru miejsca na skali któremu
+przypisaliśmy wartość~$0$.
+
+Wzór \eqref{eq:RedSzydlowski-Teoria-pomiarow-01} można również przytoczyć na
+poparcie tezy, że~różnicę temperatur można pomnożyć przez liczbę
+bezwymiarową. Jeżeli mamy liczbę bezwymiarową, powiedzmy $0.5$, to
+jak~się wydaje, stwierdzenie, iż~zachodzi
+\begin{equation}
+  \label{eq:RedSzydlowski-Teoria-pomiarow-02}
+  0.5 \cdot ( T_{ 4 } - T_{ 3 } ) = T_{ 2 } - T_{ 1 },
+\end{equation}
+jest sensowne. Wyraża ona fakt, że~różnica temperatur między $T_{ 2 }$
+i~$T_{ 1 }$ jest równa połowie różnicy temperatur między $T_{ 4 }$ i~$T_{ 3 }$.
+Ponieważ zaś dzielenie przez liczbę bezwymiarową to mnożenie przez liczbę
+do~niej odwrotną, więc jeśli mnożenie różnicy temperatur przez taką liczbę
+jest sensowne, to również dzielenie tej różnicy przez taką liczbę posiada
+sens.
+
+Należy~się zastanowić, czy przeprowadzone wyżej rozumowanie jest poprawne,
+już teraz jednak należy wspomnieć, że~gdyby było, to pozwoliłoby wyjaśnić
+następujący fakt. Załóżmy, że mamy dwa litry wody, jeden o~temperaturze
+$T_{ 1 }$, drugi o~temperaturze $T_{ 2 }$, przy czym przyjmujemy,
+że~$T_{ 1 } < T_{ 2 }$. Jeśli zmieszamy je w~taki sposób, żeby nie dostarczyć
+ani nie odprowadzić do układu żadnej energii, to jak wiemy z~termodynamiki
+(zacytować jakieś źródło????) temperatura $T_{ \textrm{res} }$ takiej
+mieszaniny będzie wynosić
+\begin{equation}
+  \label{eq:RedSzydlowski-Teoria-pomiarow-03}
+  T_{ \textrm{res} } = \frac{ T_{ 1 } + T_{ 2 } }{ 2 }.
+\end{equation}
+Jak można uzasadnić to, że~w~tym wzorze dzielimy \textit{sumę} temperatur
+przez liczbę bezwymiarową? Można to uzasadnić tym, że~temperatura tej
+mieszaniny jest tak naprawdę dana przez wzór
+\begin{equation}
+  \label{eq:RedSzydlowski-Teoria-pomiarow-04}
+  T_{ \textrm{res} } = T_{ 1 } + 0.5 \cdot ( T_{ 2 } - T_{ 1 } ).
+\end{equation}
+
+Można argumentować, że~ten wzór ma więcej sensu fizycznego, niż wzór
+\eqref{eq:RedSzydlowski-Teoria-pomiarow-03}, jego sens można bowiem wyjaśnić
+w~następujący sposób. Temperatura mieszaniny $T_{ \textrm{res} }$ jest większa
+od~mniejszej z~temperatur $T_{ 1 }$, $T_{ 2 }$ o~połowę różnicy między nimi.
+Choć wartość numeryczna $T_{ \textrm{res} }$ zależy od wyboru miejsca na skali
+temperatur któremu przypisujemy wartość zerową, to we wzorze
+\eqref{eq:RedSzydlowski-Teoria-pomiarow-04} jedynie wartość $T_{ 1 }$ zależy
+od tego wyboru. Taki więc sposób wyznaczania temperatury mieszaniny traktuje
+osobno wielkości arbitralne, zależne od~wyboru punktu zerowego na skali,
+a~więc pozbawione głębszego sensu, od tych które są od niego
+niezależne i~jako takie mają niepodważalny sens fizyczny.
+
+W~takiej sytuacji wzór \eqref{eq:RedSzydlowski-Teoria-pomiarow-04}
+należałoby uważać za przekształcenie wzoru
+\eqref{eq:RedSzydlowski-Teoria-pomiarow-03}, które jest dopuszczalne
+w~momencie gdy wybierzemy konkretną skalę temperatur, na mocy własności
+liczb rzeczywistych. Nie jestem tego pewien, ale wydaje mi~się, że~przejścia
+od wzoru \eqref{eq:RedSzydlowski-Teoria-pomiarow-03} do
+\eqref{eq:RedSzydlowski-Teoria-pomiarow-04} możemy dokonać, bo~pozwalają na
+to własności liczb rzeczywistych. Korzystając więc z~tych własności
+przekształcamy wzór który ma więcej treści fizycznej, we wzór który prowadzi
+do tych samych numerycznych wartości, ale który jest wygodniejszy przy
+przeprowadzaniu obliczeń i~łatwiejszy do zapamiętania.
+
+Na~koniec należy wspomnieć, że~w~języku codziennym mówimy na przykład,
+iż~temperatura $20 \, {}^{ \circ }\si{C}$ jest dwa razy większa od temperatury
+$10 \, {}^{ \circ }\si{C}$, co nie stanowi żadnego problemu, choć jest
+niepoprawne z~punktu widzenia teorii wartości na skali przedziałowej. Język
+dnia codziennego ma~swoje własne prawa, odmienne od praw języka teorii
+naukowej.
+
+{\Large Ponowne czytanie zacząć od strony 12.}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
