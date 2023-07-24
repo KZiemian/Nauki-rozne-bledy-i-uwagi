@@ -87,9 +87,12 @@
 % Pakiety napisane przez użytkownika.
 % Mają być w tym samym katalogu to ten plik .tex
 % ------------------------------
-% \usepackage{ODE} % Pakiet napisany między innymi dla tego pliku.
 \usepackage{latexgeneralcommands}
 \usepackage{mathcommands}
+
+ % Pakiet napisany między innymi dla tego pliku.
+\usepackage{ODEcommands}
+
 
 
 
@@ -318,7 +321,7 @@ $\absOne{ x - x_{ 0 } } \leq h_{ 1 }$. \\
 \newpage
 
 \Work{ % Autor i tytuł dzieła
-  N. M. Matwiejew \\
+  N.M. Matwiejew \\
   \textit{Metody całkowania równana różniczkowych zwyczajnych},
   \cite{MatwiejewMetodyCalkowaniaRownanRozniczkowychZwyczajnych1986}}
 
@@ -588,7 +591,7 @@ jest równania
 \end{equation}
 Różniczkując je dwa razy otrzymujemy dwa następujące równania.
 
-\vspace{\negVerSpaceThree}
+\vspace{\negVerSpaceFour}
 
 
 \begin{subequations}
@@ -1193,12 +1196,12 @@ musiałoby ponadto zachodzi
 \end{equation}
 Przykład~3 pokazuje, że~izoklina może być rozwiązaniem równania
 różniczkowego które ją definiuje, ale jest to sytuacja dość szczególna.
-Przykład~1 ze strony~17, pokazuje że~w~przypadku równania
+Przykład~1 ze strony~17 jasno pokazuje, że~żadna z~izoklin równania
 \begin{equation}
   \label{eq:Matwiejew-Metody-calkowania-ETC-55}
   y'( x ) = 2 x,
 \end{equation}
-żadna z~jego izoklin nie jest jego rozwiązaniem.
+nie jest jego rozwiązaniem.
 
 \vspace{\VerSpaceFour}
 
@@ -1259,16 +1262,200 @@ też~jej część została przypadkiem pominięta.
 
 \vspace{\VerSpaceFour}
 
-{\Large Od strony 19 należy zacząć ponowne czytanie książki.}
 
 
 
 
 \noindent
-\Str{19} ???
+\Str{19} Równanie
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-58}
+  \frac{ d y( x ) }{ d x } =
+  \frac{ y( x ) }{ x }
+\end{equation}
+analizowane w~przykładzie~3 na tej stronie można rozwiązać w~inny sposób,
+który pod pewnymi względami może być prostszy do~zrozumienia, dlatego
+uważamy, iż~warto go tu zaprezentować. Z~drugiej
+strony, prezentując poniżej to podejście wchodzimy w~pewne subtelności
+pojęcia dziedziny rozwiązań równania różniczkowego i~izoklin, więc niniejsze
+rozważania mogą okazać~się trudniejsze do zrozumienia, niż~to co można
+znaleźć w~książce.
+
+Mianowicie, zaczynamy od zbadania jego izoklin, czyli szukamy rozwiązań
+równania
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-59}
+  k = \frac{ y_{ \, \izo }( x ) }{ x }, \quad
+  k \in \Rbb.
+\end{equation}
+Dla zaznaczenia, że~izoklina nie musi być rozwiązanie równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-58}, szukaną funkcję oznaczyliśmy
+$y_{ \, \izo }( x )$, a~nie $y( x )$. Równanie to jest niezmiernie proste,
+więc od razu dostajemy
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-60}
+  y_{ \, \izo }( x ) = k \, x, \quad
+  k \in \Rbb.
+\end{equation}
+To co wymaga większej uwagi, jest to, że~$x = 0$ nie należy do dziedziny
+równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-59}, więc izokliny są
+określone tylko dla $x \in ( -\infty, 0 ) \cup ( 0, +\infty )$. Czy jednak powinnyśmy
+dopuszczać jako izokliny krzywe reprezentowane przez funkcje, których
+dziedziną nie jest przedział $( a, b ) \subset \Rbb$ (ewentualnie przedział jedno- lub obustronnie domknięty)?
+
+Jak wspomniano wyżej, zwykle chcemy by rozwiązanie równania różniczkowego
+było przedziałem otwartym $( a, b ) \subset \Rbb$, a~jak zaraz~się okaże,
+izokliny tego równania są również jego rozwiązaniami, więc przyjmiemy dla
+nich podobną konwencję. Będziemy więc szukać izoklin, których funkcja
+$y_{ \, \izo }( x )$ ma za dziedzinę możliwie największy przedział otwarty
+zawarty w~$\Rbb$. Na mocy tego, rozbijamy funkcję daną przez równanie
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-60} na dwie funkcje:
+
+\vspace{\negVerSpaceFour}
+
+
+\begin{subequations}
+
+  \begin{align}
+    \label{eq:Matwiejew-Metody-calkowania-ETC-61-A}
+    y_{ \, \izo, \, + }( x )
+    &=
+      k \, x, \quad
+      x > 0, \\
+    \label{eq:Matwiejew-Metody-calkowania-ETC-61-B}
+    y_{ \, \izo, \, - }( x )
+    &=
+      k \, x, \quad
+      x < 0.
+  \end{align}
+
+\end{subequations}
+
+
+\noindent
+Tym samy za izokliny równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-58}
+będziemy uważać nie proste przechodzące przez początek układu
+współrzędnych, lecz odpowiednie półproste wychodzące z~tego punktu. Może to
+być zgodne z~intencjami Matwiejewa wyłożonymi w~opisie omawianego
+przykładu, lecz fragment o~tym, że~te półproste są zarówno krzywymi
+całkowymi jak i~izoklinami, można interpretować na kilka sposobów.
+
+Łatwo zauważyć, że~$y'( x ) = k$ i~$y( x ) / x = k$, więc mogłoby~się
+izokliny są zarazem rozwiązaniami równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-58}. Tak jak w~przypadku izoklin,
+rozwiązania równania są określone na zbiorze $( -\infty, 0 )$
+albo $( 0, +\infty )$. Zgodność z~tekstem książki jest prawie pewna,
+bo~Matwiejew tylko półproste wychodzące z~układu współrzędnych nazywa
+krzywymi całkowymi badanego równania. Niemniej warto zaznaczyć, że~funkcja
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-62}
+  y_{ - }( x ) = k \, x, \quad
+  x < 0,
+\end{equation}
+opisuje raczej półprostą wchodzącą do~środka układu współrzędnych. Jest
+to~jednak drobna szczegół nazewniczy, który nie powinien prowadzić
+do~nieporozumień.
+
+Dla porządku przeanalizujemy jeszcze przypadek $x = 0$, $y \neq 0$. W~takiej
+sytuacji musimy rozpatrzyć równanie
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-63}
+  \frac{ d x( y ) }{ d y } =
+  \frac{ x( y ) }{ y }.
+\end{equation}
+Równanie izoklin rozwiązujemy tak jak poprzednio dostając
+
+\vspace{\negVerSpaceFour}
+
+
+\begin{subequations}
+
+  \begin{align}
+    \label{eq:Matwiejew-Metody-calkowania-ETC-64-A}
+    x_{ \, \izo, \, + }( y )
+    &=
+      k_{ 1 } \, y, \quad
+      y > 0, \\
+    \label{eq:Matwiejew-Metody-calkowania-ETC-64-B}
+    x_{ \, \izo, \, - }( y )
+    &=
+      k_{ 1 } \, y, \quad
+      y < 0.
+  \end{align}
+
+\end{subequations}
+
+
+\noindent
+Tak jak poprzednio łatwo sprawdzamy, że~izokliny są też rozwiązaniami
+równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-63}. W~szczególności,
+rozwiązaniami naszego równania są dwie półproste
+
+\vspace{\negVerSpaceFour}
+
+
+\begin{subequations}
+
+  \begin{align}
+    \label{eq:Matwiejew-Metody-calkowania-ETC-65-A}
+    x_{ + }( y )
+    &=
+      0, \quad
+      y > 0, \\
+    \label{eq:Matwiejew-Metody-calkowania-ETC-65-B}
+    x_{ - }( y )
+    &=
+      0, \quad
+      y < 0.
+  \end{align}
+
+\end{subequations}
+
+
+Na koniec zwróćmy uwagę na~następujący prosty fakt. Jeśli zapiszemy równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-61-A}-\eqref{eq:Matwiejew-Metody-calkowania-ETC-61-B} i~\eqref{eq:Matwiejew-Metody-calkowania-ETC-64-A}-\eqref{eq:Matwiejew-Metody-calkowania-ETC-64-B} jako równania uwikłane na funkcje:
+
+\vspace{\negVerSpaceFour}
+
+
+\begin{subequations}
+
+  \begin{align}
+    \label{eq:Matwiejew-Metody-calkowania-ETC-66-A}
+    y - k \, x = 0, \\
+    \label{eq:Matwiejew-Metody-calkowania-ETC-66-B}
+    x - k_{ 1 } \, y = 0,
+  \end{align}
+
+\end{subequations}
+
+
+\noindent
+gdzie $k, k_{ 1 } \in \Rbb$, a~równania te chcemy rozwiązać osobno w~zbiorze
+$\Rbb \setminus ( 0, \, 0 )$, rozwiązania zaś mają być określone na zbiorach postaci
+$( a, b )$, to możemy zaobserwować, iż~równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-66-A}
+i~\eqref{eq:Matwiejew-Metody-calkowania-ETC-66-B} są sobie w~oczywisty
+sposób częściowo równoważne. Jeśli bowiem $k \neq 0$, to równanie
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-66-A} przechodzi w~równanie
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-66-B}
+z~$k_{ 1 } = \frac{ 1 }{ k }$ i~odwrotnie.
+
+Warunek, że~rozwiązania równań
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-66-A}
+i~\eqref{eq:Matwiejew-Metody-calkowania-ETC-66-B} mają być określone na
+zbiorach postaci $( a, b )$ nie jest potrzebny by omawiana równoważność
+zachodziła. Dodaliśmy ją, by rozwiązania równania uwikłanego miały tę samą
+dziedzinę co izokliny analizowane wcześniej.
 
 \vspace{\VerSpaceFour}
 
+
+
+
+
+
+{\Large Od strony 20 należy zacząć ponowne czytanie książki.}
 
 
 
