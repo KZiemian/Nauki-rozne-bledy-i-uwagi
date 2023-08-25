@@ -112,7 +112,7 @@
 % ------------------------------
 \renewcommand{\baselinestretch}{1.1}
 
-% Ustawienie szerokości odstępów między wierszami w tabelach.
+% Ustawienie szerokości odstępów między wierszami tabeli.
 \renewcommand{\arraystretch}{1.4}
 
 
@@ -133,7 +133,7 @@
 
 
 
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------
 % Tytuł, autor, data
 \title{Równania różniczkowe zwyczajne \\
   {\Large Błędy i~uwagi}}
@@ -142,7 +142,7 @@
 
 
 % \date{}
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------
 
 
 
@@ -170,7 +170,7 @@
 
 
 % ##############################
-\Work{ % Autor i tytuł dzieła
+\AuthorsAndTitleOfWork{
   Władimir Igoriewicz Arnold \\
   \textit{Równania różniczkowe zwyczajne},
   \cite{ArnoldRownaniaRozniczkoweZwyczajne1975}}
@@ -231,7 +231,7 @@
 
 \end{center}
 
-\vspace{\VerSpaceSix}
+\VerSpaceSix
 
 
 \noindent
@@ -256,7 +256,7 @@
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+\AuthorsAndTitleOfWork{ % Autor i tytuł dzieła
   N. M. Matwiejew \\
   \textit{Metody całkowania równana różniczkowych zwyczajnych},
   \cite{MatwiejewMetodyCalkowaniaRownanRozniczkowychZwyczajnych1982}}
@@ -288,7 +288,7 @@
 
 \end{center}
 
-\vspace{\VerSpaceSix}
+\VerSpaceSix
 
 
 \noindent
@@ -320,7 +320,7 @@ $\absOne{ x - x_{ 0 } } \leq h_{ 1 }$. \\
 % ############################
 \newpage
 
-\Work{ % Autor i tytuł dzieła
+\AuthorsAndTitleOfWork{ % Autor i tytuł dzieła
   N.M. Matwiejew \\
   \textit{Metody całkowania równana różniczkowych zwyczajnych},
   \cite{MatwiejewMetodyCalkowaniaRownanRozniczkowychZwyczajnych1986}}
@@ -342,25 +342,78 @@ mamy równanie (1) postaci:
   \label{eq:Matwiejew-Metody-calkowania-ETC-01}
   F\left( x, y, y', y'', \ldots, y^{ ( n ) } \right) = 0,
 \end{equation}
-choć bardziej precyzyjne byłoby napisanie $y( x )$, $y'( x )$, etc. W~tych
-notatkach, by uniknąć nieporozumień, we~wszystkich miejscach gdzie mowa jest
-o~wartościach jakie przyjmują funkcje dla zadanych wartości argumentów,
-będziemy~się starać podawać owe argumenty w~sposób jawny.
+choć bardziej precyzyjna forma tego równania to
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-02}
+  F\left( x, y( x ), y'( x ), y''( x ), \ldots, y^{ ( n ) }( x ) \right) = 0,
+\end{equation}
+W~tych notatkach, by uniknąć nieporozumień, we~wszystkich miejscach gdzie
+mowa jest o~wartościach jakie przyjmują funkcje dla zadanych wartości
+argumentów, będziemy~się starać podawać owe argumenty w~sposób jawny.
 
 Ty samym, jeśli będziemy rozważali w~sposób ogólny funkcje
 $y : \Rbb \to \Rbb$ to będziemy ją oznaczać symbolem $y$. Natomiast
 w~przypadkach takich jak równanie
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-02}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-03}
   y( x )^{ 2 } = x,
 \end{equation}
 będziemy~się starali zawsze wymienić wszystkie argumenty w~sposób jawny.
 
-\vspace{\VerSpaceFour}
+\VerSpaceFour
 
 
 
 
+
+\noindent
+We~wcześniejszym fragmencie tych notatek napisaliśmy, że~w~książce tej
+często pomijane są argumenty funkcji, jeśli uznano, iż~są one odpowiednio
+oczywiste. Ta praktyka ma ten minus, że~pewne wzory stają~się przez to
+nie są tak proste w~zrozumieniu, jak mogłyby być. Dlatego poniżej zapiszemy
+pewne wybrane wzory które można znaleźć w~tej książce jawnie podając
+argumenty wszystkich funkcji występujących w~nich, mając nadzieję,
+że~uczyni to zrozumienie tej książki łatwiejszym.
+
+Nie będziemy przy tym stronić od~powtórzeń. Jeśli więc dany wzór pojawia~się
+w~kilku miejscach książki, może pojawić się kilka razy w~liście poniżej.
+Również może~się zdarzyć, że~wzór obecny w~innej części notatek, zostanie
+podany ponownie w~tej liście. Uważamy, że~zebranie tych wzorów w~jednym
+miejscu i~umożliwienie szybkiego sprawdzenia, czy wzór który Czytelnik
+obecnie~się zajmuje usprawiedliwiają kilkukrotne ich powtórzenie.
+
+\VerSpaceTwo
+
+
+\noindent
+Str. 7, wiersz 3.
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-04}
+  F\left( x, y( x ), y'( x ), y''( x ), \ldots, y^{ ( n ) }( x ) \right) = 0
+\end{equation}
+Str.~7, wiersz 15.
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-05}
+  \Phi \negHorSpaceEleven \left( x_{ 1 }, x_{ 2 }, \ldots, x_{ n },
+    u( x_{ 1 }, x_{ 2 }, \ldots, x_{ n }),
+    \tfrac{ \partial u( x_{ 1 }, \, x_{ 2 }, \, \ldots, \, x_{ n } ) }{ \partial x_{ 1 } },
+    \tfrac{ \partial u( x_{ 1 }, \, x_{ 2 }, \, \ldots, \, x_{ n } ) }{ \partial x_{ 2 } }, \ldots,
+    \tfrac{ \partial u( x_{ 1 }, \, x_{ 2 }, \, \ldots, \, x_{ n } ) }{ \partial x_{ n } }
+  \right) = 0
+\end{equation}
+Str.~27, wiersz~16 od dołu, wzór~(24).
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-06}
+  y( x ) = \varphi( x, C )
+\end{equation}
+Str.~29, wiersz~9, wzór~(28).
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-07}
+  y( x ) = \frac{ y_{ 0 } }{ x_{ 0 } } x
+\end{equation}
+
+
+\VerSpaceFour
 
 
 
@@ -401,7 +454,8 @@ pochodnej w~punkcie $x \in A$ miało sens. Wbrew pozorom podanie klasy zbiorów
 o~tej własności nie jest takie proste. Czy przykładowo funkcja
 $f : \Qbb \to \Qbb$ dana zależnością
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-03}
+  % \label{eq:Matwiejew-Metody-calkowania-ETC-03}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-08}
   f( x ) = x^{ 2 },
 \end{equation}
 jest różniczkowalna?
@@ -428,7 +482,7 @@ $F : O \to R$. Przyjmujemy, że zależy ona w~sposób \textbf{istotny}
 rozumiemy następującą własność. Istnieją takie liczby
 $x_{ 0 }, x_{ 1 }, \ldots, x_{ n }, x_{ n + 1 }, x_{ n + 1 }'$, że~zachodzi
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-04}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-09}
   F( x_{ 0 }, x_{ 1 }, \ldots, x_{ n }, x_{ n + 1 } ) \neq
   F( x_{ 0 }, x_{ 1 }, \ldots, x_{ n }, x_{ n + 1 }' ).
 \end{equation}
@@ -440,15 +494,15 @@ będziemy również oznaczać przez $\proj_{ 0 } O$.
 
 \textbf{Równaniem różniczkowym zwyczajnym rzędu~$n$} nazywamy wyrażenie
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-05}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-10}
   F\left( x, y( x ), y'( x ), y''( x ), \ldots, y^{ ( n ) }( x ) \right) = 0.
 \end{equation}
-\textbf{Rozwiązaniem równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-02}}
+\textbf{Rozwiązaniem równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-10}}
 nazywamy funkcję $y_{ 1 } : A_{ 1 } \to \Rbb$, gdzie $A_{ 1 } \subset A_{ 0 }$, która
 posiada pochodne do rzędu $n$ włącznie w~każdym punkcie swojej dziedziny
 i~dla której zachodzi
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-06}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-11}
   F\left( x, y_{ 1 }( x ), y_{ 1 }'( x ), \ldots, y_{ 1 }^{ ( n ) }( x ) \right) =
   0, \qquad
   \forall x \in A_{ 1 }.
@@ -457,19 +511,19 @@ i~dla której zachodzi
 Potrzebujemy teraz powrócić do problemu określenia dziedziny $A_{ 1 }$
 funkcji $y$. Jak powiedzieliśmy wcześniej, standardowo przyjmuje~się,
 że~$A_{ 1 } = ( a, b )$. Zazwyczaj żąda~się dodatkowo, by $A_{ 1 }$ był
-największym odcinkiem otwarty zawartym w~zbiorze $A_{ 0 }$, w~którym jesteśmy
-w~stanie zdefiniować rozwiązanie równania
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-05}. Co jednak zrobić w~przypadku
+największym odcinkiem otwarty zawartym w~zbiorze $A_{ 0 }$, w~którym
+jesteśmy w~stanie zdefiniować rozwiązanie równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-10}. Co jednak zrobić w~przypadku
 równań takich jak równanie $y'( x ) = y( x )^{ 2 }$ omawiane na stronie~15,
 które posiada rozwiązanie postaci
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-07}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-12}
   y( x ) = \frac{ 1 }{ 1 - x }.
 \end{equation}
 Funkcja ta jest określona na zbiorze $( -\infty, 1 ) \cup ( 1, +\infty )$ i~nie możemy
 w~żaden sposób wybrać jednego z~tych przedziałów jako większego od drugiego.
 
-Problem rozwiązań takich jak \eqref{eq:Matwiejew-Metody-calkowania-ETC-06}
+Problem rozwiązań takich jak \eqref{eq:Matwiejew-Metody-calkowania-ETC-12}
 będzie omawiany w~dalszym ciągu książki, wtedy ewentualnie powrócimy do
 pojawiające~się przy nich dokładniej. W~chwili obecnej, motywowani tym
 przykładem, poprzestaniemy na stwierdzeniu, że~jeśli to jest możliwe to
@@ -479,7 +533,7 @@ niejednoznaczności w~sposobie określenia dziedziny rozwiązania.
 Niewątpliwie, ze względu na swoją prostotę interpretacyjną, optymalną
 sytuacją jest $A_{ 1 } = A_{ 0 } = \Rbb$.
 
-\vspace{\VerSpaceFour}
+\VerSpaceFour
 
 
 
@@ -489,12 +543,12 @@ sytuacją jest $A_{ 1 } = A_{ 0 } = \Rbb$.
 \Str{8} Na tej stronie napotykamy po raz pierwszy konkretne równanie
 różniczkowe
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-08}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-13}
   y'( x ) - 2 x = 0.
 \end{equation}
 Z~równania tego w~prosty sposób odczytujemy funkcję $F$:
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-09}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-14}
   F( x_{ 0 }, x_{ 1 }, x_{ 2 } ) = x_{ 2 } - 2 x_{ 0 }.
 \end{equation}
 Stajemy tu jednak przed problemem, jaka jest dziedzina funkcji~$F$?
@@ -503,26 +557,26 @@ definiującej równanie różniczkowe będziemy uważać największy zbiór na~k
 jesteśmy w~stanie ją określić. Ponieważ zgodnie z~tym co powiedziano
 wcześniej, dziedzina funkcji $F$ jest podzbiorem $\Rbb^{ n + 2 }$, w~naszym
 wypadku $n = 1$, więc dla funkcji danej przez
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-07} jest ona równa $\Rbb^{ 3 }$.
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-12} jest ona równa $\Rbb^{ 3 }$.
 Łatwo~się też przekonać, że~rozwiązaniem równania
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-08} jest funkcja
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-13} jest funkcja
 $y( x ) = x^{ 2 } + C$, której dziedzina to $\Rbb$.
 
 Jednocześnie równanie \eqref{eq:Matwiejew-Metody-calkowania-ETC-08} zapisane
 jako
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-10}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-15}
   y'( x ) = 2 x,
 \end{equation}
 jest przykładem równania pierwszego rzędu w~postaci normalnej (zob. str.~13
 omawianej książki). Ogólna forma równania w~postaci normalnej to
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-11}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-16}
   y^{ ( n ) }( x ) = f\big( x, y( x ), y'( x ), \ldots, y^{ ( n - 1 ) }( x ) \big).
 \end{equation}
 W~sposób elementarny przekształcamy je do równania w~postaci ogólnej
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-12}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-17}
   F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big) =
   f\big( x, y( x ), y'( x ), \ldots, y^{ ( n - 1 ) }( x ) \big) -
   y^{ ( n - 1 ) }( x ).
@@ -536,25 +590,25 @@ Jeśli chodzi o~ustalenie dziedziny funkcji $f$ stosować będziemy te same
 zasady co dla funkcji $F$. Należy jednak pamiętać, że~jeśli równanie jest
 pierwotnie wyrażone w~formie ogólnej
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-13}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-18}
   F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big) = 0,
 \end{equation}
 to jego postać normalna
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-14}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-19}
   y^{ ( n ) }( x ) = f\big( x, y( x ), y'( x ), \ldots, y^{ ( n - 1 ) }( x ) \big),
 \end{equation}
 może nie obejmować wszystkich przypadków, dla których ma sens równanie
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-13}. Ponieważ dziedzina $F$ jest
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-18}. Ponieważ dziedzina $F$ jest
 podzbiorem $\Rbb^{ n + 2 }$, a~$f$ podzbiorem $\Rbb^{ n + 1 }$, wysłowienie
 co dokładnie oznacza, że~równanie
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-13}
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-18}
 jest ogólniejsze od równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-14}
 może być dość zawiłe, zamiast tego odwołamy~się do przykładu.
 
 Rozpatrzmy równanie w~postaci ogólnej
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-15}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-20}
   y( x ) \frac{ d y( x ) }{ d x } - x = 0.
 \end{equation}
 Odczytujemy z~niego funkcję
@@ -562,19 +616,19 @@ $F( x_{ 0 }, x_{ 1 }, x_{ 2 } ) = x_{ 2 } x_{ 1 } - x_{ 0 }$, której dziedzina
 jest równa $\Rbb^{ 3 }$. Po przekształceniu do postaci normalnej dostajemy
 równanie
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-16}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-21}
   \frac{ d y( x ) }{ d x } = \frac{ x }{ y( x ) }.
 \end{equation}
 Funkcja $f( x_{ 0 }, x_{ 1 } ) = x_{ 0 } / x_{ 1 }$ ma dziedzinę
 $\Rbb \times ( \Rbb \setminus \{ 0 \} )$. Podstawiając $y( x ) = 0$
 do~\eqref{eq:Matwiejew-Metody-calkowania-ETC-13} od razu sprawdzamy,
 że~funkcja ta nie jest rozwiązaniem tego równania, podczas gdy podstawienie
-tej funkcji do \eqref{eq:Matwiejew-Metody-calkowania-ETC-16} prowadzi do
+tej funkcji do \eqref{eq:Matwiejew-Metody-calkowania-ETC-21} prowadzi do
 wyrażenie pozbawionego sensu\footnote{W~książce są podane sposoby radzenia
   sobie z~tego typu problemami, nie jest to jednak ważne w~obecnych
   rozważaniach.}.
 
-\vspace{\VerSpaceFour}
+\VerSpaceFour
 
 
 
@@ -586,21 +640,21 @@ wszystkich okręgów na płaszczyźnie $xy$ napotykamy po raz pierwszy na
 pewien problem, który powróci do nas w przyszłości. Naszym punktem wyjścia
 jest równania
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-17}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-22}
   ( x - a )^{ 2 } + ( y - b )^{ 2 } = R^{ 2 }.
 \end{equation}
 Różniczkując je dwa razy otrzymujemy dwa następujące równania.
 
-\vspace{\negVerSpaceFour}
+\negVerSpaceFour
 
 
 \begin{subequations}
 
   \begin{align}
-    \label{eq:Matwiejew-Metody-calkowania-ETC-18-A}
+    \label{eq:Matwiejew-Metody-calkowania-ETC-23-A}
     1 + \big( y'( x ) \big)^{ 2 } + \big( y( x ) - b \big) y''( x )
     &= 0, \\
-    \label{eq:Matwiejew-Metody-calkowania-ETC-18-B}
+    \label{eq:Matwiejew-Metody-calkowania-ETC-23-B}
     3 y'( x ) y''( x ) + \big( y( x ) - b \big) y'''( x )
     &= 0.
   \end{align}
@@ -609,24 +663,24 @@ Różniczkując je dwa razy otrzymujemy dwa następujące równania.
 
 
 \noindent
-Aby usunąć z~równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-18-B}
+Aby usunąć z~równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-23-B}
 parametr $b$ przyjmujemy, że~$y''( x ) \neq 0$, więc możemy przepisać równanie
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-18-A} jako
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-23-A} jako
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-19}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-24}
   y( x ) - b =
   -\frac{ 1 + \big( y'( x ) \big)^{ 2 } }{ y''( x ) }.
 \end{equation}
-Podstawiając tą zależność do \eqref{eq:Matwiejew-Metody-calkowania-ETC-18-B}
+Podstawiając tą zależność do \eqref{eq:Matwiejew-Metody-calkowania-ETC-23-B}
 dostajemy
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-20}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-25}
   3 y'( x ) y''( x ) -
   \frac{ 1 + \big( y'( x ) \big)^{ 2 } }{ y''( x ) } y'''( x ) = 0.
 \end{equation}
 Po pomnożeniu obustronnie przez $y''( x )$ dostajemy
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-21}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-26}
   3 y'( x ) \big( y''( x ) \big)^{ 2 } -
   \Big( 1 + \big( y'( x ) \big)^{ 2 } \Big) y'''( x ) = 0.
 \end{equation}
@@ -634,25 +688,25 @@ Choć równanie wyprowadziliśmy przy założeniu, że~$y''( x ) \neq 0$, to ko�
 jego postać jest dobrze określona również, gdy funkcja ta przyjmuje wartość
 zero. Powstaje więc pytania, jaki jest zakres obowiązywania tego równania?
 
-Równanie \eqref{eq:Matwiejew-Metody-calkowania-ETC-18-A} możemy przekształci
+Równanie \eqref{eq:Matwiejew-Metody-calkowania-ETC-23-A} możemy przekształci
 przy założeniu $y( x ) - b \neq 0$ do postaci
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-22}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-27}
   y''( x ) =
   -\frac{ 1 + \big( y'( x ) \big)^{ 2 } }{ y( x ) - b },
 \end{equation}
 widzimy więc, że~$y''( x ) \neq 0$ jeśli tylko $y( x ) \neq b$, w~przeciwnym
 wypadku jest ona nieokreślona. Możemy stąd wyciągnąć wniosek,
 że~na mocy swojego wyprowadzenia równanie
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-21} obowiązuje dla wszystkich
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-26} obowiązuje dla wszystkich
 wartości $x$ dla których $y( x ) \neq b$. To~zaś prowadzi do~kilku problemów
 wartych przedyskutowania.
 
-Po~pierwsze, równanie \eqref{eq:Matwiejew-Metody-calkowania-ETC-21} nie
+Po~pierwsze, równanie \eqref{eq:Matwiejew-Metody-calkowania-ETC-26} nie
 zawiera stałej~$b$, gdyż naszym celem było wyprowadzenie równania
 pozbawionego stałych obecnych w~równaniu
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-17}. Biorąc więc za~punkt wyjścia
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-20} nie jesteśmy w~stanie
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-22}. Biorąc więc za~punkt wyjścia
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-25} nie jesteśmy w~stanie
 sformułować na jego podstawie warunku $y( x ) \neq b$. Możliwe jednak, że~jeśli
 rozwiążemy to równanie, to jego rozwiązania będą nieokreślone jeśli $y( x )$
 przyjmie pewną wartość $D$, specyficzną dla danego rozwiązania. Już teraz
@@ -660,19 +714,19 @@ możemy stwierdzić, iż~jest to prawdą, przynajmniej dla pewnej klasy
 rozwiązań tego równania, które w~postaci uwikłanej (zob. str.~15 omawianej
 książki\footnote{Na tej stronie omawiane jest rozwiązanie w~postaci
   uwikłanej dla równania pierwszego rzędu, a~równanie
-  \eqref{eq:Matwiejew-Metody-calkowania-ETC-20}. Pomimo tego mamy nadzieję,
+  \eqref{eq:Matwiejew-Metody-calkowania-ETC-25}. Pomimo tego mamy nadzieję,
   że~to w~jakim sensie równanie
-  \eqref{eq:Matwiejew-Metody-calkowania-ETC-17} przedstawia rozwiązanie
-  równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-21} jest wystarczająco
+  \eqref{eq:Matwiejew-Metody-calkowania-ETC-22} przedstawia rozwiązanie
+  równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-26} jest wystarczająco
   zrozumiałe i~nie wymaga dalszych komentarzy.}) jest dane przez naszą
 wyjściową zależność
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-17}. Nad analizą tej sytuacji
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-22}. Nad analizą tej sytuacji
 zatrzymamy~się przez chwilę.
 
 Dla $x \in ( a - R, a + R )$ jesteśmy w~stanie je odwikłać na funkcję
 $y( x )$ otrzymując dwie funkcje
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-23}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-28}
   y_{ \pm }( x ) = \pm\sqrt{ R^{ 2 } - ( x - a )^{ 2 } } + b.
 \end{equation}
 Nie jest możliwe odwikłanie tego równania na funkcję $y( x )$ w~sposób
@@ -682,7 +736,7 @@ $[ a - R, a - R + \delta )$. W~tematykę tego, czy w~takim razie nie powinniśmy
 również rozważać równania różniczkowego na funkcję $x( y )$ (zob. str.~13
 tej książki) nie będziemy~się zagłębiać. Niemniej widzimy, że
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-24}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-29}
   \lim_{ x \nearrow a + R } y_{ \pm }( x ) = b,
 \end{equation}
 więc funkcje te możemy przedłużyć do funkcji ciągłych na przedziale
@@ -693,7 +747,7 @@ różniczkowalna w~punkcie $x = a + R$, bo~zachowuje~się w~ich otoczeniu jak
 $\sqrt{ x }$ w~otoczeniu punktu $x = 0$. Powyższe rozważania pomogą nam
 naświetlić drugi ważny problem.
 
-Zauważmy, że~choć równanie \eqref{eq:Matwiejew-Metody-calkowania-ETC-21}
+Zauważmy, że~choć równanie \eqref{eq:Matwiejew-Metody-calkowania-ETC-26}
 obowiązuje dla wszystkich $x$ taki, że~$y( x ) \neq b$, to nawet jeśli ten
 warunek jest nam z~góry znany, to zanim nie rozwiążemy tego równania, nie
 wiem dla jakich wartości zmiennej $x$ rozwiązanie przyjmie wartość $b$.
@@ -703,7 +757,7 @@ takie punkty rzeczywiście istnieją to powstaje następujące pytanie. Sokor
 otrzymaliśmy rozwiązanie również dla tych wartości $x$ dla
 których nie jest spełniony warunek $y( x ) \neq b$, to czy nie oznacza to,
 że~choć warunek ten był potrzebny do wyprowadzenia
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-21}, to jest on ostatecznie
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-26}, to jest on ostatecznie
 restrykcyjny i~należy przyjąć bardziej ogólną koncepcję rozwiązania?
 
 W~omawianym przykładzie, funkcje $y_{ \pm }( x )$ były zdefiniowane tylko na
@@ -713,7 +767,7 @@ nieróżniczkowalne w~punkcie $a + R$. Czy w~takim wypadku należy uważać
 funkcje $\yTilde_{ \pm }( x )$ za rozwiązanie odpowiedniego równania
 różniczkowego? Zwróćmy uwagę, że~rozwiązanie w~postaci uwikłanej
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-25}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-30}
   ( x - a )^{ 2 } + ( y - b )^{ 2 } = R^{ 2 },
 \end{equation}
 przedstawia okrąg, czyli krzywą gładką w~każdym swoim punkcie, leżącą
@@ -722,10 +776,10 @@ o~współrzędnych $( a + R, b )$. Z~tego
 punktu widzenia funkcja $\yTilde_{ + }( x )$ jest obcięciami rozwiązania
 danego funkcją uwikłaną do zbioru $( a - R, a + R ]$, które spełnia warunek
 $y \geq 0$, więc należy je uważa za pełnoprawne rozwiązanie równania
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-21}. Niewątpliwie, fakt,
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-26}. Niewątpliwie, fakt,
 że~rozwiązania w~postaci uwikłanej pozwalają nam na objęciem pojęciem
 rozwiązania równania różniczkowego takich krzywych jak okręgi dane równaniem
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-25}, jest jednym z~powodów, dla
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-30}, jest jednym z~powodów, dla
 których to pojęcie zostało wprowadzone.
 
 Przedstawiona powyżej analiza pozwala uzmysłowić, jak skomplikowanym
@@ -733,7 +787,7 @@ zadaniem może być analiza zakresu obowiązywania danego równania
 różniczkowego oraz jego rozwiązań. Do omawiania tych zagadnień zapewne
 powrócimy jeszcze wielokrotnie w~tych notatkach.
 
-\vspace{\VerSpaceFour}
+\VerSpaceFour
 
 
 
@@ -759,13 +813,13 @@ zmiennej~$x$, który oznaczymy~$A$. Tym samym możemy odwikłać funkcję
 $y( x )$ dla wszystkich wartości $x \in A$. Przepiszmy teraz równanie (10)
 w~bardziej jawnej formie jako
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-26}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-31}
   \Phi_{ x }'\big( x, y( x ) \big) +
   \Phi_{ y }'\big( x, y( x ) \big) f\big( x, y( x ) \big) = 0.
 \end{equation}
 Równanie to przekształcamy w~oczywisty sposób do postaci
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-27}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-32}
   -\frac{ \Phi_{ x }'\big( x, y( x ) \big) }
   { \Phi_{ y }'\big( x, y( x ) \big) } =
   f\big( x, y( x ) \big).
@@ -774,9 +828,9 @@ Jak dobrze wiadomo, lewa strona tej równości przedstawia pochodną funkcji
 uwikłanej $y'( x )$.
 
 Na koniec możemy zauważyć, że~zarówno wzór
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-26} jak i~dobrze znaną zależność
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-31} jak i~dobrze znaną zależność
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-28}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-33}
   y'( x ) =
   -\frac{ \Phi_{ x }'\big( x, y( x ) \big) }{ \Phi_{ y }'\big( x, y'( x ) \big) },
 \end{equation}
@@ -787,7 +841,7 @@ punktu widzenia równoważność równania
 i~$y'( x ) = f\big( x, y( x ) \big)$ może~się wydawać oczywista, woleliśmy
 przedyskutować to zagadnienie możliwie dokładnie.
 
-\vspace{\VerSpaceFour}
+\VerSpaceFour
 
 
 
@@ -797,7 +851,7 @@ przedyskutować to zagadnienie możliwie dokładnie.
 \Str{16} Należy przedyskutować dwa zagadnienia dotyczące rozwiązania
 równania różniczkowego
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-29}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-34}
   y'( x ) = f\big( x, y( x ) \big),
 \end{equation}
 w~postaci parametrycznej. Po pierwsze, czy jeśli $y( x )$ jest rozwiązaniem
@@ -805,30 +859,30 @@ tego równania, to czy można podać jego rozwiązanie w~postaci parametrycznej?
 Po drugie, jak uzasadnić, że~funkcje $\varphi( t )$ i~$\psi( t )$ spełniające
 równanie
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-30}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-35}
   \frac{ \psi'( t ) }{ \varphi'( t ) } =
   f\big( \varphi( t ), \psi( t ) \big),
 \end{equation}
 przedstawiając rozwiązanie równania
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-29}?
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-34}?
 
 Zanim odpowiemy na te pytania, zrobimy małą uwagę odnośnie oznaczeń.
 W~całym tym punkcie, jeśli nie powiedziano inaczej, symbol prim oznacza
 pochodną danej funkcji. W~szczególności we wzorze
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-30}, co przyjmowaliśmy domyślnie,
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-35}, co przyjmowaliśmy domyślnie,
 symbol $\psi'( t )$ oznacza pochodną funkcji $\psi( t )$ po~czasie.
 
 Przejdźmy teraz do odpowiedzi na~pierwsze pytanie z postawionych wyżej
-pytań. Równanie różniczkowe \eqref{eq:Matwiejew-Metody-calkowania-ETC-29}
+pytań. Równanie różniczkowe \eqref{eq:Matwiejew-Metody-calkowania-ETC-34}
 jest określone na płaszczyźnie~$xy$, więc funkcje $\varphi( t )$ i~$\psi( t )$ możemy
 rozumieć jako odwzorowanie $\Psi( t ) : ( t_{ 0 }, t_{ 1 } ) \to \Rbb^{ 2 }$, dane
 przez
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-31}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-36}
   \Psi( t ) = \big( \varphi( t ), \psi( t ) \big).
 \end{equation}
 Korzystając z~interpretacji równania
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-29} za pomocą wprowadzonego dalej
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-34} za pomocą wprowadzonego dalej
 na tej stronie i~następnych pojęcia pola kierunków oraz krzywej całkowej,
 można stwierdzić, że~funkcje $\varphi( t )$ i~$\psi( t )$ są rozwiązaniem
 rozpatrywanego równania w~postaci parametrycznej, jeśli $\Psi( t )$ wyznacza
@@ -840,18 +894,18 @@ $x \in ( a, b )$, to parę funkcji $\varphi( t )$, $\psi( t )$ określonych
 dla~$t \in I = ( t_{ 0 }, t_{ 1 } )$ nazywamy postacią parametryczną tego
 równania jeśli zachodzi $\varphi( I ) \subset ( a, b )$ oraz
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-32}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-37}
   \psi( t ) = y\big( \varphi( t ) \big).
 \end{equation}
 
-Wzór \eqref{eq:Matwiejew-Metody-calkowania-ETC-32}
+Wzór \eqref{eq:Matwiejew-Metody-calkowania-ETC-37}
 pozwala nam stwierdzić, że~jeśli mamy dane rozwiązanie $y( x )$, określone
 przy tych samych warunkach co powyżej, to zawsze możemy utworzyć odpowiednie
 rozwiązanie parametryczne. Wystarczy przyjąć, że~$I = ( a, b )$,
 $\varphi( t ) = t$ (zwykle zapisuje to jako $x = t$) i~zdefiniować $\psi( t )$ jako
 $y\big( \varphi( t ) \big)$. Zauważmy, że~zachodzi wówczas
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-33}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-38}
   \frac{ d \psi( t ) }{ d t } =
   \frac{ d y( x ) }{ d x }\bigg|_{ x = \varphi( t ) }
   \frac{ d \varphi( t ) }{ d t }.
@@ -859,14 +913,14 @@ $y\big( \varphi( t ) \big)$. Zauważmy, że~zachodzi wówczas
 Oznaczając symbolem prim pochodną po czasie i~zakładając,
 że~$\varphi'( t ) \neq 0$ otrzymujemy zależność
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-34}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-39}
   \frac{ d y( x ) }{ d x }\bigg|_{ x = \varphi( t ) } =
   \frac{ \psi'( t ) }{ \varphi'( t ) }.
 \end{equation}
-Razem z~równaniami \eqref{eq:Matwiejew-Metody-calkowania-ETC-29}
-i~\eqref{eq:Matwiejew-Metody-calkowania-ETC-32} prowadzi do równania
+Razem z~równaniami \eqref{eq:Matwiejew-Metody-calkowania-ETC-34}
+i~\eqref{eq:Matwiejew-Metody-calkowania-ETC-37} prowadzi do równania
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-35}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-40}
   \frac{ \psi'( t ) }{ \varphi'( t ) } =
   f\big( \varphi( t ), \psi( t ) \big).
 \end{equation}
@@ -874,15 +928,15 @@ To kończy rozważanie na temat wyrażenia znanego rozwiązania w~postaci
 parametrycznej.
 
 Przejdźmy teraz do problemu, dlaczego możemy uważać rozwiązanie równania
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-30} za rozwiązania równania
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-29}. Przyjmijmy, że~funkcja
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-35} za rozwiązania równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-34}. Przyjmijmy, że~funkcja
 $\varphi( t )$ jest różniczkowalna w~sposób ciągły. Na podstawie równania
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-30} wiemy, że~musi zachodzić
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-35} wiemy, że~musi zachodzić
 $\varphi'( t )$. Na podstawie standardowych twierdzeń z~analizy matematycznej
 (zob. przykładowo \cite{FichtenholzRachunekRozniczkowyETCVolI2005}) oraz
 dobrze znanego wzoru na pochodną funkcji odwrotnej:
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-36}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-41}
   \frac{ d f^{ -1 }( y ) }{ d y } =
   \frac{ d f( t ) }{ d t }\bigg|_{ t = f^{ -1 }( y ) },
 \end{equation}
@@ -891,7 +945,7 @@ $J = ( t - \delta_{ 1 }, t + \delta_{ 2 } )$, gdzie $\delta_{ 1 }, \delta_{ 2 } 
 funkcja odwrotna do $\varphi( t )$, oznaczać ją będziemy $\eta( x )$, która jest
 różniczkowalna i~jej pochodna wynosi
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-37}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-42}
   \frac{ d \eta( x ) }{ d x } =
   \frac{ 1 }{ \varphi'\big( \eta( x ) \big) }.
 \end{equation}
@@ -902,7 +956,7 @@ w~punkcie $\eta( x )$.
 Rozpatrzmy teraz funkcję $\psi\big( \eta( x ) \big)$. Jej pochodna po zmiennej $x$
 jest równa
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-38}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-43}
   \frac{ d \psi\big( \eta( x ) \big) }{ d x } =
   \frac{ d \psi( t ) }{ d t }\bigg|_{ t = \eta( x ) }
   \frac{ d \eta( x ) }{ d x } =
@@ -910,26 +964,26 @@ jest równa
   \frac{ 1 }{ \varphi'\big( \eta( x ) \big)}.
 \end{equation}
 Jeżeli teraz obliczymy wartość obu stron równania
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-30} dla wartości $t = \eta( x )$
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-35} dla wartości $t = \eta( x )$
 otrzymamy
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-39}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-44}
   \frac{ \psi'\big( \eta( x ) \big) }{ \varphi'\big( \eta( x ) \big) } =
   f\Big( x, \psi\big( \eta( x ) \big) \Big).
 \end{equation}
 Korzystając z~\eqref{eq:Matwiejew-Metody-calkowania-ETC-38} możemy przepisać
 powyższe równanie jako
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-40}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-45}
   \frac{ d \psi\big( \eta( x ) \big) }{ d x } =
   f\Big( x, \psi\big( \eta( x ) \big) \big).
 \end{equation}
 Widzimy więc, że~funkcja $y( x ) = \psi\big( \eta( x ) \big)$ jest rozwiązaniem
-równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-29} określonym na zbiorze
+równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-44} określonym na zbiorze
 $\varphi( J )$. To wyjaśnia czemu funkcje $\varphi( t )$ i~$\psi( t )$ możemy uznać za
 rozwiązanie rozważanego równania różniczkowego.
 
-\vspace{\VerSpaceFour}
+\VerSpaceFour
 
 
 
@@ -948,7 +1002,7 @@ przedstawia~się następująco. Szukana funkcja $y$ jest odwzorowaniem
 $y : A \to \Rbb$, gdzie $A \subset \Rbb$, a~równanie które ma spełniać podane
 jest w~standardowej postaci normalnej:
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-41}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-46}
   y'( x ) = f\big( x, y( x ) \big).
 \end{equation}
 W~związku z~tym pole kierunków jest zdefiniowane na płaszczyźnie $xy$,
@@ -956,7 +1010,7 @@ gdzie $x$ odpowiada zmiennej niezależnej, a~zmienna $y$ wartościom
 przyjmowanym przez funkcję $y( x )$.
 
 Zaczniemy od pewnych uwag terminologicznych. O~równaniu
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-41} i~różnych jego
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-46} i~różnych jego
 uogólnieniach będziemy mówili, że~wyznacza ono
 \textbf{ruch zadanego punktu}. Przez ruch punktu będziemy rozumieć
 rozwiązanie tego równania $y$. Natomiast przez \textbf{tor ruchu} będziemy
@@ -986,7 +1040,7 @@ ilość pól wektorowych, takich że wektor $\vecv( x, y )$ ma kierunek równy
 $v( x, y )$. Wystarczy bowiem znaleźć jedno takie pole $\vecv( x, y )$,
 następnie dla $\lambda \neq 0$ określić pole
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-42}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-47}
   \vecv_{ \, \lambda }( x, y ) = \lambda \HorSpaceThree \vecv( x, y ).
 \end{equation}
 Sposób budowy pola wektorowego odpowiadającego danemu polu kierunków podamy
@@ -1006,11 +1060,11 @@ $y : ( x_{ 0 }, x_{ 1 } ) \to \Rbb$. Wówczas krzywa całkowa
 zawarta w~$G \subset \Ebold^{ 2 }$ i~styczna do pola kierunków
 $v( x, y ) = f( x, y )$ wyznacza nie tylko kształt toru ruchu punktu,
 którego równanie ruchu ma postać
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-41},
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-46},
 ale też jaki dokładnie sposób w~jaki ten tor pokonuje. Tor ruchu dla
 badanego przypadku jest zawsze bardzo prosty, tworzy on bowiem odcinek
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-43}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-48}
   y\big( ( x_{ 0 }, x_{ 1 } ) \big) = ( a, b )
 \end{equation}
  (ewentualnie jeden z~odcinków
@@ -1033,66 +1087,66 @@ którego mają one być styczna. Wiemy bowiem, że~krzywa całkowa zawsze
 Załóżmy teraz, że~przez punkt $( x, y )$ ma przechodzić gładka krzywa
 całkowa, dana przez funkcję $y$. Równaniem tej krzywej jest postaci
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-44}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-49}
   K : ( x - \delta, x + \delta ) \to \Rbb^{ 2 }, \quad
   K( x ) = \big( x, y( x ) \big),
 \end{equation}
 gdzie $\delta > 0$. Wobec tego wektor $\vecv$ styczny do~tej krzywej całkowej
 w~tym punkcie jest dany przez
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-45}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-50}
   \vecv \HorSpaceThree ( x, y ) =
   \big[ 1, y'( x ) \big].
 \end{equation}
 Z~analizy matematycznej wiemy, że~jeśli $\alpha$ jest kątem pod jakim styczna do
 krzywej w~punkcie $\big( x, y( x ) \big)$, to zachodzi
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-46}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-51}
   \tan( \alpha ) = y'( x ).
 \end{equation}
 Ponieważ zaś $\tan( \alpha )$ jest wyznaczony przez pole kierunków, pozwala nam
 to jednoznacznie wyznaczyć wektor styczny do krzywej całkowej. Możemy teraz
-skorzystać z~\eqref{eq:Matwiejew-Metody-calkowania-ETC-41} i~otrzymać wzór
+skorzystać z~\eqref{eq:Matwiejew-Metody-calkowania-ETC-46} i~otrzymać wzór
 na pole wektorowe odpowiadające temu równaniu różniczkowemu:
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-47}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-52}
   \vecv \HorSpaceThree ( x, y ) =
   \big[ 1, f( x, y ) \big].
 \end{equation}
 Możemy teraz odwrócić rozumowanie i~stwierdzić, że~rozwiązanie równania
 różniczkowego oznacza znalezienie krzywych całkowych na płaszczyźnie $xy$,
 takich że w~każdym ich punkcie ich wektor styczny jest dany przez pole
-wektorowe zdefiniowane wzorem \eqref{eq:Matwiejew-Metody-calkowania-ETC-47}.
+wektorowe zdefiniowane wzorem \eqref{eq:Matwiejew-Metody-calkowania-ETC-52}.
 
 Przyjrzyjmy~się jeszcze raz temu rozumowaniu. Ponieważ w~omawianym
 przypadku wiemy, że~pierwsza pola wektorowego zadanego przez równanie
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-42} musi~się zawsze równać jeden:
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-47} musi~się zawsze równać jeden:
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-48}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-53}
   \vecv_{ x }( x, y ) = 1,
 \end{equation}
 więc biorąc to pod uwagę, jesteśmy w~stanie znając wartości pola kierunków
 w~punkcie $( x, y )$, jesteśmy w~stanie odtworzyć wektor $\vecv( x, y )$.
 Warunek ten wyklucza również możliwość zastosowania transformacji takich jak
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-42}.
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-47}.
 
 Rozpatrzmy teraz sytuację analizowaną przez Arnolda. Niech więc będzie dane
 pole wektorowe $\vecv : G \to \Rbb^{ 2 }$, $G \subset \Rbb^{ 2 }$. Szukać będziemy
 funkcji postaci $\vecy : ( t_{ 0 }, t_{ 1 } ) \to G$, spełniający następujący
 równanie
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-49}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-54}
   \frac{ d \vecy( t ) }{ d t } =
   \vecf \HorSpaceOne \big( t, \vecy( t ) \big) =
   \vecv \HorSpaceThree \big( \vecy( t ) \big),
 \end{equation}
-będące odpowiednikiem \eqref{eq:Matwiejew-Metody-calkowania-ETC-41}.
+będące odpowiednikiem \eqref{eq:Matwiejew-Metody-calkowania-ETC-46}.
 Zwyczajowo użyliśmy symbolu $t$ dla oznaczenia parametru od którego zależy
 rozwiązanie $\vecy$. Dodatkowo współrzędne kartezjańskie w~zbiorze $G$
 będziemy oznaczać $y_{ 1 }$ i~$y_{ 2 }$. Ostatnie równanie można
 również zapisać jako
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-50}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-55}
   \begin{bmatrix}
     y'_{ 1 }( t ) \\
     y'_{ 2 }( t )
@@ -1107,7 +1161,7 @@ Jeśli teraz weźmiemy pole wektorowe $\vecv$ i~narysujemy zarówno je samo,
 jak i~krzywe których wektory styczne w~każdym punkcie są równe wektorom
 pola $\vecv$ w~tym samym punkcie, to tym razem nie otrzymamy pełnej
 informacji o~ruchu punktu, który jest opisany równaniem
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-48}, bowiem te krzywe będą
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-53}, bowiem te krzywe będą
 obrazować tylko tor danego ruchu. Przykładowo, krzywa widoczna na rysunku
 ????
 pokazuje nam, że~tor ruchu punktu tworzy pewną krzywą zamkniętą, ale nic
@@ -1118,7 +1172,7 @@ Aby uzyskać jak poprzednio pełną informację o~ruchu powinniśmy rozpatrywać
 krzywe w~zbiorze $( t_{ 0 }, t_{ 1 } ) \times G$, na którym określone jest pole
 wektorowe
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-51}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-56}
   \vecv_{ \, \textrm{ext} }( t, y_{ 1 }, y_{ 2 } ) =
   \begin{bmatrix}
     1 \\
@@ -1133,8 +1187,8 @@ wedle definicji danej przez teorię mnogości. Powyżej podaliśmy pole
 wektorowe dla tej przestrzeni, kwestią czy można na nią uogólnić pojęcie
 pola kierunków, nie będziemy~się zajmować.
 
-Różnica między równaniem \eqref{eq:Matwiejew-Metody-calkowania-ETC-41}
-i~\eqref{eq:Matwiejew-Metody-calkowania-ETC-48} wynika głównie z~rodzaju
+Różnica między równaniem \eqref{eq:Matwiejew-Metody-calkowania-ETC-46}
+i~\eqref{eq:Matwiejew-Metody-calkowania-ETC-53} wynika głównie z~rodzaju
 funkcji, które są ich rozwiązaniami. Dokładniej z~tego, że~funkcje typu
 $y : ( t_{ 0 }, t_{ 1 } ) \to \Rbb$ są niezwykle proste, gdyż ich
 przeciwdziedzina jest niezwykle prosta. W~tym przypadku torem ruchu jest
@@ -1168,7 +1222,7 @@ Do tych rozważań należy któregoś dnia wrócić, poprawić je i~uzupełnić 
 tego co jest napisane w~dziele Arnolda
 \cite{ArnoldRownaniaRozniczkoweZwyczajne1975}.
 
-\vspace{\VerSpaceFour}
+\VerSpaceFour
 
 
 
@@ -1180,30 +1234,30 @@ nad podstawowymi własnościami izoklin. Przyjmijmy, że~izoklina dana jest
 przez funkcję $h( x )$ określoną na zbiorze $( x_{ 0 }, x_{ 1 } )$. Tym
 samym równanie izokliny jako krzywej jest postaci
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-52}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-57}
   K( x ) = \big( x, h( x ) \big).
 \end{equation}
 Zgodnie z~definicją izokliny, dla pewnego $k \in \Rbb$ zachodzi
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-53}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-58}
   k = f\big( x, h( x ) \big).
 \end{equation}
 Zauważmy, że~aby izoklina była rozwiązaniem danego równania różniczkowego
 musiałoby ponadto zachodzi
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-54}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-59}
   h'( x ) = k.
 \end{equation}
 Przykład~3 pokazuje, że~izoklina może być rozwiązaniem równania
 różniczkowego które ją definiuje, ale jest to sytuacja dość szczególna.
 Przykład~1 ze strony~17 jasno pokazuje, że~żadna z~izoklin równania
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-55}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-60}
   y'( x ) = 2 x,
 \end{equation}
 nie jest jego rozwiązaniem.
 
-\vspace{\VerSpaceFour}
+\VerSpaceFour
 
 
 
@@ -1218,16 +1272,16 @@ wprowadzić w~bardziej elegancki i~łatwiejszy w~zrozumieniu sposób.
 
 Najpierw w~jednym paragrafie rozważamy prawą stronę równania
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-56}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-61}
   y'( x ) = f\big( x, y( x ) \big),
 \end{equation}
 dochodząc do wniosku, że~jeśli w~danym obszarze $\Ocal$ płaszczyzny $x y$
 jest ona dodatnia (ujemna), to wszystkie krzywe całkowe w~tym obszarze
 są skierowane ku górze (ku dołowi). Następnie możemy przeprowadzić
 podobną analizę drugiej pochodnej funkcji $y( x )$, różniczkują
-po $x$ równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-56}:
+po $x$ równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-61}:
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-57}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-62}
   y''( x ) =
   \frac{ \partial f\big( x, y( x ) \big)}{ \partial x } +
   \frac{ \partial f\big( x, y \big) }{ \partial y }\Big|_{ y = y( x ) } \,
@@ -1242,7 +1296,7 @@ linii ekstremów, mając nadzieję, że~pomoże to naświetlić lepiej omawiane
 problemy. Niech $h( x )$ będzie funkcją określoną na odcinku
 $( x_{ 1 }, x_{ 2 } )$.
 Mówimy, że~$h( x )$ wyznacza linię ekstremów równania
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-56} jeśli przez każdy
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-61} jeśli przez każdy
 punkt $( x_{ 0 }, y_{ 0 } )$, gdzie $y_{ 0 } = h( x_{ 0 } )$,
 $x_{ 0 } \in ( x_{ 1 }, x_{ 2 } )$, przechodzi
 krzywa całkowa dana funkcją $y( x )$, która to funkcja jest określona
@@ -1260,7 +1314,7 @@ przypadku, gdy~krzywa całkowa pokrywa~się tą linią. W~tym momencie nie
 umiemy powiedzieć, czy definicja w~obecnej formie jest poprawna, czy
 też~jej część została przypadkiem pominięta.
 
-\vspace{\VerSpaceFour}
+\VerSpaceFour
 
 
 
@@ -1269,7 +1323,7 @@ też~jej część została przypadkiem pominięta.
 \noindent
 \Str{19} Równanie
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-58}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-63}
   \frac{ d y( x ) }{ d x } =
   \frac{ y( x ) }{ x }
 \end{equation}
@@ -1284,21 +1338,21 @@ znaleźć w~książce.
 Mianowicie, zaczynamy od zbadania jego izoklin, czyli szukamy rozwiązań
 równania
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-59}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-64}
   k = \frac{ y_{ \, \izo }( x ) }{ x }, \quad
   k \in \Rbb.
 \end{equation}
 Dla zaznaczenia, że~izoklina nie musi być rozwiązanie równania
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-58}, szukaną funkcję oznaczyliśmy
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-63}, szukaną funkcję oznaczyliśmy
 $y_{ \, \izo }( x )$, a~nie $y( x )$. Równanie to jest niezmiernie proste,
 więc od razu dostajemy
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-60}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-65}
   y_{ \, \izo }( x ) = k \, x, \quad
   k \in \Rbb.
 \end{equation}
 To co wymaga większej uwagi, jest to, że~$x = 0$ nie należy do dziedziny
-równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-59}, więc izokliny są
+równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-64}, więc izokliny są
 określone tylko dla $x \in ( -\infty, 0 ) \cup ( 0, +\infty )$. Czy jednak powinnyśmy
 dopuszczać jako izokliny krzywe reprezentowane przez funkcje, których
 dziedziną nie jest przedział $( a, b ) \subset \Rbb$ (ewentualnie przedział
@@ -1310,20 +1364,20 @@ izokliny tego równania są również jego rozwiązaniami, więc przyjmiemy dla
 nich podobną konwencję. Będziemy więc szukać izoklin, których funkcja
 $y_{ \, \izo }( x )$ ma za dziedzinę możliwie największy przedział otwarty
 zawarty w~$\Rbb$. Na mocy tego, rozbijamy funkcję daną przez równanie
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-60} na dwie funkcje:
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-65} na dwie funkcje:
 
-\vspace{\negVerSpaceFour}
+\negVerSpaceFour
 
 
 \begin{subequations}
 
   \begin{align}
-    \label{eq:Matwiejew-Metody-calkowania-ETC-61-A}
+    \label{eq:Matwiejew-Metody-calkowania-ETC-66-A}
     y_{ \, \izo, \, + }( x )
     &=
       k \, x, \quad
       x > 0, \\
-    \label{eq:Matwiejew-Metody-calkowania-ETC-61-B}
+    \label{eq:Matwiejew-Metody-calkowania-ETC-66-B}
     y_{ \, \izo, \, - }( x )
     &=
       k \, x, \quad
@@ -1334,7 +1388,7 @@ zawarty w~$\Rbb$. Na mocy tego, rozbijamy funkcję daną przez równanie
 
 
 \noindent
-Tym samy za izokliny równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-58}
+Tym samy za izokliny równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-63}
 będziemy uważać nie proste przechodzące przez początek układu
 współrzędnych, lecz odpowiednie półproste wychodzące z~tego punktu. Może to
 być zgodne z~intencjami Matwiejewa wyłożonymi w~opisie omawianego
@@ -1343,13 +1397,13 @@ całkowymi jak i~izoklinami, można interpretować na kilka sposobów.
 
 Łatwo zauważyć, że~$y'( x ) = k$ i~$y( x ) / x = k$, więc mogłoby~się
 izokliny są zarazem rozwiązaniami równania
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-58}. Tak jak w~przypadku izoklin,
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-63}. Tak jak w~przypadku izoklin,
 rozwiązania równania są określone na zbiorze $( -\infty, 0 )$
 albo $( 0, +\infty )$. Zgodność z~tekstem książki jest prawie pewna,
 bo~Matwiejew tylko półproste wychodzące z~układu współrzędnych nazywa
 krzywymi całkowymi badanego równania. Niemniej warto zaznaczyć, że~funkcja
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-62}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-67}
   y_{ - }( x ) = k \, x, \quad
   x < 0,
 \end{equation}
@@ -1360,24 +1414,23 @@ do~nieporozumień.
 Dla porządku przeanalizujemy jeszcze przypadek $x = 0$, $y \neq 0$. W~takiej
 sytuacji musimy rozpatrzyć równanie
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-63}
-  \frac{ d x( y ) }{ d y } =
-  \frac{ x( y ) }{ y }.
+  \label{eq:Matwiejew-Metody-calkowania-ETC-68}
+  \frac{ d x( y ) }{ d y } = \frac{ x( y ) }{ y }.
 \end{equation}
 Równanie izoklin rozwiązujemy tak jak poprzednio dostając
 
-\vspace{\negVerSpaceFour}
+\negVerSpaceFour
 
 
 \begin{subequations}
 
   \begin{align}
-    \label{eq:Matwiejew-Metody-calkowania-ETC-64-A}
+    \label{eq:Matwiejew-Metody-calkowania-ETC-69-A}
     x_{ \, \izo, \, + }( y )
     &=
       k_{ 1 } \, y, \quad
       y > 0, \\
-    \label{eq:Matwiejew-Metody-calkowania-ETC-64-B}
+    \label{eq:Matwiejew-Metody-calkowania-ETC-69-B}
     x_{ \, \izo, \, - }( y )
     &=
       k_{ 1 } \, y, \quad
@@ -1389,21 +1442,21 @@ Równanie izoklin rozwiązujemy tak jak poprzednio dostając
 
 \noindent
 Tak jak poprzednio łatwo sprawdzamy, że~izokliny są też rozwiązaniami
-równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-63}. W~szczególności,
+równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-68}. W~szczególności,
 rozwiązaniami naszego równania są dwie półproste
 
-\vspace{\negVerSpaceFour}
+\negVerSpaceFour
 
 
 \begin{subequations}
 
   \begin{align}
-    \label{eq:Matwiejew-Metody-calkowania-ETC-65-A}
+    \label{eq:Matwiejew-Metody-calkowania-ETC-70-A}
     x_{ + }( y )
     &=
       0, \quad
       y > 0, \\
-    \label{eq:Matwiejew-Metody-calkowania-ETC-65-B}
+    \label{eq:Matwiejew-Metody-calkowania-ETC-70-B}
     x_{ - }( y )
     &=
       0, \quad
@@ -1414,17 +1467,17 @@ rozwiązaniami naszego równania są dwie półproste
 
 
 Na koniec zwróćmy uwagę na~następujący prosty fakt. Jeśli zapiszemy równania
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-61-A}-\eqref{eq:Matwiejew-Metody-calkowania-ETC-61-B} i~\eqref{eq:Matwiejew-Metody-calkowania-ETC-64-A}-\eqref{eq:Matwiejew-Metody-calkowania-ETC-64-B} jako równania uwikłane na funkcje:
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-66-A}-\eqref{eq:Matwiejew-Metody-calkowania-ETC-66-B} i~\eqref{eq:Matwiejew-Metody-calkowania-ETC-69-A}-\eqref{eq:Matwiejew-Metody-calkowania-ETC-69-B} jako równania uwikłane na funkcje:
 
-\vspace{\negVerSpaceFour}
+\negVerSpaceFour
 
 
 \begin{subequations}
 
   \begin{align}
-    \label{eq:Matwiejew-Metody-calkowania-ETC-66-A}
+    \label{eq:Matwiejew-Metody-calkowania-ETC-71-A}
     y - k \, x = 0, \\
-    \label{eq:Matwiejew-Metody-calkowania-ETC-66-B}
+    \label{eq:Matwiejew-Metody-calkowania-ETC-71-B}
     x - k_{ 1 } \, y = 0,
   \end{align}
 
@@ -1435,21 +1488,21 @@ Na koniec zwróćmy uwagę na~następujący prosty fakt. Jeśli zapiszemy równa
 gdzie $k, k_{ 1 } \in \Rbb$, a~równania te chcemy rozwiązać osobno w~zbiorze
 $\Rbb \setminus ( 0, \, 0 )$, rozwiązania zaś mają być określone na zbiorach postaci
 $( a, b )$, to możemy zaobserwować, iż~równania
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-66-A}
-i~\eqref{eq:Matwiejew-Metody-calkowania-ETC-66-B} są sobie w~oczywisty
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-71-A}
+i~\eqref{eq:Matwiejew-Metody-calkowania-ETC-71-B} są sobie w~oczywisty
 sposób częściowo równoważne. Jeśli bowiem $k \neq 0$, to równanie
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-66-A} przechodzi w~równanie
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-66-B}
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-71-A} przechodzi w~równanie
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-71-B}
 z~$k_{ 1 } = \frac{ 1 }{ k }$ i~odwrotnie.
 
 Warunek, że~rozwiązania równań
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-66-A}
-i~\eqref{eq:Matwiejew-Metody-calkowania-ETC-66-B} mają być określone na
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-71-A}
+i~\eqref{eq:Matwiejew-Metody-calkowania-ETC-71-B} mają być określone na
 zbiorach postaci $( a, b )$ nie jest potrzebny by omawiana równoważność
 zachodziła. Dodaliśmy ją, by rozwiązania równania uwikłanego miały tę samą
 dziedzinę co izokliny analizowane wcześniej.
 
-\vspace{\VerSpaceFour}
+\VerSpaceFour
 
 
 
@@ -1468,7 +1521,7 @@ stronie.
 \end{quote}
 Wzór (19) o~którym tu mowa to
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-67}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-72}
   y( x ) =
   \int_{ x_{ 0 } }^{ x } f( x ) \, dx + y_{ 0 }.
 \end{equation}
@@ -1478,7 +1531,7 @@ przechodziło tylko jedna krzywa całkowa. Tak w~istocie jest, co wiem na
 podstawie twierdzenia Picarda, które w~tej książce pierwszy razy zostanie
 wspomniane na stronie~24.
 
-\vspace{\VerSpaceFour}
+\VerSpaceFour
 
 
 
@@ -1495,7 +1548,7 @@ wspomniane na stronie~24.
 Wydaje mi~się, że~Matwiejew chciał za~jego pomocą przekazać następującą
 myśl. Jak już wiemy, jeśli w~równaniu
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-68}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-73}
   y'( x ) = f\big( x, y( x ) \big)
 \end{equation}
 prawa strona jest funkcją ciągłą określoną w~obszarze\footnote{Moglibyśmy
@@ -1504,16 +1557,16 @@ prawa strona jest funkcją ciągłą określoną w~obszarze\footnote{Moglibyśmy
 $G \subset \Rbb^{ n }$, to na mocy twierdzenia Peanom również rozwiązanie tego
 równania jest funkcją ciągłą. Dlatego też od~tego momentu będziemy
 zakładać, że~prawa strona równania
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-68} jest funkcją ciągłą
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-73} jest funkcją ciągłą
 co pozwoli nam skupić naszą uwagę na rozwiązaniach równań różniczkowych
 zwyczajnych, które spełniają ten warunek.
 
 Ciekawym zagadnienie pozostaje znalezienie takich funkcji~$f$, które
 nie są ciągłe, ale~zadane przez nie równanie
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-68} posiada rozwiązania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-73} posiada rozwiązania
 różniczkowalne w~sposób ciągły.
 
-\vspace{\VerSpaceFour}
+\VerSpaceFour
 
 
 
@@ -1525,8 +1578,106 @@ Picarda o~istnieniu i~jednoznaczności rozwiązań równania różniczkowego
 zwyczajnego. Czy mamy domyślnie przyjmować, że~w~dalszej części książki
 założenia tego twierdzenia są spełnione, chyba że~powiedziano inaczej?
 
+\VerSpaceFour
 
-{\Large Od strony 26 należy zacząć ponowne czytanie książki.}
+
+
+
+
+\noindent
+\Str{27--28} Na stronie tych znajdujemy definicję, która określa kiedy
+funkcja dwóch zmiennych $\varphi( x, C )$ jest rozwiązaniem ogólnym pewnego
+równania różniczkowego, co zapisujemy symbolicznie jako
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-73}
+  y( x ) = \varphi( x, C ).
+\end{equation}
+Jednym z~nich jest to, by w~zadanym obszarze można ją było odwikłać
+względem~$C$. Dokładny sens tego stwierdzenia jest następujący.
+Przekształcamy równanie \eqref{eq:Matwiejew-Metody-calkowania-ETC-73}
+z~równania definiującego funkcję $y( x )$ na równanie uwikłane na trzy
+zmienne niezależne: $x$, $y$ i~$C$. Równanie to ma postać
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-74}
+  y = \varphi( x, C ).
+\end{equation}
+Następnie żądamy by można je było odwikłać na funkcję $C = \psi( x, y )$.
+Ponieważ do~równania tego stosuje~się bez zmian standardowa teorii równań
+uwikłanych, dlatego nie będziemy dłużej zatrzymywać~się przy tym
+zagadnieniu.
+
+Na koniec zwróćmy jeszcze uwagę na pewną osobliwość zapisu równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-73}. Po~jego lewej stronie mamy
+funkcję jednej zmiennej, a~po jego prawej stronie dwóch zmiennych. Choć nie
+jest to w~pełni ścisły zapis, notacja taka jest dobrze uzasadniona
+przez praktykę badania i~rozwiązywania równań różniczkowych. Symbolizuje
+ono to, że~konkretne rozwiązanie równania różniczkowego otrzymujemy, przez
+podstawienie za~drugi argument funkcji $\varphi( x, C )$ konkretnej wartości
+zmiennej $C$, w~rezultacie czego otrzymujemy funkcję jednej zmiennej.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{29} Zatrzymamy~się na chwilę nad słowami „Jasne jest wreszcie,
+że~funkcja~(24'') jest rozwiązaniem równania~(14) przy wszystkich
+wartościach~$C$ danych wzorem~(27), gdy punkt $( x, y )$ przebiega
+obszar~(26).” Równanie (14) jest postaci
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-74}
+  \frac{ d y( x ) }{ d x } = \frac{ y }{ x },
+\end{equation}
+natomiast równanie~(24'') to
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-75}
+  y( x ) = C x.
+\end{equation}
+Jeśli chodzi o~równanie (27) to ma ono postać
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-76}
+  C = \frac{ y }{ x },
+\end{equation}
+zaś wzór (26) definiuje półpłaszczyznę $0 < x < +\infty$, $-\infty < y < +\infty$.
+W~tym miejscu warto przypomnieć, że~rozpatrujemy tylko funkcje przyjmujące
+wartości rzeczywiste.
+
+Należy zwrócić uwagę, że~funkcja
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-75} jest rozwiązaniem równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-74} dla dowolnej wartości
+stałej~$C$. Tym samym dowolny związek postaci $C = \psi( x, y )$, przy
+założeniu, że~prowadzi on do~$C$ rzeczywistego, daje jako wynik stałą taką,
+że~funkcja $y( x ) = C x$ jest rozwiązaniem rozpatrywanego równania. Z~tego
+punktu widzenia nie ma nic niezwykłego w~związku
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-76}.
+
+Tym co wyróżnia \eqref{eq:Matwiejew-Metody-calkowania-ETC-76} spośród
+wszystkich funkcji $\psi( x, y )$ o~wartościach rzeczywistych jest to,
+że~jeśli
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-77}
+  C_{ 0 } = \psi( x_{ 0 }, y_{ 0 } ) = \frac{ y_{ 0 } }{ x_{ 0 } },
+\end{equation}
+to zachodzi
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-78}
+  y( x_{ 0 }, C_{ 0 } ) = y_{ 0 }.
+\end{equation}
+Fakt, że~funkcja $\psi( x, y )$ musi spełniać ten warunek, by $y( x ) = C x$
+było rozwiązaniem ogólnym badanego równania, jest zawarty w~definicji tej
+funkcji podanej na~stronie~27, gdzie jest napisane, że~ma otrzymujemy ją poprzez odwikłanie równania
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-79}
+  y = \varphi( x, C ),
+\end{equation}
+na zmienną $C$. Wzór \eqref{eq:Matwiejew-Metody-calkowania-ETC-79} należy
+rozumieć jako równanie uwikłane uwzględniające trzy zmienne niezależne:
+$x$, $y$ i~$C$. Aby ta procedura miała sens funkcja $\varphi( x, C )$ musi
+spełniać wszystkie założenia podane na~stronie~27.
+
+{\Large Od strony 29 należy zacząć ponowne czytanie książki.}
 
 
 
@@ -1576,7 +1727,7 @@ założenia tego twierdzenia są spełnione, chyba że~powiedziano inaczej?
 
 \end{center}
 
-\vspace{\VerSpaceSix}
+\VerSpaceSix
 
 
 \noindent

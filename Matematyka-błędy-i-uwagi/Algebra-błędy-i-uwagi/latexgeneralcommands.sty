@@ -12,41 +12,8 @@
 
 
 
-% ##########
-% Definicje pionowych odstępów w tekście
-\newcommand{\spaceOne}{3em}
-\newcommand{\spaceTwo}{2em}
-\newcommand{\spaceThree}{1em}
-\newcommand{\spaceFour}{0.5em}
-\newcommand{\spaceFive}{-0.5em}
-
-% Commands for vertical space in the text.
-\newcommand{\VerSpaceOne}{0.1em}
-\newcommand{\VerSpaceTwo}{0.25em}
-\newcommand{\VerSpaceThree}{0.5em}
-\newcommand{\VerSpaceFour}{1em}
-\newcommand{\VerSpaceFive}{1.5em}
-\newcommand{\VerSpaceSix}{2em}
-
-\newcommand{\negVerSpaceOne}{-0.5em}
-\newcommand{\negVerSpaceTwo}{-1em}
-\newcommand{\negVerSpaceThree}{-1.5em}
-\newcommand{\negVerSpaceFour}{-1.75em}
-\newcommand{\negVerSpaceFive}{-2em}
-
-
-% ##########
-% Commands for horizontal space in the text
-
-\newcommand{\smallHorSpaceOne}{\hspace{0.05em}}
-\newcommand{\smallHorSpaceTwo}{\hspace{0.07em}}
-\newcommand{\smallHorSpaceThree}{\hspace{0.1em}}
-\newcommand{\smallHorSpaceFour}{\hspace{0.13em}}
-
-
-
-% ##########
-% Commands for horizontal space in the text.
+% ##################
+% Commands for horizontal spaces in the text
 
 \newcommand{\HorSpaceOne}{\hspace{0.05em}}
 \newcommand{\HorSpaceTwo}{\hspace{0.07em}}
@@ -59,6 +26,57 @@
 \newcommand{\HorSpaceNine}{\hspace{0.2em}}
 \newcommand{\HorSpaceTen}{\hspace{0.22em}}
 \newcommand{\HorSpaceEleven}{\hspace{0.25em}}
+
+\newcommand{\negHorSpaceOne}{\hspace{-0.05em}}
+\newcommand{\negHorSpaceTwo}{\hspace{-0.07em}}
+\newcommand{\negHorSpaceThree}{\hspace{-0.09em}}
+\newcommand{\negHorSpaceFour}{\hspace{-0.1em}}
+\newcommand{\negHorSpaceFive}{\hspace{-0.11em}}
+\newcommand{\negHorSpaceSix}{\hspace{-0.13em}}
+\newcommand{\negHorSpaceSeven}{\hspace{-0.15em}}
+\newcommand{\negHorSpaceEight}{\hspace{-0.17em}}
+\newcommand{\negHorSpaceNine}{\hspace{-0.2em}}
+\newcommand{\negHorSpaceTen}{\hspace{-0.22em}}
+\newcommand{\negHorSpaceEleven}{\hspace{-0.25em}}
+
+% \newcommand{\smallHorSpaceOne}{\hspace{0.05em}}
+% \newcommand{\smallHorSpaceTwo}{\hspace{0.07em}}
+% \newcommand{\smallHorSpaceThree}{\hspace{0.1em}}
+% \newcommand{\smallHorSpaceFour}{\hspace{0.13em}}
+
+
+% ##################
+
+
+
+
+
+% ##################
+% Commands for vertical space in the text.
+
+\newcommand{\VerSpaceOne}{\vspace{0.1em}}
+\newcommand{\VerSpaceTwo}{\vspace{0.25em}}
+\newcommand{\VerSpaceThree}{\vspace{0.5em}}
+\newcommand{\VerSpaceFour}{\vspace{1em}}
+\newcommand{\VerSpaceFive}{\vspace{1.5em}}
+\newcommand{\VerSpaceSix}{\vspace{2em}}
+
+\newcommand{\negVerSpaceOne}{\vspace{-0.5em}}
+\newcommand{\negVerSpaceTwo}{\vspace{-1em}}
+\newcommand{\negVerSpaceThree}{\vspace{-1.5em}}
+\newcommand{\negVerSpaceFour}{\vspace{-1.75em}}
+\newcommand{\negVerSpaceFive}{\vspace{-2em}}
+% ##################
+
+
+
+
+
+
+% ##########
+% Commands for horizontal space in the text.
+
+
 
 
 
@@ -118,13 +136,22 @@
 
 \newcommand{\Main}[1]{ \begin{center} { \LARGE \textbf{#1} } \end{center} }
 \newcommand{\Field}[1]{ \begin{center} { \Large \textbf{#1} } \end{center} }
-\newcommand{\Work}[1]{ \begin{center} { \large \textbf{#1}} \end{center} }
+% \newcommand{\Work}[1]{ \begin{center} { \large \textbf{#1}} \end{center} }
+\newcommand{\AuthorsAndTitleOfWork}[1]{ \begin{center} { \large \textbf{#1} }
+  \end{center} }
 
 
 
-% ##########
-% Liczby rzymskie
-\newcommand{\RomanNumDot}[1]{\textbf{\romannumeral#1.}}  % RoMan NUMeral Dot
+
+
+% ##################
+% Roman numbers
+
+% RoMan NUMeral DOT
+\newcommand{\RomanNumDot}[1]{\textbf{\romannumeral#1.}}
+% ##################
+
+
 
 
 
