@@ -1585,7 +1585,7 @@ założenia tego twierdzenia są spełnione, chyba że~powiedziano inaczej?
 
 
 \noindent
-\Str{27--28} Na stronie tych znajdujemy definicję, która określa kiedy
+\Str{27--28} Na stronach tych znajdujemy definicję, która określa kiedy
 funkcja dwóch zmiennych $\varphi( x, C )$ jest rozwiązaniem ogólnym pewnego
 równania różniczkowego, co zapisujemy symbolicznie jako
 \begin{equation}
@@ -1607,7 +1607,7 @@ uwikłanych, dlatego nie będziemy dłużej zatrzymywać~się przy tym
 zagadnieniu.
 
 Na koniec zwróćmy jeszcze uwagę na pewną osobliwość zapisu równania
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-73}. Po~jego lewej stronie mamy
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-74}. Po~jego lewej stronie mamy
 funkcję jednej zmiennej, a~po jego prawej stronie dwóch zmiennych. Choć nie
 jest to w~pełni ścisły zapis, notacja taka jest dobrze uzasadniona
 przez praktykę badania i~rozwiązywania równań różniczkowych. Symbolizuje
@@ -1647,13 +1647,13 @@ wartości rzeczywiste.
 Należy zwrócić uwagę, że~funkcja
 \eqref{eq:Matwiejew-Metody-calkowania-ETC-77} jest rozwiązaniem równania
 \eqref{eq:Matwiejew-Metody-calkowania-ETC-76} dla dowolnej wartości
-stałej~$C$. Tym samym dowolny związek postaci $C = \psi( x, y )$, przy
-założeniu, że~prowadzi on do~$C$ rzeczywistego, daje jako wynik stałą taką,
+stałej~$C$. Tym samym dowolne wyrażenie postaci $C = \psi( x, y )$, przy
+założeniu, że~prowadzi ono do~rzeczywistego~$C$, zwraca nam stałą, taką
 że~funkcja $y( x ) = C x$ jest rozwiązaniem rozpatrywanego równania. Z~tego
-punktu widzenia nie ma nic niezwykłego w~związku
+punktu widzenia nie ma nic specjalnego w~formule
 \eqref{eq:Matwiejew-Metody-calkowania-ETC-78}.
 
-Tym co wyróżnia \eqref{eq:Matwiejew-Metody-calkowania-ETC-78} spośród
+Tym co~wyróżnia \eqref{eq:Matwiejew-Metody-calkowania-ETC-78} spośród
 wszystkich funkcji $\psi( x, y )$ o~wartościach rzeczywistych jest to,
 że~jeśli
 \begin{equation}
@@ -1665,25 +1665,134 @@ to zachodzi
   \label{eq:Matwiejew-Metody-calkowania-ETC-80}
   y( x_{ 0 }, C_{ 0 } ) = y_{ 0 }.
 \end{equation}
-Fakt, że~funkcja $\psi( x, y )$ musi spełniać ten warunek, by $y( x ) = C x$
-było rozwiązaniem ogólnym badanego równania, jest zawarty w~definicji tej
-funkcji podanej na~stronie~27, gdzie jest napisane, że~ma otrzymujemy ją poprzez odwikłanie równania
+Fakt, że~funkcja $\psi( x, y )$ o~której mowa w~definicji rozwiązania ogólnego
+musi spełniać ten warunek, by~$y( x ) = C x$ było rozwiązaniem ogólnym
+badanego równania, jest zawarty w~definicji tej funkcji podanej
+na~stronie~27, gdzie jest napisane, że~funkcja $\psi( x, y )$ powstaje
+poprzez odwikłanie równania
 \begin{equation}
   \label{eq:Matwiejew-Metody-calkowania-ETC-81}
   y = \varphi( x, C ),
 \end{equation}
-na zmienną $C$. Wzór \eqref{eq:Matwiejew-Metody-calkowania-ETC-81} należy
-rozumieć jako równanie uwikłane uwzględniające trzy zmienne niezależne:
-$x$, $y$ i~$C$. Aby ta procedura miała sens funkcja $\varphi( x, C )$ musi
-spełniać wszystkie założenia podane na~stronie~27.
+na zmienną $C$. O~tym jak należy rozumieć powyższe równanie i~całą procedurę
+pisaliśmy już w~komentarzu do stron 27--28.
 
-{\Large Od strony 29 należy zacząć ponowne czytanie książki.}
+\VerSpaceFour
+
 
 
 
 
 \noindent
-\Str{31} ????
+Czytamy tutaj, że~aby by wyrażenie
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-82}
+  \Phi( x, y, C ) = 0,
+\end{equation}
+lub
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-83}
+  \psi( x, y ) = C,
+\end{equation}
+reprezentowało \textbf{rozwiązanie ogólne w~postaci uwikłanej}, zwane też
+\textbf{całką ogólną}, związek ten musi określać rozwiązanie ogólne
+$y( x ) = \varphi( x, C )$. Dokładny sens tych słów, wydaje~się być następujący.
+Związek \eqref{eq:Matwiejew-Metody-calkowania-ETC-82} lub
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-83} można odwikłać względem
+zmiennej $y$, w~rezultacie czego dostajemy funkcje $y( x, C ) = \varphi( x, C )$,
+która spełnia przedstawioną wcześniej w~książce definicję rozwiązania
+ogólnego.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{29} Przykład na tej stronie dobrze ilustruje pojęcia całki ogólna
+(rozwiązanie ogólne w~postaci uwikłanej), jak również samego rozwiązania
+ogólnego. Warto jednak omówić go odrobinę szerzej.
+
+Równanie które chcemy rozwiązać to
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-84}
+  \frac{ d y( x ) }{ d x } = -\frac{ x }{ y( x ) }.
+\end{equation}
+W~punkcie $( 0, 0 )$ równanie to prowadzi do wyrażenia $0 / 0$, więc
+równanie w~tym punkcie jest niezdefiniowane. Dla punktów dla których
+$y = 0$ rozpatrywać będziemy równanie
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-85}
+  \frac{ d x( y ) }{ d y } = -\frac{ y }{ x( y ) }.
+\end{equation}
+
+Wprowadzamy cztery podzbiory płaszczyzny:
+$D_{ 1 } = \{ ( x, y ) \, | \, y > 0 \}$,
+$D_{ 2 } = \{ ( x, y ) \, | \, y < 0 \}$,
+$D_{ 3 } = \{ ( x, y ) \, | \ x > 0 \}$
+i~$D_{ 4 } = \{ ( x, y ) \, | \, x < 0 \}$. Jak już wiemy
+$y( x ) = \sqrt{ C - x^{ 2 } }$ jest rozwiązaniem ogólnym równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-84} w~obszarze~$D_{ 1 }$, zaś
+$y( x ) = -\sqrt{ C - x^{ 2 } }$ w~obszarze~$D_{ 2 }$. Natomiast funkcja
+$x( y ) = \sqrt{ C - y^{ 2 } }$ jest rozwiązaniem ogólnym równania
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-85} w~zbiorze $D_{ 3 }$, zaś
+$x( y ) = -\sqrt{ C - y^{ 2 } }$ w~obszarze $D_{ 4 }$. Ten zestaw rozwiązań
+ogólnych jest w~następującym sensie. Suma zbiorów $D_{ i }$ pokrywa zbiór
+$\Rbb \setminus { ( 0, 0 ) }$, czyli zbiór wszystkich punktów, gdzie przynajmniej
+jedno z~równań \eqref{eq:Matwiejew-Metody-calkowania-ETC-84} lub
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-85} ma sens. Żadnego ze~zbiorów
+$D_{ i }$ nie da~się powiększyć w~żaden sposób, nie tracąc przy tym
+możliwości określenia rozwiązania ogólnego w~tym zbiorze. Przypomnijmy,
+że~określając rozwiązanie ogólne $\varphi( x, C )$ równania
+$y'( x ) = f\big( x, y( x ) \big)$ musimy też podać obszar dla którego
+to~rozwiązanie obowiązuje.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{31} Jest to dziwne, że~na tej stronie czytamy „W~dalszym ciągu nie
+będziemy zajmowali~się rozwiązaniami otrzymywanymi przez sklejanie.”, po
+czym następuje przykład, który w~bardzo dobry sposób ilustruje czym są
+takie sklejane rozwiązania. Zapewne autorowi chodziło o~to, że~po omówieniu
+tego przykładu, rozwiązania otrzymane przez sklejanie rozwiązań szczególnych
+i~osobliwych nie będą w~książce rozpatrywane.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{31} Warto zwrócić uwagę na następującą subtelność rachunkową.
+Podstawiając funkcję
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-86}
+  y( x ) = ( x + C )^{ 2 },
+\end{equation}
+do równania
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-87}
+  y'( x ) = 2 \sqrt{ y( x ) },
+\end{equation}
+dostajemy
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-88}
+  2 ( x + C ) = \absOne{ x + C }.
+\end{equation}
+Widzimy więc, że~funkcja \eqref{eq:Matwiejew-Metody-calkowania-ETC-86}
+jest rozwiązaniem równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-87}
+tylko wtedy, gdy~$x \geq -C$.
+
+{\Large Od strony 32 należy zacząć ponowne czytanie książki.}
+
+
+
 
 
 
@@ -1748,7 +1857,12 @@ punkcie tego przedziału. \\
 \StrWierszD{26}{9} \\
 \Jest  w~pobliżu punktu $x = x_{ 0 }$ \\
 \Powin dla każdego $| x - x_{ 0 } | \leq h$, $h > 0$ \\
-
+\StrWierszG{30}{5} \\
+\Jest  \textit{w \hspace{0.5em} postaci \hspace{0.5em} parametrycznej} \\
+\Powin \textit{w~postaci parametrycznej} \\
+\StrWierszD{32}{13} \\
+\Jest  nie jedna \\
+\Powin więcej niż jedna \\
 
 % ############################
 
