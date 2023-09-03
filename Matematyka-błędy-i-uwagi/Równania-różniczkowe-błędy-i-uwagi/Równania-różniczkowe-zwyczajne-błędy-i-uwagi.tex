@@ -329,10 +329,22 @@ $\absOne{ x - x_{ 0 } } \leq h_{ 1 }$. \\
 
 
 % ##################
-\CenterBoldFont{Uwagi}
+\CenterBoldFont{Uwagi odnośnie oznaczeń}
 
 \vspace{0em}
 
+
+\noindent
+Dziedzinę funkcji $f$ będziemy oznaczać symbolem $\Dcal( f )$.
+
+\VerSpaceFour
+
+
+
+
+
+% ##################
+\CenterBoldFont{Uwagi}
 
 \noindent
 Książka ta podąża za zwyczajem, że~jeśli argumenty danej funkcji są
@@ -454,26 +466,36 @@ pochodnej w~punkcie $x \in A$ miało sens. Wbrew pozorom podanie klasy zbiorów
 o~tej własności nie jest takie proste. Czy przykładowo funkcja
 $f : \Qbb \to \Qbb$ dana zależnością
 \begin{equation}
-  % \label{eq:Matwiejew-Metody-calkowania-ETC-03}
   \label{eq:Matwiejew-Metody-calkowania-ETC-08}
   f( x ) = x^{ 2 },
 \end{equation}
 jest różniczkowalna?
 
 Pomimo problemów z~określeniem klasy tych zbiorów, w~większości przypadków
-przyjmuje~się, że~zbiór $A$ jest odcinkiem otwartym $( a, b )$, gdzie
-dopuszczamy sytuację, że $a$ i~$b$ mogą przyjmować wartość $\pm \infty$. Jak
-zauważono na~stronie~14 omawianej książki, nie nastręcza również problemu
-określenie funkcji~$y$ na odcinkach domkniętych z~jednej, bądź obu stron.
-W~przypadku odcinka $[ a, b )$ przez pochodną w~punkcie~$a$ rozumiemy
-pochodną prawostronną funkcji $y$ i~analogicznie postępuję w~przypadku
-odcinka $( a, b ]$. Przy czym jeśli dany jest odcinek prawostronnie
-domknięty $( a, b ]$ to musi zachodzić $-\infty < b < +\infty$, natomiast $a$ może
-przyjąć wartość $-\infty$. Analogicznie zasady stosują~się do pozostały pozostał
-przypadków odcinków jednostronnie, bądź obustronnie domkniętych.
-Do~problemu kształtu dziedziny powrócimy niedługo.
+przyjmujemy, że~$A_{ 1 } = ( a, b )$, gdzie dopuszczamy sytuację, że $a$
+i~$b$ mogą przyjmować wartość $\pm \infty$. Jak pokazuje teoria różniczkowania
+funkcji jednej zmiennej rzeczywistej, jest to po wieloma względami
+najbardziej naturalny wybór, co motywuje szukanie funkcji określonych
+właśnie na dziedzinie tej postaci. Jak zauważono na~stronie~14 omawianej
+książki, nie nastręcza również problemu określenie funkcji~$y$ na odcinkach
+domkniętych z~jednej, bądź obu stron. W~przypadku odcinka $[ a, b )$ przez
+pochodną w~punkcie~$a$ rozumiemy pochodną prawostronną funkcji $y$
+i~analogicznie
+postępuję w~przypadku odcinka $( a, b ]$. Przy czym jeśli dany jest odcinek
+prawostronnie domknięty $( a, b ]$ to musi zachodzić $-\infty < b < +\infty$,
+natomiast $a$ może przyjąć wartość $-\infty$. Analogicznie zasady stosują~się do
+pozostałych przypadków odcinków jednostronnie, bądź obustronnie
+domkniętych. Do~problemu kształtu dziedziny powrócimy niedługo.
 
-Niech teraz $O$ będzie otwartym podzbiorem $\Rbb^{ n + 2 }$, przy czym
+Podamy teraz pewien zestaw definicji określający czym jest równanie
+różniczkowe zwyczajne. Przy ich formułowaniu kierowaliśmy~się głównie
+matematyczną naturalnością, na plan drugi odkładając ogólność i~praktyczność
+takich definicji. Nie mamy jednak zamiaru ignorować kwestii ogólności
+i~praktyczności danych definicji, będziemy po prostu wracać do~nich
+za każdym razem, gdy konkretne przykłady równań różniczkowych dostarczą nam
+ku temu powodów.
+
+Niech teraz~$O$ będzie otwartym podzbiorem $\Rbb^{ n + 2 }$, przy czym
 elementy $\Rbb^{ n + 2 }$ będziemy oznaczać przez
 $( x_{ 0 }, x_{ 1 }, \ldots, x_{ n - 1 }, x_{ n }, x_{ n + 1 } )$
 lub $x_{ 1 }, x_{ 2 }, \ldots, x_{ n + 1 }, x_{ n + 2 }$. Niech dana będzie funkcja
@@ -492,7 +514,8 @@ $x_{ 1 }, x_{ 2 }, \ldots, x_{ n }, x_{ n + 1 }$,
 że~$( x, x_{ 1 }, x_{ 2 }, \ldots, x_{ n }, x_{ n + 1 } ) \in O$. Zbiór ten
 będziemy również oznaczać przez $\proj_{ 0 } O$.
 
-\textbf{Równaniem różniczkowym zwyczajnym rzędu~$n$} nazywamy wyrażenie
+\textbf{Równaniem różniczkowym zwyczajnym rzędu~$n$ w~postaci ogólnej}
+nazywamy wyrażenie
 \begin{equation}
   \label{eq:Matwiejew-Metody-calkowania-ETC-10}
   F\left( x, y( x ), y'( x ), y''( x ), \ldots, y^{ ( n ) }( x ) \right) = 0.
@@ -508,16 +531,152 @@ i~dla której zachodzi
   \forall x \in A_{ 1 }.
 \end{equation}
 
-Potrzebujemy teraz powrócić do problemu określenia dziedziny $A_{ 1 }$
-funkcji $y$. Jak powiedzieliśmy wcześniej, standardowo przyjmuje~się,
-że~$A_{ 1 } = ( a, b )$. Zazwyczaj żąda~się dodatkowo, by $A_{ 1 }$ był
-największym odcinkiem otwarty zawartym w~zbiorze $A_{ 0 }$, w~którym
-jesteśmy w~stanie zdefiniować rozwiązanie równania
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-10}. Co jednak zrobić w~przypadku
+Należy zaznaczyć, że~stosunkowo rzadko będziemy stosować zwroty takie jak
+„Dane jest funkcja $F( x_{ 0 }, x_{ 1 }, \ldots, x_{ n + 1 } )$, która określa
+równanie różniczkowe
+$F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big) = 0$.”. Zwykle będziemy
+stosować skrót myślowy „Dana jest funkcja
+$F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big)$ określając równanie
+różniczkowe.” lub po prostu „Dane jest równanie różniczkowe
+$F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big) = 0$.”. Pozwala
+to uczynić tekst bardziej zwięzły, a~odczytanie odpowiedniej funkcji~$F$
+z~postaci równania różniczkowego zwykle nie nastręcza żadnych problemów.
+Analogicznie będziemy raczej mówić „Funkcja
+$F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big)$ zależy w~sposób
+istotny od $y^{ ( n ) }( x )$.”, niż~„Funkcja
+$F( x_{ 0 }, x_{ 1 }, x_{ 2 }, \ldots, x_{ n + 1 } )$ zależy w~sposób istotny
+od~$x_{ n + 1 }$.”.
+
+W~teorii równań różniczkowych często spotykamy~się z~sytuacją, że~dane jest
+wyrażenie postaci $F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big)$,
+ale~jego dziedzina nie została w~sposób jawny podana. Jeśli chodzi o~zbiór
+wartości jakie może przyjmować $F$, to jak już zostało wspomniane wyżej,
+jeśli nie jest powiedziane inaczej, to w~tej książce jest nim $\Rbb$,
+ewentualnie jakiś jego podzbiór, więc ustalenie go nie stanowi prawdziwego
+problemu. Jeśli chodzi o~ustalenie dziedziny~$F$ to domyślnie będziemy za
+nią wybierać największy zbiór otwarty, na którym to wyrażenie jest
+określone. Często jednak będziemy potrzebowali rozpatrywać dziedzinę, która
+nie jest zbiorem otwartym. Wówczas naszym pierwszym wyborem będzie
+maksymalny zbiór na którym możemy określić~$F$, niezależnie czy jest on
+otwarty, czy nie. Po ustaleniu dziedziny i~zbioru wartości, wyrażenie $F$
+staje~się dobrze określoną funkcją. Do zagadnienia ustalania dziedziny
+będziemy musieli powrócić w~przyszłości.
+
+Dane równanie różniczkowe nazywamy \textbf{równaniem różniczkowym
+  zwyczajnym rzędu~$n$ w~postaci normalnej} (zob. str.~13 omawianej
+książki), jeśli przyjmuje ono postać
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-12}
+  y^{ ( n ) }( x ) = f\big( x, y( x ), y'( x ), \ldots, y^{ ( n - 1 ) }( x ) \big),
+\end{equation}
+gdzie $f : O \to \Rbb$ jest funkcją określoną na zbiorze otwartym
+$O \subset \Rbb^{ n }$. Równanie różniczkowe zwyczajne w~postaci normalnej jest
+szczególnym przypadkiem równania różniczkowego zwyczajnego w~postaci
+ogólnej. Jest ono bowiem równoważne równaniu
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-10}, gdzie za~funkcję~$F$
+przyjmujemy
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-13}
+  F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big) =
+  f\big( x, y( x ), y'( x ), \ldots, y^{ ( n - 1 ) }( x ) \big) -
+  y^{ ( n - 1 ) }( x ),
+\end{equation}
+przy czym zgodnie z~podanymi wcześniej zasadami przyjmujemy, że~dziedzina
+powyższej funkcji jest równa~$\Rbb \times O$. Ponieważ równanie
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-12} jest szczególnym przypadkiem
+równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-11}, do~funkcji~$f$
+będziemy stosować te~same zasady co~do funkcji~$F$, chyba że~powiedziano
+inaczej. Do~problemu określenia dziedziny funkcji $F$ i~$f$ powrócimy
+w~dalszym ciągu notatek, teraz zaś poprzestaniemy na~zauważeniu,
+że~funkcja~$F$ podana wyżej w~oczywisty sposób zależy istotnie
+od~$y^{ ( n ) }( x )$.
+
+Pierwszy raz z~konkretnym równaniem różniczkowym stykamy~się na stronie~8.
+Równanie o~którym mowa jest postaci
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-14}
+  y'( x ) - 2 x = 0.
+\end{equation}
+Z~równania tego w~prosty sposób odczytujemy funkcję $F$:
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-15}
+  F( x_{ 0 }, x_{ 1 }, x_{ 2 } ) = x_{ 2 } - 2 x_{ 0 }.
+\end{equation}
+Stosując podane wcześniej zasady przyjmujemy $\Dcal( F ) = \Rbb^{ 3 }$.
+Jednocześnie równanie \eqref{eq:Matwiejew-Metody-calkowania-ETC-14} zapisane
+jako
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-16}
+  y'( x ) = 2 x,
+\end{equation}
+jest przykładem równania pierwszego rzędu w~postaci normalnej. W~prosty
+sposób odczytujemy z~niego, że~$f( x_{ 0 }, x_{ 1 } ) = 2 x_{ 0 }$. Stosują
+te same reguły co poprzednio, przyjmujemy jego dziedzinę jako równą
+$\Rbb^{ 2 }$.
+
+Tutaj należy zwrócić uwagę na pewną matematyczną subtelność. Jeśli
+rozważane równanie różniczkowe jest pierwotnie wyrażone w~formie ogólnej
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-17}
+  F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big) = 0,
+\end{equation}
+i~odwikłamy je do postaci normalnej
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-18}
+  y^{ ( n ) }( x ) = f\big( x, y( x ), y'( x ), \ldots, y^{ ( n - 1 ) }( x ) \big),
+\end{equation}
+to ostatni wzór może nie obejmować wszystkich przypadków, dla~których
+równanie ma~sens \eqref{eq:Matwiejew-Metody-calkowania-ETC-17}. Ponieważ
+dziedzina~$F$ jest podzbiorem $\Rbb^{ n + 2 }$, a~$f$ podzbiorem
+$\Rbb^{ n + 1 }$, wysłowienie co dokładnie oznacza, że~równanie
+\eqref{eq:Matwiejew-Metody-calkowania-ETC-18}
+jest ogólniejsze od równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-17}
+może być dość zawiłe, zamiast tego odwołamy~się więc do~przykładu.
+
+Rozpatrzmy równanie w~postaci ogólnej
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-19}
+  y( x ) \frac{ d y( x ) }{ d x } - x = 0.
+\end{equation}
+Odczytujemy z~niego funkcję
+$F( x_{ 0 }, x_{ 1 }, x_{ 2 } ) = x_{ 2 } x_{ 1 } - x_{ 0 }$, której dziedzina
+jest równa $\Rbb^{ 3 }$. Po przekształceniu do postaci normalnej dostajemy
+równanie
+\begin{equation}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-20}
+  \frac{ d y( x ) }{ d x } = \frac{ x }{ y( x ) }.
+\end{equation}
+Funkcja $f( x_{ 0 }, x_{ 1 } ) = x_{ 0 } / x_{ 1 }$ ma dziedzinę
+$\Rbb \times ( \Rbb \setminus \{ 0 \} )$. Podstawiając $y( x ) = 0$
+do~\eqref{eq:Matwiejew-Metody-calkowania-ETC-19} od razu sprawdzamy,
+że~funkcja ta nie jest rozwiązaniem tego równania, podczas gdy podstawienie
+tej funkcji do \eqref{eq:Matwiejew-Metody-calkowania-ETC-20} prowadzi do
+wyrażenie pozbawionego sensu\footnote{Matwiejew podaje, że~w~takiej
+  sytuacji należy rozpatrzyć równanie na funkcję $x( y )$, nie ma to
+  jednak znaczenie w~obecnym kontekście.}.
+
+Przejdziemy teraz do problemu określenia dziedziny $A_{ 1 }$
+funkcji $y : A_{ 1 } \to \Rbb$. Jak wspomniano wcześniej, najbardziej
+naturalnym wyborem jest przyjęcie, że~$A_{ 1 } = ( a, b )$ i~domyślnie
+będziemy szukać funkcji określonych na zbiorach właśnie tej postaci. Zwykle
+też żądamy, by~$A_{ 1 }$ był największym odcinkiem otwarty zawartym
+w~zbiorze $A_{ 0 }$, w~którego każdym punkcie jesteśmy w~stanie określić
+rozwiązanie równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-10}.
+
+Dalszy ciąg niniejszym rozważań na temat tego czym jest równanie
+różniczkowe zwyczajne i~jego rozwiązanie, będzie dotyczył przypadków, gdy
+podane wcześniej definicji okazują~się zbyt wąskie w~stosunku do wymagań
+teorii. Nie będziemy przy tym unikać stosowania pojęć wprowadzony dalej
+w~książce, gdyż mają one duże znaczenie dla właściwego zrozumienia czym są
+równania różniczkowe. Ta część tekstu cały czas jest rozwijana, więc nie
+należy traktować jego obecnej formy, jako zakończonej i~ostatecznej.
+
+
+jednak zrobić w~przypadku
 równań takich jak równanie $y'( x ) = y( x )^{ 2 }$ omawiane na stronie~15,
 które posiada rozwiązanie postaci
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-12}
+  \label{eq:Matwiejew-Metody-calkowania-ETC-12-111}
   y( x ) = \frac{ 1 }{ 1 - x }.
 \end{equation}
 Funkcja ta jest określona na zbiorze $( -\infty, 1 ) \cup ( 1, +\infty )$ i~nie możemy
@@ -532,101 +691,6 @@ równoważne stwierdzeniu $A_{ 1 } = A_{ 0 }$, co~wyklucza wszelkie
 niejednoznaczności w~sposobie określenia dziedziny rozwiązania.
 Niewątpliwie, ze względu na swoją prostotę interpretacyjną, optymalną
 sytuacją jest $A_{ 1 } = A_{ 0 } = \Rbb$.
-
-\VerSpaceFour
-
-
-
-
-
-\noindent
-\Str{8} Na tej stronie napotykamy po raz pierwszy konkretne równanie
-różniczkowe
-\begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-13}
-  y'( x ) - 2 x = 0.
-\end{equation}
-Z~równania tego w~prosty sposób odczytujemy funkcję $F$:
-\begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-14}
-  F( x_{ 0 }, x_{ 1 }, x_{ 2 } ) = x_{ 2 } - 2 x_{ 0 }.
-\end{equation}
-Stajemy tu jednak przed problemem, jaka jest dziedzina funkcji~$F$?
-W~dalszym ciągu jeśli nie powiedziano inaczej, za dziedzinę funkcji $F$
-definiującej równanie różniczkowe będziemy uważać największy zbiór na~którym
-jesteśmy w~stanie ją określić. Ponieważ zgodnie z~tym co powiedziano
-wcześniej, dziedzina funkcji $F$ jest podzbiorem $\Rbb^{ n + 2 }$, w~naszym
-wypadku $n = 1$, więc dla funkcji danej przez
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-12} jest ona równa $\Rbb^{ 3 }$.
-Łatwo~się też przekonać, że~rozwiązaniem równania
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-13} jest funkcja
-$y( x ) = x^{ 2 } + C$, której dziedzina to $\Rbb$.
-
-Jednocześnie równanie \eqref{eq:Matwiejew-Metody-calkowania-ETC-08} zapisane
-jako
-\begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-15}
-  y'( x ) = 2 x,
-\end{equation}
-jest przykładem równania pierwszego rzędu w~postaci normalnej (zob. str.~13
-omawianej książki). Ogólna forma równania w~postaci normalnej to
-\begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-16}
-  y^{ ( n ) }( x ) = f\big( x, y( x ), y'( x ), \ldots, y^{ ( n - 1 ) }( x ) \big).
-\end{equation}
-W~sposób elementarny przekształcamy je do równania w~postaci ogólnej
-\begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-17}
-  F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big) =
-  f\big( x, y( x ), y'( x ), \ldots, y^{ ( n - 1 ) }( x ) \big) -
-  y^{ ( n - 1 ) }( x ).
-\end{equation}
-Z~tego powodu, jeśli równanie różniczkowe jest nam dane pierwotnie nie
-w~postaci ogólnej, lecz normalnej, to przy analizie problemu dziedziny jego
-rozwiązań możemy stosować dokładnie te same zasady, co dla równania
-w~postaci ogólnej.
-
-Jeśli chodzi o~ustalenie dziedziny funkcji $f$ stosować będziemy te same
-zasady co dla funkcji $F$. Należy jednak pamiętać, że~jeśli równanie jest
-pierwotnie wyrażone w~formie ogólnej
-\begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-18}
-  F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big) = 0,
-\end{equation}
-to jego postać normalna
-\begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-19}
-  y^{ ( n ) }( x ) = f\big( x, y( x ), y'( x ), \ldots, y^{ ( n - 1 ) }( x ) \big),
-\end{equation}
-może nie obejmować wszystkich przypadków, dla których ma sens równanie
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-18}. Ponieważ dziedzina $F$ jest
-podzbiorem $\Rbb^{ n + 2 }$, a~$f$ podzbiorem $\Rbb^{ n + 1 }$, wysłowienie
-co dokładnie oznacza, że~równanie
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-18}
-jest ogólniejsze od równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-14}
-może być dość zawiłe, zamiast tego odwołamy~się do przykładu.
-
-Rozpatrzmy równanie w~postaci ogólnej
-\begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-20}
-  y( x ) \frac{ d y( x ) }{ d x } - x = 0.
-\end{equation}
-Odczytujemy z~niego funkcję
-$F( x_{ 0 }, x_{ 1 }, x_{ 2 } ) = x_{ 2 } x_{ 1 } - x_{ 0 }$, której dziedzina
-jest równa $\Rbb^{ 3 }$. Po przekształceniu do postaci normalnej dostajemy
-równanie
-\begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-21}
-  \frac{ d y( x ) }{ d x } = \frac{ x }{ y( x ) }.
-\end{equation}
-Funkcja $f( x_{ 0 }, x_{ 1 } ) = x_{ 0 } / x_{ 1 }$ ma dziedzinę
-$\Rbb \times ( \Rbb \setminus \{ 0 \} )$. Podstawiając $y( x ) = 0$
-do~\eqref{eq:Matwiejew-Metody-calkowania-ETC-13} od razu sprawdzamy,
-że~funkcja ta nie jest rozwiązaniem tego równania, podczas gdy podstawienie
-tej funkcji do \eqref{eq:Matwiejew-Metody-calkowania-ETC-21} prowadzi do
-wyrażenie pozbawionego sensu\footnote{W~książce są podane sposoby radzenia
-  sobie z~tego typu problemami, nie jest to jednak ważne w~obecnych
-  rozważaniach.}.
 
 \VerSpaceFour
 
