@@ -1,0 +1,285 @@
+% Autor: Kamil Ziemian
+
+% --------------------------------------------------------------------
+% Podstawowe ustawienia i pakiety
+% --------------------------------------------------------------------
+\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
+% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+\documentclass[a4paper,11pt]{article}
+% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
+\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
+% w języku angielskim.
+\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
+% do polskich znaków.
+\usepackage{lmodern} % Wprowadza fonty Latin Modern.
+\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+
+
+
+% ----------------------------
+% Podstawowe pakiety (niezwiązane z ustawieniami języka)
+% ----------------------------
+\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
+\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
+% grafiki.
+\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
+\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
+% wprowadzane bezpośrednio w tekście.
+\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
+% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
+% ----------------------------
+% MARGINS
+% ----------------------------
+\setmarginsrb
+{ 0.7in} % left margin
+{ 0.6in} % top margin
+{ 0.7in} % right margin
+{ 0.8in} % bottom margin
+{  20pt} % head height
+{0.25in} % head sep
+{   9pt} % foot height
+{ 0.3in} % foot sep
+
+
+
+% ------------------------------
+% Często przydatne pakiety
+% ------------------------------
+% \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
+\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
+% więcej, ale ja nie potrafię nic o tym powiedzieć).
+
+
+
+% ------------------------------
+% Pakiety do tekstów z nauk przyrodniczych
+% ------------------------------
+\let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
+% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
+% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
+\usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
+% Mathematical Society (w skrócie AMS)
+\usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
+% \usepackage{siunitx} % Do prostszego pisania jednostek fizycznych
+% \usepackage{upgreek} % Ładniejsze greckie litery
+% Przykładowa składnia: pi = \uppi
+\usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
+\usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
+% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
+% nie wiem.
+
+
+
+% ----------
+% Tworzenie otoczeń "Twierdzenie", "Definicja", "Lemat", etc.
+% ----------
+\newtheorem{twr}{Twierdzenie} % Komenda wprowadzająca otoczenie
+% ,,twr'' do pisania twierdzeń matematycznych
+\newtheorem{defin}{Definicja} % Analogicznie jak powyżej
+\newtheorem{wni}{Wniosek}
+
+
+
+% ----------------------------
+% Pakiety napisane przez użytkownika.
+% Mają być w tym samym katalogu to ten plik .tex
+% ----------------------------
+\usepackage{rownaniarozniczkowe} % Pakiet napisany między innymi
+% dla tego pliku.
+\usepackage{latexshortcuts}
+\usepackage{mathshortcuts}
+
+
+
+
+% --------------------------------------------------------------------
+% Dodatkowe ustawienia dla języka polskiego
+% --------------------------------------------------------------------
+\renewcommand{\thesection}{\arabic{section}.}
+% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
+\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
+% Brak kropki po numerach podrozdziału
+
+
+
+% ----------------------------
+% Ustawienia różnych parametrów tekstu
+% ----------------------------
+\renewcommand{\arraystretch}{1.2} % Ustawienie szerokości odstępów między
+% wierszami w tabelach.
+
+
+
+% ----------------------------
+% Pakiet "hyperref"
+% Polecano by umieszczać go na końcu preambuły.
+% ----------------------------
+\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
+% do bibliografii na hiperlinki.
+
+
+
+
+
+% --------------------------------------------------------------------
+% Tytuł, autor, data
+\title{Równania różniczkowe zwyczajne --~błędy i~uwagi}
+
+% \author{}
+% \date{}
+% --------------------------------------------------------------------
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+% ####################
+\Work{ % Autor i tytuł dzieła
+  Władimir Igoriewicz Arnold \\
+  ,,Równania różniczkowe zwyczajne'', \cite{} }
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    11  & 17 & & mechanice klasycznej & mechanice kwantowej \\
+    15  & & 16 & rozdziale 6 & rozdziale 5 \\
+    28  & 15 & & wzór (8) & wzór \\
+    34  &  9 & & $\dot{ x }_{ 1 } = x_{ 2 }$ & $\dot{ x }_{ 1 } = x_{ 1 }$ \\
+    47  & & 12 & $x_{ i } = \varphi_{ i }( x_{ 1 }, \ldots, x_{ n } )$
+           & $x_{ i } = \varphi_{ i }( y_{ 1 }, \ldots, y_{ n } )$ \\
+    53  & & 14 & obrót & obrót krzywych całkowych \\
+    56  & 12 & & osobliwym & nieosobliwym \\
+    61  &  7 & & $\xbf$, $\boldsymbol{\alpha}_{ 0 }$
+           & $\xbf$, $\boldsymbol{\alpha}$ \\
+    64  & & 11 & $\gbf( t_{ 2 }, t_{ 1 }, \xbf )
+                = \gbf^{ t_{ 2 } }_{ t_{ 1 } }( \xbf, t_{ 1 } )$
+           & $\gbf^{ t_{ 2 } }_{ t_{ 1 } }( \xbf, t_{ 1 } )
+             = \gbf( t_{ 2 }, t_{ 1 }, \xbf )$ \\
+    64  & & 10 & $( \vpb( t ), t )$ & $( t, \vpb( t ) )$ \\
+    66  & 17 & & $\vbf( t, \xbf, \dot{ \alb } )$
+           & $\vbf( t, \xbf, \alb )$ \\
+    70  & & 13 & $\pdot_{ i } = \pd{ }{ H }{ q_{ i } }$
+           & $\pdot_{ i } = -\pd{ }{ H }{ q_{ i } }$ \\
+    71  & & 15 & $\frac{ \partial \vbf_{ 0 } }{ \xbf }$
+           & $\pd{}{ \vbf_{ 0 } }{ \xbf }$ \\
+    72  &  4 & & ,,niezaburzonego'' & ,,zaburzonego'' \\
+    73  &  5 & & $\xbf( 0$ & $\xbf( 0 )$ \\
+    90  & &  3 & \emph{wraz z pochodną dla} $x = 0$ & \emph{dla} $x = 0$ \\
+    92  &  3 & & $U( x( O ) )$ & $U( x( 0 ) )$ \\
+    123 &  6 & & $^{ \R }A : \C^{ m } \to { }^{ \R }\C^{ n }$
+           & ${ }^{ \R }A : { }^{ \R }\C^{ m } \to { }^{ \R }\C^{ n }$ \\
+    125 &  5 & & $\mathbf{I}$ & $I$ \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+\noi
+\StrWd{66}{7} \\
+\Jest \emph{tyłu do~brzegu} \\
+\Pow  \emph{tyłu nieograniczenie albo~do~brzegu} \\
+\StrWg{110}{9} \\
+\Jest sumą częściową szeregu --~iloczynu \\
+\Pow  jest sumą części wyrazów iloczynu \\
+
+
+
+
+
+% ####################
+\Work{
+  N. M. Matwiejew \\
+  ,,Metody całkowania równana różniczkowych zwyczajnych'',
+  \cite{MatwiejewMetodyCalkowaniaRownanRozniczkowychZwyczajnych82} }
+
+
+\CenterTB{Uwagi}
+
+\start \Str{15} Równanie (10) zostało bardzo elegancko wyprowadzone,
+przy założeniu, że~funkcja uwikłana dana równaniem (9) spełnia
+równanie różniczkowe (1), nie odpowiada to jednak na pytanie czy jeśli
+funkcja $y( x )$ spełnia równanie (10), to spełnia też interesujące
+nas równanie wyjściowe. Dowód tego twierdzenia jest następujący.
+Załóżmy, że $\Phi_{ y }' \neq 0$, tak by było zapewnione istnienie
+funkcji uwikłanej. Jeżeli teraz spełnione jest równanie (10), to można
+je przekształcić do postaci:
+\begin{equation}
+  -\fr{ \Phi_{ x }' }{ \Phi_{ y }' } = f( x, y ).
+\end{equation}
+Lewa strona tej równości jest równa pochodnej funkcji uwikłanej
+$y( x )$, określonej wzorem (9). \\
+\start \Str{16} \Dok \\
+\start \Str{31} \Dok
+
+
+\CenterTB{Błędy}
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    5   & &  9 & Dodzimy & Dowodzimy \\
+    5   & &  8 & potkowych & początkowych \\
+    5   & &  7 & poąątkowych & początkowych \\
+    10  & & 19 & damy & mamy \\
+    15  & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+\noi \\
+\StrWg{15}{13}
+\Jest w~sensie ustępu \\
+\Pow w~sensie zdefiniowanym w~ustępie \\
+\StrWd{20}{2} \\
+\Jest i~nie ma rozwiązania określonego w~tym samym przedziale
+nie~identycznego z~rozwiązaniem $y = y( x )$ chociażby w~jednym
+punkcie przedziału $\abso{ x - x_{ 0 } } \leq h$ różnym
+od~punktu $x = x_{ 0 }$. \\
+\Pow i~nie istnieje inne rozwiązanie określone w~przedziale
+$\abso{ x - x_{ 0 } } \leq h_{ 1 } \leq h$ które nie byłoby równe
+rozwiązaniu $y = y( x )$ w~każdym punkcie przedziału
+$\abso{ x - x_{ 0 } } \leq h_{ 1 }$. \\
+
+\vspace{\spaceTwo}
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+\bibliographystyle{plalpha} \bibliography{LibMathInfo}{}
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
