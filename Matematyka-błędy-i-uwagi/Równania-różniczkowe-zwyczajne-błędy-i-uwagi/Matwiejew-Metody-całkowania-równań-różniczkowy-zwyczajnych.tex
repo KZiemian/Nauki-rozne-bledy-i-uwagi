@@ -297,9 +297,11 @@ w~badaniu równań różniczkowych zwyczajnych, samo pojęcie tego równanie jes
 na poziomie nieformalnym, intuicyjny proste do uchwycenia.
 Jednak podanie sformalizowanej definicji, która była wystarczająco pojemna,
 by objąć wszystkie przypadki równań, które z~dobrego powodu chcemy
-sklasyfikować jak równania różniczkowe zwyczajne, jest zadaniem dość trudnym.
-Te i~inne tego typu uwagi często można odnieść bez wielkich zmian do
-rozwiązania równania różniczkowego zwyczajnego. W~dalszym ciągu tekstu zwykle
+sklasyfikować jak równania różniczkowe zwyczajne, jest zadaniem dość
+trudnym. Te i~inne tego typu uwagi często można odnieść bez wielkich zmian
+do
+rozwiązania równania różniczkowego zwyczajnego. W~dalszym ciągu tekstu
+zwykle
 nie będziemy tego zaznaczyć, by uniknąć niepotrzebnych powtórzeń.
 
 Ponadto jak każdy taki ważny problem w~matematyce, podaną definicję
@@ -328,6 +330,53 @@ Tekst ten cały czas ewoluuje i~Czytelnik powinien mieć tego świadomość.
 W~szczególności, wraz z~postępami w~lekturze książki i~napotykaniem nowych
 równań które teoria musi uwzględnić, odpowiednie komentarze będą dodawane,
 co~może prowadzić również do~zmiany podanych definicji.
+
+Zdefiniowanie równania różniczkowego zwyczajnego wymaga od nas wprowadzenia
+pewnej ilość wstępnych definicji i~oznaczeń. Niech teraz~$O$ będzie
+otwartym podzbiorem $\Rbb^{ n + 2 }$, przy czym
+elementy $\Rbb^{ n + 2 }$ będziemy oznaczać przez
+$( x_{ 0 }, x_{ 1 }, \ldots, x_{ n - 1 }, x_{ n }, x_{ n + 1 } )$
+lub $x_{ 1 }, x_{ 2 }, \ldots, x_{ n + 1 }, x_{ n + 2 }$. Niech dana będzie funkcja
+$F : O \to R$. Przyjmujemy, że~\textbf{zależy ona w~sposób istotny
+  od~zmiennej $x_{ n }$} (w~książce używa~się terminu „jawny”), przez co
+rozumiemy następującą własność. Istnieją takie liczby
+$x_{ 0 }, x_{ 1 }, \ldots, x_{ n }, x_{ n + 1 }, x_{ n + 1 }'$, że~zachodzi
+\begin{equation}
+  \label{eq:Czym-jest-rownanie-ETC-03}
+  F( x_{ 0 }, x_{ 1 }, \ldots, x_{ n }, x_{ n + 1 } ) \neq
+  F( x_{ 0 }, x_{ 1 }, \ldots, x_{ n }, x_{ n + 1 }' ).
+\end{equation}
+Niech teraz $A_{ 0 }$ będzie rzutem zbioru $O$ na oś $x_{ 0 }$, czyli zbiorem
+takim że~jeśli $x \in A_{ 0 }$ to istnieją takie liczby
+$x_{ 1 }, x_{ 2 }, \ldots, x_{ n }, x_{ n + 1 }$,
+że~$( x, x_{ 1 }, x_{ 2 }, \ldots, x_{ n }, x_{ n + 1 } ) \in O$. Zbiór ten
+będziemy również oznaczać przez $\proj_{ 0 } O$.
+
+\textbf{Równaniem różniczkowym zwyczajnym rzędu~$n$ w~postaci ogólnej}
+nazywamy wyrażenie
+\begin{equation}
+  \label{eq:Czym-jest-rownanie-ETC-04}
+  F\left( x, y( x ), y'( x ), y''( x ), \ldots, y^{ ( n ) }( x ) \right) = 0.
+\end{equation}
+\textbf{Rozwiązaniem równania \eqref{eq:Czym-jest-rownanie-ETC-04}}
+nazywamy funkcję $y_{ 1 } : A_{ 1 } \to \Rbb$, gdzie $A_{ 1 } \subset A_{ 0 }$, która
+posiada pochodne do rzędu $n$ włącznie w~każdym punkcie swojej dziedziny
+i~dla której zachodzi
+\begin{equation}
+  \label{eq:Czym-jest-rownanie-ETC-05}
+  F\left( x, y_{ 1 }( x ), y_{ 1 }'( x ), \ldots, y_{ 1 }^{ ( n ) }( x ) \right) =
+  0, \qquad
+  \forall x \in A_{ 1 }.
+\end{equation}
+Dane równanie różniczkowe nazywamy \textbf{równaniem różniczkowym
+  zwyczajnym rzędu~$n$ w~postaci normalnej} (zob. str.~13 omawianej
+książki), jeśli przyjmuje ono postać
+\begin{equation}
+  \label{eq:Czym-jest-rownanie-ETC-06}
+  y^{ ( n ) }( x ) = f\big( x, y( x ), y'( x ), \ldots, y^{ ( n - 1 ) }( x ) \big),
+\end{equation}
+gdzie $f : O \to \Rbb$ jest funkcją określoną na zbiorze otwartym
+$O \subset \Rbb^{ n }$.
 
 Najbardziej pierwotnym problemem teorii równań dowolnego typu, jest
 następujący. Mając dane równanie~$X$ znajdź jego rozwiązanie~$Y$. Z~tego
@@ -375,51 +424,23 @@ W~następnej kolejności będziemy szukali rozwiązań określonych na zbiorach
 postaci gdy $A = \bigcup_{ i = 1 }^{ n } ( a_{ i }, b_{ i } )$. Z~tych samych
 powodów co poprzednio dopuszczamy też sytuacje, gdy jeden bądź więcej
 przedziałów w~sumie mnogościowej jest jedno- bądź obustronnie domkniętych.
-Pierwszy raz równanie, które wymaga szukania rozwiązania o~takiej dziedzinie
-napotykamy na stronie 15. Podane tam równanie $y'( x ) = y( x )^{ 2 }$
+Pierwszy raz równanie, które wymaga szukania rozwiązania o~takiej
+dziedzinie, napotykamy na stronie 15. Podane tam równanie
+$y'( x ) = y( x )^{ 2 }$
 posiada bowiem rozwiązanie postaci
 \begin{equation}
   \label{eq:Czym-jest-rownanie-ETC-02}
   y( x ) = \frac{ 1 }{ 1 - x }, \quad
   x \in ( -\infty, 1 ) \cup ( 1, +\infty ).
 \end{equation}
+Niezależnie czy szukamy rozwiązania mającego za dziedzinę przedział otwarty
+$( a, b )$ (domknięty z~jednej, bądź obu stron) czy sumę odpowiednich
+przedziałów, to będziemy szukali największego, w~sensie zawierania~się
+zbiorów, na którym możemy określić rozwiązanie danego równania
+różniczkowego.
 
 Przejdziemy teraz do podania definicji równania różniczkowego zwyczajnego.
-Niech teraz~$O$ będzie otwartym podzbiorem $\Rbb^{ n + 2 }$, przy czym
-elementy $\Rbb^{ n + 2 }$ będziemy oznaczać przez
-$( x_{ 0 }, x_{ 1 }, \ldots, x_{ n - 1 }, x_{ n }, x_{ n + 1 } )$
-lub $x_{ 1 }, x_{ 2 }, \ldots, x_{ n + 1 }, x_{ n + 2 }$. Niech dana będzie funkcja
-$F : O \to R$. Przyjmujemy, że zależy ona w~sposób \textbf{istotny}
-(w~książce używa~się terminu „jawny”) od zmiennej $x_{ n }$, przez co
-rozumiemy następującą własność. Istnieją takie liczby
-$x_{ 0 }, x_{ 1 }, \ldots, x_{ n }, x_{ n + 1 }, x_{ n + 1 }'$, że~zachodzi
-\begin{equation}
-  \label{eq:Czym-jest-rownanie-ETC-03}
-  F( x_{ 0 }, x_{ 1 }, \ldots, x_{ n }, x_{ n + 1 } ) \neq
-  F( x_{ 0 }, x_{ 1 }, \ldots, x_{ n }, x_{ n + 1 }' ).
-\end{equation}
-Niech teraz $A_{ 0 }$ będzie rzutem zbioru $O$ na oś $x_{ 0 }$, czyli zbiorem
-takim że~jeśli $x \in A_{ 0 }$ to istnieją takie liczby
-$x_{ 1 }, x_{ 2 }, \ldots, x_{ n }, x_{ n + 1 }$,
-że~$( x, x_{ 1 }, x_{ 2 }, \ldots, x_{ n }, x_{ n + 1 } ) \in O$. Zbiór ten
-będziemy również oznaczać przez $\proj_{ 0 } O$.
 
-\textbf{Równaniem różniczkowym zwyczajnym rzędu~$n$ w~postaci ogólnej}
-nazywamy wyrażenie
-\begin{equation}
-  \label{eq:Czym-jest-rownanie-ETC-04}
-  F\left( x, y( x ), y'( x ), y''( x ), \ldots, y^{ ( n ) }( x ) \right) = 0.
-\end{equation}
-\textbf{Rozwiązaniem równania \eqref{eq:Czym-jest-rownanie-ETC-04}}
-nazywamy funkcję $y_{ 1 } : A_{ 1 } \to \Rbb$, gdzie $A_{ 1 } \subset A_{ 0 }$, która
-posiada pochodne do rzędu $n$ włącznie w~każdym punkcie swojej dziedziny
-i~dla której zachodzi
-\begin{equation}
-  \label{eq:Czym-jest-rownanie-ETC-05}
-  F\left( x, y_{ 1 }( x ), y_{ 1 }'( x ), \ldots, y_{ 1 }^{ ( n ) }( x ) \right) =
-  0, \qquad
-  \forall x \in A_{ 1 }.
-\end{equation}
 
 Należy zaznaczyć, że~stosunkowo rzadko będziemy stosować zwroty takie jak
 „Dane jest funkcja $F( x_{ 0 }, x_{ 1 }, \ldots, x_{ n + 1 } )$, która określa
@@ -452,15 +473,7 @@ otwarty, czy nie. Po ustaleniu dziedziny i~zbioru wartości, wyrażenie $F$
 staje~się dobrze określoną funkcją. Do zagadnienia ustalania dziedziny
 będziemy musieli powrócić w~przyszłości.
 
-Dane równanie różniczkowe nazywamy \textbf{równaniem różniczkowym
-  zwyczajnym rzędu~$n$ w~postaci normalnej} (zob. str.~13 omawianej
-książki), jeśli przyjmuje ono postać
-\begin{equation}
-  \label{eq:Czym-jest-rownanie-ETC-06}
-  y^{ ( n ) }( x ) = f\big( x, y( x ), y'( x ), \ldots, y^{ ( n - 1 ) }( x ) \big),
-\end{equation}
-gdzie $f : O \to \Rbb$ jest funkcją określoną na zbiorze otwartym
-$O \subset \Rbb^{ n }$. Równanie różniczkowe zwyczajne w~postaci normalnej jest
+Równanie różniczkowe zwyczajne w~postaci normalnej jest
 szczególnym przypadkiem równania różniczkowego zwyczajnego w~postaci
 ogólnej. Jest ono bowiem równoważne równaniu
 \eqref{eq:Czym-jest-rownanie-ETC-04}, gdzie za~funkcję~$F$
