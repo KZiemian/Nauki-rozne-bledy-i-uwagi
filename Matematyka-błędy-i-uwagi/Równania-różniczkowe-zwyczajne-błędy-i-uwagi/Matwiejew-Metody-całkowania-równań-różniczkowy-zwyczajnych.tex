@@ -322,9 +322,8 @@ koncepcyjną lub użytkową prostotą. Przez użytkową prostotę rozumiem to,
 że~jeśli dane równanie podpada pod tą definicję, to będą je
 cechować bardzo dobre własności z~punktu widzenia teorii lub praktyki
 rozwiązywania takich równań lub też nie będzie posiadać pewnych
-nieprzyjemnych
-właściwości, które mogą wystąpić w~ogólniejszym przypadku. Z~tych samych
-względów podamy definicję rozwiązania tego równania.
+nieprzyjemnych właściwości, które mogą wystąpić w~ogólniejszym przypadku.
+Z~tych samych względów podamy definicję rozwiązania tego równania.
 
 Tekst ten cały czas ewoluuje i~Czytelnik powinien mieć tego świadomość.
 W~szczególności, wraz z~postępami w~lekturze książki i~napotykaniem nowych
@@ -381,7 +380,8 @@ $O \subset \Rbb^{ n }$.
 Kilka uwag terminologicznych. Stosunkowo rzadko będziemy mówić
 „Dane jest funkcja $F( x_{ 0 }, x_{ 1 }, \ldots, x_{ n + 1 } )$, która
 określa równanie różniczkowe
-$F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big) = 0$.”. Zwykle stosować będziemy skrót myślowy „Dana jest funkcja
+$F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big) = 0$.”. Zwykle
+stosować będziemy skrót myślowy „Dana jest funkcja
 $F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big)$ określając równanie
 różniczkowe.” lub po prostu „Dane jest równanie różniczkowe
 $F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big) = 0$.”. Pozwala
@@ -429,13 +429,21 @@ nią wybierać największy zbiór otwarty~$O$, na którym to wyrażenie jest
 określone. Jeśli zajdzie będziemy potrzeba rozpatrywać dziedzinę, która
 nie jest zbiorem otwartym, wówczas naszym pierwszym wyborem będzie
 maksymalny zbiór na którym możemy określić~$F$, niezależnie czy jest on
-otwarty, czy nie. Po ustaleniu dziedziny i~zbioru wartości, wyrażenie~$F$
-staje~się dobrze określoną funkcją. Zasady te uzasadniają, czemu
+otwarty, czy nie. Zasady te uzasadniają, czemu
 za~dziedzinę funkcji $F$ z~równania \eqref{eq:Czym-jest-rownanie-ETC-06}
 przyjęliśmy $\Rbb \times O$. Do zagadnienia ustalania dziedziny funkcji
 definiujących równanie różniczkowe będziemy musieli powrócić w~przyszłości.
 
-Jeżeli mamy już daną funkcję $F$ z~określoną dziedziną i~przeciwdziedziną, która definiuje równanie różniczkowe
+Jeżeli zbiór ten nie jest otwarty, to otrzymane równanie
+nie będzie spełniało podanej wcześniej definicji równania różniczkowego
+zwyczajnego. Jest to jeden z~problemów, którego wciąż nie umiemy w~sposób
+satysfakcjonujący rozwiązać i~który będziemy szerzej dyskutować w~rozdziale
+\eqref{subsec:Definicja-rownania-rozniczkowego-ETC}. Niezależnie od tych
+problemów, po ustaleniu dziedziny i~zbioru wartości, wyrażenie~$F$
+staje~się dobrze określoną funkcją.
+
+Jeżeli mamy już daną funkcję $F$ z~określoną dziedziną i~przeciwdziedziną,
+która definiuje równanie różniczkowe
 \begin{equation}
   \label{eq:Czym-jest-rownanie-ETC-07}
   F\left( x, y( x ), y'( x ), y''( x ), \ldots, y^{ ( n ) }( x ) \right) = 0,
@@ -501,19 +509,19 @@ różniczkowego. Chyba, że~jawnie stwierdzono inaczej.
 Pierwszy raz z~konkretnym równaniem różniczkowym stykamy~się na stronie~8.
 Równanie o~którym mowa jest postaci
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-14}
+  \label{eq:Czym-jest-rownanie-ETC-10}
   y'( x ) - 2 x = 0.
 \end{equation}
 Z~równania tego w~prosty sposób odczytujemy funkcję $F$:
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-15}
+  \label{eq:Czym-jest-rownanie-ETC-11}
   F( x_{ 0 }, x_{ 1 }, x_{ 2 } ) = x_{ 2 } - 2 x_{ 0 }.
 \end{equation}
 Stosując podane wcześniej zasady przyjmujemy $\Dcal( F ) = \Rbb^{ 3 }$.
 Jednocześnie równanie \eqref{eq:Matwiejew-Metody-calkowania-ETC-14} zapisane
 jako
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-16}
+  \label{eq:Czym-jest-rownanie-ETC-12}
   y'( x ) = 2 x,
 \end{equation}
 jest przykładem równania pierwszego rzędu w~postaci normalnej. W~prosty
@@ -524,12 +532,12 @@ $\Rbb^{ 2 }$.
 Tutaj należy zwrócić uwagę na pewną matematyczną subtelność. Jeśli
 rozważane równanie różniczkowe jest pierwotnie wyrażone w~formie ogólnej
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-17}
+  \label{eq:Czym-jest-rownanie-ETC-13}
   F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big) = 0,
 \end{equation}
 i~odwikłamy je do postaci normalnej
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-18}
+  \label{eq:Czym-jest-rownanie-ETC-14}
   y^{ ( n ) }( x ) = f\big( x, y( x ), y'( x ), \ldots, y^{ ( n - 1 ) }( x ) \big),
 \end{equation}
 to ostatni wzór może nie obejmować wszystkich przypadków, dla~których
@@ -541,7 +549,7 @@ jest ogólniejsze od równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-17}
 może być dość zawiłe, zamiast tego odwołamy~się więc do~przykładu.
 Rozpatrzmy równanie w~postaci ogólnej
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-19}
+  \label{eq:Czym-jest-rownanie-ETC-15}
   y( x ) \frac{ d y( x ) }{ d x } - x = 0.
 \end{equation}
 Odczytujemy z~niego funkcję
@@ -549,7 +557,7 @@ $F( x_{ 0 }, x_{ 1 }, x_{ 2 } ) = x_{ 2 } x_{ 1 } - x_{ 0 }$, której dziedzina
 jest równa $\Rbb^{ 3 }$. Po przekształceniu do postaci normalnej dostajemy
 równanie
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-20}
+  \label{eq:Czym-jest-rownanie-ETC-16}
   \frac{ d y( x ) }{ d x } = \frac{ x }{ y( x ) }.
 \end{equation}
 Funkcja $f( x_{ 0 }, x_{ 1 } ) = x_{ 0 } / x_{ 1 }$ ma dziedzinę
@@ -568,6 +576,96 @@ teorii. Nie będziemy przy tym unikać stosowania pojęć wprowadzony dalej
 w~książce, gdyż mają one duże znaczenie dla właściwego zrozumienia czym są
 równania różniczkowe. Ta część tekstu cały czas jest rozwijana, więc nie
 należy traktować jego obecnej formy, jako zakończonej i~ostatecznej.
+
+
+
+
+
+
+
+
+
+
+% ############################
+\subsection{Definicja równania różniczkowego i~jej ograniczenia}
+
+\label{subsec:Definicja-rownania-rozniczkowego-ETC}
+% ############################
+
+
+
+W~tym ustępie zajmiemy~się problemami, gdy chcemy zastosować definicję
+równania różniczkowego zwyczajnego podaną w~poprzedniej części tekstu.
+Problem ten prawie zawsze pojawia~się, gdy dziedzina funkcji $F$ nie jest
+zbiorem otwartym, co jest jednym z~wymogów podanej tam definicji. Jeżeli
+równanie różniczkowe jest w~postaci normalnej
+\begin{equation}
+  \label{eq:Definicja-rownania-rozniczkowego-ETC-01}
+  y^{ ( n ) }( x ) = f\big( x, y( x ), y'( x ), \ldots, y^{ ( n - 1 ) }( x ) \big),
+\end{equation}
+to oznaczmy dziedzinę funkcji $f$ przez $O$. Jak było wyjaśnione wcześniej
+wówczas dziedzin funkcji $F$ jest równa $\Rbb \times O$. Nie umiem teraz tego
+udowodnić, ale wydaje mi~się, że~zbiór ten jest otwarty wtedy i~tylko
+wtedy, gdy $O$ jest otwarty. Do tego problemu będzie trzeba powrócić, na
+razie jednak zajmiemy~się analizą równań w~postaci normalnej, dla których
+będzie jasne, że~zbiór $\Rbb \times O$ nie jest otwarty.
+
+Pierwszy raz napotykamy równanie które stawia przed nami ten problem na
+stronie 31 tej książki.
+\begin{equation}
+  \label{eq:Definicja-rownania-rozniczkowego-ETC-02}
+  y'( x ) = 2 \sqrt{ y( x ) }.
+\end{equation}
+Ponieważ interesują nas tylko równania o~wartościach rzeczywistych, więc
+przyjmujemy, że~$y( x ) \geq 0$. Funkcja~$f$ definiująca to równanie jest
+łatwa do odczytania:
+\begin{equation}
+  \label{eq:Definicja-rownania-rozniczkowego-ETC-03}
+  f( x_{ 0 }, x_{ 1 } ) = \sqrt{ x_{ 1 } }.
+\end{equation}
+Zgodnie z~przyjętymi wcześniej zasadami, dziedzina $f$ jest równa
+$\Rbb \times ( 0, +\infty )$ jeśli szukamy dziedziny który jest zbiorem otwartym, lub
+$\Rbb \times [ 0, +\infty )$ jeśli interesuje nas największy zbiór na którym
+jesteśmy w~stanie określić. Te dwa przypadki można opisać w~prosty sposób
+nierównościami $y > 0$ i~$y \geq 0$, gdzie $y$ oznacza zmienną na
+płaszczyźnie, nie funkcję.
+
+Rozpatrzmy przypadek $y > 0$. Wówczas w~każdym punkcie dziedziny spełnione
+są założenia o~istnieniu i~jednoznaczności rozwiązania równania
+różniczkowego, więc dwie krzywe całkowe nigdy~się nie przecinają.
+Rozwiązania są postaci
+\begin{equation}
+  \label{eq:Definicja-rownania-rozniczkowego-ETC-04}
+  y( x ) = \phi( x, C ) = ( x + C )^{ 2 }, \qquad
+  x > -C.
+\end{equation}
+
+Przejdźmy teraz do przypadku $y \geq 0$. Dla $y = 0$ nie są spełnione
+założenia o~istnieniu i~jednoznaczności rozwiązania równania różniczkowego.
+Funkcja $y( x ) = 0$, $x \in \Rbb$ jest rozwiązaniem tego równania, tak jak
+funkcje dane przez \eqref{eq:Definicja-rownania-rozniczkowego-ETC-04}.
+Poprzednim jednak razem nie byliśmy w~stanie określić rozwiązania danego
+tym wzorem na zbiorze większym, niż $( -C, +\infty )$, tym razem jest to możliwe.
+Stosując więc zasadę, że~szukamy rozwiązania o~największej możliwej
+dziedzinie danej jako suma przedziałów, musimy przedłużyć wszystkie
+rozwiązania dane przez \eqref{eq:Definicja-rownania-rozniczkowego-ETC-04}
+do funkcji danych jako
+\begin{equation}
+  \label{eq:Definicja-rownania-rozniczkowego-ETC-05}
+  y( x ) =
+  \begin{cases}
+    0, & x \leq -C, \\
+    ( x + C )^{ 2 }, & x > -C.
+  \end{cases}
+\end{equation}
+Skutkiem tego, obecnie krzywe całkowe dwóch dowolnych rozwiązań tego
+równania~się przecinają. Widzimy więc jak radykalnie mogą~się zmienić
+własności rozwiązań danego równania poprzez prostą zmianę dziedziny na
+której jest ono określone.
+
+
+
+
 
 
 
@@ -744,6 +842,31 @@ Przedstawiona powyżej analiza pozwala uzmysłowić, jak skomplikowanym
 zadaniem może być analiza zakresu obowiązywania danego równania
 różniczkowego oraz jego rozwiązań. Do omawiania tych zagadnień zapewne
 powrócimy jeszcze wielokrotnie w~tych notatkach.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{15} Na tej stronie po raz pierwszy pojawia~się oznaczenie $\Phi_{ x }$
+i~$\Phi_{ y }$, gdzie $\Phi$ jest funkcją dwóch zmiennych:
+$\Phi( x, y )$. Jest to skrótowy zapis pochodnej cząstkowej
+\begin{equation}
+  \label{eq:Czym-jest-rownanie-ETC-01}
+  \Phi_{ x } \equiv
+  \frac{ \partial \Phi( x, y ) }{ \partial x }.
+\end{equation}
+W~przypadku zmiennej~$y$ dokładny sens tego oznaczenia jest często trochę
+inny. Mianowicie należy je rozumieć jako
+\begin{equation}
+  \label{eq:Czym-jest-rownanie-ETC-01}
+  \Phi_{ y } \equiv
+  \frac{ \partial \Phi( x, y ) }{ \partial y }\bigg|_{ y = y( x ) }.
+\end{equation}
+Choć te oznaczenia zwykle są łatwe zrozumienia, to~zdarza~się,
+że~mogą powodować niejasności.
 
 \VerSpaceFour
 
