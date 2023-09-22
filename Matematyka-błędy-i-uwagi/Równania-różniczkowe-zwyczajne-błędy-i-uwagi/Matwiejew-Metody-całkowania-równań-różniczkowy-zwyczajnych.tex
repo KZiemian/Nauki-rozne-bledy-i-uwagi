@@ -368,7 +368,7 @@ i~dla której zachodzi
   0, \qquad
   \forall x \in A_{ 1 }.
 \end{equation}
-Dane równanie różniczkowe nazywamy \textbf{równaniem różniczkowym
+Równanie różniczkowe nazywamy \textbf{równaniem różniczkowym
   zwyczajnym rzędu~$n$ w~postaci normalnej} (zob. str.~13 omawianej
 książki), jeśli przyjmuje ono postać
 \begin{equation}
@@ -378,75 +378,10 @@ książki), jeśli przyjmuje ono postać
 gdzie $f : O \to \Rbb$ jest funkcją określoną na zbiorze otwartym
 $O \subset \Rbb^{ n }$.
 
-Najbardziej pierwotnym problemem teorii równań dowolnego typu, jest
-następujący. Mając dane równanie~$X$ znajdź jego rozwiązanie~$Y$. Z~tego
-względu nasze rozważania warto zacząć od dyskusji tego, jakie funkcje mogą
-potencjalnie być rozwiązaniami pewnego równania różniczkowego? Na~stronie
-siódmej Matwieje podaje, że~jeśli nie jest powiedziane inaczej, to zakładamy,
-że~zarówno dziedzina jak i~przeciwdziedzina takiej funkcji są podzbiorami
-liczb rzeczywistych. Jeśli chodzi o~przeciwdziedzinę to możemy przyjąć,
-że~zawsze jest ona równa $\Rbb$, bo wybór ten nie powinien nigdzie odgrywać
-żadnej roli. Kwestia dziedziny jest jednak bardziej złożona.
-
-Niech $A \subset \Rbb$ i~rozważmy funkcję $y : A \to \Rbb$. Podstawowym wymogiem aby
-funkcja $y$ było rozwiązaniem równania różniczkowego zwyczajnego jest to,
-żeby posiadała pochodną w~każdym punkcie swojej dziedziny. Zbiór $A$ musi
-więc być dobrany w~taki sposób, by pojęcie pochodnej w~punkcie $x \in A$
-miało
-sens. Wbrew pozorom podanie klasy zbiorów o~tej własności nie jest takie
-proste. Zadajmy sobie bowiem pytanie, czy funkcja $f : \Qbb \to \Qbb$ dana
-wzorem
-\begin{equation}
-  \label{eq:Czym-jest-rownanie-ETC-01}
-  f( x ) = x^{ 2 },
-\end{equation}
-jest różniczkowalna?
-
-Pomimo problemów z~określeniem klasy tych zbiorów, to w~większości
-przypadków jeżeli jest to możliwe, to będziemy szukali funkcji określonej
-na zbiorze $A = ( a, b )$, dopuszczamy przy tym sytuację, że $a$ i~$b$ mogą
-przyjmować wartość $\pm \infty$. Jak pokazuje teoria różniczkowania
-funkcji jednej zmiennej rzeczywistej, jest to po wieloma względami
-najbardziej naturalny wybór, co motywuje szukanie w~pierwszym rzędzie
-rozwiązań określonych na takiej dziedzinie. Jak zauważono na~stronie~14
-omawianej
-książki, nie nastręcza również problemu określenie funkcji~$y$ na odcinkach
-domkniętych z~jednej, bądź obu stron. W~przypadku odcinka $[ a, b )$ przez
-pochodną w~punkcie~$a$ rozumiemy pochodną prawostronną funkcji $y$
-i~analogicznie
-postępuję w~przypadku odcinka $( a, b ]$. Przy czym jeśli dany jest odcinek
-prawostronnie domknięty $( a, b ]$ to musi zachodzić $-\infty < b < +\infty$,
-natomiast $a$ może przyjąć wartość $-\infty$. Analogicznie zasady stosują~się do
-pozostałych przypadków odcinków jednostronnie, bądź obustronnie
-domkniętych.
-
-W~następnej kolejności będziemy szukali rozwiązań określonych na zbiorach
-postaci gdy $A = \bigcup_{ i = 1 }^{ n } ( a_{ i }, b_{ i } )$. Z~tych samych
-powodów co poprzednio dopuszczamy też sytuacje, gdy jeden bądź więcej
-przedziałów w~sumie mnogościowej jest jedno- bądź obustronnie domkniętych.
-Pierwszy raz równanie, które wymaga szukania rozwiązania o~takiej
-dziedzinie, napotykamy na stronie 15. Podane tam równanie
-$y'( x ) = y( x )^{ 2 }$
-posiada bowiem rozwiązanie postaci
-\begin{equation}
-  \label{eq:Czym-jest-rownanie-ETC-02}
-  y( x ) = \frac{ 1 }{ 1 - x }, \quad
-  x \in ( -\infty, 1 ) \cup ( 1, +\infty ).
-\end{equation}
-Niezależnie czy szukamy rozwiązania mającego za dziedzinę przedział otwarty
-$( a, b )$ (domknięty z~jednej, bądź obu stron) czy sumę odpowiednich
-przedziałów, to będziemy szukali największego, w~sensie zawierania~się
-zbiorów, na którym możemy określić rozwiązanie danego równania
-różniczkowego.
-
-Przejdziemy teraz do podania definicji równania różniczkowego zwyczajnego.
-
-
-Należy zaznaczyć, że~stosunkowo rzadko będziemy stosować zwroty takie jak
-„Dane jest funkcja $F( x_{ 0 }, x_{ 1 }, \ldots, x_{ n + 1 } )$, która określa
-równanie różniczkowe
-$F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big) = 0$.”. Zwykle będziemy
-stosować skrót myślowy „Dana jest funkcja
+Kilka uwag terminologicznych. Stosunkowo rzadko będziemy mówić
+„Dane jest funkcja $F( x_{ 0 }, x_{ 1 }, \ldots, x_{ n + 1 } )$, która
+określa równanie różniczkowe
+$F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big) = 0$.”. Zwykle stosować będziemy skrót myślowy „Dana jest funkcja
 $F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big)$ określając równanie
 różniczkowe.” lub po prostu „Dane jest równanie różniczkowe
 $F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big) = 0$.”. Pozwala
@@ -457,21 +392,6 @@ $F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big)$ zależy w~sposób
 istotny od $y^{ ( n ) }( x )$.”, niż~„Funkcja
 $F( x_{ 0 }, x_{ 1 }, x_{ 2 }, \ldots, x_{ n + 1 } )$ zależy w~sposób istotny
 od~$x_{ n + 1 }$.”.
-
-W~teorii równań różniczkowych często spotykamy~się z~sytuacją, że~dane jest
-wyrażenie postaci $F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big)$,
-ale~jego dziedzina nie została w~sposób jawny podana. Jeśli chodzi o~zbiór
-wartości jakie może przyjmować $F$, to jak już zostało wspomniane wyżej,
-jeśli nie jest powiedziane inaczej, to w~tej książce jest nim $\Rbb$,
-ewentualnie jakiś jego podzbiór, więc ustalenie go nie stanowi prawdziwego
-problemu. Jeśli chodzi o~ustalenie dziedziny~$F$ to domyślnie będziemy za
-nią wybierać największy zbiór otwarty, na którym to wyrażenie jest
-określone. Często jednak będziemy potrzebowali rozpatrywać dziedzinę, która
-nie jest zbiorem otwartym. Wówczas naszym pierwszym wyborem będzie
-maksymalny zbiór na którym możemy określić~$F$, niezależnie czy jest on
-otwarty, czy nie. Po ustaleniu dziedziny i~zbioru wartości, wyrażenie $F$
-staje~się dobrze określoną funkcją. Do zagadnienia ustalania dziedziny
-będziemy musieli powrócić w~przyszłości.
 
 Równanie różniczkowe zwyczajne w~postaci normalnej jest
 szczególnym przypadkiem równania różniczkowego zwyczajnego w~postaci
@@ -485,15 +405,98 @@ przyjmujemy
   y^{ ( n - 1 ) }( x ),
 \end{equation}
 przy czym zgodnie z~podanymi wcześniej zasadami przyjmujemy, że~dziedzina
-powyższej funkcji jest równa~$\Rbb \times O$. Ponieważ równanie
-\eqref{eq:Czym-jest-rownanie-ETC-06} jest szczególnym przypadkiem
-równania \eqref{eq:Czym-jest-rownanie-ETC-04}, wiele z~tego co mówiliśmy
-o~funkcji~$F$ przenosi~się bez większych zmian na funkcję~$f$.
-Przy analizie funkcji~$f$ będziemy też stosować te same zasady co dla
-funkcji~$F$, chyba że~powiedziano inaczej. Do~problemu określenia dziedziny
-funkcji $F$ i~$f$ powrócimy w~dalszym ciągu notatek, teraz zaś
-poprzestaniemy na~zauważeniu, że~funkcja~$F$ podana wyżej w~oczywisty
-sposób zależy istotnie od~$y^{ ( n ) }( x )$.
+powyższej funkcji jest równa~$\Rbb \times O$. Funkcja $F$ tej postaci w~oczywisty
+sposób zależy istotnie od~$y^{ ( n ) }( x )$. Ponieważ równanie różniczkowe
+zwyczajne w~postaci normalnej jest szczególnym przypadkiem równania
+różniczkowego zwyczajnego zdefiniowanego wyżej, zasady które w~prowadzimy
+w~dalszym ciągu notatek do~pracy z~funkcją $F$, będziemy też stosować, przy
+ewentualnych naturalnych zmianach, do funkcji~$f$. Chyba że~jawnie
+stwierdzono inaczej.
+
+Przy badaniu równań różniczkowych często spotykamy~się z~sytuacją, że~dane
+jest wyrażenie postaci
+$F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big)$,
+ale~jego dziedzina nie została w~sposób jawny podana. Jeśli chodzi
+o~wartości jakie może przyjmować $F$, to ze~względu na to co pisze na
+stronie siódmej o~funkcjach $y$ jakich będziemy szukać rozwiązując dane
+równanie różniczkowe, przyjmujemy, że~zbiór wartości jakie tam funkcja może
+przyjmować jest podzbiorem $\Rbb$. Ponieważ prawie nigdy wybór jako
+przeciwdziedziny $F$ całego zbioru $\Rbb$ nic nie zmienia, zawsze będziemy
+przyjmować iż jest ona równa $\Rbb$.
+
+Jeśli chodzi o~ustalenie dziedziny~$F$ to domyślnie będziemy za
+nią wybierać największy zbiór otwarty~$O$, na którym to wyrażenie jest
+określone. Jeśli zajdzie będziemy potrzeba rozpatrywać dziedzinę, która
+nie jest zbiorem otwartym, wówczas naszym pierwszym wyborem będzie
+maksymalny zbiór na którym możemy określić~$F$, niezależnie czy jest on
+otwarty, czy nie. Po ustaleniu dziedziny i~zbioru wartości, wyrażenie~$F$
+staje~się dobrze określoną funkcją. Zasady te uzasadniają, czemu
+za~dziedzinę funkcji $F$ z~równania \eqref{eq:Czym-jest-rownanie-ETC-06}
+przyjęliśmy $\Rbb \times O$. Do zagadnienia ustalania dziedziny funkcji
+definiujących równanie różniczkowe będziemy musieli powrócić w~przyszłości.
+
+Jeżeli mamy już daną funkcję $F$ z~określoną dziedziną i~przeciwdziedziną, która definiuje równanie różniczkowe
+\begin{equation}
+  \label{eq:Czym-jest-rownanie-ETC-07}
+  F\left( x, y( x ), y'( x ), y''( x ), \ldots, y^{ ( n ) }( x ) \right) = 0,
+\end{equation}
+potrzebujemy~się zająć problemem, jakie wstępne warunki ma~spełniać funkcja
+$y( x )$, aby można było w~ogóle ją rozważać jako potencjalne rozwiązanie
+tego równania? Zacznijmy od problemu dziedziny i~przeciwdziedziny.
+Na~stronie siódmej Matwieje podaje, że~jeśli nie jest powiedziane inaczej,
+to zakładamy, że~zarówno dziedzina jak i~przeciwdziedzina takiej funkcji są
+podzbiorami liczb rzeczywistych. Jeśli chodzi o~przeciwdziedzinę to z~tych
+samych powodów co podane wcześniej, jeśli nie jest powiedziane inaczej,
+będziemy przyjmować, że jest ona równa $\Rbb$. Kwestia dziedziny jest
+jednak bardziej problematyczna.
+
+Niech $A \subset \Rbb$ i~rozważmy funkcję $y : A \to \Rbb$. Podstawowym wymogiem
+aby funkcja $y$ było rozwiązaniem równania różniczkowego zwyczajnego jest
+to, żeby posiadała pochodną w~każdym punkcie swojej dziedziny. Zbiór $A$
+musi więc być dobrany w~taki sposób, by pojęcie pochodnej w~punkcie $x \in A$
+miało sens. Wbrew pozorom podanie klasy zbiorów o~tej własności nie jest
+takie proste. Zadajmy sobie bowiem pytanie, czy funkcja $f : \Qbb \to \Qbb$
+dana wzorem
+\begin{equation}
+  \label{eq:Czym-jest-rownanie-ETC-08}
+  f( x ) = x^{ 2 },
+\end{equation}
+jest różniczkowalna?
+
+Pomimo problemów z~określeniem klasy tych zbiorów, to w~większości
+przypadków domyślnie będziemy szukali funkcji określonej na zbiorze
+$A = ( a, b )$. Dopuszczamy przy tym sytuację, że $a$ i~$b$ mogą
+przyjmować wartość $\pm \infty$. Jak pokazuje teoria różniczkowania
+funkcji jednej zmiennej rzeczywistej, jest to po wieloma względami
+najbardziej naturalny wybór, co motywuje szukanie w~pierwszym rzędzie
+rozwiązań określonych na takiej dziedzinie. Jak zauważono na~stronie~14
+omawianej książki, nie nastręcza również problemu określenie funkcji~$y$
+na~odcinkach domkniętych z~jednej, bądź obu stron. W~przypadku odcinka
+$[ a, b )$ przez pochodną w~punkcie~$a$ rozumiemy pochodną prawostronną
+funkcji $y$ i~analogicznie postępuję w~przypadku odcinka $( a, b ]$. Przy
+czym jeśli dany jest odcinek prawostronnie domknięty $( a, b ]$ to musi
+zachodzić $-\infty < b < +\infty$, natomiast $a$ może przyjąć wartość $-\infty$.
+Analogicznie zasady stosują~się do pozostałych przypadków odcinków
+jednostronnie, bądź obustronnie domkniętych.
+
+W~następnej kolejności będziemy szukali rozwiązań określonych na zbiorach
+które są $A = \bigcup_{ i = 1 }^{ n } ( a_{ i }, b_{ i } )$. Z~tych samych
+powodów co poprzednio dopuszczamy też sytuacje, gdy jeden bądź więcej
+przedziałów w~sumie mnogościowej jest jedno- bądź obustronnie domkniętych.
+Pierwszy raz równanie, które wymaga szukania rozwiązania o~takiej
+dziedzinie, napotykamy na stronie 15. Podane tam równanie
+$y'( x ) = y( x )^{ 2 }$
+posiada bowiem rozwiązanie postaci
+\begin{equation}
+  \label{eq:Czym-jest-rownanie-ETC-09}
+  y( x ) = \frac{ 1 }{ 1 - x }, \quad
+  x \in ( -\infty, 1 ) \cup ( 1, +\infty ).
+\end{equation}
+Niezależnie czy szukamy rozwiązania mającego za dziedzinę przedział otwarty
+$( a, b )$ (domknięty z~jednej, bądź obu stron) czy sumę odpowiednich
+przedziałów, to będziemy szukali największego, w~sensie zawierania~się
+zbiorów, na~którym możemy określić rozwiązanie danego równania
+różniczkowego. Chyba, że~jawnie stwierdzono inaczej.
 
 Pierwszy raz z~konkretnym równaniem różniczkowym stykamy~się na stronie~8.
 Równanie o~którym mowa jest postaci
@@ -558,14 +561,6 @@ wyrażenie pozbawionego sensu\footnote{Matwiejew podaje, że~w~takiej
   sytuacji należy rozpatrzyć równanie na funkcję $x( y )$, nie ma to
   jednak znaczenie w~obecnym kontekście.}.
 
-Przejdziemy teraz do problemu określenia dziedziny $A_{ 1 }$
-funkcji $y : A_{ 1 } \to \Rbb$. Jak wspomniano wcześniej, najbardziej
-naturalnym wyborem jest przyjęcie, że~$A_{ 1 } = ( a, b )$ i~domyślnie
-będziemy szukać funkcji określonych na zbiorach właśnie tej postaci. Zwykle
-też żądamy, by~$A_{ 1 }$ był największym odcinkiem otwarty zawartym
-w~zbiorze $A_{ 0 }$, w~którego każdym punkcie jesteśmy w~stanie określić
-rozwiązanie równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-10}.
-
 Dalszy ciąg niniejszym rozważań na temat tego czym jest równanie
 różniczkowe zwyczajne i~jego rozwiązanie, będzie dotyczył przypadków, gdy
 podane wcześniej definicji okazują~się zbyt wąskie w~stosunku do wymagań
@@ -575,17 +570,6 @@ równania różniczkowe. Ta część tekstu cały czas jest rozwijana, więc nie
 należy traktować jego obecnej formy, jako zakończonej i~ostatecznej.
 
 
-
-
-Problem rozwiązań takich jak \eqref{eq:Matwiejew-Metody-calkowania-ETC-12}
-będzie omawiany w~dalszym ciągu książki, wtedy ewentualnie powrócimy do
-pojawiające~się przy nich dokładniej. W~chwili obecnej, motywowani tym
-przykładem, poprzestaniemy na stwierdzeniu, że~jeśli to jest możliwe to
-będziemy szukali rozwiązań określonych na całym zbiorze $A_{ 0 }$, co jest
-równoważne stwierdzeniu $A_{ 1 } = A_{ 0 }$, co~wyklucza wszelkie
-niejednoznaczności w~sposobie określenia dziedziny rozwiązania.
-Niewątpliwie, ze względu na swoją prostotę interpretacyjną, optymalną
-sytuacją jest $A_{ 1 } = A_{ 0 } = \Rbb$.
 
 
 

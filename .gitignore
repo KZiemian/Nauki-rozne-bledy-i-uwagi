@@ -1,4 +1,4 @@
-# ignore all PDF files
+# ignore PDF files
 *.pdf
 
 # ignore auxiliary files created by pdfLaTeX
