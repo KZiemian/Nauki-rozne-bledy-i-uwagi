@@ -1,33 +1,43 @@
 % ---------------------------------------------------------------------
-% Podstawowe ustawienia i pakiety
+% Basic configuration and packages
 % ---------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
-% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
 \documentclass[a4paper,11pt]{article}
-% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
-\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
-\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
 
 
 
-% ------------------------------
-% Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ------------------------------
-\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
-\usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
-% grafiki.
-\usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
-\usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
-% wprowadzane bezpośrednio w tekście.
-\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
-% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ------------------------------
-% MARGINS
-% ------------------------------
+% ---------------------------------------
+% Packages not tied to particular normal language
+% ---------------------------------------
+% This package should improved spaces in the text.
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
+
+
+
+% ---------------------------------------
+% Polonization of LaTeX document
+% ---------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
+
+
+
+% ---------------------------------------
+% Setting margines
+% ---------------------------------------
+% Package for easy settings of margins. Unit of measurement is inch.
+\usepackage{vmargin}
 \setmarginsrb
 { 0.7in}  % left margin
 { 0.6in}  % top margin
@@ -40,84 +50,78 @@
 
 
 
-% ------------------------------
-% Często przydatne pakiety
-% ------------------------------
-% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-% \usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
-% % więcej, ale ja nie potrafię nic o tym powiedzieć).
-
-
-
-% ------------------------------
-% Pakiety do tekstów z nauk przyrodniczych
-% ------------------------------
-\let\lll\undefined  % Amsmath gryzie się z językiem pakietami do języka
-% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
-% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
-\usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
-% Mathematical Society (w skrócie AMS)
-\usepackage{amsfonts, amssymb, amscd, amsthm}  % Dalsze wsparcie od AMS
-% \usepackage{siunitx}  % Do prostszego pisania jednostek fizycznych
-\usepackage{upgreek}  % Ładniejsze greckie litery
-% Przykładowa składnia: pi = \uppi
-\usepackage{slashed}  % Pozwala w prosty sposób pisać slash Feynmana.
-\usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
-% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
-% nie wiem.
-
-
-
-% ------------------------------
-% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
-% ------------------------------
-% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
-% matematycznych
-\newtheorem{theorem}{Twierdzenie}
-% Analogicznie jak powyżej
-\newtheorem{definition}{Definicja}
-\newtheorem{corollary}{Wniosek}
-
-
-
-% ------------------------------
-% Pakiety napisane przez użytkownika.
-% Mają być w tym samym katalogu to ten plik .tex
-% ------------------------------
-% \usepackage{reedsimon}  % Pakiet napisany konkretnie dla tego pliku.
-\usepackage{latexgeneralcommands}
-\usepackage{mathcommands}
-
-\usepackage{tensor}
-
-
-
-% ---------------------------------------------------------------------
-% Dodatkowe ustawienia dla języka polskiego
-% ---------------------------------------------------------------------
-\renewcommand{\thesection}{\arabic{section}.}
-% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
-% Brak kropki po numerach podrozdziału
-
-
-
-% ------------------------------
-% Ustawienia różnych parametrów tekstu
-% ------------------------------
+% ---------------------------------------
+% Setting vertical spaces in the text
+% ---------------------------------------
+% Setting space between lines
 \renewcommand{\baselinestretch}{1.1}
 
-% Ustawienie szerokości odstępów między wierszami w tabelach.
+% Setting space between lines in tables
 \renewcommand{\arraystretch}{1.4}
 
 
 
+% ---------------------------------------
+% Packages for scientific papers
+% ---------------------------------------
+% Switching off \lll symbol, that I guess is representing letter ``Ł''.
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section.
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts, amssymb, amscd, amsthm}
+% Better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+% ????
+\usepackage{tensor}
+
+
+
+
+
+% ---------------------------------------
+% Defining new environments (?)
+% ---------------------------------------
+% Defining enviroment ``Wniosek''
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
 % ------------------------------
-% Pakiet „hyperref”
-% Polecano by umieszczać go na końcu preambuły.
+% Private packages
+% You need to put them in the same directory as .tex file
 % ------------------------------
-\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki.
+% Contains various command useful for working with a text
+\usepackage{latexgeneralcommands}
+% Contains definitions useful for working with mathematical text
+\usepackage{mathcommands}
+
+
+
+
+
+% ------------------------------
+% Package ``hyperref''
+% They advised to put it on the end of preambule
+% ------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
 
 
 
@@ -149,7 +153,6 @@
 
 
 % ####################################################################
-% Początek dokumentu
 \begin{document}
 % ####################################################################
 
@@ -158,20 +161,22 @@
 
 
 % ######################################
-\maketitle % Tytuł całego tekstu
+% Title of the text
+\maketitle
 % ######################################
 
 
 
 
 
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Wojciech Kopczyński, Andrzej Trautman \\
+% ######################################
+\section{Wojciech Kopczyński, Andrzej Trautman
   \textit{Czasoprzestrzeń i~grawitacja},
   \cite{KopczynskiTrautmanCzasoprzetrzenIGrawitacja1984}}
 
-\vspace{0em}
+\label{sec:Uwagi-ogolne}
+% ######################################
+
 
 
 % ##################
@@ -184,7 +189,7 @@
 \Str{33} Według mi~się, że~$l$ przebiega tylko zakres $0, n - 1$, ale~to
 trzeba sprawdzić.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -193,7 +198,7 @@ trzeba sprawdzić.
 \noindent
 \Str{37-38}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -234,10 +239,60 @@ trzeba sprawdzić.
 
 \end{center}
 
+\VerSpaceSix
 
-\vspace{\spaceTwo}
+
 % ############################
 
+
+
+
+
+
+
+% ######################################
+\section{Wald}
+
+\label{sec:Uwagi-ogolne}
+% ######################################
+
+
+
+Jakieś błędy są na stronach 476, 482, 482, 482, 483
+
+
+
+% ##################
+\newpage
+
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % & & & & \\
+    24 & 2 & & w $\Ocal$ & w $\overline{ \Ocal }$ \\
+    24 & 9 & & widzenia $\Ocal$ & widzenia $\overline{ \Ocal }$ \\
+    41 & & 10 & zagara & zegara \\
+    82 & & 1 & $( a \quad b \quad \ldots )$ & $( a \: b \: \ldots )$ \\
+    83 & 2 & & $( a \quad b \quad \ldots )$ & $( a \: b \: \ldots )$ \\
+    143 & & 4 & $B\indices{^\mu_{ v ; \, \beta }}$ & $B\indices{ ^\mu_{ \nu, \, \beta } }$ \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\VerSpaceSix
+
+
+% ############################
 
 
 
@@ -250,7 +305,7 @@ trzeba sprawdzić.
 % ############################
 \newpage
 
-\Work{ % Autor i tytuł dzieła
+{ % Autor i tytuł dzieła
   Bernard F. Schutz \\
   \textit{Wstęp do ogólnej teorii względności},
   \cite{SchutzWstepDoOgolnejTeoriiWzglednosci2002}}
@@ -268,7 +323,7 @@ trzeba sprawdzić.
 \Str{35} Wyprowadzenie transformacji Lorentza nie wydaje się poprawne.
 Brakuje argumentu który by implikował relację $\sigma = \alpha$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -283,7 +338,7 @@ składowych czterowektora o niezerowej masie, nie została potraktowana jako
 postulat lub uzasadniona fizycznie, lecz po prostu podana. Może tu też warto
 byłoby dodać jakiś komentarz.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -294,7 +349,7 @@ byłoby dodać jakiś komentarz.
 wielkości termodynamiczne (określane tu jako skalarne) definiuje~się
 zawsze w~układzie CW \textsc{cw} danego fragmentu płynu.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -335,8 +390,9 @@ wymaga głębszego zastanowienia.
 
 \end{center}
 
+\VerSpaceSix
 
-\vspace{\spaceTwo}
+
 % ############################
 
 
@@ -351,7 +407,7 @@ wymaga głębszego zastanowienia.
 % ############################
 \newpage
 
-\Work{ % Autorzy i tytuł dzieła
+{ % Autorzy i tytuł dzieła
   S. W. Hawking, G. F. R. Ellis \\
   \textit{The Large Scale Structure of Space-Time},
   \cite{HawkingEllisLargeScaleStructureOfSpaceTime1973}}
@@ -382,8 +438,9 @@ wymaga głębszego zastanowienia.
 
 \end{center}
 
+\VerSpaceSix
 
-\vspace{\spaceTwo}
+
 % ############################
 
 
@@ -398,7 +455,7 @@ wymaga głębszego zastanowienia.
 % ############################
 \newpage
 
-\Work{ % Autor i tytuł dzieła
+{ % Autor i tytuł dzieła
   Richard P. Feynman \\
   \textit{Wykłady z grawitacji},
   wydanie \romannumeral1, FWG }
@@ -417,7 +474,7 @@ $\sqrt{ ( 4 \pi e^{ 2 } / \hbar c) } = 0.31$\ldots ????????????
 
 % \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceSix
 
 
 
@@ -436,9 +493,9 @@ $\sqrt{ ( 4 \pi e^{ 2 } / \hbar c) } = 0.31$\ldots ????????????
 % #####################################################################
 % Bibliografia
 
-\bibliographystyle{alpha}
+\bibliographystyle{plalpha}
 
-\bibliography{PhilNaturBooks}{}
+\bibliography{PhysicsBooks}{}
 
 
 
