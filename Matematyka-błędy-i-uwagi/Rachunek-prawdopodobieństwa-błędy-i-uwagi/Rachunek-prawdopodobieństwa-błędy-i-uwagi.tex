@@ -1,33 +1,43 @@
 % ---------------------------------------------------------------------
-% Podstawowe ustawienia i pakiety
+% Basic configuration and packages
 % ---------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
-% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
 \documentclass[a4paper,11pt]{article}
-% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
-\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
-\usepackage{lmodern} % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
 
 
 
-% ------------------------------
-% Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ------------------------------
-\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
-\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
-% grafiki.
-\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
-\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
-% wprowadzane bezpośrednio w tekście.
-\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
-% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ------------------------------
-% MARGINS
-% ------------------------------
+% ---------------------------------------
+% Packages not tied to particular normal language
+% ---------------------------------------
+% This package should improved spaces in the text.
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
+
+
+
+% ---------------------------------------
+% Polonization of LaTeX document
+% ---------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
+
+
+
+% ---------------------------------------
+% Setting margines
+% ---------------------------------------
+% Package for easy settings of margins. Unit of measurement is inch.
+\usepackage{vmargin}
 \setmarginsrb
 { 0.7in}  % left margin
 { 0.6in}  % top margin
@@ -40,85 +50,63 @@
 
 
 
-% ------------------------------
-% Często przydatne pakiety
-% ------------------------------
-\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% ---------------------------------------
+% Setting vertical spaces in the text
+% ---------------------------------------
+% Setting space between lines
+\renewcommand{\baselinestretch}{1.1}
+
+% Setting space between lines in tables
+\renewcommand{\arraystretch}{1.4}
 
 
 
-% ------------------------------
-% Pakiety do tekstów z nauk przyrodniczych
-% ------------------------------
-\let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
-% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
-% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
-\usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
-% Mathematical Society (w skrócie AMS)
-\usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
-% \usepackage{siunitx} % Do prostszego pisania jednostek fizycznych
-\usepackage{upgreek} % Ładniejsze greckie litery
-% Przykładowa składnia: pi = \uppi
-\usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
-\usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
-% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
-% nie wiem.
+% ---------------------------------------
+% Packages for scientific papers
+% ---------------------------------------
+% Switching off \lll symbol, that I guess is representing letter ``Ł''.
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section.
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts, amssymb, amscd, amsthm}
+% Better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
 
 
-
-% ------------------------------
-% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
-% ------------------------------
-% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
-% matematycznych.
-\newtheorem{theorem}{Twierdzenie}
-% Analogicznie jak powyżej
-\newtheorem{definition}{Definicja}
-\newtheorem{corollary}{Wniosek}
 
 
 
 % ------------------------------
-% Pakiety napisane przez użytkownika.
-% Mają być w tym samym katalogu to ten plik .tex
+% Private packages
+% You need to put them in the same directory as .tex file
 % ------------------------------
-% \usepackage{}  % Pakiet napisany między innymi
-% dla tego pliku.
+% Contains various command useful for working with a text
 \usepackage{latexgeneralcommands}
+% Contains definitions useful for working with mathematical text
 \usepackage{mathcommands}
 
 
 
 
-% ---------------------------------------------------------------------
-% Dodatkowe ustawienia dla języka polskiego
-% ---------------------------------------------------------------------
-\renewcommand{\thesection}{\arabic{section}.}
-% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
-% Brak kropki po numerach podrozdziału
-
-
 
 % ------------------------------
-% Ustawienia różnych parametrów tekstu
+% Package ``hyperref''
+% They advised to put it on the end of preambule
 % ------------------------------
-\renewcommand{\baselinestretch}{1.1}
-
-% Ustawienie szerokości odstępów między wierszami w tabelach.
-\renewcommand{\arraystretch}{1.4}
-
-
-
-% ------------------------------
-% Pakiet „hyperref”
-% Polecano by umieszczać go na końcu preambuły.
-% ------------------------------
-\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki.
-
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
 
 
 
@@ -165,7 +153,7 @@
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+{ % Autor i tytuł dzieła
   Patrick Billingsley \\
   \textit{Prawdopodobieństwo i~miara},
   \cite{BillingsleyPrawdopodobienstwoIMiara2009}}
@@ -185,7 +173,7 @@ Warto byłoby przepisać tę~książkę w~\LaTeX u. Widać bowiem,
 z~czasów PRLu systemie i~symbole są przez to~niskiej jakości, mocno
 pikselowate.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -197,7 +185,7 @@ te~na~stronie 17, powinny być rysowane linią przerywaną, nie zaś jak
 obecnie ciągłą. Stosuje~się to oczywiście do wszystkich funkcji, które
 posiadają nieciągłość w~formie skoku.
 
-\vspace{\spaceThree}
+\VerSpaceFour
 
 
 
@@ -211,7 +199,7 @@ posiadają nieciągłość w~formie skoku.
 \Str{17} Przez liczbę dwójkowo-wymierną rozumie chyba Billingsley liczbę
 którą da~się zapisać w~postaci $p / 2^{ n }$, $p < 2^{ n }$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -230,7 +218,7 @@ z~liczb $a_{ i }$ można zapisać w~postaci $p_{ i } / 2^{ n }$ przy
 czym co~najmniej inna z~nich jest w~postaci nieskracalnej. Tym samym
 pojęcie to~stanie~się jednoznaczne.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -269,7 +257,7 @@ pojęcie to~stanie~się jednoznaczne.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceSix
 
 
 % ############################
@@ -282,14 +270,12 @@ pojęcie to~stanie~się jednoznaczne.
 
 
 
+% ######################################
+\section{William Feller \textit{Wstęp do rachunku prawdopodobieństwa. Tom~I},
+  \cite{FellerWstepDoRachunkuPrawdopodobienstwaVolI2006}}
 
-% ############################
-\newpage
-
-\Work{ % Autor i tytuł dzieła
-  William Feller \\
-  \textit{Wstęp do rachunku prawdopodobieństwa. Tom~I},
-  \cite{FellerWstepDoRachunkuPrawdopodobienstwaTomI2006}}
+\label{sec:Feller-Wstep-do-rachunku-ETC}
+% ######################################
 
 
 % ##################
@@ -314,7 +300,7 @@ pojęcie to~stanie~się jednoznaczne.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceSix
 
 
 
@@ -335,7 +321,7 @@ pojęcie to~stanie~się jednoznaczne.
 
 \bibliographystyle{plalpha}
 
-\bibliography{MathComScienceBooks}{}
+\bibliography{MathematicsBooks}{}
 
 
 
