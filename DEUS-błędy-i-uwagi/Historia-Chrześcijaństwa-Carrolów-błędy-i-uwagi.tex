@@ -1,33 +1,43 @@
 % ---------------------------------------------------------------------
-% Podstawowe ustawienia i pakiety
+% Basic configuration and packages
 % ---------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
-% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
 \documentclass[a4paper,11pt]{article}
-% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
-\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
-\usepackage{lmodern} % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
 
 
 
-% ------------------------------
-% Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ------------------------------
-\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
-% \usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
-% % grafiki.
-% \usepackage{verbatim} % Poprawia otoczenie VERBATIME.
-% \usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
-% wprowadzane bezpośrednio w tekście.
-\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
-% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ------------------------------
-% MARGINS
-% ------------------------------
+% ---------------------------------------
+% Packages not tied to particular normal language
+% ---------------------------------------
+% This package should improved spaces in the text.
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
+
+
+
+% ---------------------------------------
+% Polonization of LaTeX document
+% ---------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
+
+
+
+% ---------------------------------------
+% Setting margins
+% ---------------------------------------
+% Package for easy settings of margins. Unit of measurement is inch.
+\usepackage{vmargin}
 \setmarginsrb
 { 0.7in}  % left margin
 { 0.6in}  % top margin
@@ -40,51 +50,36 @@
 
 
 
-% ------------------------------
-% Często używane pakiety
-% ------------------------------
-% \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% ---------------------------------------
+% Setting vertical spaces in the text
+% ---------------------------------------
+% Setting space between lines
+\renewcommand{\baselinestretch}{1.1}
+
+% Setting space between lines in tables
+\renewcommand{\arraystretch}{1.4}
 
 
-
-
-
-% ---------------------------------------------------------------------
-% Dodatkowe ustawienia dla języka polskiego
-% ---------------------------------------------------------------------
-\renewcommand{\thesection}{\arabic{section}.}
-% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
-% Brak kropki po numerach podrozdziału
 
 
 
 % ------------------------------
-% Pakiety napisane przez użytkownika.
-% Mają być w tym samym katalogu to ten plik .tex
+% Private packages
+% You need to put them in the same directory as .tex file
 % ------------------------------
+% Contains various command useful for working with a text
 \usepackage{latexgeneralcommands}
 
 
 
-% ------------------------------
-% Ustawienia różnych parametrów tekstu
-% ------------------------------
-\renewcommand{\baselinestretch}{1.1}
-
-\renewcommand{\arraystretch}{1.4} % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
-
 
 
 % ------------------------------
-% Pakiet „hyperref”
-% Polecano by umieszczać go na końcu preambuły.
+% Package ``hyperref''
+% They advised to put it on the end of preambule
 % ------------------------------
-\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki.
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
 
 
 
@@ -96,8 +91,8 @@
 
 
 % ---------------------------------------------------------------------
-% Tytuł, autor, data
-\title{Historia świętej wiary \\
+% Defining title and author of the text
+\title{Historia Chrześcijaństwa Carrollów \\
   {\Large Błędy i~uwagi}}
 
 \author{Kamil Ziemian}
@@ -116,7 +111,7 @@
 
 
 % ####################################################################
-% Początek dokumentu
+% Title of the text
 \begin{document}
 % ####################################################################
 
@@ -133,97 +128,87 @@
 
 
 % ######################################
-\section{Historia świętej wiary, syntezy historyczne}
-
-\vspace{\spaceTwo}
+\section{Warren H.~Carroll
+  \textit{Historia Chrześcijaństwa. Tom~I: Narodziny Chrześcijaństwa},
+  \cite{CarrollHistoriaChrzecijanstwaVolI2009}}
 % ######################################
 
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
-  Warren H.~Carroll \\
-  \textit{Historia Chrześcijaństwa. Tom~I: Narodziny Chrześcijaństwa},
-  \cite{CarrollHistoriaChrzecijanstwaVolI2009}}
-
-\vspace{0em}
-
-
-% ##################
-\CenterBoldFont{Uwagi do~konkretnych stron}
-
-\vspace{0em}
+\subsection{Uwagi do~konkretnych stron}
+% ############################
 
 
 \noindent
-\StrWd{17}{4} Gwiazdka w~tej linii jest za~mała.
+\StrWierszD{17}{4} Gwiazdka w~tej linii jest za~mała.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{41}{13} W~tej linii użyto złego rodzaju gwiazdki i~umieszczono ją
-trochę krzywo.
+\StrWierszD{41}{13} W~tej linii użyto złego rodzaju gwiazdki i~umieszczono
+ją trochę krzywo.
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{61}{20} Gwiazdka w~tej linii jest za~mała.
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{65}{6} W~tej linii użyto złego rodzaju gwiazdki.
+\StrWierszD{61}{20} Gwiazdka w~tej linii jest za~mała.
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{73}{12} Gwiazdka w~tej linii jest trochę za~mała i~odrobinę krzywo
-umieszczona.
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{75}{4} Gwiazdka w~tej linii jest za mała.
+\StrWierszD{65}{6} W~tej linii użyto złego rodzaju gwiazdki.
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{112}{2} Gwiazdka w~tej linii jest za mała.
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{182}{2} Gwiazdka w~tej linii jest za mała.
+\StrWierszD{73}{12} Gwiazdka w~tej linii jest trochę za~mała i~odrobinę
+krzywo umieszczona.
 
-\vspace{\spaceFour}
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszD{75}{4} Gwiazdka w~tej linii jest za mała.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszD{112}{2} Gwiazdka w~tej linii jest za mała.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszD{182}{2} Gwiazdka w~tej linii jest za mała.
+
+\VerSpaceFour
 
 
 
@@ -233,7 +218,7 @@ umieszczona.
 \textbf{Str.~199, wiersze 9, 8 (od~dołu).} Gwiazdki w~tych liniach~są zbyt
 małe.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -243,52 +228,52 @@ małe.
 \textbf{Str.~200, wiersze 2, 1 (od~dołu).} Gwiazdki w~tych liniach~są zbyt
 małe.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{249}{1} Gwiazdka w~tej linii jest za mała.
+\StrWierszD{249}{1} Gwiazdka w~tej linii jest za mała.
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{265}{2} Gwiazdka w~tej linii jest za mała.
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{271}{1} Gwiazdka w~tej linii jest za mała.
+\StrWierszD{265}{2} Gwiazdka w~tej linii jest za mała.
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{282}{14} Gwiazdka w~tej linii jest za mała.
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{286}{4} Gwiazdka w~tej linii jest za mała.
+\StrWierszD{271}{1} Gwiazdka w~tej linii jest za mała.
 
-\vspace{\spaceFour}
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszD{282}{14} Gwiazdka w~tej linii jest za mała.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszD{286}{4} Gwiazdka w~tej linii jest za mała.
+
+\VerSpaceFour
 
 
 
@@ -298,62 +283,61 @@ małe.
 \textbf{Str.~290, wiersze 4, 3 (od~dołu).} Gwiazdki w~tych liniach~są zbyt
 małe.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{366}{1} Gwiazdka w~tej linii jest za mała.
+\StrWierszD{366}{1} Gwiazdka w~tej linii jest za mała.
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWg{378}{20} Gwiazdka w~tej linii jest za mała.
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{495}{1} Gwiazdka w~tej linii jest za mała.
+\StrWierszG{378}{20} Gwiazdka w~tej linii jest za mała.
 
-\vspace{\spaceFour}
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszD{495}{1} Gwiazdka w~tej linii jest za mała.
+
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{538}{38} Gwiazdka w~tej linii jest za mała.
+\StrWierszD{538}{38} Gwiazdka w~tej linii jest za mała.
 
-\vspace{\spaceFour}
+\VerSpaceFour
+
+
 
 
 
 \noindent
-\StrWd{562}{20} W~tej linii nie podano autorów publikacji. Nie
+\StrWierszD{562}{20} W~tej linii nie podano autorów publikacji. Nie
 wiem czy to~błąd, czy~dla tej publikacji nie~trzeba podawać autorów.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{575}{4~od~góry i~1 od~dołu} Słowo „męczennik” jest w~bardzo brzydki
-sposób podzielone między te dwie linie.
-
-% \vspace{\spaceFour}
-
+\StrWierszG{575}{4~od~góry i~1 od~dołu} Słowo „męczennik” jest w~bardzo
+brzydki sposób podzielone między te dwie linie.
 
 % 185???
 
@@ -529,32 +513,36 @@ sposób podzielone między te dwie linie.
     266 & & \hphantom{0}6 & \textit{Pompey, the} & \textit{Pompey: The} \\
     267 & & \hphantom{0}2 & \textit{Rule, from} & \textit{Rule: From} \\
     268 & & \hphantom{0}3 & \textit{under} & \textit{Under} \\
-    268 & &  1 & \textit{under} & \textit{Under} \\
-    275 & &  7 & \textit{under} & \textit{Under} \\
-    281 & &  3 & \textit{the} & \textit{The} \\
-    281 & &  3 & \textit{Joseph, Their} & \textit{Joseph: Their} \\
-    293 & &  3 & \textit{Christ, His} & \textit{Christ: His} \\
-    294 & &  8 & \textit{St.~Matthew, a} & \textit{St.~Matthew: A} \\
-    295 & &  4 & \textit{Birth, an} & \textit{Birth: An} \\
-    300 & &  9 & \textit{Josephus, the} & \textit{Josephus: The} \\
-    307 & &  8 & \textit{Birth, an} & \textit{Birth: An} \\
+    268 & & \hphantom{0}1 & \textit{under} & \textit{Under} \\
+    275 & & \hphantom{0}7 & \textit{under} & \textit{Under} \\
+    281 & & \hphantom{0}3 & \textit{the} & \textit{The} \\
+    281 & & \hphantom{0}3 & \textit{Joseph, Their}
+    & \textit{Joseph: Their} \\
+    293 & & \hphantom{0}3 & \textit{Christ, His} & \textit{Christ: His} \\
+    294 & & \hphantom{0}8 & \textit{St.~Matthew, a}
+    & \textit{St.~Matthew: A} \\
+    295 & & \hphantom{0}4 & \textit{Birth, an} & \textit{Birth: An} \\
+    300 & & \hphantom{0}9 & \textit{Josephus, the}
+    & \textit{Josephus: The} \\
+    307 & & \hphantom{0}8 & \textit{Birth, an} & \textit{Birth: An} \\
     315 & & 20 & \textit{Bethlehem, an} & \textit{Bethlehem: An} \\
     315 & & 10 & \textit{niemal} & niemal \\
-    316 & &  8 & \textit{Dead, Studies} & \textit{Dead: Studies} \\
+    316 & & \hphantom{0}8 & \textit{Dead, Studies}
+    & \textit{Dead: Studies} \\
     320 & & 10 & Jesus Christ, \textit{His} & \textit{Jesus Christ: His} \\
     326 & & 12 & \textit{Antipas, a} & \textit{Antipas: A} \\
-    365 & &  9 & 1931 ) & 1931) \\
+    365 & & \hphantom{0}9 & 1931 ) & 1931) \\
     374 & & 11 & 549;Belser & 549; Belser \\
     387 & & 10 & \textit{Doctor} & \textit{A~Doctor} \\
-    387 & &  9 & \textit{Doctor} & \textit{A~Doctor} \\
-    387 & &  5 & \textit{Doctor} & \textit{A~Doctor} \\
+    387 & & \hphantom{0}9 & \textit{Doctor} & \textit{A~Doctor} \\
+    387 & & \hphantom{0}5 & \textit{Doctor} & \textit{A~Doctor} \\
     388 & & 17 & \textit{Doctor} & \textit{A~Doctor} \\
     388 & & 13 & \textit{Doctor} & \textit{A~Doctor} \\
-    388 & &  1 & \textit{Doctor} & \textit{A~Doctor} \\
-    390 & &  7 & \textit{Doctor} & \textit{A~Doctor} \\
+    388 & & \hphantom{0}1 & \textit{Doctor} & \textit{A~Doctor} \\
+    390 & & \hphantom{0}7 & \textit{Doctor} & \textit{A~Doctor} \\
     391 & & 11 & \textit{Doctor} & \textit{A~Doctor} \\
     391 & & 10 & \textit{Doctor} & \textit{A~Doctor} \\
-    392 & &  3 & \textit{Doctor} & \textit{A~Doctor} \\
+    392 & & \hphantom{0}3 & \textit{Doctor} & \textit{A~Doctor} \\
     \hline
   \end{tabular}
 
@@ -570,34 +558,40 @@ sposób podzielone między te dwie linie.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    393 & &  8 & \textit{Doctor} & \textit{A~Doctor} \\
-    402 & &  9 & \textit{Antipas, a} & \textit{Antipas: A }\\
-    407 & &  6 & \textit{Greek, a} & \textit{Greek: A} \\
-    408 & &  2 & \textit{Claudius, the} & \textit{Claudius: The} \\
-    410 & &  3 & \textit{Luke, a} & \textit{Luke: A} \\
+    393 & & \hphantom{0}8 & \textit{Doctor} & \textit{A~Doctor} \\
+    402 & & \hphantom{0}9 & \textit{Antipas, a} & \textit{Antipas: A }\\
+    407 & & \hphantom{0}6 & \textit{Greek, a} & \textit{Greek: A} \\
+    408 & & \hphantom{0}2 & \textit{Claudius, the}
+    & \textit{Claudius: The} \\
+    410 & & \hphantom{0}3 & \textit{Luke, a} & \textit{Luke: A} \\
     419 & & 24 & \textit{Doctor} & \textit{A~Doctor} \\
-    432 & &  2 & \textit{Kerala, a} & \textit{Kerala: A} \\
-    436 & &  5 & \textit{Nero, Reality} & \textit{Nero: Reality} \\
-    440 & &  4 & \textit{Exile, a} & \textit{Exile: A} \\
-    442 & &  9 & \textit{Tertullian, a} & \textit{Tertullian: A} \\
+    432 & & \hphantom{0}2 & \textit{Kerala, a} & \textit{Kerala: A} \\
+    436 & & \hphantom{0}5 & \textit{Nero, Reality}
+    & \textit{Nero: Reality} \\
+    440 & & \hphantom{0}4 & \textit{Exile, a} & \textit{Exile: A} \\
+    442 & & \hphantom{0}9 & \textit{Tertullian, a}
+    & \textit{Tertullian: A} \\
     443 & & 17 & \textit{Jude, Introduction}
            & \textit{Jude: Introduction} \\
-    444 & &  9 & \textit{under} & \textit{Under} \\
-    444 & &  2 & \textit{under} & \textit{Under} \\
-    449 & &  7 & \textit{under} & \textit{Under} \\
+    444 & & \hphantom{0}9 & \textit{under} & \textit{Under} \\
+    444 & & \hphantom{0}2 & \textit{under} & \textit{Under} \\
+    449 & & \hphantom{0}7 & \textit{under} & \textit{Under} \\
     455 & & 25 & np., & np. \\
-    458 & &  4 & \textit{among} & \textit{Among} \\
-    458 & &  2 & \textit{Paul, Apostole} & \textit{Paul: Apostole} \\
-    459 & &  3 & \textit{Religion; the} & \textit{Religin: The} \\
-    471 & &  9 & \textit{Smyrna, a} & \textit{Smyrna: A} \\
+    458 & & \hphantom{0}4 & \textit{among} & \textit{Among} \\
+    458 & & \hphantom{0}2 & \textit{Paul, Apostole}
+    & \textit{Paul: Apostole} \\
+    459 & & \hphantom{0}3 & \textit{Religion; the}
+    & \textit{Religin: The} \\
+    471 & & \hphantom{0}9 & \textit{Smyrna, a} & \textit{Smyrna: A} \\
     477 & & 17 & \textit{ofthe} & \textit{of the} \\
-    478 & &  7 & \textit{Severus, the} & \textit{Severus: The} \\
+    478 & & \hphantom{0}7 & \textit{Severus, the} & \textit{Severus: The} \\
     490 & & 15 & \textit{Tertulian, a} & \textit{Tertulian: A} \\
-    490 & &  1 & cześć & część \\
+    490 & & \hphantom{0}1 & cześć & część \\
     492 & & 13 & \textit{during} & \textit{During} \\
-    492 & &  2 & \textit{Mani, a} & \textit{Mani: A} \\
-    508 & &  4 & \textit{Edessa, the} & \textit{Edessa: The} \\
-    533 & &  4 & \textit{Constantine, a} & \textit{Constantine: A} \\
+    492 & & \hphantom{0}2 & \textit{Mani, a} & \textit{Mani: A} \\
+    508 & & \hphantom{0}4 & \textit{Edessa, the} & \textit{Edessa: The} \\
+    533 & & \hphantom{0}4 & \textit{Constantine, a}
+    & \textit{Constantine: A} \\
     561 & & 19 & \textit{Bible, a~Historical}
            & \textit{Bible: A~Historical} \\
     561 & & 16 & T. & T., \\
@@ -617,7 +611,7 @@ sposób podzielone między te dwie linie.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    562 &  4 & & \textit{Ezekiel: the} & \textit{Ezekiel: The} \\
+    562 & \hphantom{0}4 & & \textit{Ezekiel: the} & \textit{Ezekiel: The} \\
     562 & 10 & & \textit{Abraham, Loved} & \textit{Abraham: Loved} \\
     562 & 11 & & \textit{Desert, a~History} & \textit{Desert: A~History} \\
     562 & 13 & & \textit{Abraham, Father} & \textit{Abraham: Father} \\
@@ -811,11 +805,11 @@ sposób podzielone między te dwie linie.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceSix
 
 
 \noindent
-\StrWd{575}{4} \\
+\StrWierszD{575}{4} \\
 \Jest \hspace{5pt} nik \\
 \Powin -nik \\
 
@@ -830,21 +824,19 @@ sposób podzielone między te dwie linie.
 
 
 
-% ############################
-\newpage
-
-\Work{ % Autor i tytuł dzieła
+% ######################################
+\section{ % Autor i tytuł dzieła
   Warren H.~Carroll \\
   \textit{Historia Chrześcijaństwa. Tom~II: Budowanie Chrześcijaństwa},
   \cite{CarrollHistoriaChrzecijanstwaVolII2010}}
+% ######################################
 
-\vspace{0em}
 
 
-% ##################
-\CenterBoldFont{Uwagi}
+% ############################
+\subsection{Uwagi}
+% ############################
 
-\vspace{0em}
 
 
 \noindent
@@ -865,7 +857,7 @@ była budowana, podczas gdy ona została już wzniesiona przez Chrystusa,
 zaś budowane było właśnie „Christendom”, wspólnota ludzka żyjąca jej
 prawami.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1142,15 +1134,15 @@ prawami.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceSix
 
 
 \noindent
-\StrWd{3}{4} \\
-\Jest www. WydawnictwoWektory.pl \\
+\StrWierszD{3}{4} \\
+\Jest  www. WydawnictwoWektory.pl \\
 \Powin www.WydawnictwoWektory.pl \\
-\StrWd{13}{6} \\
-\Jest „Alexander~of Alexandria” \\
+\StrWierszD{13}{6} \\
+\Jest  „Alexander~of Alexandria” \\
 \Powin \textit{Alexander~of Alexandria} \\
 
 
@@ -1166,18 +1158,13 @@ prawami.
 
 
 
-% ############################
-\newpage
-
-\Work{ % Autor i tytuł dzieła
-  Warren H.~Carroll \\
+% ######################################
+\section{ % Autor i tytuł dzieła
+  Warren H.~Carroll
   \textit{Historia Chrześcijaństwa. Tom~IV: Podział Chrześcijaństwa},
   \cite{CarrollHistoriaChrzecijanstwaVolIV2011}}
+% ######################################
 
-
-
-% % ##################
-% \CenterBoldFont{Uwagi}
 
 
 
@@ -1466,15 +1453,15 @@ prawami.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceSix
 
 
 \noindent
-\StrWd{165}{7} \\
+\StrWierszD{165}{7} \\
 \Jest Bruce,\textit{AnneBoleyn},s.293,299-307,313-333;Scarisbrick,\textit{HenryVIII},s.349-350;Ridley,\textit{Cran-} \\
 \Powin Bruce, \textit{Anne Boleyn}, s.~293, 299-307, 313-333; Scarisbrick,
 \textit{Henry VIII}, s.~349-350; Ridley, \textit{Cran-} \\
-\StrWd{165}{6} \\
+\StrWierszD{165}{6} \\
 \Jest
 \textit{mer},s.106-111.AnnęBoleynstracono19maja1536roku.Miałazaledwiedwadzieściaosiemlat. \\
 \Powin \textit{mer}, s.~106-111. Annę Boleyn stracono 19~maja 1536 roku.
@@ -1492,39 +1479,37 @@ Miała zaledwie dwadzieścia osiem lat. \\
 
 
 
-% ############################
-\newpage
-
-\Work{ % Autor i tytuł dzieła
-  Warren H.~Carroll, Anne W. Carroll \\
+% ######################################
+\section{ % Autor i tytuł dzieła
+  Warren H.~Carroll, Anne W. Carroll
   \textit{Historia Chrześcijaństwa. Tom~VI: Kryzys Chrześcijaństwa},
   \cite{CarrollCarrollHistoriaChrzecijanstwaVolVI2014}}
+% ######################################
 
-\vspace{0em}
 
 
-% ##################
-\CenterBoldFont{Uwagi do~konkretnych stron}
+% ############################
+\subsection{Uwagi do~konkretnych stron}
+% ############################
 
-\vspace{0em}
 
 
 \noindent
 \Str{12} Wcięcia wszystkich akapitów poza pierwszy~są zbyt duże.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{31}{4--2} Zdanie „Jestem zobowiązany Jamesowi H.~Billingtonowi,
+\StrWierszeD{31}{4--2} Zdanie „Jestem zobowiązany Jamesowi H.~Billingtonowi,
 \textit{Fire In the~Minds~of Man}, wielkiemu historykowi myśli
 rewolucyjnej” po polsku brzmi źle i~jest trochę bez sensu. Nie wiem jednak
 jak je~poprawić.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1537,7 +1522,7 @@ stronie, że~odrzuci on najpierw wiarę katolicką, potem zaś chrześcijaństwo
 Możliwe, że~ta nielogiczność jest wyniki pośmiertnej edycji i~uzupełniania
 tego dzieła oraz pracy tłumacza.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1548,14 +1533,14 @@ tego dzieła oraz pracy tłumacza.
 w~Wojnie~1812 roku, powołując~się na książkę Paula Johnsona
 \textit{Birth~of the~Modern}. Jednak w~tej pozycji Johnson przedstawia
 zupełnie inną wersję wydarzeń. Bitwa ta rozegrała~się już po zawarciu
-pokoju w~Londynie \red{Sprawdź miasto}, ale~przed tym jak statek
+pokoju w~Londynie ???Sprawdź miasto???, ale~przed tym jak statek
 z~informacją o~tym dotarła do~USA, jej przebieg nie doprowadził jednak
 do~kontynuacji działań wojennych. Tym samym, konkluduje Johnson, nie
 wpłynęła na zawarcie pokój, ale~bardzo na~jego recepcję. Amerykanie
 mogli~się bowiem czuć zwycięzcami wojny jako, że~wygrali ostatnią jej
 bitwę.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1578,16 +1563,16 @@ oznaczać miasto w~Hiszpania, ale~też jedno z~wielu o~takiej nazwie
 w~Ameryce Południowej. Pierwszym pewnym miejsce w~którym go potem
 widzimy, jest wenezuelska Barcelona.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{67}{8} Po~tej linii powinien nastąpić odstęp między przypisami.
+\StrWierszD{67}{8} Po~tej linii powinien nastąpić odstęp między przypisami.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1601,30 +1586,30 @@ synem Jerzego~III, a~nie jego dalekim krewnym. Z~tego tej karygodnej
 pomyłki wszelkie dalsze odniesienia do~działań tego monarchy mogą być
 błędnie przypisanymi mu aktami Jerzego~IV, bądź źle umieszczone w~czasie.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{83}{20--17} Zdanie „Tak samo było w~przypadku Lenina, kolejnego
+\StrWierszeD{83}{20--17} Zdanie „Tak samo było w~przypadku Lenina, kolejnego
 wielkiego przywódcy rewolucji, który wychował~się w~pobożnej
 chrześcijańskiej rodzinie, a~fakt, że~wedle jego własnego świadectwa,
 utracił wiarę w~wieku szesnastu lat, nie miał na~to żadnego wpływu.”
 źle brzmi i~bardzo trudno zrozumieć myśl jaką w~tym kontekście miało
 przekazywać.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{85}{11} Gwiazdka w~tej linii jest za~mała.
+\StrWierszD{85}{11} Gwiazdka w~tej linii jest za~mała.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1638,7 +1623,7 @@ na~stronie~115 jest napisane, iż~wykrzyknął on „Nie oszczędzono mi niczego
 na~tej ziemni” w~momencie,gdy~dowiedział~się o~zamordowaniu swojej żony
 Elżbiety. Te~dwa fragmenty zdają~się sobie przeczyć.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1652,17 +1637,17 @@ co~nie ma chyba nic wspólnego z~tym zebraniem i~ilością osób która na nim
 była, nie~pamiętam zaś aby w~tej książce była podana ilość osób
 zasiadających w~kortezach.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{126}{8} Nie wiem czemu w~tej linii umieszczono słowa \textit{Dios!
-  Patria! Fueros! Rey!}
+\StrWierszD{126}{8} Nie wiem czemu w~tej linii umieszczono słowa
+\textit{Dios! Patria! Fueros! Rey!}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1673,7 +1658,7 @@ zasiadających w~kortezach.
 cytowany z~innego źródła niż na~następnej stronie. Nie jest to żaden błąd,
 jedynie trochę to dziwne.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1682,7 +1667,7 @@ jedynie trochę to dziwne.
 \noindent
 \Str{145} Dwa ostatnie paragrafy nie~mają wcięcia w~tekście.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1695,7 +1680,7 @@ Zapewne jest to herezja, lecz nie jestem na tyle kompetentny by~stwierdzić
 to na 100\%. Jeśli jest to herezja, to wątpię by obarczała sumienie
 Carrolla, który zapewne po prostu popełnił głupi błąd pisząc te słowa.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1707,14 +1692,14 @@ zamieszanie. Nie potrafię na~przykład z~całą pewnością
 stwierdzić, które z~wydarzeń opisanych w~ostatnim paragrafie
 odnoszą~się do~pierwszego synodu, a~które do drugiego.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{165}{14--12} Sens zdania „Wielu opuszczało ojczyznę, wypływając
+\StrWierszD{165}{14--12} Sens zdania „Wielu opuszczało ojczyznę, wypływając
 do~USA z~niewielkich portów, a~ich nazwiska przetrwały tylko w~lokalnej
 tradycji.” jest następujący. Pamięć o~tym, kto wówczas wypłynął do~Stanów
 Zjednoczonych zachowała~się w~lokalnej tradycji ustnej, ale~nie
@@ -1722,7 +1707,7 @@ w~dokumentach z~tamtej epoki. W~tym sensie ich nazwiska nie przetrwały
 w~źródłach, nie należy jednak przez to rozumieć, że~ich nazwiska zniknęły
 z~użycia, co taka forma tego zdania może sugerować.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1734,7 +1719,7 @@ francusko-pruskiej. Dlaczego niby informacja o~tym, że~Niemcy obrażają
 Francuzów wysłana do~króla Prus Wilhelma miała spowodować wypowiedzenie
 wojny przez Napoleona~III.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1744,16 +1729,16 @@ wojny przez Napoleona~III.
 \Str{218} Na~dole strony pozostawiono puste miejsce, które powinien
 zajmować tekst z~następnej strony.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{225}{3} Po tej linii następuje za~duży odstęp.
+\StrWierszD{225}{3} Po tej linii następuje za~duży odstęp.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1762,7 +1747,7 @@ zajmować tekst z~następnej strony.
 \noindent
 \Str{264} Dwa pierwsze paragrafy są źle sformatowane.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1772,7 +1757,7 @@ zajmować tekst z~następnej strony.
 \Str{274} Na~dole strony pozostawiono puste miejsce, które powinien
 zajmować tekst z~następnej strony.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1785,34 +1770,35 @@ poczynił Carroll\footnote{Myślę, że~Anne W.~Carroll zgodziłaby~się
   na~przyznanie autorstwa jej mężowi Warrenowi.}, należy mieć na uwadze
 czytając to~co pisze on~o~I~Wojnie Światowej na~stronach 867 i~873.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{299}{1} Czcionka w~tej linii jest za~duża.
+\StrWierszD{299}{1} Czcionka w~tej linii jest za~duża.
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{305}{4} Imię ojca Rasputina Efima, na~str.~313 jest pisane „Jefim”.
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{352}{1} Czcionka w~tej linii jest za~duża.
+\StrWierszD{305}{4} Imię ojca Rasputina Efima, na~str.~313 jest pisane
+„Jefim”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszD{352}{1} Czcionka w~tej linii jest za~duża.
+
+\VerSpaceFour
 
 
 
@@ -1825,7 +1811,7 @@ o~pokoju z~Niemcami przeszła stosunkiem siedem do~czterech. Najpewniej
 w~obu przypadkach mowa jest o~tym samym głosowaniu i~jeden z~podanych
 wyników jest błędny.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1836,7 +1822,7 @@ wyników jest błędny.
 mowa o~Denikinie i~jego armii, gdy wycofują~się na~Kubań i~Krym. Nie
 dowiadujemy~się tym samym jakie były ich dalsze losy.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1850,26 +1836,26 @@ mowa o~nich jako o~sąsiadujących z~Niemcami. Należy~się domyślać,
 w~jakimś sensie polskie, analogicznie dla~państw nadbałtyckich,
 do~Cesarskich Niemiec po~wygranej wojnie.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{416}{22} Po tej linii powinien być większy odstęp.
+\StrWierszG{416}{22} Po tej linii powinien być większy odstęp.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{432}{8} Na~podstawie wcześniejszej części książki nie jestem
+\StrWierszD{432}{8} Na~podstawie wcześniejszej części książki nie jestem
 w~stanie powiedzieć o~co chodziło w~sprawie nadużyć w~Gruzji.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1879,61 +1865,62 @@ w~stanie powiedzieć o~co chodziło w~sprawie nadużyć w~Gruzji.
 \Str{435} Na~dole strony pozostawiono puste miejsce, które powinien
 zajmować tekst z~następnej strony.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{437}{8} Wydaje mi~się, że~spotkałem~się z~wersją, iż~Trocki został
-zabity ciosem czekanem. Należy to sprawdzić jeszcze w~jakiejś innej pracy.
+\StrWierszD{437}{8} Wydaje mi~się, że~spotkałem~się z~wersją, iż~Trocki
+został zabity ciosem czekanem. Należy to sprawdzić jeszcze w~jakiejś innej
+pracy.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{441}{1--2} Szacunki Carrollów, że~w~Chinach żyła jedna trzecia
+\StrWierszeG{441}{1--2} Szacunki Carrollów, że~w~Chinach żyła jedna trzecia
 ludności świata, budzą pewne moje wątpliwości. Po~pierwsze należałoby
 ustalić o~jakim okresie czasu mowa, po~drugie należałoby sprawdzić, jak
 rzeczywiście przedstawiał~się stosunek ludności Chin do ludności świata.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{445}{17} Deng Xiaoping żył w~latach 1904--1997, zaś za moment
+\StrWierszeG{445}{17} Deng Xiaoping żył w~latach 1904--1997, zaś za moment
 przejęcia jego władzy po~Mao Zedongu, który zmarł w~1976 roku, należy
 chyba przyjąć rok~1978. Xiaoping miał więc wtedy nie dziewięćdziesiąt lecz
 siedemdziesiąt cztery lata.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{451}{8} Tu~można powtórzyć wątpliwości odnośnie podanej
+\StrWierszG{451}{8} Tu~można powtórzyć wątpliwości odnośnie podanej
 ludności~Chin i~jej udziału w~ludności świata, które~są w~komentarzu
 do~strony~441.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{451}{6} Ten wiersz jest źle wcięty.
+\StrWierszD{451}{6} Ten wiersz jest źle wcięty.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1944,45 +1931,47 @@ do~strony~441.
 zajmować tekst z~następnej strony. Choć w~tym wypadku możliwe jest,
 że~obecny wybór jest lepszy.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{456}{11} Znak „*” jest w~tej linii za mały.
+\StrWierszD{456}{11} Znak „*” w~tej linii jest za mały.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{466}{18} Ponieważ ten cytata zaczyna~się z~małej litery, do~tego
+\StrWierszD{466}{18} Ponieważ ten cytata zaczyna~się z~małej litery, do~tego
 zaraz następuje znak~„\ldots”, co sugeruje, że~ten cytat został błędnie
 przytoczony. Jednak nie wiem jak go~poprawić.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{466}{1} To~odwołanie bibliograficzne jest niedokończone.
+\StrWierszD{466}{1} To~odwołanie bibliograficzne jest niedokończone.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{478}{5--6} W~mojej opinii te~dwie linie~są źle sformatowane.
+\StrWierszD{478}{5--6} W~mojej opinii te~dwie linie~są źle sformatowane.
 
-\vspace{\spaceFour}
+\VerSpaceFour
+
+
 
 
 
@@ -1994,7 +1983,7 @@ nie byli równie potężni\footnote{Nie jestem pewien, czy w~owym czasie
   cała Japońska władza należało do~cesarza Hirohito, stąd takie
   sformułowanie tego punktu.}.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -2004,7 +1993,7 @@ nie byli równie potężni\footnote{Nie jestem pewien, czy w~owym czasie
 \Str{497} Należy sprawdzić, czy~rzeczywiście największą grupą etniczną
 w~Związku Radzieckim byli Ukraińcy.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -2017,7 +2006,7 @@ są~w~mojej ocenie mało prawdopodobne. Jeśli jednak Carrollom chodziło
 o~-90 stopni Fahrenheita, to~oznaczałoby około -65\textcelsius, co~jest
 już znacznie bardziej prawdopodobne.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -2030,68 +2019,68 @@ zboża to na głowę przypadałoby nie jak piszą Carrollowie
 milionów ton zboża, to~na jednego Ukraińca przypadałoby 322 kilogramów
 zboża. Ktoś wyraźnie coś pomylił w~rachunkach.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{503}{16} W~tym wersie znajduje~się malutkie wcięcie, którego
+\StrWierszG{503}{16} W~tym wersie znajduje~się malutkie wcięcie, którego
 nie~powinno być. Osobiście uważam też, że~lepiej brzmiałby w~następującej
 postaci: „Nadejdzie rok czarny, rok krwi i~pożarów”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{503}{2} Znajdujące~się na~końcu tej linii~„w:”, wygląda bardzo źle.
-Należałoby je przenieść na~początek następnej linii.
+\StrWierszD{503}{2} Znajdujące~się na~końcu tej linii~„w:”, wygląda bardzo
+źle. Należałoby je przenieść na~początek następnej linii.
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{507}{4} Ponad tą~linią powinien znajdować~się odstęp.
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{516}{6} W~tej linii jest wcięcie, którego według mnie nie~powinno
-tu~być.
+\StrWierszD{507}{4} Ponad tą~linią powinien znajdować~się odstęp.
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{526}{6} Ciężko jest zrozumieć od~razu, kim był przywoływany w~tej
-linii Jakub. Jest to zapewne karlistowski następca tronu, o~którym była
-mowa w~rozdziale \textit{Zwycięstwo i~klęska   tradycjonalistów}.
-\red{Sprawdź kiedyś jak~się on~dokładnie nazywał.}
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{527}{17} Wcięcie tego akapitu jest zbyt duże.
+\StrWierszD{516}{6} W~tej linii jest wcięcie, którego według mnie
+nie~powinno tu~być.
 
-\vspace{\spaceFour}
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszD{526}{6} Ciężko jest zrozumieć od~razu, kim był przywoływany
+w~tej linii Jakub. Jest to zapewne karlistowski następca tronu, o~którym
+była mowa w~rozdziale \textit{Zwycięstwo i~klęska tradycjonalistów}.
+????Sprawdź kiedyś jak~się on~dokładnie nazywał.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszG{527}{17} Wcięcie tego akapitu jest zbyt duże.
+
+\VerSpaceFour
 
 
 
@@ -2102,46 +2091,46 @@ mowa w~rozdziale \textit{Zwycięstwo i~klęska   tradycjonalistów}.
 w~kortezach więc Front Ludowy z~263 miał 53, nie 26 miejsc przewagi. Albo
 jakieś ugrupowanie zostało przemilczane, albo~te liczby zostały źle podane.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{537}{6} Skala śmierci w Hiszpańskiej Wojnie Domowej jest zbyt mała,
-by~można ją było nazwać holokaustem.
+\StrWierszG{537}{6} Skala śmierci w Hiszpańskiej Wojnie Domowej jest zbyt
+mała, by~można ją było nazwać holokaustem.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{537}{6} Powinno tu~się znaleźć jawne potępienie zbrodni
+\StrWierszG{537}{6} Powinno tu~się znaleźć jawne potępienie zbrodni
 nacjonalistów. Popełnienie ich w~reakcji nie znosi winy.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{540}{7} Wcięcie tego akapitu jest zbyt duże.
+\StrWierszD{540}{7} Wcięcie tego akapitu jest zbyt duże.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{543}{1} Do~formy całego przypisu niezbyt pasuje linia „Rafael Casa
-de~la~Vega, \textit{Franco, żołnierz}, tłum.~J.~Chodorowski.”.
+\StrWierszD{543}{1} Do~formy całego przypisu niezbyt pasuje linia „Rafael
+Casa de~la~Vega, \textit{Franco, żołnierz}, tłum.~J.~Chodorowski.”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -2153,7 +2142,7 @@ Hitlerem w~latach 1924--1932, skoro przez większość tego czasu był
 on~człowiekiem zupełnie pozbawionym wpływów. Jednak w~historii zdarzały~się
 już dziwniejsze rzeczy.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -2166,7 +2155,7 @@ Leckiego jest pozycją niedoścignioną porównywalną tylko z~Tukidydesem.
 Natomiast w~następnym, iż~najlepsza praca w~tym temacie to~ta autorstwa
 Samuela Eliota Morisona.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -2175,63 +2164,65 @@ Samuela Eliota Morisona.
 \noindent
 \Str{566} Przypisy od~tłumacza~są źle ponumerowane ilością gwiazdek.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{572}{12} Gwiazdka w~tej linii jest zbyt mała.
+\StrWierszG{572}{12} Gwiazdka w~tej linii jest zbyt mała.
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{585}{17--15} Te~linie~są źle sformatowane.
-
-\vspace{\spaceFour}
-
-
-
-\noindent
-\StrWd{609}{8} Gwiazdka w~tej linii jest za~mała.
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{623}{10} Gwiazdka w~tej linii jest zbyt mała.
+\StrWierszD{585}{17--15} Te~linie~są źle sformatowane.
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{778}{4--3} Te dwie linie, łącznie z~„251.” służącym za~odnośnik tego
-przypisu powinny być częścią poprzedniego przypisu. Samo oznaczenie „251.”
-jest częścią urwanych w~poprzedniej linii numerów stron: 250-251.
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{867}{17} Linia jest źle zedytowana. Drugie zdanie w~tej linii jest
-początkiem następnej pozycji w~bibliografii, powinna więc być zgodnie z~tym
-sformatowana.
+\StrWierszD{609}{8} Gwiazdka w~tej linii jest za~mała.
 
-\vspace{\spaceFour}
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszG{623}{10} Gwiazdka w~tej linii jest zbyt mała.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszD{778}{4--3} Te dwie linie, łącznie z~„251.” służącym za~odnośnik
+tego przypisu powinny być częścią poprzedniego przypisu. Samo oznaczenie
+„251.” jest częścią urwanych w~poprzedniej linii numerów stron: 250-251.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszD{867}{17} Linia jest źle zedytowana. Drugie zdanie w~tej linii
+jest początkiem następnej pozycji w~bibliografii, powinna więc być zgodnie
+z~tym sformatowana.
+
+\VerSpaceFour
 
 
 
@@ -2771,66 +2762,66 @@ sformatowana.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceSix
 
 
 \noindent
-\StrWg{103}{5} \\
+\StrWierszG{103}{5} \\
 \Jest  mianem krucjaty (\textit{la~cruzada} ) określali \\
 \Powin określali mianem krucjaty (\textit{la~cruzada}) \\
-\StrWd{170}{10} \\
+\StrWierszD{170}{10} \\
 \Jest  „F\"{u}hrera z~Poczdamu”, ojca Fryderyka Wielkiego \\
 \Powin „F\"{u}hrera z~Poczdamu”, Fryderyka Williama~I, ojca Fryderyka
 Wielkiego \\
-\StrWd{228}{5} \\
+\StrWierszD{228}{5} \\
 \Jest  The~Victory~of Reason: How Christianity Led to Freedom,
 Capitalism and~Western Success \\
 \Powin \textit{The~Victory~of Reason: How Christianity Led to Freedom,
   Capitalism and~Western Success} \\
-\StrWg{234}{18} \\
+\StrWierszG{234}{18} \\
 \Jest  zapoczątkowujących teorię indukcji elektromagnetycznej \\
 \Powin które doprowadziły do~powstania teorii indukcji
 elektromagnetycznej \\
-\StrWd{237}{1} \\
+\StrWierszD{237}{1} \\
 \Jest  Ford: The~Times, the~Man, and~the~Company \\
 \Powin \textit{Ford: The~Times, the~Man, and~the~Company} \\
-\StrWd{246}{9} \\
+\StrWierszD{246}{9} \\
 \Jest  Alexander Graham Bell and~the~Passion for~Invention \\
 \Powin \textit{Alexander Graham Bell and~the~Passion for~Invention} \\
-\StrWd{299}{2} \\
+\StrWierszD{299}{2} \\
 \Jest  Three Who Made a~Revolution \\
 \Powin \textit{Three Who Made a~Revolution} \\
-\StrWd{383}{18} \\
+\StrWierszD{383}{18} \\
 \Jest  Kołczak \\
 \Powin Kołczak doszedł do wniosku \\
-\StrWd{507}{14} \\
+\StrWierszD{507}{14} \\
 \Jest \textit{przeciwko zastosowaniu kary śmierci. Co~więcej,
   przekonał do~swego poglądu Politbiuro.} \\
 \Powin przeciwko zastosowaniu kary śmierci. Co~więcej, przekonał
 do~swego poglądu Politbiuro. \\
-\StrWd{545}{10} \\
+\StrWierszD{545}{10} \\
 \Jest  i~dwutomowa \textit{Visions~of Glory} (Boston 1983),
 \textit{Alone} \\
 \Powin w~dwóch tomach: \textit{Visions~of Glory} (Boston 1983)
 i~\textit{Alone} \\
-\StrWd{566}{5} \\
+\StrWierszD{566}{5} \\
 \Jest  South Pacific Combat Air Transport \\
 \Powin SCAT (\textit{South Pacific Combat Air Transport}) \\
-\StrWd{566}{2} \\
+\StrWierszD{566}{2} \\
 \Jest  WAC~~(Women's Army Corps) \\
 \Powin WAC~(\textit{Women's Army Corps}) \\
-\StrWd{790}{3--1} \\
+\StrWierszD{790}{3--1} \\
 \Jest „Akcja afirmatywna w~orzecznictwie Sądu Najwyższego Stanów
 Zjednoczonych”, Z~problemów bezpieczeństwa. Prawa człowieka \\
 \Powin \textit{Akcja afirmatywna w~orzecznictwie Sądu Najwyższego Stanów
   Zjednoczonych}, w:~\textit{Z~problemów bezpieczeństwa. Prawa człowieka} \\
-\StrWd{791}{3} \\
+\StrWierszD{791}{3} \\
 \Jest \textit{Infant Himicides through} \\
 \Powin Bogomir Kuhar, \textit{Infant Homicides Through} \\
-\StrWd{797}{6} \\
+\StrWierszD{797}{6} \\
 \Jest  „Why Can't We~Love Them Both?” \\
 \Powin \textit{Why Can't We~Love Them Both?} \\
-\StrWd{799}{5} \\
+\StrWierszD{799}{5} \\
 \Jest  „Pope John Paul~II's Encyclical \textit{Veritatis Splendor}” \\
 \Powin \textit{Pope John Paul~II's Encyclical „Veritatis Splendor”} \\
 
@@ -2850,7 +2841,7 @@ Zjednoczonych”, Z~problemów bezpieczeństwa. Prawa człowieka \\
 % ############################
 \newpage
 
-\Work{ % Autor i tytuł dzieła
+{ % Autor i tytuł dzieła
   Ks. Bogusław Kumor \\
   \textit{Historia Kościoła. Tom~I: Starożytność chrześcijańska},
   \cite{KumorHistoriaKosciolaVolI2003}}
@@ -2881,7 +2872,7 @@ Zjednoczonych”, Z~problemów bezpieczeństwa. Prawa człowieka \\
 
 \end{center}
 
-\vspace{\spaceTwo}
+% \vspace{\spaceTwo}
 
 
 
@@ -2901,13 +2892,13 @@ Zjednoczonych”, Z~problemów bezpieczeństwa. Prawa człowieka \\
 
 \section{Historia świętej wiary, I~wiek przed i~I po Chrystusie}
 
-\vspace{\spaceTwo}
+% \vspace{\spaceTwo}
 % ######################################
 
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+{ % Autor i tytuł dzieła
   Wojciech Roszkowski \\
   \textit{Świat Chrystusa. Tom~I}, \cite{RoszkowskiSwiatChrystusVolI2016}}
 
@@ -2921,7 +2912,7 @@ Zjednoczonych”, Z~problemów bezpieczeństwa. Prawa człowieka \\
 
 
 \noindent
-\StrWg{63}{24} Wydaje mi się, że~zaraz przed zdaniem
+\StrWierszG{63}{24} Wydaje mi się, że~zaraz przed zdaniem
 „Oskarżycielem Mariammy\ldots” powinien znajdować~się tekst mówiący
 o~tym, że~Herodes postawił ją przed sądem. Prawdopodobnie został on
 zgubiony w~trakcie składania książki.
@@ -3565,14 +3556,12 @@ częścią cytowanego fragmentu.
 \newpage
 
 \section{Historia świętej wiary, XVIII i~XIX wiek}
-
-\vspace{\spaceTwo}
 % ######################################
 
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+{ % Autor i tytuł dzieła
   Richard Butterwick \\
   \textit{Polska Rewolucja a~Kościół Katolicki 1788--1792},
   \cite{ButterwickPolskaRewolucjaAKosciolKatolicki2012}}
@@ -3626,14 +3615,12 @@ częścią cytowanego fragmentu.
 \newpage
 
 \section{Historia świętej wiary, XX i~XXI wiek}
-
-\vspace{\spaceTwo}
 % ######################################
 
 
 
 % ############################
-\Work{ % Autor i tytuł książki
+{ % Autor i tytuł książki
   Red. E. Guerriero, M. Impagliazzo \\
   \textit{Najnowsza historia Kościoła. Katolicy i~kościoły
     chrześcijańskie} \\
@@ -3712,7 +3699,7 @@ częścią cytowanego fragmentu.
 
 % #####################################################################
 % #####################################################################
-% Bibliografia
+% Bibliography
 
 \bibliographystyle{plalpha}
 
@@ -3724,5 +3711,5 @@ częścią cytowanego fragmentu.
 
 % ############################
 
-% Koniec dokumentu
+% End of the document
 \end{document}
