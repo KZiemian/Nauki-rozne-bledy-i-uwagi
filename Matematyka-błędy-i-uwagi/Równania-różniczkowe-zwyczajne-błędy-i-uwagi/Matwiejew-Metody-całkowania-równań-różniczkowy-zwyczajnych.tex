@@ -171,6 +171,32 @@
 
 
 
+
+
+
+
+% ######################################
+\section{Oznaczenia i~konwencje}
+
+\label{sec:Oznaczenia-i-konwencje}
+% ######################################
+
+
+
+\noindent
+Dziedzinę funkcji $f$ będziemy oznaczać symbolem $\Dcal( f )$.
+
+\VerSpaceFour
+
+
+
+
+
+
+
+
+
+
 % ######################################
 \section{Uwagi ogólne}
 
@@ -179,6 +205,21 @@
 
 
 
+\noindent
+Dla uzyskania większej spójności z~powszechnie stosowaną dziś notacją,
+odejdziemy w~tych notatkach od kilku konwencji stosowanych w~książce
+Matwiejewa. Przykładowo, odcinek domknięty o~końcach $a$ i~$b$ będzie
+zapisywany nie jako $\langle a, b \rangle$, lecz jako $[ a, b ]$. Czytelnik nie
+powinien~się więc dziwić, jeśli cytowany tekst odbiega w~takich kwestiach
+od tego, który można znaleźć w~książce.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
 Książka ta podąża za~umową, że~jeśli argumenty danej funkcji są
 odpowiednio oczywiste, to można je opuścić. Przykładowo na stronie~7
 równanie (1) ma postać
@@ -240,13 +281,14 @@ Str.~7, wiersz 15.
 \begin{equation}
   \label{eq:Uwagi-ogolne-05}
   \begin{split}
-    \Phi \negHorSpaceEleven \left(
-    &x_{ 1 }, x_{ 2 }, \ldots, x_{ n },
-      u( x_{ 1 }, x_{ 2 }, \ldots, x_{ n }),
+    \Phi \negHorSpaceEleven
+    &\left( x_{ 1 }, x_{ 2 }, \ldots, x_{ n },
+      u( x_{ 1 }, x_{ 2 }, \ldots, x_{ n } ),
       \tfrac{ \partial u( x_{ 1 }, \, x_{ 2 }, \, \ldots, \, x_{ n } ) }{ \partial x_{ 1 } },
       \tfrac{ \partial u( x_{ 1 }, \, x_{ 2 }, \, \ldots, \, x_{ n } ) }{ \partial x_{ 2 } },
       \ldots, \right. \\
-    &\left.
+    &\hspace{0.6em}
+      \left.
       \tfrac{ \partial u( x_{ 1 }, \, x_{ 2 }, \, \ldots, \, x_{ n } ) }{ \partial x_{ n } }
       \right) = 0
   \end{split}
@@ -683,7 +725,8 @@ wszystkich okręgów na płaszczyźnie $xy$ napotykamy po raz pierwszy na
 pewien problem, który powróci do nas w przyszłości. Naszym punktem wyjścia
 jest równania
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-22}
+  % \label{eq:Matwiejew-Metody-calkowania-ETC-22}
+  \label{eq:Uwagi-do-konkrentych-stron-01}
   ( x - a )^{ 2 } + ( y - b )^{ 2 } = R^{ 2 }.
 \end{equation}
 Różniczkując je dwa razy otrzymujemy dwa następujące równania.
@@ -694,10 +737,10 @@ Różniczkując je dwa razy otrzymujemy dwa następujące równania.
 \begin{subequations}
 
   \begin{align}
-    \label{eq:Matwiejew-Metody-calkowania-ETC-23-A}
+    \label{eq:Uwagi-do-konkrentych-stron-02-A}
     1 + \big( y'( x ) \big)^{ 2 } + \big( y( x ) - b \big) y''( x )
     &= 0, \\
-    \label{eq:Matwiejew-Metody-calkowania-ETC-23-B}
+    \label{eq:Uwagi-do-konkrentych-stron-02-B}
     3 y'( x ) y''( x ) + \big( y( x ) - b \big) y'''( x )
     &= 0.
   \end{align}
@@ -710,20 +753,20 @@ Aby usunąć z~równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-23-B}
 parametr $b$ przyjmujemy, że~$y''( x ) \neq 0$, więc możemy przepisać równanie
 \eqref{eq:Matwiejew-Metody-calkowania-ETC-23-A} jako
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-24}
+  \label{eq:Uwagi-do-konkrentych-stron-03}
   y( x ) - b =
   -\frac{ 1 + \big( y'( x ) \big)^{ 2 } }{ y''( x ) }.
 \end{equation}
 Podstawiając tą zależność do \eqref{eq:Matwiejew-Metody-calkowania-ETC-23-B}
 dostajemy
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-25}
+  \label{eq:Uwagi-do-konkrentych-stron-04}
   3 y'( x ) y''( x ) -
   \frac{ 1 + \big( y'( x ) \big)^{ 2 } }{ y''( x ) } y'''( x ) = 0.
 \end{equation}
 Po pomnożeniu obustronnie przez $y''( x )$ dostajemy
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-26}
+  \label{eq:Uwagi-do-konkrentych-stron-05}
   3 y'( x ) \big( y''( x ) \big)^{ 2 } -
   \Big( 1 + \big( y'( x ) \big)^{ 2 } \Big) y'''( x ) = 0.
 \end{equation}
@@ -734,7 +777,7 @@ zero. Powstaje więc pytania, jaki jest zakres obowiązywania tego równania?
 Równanie \eqref{eq:Matwiejew-Metody-calkowania-ETC-23-A} możemy przekształci
 przy założeniu $y( x ) - b \neq 0$ do postaci
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-27}
+  \label{eq:Uwagi-do-konkrentych-stron-06}
   y''( x ) =
   -\frac{ 1 + \big( y'( x ) \big)^{ 2 } }{ y( x ) - b },
 \end{equation}
@@ -769,7 +812,7 @@ zatrzymamy~się przez chwilę.
 Dla $x \in ( a - R, a + R )$ jesteśmy w~stanie je odwikłać na funkcję
 $y( x )$ otrzymując dwie funkcje
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-28}
+  \label{eq:Uwagi-do-konkrentych-stron-07}
   y_{ \pm }( x ) = \pm\sqrt{ R^{ 2 } - ( x - a )^{ 2 } } + b.
 \end{equation}
 Nie jest możliwe odwikłanie tego równania na funkcję $y( x )$ w~sposób
@@ -779,7 +822,7 @@ $[ a - R, a - R + \delta )$. W~tematykę tego, czy w~takim razie nie powinniśmy
 również rozważać równania różniczkowego na funkcję $x( y )$ (zob. str.~13
 tej książki) nie będziemy~się zagłębiać. Niemniej widzimy, że
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-29}
+  \label{eq:Uwagi-do-konkrentych-stron-08}
   \lim_{ x \nearrow a + R } y_{ \pm }( x ) = b,
 \end{equation}
 więc funkcje te możemy przedłużyć do funkcji ciągłych na przedziale
@@ -810,7 +853,7 @@ nieróżniczkowalne w~punkcie $a + R$. Czy w~takim wypadku należy uważać
 funkcje $\yTilde_{ \pm }( x )$ za rozwiązanie odpowiedniego równania
 różniczkowego? Zwróćmy uwagę, że~rozwiązanie w~postaci uwikłanej
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-30}
+  \label{eq:Uwagi-do-konkrentych-stron-09}
   ( x - a )^{ 2 } + ( y - b )^{ 2 } = R^{ 2 },
 \end{equation}
 przedstawia okrąg, czyli krzywą gładką w~każdym swoim punkcie, leżącą
@@ -841,14 +884,14 @@ powrócimy jeszcze wielokrotnie w~tych notatkach.
 i~$\Phi_{ y }$, gdzie $\Phi$ jest funkcją dwóch zmiennych:
 $\Phi( x, y )$. Jest to skrótowy zapis pochodnej cząstkowej
 \begin{equation}
-  \label{eq:Czym-jest-rownanie-ETC-01}
+  \label{eq:Uwagi-do-konkrentych-stron-10}
   \Phi_{ x } \equiv
   \frac{ \partial \Phi( x, y ) }{ \partial x }.
 \end{equation}
 W~przypadku zmiennej~$y$ dokładny sens tego oznaczenia jest często trochę
 inny. Mianowicie należy je rozumieć jako
 \begin{equation}
-  \label{eq:Czym-jest-rownanie-ETC-01}
+  \label{eq:Uwagi-do-konkrentych-stron-11}
   \Phi_{ y } \equiv
   \frac{ \partial \Phi( x, y ) }{ \partial y }\bigg|_{ y = y( x ) }.
 \end{equation}
@@ -881,13 +924,13 @@ zmiennej~$x$, który oznaczymy~$A$. Tym samym możemy odwikłać funkcję
 $y( x )$ dla wszystkich wartości $x \in A$. Przepiszmy teraz równanie (10)
 w~bardziej jawnej formie jako
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-31}
+  \label{eq:Uwagi-do-konkrentych-stron-12}
   \Phi_{ x }'\big( x, y( x ) \big) +
   \Phi_{ y }'\big( x, y( x ) \big) f\big( x, y( x ) \big) = 0.
 \end{equation}
 Równanie to przekształcamy w~oczywisty sposób do postaci
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-32}
+  \label{eq:Uwagi-do-konkrentych-stron-13}
   -\frac{ \Phi_{ x }'\big( x, y( x ) \big) }
   { \Phi_{ y }'\big( x, y( x ) \big) } =
   f\big( x, y( x ) \big).
@@ -898,7 +941,7 @@ uwikłanej $y'( x )$.
 Na koniec możemy zauważyć, że~zarówno wzór
 \eqref{eq:Matwiejew-Metody-calkowania-ETC-31} jak i~dobrze znaną zależność
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-33}
+  \label{eq:Uwagi-do-konkrentych-stron-14}
   y'( x ) =
   -\frac{ \Phi_{ x }'\big( x, y( x ) \big) }{ \Phi_{ y }'\big( x, y'( x ) \big) },
 \end{equation}
@@ -919,7 +962,7 @@ przedyskutować to zagadnienie możliwie dokładnie.
 \Str{16} Należy przedyskutować dwa zagadnienia dotyczące rozwiązania
 równania różniczkowego
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-34}
+  \label{eq:Uwagi-do-konkrentych-stron-15}
   y'( x ) = f\big( x, y( x ) \big),
 \end{equation}
 w~postaci parametrycznej. Po pierwsze, czy jeśli $y( x )$ jest rozwiązaniem
@@ -927,7 +970,7 @@ tego równania, to czy można podać jego rozwiązanie w~postaci parametrycznej?
 Po drugie, jak uzasadnić, że~funkcje $\varphi( t )$ i~$\psi( t )$ spełniające
 równanie
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-35}
+  \label{eq:Uwagi-do-konkrentych-stron-16}
   \frac{ \psi'( t ) }{ \varphi'( t ) } =
   f\big( \varphi( t ), \psi( t ) \big),
 \end{equation}
@@ -946,7 +989,7 @@ jest określone na płaszczyźnie~$xy$, więc funkcje $\varphi( t )$ i~$\psi( t 
 rozumieć jako odwzorowanie $\Psi( t ) : ( t_{ 0 }, t_{ 1 } ) \to \Rbb^{ 2 }$, dane
 przez
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-36}
+  \label{eq:Uwagi-do-konkrentych-stron-17}
   \Psi( t ) = \big( \varphi( t ), \psi( t ) \big).
 \end{equation}
 Korzystając z~interpretacji równania
@@ -962,7 +1005,7 @@ $x \in ( a, b )$, to parę funkcji $\varphi( t )$, $\psi( t )$ określonych
 dla~$t \in I = ( t_{ 0 }, t_{ 1 } )$ nazywamy postacią parametryczną tego
 równania jeśli zachodzi $\varphi( I ) \subset ( a, b )$ oraz
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-37}
+  \label{eq:Uwagi-do-konkrentych-stron-18}
   \psi( t ) = y\big( \varphi( t ) \big).
 \end{equation}
 
@@ -973,7 +1016,7 @@ rozwiązanie parametryczne. Wystarczy przyjąć, że~$I = ( a, b )$,
 $\varphi( t ) = t$ (zwykle zapisuje to jako $x = t$) i~zdefiniować $\psi( t )$ jako
 $y\big( \varphi( t ) \big)$. Zauważmy, że~zachodzi wówczas
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-38}
+  \label{eq:Uwagi-do-konkrentych-stron-19}
   \frac{ d \psi( t ) }{ d t } =
   \frac{ d y( x ) }{ d x }\bigg|_{ x = \varphi( t ) }
   \frac{ d \varphi( t ) }{ d t }.
@@ -981,14 +1024,14 @@ $y\big( \varphi( t ) \big)$. Zauważmy, że~zachodzi wówczas
 Oznaczając symbolem prim pochodną po czasie i~zakładając,
 że~$\varphi'( t ) \neq 0$ otrzymujemy zależność
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-39}
+  \label{eq:Uwagi-do-konkrentych-stron-20}
   \frac{ d y( x ) }{ d x }\bigg|_{ x = \varphi( t ) } =
   \frac{ \psi'( t ) }{ \varphi'( t ) }.
 \end{equation}
 Razem z~równaniami \eqref{eq:Matwiejew-Metody-calkowania-ETC-34}
 i~\eqref{eq:Matwiejew-Metody-calkowania-ETC-37} prowadzi do równania
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-40}
+  \label{eq:Uwagi-do-konkrentych-stron-21}
   \frac{ \psi'( t ) }{ \varphi'( t ) } =
   f\big( \varphi( t ), \psi( t ) \big).
 \end{equation}
@@ -1004,7 +1047,7 @@ $\varphi'( t )$. Na podstawie standardowych twierdzeń z~analizy matematycznej
 (zob. przykładowo \cite{FichtenholzRachunekRozniczkowyETCVolI2005}) oraz
 dobrze znanego wzoru na pochodną funkcji odwrotnej:
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-41}
+  \label{eq:Uwagi-do-konkrentych-stron-22}
   \frac{ d f^{ -1 }( y ) }{ dy } =
   \frac{ d f( t ) }{ d t }\bigg|_{ t = f^{ -1 }( y ) },
 \end{equation}
@@ -1013,7 +1056,7 @@ $J = ( t - \delta_{ 1 }, t + \delta_{ 2 } )$, gdzie $\delta_{ 1 }, \delta_{ 2 } 
 funkcja odwrotna do $\varphi( t )$, oznaczać ją będziemy $\eta( x )$, która jest
 różniczkowalna i~jej pochodna wynosi
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-42}
+  \label{eq:Uwagi-do-konkrentych-stron-23}
   \frac{ d \eta( x ) }{ d x } =
   \frac{ 1 }{ \varphi'\big( \eta( x ) \big) }.
 \end{equation}
@@ -1024,7 +1067,7 @@ w~punkcie $\eta( x )$.
 Rozpatrzmy teraz funkcję $\psi\big( \eta( x ) \big)$. Jej pochodna po zmiennej $x$
 jest równa
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-43}
+  \label{eq:Uwagi-do-konkrentych-stron-24}
   \frac{ d \psi\big( \eta( x ) \big) }{ d x } =
   \frac{ d \psi( t ) }{ d t }\bigg|_{ t = \eta( x ) }
   \frac{ d \eta( x ) }{ d x } =
@@ -1035,14 +1078,14 @@ Jeżeli teraz obliczymy wartość obu stron równania
 \eqref{eq:Matwiejew-Metody-calkowania-ETC-35} dla wartości $t = \eta( x )$
 otrzymamy
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-44}
+  \label{eq:Uwagi-do-konkrentych-stron-25}
   \frac{ \psi'\big( \eta( x ) \big) }{ \varphi'\big( \eta( x ) \big) } =
   f\Big( x, \psi\big( \eta( x ) \big) \Big).
 \end{equation}
 Korzystając z~\eqref{eq:Matwiejew-Metody-calkowania-ETC-38} możemy przepisać
 powyższe równanie jako
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-45}
+  \label{eq:Uwagi-do-konkrentych-stron-26}
   \frac{ d \psi\big( \eta( x ) \big) }{ d x } =
   f\Big( x, \psi\big( \eta( x ) \big) \big).
 \end{equation}
@@ -1070,7 +1113,7 @@ przedstawia~się następująco. Szukana funkcja $y$ jest odwzorowaniem
 $y : A \to \Rbb$, gdzie $A \subset \Rbb$, a~równanie które ma spełniać podane
 jest w~standardowej postaci normalnej:
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-46}
+  \label{eq:Uwagi-do-konkrentych-stron-27}
   y'( x ) = f\big( x, y( x ) \big).
 \end{equation}
 W~związku z~tym pole kierunków jest zdefiniowane na płaszczyźnie $xy$,
@@ -1108,7 +1151,7 @@ ilość pól wektorowych, takich że wektor $\vecv( x, y )$ ma kierunek równy
 $v( x, y )$. Wystarczy bowiem znaleźć jedno takie pole $\vecv( x, y )$,
 następnie dla $\lambda \neq 0$ określić pole
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-47}
+  \label{eq:Uwagi-do-konkrentych-stron-28}
   \vecv_{ \, \lambda }( x, y ) = \lambda \HorSpaceThree \vecv( x, y ).
 \end{equation}
 Sposób budowy pola wektorowego odpowiadającego danemu polu kierunków podamy
@@ -1132,7 +1175,7 @@ którego równanie ruchu ma postać
 ale też jaki dokładnie sposób w~jaki ten tor pokonuje. Tor ruchu dla
 badanego przypadku jest zawsze bardzo prosty, tworzy on bowiem odcinek
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-48}
+  \label{eq:Uwagi-do-konkrentych-stron-29}
   y\big( ( x_{ 0 }, x_{ 1 } ) \big) = ( a, b )
 \end{equation}
  (ewentualnie jeden z~odcinków
@@ -1155,21 +1198,21 @@ którego mają one być styczna. Wiemy bowiem, że~krzywa całkowa zawsze
 Załóżmy teraz, że~przez punkt $( x, y )$ ma przechodzić gładka krzywa
 całkowa, dana przez funkcję $y$. Równaniem tej krzywej jest postaci
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-49}
+  \label{eq:Uwagi-do-konkrentych-stron-30}
   K : ( x - \delta, x + \delta ) \to \Rbb^{ 2 }, \quad
   K( x ) = \big( x, y( x ) \big),
 \end{equation}
 gdzie $\delta > 0$. Wobec tego wektor $\vecv$ styczny do~tej krzywej całkowej
 w~tym punkcie jest dany przez
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-50}
+  \label{eq:Uwagi-do-konkrentych-stron-31}
   \vecv \HorSpaceThree ( x, y ) =
   \big[ 1, y'( x ) \big].
 \end{equation}
 Z~analizy matematycznej wiemy, że~jeśli $\alpha$ jest kątem pod jakim styczna do
 krzywej w~punkcie $\big( x, y( x ) \big)$, to zachodzi
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-51}
+  \label{eq:Uwagi-do-konkrentych-stron-32}
   \tan( \alpha ) = y'( x ).
 \end{equation}
 Ponieważ zaś $\tan( \alpha )$ jest wyznaczony przez pole kierunków, pozwala nam
@@ -1177,7 +1220,7 @@ to jednoznacznie wyznaczyć wektor styczny do krzywej całkowej. Możemy teraz
 skorzystać z~\eqref{eq:Matwiejew-Metody-calkowania-ETC-46} i~otrzymać wzór
 na pole wektorowe odpowiadające temu równaniu różniczkowemu:
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-52}
+  \label{eq:Uwagi-do-konkrentych-stron-33}
   \vecv \HorSpaceThree ( x, y ) =
   \big[ 1, f( x, y ) \big].
 \end{equation}
@@ -1190,7 +1233,7 @@ Przyjrzyjmy~się jeszcze raz temu rozumowaniu. Ponieważ w~omawianym
 przypadku wiemy, że~pierwsza pola wektorowego zadanego przez równanie
 \eqref{eq:Matwiejew-Metody-calkowania-ETC-47} musi~się zawsze równać jeden:
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-53}
+  \label{eq:Uwagi-do-konkrentych-stron-34}
   \vecv_{ x }( x, y ) = 1,
 \end{equation}
 więc biorąc to pod uwagę, jesteśmy w~stanie znając wartości pola kierunków
@@ -1203,8 +1246,8 @@ pole wektorowe $\vecv : G \to \Rbb^{ 2 }$, $G \subset \Rbb^{ 2 }$. Szukać będz
 funkcji postaci $\vecy : ( t_{ 0 }, t_{ 1 } ) \to G$, spełniający następujący
 równanie
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-54}
-  \frac{ d \vecy( t ) }{ d t } =
+  \label{eq:Uwagi-do-konkrentych-stron-35}
+  \frac{ d \vecy( t ) }{ dt } =
   \vecf \HorSpaceOne \big( t, \vecy( t ) \big) =
   \vecv \HorSpaceThree \big( \vecy( t ) \big),
 \end{equation}
@@ -1214,7 +1257,7 @@ rozwiązanie $\vecy$. Dodatkowo współrzędne kartezjańskie w~zbiorze $G$
 będziemy oznaczać $y_{ 1 }$ i~$y_{ 2 }$. Ostatnie równanie można
 również zapisać jako
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-55}
+  \label{eq:Uwagi-do-konkrentych-stron-36}
   \begin{bmatrix}
     y'_{ 1 }( t ) \\
     y'_{ 2 }( t )
@@ -1240,7 +1283,7 @@ Aby uzyskać jak poprzednio pełną informację o~ruchu powinniśmy rozpatrywać
 krzywe w~zbiorze $( t_{ 0 }, t_{ 1 } ) \times G$, na którym określone jest pole
 wektorowe
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-56}
+  \label{eq:Uwagi-do-konkrentych-stron-37}
   \vecv_{ \, \textrm{ext} }( t, y_{ 1 }, y_{ 2 } ) =
   \begin{bmatrix}
     1 \\
@@ -1302,25 +1345,25 @@ nad podstawowymi własnościami izoklin. Przyjmijmy, że~izoklina dana jest
 przez funkcję $h( x )$ określoną na zbiorze $( x_{ 0 }, x_{ 1 } )$. Tym
 samym równanie izokliny jako krzywej jest postaci
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-57}
+  \label{eq:Uwagi-do-konkrentych-stron-38}
   K( x ) = \big( x, h( x ) \big).
 \end{equation}
 Zgodnie z~definicją izokliny, dla pewnego $k \in \Rbb$ zachodzi
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-58}
+  \label{eq:Uwagi-do-konkrentych-stron-39}
   k = f\big( x, h( x ) \big).
 \end{equation}
 Zauważmy, że~aby izoklina była rozwiązaniem danego równania różniczkowego
 musiałoby ponadto zachodzi
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-59}
+  \label{eq:Uwagi-do-konkrentych-stron-40}
   h'( x ) = k.
 \end{equation}
 Przykład~3 pokazuje, że~izoklina może być rozwiązaniem równania
 różniczkowego które ją definiuje, ale jest to sytuacja dość szczególna.
 Przykład~1 ze strony~17 jasno pokazuje, że~żadna z~izoklin równania
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-60}
+  \label{eq:Uwagi-do-konkrentych-stron-41}
   y'( x ) = 2 x,
 \end{equation}
 nie jest jego rozwiązaniem.
@@ -1340,7 +1383,7 @@ wprowadzić w~bardziej elegancki i~łatwiejszy w~zrozumieniu sposób.
 
 Najpierw w~jednym paragrafie rozważamy prawą stronę równania
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-61}
+  \label{eq:Uwagi-do-konkrentych-stron-42}
   y'( x ) = f\big( x, y( x ) \big),
 \end{equation}
 dochodząc do wniosku, że~jeśli w~danym obszarze $\Ocal$ płaszczyzny $x y$
@@ -1349,7 +1392,7 @@ są skierowane ku górze (ku dołowi). Następnie możemy przeprowadzić
 podobną analizę drugiej pochodnej funkcji $y( x )$, różniczkują
 po $x$ równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-61}:
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-62}
+  \label{eq:Uwagi-do-konkrentych-stron-43}
   y''( x ) =
   \frac{ \partial f\big( x, y( x ) \big)}{ \partial x } +
   \frac{ \partial f\big( x, y \big) }{ \partial y }\Big|_{ y = y( x ) } \,
@@ -1391,8 +1434,8 @@ też~jej część została przypadkiem pominięta.
 \noindent
 \Str{19} Równanie
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-63}
-  \frac{ d y( x ) }{ d x } =
+  \label{eq:Uwagi-do-konkrentych-stron-44}
+  \frac{ d y( x ) }{ dx } =
   \frac{ y( x ) }{ x }
 \end{equation}
 analizowane w~przykładzie~3 na tej stronie można rozwiązać w~inny sposób,
@@ -1406,7 +1449,7 @@ znaleźć w~książce.
 Mianowicie, zaczynamy od zbadania jego izoklin, czyli szukamy rozwiązań
 równania
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-64}
+  \label{eq:Uwagi-do-konkrentych-stron-45}
   k = \frac{ y_{ \, \izo }( x ) }{ x }, \quad
   k \in \Rbb.
 \end{equation}
@@ -1415,7 +1458,7 @@ Dla zaznaczenia, że~izoklina nie musi być rozwiązanie równania
 $y_{ \, \izo }( x )$, a~nie $y( x )$. Równanie to jest niezmiernie proste,
 więc od razu dostajemy
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-65}
+  \label{eq:Uwagi-do-konkrentych-stron-46}
   y_{ \, \izo }( x ) = k \, x, \quad
   k \in \Rbb.
 \end{equation}
@@ -1440,12 +1483,12 @@ zawarty w~$\Rbb$. Na mocy tego, rozbijamy funkcję daną przez równanie
 \begin{subequations}
 
   \begin{align}
-    \label{eq:Matwiejew-Metody-calkowania-ETC-66-A}
+    \label{eq:Uwagi-do-konkrentych-stron-47-A}
     y_{ \, \izo, \, + }( x )
     &=
       k \, x, \quad
       x > 0, \\
-    \label{eq:Matwiejew-Metody-calkowania-ETC-66-B}
+    \label{eq:Uwagi-do-konkrentych-stron-47-B}
     y_{ \, \izo, \, - }( x )
     &=
       k \, x, \quad
@@ -1471,7 +1514,7 @@ albo $( 0, +\infty )$. Zgodność z~tekstem książki jest prawie pewna,
 bo~Matwiejew tylko półproste wychodzące z~układu współrzędnych nazywa
 krzywymi całkowymi badanego równania. Niemniej warto zaznaczyć, że~funkcja
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-67}
+  \label{eq:Uwagi-do-konkrentych-stron-48}
   y_{ - }( x ) = k \, x, \quad
   x < 0,
 \end{equation}
@@ -1482,7 +1525,7 @@ do~nieporozumień.
 Dla porządku przeanalizujemy jeszcze przypadek $x = 0$, $y \neq 0$. W~takiej
 sytuacji musimy rozpatrzyć równanie
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-68}
+  \label{eq:Uwagi-do-konkrentych-stron-49}
   \frac{ d x( y ) }{ d y } = \frac{ x( y ) }{ y }.
 \end{equation}
 Równanie izoklin rozwiązujemy tak jak poprzednio dostając
@@ -1493,11 +1536,11 @@ Równanie izoklin rozwiązujemy tak jak poprzednio dostając
 \begin{subequations}
 
   \begin{align}
-    \label{eq:Matwiejew-Metody-calkowania-ETC-69-A}
+    \label{eq:Uwagi-do-konkrentych-stron-50-A}
     x_{ \, \izo, \, + }( y )
     &= k_{ 1 } \, y, \quad
       y > 0, \\
-    \label{eq:Matwiejew-Metody-calkowania-ETC-69-B}
+    \label{eq:Uwagi-do-konkrentych-stron-50-B}
     x_{ \, \izo, \, - }( y )
     &= k_{ 1 } \, y, \quad
       y < 0.
@@ -1517,11 +1560,11 @@ rozwiązaniami naszego równania są dwie półproste
 \begin{subequations}
 
   \begin{align}
-    \label{eq:Matwiejew-Metody-calkowania-ETC-70-A}
+    \label{eq:Uwagi-do-konkrentych-stron-51-A}
     x_{ + }( y )
     &= 0, \quad
       y > 0, \\
-    \label{eq:Matwiejew-Metody-calkowania-ETC-70-B}
+    \label{eq:Uwagi-do-konkrentych-stron-51-B}
     x_{ - }( y )
     &= 0, \quad
       y < 0.
@@ -1540,9 +1583,9 @@ i~\eqref{eq:Matwiejew-Metody-calkowania-ETC-69-A}-\eqref{eq:Matwiejew-Metody-cal
 \begin{subequations}
 
   \begin{align}
-    \label{eq:Matwiejew-Metody-calkowania-ETC-71-A}
+    \label{eq:Uwagi-do-konkrentych-stron-52-A}
     y - k \, x = 0, \\
-    \label{eq:Matwiejew-Metody-calkowania-ETC-71-B}
+    \label{eq:Uwagi-do-konkrentych-stron-52-B}
     x - k_{ 1 } \, y = 0,
   \end{align}
 
@@ -1593,7 +1636,7 @@ stronie.
 \noindent
 Wzór (19) o~którym tu mowa to
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-72}
+  \label{eq:Uwagi-do-konkrentych-stron-53}
   y( x ) =
   \int_{ x_{ 0 } }^{ x } f( x ) \, dx + y_{ 0 }.
 \end{equation}
@@ -1627,7 +1670,7 @@ wspomniane na stronie~24.
 Wydaje mi~się, że~Matwiejew chciał za~jego pomocą przekazać następującą
 myśl. Jak już wiemy, jeśli w~równaniu
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-73}
+  \label{eq:Uwagi-do-konkrentych-stron-54}
   y'( x ) = f\big( x, y( x ) \big)
 \end{equation}
 prawa strona jest funkcją ciągłą określoną w~obszarze\footnote{Moglibyśmy
@@ -1668,7 +1711,7 @@ założenia tego twierdzenia są spełnione, chyba że~powiedziano inaczej?
 funkcja dwóch zmiennych $\varphi( x, C )$ jest rozwiązaniem ogólnym pewnego
 równania różniczkowego, co zapisujemy symbolicznie jako
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-74}
+  \label{eq:Uwagi-do-konkrentych-stron-55}
   y( x ) = \varphi( x, C ).
 \end{equation}
 Jednym z~nich jest to, by w~zadanym obszarze można ją było odwikłać
@@ -1677,7 +1720,7 @@ Przekształcamy równanie \eqref{eq:Matwiejew-Metody-calkowania-ETC-73}
 z~równania definiującego funkcję $y( x )$ na równanie uwikłane na trzy
 zmienne niezależne: $x$, $y$ i~$C$. Równanie to ma postać
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-75}
+  \label{eq:Uwagi-do-konkrentych-stron-56}
   y = \varphi( x, C ).
 \end{equation}
 Następnie żądamy by można je było odwikłać na funkcję $C = \psi( x, y )$.
@@ -1706,17 +1749,17 @@ zmiennej $C$, w~rezultacie czego otrzymujemy funkcję jednej zmiennej.
 wartościach~$C$ danych wzorem~(27), gdy punkt $( x, y )$ przebiega
 obszar~(26).” Równanie (14) jest postaci
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-76}
-  \frac{ d y( x ) }{ d x } = \frac{ y }{ x },
+  \label{eq:Uwagi-do-konkrentych-stron-57}
+  \frac{ d y( x ) }{ dx } = \frac{ y }{ x },
 \end{equation}
 natomiast równanie~(24'') to
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-77}
+  \label{eq:Uwagi-do-konkrentych-stron-58}
   y( x ) = C x.
 \end{equation}
 Jeśli chodzi o~równanie (27) to ma ono postać
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-78}
+  \label{eq:Uwagi-do-konkrentych-stron-59}
   C = \frac{ y }{ x },
 \end{equation}
 zaś wzór (26) definiuje półpłaszczyznę $0 < x < +\infty$, $-\infty < y < +\infty$.
@@ -1736,12 +1779,12 @@ Tym co~wyróżnia \eqref{eq:Matwiejew-Metody-calkowania-ETC-78} spośród
 wszystkich funkcji $\psi( x, y )$ o~wartościach rzeczywistych jest to,
 że~jeśli
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-79}
+  \label{eq:Uwagi-do-konkrentych-stron-60}
   C_{ 0 } = \psi( x_{ 0 }, y_{ 0 } ) = \frac{ y_{ 0 } }{ x_{ 0 } },
 \end{equation}
 to zachodzi
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-80}
+  \label{eq:Uwagi-do-konkrentych-stron-61}
   y( x_{ 0 }, C_{ 0 } ) = y_{ 0 }.
 \end{equation}
 Fakt, że~funkcja $\psi( x, y )$ o~której mowa w~definicji rozwiązania ogólnego
@@ -1750,7 +1793,7 @@ badanego równania, jest zawarty w~definicji tej funkcji podanej
 na~stronie~27, gdzie jest napisane, że~funkcja $\psi( x, y )$ powstaje
 poprzez odwikłanie równania
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-81}
+  \label{eq:Uwagi-do-konkrentych-stron-62}
   y = \varphi( x, C ),
 \end{equation}
 na zmienną $C$. O~tym jak należy rozumieć powyższe równanie i~całą procedurę
@@ -1765,12 +1808,12 @@ pisaliśmy już w~komentarzu do stron 27--28.
 \noindent
 Czytamy tutaj, że~aby by wyrażenie
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-82}
+  \label{eq:Uwagi-do-konkrentych-stron-63}
   \Phi( x, y, C ) = 0,
 \end{equation}
 lub
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-83}
+  \label{eq:Uwagi-do-konkrentych-stron-64}
   \psi( x, y ) = C,
 \end{equation}
 reprezentowało \textbf{rozwiązanie ogólne w~postaci uwikłanej}, zwane też
@@ -1802,7 +1845,7 @@ W~punkcie $( 0, 0 )$ równanie to prowadzi do wyrażenia $0 / 0$, więc
 równanie w~tym punkcie jest niezdefiniowane. Dla punktów dla których
 $y = 0$ rozpatrywać będziemy równanie
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-85}
+  \label{eq:Uwagi-do-konkrentych-stron-65}
   \frac{ d x( y ) }{ dy } = -\frac{ y }{ x( y ) }.
 \end{equation}
 
@@ -1851,17 +1894,17 @@ i~osobliwych nie będą w~książce rozpatrywane.
 \Str{31} Warto zwrócić uwagę na następującą subtelność rachunkową.
 Podstawiając funkcję
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-86}
+  \label{eq:Uwagi-do-konkrentych-stron-66}
   y( x ) = ( x + C )^{ 2 },
 \end{equation}
 do równania
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-87}
+  \label{eq:Uwagi-do-konkrentych-stron-67}
   y'( x ) = 2 \sqrt{ y( x ) },
 \end{equation}
 dostajemy
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-88}
+  \label{eq:Uwagi-do-konkrentych-stron-68}
   2 ( x + C ) = \absOne{ x + C }.
 \end{equation}
 Widzimy więc, że~funkcja \eqref{eq:Matwiejew-Metody-calkowania-ETC-86}
@@ -1880,14 +1923,16 @@ zmiennych $x$ i~$y$ o~których mowa w~punkcie $2^{ \circ }$ na tej stronie.
 W~jaki sposób można pokazać następującą własność, która jest wykorzystywana
 w~dowodzie tego punktu? Mianowicie, że jeśli zachodzi
 \begin{equation}
-  \label{eq:Matwiejew-Metody-calkowania-ETC-89}
+  \label{eq:Uwagi-do-konkrentych-stron-69}
   P( x_{ 0 }, y_{ 0 } ) = Q( x_{ 0 }, y_{ 0 } ) = 0,
 \end{equation}
 to wówczas istnieje takie otoczenie $O$ punktu $( x_{ 0 }, y_{ 0 } )$,
 że~dla każdego punktu $( x_{ 1 }, y_{ 1 } )$ różnego od $( x_{ 0 }, y_{ 0 } )$
 zachodzi
 \begin{equation}
-  P( x_{ 1 }, y_{ 1 } ) \neq 0 \HorSpaceSixteen
+  \label{eq:Uwagi-do-konkrentych-stron-70}
+  P( x_{ 1 }, y_{ 1 } ) \neq 0 \HorSpaceFiveteen \HorSpaceFiveteen
+  \HorSpaceOne
   \vee \HorSpaceSixteen
   Q( x_{ 1 }, y_{ 1 } ) \neq 0.
 \end{equation}
@@ -1899,11 +1944,186 @@ zachodzi
 
 
 \noindent
+\Str{35} Warto byłoby wyjaśnić, czemu wprowadzone tu pojęcie parametryzacji
+krzywej, nosi nazwę parametryzacji gładkiej. Dokładniej, chodzi
+o~podanie wyjaśnienia w~jakim sensie, gwarantuje ono gładkość krzywej w~tej
+konkretnej parametryzacji?
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
 \Str{35 i~kolejne} Na stronie 35 zaczynają~się pojawiać pojęcia
 i~stwierdzenia, które zapewne dobrze były wyjaśnić za pomocą pojęć geometrii
-różniczkowej.
+różniczkowej. Przykładowo gdy wspomnianej już stronie 35 pojawia~się
+pojęcie gładkiej parametryzacji, to żąda~się w~nim, by pochodne
+$x \HorSpaceOne '( t )$ i~$y \HorSpaceOne '( t )$ nigdy nie były
+jednocześnie równe zeru. Warunek ten można równoważnie wysłowić
+stwierdzając, że~wektor styczny do krzywej
+$\gamma \HorSpaceOne ( t ) = [ x( t ), y( t ) ]$ nigdy nie może~się zerować.
+Na stronie 36 ten sam warunek jest zapisany w~formie
+\begin{equation}
+  \label{eq:Uwagi-do-konkrentych-stron-71}
+  \absHorLeftOne{ x \HorSpaceOne '( C ) } +
+  \absHorLeftOne{ y \HorSpaceOne '( C ) } \neq 0.
+\end{equation}
+Wydaje~się, że~również pojawiającej~się na~stronie 36 trzy wariacje
+tego samego warunku
+\begin{align}
+  \label{eq:Uwagi-do-konkrentych-stron-72-A}
+  &\absBigOne{ \Phi_{ x }'\big( x( t ), y( t ), C( t ) \big) } +
+    \absBigOne{ \Phi_{ y }'\big( x( t ), y( t ), C( t )
+    \big) } \neq 0, \\[0.5em]
+  \label{eq:Uwagi-do-konkrentych-stron-72-B}
+  &\absBigOne{ \Phi_{ x }'\big( x, y( x ), C( x ) \big) } +
+    \absBigOne{ \Phi_{ y }'\big( x, y( x ), C( x ) \big) } \neq 0, \\[0.5em]
+  \label{eq:Uwagi-do-konkrentych-stron-72-C}
+  &\absBigOne{ \Phi_{ x }'\big( x( C ), y( C ), C \big) } +
+    \absBigOne{ \Phi_{ y }'\big( x( C ), y( C ), C \big) } \neq 0,
+\end{align}
+można zinterpretować jako żądanie, by wektor styczny do pewnej krzywej
+nigdy~się nie zerował. W~tym momencie niestety, nie umiem powiedzieć więcej
+w~tym temacie.
 
-{\Large Od strony 35 należy zacząć ponowne czytanie książki.}
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{36} Drugi warunek wymieniony w~twierdzeniu~2 ma postać
+
+
+% ##################
+\begin{quote}
+
+  funkcja $C( t )$ ma ciągłą pochodną nie równą tożsamościowo zero na żadnej
+  części przedziału $[ \alpha, \beta ]$.
+
+\end{quote}
+% ##################
+
+
+\noindent
+Treść tego warunku można zrozumieć na różne sposoby. Po pierwsze, nie
+istnieje żaden odcinek $[ \alpha_{ 1 }, \beta_{ 1 } ] \subset [ \alpha, \beta ]$, taki że
+$\alpha_{ 1 } < \beta_{ 1 }$ i~$C'( t ) = 0$ dla każdego $t \in [ \alpha_{ 1 }, \beta_{ 1 } ]$. Po
+drugie nie istnieje taki punkt $t \in [ \alpha, \beta ]$, że~$C'( t ) \neq 0$. W~końcu
+można rozważać różne wariacje pierwszego warunku, jak choćby tą w~której
+może zachodzić $\alpha_{ 1 } = \beta_{ 2 }$, taką gdzie zakazane jest istnienie zbioru
+postaci $\bigcup_{ i = 1 }^{ n } [ \alpha_{ i }, \beta_{ i } ]$, $\alpha_{ i } < \beta_{ 1 }$
+na w~którego każdym punkcie $C'( t ) = 0$ i~przeróżnych ich kombinacji.
+
+Nie możemy tego stwierdzić na pewno, bez poznania pełnego dowodu tego
+twierdzenia, w~świetle uwagi 1 i~2 na tej stronie, wydaje~się, że~to druga
+z~podanych interpretacji tego warunku jest poprawna, czyli ma on zakazywać
+istnienia takiego punktu $t$, że~$C'( t ) = 0$. Na tym stwierdzeniu musimy
+w~tym momencie poprzestać.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{37} Przedyskutujmy obszerniej podany tu przykład~3. Pierwszy problem
+jaki~się nasuwa to to, przy jakich założeniach o~wartości funkcji $y( x )$
+wyrażenie $y( x )^{ -2 / 3 }$ ma w ogóle sens? Na to podstawowe pytanie
+trzeba będzie w~końcu w~sposób satysfakcjonujący odpowiedzieć.
+
+Rozwiązując ten przykład otrzymaliśmy krzywą wyróżnikową badanego równania
+w~postaci
+\begin{equation}
+  \label{eq:Uwagi-do-konkrentych-stron-73}
+  x( C ) = -C, \qquad
+  y( C ) = 0.
+\end{equation}
+Para tych równań wyznacza tą samą krzywą co pojedyncze równanie
+$y( x ) = 0$. Równoważnie możemy powiedzieć, że~równania
+\eqref{eq:Uwagi-do-konkrentych-stron-73} wyznaczają krzywą
+$( x, y ) =( x_{ 0 }, 0 )$, gdzie $x_{ 0 }$ jest dowolną liczbą rzeczywistą.
+Ponieważ równanie jednoparametrowej rodziny krzywych całkowych
+jest postaci
+\begin{equation}
+  \label{eq:Uwagi-do-konkretnych-stron-74}
+  \Phi\big( x, y, C \big) = y^{ 5 } - ( x + C )^{ 3 } = 0,
+\end{equation}
+więc na mocy równań (44) mamy
+\begin{equation}
+  \label{eq:Uwagi-do-konkretnych-stron-75}
+  \Phi_{ C }'( x, y, C ) = -3 ( x + C )^{ 2 } = 0.
+\end{equation}
+Tym samym, niezależnie od wybranej parametryzacji, żaden z~warunków
+\eqref{eq:Uwagi-do-konkrentych-stron-72-A}-\eqref{eq:Uwagi-do-konkrentych-stron-72-C} nie może być spełniony przez krzywą $y( x ) = 0$. Mamy bowiem
+\begin{equation}
+  \label{eq:Uwagi-do-konkretnych-stron-76}
+  \Phi_{ C }'( x, y, C ) = 0 \iff
+  \Phi_{ x }'( x, y, C ) = 0.
+\end{equation}
+Wzory powyżej oznaczają ponadto, że~zachodzi $x + C = 0$. Tym samym
+\begin{equation}
+  \label{eq:Uwagi-do-konkretnych-stron-77}
+  \Phi( -C, y, C ) = y^{ 5 } = 0,
+\end{equation}
+czyli możliwe jest tylko rozwiązanie, które zapiszemy jako $y( x ) = 0$.
+Ponieważ mamy
+\begin{equation}
+  \label{eq:Uwagi-do-konkretnych-stron-78}
+  \Phi_{ y }'( x, y, C ) = 5 y^{ 4 },
+\end{equation}
+musi zachodzić $\Phi_{ y }'( x, y, C ) = 0$, co wraz
+\eqref{eq:Uwagi-do-konkretnych-stron-76} przeczy warunkom
+\eqref{eq:Uwagi-do-konkrentych-stron-72-A}--\eqref{eq:Uwagi-do-konkrentych-stron-72-C}.
+
+Do tej pory pokazaliśmy, że~twierdzenie~2 nie pozwala pokazać, że~krzywa
+wyróżnikowa $y( x ) = 0$ jest obwiednią rodziny krzywych całkowych, ale to
+jeszcze nie oznacza, że~możemy wykluczyć, iż~ta krzywa jest obwiednią.
+Przejdziemy teraz do wykazania, iż~istotnie nią nie jest. Równanie
+\begin{equation}
+  \label{eq:Uwagi-do-konkretnych-stron-79}
+  y'( x ) = \frac{ 3 }{ 5 } y( x )^{ -2/3 }
+\end{equation}
+nie ma sensu na krzywej wyróżnikowej, którą zapiszemy teraz w~postaci
+parametrycznej
+\begin{equation}
+  \label{eq:Uwagi-do-konkretnych-stron-80}
+  x( t ) = t, \qquad
+  y( t ) = 0,
+\end{equation}
+tak samo jak wszystkie przekształcenia na nim wykonane, jak przejście do
+równania $\frac{ 5 }{ 3 } y( x )^{ 3/2 } y'( x ) = 1$. Musimy więc
+rozpatrzyć równanie postaci
+\begin{equation}
+  \label{eq:Uwagi-do-konkretnych-stron-81}
+  x \HorSpaceOne '( y ) =
+  \frac{ 5 }{ 3 } \, y^{ \HorSpaceOne 2/3 }.
+\end{equation}
+Równanie to można prosto scałkować dostając rozwiązanie ogólne
+\begin{equation}
+  \label{eq:Uwagi-do-konkretnych-stron-82}
+  x( y ) = y^{ \HorSpaceOne 5/3 } + C_{ 1 }.
+\end{equation}
+Widzimy więc, że~przez każdy punkt $( y, x ) = ( 0, x_{ 0 } )$ leżący na
+osi $x$, przechodzi krzywa całkowa
+\begin{equation}
+  \label{eq:Uwagi-do-konkretnych-stron-83}
+  x( y ) = y^{ \HorSpaceOne 5/3 } + x_{ 0 },
+\end{equation}
+a~także, że~ta krzywa całkowa przecina ją w~taki sposób, iż~styczna
+do niej w~tym punkcie tworząc z~osią $y$ kąt zero, przypomnijmy przy tym,
+że~współrzędne dowolnego punkt na osi $y$ możemy zapisać
+jako $( y, x ) = ( y_{ 0 }, 0 )$, $y_{ 0 } \in \Rbb$. Tej własności na pewno
+nie posiada krzywa wyróżnikowa \eqref{eq:Uwagi-do-konkretnych-stron-80},
+nie jest więc ona styczna do żadnej krzywej całkowej i~tym samym nie
+jest ani rozwiązaniem osobliwym, ani tym bardziej obwiednią rodziny krzywych
+całkowych.
+
+{\Large Od strony 37 należy zacząć ponowne czytanie książki.}
 
 
 
@@ -1941,11 +2161,14 @@ różniczkowej.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    5   & &  3 & wierdzenia & twierdzenia \\
+    \hphantom{0}5 & & \hphantom{0}3 & wierdzenia & twierdzenia \\
     15  & & 14 & ono określa & określa ono \\
     32  & & 19 & $2 ( x + C )$ & $2 | x + C |$ \\
-    33  & &  8 & $b_{ 1 } > b$ & $b_{ 1 } < b$ \\
-    % & & & & \\
+    33  & & \hphantom{0}8
+                              & $b_{ \HorSpaceOne 1 } > b$
+    & $b_{ \HorSpaceOne 1 } < b$ \\
+    35  & & \hphantom{0}9 & $= 0$ \hspace{0.5em} ($C_{ 0 }$
+    & $= 0$ ($C_{ 0 }$ \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -1981,6 +2204,18 @@ punkcie tego przedziału. \\
 \StrWierszD{32}{13} \\
 \Jest  nie jedna \\
 \Powin więcej niż jedna \\
+\StrWierszG{36}{17} \\
+\Jest  Oczywiście \\
+\Powin Sprawdzimy teraz w~jakiej sytuacji można na podstawie twierdzenia~2,
+stwierdzić, iż~ta krzywa wyróżnikowa jest obwiednią rodziny krzywych (42).
+Oczywiście \\
+\StrWierszD{36}{6} \\
+\Jest  Tym samym \\
+\Powin Ponownie zbadamy, kiedy twierdzeniem 2~pozwala stwierdzić,
+iż~tak dana krzywa wyróżnikowa jest obwiednią rodziny krzywych (42).
+Pierwszy \\
+
+
 
 % ############################
 
@@ -1993,18 +2228,7 @@ punkcie tego przedziału. \\
 
 
 
-% ######################################
-\section{Oznaczenia i~konwencje}
 
-\label{sec:Oznaczenia-i-konwencje}
-% ######################################
-
-
-
-\noindent
-Dziedzinę funkcji $f$ będziemy oznaczać symbolem $\Dcal( f )$.
-
-\VerSpaceFour
 
 
 
