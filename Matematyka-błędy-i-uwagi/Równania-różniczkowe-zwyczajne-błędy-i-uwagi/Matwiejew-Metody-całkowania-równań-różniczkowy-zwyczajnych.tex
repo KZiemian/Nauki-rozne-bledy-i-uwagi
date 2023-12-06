@@ -36,17 +36,18 @@
 % ---------------------------------------
 % Setting margins
 % ---------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
 % Package for easy settings of margins. Unit of measurement is inch.
-\usepackage{vmargin}
-\setmarginsrb
-{ 0.7in}  % left margin
-{ 0.6in}  % top margin
-{ 0.7in}  % right margin
-{ 0.8in}  % bottom margin
-{  20pt}  % head height
-{0.25in}  % head sep
-{   9pt}  % foot height
-{ 0.3in}  % foot sep
+% \usepackage{vmargin}
+% \setmarginsrb
+% { 0.7in}  % left margin
+% { 0.6in}  % top margin
+% { 0.7in}  % right margin
+% { 0.8in}  % bottom margin
+% {  20pt}  % head height
+% {0.25in}  % head sep
+% {   9pt}  % foot height
+% { 0.3in}  % foot sep
 
 
 
@@ -238,12 +239,17 @@ Str. 7, wiersz 3.
 Str.~7, wiersz 15.
 \begin{equation}
   \label{eq:Uwagi-ogolne-05}
-  \Phi \negHorSpaceEleven \left( x_{ 1 }, x_{ 2 }, \ldots, x_{ n },
-    u( x_{ 1 }, x_{ 2 }, \ldots, x_{ n }),
-    \tfrac{ \partial u( x_{ 1 }, \, x_{ 2 }, \, \ldots, \, x_{ n } ) }{ \partial x_{ 1 } },
-    \tfrac{ \partial u( x_{ 1 }, \, x_{ 2 }, \, \ldots, \, x_{ n } ) }{ \partial x_{ 2 } }, \ldots,
-    \tfrac{ \partial u( x_{ 1 }, \, x_{ 2 }, \, \ldots, \, x_{ n } ) }{ \partial x_{ n } }
-  \right) = 0
+  \begin{split}
+    \Phi \negHorSpaceEleven \left(
+    &x_{ 1 }, x_{ 2 }, \ldots, x_{ n },
+      u( x_{ 1 }, x_{ 2 }, \ldots, x_{ n }),
+      \tfrac{ \partial u( x_{ 1 }, \, x_{ 2 }, \, \ldots, \, x_{ n } ) }{ \partial x_{ 1 } },
+      \tfrac{ \partial u( x_{ 1 }, \, x_{ 2 }, \, \ldots, \, x_{ n } ) }{ \partial x_{ 2 } },
+      \ldots, \right. \\
+    &\left.
+      \tfrac{ \partial u( x_{ 1 }, \, x_{ 2 }, \, \ldots, \, x_{ n } ) }{ \partial x_{ n } }
+      \right) = 0
+  \end{split}
 \end{equation}
 Str.~27, wiersz~16 od dołu, wzór~(24).
 \begin{equation}
@@ -314,9 +320,8 @@ co~może prowadzić również do~zmiany podanych definicji.
 
 Zdefiniowanie równania różniczkowego zwyczajnego wymaga od nas wprowadzenia
 pewnej ilość wstępnych definicji i~oznaczeń. Niech teraz~$O$ będzie
-otwartym podzbiorem $\Rbb^{ n + 2 }$, przy czym
-elementy $\Rbb^{ n + 2 }$ będziemy oznaczać przez
-$( x_{ 0 }, x_{ 1 }, \ldots, x_{ n - 1 }, x_{ n }, x_{ n + 1 } )$
+otwartym podzbiorem $\Rbb^{ n + 2 }$, elementy tego zbioru będziemy oznaczać
+przez $( x_{ 0 }, x_{ 1 }, \ldots, x_{ n - 1 }, x_{ n }, x_{ n + 1 } )$
 lub $x_{ 1 }, x_{ 2 }, \ldots, x_{ n + 1 }, x_{ n + 2 }$. Niech dana będzie funkcja
 $F : O \to R$. Przyjmujemy, że~\textbf{zależy ona w~sposób istotny
   od~zmiennej $x_{ n }$} (w~książce używa~się terminu „jawny”), przez co
@@ -359,9 +364,9 @@ książki), jeśli przyjmuje ono postać
 gdzie $f : O \to \Rbb$ jest funkcją określoną na zbiorze otwartym
 $O \subset \Rbb^{ n }$.
 
-Kilka uwag terminologicznych. Stosunkowo rzadko będziemy mówić
-„Dane jest funkcja $F( x_{ 0 }, x_{ 1 }, \ldots, x_{ n + 1 } )$, która
-określa równanie różniczkowe
+Tutaj należy poczynić kilka uwag terminologicznych. Stosunkowo rzadko
+będziemy mówić „Dane jest funkcja $F( x_{ 0 }, x_{ 1 }, \ldots, x_{ n + 1 } )$,
+która określa równanie różniczkowe
 $F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big) = 0$.”. Zwykle
 stosować będziemy skrót myślowy „Dana jest funkcja
 $F\big( x, y( x ), y'( x ), \ldots, y^{ ( n ) }( x ) \big)$ określając równanie
@@ -523,16 +528,16 @@ i~odwikłamy je do postaci normalnej
   y^{ ( n ) }( x ) = f\big( x, y( x ), y'( x ), \ldots, y^{ ( n - 1 ) }( x ) \big),
 \end{equation}
 to ostatni wzór może nie obejmować wszystkich przypadków, dla~których
-równanie ma~sens \eqref{eq:Matwiejew-Metody-calkowania-ETC-17}. Ponieważ
+równanie ma~sens \eqref{eq:Czym-jest-rownanie-ETC-13}. Ponieważ
 dziedzina~$F$ jest podzbiorem $\Rbb^{ n + 2 }$, a~$f$ podzbiorem
 $\Rbb^{ n + 1 }$, wysłowienie co dokładnie oznacza, że~równanie
-\eqref{eq:Matwiejew-Metody-calkowania-ETC-18}
-jest ogólniejsze od równania \eqref{eq:Matwiejew-Metody-calkowania-ETC-17}
+\eqref{eq:Czym-jest-rownanie-ETC-13}
+jest ogólniejsze od równania \eqref{eq:Czym-jest-rownanie-ETC-14}
 może być dość zawiłe, zamiast tego odwołamy~się więc do~przykładu.
 Rozpatrzmy równanie w~postaci ogólnej
 \begin{equation}
   \label{eq:Czym-jest-rownanie-ETC-15}
-  y( x ) \frac{ d y( x ) }{ d x } - x = 0.
+  y( x ) \frac{ d y( x ) }{ dx } - x = 0.
 \end{equation}
 Odczytujemy z~niego funkcję
 $F( x_{ 0 }, x_{ 1 }, x_{ 2 } ) = x_{ 2 } x_{ 1 } - x_{ 0 }$, której dziedzina
@@ -862,8 +867,8 @@ przy założeniu, że~funkcja uwikłana zależna od zmiennej $x$ dana związkiem
 $\Phi( x, y ) = 0$, spełnia równanie różniczkowe
 $y'( x ) = f\big( x, y( x ) \big)$. Nie poruszono jednak kwestii tego, czemu
 mamy uważać tą funkcję uwikłaną za rozwiązanie badanego równania?
-W~szczególności, jeśli jest rozwiązanie równania $\Phi( x, y ) = 0$ na funkcję
-$y( x )$, to czy ona spełnia równanie $y'( x ) = f\big( x, y( x ) \big)$?
+W~szczególności, jeśli $y( x )$ jest rozwiązanie równania $\Phi( x, y ) = 0$,
+to czy spełnia ona równanie $y'( x ) = f\big( x, y( x ) \big)$?
 Przy standardowych założeniach o~funkcji $\Phi( x, y )$ odpowiedź na to
 ostatnie pytanie jest twierdząca i~dzięki temu możemy uznać funkcję daną
 równaniem uwikłanym za rozwiązanie badanego równania.
@@ -1000,7 +1005,7 @@ $\varphi'( t )$. Na podstawie standardowych twierdzeń z~analizy matematycznej
 dobrze znanego wzoru na pochodną funkcji odwrotnej:
 \begin{equation}
   \label{eq:Matwiejew-Metody-calkowania-ETC-41}
-  \frac{ d f^{ -1 }( y ) }{ d y } =
+  \frac{ d f^{ -1 }( y ) }{ dy } =
   \frac{ d f( t ) }{ d t }\bigg|_{ t = f^{ -1 }( y ) },
 \end{equation}
 w~pewnych otoczeniu wybranego punktu $t$, oznaczmy je
@@ -1573,9 +1578,6 @@ dziedzinę co izokliny analizowane wcześniej.
 stronie.
 
 
-
-
-
 % ###################
 \begin{quote}
 
@@ -1586,9 +1588,6 @@ stronie.
 
 \end{quote}
 % ###################
-
-
-
 
 
 \noindent
@@ -1611,10 +1610,7 @@ wspomniane na stronie~24.
 
 
 \noindent
-\Str{24} Na tej stronie znajdujemy zdanie.
-
-
-
+\Str{24} Na tej stronie znajdujemy zdanie
 
 
 % ###################
@@ -1625,9 +1621,6 @@ wspomniane na stronie~24.
 
 \end{quote}
 % ###################
-
-
-
 
 
 \noindent
@@ -1803,14 +1796,14 @@ ogólnego. Warto jednak omówić go odrobinę szerzej.
 Równanie które chcemy rozwiązać to
 \begin{equation}
   \label{eq:Matwiejew-Metody-calkowania-ETC-84}
-  \frac{ d y( x ) }{ d x } = -\frac{ x }{ y( x ) }.
+  \frac{ d y( x ) }{ dx } = -\frac{ x }{ y( x ) }.
 \end{equation}
 W~punkcie $( 0, 0 )$ równanie to prowadzi do wyrażenia $0 / 0$, więc
 równanie w~tym punkcie jest niezdefiniowane. Dla punktów dla których
 $y = 0$ rozpatrywać będziemy równanie
 \begin{equation}
   \label{eq:Matwiejew-Metody-calkowania-ETC-85}
-  \frac{ d x( y ) }{ d y } = -\frac{ y }{ x( y ) }.
+  \frac{ d x( y ) }{ dy } = -\frac{ y }{ x( y ) }.
 \end{equation}
 
 Wprowadzamy cztery podzbiory płaszczyzny:
