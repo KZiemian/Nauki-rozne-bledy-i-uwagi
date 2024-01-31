@@ -173,8 +173,6 @@
 % ######################################
 \section{Rozważania ogólne}
 % Tytuł danego działu
-
-\vspace{\spaceTwo}
 % ######################################
 
 
@@ -182,8 +180,9 @@
 Omawiają mechanikę Newtona warto przedyskutować następujące zagadnienie.
 Występujące w~fizyce wielkości zwykle nie są reprezentowane po prostu
 liczbami, lecz liczbami posiadającymi jednostki fizycznie, lub jak to
-często mówimy wymiar fizyczny, taki jak sekundy, metry, metry na sekundę,
-etc. Pozwala to nam napisać
+często mówimy, wymiar fizyczny. Przykładowo wielkość fizyczna może mieć
+wymiar sekundy, metra, metra na sekundę,~etc. Fakt ten pozwala
+nam pisać równania takie jak
 \begin{equation}
   \label{eq:Mechanika-Rozwazania-ogolne-01}
   60 \, \si{s} = 1 \, \si{min},
@@ -192,20 +191,23 @@ gdzie $\si{s}$ oznacza sekundę, a~$\si{min}$ minutę, mimo że ewidentnie
 $60$ nie jest równe $1$. Powstaje więc pytanie, jak można matematycznie
 sformalizować pojęcie liczby posiadającej jednostki fizyczne? Dla większości
 fizyków zajmowanie~się tym byłoby zapewne stratą czasu, gdyż „jest
-oczywiste” jak rozumieć wielkość fizyczną posiadającą odpowiedni wymiar,
-uważamy jednak, że~patrząc od strony formalizmu matematycznego problem
+oczywiste” jak rozumieć wielkość fizyczną posiadającą odpowiedni wymiar.
+Jesteśmy jednak przekonani, że~od strony formalizmu matematycznego problem
 ten jest interesując, dlatego warto~się nim zająć.
 
-Przedstawimy teraz pewien sposób sformalizowania tego zagadnienia. Zapewne
-nie jest on optymalny, powinien jednak wystarczyć na początek. Ponadto
-przedstawiona konstrukcja nie bierze pod uwagę dwóch ważnych zagadnień. Po
-pierwsze, czy wielkości obecne którymi operuje~się w~fizyce powinny być
-reprezentowane zbiorem liczb rzeczywistych $\Rbb$, czy jakimś innym?
-Przykładowo, czy fizyce mógłby wystarczyć zbiór liczb wymiernych $\Qbb$?
-Drugi ważne pytanie powiązane jest z~pierwszym. Czy jeśli formalizm fizyczny
-ma~się opierać na liczbach rzeczywistych, to czy do reprezentowania każdej
-wielkości fizycznej potrzebny jest cały zbiór $\Rbb$, czy dla niektórych
-wystarczający jest np. zbiór dodatnich liczb rzeczywistych:
+Przedstawimy teraz pewien sposób matematycznego formalizmu wyjaśniającego
+ten problem. Zapewne nie jest on optymalny, powinien jednak wystarczyć na
+początek. Co należy zaznaczyć, przedstawiona formalizm nie bierze pod uwagę
+dwóch ważnych problemów. Po~pierwsze, czy wielkości obecne którymi
+operuje~się w~fizyce powinny być reprezentowane zbiorem liczb rzeczywistych
+$\Rbb$, czy jakimś innym? Przykładowo, czy dla zastosowań fizycznych
+wystarczający jest zbiór liczb wymiernych $\Qbb$?
+
+Drugi ważne pytanie powiązane jest z~pierwszym. Jeśli przyjmiemy,
+że~opis jednostek fizycznych ma~się opierać na~liczbach rzeczywistych,
+to czy do reprezentowania każdej wielkości fizycznej potrzebny jest cały
+zbiór $\Rbb$. Czy może dla niektórych wielkości wystarczający jest np.
+zbiór liczb rzeczywistych dodatnich:
 $\Rbb_{ + } = \{ x \in \Rbb \, | \, x > 0 \}$? Można bowiem argumentować,
 że~wielkości takie jak masa obiektu fizycznego powinny być zawsze dodatnie,
 $m > 0$, a~temperatura zawsze większa od zera bezwzględnego, czyli zbiór
@@ -215,24 +217,23 @@ zbyt duży w~stosunku do naszych realnych potrzeb.
 Choć oba te problemy mają swoją wagę, nie będziemy~się wdawać tu w~trudną
 dyskusję na ich temat. Dla prostoty przyjmiemy, że~wszystkie wielkości
 fizyczne powinny być modelowane na pełnym zbiorze $\Rbb$ i~bazując
-na tym założeniu podamy pewną szczególną formalizację liczb rzeczywistych
-posiadających jednostki.
+na tym założeniu podamy pewną jedną konkretną formalizację liczb
+rzeczywistych posiadających jednostki.
 
-W~naszym podejściu przyjmujemy ponadto, że~wszystkie rozważane jednostki
+W~naszym podejściu przyjmujemy, że~wszystkie rozważane jednostki
 opierają~się na trzech podstawowych wielkościach: mierze długości,
 mierze czasu i~mierze masy. Uogólnienie podanych tu konstrukcji na
 przypadek systemu z~większą ilością podstawowych wielkości nie powinno
-stanowić wielkiego problemu.
-Zaczynami więc od wprowadzenia trzech symboli $L$, $T$ i~$M$, które
-oznaczają odpowiednio koncepcje długości, czasu i~masy. Podkreślamy,
-że~chodzi tu o~koncepcje, nie konkretne wielkości fizyczne. W~szczególności
-ponieważ $L$ oznacza koncepcję długości, to nie przypisujemy temu symbolowi,
-ani wielkości liczbowej, ani jednostek. Powinno być dość jasne, że~można
-sensownie mówić o~długości stołu, ale nie ma sensu pytać~się o~to czy
-sama koncepcja długości ma długość $30 \, \si{cm}$ czy nie\footnote{Dla
-  rozwiania pewnych wątpliwości, można oczywiście pytać~się o~długość
-  symbolu „$L$”, ale to co innego niż pytanie~się o~długość tego co symbol
-  ten oznacza.}.
+stanowić wielkiego problemu. Zaczynamy więc od wprowadzenia trzech symboli
+$L$, $T$ i~$M$, które oznaczają odpowiednio koncepcje długości, czasu
+i~masy. Podkreślamy, że~chodzi tu o~koncepcje, nie konkretne wielkości
+fizyczne. W~szczególności ponieważ $L$ oznacza koncepcję długości, to nie
+przypisujemy temu symbolowi, ani wielkości liczbowej, ani jednostek.
+Powinno być dość jasne, że~można sensownie mówić o~długości stołu, ale nie
+ma sensu pytać~się o~to czy sama koncepcja długości ma długość
+$30 \, \si{cm}$ czy nie\footnote{Dla rozwiania potencjalnych wątpliwości,
+  można oczywiście pytać~się o~długość symbolu „$L$”, ale to co innego niż
+  pytanie~się o~długość tego co symbol ten oznacza.}.
 
 Rozważmy teraz zbiór\footnote{Od ang. \textit{units}.} czterech różnych
 symboli
@@ -250,16 +251,18 @@ być błędna.
 
 Grupa $G$ składa~się ze wszystkich możliwych, skończonych kombinacji
 elementów $L$, $T$, $M$ i~elementów do nich odwrotnych $L^{ -1 }$, $T^{ -1 }$
-i~$M^{ -1 }$ oraz elementu neutralnego $I$. Zawiera więc ona przykładowo
-elementy
+i~$M^{ -1 }$ oraz elementu neutralnego, który oznaczamy symbolem~$I$.
+Zawiera więc ona przykładowo elementy
 \begin{equation}
   \label{eq:Mechanika-Rozwazania-ogolne-03}
   \begin{split}
     &L, L^{ 2 }, L^{ 3 }, L^{ 4 }, L^{ -1 }, L^{ -2 }, L^{ -3 }, L^{ -4 },
-      T^{ 1 }, T^{ 2 }, T^{ 3 }, T^{ 4 }, T^{ -1 }, T^{ -2 }, T^{ -3 },
-      T^{ -3 }, T^{ -4 }, \\
-    &M^{ 1 }, M^{ 2 }, M^{ 3 }, M^{ -1 }, M^{ -2 }, M^{ -3 },
-    L T, L T^{ -1 }, M L, M L^{ -1 }, M L^{ -2 }, \ldots
+      T^{ \HorSpaceTwo 1 }, T^{ \HorSpaceTwo 2 }, T^{ \HorSpaceTwo 3 },
+      T^{ \HorSpaceThree 4 }, T^{ \HorSpaceTwo -1 }, T^{ \HorSpaceTwo -2 },
+      T^{ \HorSpaceTwo -3 }, T^{ \HorSpaceTwo -4 }, \\
+    &M^{ 1 }, M^{ 2 }, M^{ 3 }, M^{ \HorSpaceOne -1 }, M^{ \HorSpaceOne -2 },
+      M^{ \HorSpaceOne -3 }, L T, L T^{ \HorSpaceTwo -1 }, M L, M L^{ -1 },
+      M T^{ -2 }, \ldots
   \end{split}
 \end{equation}
 Wprowadzając notację
@@ -268,7 +271,7 @@ Wprowadzając notację
   u^{ -1 } = \frac{ 1 }{ u } = 1 / u, \quad u \in U,
 \end{equation}
 oraz analogiczne jak dla ułamków wymiernych prawa operowania ułamkami
-utworzonymi z~elementów grupy $U$ możemy zapisać pewne elementy
+utworzonymi z~elementów grupy $U$ możemy zapisać niektóre wielkości
 występujące w~\eqref{eq:Mechanika-Rozwazania-ogolne-03} w~bardziej znajomej
 postaci:
 \begin{equation}
@@ -279,52 +282,61 @@ postaci:
 \end{equation}
 Każdemu elementowi $u \in U$ przyporządkowujemy jednowymiarową przestrzeń
 wektorową nad $\Rbb$, którą będziemy oznaczać jako $V_{ u }$. Zbiór
-wszystkim tych przestrzeni wektorowych będziemy oznaczać przez $S_{ U }$.
-Dla przestrzeni $V_{ I }$ określamy wyróżniony wektor bazy $e_{ I }$, który
-pozwala nam zdefiniować kanoniczny izomorfizm $V_{ I }$ z~$\Rbb$:
+wszystkim tych przestrzeni wektorowych będziemy oznaczać przez
+$S_{ \HorSpaceOne U }$. W~przestrzeni $V_{ I }$ wyróżniamy jeden konkretny
+wektor, którego używamy jako bazy tej przestrzeni, będziemy go oznaczać
+przez $e_{ I }$. Pozwala to nam zdefiniować kanoniczny izomorfizm $V_{ I }$
+z~$\Rbb$:
 \begin{equation}
   \label{eq:Mechanika-Rozwazania-ogolne-06}
-  \omega : V_{ I } \ni v = \alpha \, e_{ I } \mapsto \alpha \in \Rbb.
+  \omega : V_{ I } \ni v = \alpha \HorSpaceOne e_{ I } \mapsto \alpha \in \Rbb.
 \end{equation}
 Tym samym możemy uznać, iż~$V_{ I }$ reprezentuje przestrzeń wielkości
 bezwymiarowych.
 
-Niech teraz będą dane $u_{ 1 }, u_{ 2 } \in U$. Każdej parze taki przestrzeni
-przyporządkowujemy pewien rodzaj iloczynu, który będziemy oznaczać
-$\psi_{ u_{ 1 }, \, u_{ 2 } }$.
+Niech teraz będą dane $u_{ \HorSpaceOne 1 }, u_{ \HorSpaceOne 2 } \in U$. Każdej
+parze takich przestrzeni przyporządkowujemy pewien rodzaj iloczynu, który
+będziemy oznaczać
+$\psi_{ \HorSpaceOne u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }$.
 \begin{equation}
   \label{eq:Mechanika-Rozwazania-ogolne-07}
-  \psi_{ u_{ 1 }, \, u_{ 2 } } :
+  \psi_{ \HorSpaceOne u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } } :
   V_{ u_{ 1 } } \times V_{ u_{ 2 } } \to V_{ u_{ 1 } u_{ 2 } },
 \end{equation}
-gdzie $V_{ u_{ 1 } u _{ 2 } }$ oznacza przestrzeń przyporządkowaną elementowi
-$u_{ 1 } u_{ 2 } \in U$. Od $\psi_{ u_{ 1 }, \, u_{ 2 } }$ żądamy był on
-odwzorowaniem dwuliniowym. Aby doprecyzować te odwzorowania w~każdej
+gdzie $V_{ u_{ \HorSpaceOne 1 } u _{ \HorSpaceOne 2 } }$ oznacza przestrzeń
+wektorową odpowiadającą iloczynowi elementów
+$u_{ \HorSpaceOne 1 } u_{ \HorSpaceOne 2 } \in U$.
+Od~$\psi_{ \HorSpaceOne u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }$ żądamy był on
+odwzorowaniem dwuliniowym. Aby dookreślić te odwzorowania w~każdej
 przestrzeni $V_{ u }$ wybieramy w~dowolny sposób jeden niezerowy wektor,
-oznaczmy go $e_{ u }$, i~kładziemy
+oznaczmy go~$e_{ \HorSpaceTwo u }$, i~kładziemy
 \begin{equation}
   \label{eq:Mechanika-Rozwazania-ogolne-08}
-  \psi_{ u_{ 1 }, \, u_{ 2 } }( e_{ u_{ 1 } }, e_{ u_{ 2 } } ) = e_{ u_{ 1 } u_{ 2 } }.
+  \psi_{ \HorSpaceOne u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }(
+  e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } }, e_{ \HorSpaceTwo u_{  \HorSpaceOne2 } } ) =
+  e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } u_{ \HorSpaceOne 2 } }.
 \end{equation}
 Wprowadzamy również operację dzielenia elementu z~$V_{ u_{ 1 } }$ przez
-niezerowy element z~$V_{ u_{ 2 } }$:
+niezerowy element z~przestrzeni $V_{ u_{ 2 } }$:
 \begin{equation}
   \label{eq:Mechanika-Rozwazania-ogolne-09}
-  \varphi_{ u_{ 1 },\, u_{ 2 } } :
-  V_{ u_{ 1 } } \times ( V_{ u_{ 2 } } \setminus \{ 0 \} ) \to V_{ u_{ 1 } / u_{ 2 } }.
+  \varphi_{ \HorSpaceOne u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } } :
+  V_{ u_{ \HorSpaceOne 1 } } \times ( V_{ u_{ \HorSpaceOne 2 } } \setminus \{ 0 \} ) \to
+  V_{ u_{ \HorSpaceOne 1 } / u_{ \HorSpaceOne 2 } }.
 \end{equation}
-Od $\varphi_{ u_{ 1 }, \, u_{ 2 } }$ żądamy by posiadało następujące własności
+Od funkcji $\varphi_{ \HorSpaceOne u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }$ żądamy
+by posiadała następujące własności:
 \begin{subequations}
   \begin{align}
     \label{eq:Mechanika-Rozwazania-ogolne-10-A}
-    \varphi_{ u_{ 1 }, \, u_{ 2 } }( \alpha \, v_{ 1 } + \beta \, v_{ 2 }, w )
-    &= \alpha \, \varphi_{ u_{ 1 }, \, u_{ 2 } }( v_{ 1 }, w )
-      + \beta \, \varphi_{ u_{ 1 }, \, u_{ 2 } }( v_{ 2 }, w ), \\
+    \varphi_{ \HorSpaceOne u_{ 1 }, \, u_{ 2 } }( \alpha \, v_{ 1 } + \beta \, v_{ 2 }, w )
+    &= \alpha \HorSpaceOne \varphi_{ \HorSpaceOne u_{ 1 }, \, u_{ 2 } }( v_{ 1 }, w )
+      + \beta \HorSpaceOne \varphi_{ \HorSpaceOne u_{ 1 }, \, u_{ 2 } }( v_{ 2 }, w ), \\
     \label{eq:Mechanika-Rozwazania-ogolne-10-B}
-    \varphi_{ u_{ 1 }, \, u_{ 2 } }( v, \lambda \, w )
+    \varphi_{ \HorSpaceOne u_{ 1 }, \, u_{ 2 } }( v, \lambda \HorSpaceOne w )
     &= \frac{ 1 }{ \lambda } \, \varphi_{ u_{ 1 }, \, u_{ 2 } }( v, w ), \\
     \label{eq:Mechanika-Rozwazania-ogolne-10-C}
-    \varphi_{ u, \, u }( v_{ u }, v_{ u } ) &= I \in V_{ I },
+    \varphi_{ \HorSpaceOne u, \, u }( v_{ u }, v_{ u } ) &= I \in V_{ I },
   \end{align}
 \end{subequations}
 gdzie $u, u_{ 1 }, u_{ 2 } \in U$, $v_{ u } \in V_{ u }$,
@@ -534,13 +546,13 @@ będziemy~się starali do~niego powrócić i~zmodyfikować w~odpowiedni sposób.
 \section{Kanoniczne prace o~mechanice Newtona}
 % Tytuł danego działu
 
-\vspace{\spaceTwo}
+% \vspace{\spaceTwo}
 % ######################################
 
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Isaac Newton \\
   \textit{Matematyczne zasady filozofii przyrody},
   \cite{NewtonMatematyczneZasadyFilozofiiPrzyrody2011}}
@@ -568,7 +580,7 @@ będziemy~się starali do~niego powrócić i~zmodyfikować w~odpowiedni sposób.
 
 \end{center}
 
-\vspace{\spaceTwo}
+
 
 
 
@@ -592,14 +604,12 @@ będziemy~się starali do~niego powrócić i~zmodyfikować w~odpowiedni sposób.
 \newpage
 
 \section{Matematyczne ujęcie mechaniki Newtona}
-
-\vspace{\spaceTwo}
 % ######################################
 
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+\subsection{ % Autor i tytuł dzieła
   Władimir Arnold \\
   \textit{Metody matematyczne mechaniki klasycznej},
   \cite{ArnoldMetodyMatematyczneMechanikiKlasycznej1981}}
@@ -624,7 +634,7 @@ współrzędnych zachodzi dobrze znany wzór:
 Zastosowanie tego wzoru znacznie ułatwia rozwiązywanie dalszych zadań
 w~tym rozdziale, a~niektóre nie wiem nawet jak zrobić bez niego.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -635,7 +645,7 @@ w~tym rozdziale, a~niektóre nie wiem nawet jak zrobić bez niego.
 założenie o~ciągłości $g$ wydaje się bardzo nienaturalne. Wydaje się,
 że~najlepiej jest je zamienić na żądanie mierzalności tej funkcji.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -722,20 +732,21 @@ założenie o~ciągłości $g$ wydaje się bardzo nienaturalne. Wydaje się,
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
+
 
 
 \noindent
-\StrWd{29}{4} \\
+\StrWierszDol{29}{4} \\
 \Jest  tworzy sferę dwuwymiarową. \\
 \Powin można przekształcić w~sferę dwuwymiarową. \\
-\StrWd{42}{10} \\
+\StrWierszDol{42}{10} \\
 \Jest  Słońce znajduje~się nie w~centrum \\
 \Powin ale~Słońce nie znajduje~się w~centrum \\
-\StrWd{71}{15} \\
+\StrWierszDol{71}{15} \\
 \Jest  do swego\ldots \\
 \Powin dowolnie blisko swego\ldots \\
-\StrWg{215}{4} \\
+\StrWierszGora{215}{4} \\
 \Jest  wirowej, a~pole jest bezźródłowe. \\
 \Powin wirowej. \\
 
@@ -755,7 +766,7 @@ założenie o~ciągłości $g$ wydaje się bardzo nienaturalne. Wydaje się,
 % ############################
 \newpage
 
-\Work{ % Autorzy i tytuł dzieła
+\section{ % Autorzy i tytuł dzieła
   Roman Stanisław Ingarden, Andrzej Jamiołkowski \\
   \textit{Mechanika klasyczna},
   \cite{IngardenJamiolkowskiMechanikaKlasyczna1980}}
@@ -771,7 +782,7 @@ założenie o~ciągłości $g$ wydaje się bardzo nienaturalne. Wydaje się,
 
 \Str{9--12}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -834,7 +845,7 @@ Str. 36. \ldots oraz że nie zależy on od wyboru układu
 współrzędnych\ldots
 
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ############################
 
 
@@ -849,8 +860,8 @@ współrzędnych\ldots
 % ############################
 \newpage
 
-\Work{ % Autorzy i tytuł dzieła
-  J. I. Nejmark, N. A. Fufajew \\
+\section{ % Autorzy i tytuł dzieła
+  J.I. Nejmark, N.A. Fufajew \\
   \textit{Dynamika układów nieholonomicznych},
   \cite{NejmarkFufajewDynamikaUkladowNieholonomicznych1971}}
 
@@ -884,7 +895,7 @@ współrzędnych\ldots
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 % ############################
 
@@ -902,13 +913,13 @@ współrzędnych\ldots
 
 \section{Książki powstałe po~1945~r.}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
 % ############################
-\Work{ % Autorzy i tytuł dzieła
+\subsection{ % Autorzy i tytuł dzieła
   Lew D. Landau, Jewginij M. Lifszyc \\
   \textit{Mechanika}, \cite{LandauLifszycMechanika2006}}
 
@@ -928,7 +939,7 @@ Galileusza. Pełniejsze omówienie tej grupy można znaleźć w~książce
 W.~Arnolda \textit{Metody matematyczne mechaniki klasycznej}
 \cite{ArnoldMetodyMatematyczneMechanikiKlasycznej1981}.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -948,7 +959,7 @@ doświadczenia wiemy, że możemy przyjąć, iż przestrzeń jest
 euklidesowa, jak również że można znaleźć układ odniesienia w którym
 cząstki swobodne umieszczone w przestrzeni spoczywają.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -971,7 +982,7 @@ poziomach, choćby dlatego, że jest osobliwe dla zerowych prędkości, co
 jest niedopuszczalne dla fizycznej teorii. Oczywiście, jeżeli sprawdzimy
 również warunek na $y$ składową otrzymamy sprzeczny układ równań.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -981,7 +992,7 @@ również warunek na $y$ składową otrzymamy sprzeczny układ równań.
 \Str{14} Należałoby podać większą dyskusję prędkości względnej dwóch
 układów inercjalnych.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -992,7 +1003,7 @@ układów inercjalnych.
 potrzebujemy liniowej zależności od prędkości prawej strony równania
 wyrażającego równoważność między dwoma lagrażjanami? \Dok
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1007,7 +1018,7 @@ ważnych wniosków. Np. jeśli rozpatrujemy układ dwóch cząstek i znamy
 energię kinetyczną jednej z nich i energię oddziaływania, to możemy
 obliczyć pewne parametry ruchu drugiej.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1040,11 +1051,11 @@ obliczyć pewne parametry ruchu drugiej.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
-\StrWd{27}{2} \\
+\StrWierszDol{27}{2} \\
 \Jest  $S = S' + \mu \vecVbold \cdot \vecRbold' + \frac{ 1 }{ 2 } \mu V^{ 2 } t$ \\
 \Powin $S = S' + \mu \vecVbold \cdot \vecRbold'( t ) - \mu \vecVbold
 \cdot \vecRbold'( 0 ) + \frac{ 1 }{ 2 } \mu V^{ 2 } t$ \\
@@ -1065,7 +1076,7 @@ obliczyć pewne parametry ruchu drugiej.
 % ############################
 \newpage
 
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Bogdan Skalmierski \\
   \textit{Mechanika}, \cite{SkalmierskiMechanika1998}}
 
@@ -1089,7 +1100,7 @@ Dodatkowo przyjmujemy, że~wszystkie rozważane przestrzenie mają skończony
 wymiar, chyba że~jest powiedziane inaczej. Wymiar rozważanej przestrzeni
 zawsze będziemy oznaczać symbolem~$N$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1117,7 +1128,8 @@ Bardziej przejrzysta byłaby notacja $\vecabold_{ A }$, jednak szansa by to
 oznaczenie~się przyjęło jest zaniedbywalnie mała. W~dalszej części
 komentarzy będziemy próbowali precyzować co dany wektor dokładnie oznacza.
 
-\vspace{\spaceFour}
+\VerSpaceFour
+
 
 
 
@@ -1126,7 +1138,7 @@ komentarzy będziemy próbowali precyzować co dany wektor dokładnie oznacza.
 ścisłą, przyjmiemy, że~wektor $\vecZeroBold$ jest współosiowy z~dowolnym
 innym wektorem.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1175,7 +1187,7 @@ problemu.
 Na koniec zauważmy, że~dopuszczamy sytuację gdy $k < N$, co jest przypadkiem
 często spotykanym w~praktyce.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1201,7 +1213,7 @@ W~przypadku teorii fizycznych w~większości przypadków interesować nas będą
 tylko przypadki $\Fbb = \Rbb$ lub $\Fbb = \Cbb$. W~niniejszej książce
 wystarczające powinny przestrzenie nad ciałem liczb rzeczywistych.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1225,18 +1237,18 @@ nazywamy \textbf{wskaźnikiem żywym}.
 „Prawo zachowania wskaźników”: każdy wskaźnik żywy występujący po lewej
 stronie równości, musi też wystąpić po jej prawej stronie.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{19}{10} Jak stwierdziła Iwona Grabska-Gradzińska, lepszym
+\StrWierszDol{19}{10} Jak stwierdziła Iwona Grabska-Gradzińska, lepszym
 oznaczeniem od $a_{ xi }$ byłoby $a_{ i,\, x }$. Taka notacja bardzie uwypukla
 to, że mamy do czynienia z~iksową składową wektora o~numerze $i$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1252,7 +1264,7 @@ Aby ją zapełnić przyjmujemy, że~jeśli co najmniej jeden z~wektorów
 $\vecabold$ i~$\vecbbold$ jest wektorem zerowym to kąt między nimi
 wynosi~$0$ radianów: $\alpha = 0$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1303,7 +1315,7 @@ Powstaje pytanie, skoro rezultatem np. iloczynu wektorowego, jest wektor to
 w~którym miejscu jest on zaczepiony? W~takiej sytuacji będziemy pryzmować,
 iż~taki wektor jest wektorem swobodnym, chyba że~jest powiedziane inaczej.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1317,7 +1329,7 @@ z~naturalnego izomorfizmu (Czy to jest na pewno naturalny izomorfizm???)
 między wektorami i~formami możemy utożsamić te dwa obiekty, co będziemy
 w~dalszym ciągu czynić.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1387,7 +1399,7 @@ lub~$\varepsilon_{ j_{ 1 } i k } = -1$, $\varepsilon_{ j_{ 1 } m n } = 1$. Wobec
 z~relacji między $j_{ 1 }, i, k, m, n$ dostajemy, że~tyle samo wynosi prawa
 strona tego wzoru, co kończy dowód.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1552,7 +1564,7 @@ poniższego twierdzenia.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 
@@ -1570,7 +1582,7 @@ poniższego twierdzenia.
 % ############################
 \newpage
 
-\Work{ % Autor i tytuł dzieła
+\subsection{ % Autor i tytuł dzieła
   Bogdan Skalmierski \\
   \textit{Mechanika z~wytrzymałością materiałów},
   \cite{SkalmierskiMechanikaZWytrzymalosciaMaterialow1983}}
@@ -1600,7 +1612,7 @@ bo~wykorzystujemy jedynkę trygonometryczną by~wyrazić $\cos$ przez
 $\sin$. Ponieważ w~dalszym ciągu obliczeń podnosimy ten człon do
 kwadratu, ta niedokładność nie~wpływa na ostateczny wynik.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1677,11 +1689,11 @@ $\vecebold_{ 1 }$ do~$\vecebold_{ 2 }$.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
-\StrWg{31}{13} \\[0.3em]
+\StrWierszGora{31}{13} \\[0.3em]
 \Jest
 $( \dot{ x }_{ 1 } \vecibold + \dot{ x }_{ 2 } \vecjbold )
 \left( \frac{ \partial x_{ 1 } }{ \partial r } \vecibold
@@ -1709,9 +1721,9 @@ $( \dot{ x }_{ 1 } \vecibold + \dot{ x }_{ 2 } \vecjbold )
 % ############################
 \newpage
 
-\Work{ % Autor i tytuł dzieła
+\subsection{ % Autor i tytuł dzieła
   Bogdan Skalmierski \\
-  \textit{Mechanika. Tom I: Podstawy mechaniki klasycznej},
+  \textit{Mechanika. Tom~I: Podstawy mechaniki klasycznej},
   \cite{SkalmierskiMechanikPodstawyETCVolI1998}}
 
 
@@ -1726,7 +1738,9 @@ podać jest to definicja przestrzeni topologicznej Hausdorffa bazująca na
 pojęciu bazy otoczeń (chyba), należy więc zajrzeć do książki do
 topologi~by sprawdzić jak należy to poprawić.
 
-\vspace{\spaceFour}
+\VerSpaceFour
+
+
 
 
 
@@ -1734,15 +1748,15 @@ Definicja homeomorfizmu jest trochę nie jasna, można bowiem odczytać ją
 tak, że~choć funkcja $f$ musi być ciągła, to żaden zaś warunek nie jest
 nałożony na $f^{ -1 }$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
-\StrWg{11}{8} Brak wcięcia akapitu.
+\StrWierszGora{11}{8} Brak wcięcia akapitu.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1750,7 +1764,7 @@ nałożony na $f^{ -1 }$.
 
 \Str{18}{10} Brak wcięcia akapitu.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1783,11 +1797,11 @@ nałożony na $f^{ -1 }$.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
-\StrWd{42}{10} \\
+\StrWierszDol{42}{10} \\
 \Jest  Słońce znajduje się nie w centrum \\
 \Powin ale Słońce nie znajduje się w centrum \\
 
