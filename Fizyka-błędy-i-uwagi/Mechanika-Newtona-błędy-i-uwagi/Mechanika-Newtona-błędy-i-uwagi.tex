@@ -320,7 +320,7 @@ Wprowadzamy również operację dzielenia elementu z~$V_{ u_{ 1 } }$ przez
 niezerowy element z~przestrzeni $V_{ u_{ 2 } }$:
 \begin{equation}
   \label{eq:Mechanika-Rozwazania-ogolne-09}
-  \varphi_{ \HorSpaceOne u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } } :
+  \varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } } :
   V_{ u_{ \HorSpaceOne 1 } } \times ( V_{ u_{ \HorSpaceOne 2 } } \setminus \{ 0 \} ) \to
   V_{ u_{ \HorSpaceOne 1 } / u_{ \HorSpaceOne 2 } }.
 \end{equation}
@@ -329,58 +329,100 @@ by posiadała następujące własności:
 \begin{subequations}
   \begin{align}
     \label{eq:Mechanika-Rozwazania-ogolne-10-A}
-    \varphi_{ \HorSpaceOne u_{ 1 }, \, u_{ 2 } }( \alpha \, v_{ 1 } + \beta \, v_{ 2 }, w )
-    &= \alpha \HorSpaceOne \varphi_{ \HorSpaceOne u_{ 1 }, \, u_{ 2 } }( v_{ 1 }, w )
-      + \beta \HorSpaceOne \varphi_{ \HorSpaceOne u_{ 1 }, \, u_{ 2 } }( v_{ 2 }, w ), \\
+    \varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }(
+    \alpha \HorSpaceOne v_{ \HorSpaceOne 1 } +
+    \beta \HorSpaceOne v_{ \HorSpaceOne 2 }, w )
+    &= \alpha \HorSpaceOne \varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \,
+      u_{ \HorSpaceOne 2 } }( v_{ \HorSpaceOne 1 }, w ) +
+      \beta \HorSpaceOne \varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \,
+      u_{ \HorSpaceOne 2 } }( v_{ \HorSpaceOne 2 }, w ), \\[0.2em]
     \label{eq:Mechanika-Rozwazania-ogolne-10-B}
-    \varphi_{ \HorSpaceOne u_{ 1 }, \, u_{ 2 } }( v, \lambda \HorSpaceOne w )
-    &= \frac{ 1 }{ \lambda } \, \varphi_{ u_{ 1 }, \, u_{ 2 } }( v, w ), \\
+    \varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }( v,
+    \lambda \HorSpaceOne w )
+    &= \frac{ 1 }{ \lambda } \HorSpaceOne
+      \varphi_{ \HorSpaceTwo u_{ \HorSpaceTwo 1 }, \, u_{ \HorSpaceOne 2 } }( v,
+      w ), \\[0.2em]
     \label{eq:Mechanika-Rozwazania-ogolne-10-C}
-    \varphi_{ \HorSpaceOne u, \, u }( v_{ u }, v_{ u } ) &= I \in V_{ I },
+    \varphi_{ \HorSpaceTwo u, \, u }( v_{ \HorSpaceOne u }, v_{ \HorSpaceOne u } )
+    &= I \in V_{ I },
   \end{align}
 \end{subequations}
-gdzie $u, u_{ 1 }, u_{ 2 } \in U$, $v_{ u } \in V_{ u }$,
-$v, v_{ 1 }, v_{ 2 } \in V_{ u_{ 1 } }$, $w \in V_{ u_{ 2 } }$, $w \neq 0$,
+gdzie $u, u_{ \HorSpaceOne 1 }, u_{ \HorSpaceOne 2 } \in U$,
+$v_{ u } \in V_{ u }$,
+$v, v_{ \HorSpaceOne 1 }, v_{ \HorSpaceOne 2 } \in V_{ u_{ \HorSpaceOne 1 } }$,
+$w \in V_{ u_{ \HorSpaceOne 2 } }$, $w \neq 0$,
 $\alpha, \beta, \lambda \in \Rbb$ i~$\lambda \neq 0$. Podobnie jak poprzednio żądamy by zachodziło
 \begin{equation}
   \label{eq:Mechanika-Rozwazania-ogolne-11}
-  \varphi_{ u_{ 1 }, \, u_{ 2 } }( e_{ u_{ 1 } }, e_{ u_{ 2 } } ) = e_{ u_{ 1 } / u_{ 2 } }.
+  \varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }(
+  e_{ \HorSpaceOne u_{ \HorSpaceOne 1 } },
+  e_{ \HorSpaceTwo u_{ \HorSpaceOne 2 } } ) =
+  e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } / u_{ \HorSpaceOne 2 } }.
 \end{equation}
 
 Przystąpimy teraz do udowodnienia własności odwzorowań
-$\psi_{ u_{ 1 }, u_{ 2 } }$ i~$\varphi_{ u_{ 1 }, u_{ 2 } }$, które pozwalają stwierdzić,
-że~zachowują~się one jak mnożenie i~dzielenie liczb rzeczywistych.
-W~pierwszym rzędzie zbadamy własność analogiczną do łączności mnożenia
-liczb rzeczywistych.
+$\psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, u_{ \HorSpaceOne 2 } }$
+i~$\varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, u_{ \HorSpaceOne 2 } }$, które pozwalają
+stwierdzić, że~zachowują~się one jak mnożenie i~dzielenie liczb
+rzeczywistych. W~pierwszym rzędzie zbadamy własność analogiczną do
+łączności mnożenia liczb rzeczywistych.
 \begin{equation}
   \label{eq:Mechanika-Rozwazania-ogolne-12}
-  \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
-  \psi_{ u_{ 1 }, u_{ 2 } }( v_{ 1 }, v_{ 2 } ), v_{ 3 } \big)
-  =
-  \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }\big(
-  v_{ 1 }, \psi_{ u_{ 2 }, u_{ 3 } }( v_{ 2 }, v_{ 3 } ) \big),
+  \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } u_{ \HorSpaceOne 2 }, \,
+    u_{ \HorSpaceOne 3 } }\big(
+  \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }(
+  v_{ \HorSpaceOne 1 }, v_{ \HorSpaceOne 2 } ), v_{ \HorSpaceOne 3 } \big) =
+  \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 }
+    u_{ \HorSpaceOne 3 } }\big( v_{ \HorSpaceOne 1 },
+  \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 2 }, u_{ \HorSpaceOne 3 } }(
+  v_{ \HorSpaceOne 2 }, v_{ \HorSpaceOne 3 } ) \big),
 \end{equation}
-gdzie $u_{ 1 }, u_{ 2 }, u_{ 3 } \in U$, $v_{ 1 } \in V_{ u_{ 1 } }$,
-$v_{ 2 } \in V_{ u_{ 2 } }$, $v_{ 3 } \in V_{ u_{ 3 } }$. Główny problem z~tą
+gdzie
+$u_{ \HorSpaceOne 1 }, u_{ \HorSpaceOne 2 }, u_{ \HorSpaceOne 3 } \in U$,
+$v_{ \HorSpaceOne 1 } \in V_{ u_{ \HorSpaceOne 1 } }$,
+$v_{ \HorSpaceOne 2 } \in V_{ u_{ \HorSpaceOne 2 } }$,
+$v_{ \HorSpaceOne 3 } \in V_{ u_{ \HorSpaceOne 3 } }$. Główny problem z~tą
 tożsamością i~jej dowodem polega na tym, że~notacja staje~się dość
-zawiła. Zapiszemy $v_{ 1 } = \alpha \, e_{ u_{ 1 } }$,
-$v_{ 2 } = \beta \, e_{ u_{ 2 } }$, $v_{ 3 } = \gamma \, e_{ u_{ 3 } }$.
+zawiła. Zapiszemy
+$v_{ \HorSpaceOne 1 } =
+\alpha \HorSpaceOne e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } }$,
+$v_{ \HorSpaceOne 2 } =
+\beta \HorSpaceOne e_{ \HorSpaceTwo u_{ \HorSpaceOne 2 } }$,
+$v_{ \HorSpaceOne 3 } =
+\gamma \HorSpaceOne e_{ \HorSpaceTwo u_{ \HorSpaceOne 3 } }$.
+
+\negVerSpaceTwo
+
+
 \begin{subequations}
+
   \begin{equation}
     \label{eq:Mechanika-Rozwazania-ogolne-13-A}
     \begin{split}
-      \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
-      \psi_{ u_{ 1 }, \, u_{ 2 } }( v_{ 1 }, v_{ 2 } ), v_{ 3 } \big)
+      \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } u_{ \HorSpaceOne 2 }, \,
+      u_{ \HorSpaceOne 3 } }\big(
+      \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }(
+      v_{ \HorSpaceOne 1 }, v_{ \HorSpaceOne 2 } ), v_{ \HorSpaceOne 3 } \big)
       &=
-        \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
-        \psi_{ u_{ 1 }, \, u_{ 2 } }( \alpha \, e_{ u_{ 1 } }, \beta \, e_{ u_{ 2 } } ),
-        \gamma \, e_{ u_{ 3 } } \big) = \\
+        \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } u_{ \HorSpaceOne 2 }, \,
+        u_{ \HorSpaceOne 3 } }\big(
+        \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }(
+        \alpha \HorSpaceOne e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } },
+        \beta \HorSpaceOne e_{ \HorSpaceTwo u_{ \HorSpaceOne 2 } } ),
+        \gamma \HorSpaceOne e_{ \HorSpaceTwo u_{ \HorSpaceOne 3 } } \big) = \\
       &=
-        \alpha \beta \gamma \, \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
-        \psi_{ u_{ 1 }, \, u_{ 2 } }( e_{ u_{ 1 } }, e_{ u_{ 2 } } ),
-        e_{ u_{ 3 } } \big),
+        \alpha \beta \gamma \HorSpaceOne
+        \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } u_{ \HorSpaceOne 2 }, \,
+        u_{ \HorSpaceOne 3 } }\big(
+        \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }(
+        e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } },
+        e_{ \HorSpaceTwo u_{ \HorSpaceOne 2 } } ),
+        e_{ \HorSpaceTwo u_{ \HorSpaceOne 3 } } \big),
     \end{split}
   \end{equation}
+
+
+
   \begin{equation}
     \label{eq:Mechanika-Rozwazania-ogolne-13-B}
     \begin{split}
@@ -398,7 +440,11 @@ $v_{ 2 } = \beta \, e_{ u_{ 2 } }$, $v_{ 3 } = \gamma \, e_{ u_{ 3 } }$.
         \psi_{ u_{ 2 }, \, u_{ 3 } }( e_{ u_{ 2 } }, e_{ u_{ 3 } } ) \big).
     \end{split}
   \end{equation}
+
 \end{subequations}
+
+
+\noindent
 Widzimy więc, że~aby zakończyć dowód tej własności wystarczy wykazać
 równości
 \begin{equation}
@@ -432,7 +478,8 @@ natomiast prawa
 Tym samym równość \eqref{eq:Mechanika-Rozwazania-ogolne-14} wynika
 z~łączności mnożenia w~grupie $U$, ta~zaś dowodzi
 \eqref{eq:Mechanika-Rozwazania-ogolne-12}. Analogiczny rachunek pokazuje,
-że~zachodzi swoista „przemienności mnożenia”:
+że~zachodzi własność analogiczna do~przemienności mnożenia liczb
+rzeczywistych:
 \begin{equation}
   \label{eq:Mechanika-Rozwazania-ogolne-17}
   \psi_{ u_{ 1 }, \, u_{ 2 } }( v_{ 1 }, v_{ 2 } ) =
@@ -552,8 +599,8 @@ będziemy~się starali do~niego powrócić i~zmodyfikować w~odpowiedni sposób.
 
 
 % ############################
-\section{ % Autor i tytuł dzieła
-  Isaac Newton \\
+\subsection{ % Autor i tytuł dzieła
+  Isaac Newton,
   \textit{Matematyczne zasady filozofii przyrody},
   \cite{NewtonMatematyczneZasadyFilozofiiPrzyrody2011}}
 
