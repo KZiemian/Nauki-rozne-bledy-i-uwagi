@@ -271,7 +271,7 @@ Wprowadzając notację
   u^{ -1 } = \frac{ 1 }{ u } = 1 / u, \quad u \in U,
 \end{equation}
 oraz analogiczne jak dla ułamków wymiernych prawa operowania ułamkami
-utworzonymi z~elementów grupy $U$ możemy zapisać niektóre wielkości
+utworzonymi z~elementów grupy $U$, możemy zapisać niektóre wielkości
 występujące w~\eqref{eq:Mechanika-Rozwazania-ogolne-03} w~bardziej znajomej
 postaci:
 \begin{equation}
@@ -294,9 +294,13 @@ z~$\Rbb$:
 Tym samym możemy uznać, iż~$V_{ I }$ reprezentuje przestrzeń wielkości
 bezwymiarowych.
 
-Niech teraz będą dane $u_{ \HorSpaceOne 1 }, u_{ \HorSpaceOne 2 } \in U$. Każdej
-parze takich przestrzeni przyporządkowujemy pewien rodzaj iloczynu, który
-będziemy oznaczać
+Gdy określona jest ogólna struktura bytów matematycznych którymi
+będziemy~się posługiwać, potrzebujemy teraz wprowadzić w~ich zbiorze
+odpowiednie działania, które odpowiadają dobrze znanym operacjom
+wykonywanym na~jednostkach fizycznych. Niech teraz będą dane
+$u_{ \HorSpaceOne 1 }, u_{ \HorSpaceOne 2 } \in U$. Każdej parze przestrzeni
+$V_{ u_{ 1 } }$, $V_{ u_{ \HorSpaceOne 2 } }$ przyporządkowujemy pewien rodzaj
+iloczynu, który będziemy oznaczać
 $\psi_{ \HorSpaceOne u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }$.
 \begin{equation}
   \label{eq:Mechanika-Rozwazania-ogolne-07}
@@ -307,28 +311,134 @@ gdzie $V_{ u_{ \HorSpaceOne 1 } u _{ \HorSpaceOne 2 } }$ oznacza przestrzeń
 wektorową odpowiadającą iloczynowi elementów
 $u_{ \HorSpaceOne 1 } u_{ \HorSpaceOne 2 } \in U$.
 Od~$\psi_{ \HorSpaceOne u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }$ żądamy był on
-odwzorowaniem dwuliniowym. Aby dookreślić te odwzorowania w~każdej
-przestrzeni $V_{ u }$ wybieramy w~dowolny sposób jeden niezerowy wektor,
-oznaczmy go~$e_{ \HorSpaceTwo u }$, i~kładziemy
+odwzorowaniem dwuliniowym. Wobec tego odwzorowania te~są w~pełni
+określone, jeśli w~każdej przestrzeni $V_{ u }$ wybierzemy jeden
+niezerowy wektor, będziemy go oznaczać $v_{ \HorSpaceOne u } \neq 0$,
+i~położymy
 \begin{equation}
   \label{eq:Mechanika-Rozwazania-ogolne-08}
-  \psi_{ \HorSpaceOne u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }(
-  e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } }, e_{ \HorSpaceTwo u_{  \HorSpaceOne2 } } ) =
-  e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } u_{ \HorSpaceOne 2 } }.
+  \psi_{ \HorSpaceTwo u_{ 1 }, \, u_{ \HorSpaceOne 2 } }(
+  v_{ \HorSpaceOne u_{ \HorSpaceOne 1 } }, v_{ u_{ \HorSpaceOne 2 } } ) =
+  v_{ \HorSpaceOne u_{ 1 } u_{ \HorSpaceOne 2 } }.
 \end{equation}
-Wprowadzamy również operację dzielenia elementu z~$V_{ u_{ 1 } }$ przez
-niezerowy element z~przestrzeni $V_{ u_{ 2 } }$:
+Konkretny wybór wektorów $v_{ \HorSpaceOne u }$ nie ma znaczenia dla
+matematycznej strony formalizmu, nie wydaje~się też mieć znaczenia dla
+jego fizycznej fizycznej interpretacji, dlatego nie będziemy~się
+nad tym problemem dłużej zatrzymywać.
+
+Rozpatrzmy teraz przestrzeń $V_{ L }$. Wybór konkretnego wektora bazowego
+$e_{ L }$ w~tej przestrzeni będziemy rozumieć jako wybór konkretnej
+jednostki długości. Przykładowo, jeśli zdecydowaliśmy~się mierzyć
+długość w~metrach, to wybrany dla tego przypadku wektor $e_{ L }$
+reprezentuje fakt, że~wszystkie długości będziemy od tej pory mierzyć
+w~metrach. Dlatego też wektor ten będziemy oznaczać symbolem
+$e_{ \HorSpaceTwo \si{m} }$.
+
+Gdy to uczynimy, to tracimy możliwość arbitralnego wyboru wektorów bazowych,
+reprezentujących inne jednostki długości. Przykład, ponieważ jak dobrze
+wiadomo centymetr jest \textit{zdefiniowany} jako jedna setna metra, więc
+odpowiadający mu wektor bazowy dany jest jako:
 \begin{equation}
   \label{eq:Mechanika-Rozwazania-ogolne-09}
+  e_{ \HorSpaceOne \si{cm} } = \frac{ 1 }{ 100 } e_{ \HorSpaceTwo \si{m} }.
+\end{equation}
+Analogiczna sytuacja zachodzi dla przestrzeni $V_{ \HorSpaceOne T }$ jeśli
+ustaliliśmy jednostkę czasu na, przykładowo, sekundę, a~jako wektor bazowy
+tej przestrzeni wybraliśmy $e_{ \HorSpaceOne \si{s} }$. Dla masy i~ewentualnie
+innych jednostek fizyczny przedstawiona procedura również przebiega w~ten
+sam sposób.
+
+Załóżmy, że~wybraliśmy już wektory bazowe dla podstawowych jednostek
+fizycznych: $e_{ \HorSpaceOne L } \in V_{ L }$,
+$e_{ \HorSpaceOne T } \in V_{ \HorSpaceOne T }$, $e_{ M } \in V_{ M }$.
+Wówczas wektor $e_{ \HorSpaceOne u, \, LTM }$ tworzący bazę przestrzeni
+$V_{ u }$, $u \in U$, która to baza odpowiada mierzeniu wielkości fizycznych
+w~wybranym układzie jednostek, jest już jednoznacznie wyznaczony przez
+zależność
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-10}
+  e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } u_{ \HorSpaceOne 2 }, \, LTM } :=
+  \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }(
+  e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } }, e_{ \HorSpaceTwo u_{  \HorSpaceOne 2 } } ).
+\end{equation}
+Przykładowo, wektor bazowy przestrzeni $V_{ L T }$ jest wyznaczony przez
+zależność
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-11}
+  e_{ \HorSpaceOne L T, \, LTM } :=
+  \psi_{ L, \, T }( e_{ L, \, LTM }, e_{ \HorSpaceOne T, \, LTM } ).
+\end{equation}
+Ponieważ odwzorowanie
+$\psi_{ \HorSpaceOne u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }$ zostało zdefiniowane
+za~pomocą wzoru \eqref{eq:Mechanika-Rozwazania-ogolne-08}, więc wektor
+$e_{ \HorSpaceOne u, \, LTM } \in V_{ u }$ zdefiniowany wzorem
+\eqref{eq:Mechanika-Rozwazania-ogolne-10} nie zależy od~wyboru
+$u_{ 1 }, u_{ \HorSpaceOne 2 } \in U$, takich~że
+$u = u_{ 1 } u_{ \HorSpaceOne 2 }$.
+
+W~dalszym ciągu, by uniknąć uciążliwej notacji, będziemy pomijali symbol
+$LTM$ w~indeksie dolnym wektora $e_{ \HorSpaceTwo u, \, LTM }$ i~zapisywać
+go po prostu jako $e_{ \HorSpaceTwo u }$. Należy jednak pamiętać, że~wektor
+ten zależy od~wyboru bazy w~przestrzeniach $V_{ L }$,
+$V_{ \HorSpaceOne T }$ i~$V_{ M }$.
+
+Pozwolimy sobie teraz na mała techniczną dygresję. Powyższe rozumowanie
+moglibyśmy odwrócić w~następującym sensie. Najpierw wybieramy wektory
+bazowe przestrzeni $e_{ L } \in V_{ L }$,
+$e_{ \HorSpaceOne T } \in V_{ \HorSpaceOne T }$
+i~$e_{ M } \in V_{ M }$, następnie zaś~w~sposób arbitralny wybieramy wektory
+$v_{ \HorSpaceOne u } \in V_{ u }$ dla wszystkich pozostałych przestrzeni
+i~przyjmujemy, że~tworzą one bazy tych przestrzeni dla układu jednostek
+określonego przez $e_{ L }$, $e_{ \HorSpaceOne T }$ i~$e_{ M }$, czyli
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-12}
+  e_{ \HorSpaceOne u } := v_{ \HorSpaceOne u }.
+\end{equation}
+W~ostatnim zaś kroku określamy odwzorowanie
+$\psi_{ \HorSpaceOne u_{ 1 }, \, u_{ \HorSpaceOne 2 } }$ za pomocą wzoru
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-13}
+  \psi_{ \HorSpaceOne u_{ 1 }, \, u_{ \HorSpaceOne 2 } }(
+  e_{ \HorSpaceTwo u_{ 1 } }, e_{ \HorSpaceTwo u_{ \HorSpaceOne 2 } } ) =
+  e_{ \HorSpaceTwo u_{ 1 } u_{ \HorSpaceOne 2 } }.
+\end{equation}
+
+Wybór tego czy najpierw definiujemy odwzorowania
+$\psi_{ \HorSpaceOne u_{ 1 }, \, u_{ \HorSpaceOne 2 } }$ za pomocą rodziny wektorów
+$u \in V_{ u }$, a~potem za jego pomocą bazę
+w~$V_{ u_{ 1 } u_{ \HorSpaceOne 2 } }$, czy na odwrót, nie wpływa w~żaden
+realny sposób na~przedstawiony formalizm. Można więc wybrać jedną z~tych
+dróg wedle uznania.
+
+Zapisywanie iloczynu wektorów za pomocą funkcji
+$\psi_{ \HorSpaceOne u_{ 1 }, \, u_{ \HorSpaceOne 2 } }$ prowadzi do powstania
+bardzo precyzyjnych wzorów, z~których można dokładnie odczytać jakie
+operacje są wykonywane. Ten sposób zapisu ma jednak tą wadę, że~jest ona
+dość trudna w~czytaniu, dlatego wprowadzimy alternatywną notację, którą
+będziemy nazywać arytmetyczną. Notacja ta jest doskonale znany każdemu kto
+zapoznał~się z~elementarnym wprowadzeniem do~fizyki. Mianowicie będziemy
+pisać
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-14}
+  v_{ \HorSpaceOne 1 } v_{ \HorSpaceTwo 2 } :=
+  \psi_{ \HorSpaceOne u_{ 1 }, \, u_{ \HorSpaceOne 2 } }(
+  v_{ \HorSpaceOne 1 }, v_{ \HorSpaceTwo 2 } ).
+\end{equation}
+
+Wprowadzimy teraz operację dzielenia wektora z~przestrzeni
+$V_{ u_{ \HorSpaceOne 1 } }$ przez niezerowy element należący do
+$V_{ u_{ \HorSpaceOne 2 } }$:
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-15}
   \varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } } :
-  V_{ u_{ \HorSpaceOne 1 } } \times ( V_{ u_{ \HorSpaceOne 2 } } \setminus \{ 0 \} ) \to
-  V_{ u_{ \HorSpaceOne 1 } / u_{ \HorSpaceOne 2 } }.
+  V_{ u_{ 1 } } \times ( V_{ u_{ \HorSpaceOne 2 } } \setminus \{ 0 \} ) \to
+  V_{ u_{ 1 } / u_{ \HorSpaceOne 2 } }.
 \end{equation}
 Od funkcji $\varphi_{ \HorSpaceOne u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }$ żądamy
 by posiadała następujące własności:
 \begin{subequations}
   \begin{align}
-    \label{eq:Mechanika-Rozwazania-ogolne-10-A}
+    \label{eq:Mechanika-Rozwazania-ogolne-16-A}
     \varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }(
     \alpha \HorSpaceOne v_{ \HorSpaceOne 1 } +
     \beta \HorSpaceOne v_{ \HorSpaceOne 2 }, w )
@@ -336,38 +446,62 @@ by posiadała następujące własności:
       u_{ \HorSpaceOne 2 } }( v_{ \HorSpaceOne 1 }, w ) +
       \beta \HorSpaceOne \varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \,
       u_{ \HorSpaceOne 2 } }( v_{ \HorSpaceOne 2 }, w ), \\[0.2em]
-    \label{eq:Mechanika-Rozwazania-ogolne-10-B}
+    \label{eq:Mechanika-Rozwazania-ogolne-16-B}
     \varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }( v,
     \lambda \HorSpaceOne w )
     &= \frac{ 1 }{ \lambda } \HorSpaceOne
       \varphi_{ \HorSpaceTwo u_{ \HorSpaceTwo 1 }, \, u_{ \HorSpaceOne 2 } }( v,
       w ), \\[0.2em]
-    \label{eq:Mechanika-Rozwazania-ogolne-10-C}
+    \label{eq:Mechanika-Rozwazania-ogolne-16-C}
     \varphi_{ \HorSpaceTwo u, \, u }( v_{ \HorSpaceOne u }, v_{ \HorSpaceOne u } )
     &= I \in V_{ I },
   \end{align}
 \end{subequations}
 gdzie $u, u_{ \HorSpaceOne 1 }, u_{ \HorSpaceOne 2 } \in U$,
-$v_{ u } \in V_{ u }$,
+$v_{ \HorSpaceOne u } \in V_{ u }$,
 $v, v_{ \HorSpaceOne 1 }, v_{ \HorSpaceOne 2 } \in V_{ u_{ \HorSpaceOne 1 } }$,
 $w \in V_{ u_{ \HorSpaceOne 2 } }$, $w \neq 0$,
-$\alpha, \beta, \lambda \in \Rbb$ i~$\lambda \neq 0$. Podobnie jak poprzednio żądamy by zachodziło
+$\alpha, \beta, \lambda \in \Rbb$ i~$\lambda \neq 0$. Niech $v_{ \HorSpaceOne } \in V_{ u }$ będzie
+wybraną uprzednio rodziną baz tych przestrzeni. Tak jak dla
+$\psi_{ \HorSpaceTwo u_{ 1 }, \, u_{ \HorSpaceTwo 2 }}$ żądamy by zachodził związek
 \begin{equation}
-  \label{eq:Mechanika-Rozwazania-ogolne-11}
+  \label{eq:Mechanika-Rozwazania-ogolne-17}
+  \varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }(
+  v_{ u_{ \HorSpaceOne 1 } },
+  v_{ u_{ \HorSpaceOne 2 } } ) =
+  v_{ u_{ \HorSpaceOne 1 } / u_{ \HorSpaceOne 2 } },
+\end{equation}
+lub równoważnie
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-18}
   \varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }(
   e_{ \HorSpaceOne u_{ \HorSpaceOne 1 } },
   e_{ \HorSpaceTwo u_{ \HorSpaceOne 2 } } ) =
   e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } / u_{ \HorSpaceOne 2 } }.
 \end{equation}
 
-Przystąpimy teraz do udowodnienia własności odwzorowań
-$\psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, u_{ \HorSpaceOne 2 } }$
-i~$\varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, u_{ \HorSpaceOne 2 } }$, które pozwalają
-stwierdzić, że~zachowują~się one jak mnożenie i~dzielenie liczb
-rzeczywistych. W~pierwszym rzędzie zbadamy własność analogiczną do
-łączności mnożenia liczb rzeczywistych.
+Tak jak dla $\psi_{ \HorSpaceOne u_{ 1 }, \, u_{ \HorSpaceOne 2 } }$ wprowadzamy
+uproszczoną notację dla działania
+$\varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }$. Zacznijmy
+od~przypadku, gdy jedna z~przestrzeni $V_{ u_{ \HorSpaceOne 1 } }$,
+$V_{ u_{ \HorSpaceOne 2 } }$ jest równa $V_{ I } = \Rbb$. Wówczas dla
+$\alpha \in V_{ I }$ i~$v \in V_{ u }$ będziemy pisali
 \begin{equation}
-  \label{eq:Mechanika-Rozwazania-ogolne-12}
+  \label{eq:Mechanika-Rozwazania-ogolne-19}
+  \frac{ \alpha }{ v } := \varphi_{ \HorSpaceOne I, \, u }( \alpha, v ), \qquad
+  \frac{ 1 }{ \alpha } v := \varphi_{ \HorSpaceOne u, \, I }( v, \alpha ).
+\end{equation}
+
+
+
+Przystąpimy teraz do udowodnienia własności odwzorowań
+$\psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }$
+i~$\varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }$, które pozwalają
+stwierdzić, że~zachowują~się one jak mnożenie i~dzielenie liczb
+rzeczywistych. W~pierwszym rzędzie zbadamy własność, która jest analogiczna
+do~łączności mnożenia w~ciele liczb rzeczywistych:
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-20}
   \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } u_{ \HorSpaceOne 2 }, \,
     u_{ \HorSpaceOne 3 } }\big(
   \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }(
@@ -381,15 +515,22 @@ gdzie
 $u_{ \HorSpaceOne 1 }, u_{ \HorSpaceOne 2 }, u_{ \HorSpaceOne 3 } \in U$,
 $v_{ \HorSpaceOne 1 } \in V_{ u_{ \HorSpaceOne 1 } }$,
 $v_{ \HorSpaceOne 2 } \in V_{ u_{ \HorSpaceOne 2 } }$,
-$v_{ \HorSpaceOne 3 } \in V_{ u_{ \HorSpaceOne 3 } }$. Główny problem z~tą
-tożsamością i~jej dowodem polega na tym, że~notacja staje~się dość
-zawiła. Zapiszemy
+$v_{ \HorSpaceOne 3 } \in V_{ u_{ \HorSpaceOne 3 } }$. Do zapisania ostatniej
+tożsamości nie użyliśmy notacji arytmetycznej, gdyż ta korzystając
+z~funkcji $\psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }$ wydobywa
+na jaw dokładny sens występujących w~niej operacji. Nie da~się jednak ukryć,
+że~jej używamy, to główna przeszkodą w~zrozumieniu dowodu własności
+\eqref{eq:Mechanika-Rozwazania-ogolne-19} staje~się zrozumieniu co dokładnie
+konkretne symbole oznaczają.
+
+Dowód zależności \eqref{eq:Mechanika-Rozwazania-ogolne-19} zaczniemy od
+zauważenia, że~dla pewnych $\alpha, \beta, \gamma \in \Rbb$ zachodzi
 $v_{ \HorSpaceOne 1 } =
 \alpha \HorSpaceOne e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } }$,
 $v_{ \HorSpaceOne 2 } =
 \beta \HorSpaceOne e_{ \HorSpaceTwo u_{ \HorSpaceOne 2 } }$,
 $v_{ \HorSpaceOne 3 } =
-\gamma \HorSpaceOne e_{ \HorSpaceTwo u_{ \HorSpaceOne 3 } }$.
+\gamma \HorSpaceOne e_{ \HorSpaceTwo u_{ \HorSpaceOne 3 } }$. Mamy teraz
 
 \negVerSpaceTwo
 
@@ -397,7 +538,7 @@ $v_{ \HorSpaceOne 3 } =
 \begin{subequations}
 
   \begin{equation}
-    \label{eq:Mechanika-Rozwazania-ogolne-13-A}
+    \label{eq:Mechanika-Rozwazania-ogolne-21-A}
     \begin{split}
       \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } u_{ \HorSpaceOne 2 }, \,
       u_{ \HorSpaceOne 3 } }\big(
@@ -409,7 +550,7 @@ $v_{ \HorSpaceOne 3 } =
         \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }(
         \alpha \HorSpaceOne e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } },
         \beta \HorSpaceOne e_{ \HorSpaceTwo u_{ \HorSpaceOne 2 } } ),
-        \gamma \HorSpaceOne e_{ \HorSpaceTwo u_{ \HorSpaceOne 3 } } \big) = \\
+        \gamma \HorSpaceOne e_{ \HorSpaceTwo u_{ \HorSpaceOne 3 } } \big) = \\[0.3em]
       &=
         \alpha \beta \gamma \HorSpaceOne
         \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } u_{ \HorSpaceOne 2 }, \,
@@ -421,23 +562,33 @@ $v_{ \HorSpaceOne 3 } =
     \end{split}
   \end{equation}
 
+  \negVerSpaceTwo
+
 
 
   \begin{equation}
-    \label{eq:Mechanika-Rozwazania-ogolne-13-B}
+    \label{eq:Mechanika-Rozwazania-ogolne-21-B}
     \begin{split}
-      \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }\big(
-      e_{ u_{ 1 } },
-      \psi_{ u_{ 2 }, \, u_{ 3 } }( e_{ u_{ 2 } }, e_{ u_{ 3 } } ) \big)
+      \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 }
+      u_{ \HorSpaceOne 3 } }\big(
+      e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } },
+      \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 2 }, \, u_{ \HorSpaceOne 3 } }(
+      e_{ \HorSpaceTwo u_{ \HorSpaceOne 2 } }, e_{ u_{ \HorSpaceOne 3 } } ) \big)
       &=
-        \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }\big(
-        \alpha \, e_{ u_{ 1 } },
-        \psi_{ u_{ 2 }, \, u_{ 3 } }( \beta \, e_{ u_{ 2 } }, \gamma \, e_{ u_{ 3 } } )
-        \big) = \\
+        \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \,
+        u_{ \HorSpaceOne 2 } u_{ \HorSpaceOne 3 } }\big(
+        \alpha \HorSpaceOne e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } },
+        \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 2 }, \, u_{ \HorSpaceOne 3 } }(
+        \beta \HorSpaceOne e_{ \HorSpaceTwo u_{ \HorSpaceOne 2 } },
+        \gamma \HorSpaceOne e_{ \HorSpaceTwo u_{ \HorSpaceOne 3 } } )
+        \big) = \\[0.3em]
       &=
-        \alpha \beta \gamma \, \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }\big(
-        e_{ u_{ 1 } },
-        \psi_{ u_{ 2 }, \, u_{ 3 } }( e_{ u_{ 2 } }, e_{ u_{ 3 } } ) \big).
+        \alpha \beta \gamma \HorSpaceOne \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \,
+        u_{ \HorSpaceOne 2 } u_{ \HorSpaceOne 3 } }\big(
+        e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } },
+        \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 2 }, \,
+        u_{ \HorSpaceOne 3 } }( e_{ \HorSpaceTwo u_{ \HorSpaceOne 2 } },
+        e_{ \HorSpaceTwo u_{ \HorSpaceOne 3 } } ) \big).
     \end{split}
   \end{equation}
 
@@ -448,135 +599,236 @@ $v_{ \HorSpaceOne 3 } =
 Widzimy więc, że~aby zakończyć dowód tej własności wystarczy wykazać
 równości
 \begin{equation}
-  \label{eq:Mechanika-Rozwazania-ogolne-14}
-  \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
-  \psi_{ u_{ 1 }, \, u_{ 2 } }( e_{ u_{ 1 } }, e_{ u_{ 2 } } ), e_{ u_{ 3 } }
-  \big) =
-  \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }\big(
-  e_{ u_{ 1 } }, \psi_{ u_{ 2 }, \, u_{ 3 } }( e_{ u_{ 2 } }, e_{ u_{ 3 } } )
+  \label{eq:Mechanika-Rozwazania-ogolne-22}
+  \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } u_{ \HorSpaceOne 2 }, \,
+    u_{ \HorSpaceOne 3 } }\big(
+  \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }(
+  e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } }, e_{ \HorSpaceTwo u_{ \HorSpaceOne 2 } } ),
+  e_{ \HorSpaceTwo u_{ \HorSpaceOne 3 } } \big) =
+  \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \,
+    u_{ \HorSpaceOne 2 } u_{ \HorSpaceOne 3 } }\big(
+  e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } },
+  \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 2 }, \, u_{ \HorSpaceOne 3 } }(
+  e_{ \HorSpaceTwo u_{ \HorSpaceOne 2 } }, e_{ \HorSpaceTwo u_{ \HorSpaceOne 3 } } )
   \big).
 \end{equation}
 Lewa strona tej zależności wynosi
 \begin{equation}
-  \label{eq:Mechanika-Rozwazania-ogolne-15}
-  \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big(
-  \psi_{ u_{ 1 }, \, u_{ 2 } }( e_{ u_{ 1 } }, e_{ u_{ 2 } } ), e_{ u_{ 3 } }
-  \big) =
-  \psi_{ u_{ 1 } u_{ 2 }, \, u_{ 3 } }\big( e_{ u_{ 1 } u_{ 2 } }, e_{ u_{ 3 } }
-  \big) =
-  e_{ ( u_{ 1 } u_{ 2 } ) u_{ 3 } },
+  \label{eq:Mechanika-Rozwazania-ogolne-23}
+  \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } u_{ \HorSpaceOne 2 }, \,
+    u_{ \HorSpaceOne 3 } }\big(
+  \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }(
+  e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } },
+  e_{ \HorSpaceTwo u_{ \HorSpaceOne 2 } } ),
+  e_{ \HorSpaceTwo u_{ \HorSpaceOne 3 } } \big) =
+  \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } u_{ \HorSpaceOne 2 }, \,
+    u_{ \HorSpaceOne 3 } }\big(
+  e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } u_{ \HorSpaceOne 2 } },
+  e_{ \HorSpaceTwo u_{ \HorSpaceOne 3 } } \big) =
+  e_{ \HorSpaceTwo ( u_{ \HorSpaceOne 1 } u_{ \HorSpaceOne 2 } )
+    u_{ \HorSpaceOne 3 } },
 \end{equation}
 natomiast prawa
 \begin{equation}
-  \label{eq:Mechanika-Rozwazania-ogolne-16}
-  \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }\big(
-  e_{ u_{ 1 } }, \psi_{ u_{ 2 }, \, u_{ 3 } }( e_{ u_{ 2 } }, e_{ u_{ 3 } } )
+  \label{eq:Mechanika-Rozwazania-ogolne-24}
+  \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \,
+    u_{ \HorSpaceOne 2 } u_{ \HorSpaceOne 3 } }\big(
+  e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } },
+  \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 2 }, \, u_{ \HorSpaceOne 3 } }(
+  e_{ \HorSpaceTwo u_{ \HorSpaceOne 2 } }, e_{ \HorSpaceTwo u_{ \HorSpaceOne 3 } } )
   \big) =
-  \psi_{ u_{ 1 }, \, u_{ 2 } u_{ 3 } }( e_{ u_{ 1 } }, e_{ u_{ 2 } u_{ 3 } } ) =
-  e_{ u_{ 1 } ( u_{ 2 } u_{ 3 } ) }.
+  \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \,
+    u_{ \HorSpaceOne 2 } u_{ \HorSpaceOne 3 } }(
+  e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } },
+  e_{ \HorSpaceTwo u_{ \HorSpaceOne 2 } u_{ \HorSpaceOne 3 } } ) =
+  e_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } ( u_{ \HorSpaceOne 2 }
+    u_{ \HorSpaceOne 3 } ) }.
 \end{equation}
-Tym samym równość \eqref{eq:Mechanika-Rozwazania-ogolne-14} wynika
-z~łączności mnożenia w~grupie $U$, ta~zaś dowodzi
-\eqref{eq:Mechanika-Rozwazania-ogolne-12}. Analogiczny rachunek pokazuje,
+Tym samym równość \eqref{eq:Mechanika-Rozwazania-ogolne-20} wynika
+z~łączności mnożenia w~grupie $U$, to~zaś dowodzi tożsamości
+\eqref{eq:Mechanika-Rozwazania-ogolne-18}. Korzystając teraz z~notacji
+arytmetycznej możemy tą tożsamość zapisać jako
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-25}
+  ( v_{ \HorSpaceOne 1 } v_{ \HorSpaceOne 2 } ) v_{ \HorSpaceOne 3 } =
+  v_{ \HorSpaceOne 1 } ( v_{ \HorSpaceOne 2 } v_{ \HorSpaceOne 3 } ).
+\end{equation}
+
+Analogiczny rachunek pokazuje,
 że~zachodzi własność analogiczna do~przemienności mnożenia liczb
 rzeczywistych:
 \begin{equation}
-  \label{eq:Mechanika-Rozwazania-ogolne-17}
-  \psi_{ u_{ 1 }, \, u_{ 2 } }( v_{ 1 }, v_{ 2 } ) =
-  \psi_{ u_{ 2 }, \, u_{ 1 } }( v_{ 2 }, v_{ 1 } ),
+  \label{eq:Mechanika-Rozwazania-ogolne-26}
+  \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }(
+  v_{ \HorSpaceOne 1 }, v_{ \HorSpaceOne 2 } ) =
+  \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 2 }, \, u_{ \HorSpaceOne 1 } }(
+  v_{ \HorSpaceOne 2 }, v_{ \HorSpaceOne 1 } ),
 \end{equation}
-gdzie $u_{ 1 }, u_{ 2 } \in U$, $v_{ 1 } \in V_{ u_{ 1 } }$
-i~$v_{ 2 } \in V_{ u_{ 2 } }$. Używają analogicznej metody dowodzimy
-„prawa łączności dla operacji dzielenia”
+gdzie $u_{ \HorSpaceOne 1 }, u_{ \HorSpaceOne 2 } \in U$,
+$v_{ \HorSpaceOne 1 } \in V_{ u_{ \HorSpaceOne 1 } }$
+i~$v_{ \HorSpaceOne 2 } \in V_{ u_{ \HorSpaceOne 2 } }$. W~notacji arytmetycznej
+mamy po prostu
 \begin{equation}
-  \label{eq:Mechanika-Rozwazania-ogolne-18}
-  \varphi_{ u_{ 1 } / u_{ 2 }, \, u_{ 3 } }\big(
-  \varphi_{ u_{ 1 }, \, u_{ 2 } }( v_{ 1 }, v_{ 2 } ), v_{ 3 } \big) =
-  \varphi_{ u_{ 1 }, \, u_{ 2 } / u_{ 3 } }\big(
-  v_{ 1 }, \varphi_{ u_{ 2 }, \, u_{ 3 } }( v_{ 2 }, v_{ 3 } ) \big)
+  \label{eq:Mechanika-Rozwazania-ogolne-27}
+  v_{ \HorSpaceOne 1 } v_{ \HorSpaceOne 2 } =
+  v_{ \HorSpaceOne 2 } v_{ \HorSpaceOne 1 }.
 \end{equation}
-oraz „prawa rozdzielności mnożenia względem dzielenia i~dzielenia
-względem mnożenia”:
+
+W~ten sam sposób dowodzimy własności łączącej iloczyn wektorów z~ich
+ilorazem
 \begin{equation}
-  \label{eq:Mechanika-Rozwazania-ogolne-19}
-  \psi_{ u_{ 1 } / u_{ 2 }, \, q_{ 1 } / q_{ 2 } }\big(
-  \varphi_{ u_{ 1 }, \, u_{ 2 } }( v_{ 1 }, v_{ 2 } ),
-  \varphi_{ q_{ 1 }, \, q_{ 2 } }( w_{ 1 }, w_{ 2 } ) \big) =
-  \varphi_{ u_{ 1 } q_{ 1 }, \, u_{ 2 } q_{ 2 } }\big(
-  \psi_{ u_{ 1 }, \, q_{ 1 } }( v_{ 1 }, w_{ 1 } ),
-  \psi_{ u_{ 2 }, \, q_{ 2 } }( v_{ 2 }, w_{ 2 } ) \big),
+  \label{eq:Mechanika-Rozwazania-ogolne-28}
+  \varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } / u_{ \HorSpaceOne 2 }, \,
+    u_{ \HorSpaceOne 3 } }\big(
+  \varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne 2 } }(
+  v_{ \HorSpaceOne 1 }, v_{ \HorSpaceOne 2 } ), v_{ \HorSpaceOne 3 } \big) =
+  \varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \,
+    u_{ \HorSpaceOne 2 } / u_{ \HorSpaceOne 3 } }\big(
+  v_{ \HorSpaceOne 1 },
+  \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 2 }, \, u_{ \HorSpaceOne 3 } }(
+  v_{ \HorSpaceOne 2 }, v_{ \HorSpaceOne 3 } ) \big),
 \end{equation}
-gdzie $u_{ 1 }, u_{ 2 }, q_{ 1 }, q_{ 2 } \in U$, $v_{ 1 } \in V_{ u_{ 1 } }$,
-$v_{ 2 } \in V_{ u_{ 2 } }$, $w_{ 1 } \in V_{ q_{ 1 } }$ i~$w_{ 2 } \in V_{ q_{ 2 } }$.
+gdzie
+$u_{ \HorSpaceOne 1 }, u_{ \HorSpaceOne 2 }, u_{ \HorSpaceOne 3 } \in U$,
+$v_{ \HorSpaceOne 1 } \in V_{ u_{ \HorSpaceOne 1 } }$,
+$v_{ \HorSpaceOne 2 } \in V_{ u_{ \HorSpaceOne 2 } }$,
+$v_{ \HorSpaceOne 3 } \in V_{ u_{ \HorSpaceOne 3 } }$. W~notacji arytmetycznej
+ostatnia tożsamość przyjmuje dobrze znaną postać
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-29}
+  \frac{ v_{ \HorSpaceOne 1 } }{ v_{ \HorSpaceOne 2 } } \div
+  v_{ \HorSpaceOne 3 } =
+  \frac{ v_{ \HorSpaceOne 1 } }{ v_{ \HorSpaceOne 2 } \HorSpaceOne
+    v_{ \HorSpaceOne 3 } }.
+\end{equation}
+Inną własnością, której dowód przebiega wedle przedstawionego schematu,
+jest „prawo rozdzielności mnożenia względem dzielenia i~dzielenia względem
+mnożenia”:
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-30}
+  \begin{split}
+    &\psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } / u_{ \HorSpaceOne 2 }, \,
+      q_{ \HorSpaceOne 1 } / q_{ \HorSpaceTwo 2 } }\big(
+      \varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, u_{ \HorSpaceOne2 } }(
+      v_{ \HorSpaceOne 1 }, v_{ \HorSpaceOne 2 } ),
+      \varphi_{ \HorSpaceTwo q_{ \HorSpaceOne 1 }, \, q_{ \HorSpaceTwo 2 } }(
+      w_{ \HorSpaceOne 1 }, w_{ \HorSpaceOne 2 } ) \big) = \\
+    &=
+      \varphi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 } q_{ \HorSpaceOne 1 }, \,
+      u_{ \HorSpaceOne 2 } q_{ \HorSpaceTwo 2 } }\big(
+      \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 1 }, \, q_{ \HorSpaceOne 1 } }(
+      v_{ \HorSpaceOne 1 }, w_{ \HorSpaceOne 1 } ),
+      \psi_{ \HorSpaceTwo u_{ \HorSpaceOne 2 }, \, q_{ \HorSpaceTwo 2 } }(
+      v_{ \HorSpaceOne 2 }, w_{ \HorSpaceOne 2 } ) \big),
+  \end{split}
+\end{equation}
+gdzie $u_{ \HorSpaceOne 1 }, u_{ \HorSpaceOne 2 }, q_{ \HorSpaceOne 1 },
+q_{ \HorSpaceOne 2 } \in U$, $v_{ \HorSpaceOne 1 } \in V_{ u_{ 1 } }$,
+$v_{ \HorSpaceOne 2 } \in V_{ u_{ \HorSpaceOne 2 } }$,
+$w_{ \HorSpaceOne 1 } \in V_{ q_{ \HorSpaceOne 1 } }$
+i~$w_{ \HorSpaceOne 2 } \in V_{ q_{ \HorSpaceTwo 2 } }$. Znaczenie tej tożsamości
+staje~się oczywiste, gdy zapiszemy ją w~notacji arytmetycznej
+\begin{equation}
+  \label{eq:Mechanika-Rozwazania-ogolne-31}
+  \frac{ v_{ \HorSpaceOne 1 } }{ v_{ \HorSpaceOne 2 } } \cdot
+  \frac{ w_{ \HorSpaceOne 1 } }{ w_{ \HorSpaceOne 2 } } =
+  \frac{ v_{ \HorSpaceOne 1 } \HorSpaceOne w_{ \HorSpaceOne 1 } }{
+    v_{ \HorSpaceOne 2 } \HorSpaceOne w_{ \HorSpaceOne 2 } }.
+\end{equation}
 
-Korzystając udowodnionych przed chwilą zależności oraz własności mnożenia
-wektorów przez liczby w~przestrzeniach wektorowych, możemy udowodnić wiele
-innych własności funkcji $\psi_{ u_{ 1 }, \, u_{ 2 } }$ i~$\varphi_{ u_{ 1 }, \, u_{ 2 } }$,
-analogicznych dla mnożenia i~dzielenia liczb rzeczywistych.
-Ponieważ metoda dowodzenia ich powinna być w~tym momencie jasna, nie
-będziemy~się zagłębiać w~szczegółowe dowody, chyba, że~zmuszą nas do~tego
-konkretne problemy.
+Wiele innych własności funkcji
+$\psi_{ \HorSpaceOne u_{ 1 }, \, u_{ \HorSpaceOne 2 } }$
+i~$\varphi_{ \HorSpaceTwo u_{ 1 }, \, u_{ \HorSpaceOne 2 } }$ można wykazać,
+korzystając z~tych już udowodnionych oraz przedstawionej już metody
+przeprowadzania dowodów. Ponieważ zrobienie tego nie powinno nastręczać
+żadnych trudności, nie będziemy ich tutaj jawnie analizować, chyba
+że~skłoni nas do tego konkretny problem.
 
-Przedstawiony powyżej schemat powinien nam pozwolić opisać wszystkie
+Przedstawiony powyżej formalizm powinien pozwolić nam opisać wszystkie
 podstawowe operacje wykonywane na~wielkościach fizycznych posiadających
-jednostki, co~zilustrujemy kilkoma przykładami. Na początku wybieramy
-odpowiednie bazy w~przestrzeniach $V_{ L }$, $V_{ T }$ i~$V_{ M }$. Niech
-tymi bazami będą $e_{ \si{m} } \in V_{ L }$, $e_{ \si{s} } \in V_{ T }$,
-$e_{ \si{kg} }$, gdzie wektor $e_{ \si{m} }$ będziemy interpretować jako
-oznaczający metr, $e_{ s }$ jako sekundę, a~$e_{ \si{kg} }$ jako oznaczający
-kilogram. Jeżeli teraz mamy dwa wektory $v_{ 1 }, v_{ 2 } \in V_{ L }$,
-$v_{ 1 } = 10 \, e_{ \si{m} }$, $v_{ 2 } = 5 \, e_{ \si{m} }$, to
+jednostki, acz dopiero test praktyczny pokaże jego prawdziwą wartość. Teraz
+zaś przejdziemy do zilustrowania jego działania kilkoma przykładami.
+Na~początku należy wybrać wybierać odpowiednie bazy w~przestrzeniach
+$V_{ L }$, $V_{ \HorSpaceOne T }$ i~$V_{ M }$. Niech te bazy będą utworzone
+przez wektory $e_{ \HorSpaceOne \si{m} } \in V_{ L }$,
+$e_{ \HorSpaceOne \si{s} } \in V_{ \HorSpaceOne T }$,
+$e_{ \HorSpaceOne \si{kg} } \in V_{ M }$. Wektor $e_{ \HorSpaceOne \si{m} }$ będziemy
+interpretować jako oznaczający metr, wektor $e_{ \HorSpaceOne \si{s} }$ jako
+reprezentujący sekundę, a~wektor $e_{ \HorSpaceOne \si{kg} }$ jako oznaczający
+kilogram.
+
+Jeżeli teraz mamy dwa wektory
+$v_{ \HorSpaceOne 1 }, v_{ \HorSpaceOne 2 } \in V_{ L }$,
+$v_{ \HorSpaceOne 1 } = 10 \, e_{ \HorSpaceOne \si{m} }$,
+$v_{ \HorSpaceOne 2 } = 5 \, e_{ \HorSpaceOne \si{m} }$, to
 \begin{equation}
-  \label{eq:Mechanika-Rozwazania-ogolne-20}
-  v_{ 1 } + v_{ 2 } = 10 \, e_{ \si{m} } + 5 \, e_{ \si{m} } =
-  15 \, e_{ \si{m} } \in V_{ L }.
+  \label{eq:Mechanika-Rozwazania-ogolne-32}
+  v_{ \HorSpaceOne 1 } + v_{ \HorSpaceOne 2 } =
+  10 \, e_{ \HorSpaceOne \si{m} } + 5 \, e_{ \HorSpaceOne \si{m} } =
+  15 \, e_{ \HorSpaceOne \si{m} } \in V_{ L }.
 \end{equation}
 W~notacji do której jesteśmy bardziej przyzwyczajeni, choć z~nietypowym
 użyciem symbolu $v$, powyższa równość przyjęłaby formę
 \begin{equation}
-  \label{eq:Mechanika-Rozwazania-ogolne-21}
-  v_{ 1 } + v_{ 2 } = 10 \, \si{m} + 5 \, \si{m} = 15 \, \si{m}.
+  \label{eq:Mechanika-Rozwazania-ogolne-33}
+  v_{ \HorSpaceOne 1 } + v_{ \HorSpaceOne 2 } =
+  10 \, \si{m} + 5 \, \si{m} = 15 \, \si{m}.
 \end{equation}
-Weźmy teraz $v = 10 \, e_{ \si{m} } \in V_{ L }$
-i~$w = 5 \, e_{ \si{s} }\in V_{ T }$. Możemy teraz obliczyć
+Weźmy teraz $v = 10 \, e_{ \HorSpaceOne \si{m} } \in V_{ L }$
+i~$w = 5 \, e_{ \HorSpaceOne \si{s} }\in V_{ T }$. Możemy teraz obliczyć
 \begin{equation}
-  \label{eq:Mechanika-Rozwazania-ogolne-22}
-  \varphi_{ L, \, T }( v, w ) =
-  \varphi_{ L, \, T }( 10 \, e_{ \si{m} }, 5 \, e_{ \si{s} } ) =
-  10 \varphi_{ L, \, T }( e_{ \si{m} }, 5 \, e_{ \si{s} } ) =
-  10 \cdot \frac{ 1 }{ 5 } \varphi_{ L, \, T }( e_{ \si{m} }, e_{ \si{s} } ) =
-  2 \varphi_{ L, \, T }( e_{ \si{m} }, e_{ \si{s} } ).
+  \label{eq:Mechanika-Rozwazania-ogolne-34}
+  \begin{split}
+    \varphi_{ L, \, T }( v, w )
+    &=
+      \varphi_{ L, \, T }( 10 \, e_{ \HorSpaceOne \si{m} },
+      5 \, e_{ \HorSpaceOne \si{s} } ) =
+      10 \varphi_{ L, \, T }( e_{ \HorSpaceOne \si{m} },
+      5 \, e_{ \HorSpaceOne \si{s} } ) =
+      10 \cdot \frac{ 1 }{ 5 } \varphi_{ L, \, T }( e_{ \HorSpaceOne \si{m} },
+      e_{ \HorSpaceOne \si{s} } ) = \\[0.3em]
+    &=
+      2 \varphi_{ L, \, T }( e_{ \HorSpaceOne \si{m} },
+      e_{ \HorSpaceOne \si{s} } ).
+  \end{split}
 \end{equation}
-Wektor $\varphi_{ L, \, T }( e_{ \si{m} }, e_{ \si{s} } )$ będziemy interpretowali
-jako metr nad sekundę i~zapisywali za pomocą standardowej notacji
-jako
+Wektor $\varphi_{ L, \, T }( e_{ \HorSpaceOne \si{m} }, e_{ \HorSpaceOne \si{s} } )$
+będziemy interpretowali jako reprezentujący metr nad sekundę i~zapisywali
+za pomocą standardowej notacji jako
 \begin{equation}
-  \label{eq:Mechanika-Rozwazania-ogolne-23}
-  \varphi_{ L, \, T }( e_{ \si{m} }, e_{ \si{s} } ) = \frac{ \si{m} }{ \si{s} }.
+  \label{eq:Mechanika-Rozwazania-ogolne-29}
+  \varphi_{ L, \, T }( e_{ \HorSpaceOne \si{m} }, e_{ \HorSpaceOne \si{s} } ) =
+  \frac{ \si{m} }{ \si{s} }.
 \end{equation}
 Wykazane powyżej „prawa łączności i~rozdzielności”
 gwarantują, że~otrzymane wyniki nie zależą od~kolejności wykonywania
-działań, tak jak tego oczekiwaliśmy.
+działań na~wektorach reprezentujących wielkości fizyczne, tak jak tego
+oczekiwaliśmy.
 
-Zauważmy, że~w~obecnym formalizmie, zmiana jednostek danej wielkości
-fizycznej sprowadza~się do zmiany bazy w~przestrzeniach $V_{ L }$, $V_{ T }$
-i~$V_{ M }$. Przykładowo zmiana jednostki czasu z~sekund na minuty
-sprowadza~się do przejścia do bazy
+Zauważmy, że~w~omawianym formalizmie, zmiana jednostek w~których wyrażona
+jest dana wielkości fizyczna sprowadza~się do zmiany bazy w~przestrzeniach
+$V_{ L }$, $V_{ \HorSpaceOne T }$ i~$V_{ M }$. Przykładowo zmiana jednostki
+czasu z~sekund na minuty sprowadza~się do przejścia z~bazy
+$e_{ \HorSpaceOne \si{s} }$ do $e_{ \HorSpaceOne \si{min} }$:
 \begin{equation}
-  \label{eq:Mechanika-Rozwazania-ogolne-24}
-  e_{ \si{min} } = 60 \, e_{ \si{s} }, \quad
-  e_{ \si{s} }   = \frac{ 1 }{ 60 } e_{ \si{min} }.
+  \label{eq:Mechanika-Rozwazania-ogolne-30}
+  e_{ \HorSpaceOne \si{min} } = 60 \, e_{ \HorSpaceOne \si{s} }, \quad
+  e_{ \HorSpaceOne \si{s} } = \frac{ 1 }{ 60 } e_{ \HorSpaceOne \si{min} }.
 \end{equation}
 
 Podane wyżej rozważania dotyczyły wielkości które mogą być reprezentowane,
-przez jedną liczbę rzeczywistą wraz z~jednostkami fizycznymi, zwyczajowo
-wielkości takie określa~się jako „wielkości skalarne” lub „skalary”. Nie
-obejmują one choćby taki obiektów fizycznych posiadających jednostki, jak
-wektor pola elektrycznego $\vecE( \vecx, t )$ w~chwili $t$ i~w~punkcie
-$\vecx$, jednak uogólnienie go na takie przypadki nie powinno stanowić
-problemu, dlatego je pominiemy. Jeśli problemy które napotkamy będą
-wymagały pewnych zmian lub uogólnień w~przedstawionym tu formalizmie,
-będziemy~się starali do~niego powrócić i~zmodyfikować w~odpowiedni sposób.
+przez jedną liczbę rzeczywistą której dodatkowo przypisujemy odpowiednią
+jednostkę fizyczną. Zwyczajowo tego typu wielkości określa~się mianem
+„wielkości skalarnych” lub „skalarów”. Nie obejmują one choćby taki
+obiektów fizycznych posiadających jednostki, jak wektor pola elektrycznego
+$\vecE( \vecx, t )$ w~chwili $t$ i~w~punkcie $\vecx$. Jednak uogólnienie
+tego formalizmu by obejmował takie przypadki nie powinno stanowić
+większego problemu, dlatego nie będziemy poświęcać temu więcej czasu.
+
+Jeśli jakiś konkretny problemy który napotkamy, będą wymagały poważnym zmian
+lub uogólnień przedstawionego tu podejścia, wówczas spróbujemy powrócić do
+tych rozważań ~się starali do~niego powrócić
+i~zmodyfikować w~odpowiedni sposób.
 
 
 
@@ -589,9 +841,8 @@ będziemy~się starali do~niego powrócić i~zmodyfikować w~odpowiedni sposób.
 
 % ######################################
 \newpage
-
-\section{Kanoniczne prace o~mechanice Newtona}
 % Tytuł danego działu
+\section{Kanoniczne prace o~mechanice Newtona}
 
 % \vspace{\spaceTwo}
 % ######################################
