@@ -34,19 +34,20 @@
 
 
 % ---------------------------------------
-% Setting margines
+% Setting margins
 % ---------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
 % Package for easy settings of margins. Unit of measurement is inch.
-\usepackage{vmargin}
-\setmarginsrb
-{ 0.7in}  % left margin
-{ 0.6in}  % top margin
-{ 0.7in}  % right margin
-{ 0.8in}  % bottom margin
-{  20pt}  % head height
-{0.25in}  % head sep
-{   9pt}  % foot height
-{ 0.3in}  % foot sep
+% \usepackage{vmargin}
+% \setmarginsrb
+% { 0.7in}  % left margin
+% { 0.6in}  % top margin
+% { 0.7in}  % right margin
+% { 0.8in}  % bottom margin
+% {  20pt}  % head height
+% {0.25in}  % head sep
+% {   9pt}  % foot height
+% { 0.3in}  % foot sep
 
 
 
@@ -74,17 +75,18 @@
 
 % Other very useful packages from AMS
 \usepackage{amsfonts, amssymb, amscd, amsthm}
-% Better looking calligraphy fonts
+
+% Package with better looking calligraphy fonts
 \usepackage{calrsfs}
 
-% Better looking greek letters
+% Package with better looking greek letters
 % Example of use: pi -> \uppi
 \usepackage{upgreek}
 % Improving look of lambda letter
 \let\oldlambda\Lambda
 \renewcommand{\lambda}{\uplambda}
 
-% ????
+% Package for better support of tensor notation
 \usepackage{tensor}
 
 
@@ -303,10 +305,7 @@ Jakieś błędy są na stronach 476, 482, 482, 482, 483
 
 
 % ############################
-\newpage
-
-{ % Autor i tytuł dzieła
-  Bernard F. Schutz \\
+\section{Bernard F. Schutz,
   \textit{Wstęp do ogólnej teorii względności},
   \cite{SchutzWstepDoOgolnejTeoriiWzglednosci2002}}
 
@@ -405,10 +404,7 @@ wymaga głębszego zastanowienia.
 
 
 % ############################
-\newpage
-
-{ % Autorzy i tytuł dzieła
-  S. W. Hawking, G. F. R. Ellis \\
+\section{S.W. Hawking, G.F.R. Ellis,
   \textit{The Large Scale Structure of Space-Time},
   \cite{HawkingEllisLargeScaleStructureOfSpaceTime1973}}
 
@@ -453,10 +449,7 @@ wymaga głębszego zastanowienia.
 
 
 % ############################
-\newpage
-
-{ % Autor i tytuł dzieła
-  Richard P. Feynman \\
+\section{Richard P. Feynman,
   \textit{Wykłady z grawitacji},
   wydanie \romannumeral1, FWG }
 
