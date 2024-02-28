@@ -1,67 +1,235 @@
+% ---------------------------------------------------------------------
+% Basic configuration and packages
+% ---------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
 \documentclass[a4paper,11pt]{article}
-\usepackage[polish]{babel}% Tłumaczy na polski teksty automatyczne LaTeXa i pomaga z typografią.
-\usepackage[plmath,OT4,MeX]{polski}% Polska notacja we wzorach matematycznych. Ładne polskie
-\usepackage[T1]{fontenc}% Pozwala pisać znaki diakrytyczne z języków innych niż polski.
-\usepackage[utf8]{inputenc}% Pozwala pisać polskie znaki bezpośrednio.
-\usepackage{indentfirst}% Sprawia, że jest wcięcie w pierwszym akapicie.
-\frenchspacing% Wyłącza duże odstępy na końcu zdania. Pakiet babel polski robi to samo, ale to jest 
-%zabezpieczenie jakibym chciał przestać go używać.
-\usepackage{fullpage}% Mniejszse marginesy.
-\usepackage{amsfonts}% Czcionki matematyczne od American Mathematic Society.
-\usepackage{amsmath}% Dalsze wsparcie od AMS. Więc tego, co najlepsze w LaTeX, czyli trybu
-%matematycznego.
-\usepackage{amscd}% Jeszcze wsparcie od AMS.
-\usepackage{latexsym}% Więcej symboli.
-\usepackage{textcomp}% Pakiet z dziwnymi symbolami.
-\usepackage{xy}% Pozwala rysować grafy.
-\usepackage{tensor}% Pozwala prosto używać notacji tensorowej. Albo nawet pięknej notacji
-%tensorowej:).
-\usepackage{graphicx}% Pozwala wstawiać grafikę.
-%\usepackage{url}% Pozwala pisać ładnie znak ~.
-\newcommand{\cm}{\checkmark}
-\newcommand{\bl}{(błąd?)}
 
 
+
+% ---------------------------------------
+% Packages not tied to particular normal language
+% ---------------------------------------
+% This package should improved spaces in the text.
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
+
+
+
+% ---------------------------------------
+% Polonization of LaTeX document
+% ---------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
+
+
+
+% ---------------------------------------
+% Setting margins
+% ---------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
+
+
+
+% ---------------------------------------
+% Setting vertical spaces in the text
+% ---------------------------------------
+% Setting space between lines
+\renewcommand{\baselinestretch}{1.1}
+
+% Setting space between lines in tables
+\renewcommand{\arraystretch}{1.4}
+
+
+
+% ---------------------------------------
+% Packages for scientific papers
+% ---------------------------------------
+% Switching off \lll symbol, that I guess is representing letter ``Ł''.
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section.
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+
+% ---------------------------------------
+% Defining new environments (?)
+% ---------------------------------------
+% Defining enviroment ``Wniosek''
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------
+% Private packages
+% You need to put them in the same directory as .tex file
+% ------------------------------
+% Contains various command useful for working with a text
+% \usepackage{latexgeneralcommands}
+% Contains definitions useful for working with mathematical text
+% \usepackage{mathcommands}
+
+% Package for use in text about ordinary differential equations
+% \usepackage{ODEcommands}
+
+
+
+
+
+% ------------------------------
+% Package ``hyperref''
+% They advised to put it on the end of preambule
+% ------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
+
+
+
+
+
+
+
+
+
+
+% ------------------------------------------------------------------------------------
+% Defining title and author of the text
+\title{Informatyki, lista zadań}
+
+
+% \date{}
+% ------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
 \begin{document}
+% ####################################################################
 
 
 
-\begin{center}
-INFORMATYKA. Zadania.
-\end{center}
+
+
+% ######################################
+% Title of the text
+\maketitle
+% ######################################
 
 
 
-\begin{center}
-B. W. Kernighan, D. M. Ritchie\\
-,,Język ANSI C'',\\ \cite{BKDRJAC}.
-\end{center}
+
+
+% ######################################
+\section{B.W. Kernighan, D.M. Ritchie \textit{Język ANSI~C}}
+
+\label{sec:Oznaczenia-i-konwencje}
+% ######################################
+
+
 \begin{itemize}
-\item[--] \romannumeral4. 1\cm, 2\cm, 3\cm, 4\cm, 5\cm,
-%\item[--]  (2.2,38). 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11.
-%\item[--]  \romannumeral4. 1, 2, 3, 4, 5, 6, 7.
-%\item[--]  \romannumeral5. 1, 2, 3, 4, 5, 6, 7, 8.
-%\item[--]  \romannumeral6. 1, 2, 3, 4, 5, 6, 7.
-%\item[--]  \romannumeral7. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11. 
-%\item[--]  \romannumeral8. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
-%\item[--]  \romannumeral9. 1, 2.
-%\item[--] 
-%\item[--] 
-%\item[--] 
-%\item[--] 
-%\item[--] 
-%\item[--] 
-%\item[--] 
-%\item[--] 
-%\item[--] 
-%\item[--] 
+
+\item[\romannumeral4)] 1, 2, 3, 4, 5,
+
+%\item[--]
+
+%\item[--]
+
+%\item[--]
+
+%\item[--]
+
+%\item[--]
+
+%\item[--]
+
+%\item[--]
+
+%\item[--]
+
+%\item[--]
+
+%\item[--]
+
+%\item[--]
+
+%\item[--]
+
+%\item[--]
+
+%\item[--]
+
+%\item[--]
+
+%\item[--]
+
+%\item[--]
+
 \end{itemize}
+% ############################
 
 
 
-\bibliographystyle{ieeetr}
-\bibliography{BibliographySBPL}{}
 
 
 
+
+
+
+
+% ####################################################################
+% ####################################################################
+% Bibliography
+
+\bibliographystyle{plalpha}
+
+\bibliography{MathematicsBooks}{}
+
+
+
+
+
+% ############################
+
+% End of the document
 \end{document}
