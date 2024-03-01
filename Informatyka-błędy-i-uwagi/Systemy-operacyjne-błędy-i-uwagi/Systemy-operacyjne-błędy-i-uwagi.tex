@@ -1,0 +1,235 @@
+% ---------------------------------------------------------------------
+% Basic configuration and packages
+% ---------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
+\documentclass[a4paper,11pt]{article}
+
+
+
+% ---------------------------------------
+% Packages not tied to particular normal language
+% ---------------------------------------
+% This package should improved spaces in the text.
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
+
+
+
+% ---------------------------------------
+% Polonization of LaTeX document
+% ---------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
+
+
+
+% ---------------------------------------
+% Setting margins
+% ---------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
+
+
+
+% ---------------------------------------
+% Setting vertical spaces in the text
+% ---------------------------------------
+% Setting space between lines
+\renewcommand{\baselinestretch}{1.1}
+
+% Setting space between lines in tables
+\renewcommand{\arraystretch}{1.4}
+
+
+
+% ---------------------------------------
+% Packages for scientific papers
+% ---------------------------------------
+% Switching off \lll symbol, that I guess is representing letter ``Ł''.
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section.
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+
+% ---------------------------------------
+% Defining new environments (?)
+% ---------------------------------------
+% Defining enviroment ``Wniosek''
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------
+% Private packages
+% You need to put them in the same directory as .tex file
+% ------------------------------
+% Contains various command useful for working with a text
+\usepackage{latexgeneralcommands}
+% Contains definitions useful for working with mathematical text
+% \usepackage{mathcommands}
+
+% Package for use in text about ordinary differential equations
+% \usepackage{ODEcommands}
+
+
+
+
+
+% ------------------------------
+% Package ``hyperref''
+% They advised to put it on the end of preambule
+% ------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
+
+
+
+
+
+
+
+
+
+
+% ------------------------------------------------------------------------------------
+% Defining title and author of the text
+\title{Systemy operacyjne \\
+  {\Large Błędy i~uwagi}}
+
+\author{Kamil Ziemian}
+
+
+% \date{}
+% ------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+% Title of the text
+\maketitle
+% ######################################
+
+
+
+
+
+% ######################################
+\section{Andrew S.~Tanenbaum \textit{Systemy operacyjne},
+  \cite{TannenbaumSystemyOperacyjneWydanieIII2013}}
+
+\label{sec:Tanenbaum-Systemy-operacyjne}
+% ######################################
+
+
+% ##################
+\CenterBoldFont{Uwagi do~konkretnych stron}
+
+
+\noindent
+\StrWierszeGora{31}{16--17} Stwierdzenie „tom ma 1000 stron (więcej niż ta
+książka)” odnosi~się zapewne do wydania angielskiego, bo polskie wydanie ma
+ponad 1200 stron. Szkoda, że~w~wydaniu polskim nie opatrzono tego tekstu
+przypisem.
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+    & Powinno być \\ \cline{2-3}
+           & Od góry & Od dołu & & \\
+    \hline
+    39 & & \hphantom{0}2 & częściowych & cząstkowych \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\VerSpaceSix
+
+
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+% Bibliography
+
+\bibliographystyle{plalpha}
+
+\bibliography{}{}
+
+
+
+
+
+% ############################
+
+% End of the document
+\end{document}

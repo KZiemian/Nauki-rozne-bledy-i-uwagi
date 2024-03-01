@@ -1,0 +1,359 @@
+% ---------------------------------------------------------------------
+% Basic configuration and packages
+% ---------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
+\documentclass[a4paper,11pt]{article}
+
+
+
+% ---------------------------------------
+% Packages not tied to particular normal language
+% ---------------------------------------
+% This package should improved spaces in the text.
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
+
+
+
+% ---------------------------------------
+% Polonization of LaTeX document
+% ---------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
+
+
+
+% ---------------------------------------
+% Setting margins
+% ---------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
+
+
+
+% ---------------------------------------
+% Setting vertical spaces in the text
+% ---------------------------------------
+% Setting space between lines
+\renewcommand{\baselinestretch}{1.1}
+
+% Setting space between lines in tables
+\renewcommand{\arraystretch}{1.4}
+
+
+
+% ---------------------------------------
+% Packages for scientific papers
+% ---------------------------------------
+% Switching off \lll symbol, that I guess is representing letter ``Ł''.
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section.
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+
+% ---------------------------------------
+% Defining new environments (?)
+% ---------------------------------------
+% Defining enviroment ``Wniosek''
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------
+% Private packages
+% You need to put them in the same directory as .tex file
+% ------------------------------
+% Contains various command useful for working with a text
+% \usepackage{latexgeneralcommands}
+% Contains definitions useful for working with mathematical text
+% \usepackage{mathcommands}
+
+
+
+
+
+% ------------------------------
+% Package ``hyperref''
+% They advised to put it on the end of preambule
+% ------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
+
+
+
+
+
+
+
+
+
+
+% ------------------------------------------------------------------------------------
+% Defining title and author of the text
+\title{Algebra liniowa \\
+  {\Large Lista zadań}}
+
+
+% \date{}
+% ------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+% Title of the text
+\maketitle
+% ######################################
+
+
+
+
+
+% ######################################
+\section{Henryk Arodź, Krzysztof Rościszewski
+  \textit{Algebra i~geometria analityczna w zadaniach}
+  cite{}}
+
+\label{sec:Oznaczenia-i-konwencje}
+% ######################################
+
+
+\begin{itemize}
+\item[\romannumeral1)] 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33,
+  34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44.
+
+\item[\romannumeral2)] 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29 , 30, 31, 32, 33,
+  34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49.
+
+\item[\romannumeral3)] 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  16, 17, 18, 19, 20, 21.
+
+\item[\romannumeral4)] 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29 , 30, 31, 32, 33,
+  34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46.
+
+\item[\romannumeral5)] 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29 , 30, 31, 32, 33.
+
+\item[\romannumeral6)] 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29 , 30, 31, 32, 33,
+  34, 35, 36, 37, 38, 39, 40, 41, 42, 43.
+
+\item[\romannumeral7)] 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  16, 17, 18, 19, 20, 21, 22, 23, 24, 25.
+
+\item[\romannumeral8)] 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  16, 17, 18, 19, 20, 21.
+
+\item[\romannumeral9)] 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33,
+  34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44.
+
+\item[\romannumeral10)] 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26.
+
+\item[\romannumeral11)] 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  16.
+
+\item[\romannumeral12)] 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  16, 17.
+
+\end{itemize}
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Jacek Gancarzewicz \textit{Algebra liniowa i~jej
+    zastosowania}, cite{}}
+
+\label{sec:Oznaczenia-i-konwencje}
+% ######################################
+
+
+\begin{itemize}
+
+\item[\romannumeral1)] 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  16, 17, 18, 19, 20, 21, 22, 23, 24.
+
+\item[\romannumeral2)] 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26.
+
+\item[\romannumeral3)] 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33,
+  34, 35, 36, 37, 38.
+
+\item[\romannumeral4)] 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  16, 17, 18, 19, 20, 21, 22.
+
+\item[\romannumeral5)] 1, 2, 3, 4, 5, 6, 7, 8.
+
+\item[\romannumeral6)] 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  16, 17, 18, 19, 20, 21, 22, 23, 24.
+
+\item[\romannumeral7)] 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31.
+
+\item[\romannumeral8)] 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
+  16, 17, 18, 19, 20, 21, 22.
+
+\item[\romannumeral9)] 1, 2, 3, 4, 5, 6, 7, 8, 9.
+
+\end{itemize}
+% ############################
+
+
+
+
+
+
+
+% \begin{center}
+% Jacek Gancarzewicz\\
+% ,,Arytmetyka'' A.
+% \end{center}
+% \begin{itemize}
+% \item[--]\romannumeral1. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40 ,41, 42, 43, 44, 45, 46, 47.
+% %\item[--]\romannumeral2. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34.
+% %\item[--]\romannumeral3. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26.
+% %\item[--]\romannumeral4. 1, 2, 3, 4, 5, 6, 7, 8.
+% \end{itemize}
+
+
+
+% \begin{center}
+% Kazimierz Kuratowski\\
+% ,,Wstęp do teorii mnogości i topologii'',\\ wydanie \romannumeral9, KK.
+% \end{center}
+% \begin{itemize}
+% \item[--] \romannumeral1. 1\cm, 2\cm, 3\cm, 4\cm, 5, 6\cm, 7\cm, 7a\cm, 8\cm, 9\cm, 10\cm.
+% %\item[--] \romannumeral2. 1\cm, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14.
+% %\item[--] \romannumeral3. 1, 2, 3, 4, 5, 6.
+% %\item[--] \romannumeral4. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26.
+% %\item[--] \romannumeral5. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+% %\item[--] \romannumeral6. 1, 2, 3, 4.
+% %\item[--] \romannumeral7. 1, 2, 3, 4, 5, 6, 7, 8.
+% %\item[--] \romannumeral8. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12.
+% %\item[--] \romannumeral9. 1, 2, 3, 4, 5.
+% %\item[--] \romannumeral10. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17.
+% %\item[--] \romannumeral11. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22.
+% %\item[--] \romannumeral12. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15.
+% %\item[--] \romannumeral13. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+% %\item[--] \romannumeral14. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15.
+% %\item[--] \romannumeral15. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.
+% %\item[--] \romannumeral16. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40 ,41, 42.
+% %\item[--] \romannumeral17. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18.
+% %\item[--] \romannumeral18. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13.
+% %\item[--] \romannumeral19. 1, 2, 3, 4, 5.
+% %\item[--] \romannumeral20. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12.
+% %\item[--] \romannumeral20. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17.
+% \end{itemize}
+
+
+
+% \begin{center}
+% Jacek Gancarzewicz\\
+% ,,Zarys współczesnej geometrii różniczkowej'', \cite{JGZWGR}.
+% \end{center}
+% \begin{itemize}
+% \item[--] \romannumeral1. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18.
+% %\item[--] \romannumeral2. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20.
+% %\item[--] \romannumeral3. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
+% %\item[--] \romannumeral4. 1, 2, 3, 4, 5, 6, 7, 8.
+% %\item[--] \romannumeral5. 1, 2, 3, 4, 5.
+% %\item[--] \romannumeral6. 1, 2, 3, 4, 5, 6, 7, 8.
+% %\item[--] \romannumeral7. 1, 2.
+% %\item[--] \romannumeral8. 1, 2, 3, 4, 5.
+% %\item[--] \romannumeral9. 1, 2, 3, 4, 5, 6.
+% %\item[--] \romannumeral10. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14.
+% \end{itemize}
+
+
+
+% \begin{center}
+% Wojciech Wojtyński\\
+% ,,Grupy i algebry Liego'',\\ wydanie \romannumeral1, GL.
+% \end{center}
+% \begin{itemize}
+% \item[--] \romannumeral2. 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13.\\
+% %\item[--] \romannumeral3. 1, 2, 3, 4, 5, 6, 7, 8.\\
+% %\item[--] \romannumeral4. 1, 2, 3, 4, 5.\\
+% %\item[--] \romannumeral5. 1, 2, 3, 4, 5, 6.\\
+% %\item[--] \romannumeral3. 1, 2, 3, 4, 5, 6, 7, 8.\\
+% \end{itemize}
+
+
+% ####################################################################
+% ####################################################################
+% Bibliography
+
+\bibliographystyle{plalpha}
+
+\bibliography{MathematicsBooks}{}
+
+
+
+
+
+% ############################
+
+% End of the document
+\end{document}
