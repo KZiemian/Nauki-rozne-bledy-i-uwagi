@@ -103,9 +103,6 @@
 % Contains definitions useful for working with mathematical text
 \usepackage{mathcommands}
 
-% Package for use in text about ordinary differential equations
-\usepackage{ODEcommands}
-
 
 
 
@@ -175,13 +172,418 @@
 
 
 
+
+
+
+
+
+
+
 % ######################################
-\section{Oznaczenia i~konwencje}
+\section{Ronald L.~Graham, Donald E.~Knuth, Oren Patashniki
+  \textit{Matematyka konkretna},
+  \cite{GrahamKnuthPatashnikMatematykaKonkretna2012}
 
-\label{sec:Oznaczenia-i-konwencje}
+\label{sec:Graham-Knuth-Patashnik-Matematyka-konkretna}
 % ######################################
 
 
+% ##################
+\CenterBoldFont{Uwagi ogólne}
+
+\vspace{0em}
+
+
+Odstępy w~tekście, zwłaszcza po znaku kropki, wydają mi~się często zbyt duże.
+Ten problem pojawia~się jednak tak często, że~nie będę odnotowywał tu
+każdego jego wystąpienia.
+
+
+
+
+
+
+
+
+
+
+% ##################
+\CenterBoldFont{Uwagi do konkretnych stron}
+
+\vspace{0em}
+
+
+\noindent
+\StrWierszDol{14}{6} Przed tym wierszem powinien znajdować~się pionowy
+odstęp. Wtedy układ logiczny tekstu będzie bardziej spójny z~jego układem
+graficznym.
+
+
+
+
+
+% % #############
+% \begin{theorem}
+%   \label{thm:FichtenholzVolII-01}
+
+%   Każde dwie funkcje pierwotne funkcji $f: I \to \Rbb$ różnią~się
+%   o~funkcje stałą.
+
+% \end{theorem}
+
+
+
+% \begin{proof}
+
+%   Oznaczmy dowolne dwie funkcje pierwotne $f$ przez $F_{ 1 }$
+%   oraz~$F_{ 2 }$ i~oznaczmy $g( x ) := F_{ 1 }( x ) - F_{ 2 }( x )$.
+%   Zachodzi wówczas
+%   \begin{equation}
+%     \label{eq:FichtenholzVolII-06}
+%     \frac{ d g( x ) }{ dx } =
+%     \frac{ d }{ dx } \big( F_{ 1 }( x ) - F_{ 2 }( x ) \big) = 0, \quad
+%     \forall x \in I.
+%   \end{equation}
+%   Rozważmy dwa dowolne punkty $x_{ 1 }, x_{ 2 } \in I$. Wraz z~nimi
+%   w~$I$ ~się cały odcinek $[ x_{ 1 }, x_{ 2 } ]$. Spełnione~są tym
+%   samym założenia twierdzenia o~wartości średniej, na~mocy którego
+%   \begin{equation}
+%     \label{eq:FichtenholzVolII-07}
+%     g( x_{ 2 } ) = g( x_{ 1 } ) + g'( c ) ( x_{ 2 } - x_{ 1 } )
+%     = g( x_{ 1 } ), \quad c \in ( x_{ 1 }, x_{ 2 } ).
+%   \end{equation}
+
+% \end{proof}
+% % #############
+
+
+
+
+
+% Przypomnijmy, że~dowolny zbiór w~$\Rbb$ można rozłożyć na~składowe
+% spójne (jest to szczególny przypadek ogólnego twierdzenia dla
+% przestrzeni topologicznych, zob.~str.~79,
+% \cite{SchwartzKursAnalizyMatematycznejVolI1979}). Wynika stąd
+% następujący wniosek.
+
+
+
+
+
+% % #############
+% \begin{corollary}
+%   \label{cor:FichtenholzVolII-01}
+
+%   Niech $A = \bigcup_{ \iota \in \Ical } I_{ \iota }$, przy czym każdy
+%   z~przedziałów
+%   $I_{ \iota }$ jest składową spójną $A$ i~niech $f: A \to \Rbb$
+%   będzie różniczkowalna na~każdym $I_{ \iota }$. Wówczas dwie funkcje
+%   pierwotne~$f$ różnią~się o~funkcje schodkową $g( x )$, która jest
+%   stała na~każdym $I_{ \iota }$.
+
+% \end{corollary}
+
+
+
+% \begin{proof}
+
+%   Ponieważ suma dwóch różnych $I_{ \iota }$ nie przedziałem zawartym
+%   w~$A$, pochodna jest dobrze określona w~każdym punkcie tego
+%   zbioru\footnote{W~przeciwnym razie mogłoby dojść do~sytuacji,
+%     że~$I_{ 1 } = (0, 1)$, $I_{ 2 } = [ 1, 2 )$, więc
+%     $( 0, 2 ) \subset A$, lecz funkcja nie jest wszędzie
+%     różniczkowalna, bo~pochodna w~$1$ nie istnieje.}, więc dla każdego
+%   $I_{ \iota }$ można zastosować twierdzenie
+%   \ref{thm:FichtenholzVolII-01}, skąd wynika, że~funkcja $G( x )$ jest
+%   stała na~tym zbiorze.
+
+% \end{proof}
+% % #############
+
+
+
+
+
+% Podany powyżej kontrprzykład pokazuje, że~silniejszy wynik niż dla
+% funkcji określonej na zbiorze $A$ nie może zachodzić. Widzimy teraz,
+% że~problem jest bardziej złożony, niż~się powszechnie twierdzi. Błąd
+% wynika zapewne stąd, iż~większość osób nie interesuje badanie tak
+% „subtelnego” przypadku, jakim jest dziedzina funkcji bardziej
+% skomplikowana niż~zbiór~$I$, choć przykład funkcji $1 / x$ pokazuje,
+% że~sytuacja ta jest spotykana w~konkretnych, prostych rachunkach.
+
+% Otwartym pozostaje pytanie, czy sam problem można postawić w~bardziej
+% ogólnej postaci? Po pierwsze twierdzenie o~wartości średniej wymaga by
+% funkcja była ciągła na przedziale $[ a, b ]$, a~różniczkowalna tylko
+% w~$( a, b )$ (zob.~punkt~112, str.~196,
+% \cite{FichtenholzRachunekRozniczkowyETCVolI2005}), co~potencjalnie
+% może prowadzić do~uogólnienia pojęcia funkcji pierwotnej. Po~drugie,
+% czy~można zdefiniować w~sposób sensowny pochodną funkcji na~zbiorze,
+% który nie jest postaci $\bigcup_{ \iota \in \Ical } I_{ \iota }$ (przy
+% zadanym ograniczeniu na~sumę dwóch $I_{ \iota }$)? Jeśli by tak było,
+% to pytanie o~postać funkcji pierwotnych jest otwarte, a~wynik ciężki
+% do~przewidzenia.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \Str{34} Nie jestem w~stanie zrozumieć, dlaczego największym
+% wspólnym dzielnikiem wielomianów $Q$ i~$Q'$ jest $Q_{ 1 }$. Może to
+% jakiś znany fakt z~algebry? \Dok
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \textbf{Str.~223, punkt [363, 5)].} Problem z~tym przykładem
+% jest taki, że
+% \begin{equation}
+%   \label{eq:FichtenholzVolII-08}
+%   \sum_{ n = 1 }^{ \infty } \frac{ x^{ 2n - 1 } }{ 1 - x^{ 2n } }
+%   \neq \sum_{ n = 1 }^{ \infty } \left( \frac{ 1 }{ 1 - x^{ 2n - 1 } }
+%     - \frac{ 1 }{ 1 - x^{ 2n } } \right).
+% \end{equation}
+% Gdyby tak równość zachodziła, to po pierwsze
+% \begin{equation}
+%   \label{eq:FichtenholzVolII-09}
+%   \begin{split}
+%     \sum_{ i = 1 }^{ n } \frac{ x^{ 2i - 1 } }{ 1 - x^{ 2n } }
+%     &=
+%       \frac{ 1 }{ 1 - x } - \frac{ 1 }{ 1 - x^{ 2 } }
+%       + \frac{ 1 }{ 1 - x^{ 3 } } - \frac{ 1 }{ 1 - x^{ 4 } }
+%       + \ldots + \frac{ 1 }{ 1 - x^{ 2n - 1 } }
+%       - \frac{ 1 }{ 1 - x^{ 2n } } \\
+%     &\neq \frac{ 1 }{ 1 - x } - \frac{ 1 }{ 1 - x^{ 2n } }.
+%   \end{split}
+% \end{equation}
+% Wynika to z~tego, że~z~wyjątkiem $n = 1$
+% \begin{equation}
+%   \label{eq:FichtenholzVolII-10}
+%   \frac{ x^{ 2n - 1 } }{ 1 - x^{ 2n } } \neq
+%   \frac{ 1 }{ 1 - x^{ 2n - 1 } } - \frac{ 1 }{ 1 - x^{ 2n } }.
+% \end{equation}
+% Prawidłowa równość ma~postać
+% \begin{equation}
+%   \label{eq:FichtenholzVolII-11}
+%   \sum_{ n = 1 }^{ \infty } \frac{ x^{ 2n - 1 } ( 1 - x ) }{ ( 1 - x^{ 2n - 1 } )
+%     ( 1 - x^{ 2n } ) }
+%   \neq
+%   \sum_{ n = 1 }^{ \infty } \left( \frac{ 1 }{ 1 - x^{ 2n - 1 } }
+%     - \frac{ 1 }{ 1 - x^{ 2n } } \right),
+% \end{equation}
+% jednak postać wyrazu ogólnego szeregu po~lewej stronie tej równości
+% jest znacznie mniej elegancka i~zwięzła, niż~tego
+% w~\eqref{eq:FichtenholzVolII-08}, wątpliwe więc, że~Fichtenholz chciał
+% podać tu~ten przykład.
+
+% Wydaje mi~się, że~nie jest to kwestia drobnej literówki we~wzorze
+% \eqref{eq:FichtenholzVolII-08}, lecz~został tu~popełniony poważniejszy
+% błąd, którego nie jestem w~stanie poprawić.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \Str{228} Twierdzenie~2 jest podane w~błędnej formie
+% i~udowodnione w~nie najlepszy sposób. Poniżej podana jest poprawna
+% wersja twierdzenie i~jaśniejsza, mam nadzieję, wersja dowodu.
+
+
+
+
+
+% % #############
+% \begin{theorem}
+%   \label{thm:Fichtenholz-VolII-02}
+
+%   Jeśli istnieje granica\footnote{Zakładamy przy tym, że~$b_{ n }$.}
+%   \begin{equation}
+%     \label{eq:FichtenholzVolII-12}
+%     \lim\limits_{ n \to \infty } \frac{ a_{ n } }{ b_{ n } } = K, \quad
+%     ( 0 \leq K \leq +\infty ),
+%   \end{equation}
+%   to, gdy $K < +\infty$, ze~zbieżności szeregu~(B) wynika zbieżność
+%   szeregu~(A), lub równoważnie, z~rozbieżności szeregu (A) wynika
+%   rozbieżność szeregu (B). Gdy natomiast $K > 0$, ze zbieżności
+%   szeregu (A) wynika zbieżność szeregu (B), lub~równoważnie,
+%   z~rozbieżności szeregu~(B) wynika rozbieżność szeregu~(A).
+
+% \end{theorem}
+
+
+
+% \begin{proof}
+%   Niech $K < +\infty$, wtedy istnieje takie~$N$, że~dla $n > N$
+%   \begin{equation}
+%     \label{eq:FichtenholzVolII-13}
+%     \frac{ a_{ n } }{ b_{ n } } < K + \epsilon, \quad
+%     K + \epsilon > 0,
+%   \end{equation}
+%   skąd
+%   \begin{equation}
+%     \label{eq:FichtenholzVolII-14}
+%     a_{ n } < ( K + \epsilon ) b_{ n }.
+%   \end{equation}
+%   Z~tej równości wynika, że~zbieżność szeregu~(B) pociąga za~sobą
+%   zbieżność~(A), jak również, iż~rozbieżność szeregu~(A) implikuje
+%   rozbieżność szeregu~(B). Oba twierdzenia~są jednak równoważne
+%   na~mocy zasady kontrapozycji.
+
+%   Analogicznie jeśli~$K > 0$, wówczas istnieje takie~$N$, że~dla
+%   $n > N$
+%   \begin{equation}
+%     \label{eq:FichtenholzVolII-15}
+%     a_{ n } > ( K - \epsilon ) b_{ n }, \quad
+%     K - \epsilon > 0.
+%   \end{equation}
+%   Z~tej nierówności wynika, że~zbieżność szeregu~(A) implikuje
+%   zbieżność szeregu~(B), zaś rozbieżność szeregu~(B) pociąga za~sobą
+%   rozbieżność szeregu~(A). Jak poprzednio, oba te~twierdzenia~są
+%   równoważne na~mocy zasady kontrapozycji.
+
+% \end{proof}
+% % #############
+
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \StrWg{237}{5} Aby~zachodził wzór $\Dcal_{ n } = \tfrac{ x }{ n + 1 }$,
+% należy numerować wyrazy tego szeregu od~0.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% ##################
+\newpage
+
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    11 & \hphantom{0}2 & & jeszcze~? & jeszcze? \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+    % \hphantom{0}8 & & 11 & $< | \Delta P | <$ & $\leq | \Delta P | \leq$ \\[0.2em]
+    % \hphantom{0}8 & & \hphantom{0}7 & $< \frac{ | \Delta P | }{ \Delta x } <$
+    %        & $\leq \frac{ | \Delta P | }{ \Delta x } \leq$ \\[0.2em]
+    % 12 & & \hphantom{0}5 & $a^{ n }$ & $a_{ n }$ \\
+    % 13 & \hphantom{0}7 & & $( x - a )^{ k } \, dx$
+    % & $\int ( x - a )^{ -k } \, dx$ \\
+    % 18 & & \hphantom{0}4 & $\frac{ 1 }{ 3 }$ & $\frac{ 1 }{ 2 }$ \\
+    % 18 & & \hphantom{0}1 & więc$\cdot t$ & więc $t$ \\
+    % 23 & 16 & & $n \_ 1$ & $n - 1$ \\
+    % 23 & 17 & & $n \_ 2$ & $n - 2$ \\
+    % 23 & & 16 & otrzvmujemy & otrzymujemy \\
+    % 25 & \hphantom{0}1 & & $e^{ \cdot ( k + 1 ) t}$ & $e^{ ( k + 1 ) t}$ \\
+    % 28 & & \hphantom{0}5 & z$\cdot$algebry & z~algebry \\[0.2em]
+    % 29 & & 11 & $\frac{ P( x ) }{ ( x - a )^{ k - 1 } Q_{ 1 }( x ) }$
+    %        & $\frac{ P_{ 1 }( x ) }{ ( x - a )^{ k - 1 } Q_{ 1 }( x ) }$ \\
+    % 34 & \hphantom{0}3 & & [lub (6) & [lub (6)] \\
+    % 34 & \hphantom{0}4 & & lub (6)] & [lub (6)] \\
+    % 35 & & 17 & $\left[ \frac{ a x^{ 2 } + b x + c }
+    %              { x^{ 3 } + x^{ 2 } + x + 1 } \right]$
+    %        & $\left[ \frac{ a x^{ 2 } + b x + c }
+    %          { x^{ 3 } + x^{ 2 } + x + 1 } \right]'$ \\
+    % 35 & & 12 & $x^{ 2 } + x^{ 2 } + x + 1$
+    %        & $x^{ 3 } + x^{ 2 } + x + 1$ \\
+    % 36 & 14 & & $x^{ \dot{ 2 } }$ & $x^{ 2 }$ \\
+    % 39 & \hphantom{0}3 & & $\sqrt[ m ]{
+    %              \frac{ \alpha x + \beta }{ \gamma x + \delta } } \, dx$
+    %        & $\sqrt[ m ]{
+    %          \frac{ \alpha x + \beta }{ \gamma x + \delta } }$ \\
+    % 40 & \hphantom{0}2 & & $\frac{ 2t - 1 }{ \sqrt{ 3 } }$
+    %        & $\frac{ 2t + 1 }{ \sqrt{ 3 } }$ \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  \newpage
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % 40  & & 12 & ${ m + 1 \atop n }$ & $\frac{ m + 1 }{ n }$ \\
+    % 44  & & \hphantom{0}4 & $\sqrt{ a x }$ & $\sqrt{ a } x$ \\
+    % 44  & & \hphantom{0}1 & $\sqrt{ a x }$ & $\sqrt{ a } x$ \\
+    % 45  & & 13 & $2 \sqrt{ a } t - b$ & $2 \sqrt{ c } t - b$ \\
+    % 46  & & \hphantom{0}8 & $( 2 a x + b^{ 2 } )$ & $( 2 a x + b )^{ 2 }$ \\
+    % 222 & & \hphantom{0}5 & [9] jest rzeczywiście & jest oczywiście \\
+    % 224 & & 17 & $A'_{ n + m }$ & $A'_{ n - m }$ \\
+    % 226 & & \hphantom{0}7 & $H_{ 2k }$ & $H_{ 2^{ k } }$ \\
+    % 227 & 11 & & $2^{ k + 1 } + 1$ & $2^{ k - 1 } + 1$ \\
+    % 229 & & \hphantom{0}9 & $< \frac{ 1 }{ 2^{ n } }$
+    % & $\leq \frac{ 1 }{ 2^{ n } }$ \\
+    % 231 & \hphantom{0}8 & & $1\; ;$ & $1;$ \\
+    % 233 & & \hphantom{0}5 & $\epsilon = \Ecal - 1$ & $\epsilon < \Ecal - 1$ \\
+    % 233 & & \hphantom{0}5 & $\Ecal - \epsilon = 1$ & $\Ecal - \epsilon > 1$ \\
+    % 234 & 11 & & $\Dcal_{ n } > 1$ & $\Dcal_{ n } \geq 1$ \\
+    % 238 & & \hphantom{0}3 & $( 1 + x )^{ 1 / x } + \ln( 1 + x )$
+    %        & $( 1 + x )^{ 1 / x } \ln( 1 + x )$ \\
+           & & & & \\
+           & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % & & & & \\
+           % 479 & \hphantom{0}2 & & $\int\limits_{ 0 }^{ +\infty }$
+           % & $\int\limits_{ a }^{ +\infty }$ \\[0.8em]
+           % 479 & \hphantom{0}4 & & $\int\limits_{ a }^{ A } \frac{ dx }{ x }$
+           % & $\int\limits_{ a }^{ A } \frac{ dx }{ x^{ \lambda } }$ \\[0.5em]
+           % 483 & \hphantom{0}4 & & $I^{ 3 }$ & $I^{ 2 }$ \\
+           % 526 & & \hphantom{0}7 & $1 + t)$ & $( 1 + t )$ \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+% \StrWd{34}{3} \\
+% \Jest  Zróżniczkujmy (10) obustronnie \\
+% \Powin Wykonując jawnie różniczkowanie w~(10) \\
+% \StrWd{71}{16} \\
+% \Jest  $R\left( x, \sqrt{ a x^{ 4 } + b x^{ 3 } + c x^{ 2 } + d x + e }
+% \right.$ \\
+% \Powin $R\left( x, \sqrt{ a x^{ 4 } + b x^{ 3 } + c x^{ 2 } + d x + e }
+% \right)$ \\
+
+
+% ############################
 
 
 
@@ -197,7 +599,7 @@
 
 \bibliographystyle{plalpha}
 
-\bibliography{MathComScienceBooks}{}
+\bibliography{MathematicsBooks}{}
 
 
 
