@@ -12,13 +12,74 @@
 
 
 
+% ##################
+% Commands for horizontal spaces in the text
+
+\newcommand{\HorSpaceOne}{\hspace{0.05em}}
+\newcommand{\HorSpaceTwo}{\hspace{0.07em}}
+\newcommand{\HorSpaceThree}{\hspace{0.09em}}
+\newcommand{\HorSpaceFour}{\hspace{0.1em}}
+\newcommand{\HorSpaceFive}{\hspace{0.11em}}
+\newcommand{\HorSpaceSix}{\hspace{0.13em}}
+\newcommand{\HorSpaceSeven}{\hspace{0.15em}}
+\newcommand{\HorSpaceEight}{\hspace{0.17em}}
+\newcommand{\HorSpaceNine}{\hspace{0.2em}}
+\newcommand{\HorSpaceTen}{\hspace{0.22em}}
+\newcommand{\HorSpaceEleven}{\hspace{0.25em}}
+\newcommand{\HorSpaceTwelve}{\hspace{0.30em}}
+\newcommand{\HorSpaceThriteen}{\hspace{0.35em}}
+\newcommand{\HorSpaceFourteen}{\hspace{0.4em}}
+\newcommand{\HorSpaceFiveteen}{\hspace{0.5em}}
+\newcommand{\HorSpaceSixteen}{\hspace{0.75em}}
+
+\newcommand{\negHorSpaceOne}{\hspace{-0.05em}}
+\newcommand{\negHorSpaceTwo}{\hspace{-0.07em}}
+\newcommand{\negHorSpaceThree}{\hspace{-0.09em}}
+\newcommand{\negHorSpaceFour}{\hspace{-0.1em}}
+\newcommand{\negHorSpaceFive}{\hspace{-0.11em}}
+\newcommand{\negHorSpaceSix}{\hspace{-0.13em}}
+\newcommand{\negHorSpaceSeven}{\hspace{-0.15em}}
+\newcommand{\negHorSpaceEight}{\hspace{-0.17em}}
+\newcommand{\negHorSpaceNine}{\hspace{-0.2em}}
+\newcommand{\negHorSpaceTen}{\hspace{-0.22em}}
+\newcommand{\negHorSpaceEleven}{\hspace{-0.25em}}
+
+% \newcommand{\smallHorSpaceOne}{\hspace{0.05em}}
+% \newcommand{\smallHorSpaceTwo}{\hspace{0.07em}}
+% \newcommand{\smallHorSpaceThree}{\hspace{0.1em}}
+% \newcommand{\smallHorSpaceFour}{\hspace{0.13em}}
+
+
+% ##################
+
+
+
+
+
+% ##################
+% Commands for vertical space in the text.
+
+\newcommand{\VerSpaceOne}{\vspace{0.1em}}
+\newcommand{\VerSpaceTwo}{\vspace{0.25em}}
+\newcommand{\VerSpaceThree}{\vspace{0.5em}}
+\newcommand{\VerSpaceFour}{\vspace{1em}}
+\newcommand{\VerSpaceFive}{\vspace{1.5em}}
+\newcommand{\VerSpaceSix}{\vspace{2em}}
+
+\newcommand{\negVerSpaceOne}{\vspace{-0.5em}}
+\newcommand{\negVerSpaceTwo}{\vspace{-1em}}
+\newcommand{\negVerSpaceThree}{\vspace{-1.5em}}
+\newcommand{\negVerSpaceFour}{\vspace{-1.75em}}
+\newcommand{\negVerSpaceFive}{\vspace{-2em}}
+% ##################
+
+
+
+
+
+
 % ##########
-% Definicje odstępów w tekście
-\newcommand{\spaceOne}{3em}
-\newcommand{\spaceTwo}{2em}
-\newcommand{\spaceThree}{1em}
-\newcommand{\spaceFour}{0.5em}
-\newcommand{\spaceFive}{-0.5em}
+% Commands for horizontal space in the text.
 
 
 
@@ -28,7 +89,8 @@
 % Kolory
 
 % Kolory z tematu beamera Metropolis Matthias Vogelgesang
-\definecolor{DarkOrange}{HTML}{EB811B}
+% Uncomment only if your files use `xcolor' packages.
+% \definecolor{DarkOrange}{HTML}{EB811B}
 
 
 
@@ -51,14 +113,18 @@
 % \newcommand{\noi}{\noindent}
 
 % Numeracja stron i rozdziałów
-\newcommand{\Str}[1]{\noindent \textbf{Str.~#1.}}
-\newcommand{\StrWg}[2]{\noindent \textbf{Str.~#1, wiersz~#2.}}
-\newcommand{\StrWd}[2]{\noindent \textbf{Str.~#1, wiersz~#2 (od dołu).}}
+\newcommand{\Str}[1]{\textbf{Str.~#1.}}
+% \newcommand{\StrWg}[2]{\textbf{Str.~#1, wiersz~#2.}}
+\newcommand{\StrWierszGora}[2]{\textbf{Str.~#1, wiersz~#2.}}
+\newcommand{\StrWierszeGora}[2]{\textbf{Str.~#1, wiersze~#2.}}
+% \newcommand{\StrWd}[2]{\textbf{Str.~#1, wiersz~#2 od~dołu.}}
+\newcommand{\StrWierszDol}[2]{\textbf{Str.~#1, wiersz~#2 od~dołu.}}
+\newcommand{\StrWierszeDol}[2]{\textbf{Str.~#1, wiersze #2 od~dołu.}}
 
 % Do poprawiania błędów
 \newcommand{\Dow}{\textbf{Dowód}} % To niezbyt pasuje do opisu POPRAW
 \newcommand{\Jest}{\textbf{Jest: }}
-\newcommand{\Powin}{\textbf{Powinno być: }}
+\newcommand{\PowinnoByc}{\textbf{Powinno być: }}
 
 % Do wyróżniania miejsca w tekście
 \newcommand{\red}[1]{{\color{red} #1}}
@@ -75,13 +141,22 @@
 
 \newcommand{\Main}[1]{ \begin{center} { \LARGE \textbf{#1} } \end{center} }
 \newcommand{\Field}[1]{ \begin{center} { \Large \textbf{#1} } \end{center} }
-\newcommand{\Work}[1]{ \begin{center} { \large \textbf{#1}} \end{center} }
+% \newcommand{\Work}[1]{ \begin{center} { \large \textbf{#1}} \end{center} }
+\newcommand{\AuthorsAndTitleOfWork}[1]{ \begin{center} { \large \textbf{#1} }
+  \end{center} }
 
 
 
-% ##########
-% Liczby rzymskie
-\newcommand{\RomanNumDot}[1]{\textbf{\romannumeral#1.}}  % RoMan NUMeral Dot
+
+
+% ##################
+% Roman numbers
+
+% RoMan NUMeral DOT
+\newcommand{\RomanNumDot}[1]{\textbf{\romannumeral#1.}}
+% ##################
+
+
 
 
 

@@ -1,122 +1,118 @@
 % ---------------------------------------------------------------------
-% Podstawowe ustawienia i pakiety
+% Basic configuration and packages
 % ---------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
-% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
 \documentclass[a4paper,11pt]{article}
-% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
-\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
-\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
-
-
-
-% ------------------------------
-% Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ------------------------------
-\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
-\usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
-% grafiki.
-\usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
-\usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
-% wprowadzane bezpośrednio w tekście.
-\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
-% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ------------------------------
-% Margins
-% ------------------------------
-\setmarginsrb
-{ 0.7in}  % left margin
-{ 0.6in}  % top margin
-{ 0.7in}  % right margin
-{ 0.8in}  % bottom margin
-{  20pt}  % head height
-{0.25in}  % head sep
-{   9pt}  % foot height
-{ 0.3in}  % foot sep
-
-
-
-% ------------------------------
-% Często przydatne pakiety
-% ------------------------------
-\usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
-
-
-
-% ------------------------------
-% Pakiety do tekstów z nauk przyrodniczych
-% ------------------------------
-\let\lll\undefined  % Amsmath gryzie się z językiem pakietami do języka
-% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
-% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
-\usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
-% Mathematical Society (w skrócie AMS)
-\usepackage{amsfonts, amssymb, amscd, amsthm}  % Dalsze wsparcie od AMS
-% \usepackage{siunitx}  % Do prostszego pisania jednostek fizycznych
-\usepackage{upgreek}  % Ładniejsze greckie litery
-% Przykładowa składnia: pi = \uppi
-\usepackage{slashed}  % Pozwala w prosty sposób pisać slash Feynmana.
-% \usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
-% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
-% nie wiem.
-\usepackage{tikz-cd}  % Do rysowania grafów przemiennych
-
-
-
-% ------------------------------
-% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
-% ------------------------------
-% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
-% matematycznych.
-\newtheorem{theorem}{Twierdzenie}
-% Analogicznie jak powyżej
-\newtheorem{definition}{Definicja}
-\newtheorem{corollary}{Wniosek}
-
-
-
-% ------------------------------
-% Pakiety napisane przez użytkownika.
-% Mają być w tym samym katalogu to ten plik .tex
-% ------------------------------
-% \usepackage{reedsimon}  % Pakiet napisany konkretnie dla tego pliku.
-\usepackage{latexgeneralcommands}
-\usepackage{mathcommands}
 
 
 
 % ---------------------------------------
-% Dodatkowe ustawienia dla języka polskiego
+% Packages not tied to particular normal language
 % ---------------------------------------
-\renewcommand{\thesection}{\arabic{section}.}
-% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
-% Brak kropki po numerach podrozdziału
+% This package should improved spaces in the text.
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
 
 
 
-% ------------------------------
-% Ustawienia różnych parametrów tekstu
-% ------------------------------
+% ---------------------------------------
+% Polonization of LaTeX document
+% ---------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
+
+
+
+% ---------------------------------------
+% Setting margins
+% ---------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
+
+
+
+% ---------------------------------------
+% Setting vertical spaces in the text
+% ---------------------------------------
+% Setting space between lines
 \renewcommand{\baselinestretch}{1.1}
 
-% Ustawienie szerokości odstępów między wierszami w tabelach.
+% Setting space between lines in tables
 \renewcommand{\arraystretch}{1.4}
 
 
 
+% ---------------------------------------
+% Packages for scientific papers
+% ---------------------------------------
+% Switching off \lll symbol, that I guess is representing letter ``Ł''.
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section.
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+
+% ---------------------------------------
+% Defining new environments (?)
+% ---------------------------------------
+% Defining enviroment ``Wniosek''
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
 % ------------------------------
-% Pakiet „hyperref”
-% Polecano by umieszczać go na końcu preambuły.
+% Private packages
+% You need to put them in the same directory as .tex file
 % ------------------------------
-\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki.
+% Contains various command useful for working with a text
+\usepackage{latexgeneralcommands}
+% Contains definitions useful for working with mathematical text
+\usepackage{mathcommands}
+
+
+
+
+
+% ------------------------------
+% Package ``hyperref''
+% They advised to put it on the end of preambule
+% ------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
 
 
 
@@ -167,15 +163,16 @@
 % ######################################
 \section{Logika}
 
-\vspace{\spaceTwo}
+% \vspace{\spaceTwo}
 % ######################################
 
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+% \Work{ % Autor i tytuł dzieła
   Józef W.~Bremer \\
-  \textit{Wprowadzenie do~logiki}, \cite{BremerWprowadzenieDoLogiki2004}}
+  \textit{Wprowadzenie do~logiki},
+  \cite{Bremer-Wprowadzenie-do-logiki-Wyd-2004}
 
 
 % ##################
@@ -183,9 +180,9 @@
 
 
 \noindent
-\StrWg{132}{1} Zdanie „$p \vee q ( ( p \land q ) \to ( p \land q ) )$” nie ma żadnego
-sensu logicznego, musiał zostać zgubiony spójnik logiczny po~pierwszym~$q$.
-Niestety nie wiem który z nich należy tam umieścić.
+\StrWierszGora{132}{1} Zdanie „$p \vee q ( ( p \land q ) \to ( p \land q ) )$” nie ma
+żadnego sensu logicznego, musiał zostać zgubiony spójnik logiczny
+po~pierwszym~$q$. Niestety nie wiem który z nich należy tam umieścić.
 
 
 
@@ -237,7 +234,7 @@ Niestety nie wiem który z nich należy tam umieścić.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceSix
 
 
 % ############################
@@ -253,20 +250,12 @@ Niestety nie wiem który z nich należy tam umieścić.
 
 % ######################################
 \newpage
-\section{Logika matematyczna}
-
-\vspace{\spaceTwo}
+\section{Andrzej Grzegorczyk \\
+  \textit{Zarys logiki matematycznej},
+  \cite{Grzegorczyk-Zarys-Logiki-Matematycznej-Wyd-1975}}
 % ######################################
 
-
-
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Andrzej Grzegorczyk \\
-  \textit{Zarys logiki matematycznej},
-  \cite{GrzegorczykZarysLogikiMatematycznej1975}}
-
-\noindent
+\VerSpaceTwo
 
 
 % ##################
@@ -313,18 +302,18 @@ wyznaczają funkcje. Jak widać pojęcie jednoznaczności dla funkcji
 i~dla relacji oznacza zupełnie coś innego.
 
 Proponuję następujące wyjście z tej sytuacji. Funkcję $f: X \to Y$
-będziemy nazywać \textit{jednoznaczną} jeśli jest różnowartościowa.
+będziemy nazywać \textbf{jednoznaczną} jeśli jest różnowartościowa.
 Funkcję która jest różnowartościowa i~dla której zachodzi
-$f( X ) = Y$, będziemy nazywali \textit{wzajemnie jednoznaczną}. Pojęć
+$f( X ) = Y$, będziemy nazywali \textbf{wzajemnie jednoznaczną}. Pojęć
 „relacja jednoznaczna” i~„relacja wzajemnie jednoznaczna” będziemy
-unikać.
+unikać. Zamiast tego będziemy mówić o~\textbf{relacji wyznaczającej funkcję}.
 
 Dalsza lektura pokaże, czy książka pozwala na stosowanie tej
 terminologi, czy też okaże~się to zbyt skomplikowane w~praktyce. Do
 tego jednak momentu będziemy poprawiać jej fragmenty w~zgodzie z~tym
 co zostało powyżej napisane.
 
-\vspace{\spaceFour}
+% \vspace{\spaceFour}
 
 
 
@@ -370,13 +359,13 @@ co zostało powyżej napisane.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceSix
 
 
 \noindent
-\StrWd{7}{4} \\
+\StrWierszDol{7}{4} \\
 \Jest  przedmioty{ } $a_{ 1 }, a_{ 2 }, \ldots, a_{ k }$ \\
-\Powin przedmioty $a_{ 1 }, a_{ 2 }, \ldots, a_{ k }$ \\
+\PowinnoByc przedmioty $a_{ 1 }, a_{ 2 }, \ldots, a_{ k }$ \\
 
 
 
@@ -394,9 +383,9 @@ co zostało powyżej napisane.
 % ############################
 \newpage
 
-\Work{ % Autor i tytuł dzieła
+% \Work{ % Autor i tytuł dzieła
   Willard Van Orman Quine \\
-  \textit{Logika matematyczna}, \cite{QuineLogikaMatematyczna1974}}
+  \textit{Logika matematyczna}, \cite{Quine-Logika-matematyczna-Wyd-1974}
 
 
 % ##################
@@ -424,7 +413,8 @@ co zostało powyżej napisane.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceSix
+
 % ############################
 
 
@@ -440,7 +430,7 @@ co zostało powyżej napisane.
 \newpage
 \section{Teoria mnogości}
 
-\vspace{\spaceTwo}
+% \vspace{\spaceTwo}
 % ######################################
 
 
@@ -462,7 +452,7 @@ co zostało powyżej napisane.
 
 \bibliographystyle{plalpha}
 
-\bibliography{MathComScienceBooks}{}
+\bibliography{MathematicsBooks}{}
 
 
 
