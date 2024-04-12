@@ -19,6 +19,41 @@ line width=1]
 
 
 % ############################
+% System of vectors.
+
+\tikzset{
+  rotated triad of vectors with origin and labels 1/.pic={
+    % X axis
+    \draw[vector] (0,0,0) -- (2,0.996,0.574);
+
+    \node[symbol package loc] at (1.331,0.121) {$\vecu$};
+
+
+    % Y axis
+    \draw[vector] (0,0,0) -- (-1.15,1.725,0.574);
+
+    \node[symbol package loc] at (-0.605,1.331) {$\vecv$};
+
+
+    % Z axis
+    \draw[vector] (0,0,0) -- (0,-1.1495,1.991);
+
+    \node[symbol package loc] at (-0.968,-1.089) {$\vecw$};
+
+
+    % Origin of coordinate system
+    \fill[color=jMathTextFGColor] (0,0) circle [radius=0.09];
+
+    \node[symbol package loc] at (0.363,-0.363) {$\pointQ$};
+  },
+}
+% ############################
+
+
+
+
+
+% ############################
 % Coordinates systems.
 
 \tikzset{
@@ -42,79 +77,222 @@ line width=1]
   },
   coordinate system with labels medium 1/.pic={
     % X axis
-    \draw[axis arrow loc,color=jAxisRed] (0,0) -- (2.2,0);
+    \draw[axis arrow package loc,color=jAxisRed] (0,0) -- (2.2,0);
 
-    \node[symbol loc] at (1.9,-0.3) {$x$};
+    \node[symbol package loc] at (1.9,-0.3) {$x$};
 
 
     % Y axis
-    \draw[axis arrow loc,color=jAxisGreen]  (0,0) -- (0,2.2);
+    \draw[axis arrow package loc,color=jAxisGreen]  (0,0) -- (0,2.2);
 
-    \node[symbol loc] at (0.3,1.9) {$y$};
+    \node[symbol package loc] at (0.3,1.9) {$y$};
 
 
     % Z axis
-    \draw[axis arrow loc,color=jAxisBlue] (0,0,0) -- (0,0,2.2);
+    \draw[axis arrow package loc,color=jAxisBlue] (0,0,0) -- (0,0,2.2);
 
-    \node[symbol loc] at (-0.725,-0.375) {$z$};
+    \node[symbol package loc] at (-0.725,-0.375) {$z$};
   },
   coordinate system with labels medium 2/.pic = {
     % X axis
-    \draw[axis arrow loc,color=jAxisRed] (0,0) -- (2.5,0);
+    \draw[axis arrow package loc,color=jAxisRed] (0,0) -- (2.5,0);
 
-    \node[symbol] at (2.2,-0.3) {$x$};
+    \node[symbol package loc] at (2.2,-0.3) {$x$};
 
 
     % Y axis
-    \draw[axis arrow loc,color=jAxisGreen] (0,0) -- (0,2.5);
+    \draw[axis arrow package loc,color=jAxisGreen] (0,0) -- (0,2.5);
 
-    \node[symbol] at (0.3,2.2) {$y$};
+    \node[symbol package loc] at (0.3,2.2) {$y$};
 
 
     % Z axis
-    \draw[axis arrow loc,color=jAxisBlue] (0,0,0) -- (0,0,2.5);
+    \draw[axis arrow package loc,color=jAxisBlue] (0,0,0) -- (0,0,2.5);
 
-    \node[below,symbol] at (-0.85,-0.3) {$z$};
+    \node[below,symbol package loc] at (-0.85,-0.3) {$z$};
   },
   coordinate system with origin and labels medium 1/.pic={
-    \draw[axis arrow loc,color=jAxisRed] (0,0) -- (2.2,0);
+    % X axis
+    \draw[axis arrow package loc,color=jAxisRed] (0,0) -- (2.2,0);
 
-    \node[symbol loc] at (1.9,-0.3) {$x$};
-
-
-    \draw[axis arrow loc,color=jAxisGreen]  (0,0) -- (0,2.2);
-
-    \node[symbol loc] at (0.3,1.9) {$y$};
+    \node[symbol package loc] at (1.9,-0.3) {$x$};
 
 
-    \draw[axis arrow loc,color=jAxisBlue] (0,0,0) -- (0,0,2.2);
+    % Y axis
+    \draw[axis arrow package loc,color=jAxisGreen]  (0,0) -- (0,2.2);
 
-    \node[symbol loc] at (-0.725,-0.375) {$z$};
+    \node[symbol package loc] at (0.3,1.9) {$y$};
 
 
+    % Y axis
+    \draw[axis arrow package loc,color=jAxisBlue] (0,0,0) -- (0,0,2.2);
+
+    \node[symbol package loc] at (-0.725,-0.375) {$z$};
+
+
+    % Origin of coordinate system
     \fill[color=jMathTextFGColor] (0,0) circle [radius=0.09];
 
-    \node[symbol loc] at (0.2,-0.4) {$\pointQ$};
+    \node[symbol package loc] at (0.2,-0.4) {$\pointQ$};
   },
-  rotated coordinate system with center and labels 1/.pic={
-    \draw[vector] (0,0,0) -- (2,0.996,0.574);
-
-    \node[symbol loc] at (1.331,0.121) {$\vecu$};
+}
+% ############################
 
 
-    \draw[vector] (0,0,0) -- (-1.15,1.725,0.574);
-
-    \node[symbol loc] at (-0.605,1.331) {$\vecv$};
 
 
-    \draw[vector] (0,0,0) -- (0,-1.1495,1.991);
 
-    \node[symbol loc] at (-0.968,-1.089) {$\vecw$};
+% ############################
+% Coordinate systems with unit vectors.
+
+\tikzset{
+  % Użyty
+  coordinate system with unit vectors origin origin and labels 1/.pic={
+    % X axis
+    \draw[axis arrow package loc] (0.01,0) -- (2.9,0);
+
+    \node[symbol package loc] at (2.6,-0.4,0) {$x$};
 
 
+    % Y axis
+    \draw[axis arrow package loc] (0,0.01) -- (0,2.9);
+
+    \node[symbol package loc] at (0.35,2.6) {$y$};
+
+
+    % Z axis
+    \draw[axis arrow package loc] (0,0,0) -- (0,0,2.9);
+
+    \node[symbol package loc] at (-1,-0.625) {$z$};
+
+
+
+    % Vector laying on X axis
+    \draw[vector,color=jAxisRed] (0,0) -- (1.9,0);
+
+    \node[symbol package loc] at (1.5,-0.45) {$\veci$};
+
+
+    % Vector laying on Y axis
+    \draw[vector,color=jAxisGreen] (0,0) -- (0,1.9);
+
+    \node[symbol package loc] at (0.4,1.5) {$\vecj$};
+
+
+    % Vector laying on Z axis
+    \draw[vector,color=jAxisBlue] (0,0,0) -- (0,0,1.9);
+
+    \node[symbol package loc] at (-0.55,0) {$\veck$};
+
+
+
+    % Origin
     \fill[color=jMathTextFGColor] (0,0) circle [radius=0.09];
 
-    \node[symbol loc] at (0.363,-0.363) {$\pointQ$};
+    \node[symbol package loc] at (0.2,-0.3) {$\pointO$};
+  },
+  coordinate system with short axes and unit vectors 1/.pic={
+    % X axis
+    \draw[axis arrow package loc] (0.01,0) -- (2.6,0);
+
+    \node[symbol package loc] at (2.3,-0.38,0) {$x$};
+
+
+    % Y axis
+    \draw[axis arrow package loc] (0,0.01) -- (0,2.6);
+
+    \node[symbol package loc] at (0.38,2.3) {$y$};
+
+
+    % Z axis
+    \draw[axis arrow package loc] (0,0,0) -- (0,0,2.6);
+
+    \node[symbol package loc] at (-0.9,-0.5) {$z$};
+
+
+
+    % Vector laying on X axis
+    \draw[vector,color=jAxisRed] (0,0) -- (1.9,0);
+
+    \node[symbol package loc] at (1.5,-0.45) {$\veci$};
+
+
+    % Vector laying on Y axis
+    \draw[vector,color=jAxisGreen] (0,0) -- (0,1.9);
+
+    \node[symbol package loc] at (0.4,1.5) {$\vecj$};
+
+
+    % Vector laying on Z axis
+    \draw[vector,color=jAxisBlue] (0,0,0) -- (0,0,1.9);
+
+    \node[symbol package loc] at (-0.55,0) {$\veck$};
+
+
+
+    % Origin
+    \fill[color=jMathTextFGColor] (0,0) circle [radius=0.09];
+
+    \node[symbol package loc] at (0.2,-0.3) {$\pointO$};
+  },
+  coordinate system with rotated unit vectors 1/.pic={
+    % X axis
+    \draw[axis arrow packages loc] (0.01,0) -- (2.9,0);
+
+    \node[symbol packages loc] at (2.6,-0.4,0) {$x$};
+
+
+    % Y axis
+    \draw[axis arrow packages loc] (0,0.01) -- (0,2.9);
+
+    \node[symbol packages loc] at (0.35,2.6) {$y$};
+
+
+    % Z axis
+    \draw[axis arrow packages loc] (0,0,0) -- (0,0,2.9);
+
+    \node[symbol packages loc] at (-1,-0.625) {$z$};
+
+
+
+    % Vector laying on X axis
+    \draw[vector,color=jAxisRed] (0,0) -- (1.9,0);
+
+    \node[symbol packages loc] at (1.5,-0.45) {$\veci$};
+
+
+    % Vector laying on Y axis
+    \draw[vector,color=jAxisGreen] (0,0) -- (0,1.9);
+
+    \node[symbol packages loc] at (0.4,1.5) {$\vecj$};
+
+
+    % Vector laying on Z axis
+    \draw[vector,color=jAxisBlue] (0,0,0) -- (0,0,1.9);
+
+    \node[symbol packages loc] at (-0.55,0) {$\veck$};
+
+
+
+    \draw[vector,color=jOrange] (0,0) -- (1.645,0.823,0.475);
+
+    \node[symbol packages loc] at (1.33,1.045,0.466) {$\vecu$};
+
+
+    \draw[vector,color=jOrange] (0,0) -- (-0.95,1.425,0.8227);
+
+    \node[symbol packages loc] at (-0.741,0.855,0.823) {$\vecv$};
+
+
+    \draw[vector,color=jOrange] (0,0) -- +(0,-0.95,1.645);
+
+    \node[symbol packages loc] at (0.285,-0.95,0.95) {$\vecw$};
+
+
+    % Origin
+    \fill[color=jMathTextFGColor] (0,0) circle [radius=0.09];
+
+    \node[symbol packages loc] at (0.2,-0.3) {$\pointO$};
   },
 }
 % ############################

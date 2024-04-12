@@ -5,6 +5,27 @@
 
 
 % ############################
+% Arrow used to ilustrate rotation in the plain.
+
+\tikzset{
+  rotation arrow counterclockwise/.pic={
+    \draw[-{Straight Barb[scale=1.5]},line width=0.9]
+    (0,0.3) .. controls (0.2,-0.3) and (1,-0.3) .. (1.2,0.3);
+    % (0.6,0.2,1.5) .. controls (0.4,0.8,1.5) and (-0.4,0.8,1.5) ..
+    % (-0.6,0.2,1.5);
+  },
+  rotation arrow clockwise/.pic={
+    \draw[-{Straight Barb[scale=1.5]},line width=0.9]
+    (0,-0.3) .. controls (0.2,0.3) and (1,0.3) .. (1.2,-0.3);
+  },
+}
+% ############################
+
+
+
+
+
+% ############################
 % Pics for drawing ticks on the coordinate axis.
 
 \tikzset{

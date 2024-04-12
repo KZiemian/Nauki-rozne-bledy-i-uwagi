@@ -1,0 +1,42 @@
+% ####################################################################
+% Styles for drawing diagrams.
+% ####################################################################
+\ProvidesPackage{PGFTikZDigramsStyles}
+
+
+% ##################
+% Importing TikZ's libraries.
+
+\usetikzlibrary{arrows.meta}
+% ##################
+
+
+
+% ############################
+% Styles for writing nodes in diagram.
+
+\tikzset{
+  % Square node with rounded corners.
+  diagram block/.style={rectangle,rounded corners,
+    text centered,minimum height=4.5em,text width=7em,
+    fill=jAxisBlue,text=jMathTextFGStyleDark},
+}
+% ############################
+
+
+
+
+
+% ############################
+% Styles for drawing arrows on diagrams.
+
+% Basic diagram arrow.
+\tikzset{
+  % Strzałka do łączenia wierzchołków diagramów
+  thick diagram arrow/.style={-{Triangle[scale width=0.6,
+      scale length=0.3]},line width=7.5,color=jNormalTextFGStyleLight},
+  % Linia do łączenia wierzchołków w diagramach
+  thick diagram line/.style={-,line width=7.5,
+    color=jNormalTextFGStyleLight},
+}
+% ############################
