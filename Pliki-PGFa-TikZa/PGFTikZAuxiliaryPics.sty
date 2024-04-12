@@ -1,0 +1,22 @@
+% ####################################################################
+% Various auxiliary PGF/TikZ's pics.
+% ####################################################################
+\ProvidesPackage{PGFTikZAuxiliaryPics}
+
+
+% ######################################
+% Pics for drawing ticks on the coordinate axis.
+
+\tikzset{
+  % Basic tick, thin width.
+  tick x axis thin/.pic = {
+    \draw[line width=0.4] (0,-0.125) -- (0,0.125);
+  },
+  tick x axis thin 1/.pic = {
+    \draw[line width=0.4] (0,-0.09) -- (0,0.09);
+  },
+  tick x axis thin 2/.pic = {
+    \draw[line width=0.4] (0,-0.2) -- (0,0.2);
+  },
+}
+% ######################################
