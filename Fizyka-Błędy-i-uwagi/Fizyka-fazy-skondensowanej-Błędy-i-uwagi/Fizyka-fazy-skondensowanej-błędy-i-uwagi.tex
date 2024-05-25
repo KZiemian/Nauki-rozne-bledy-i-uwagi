@@ -1,0 +1,282 @@
+% ---------------------------------------------------------------------
+% Basic configuration and packages
+% ---------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
+\documentclass[a4paper,11pt]{article}
+
+
+
+% ---------------------------------------
+% Packages not tied to particular normal language
+% ---------------------------------------
+% This package should improved spaces in the text.
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
+
+
+
+% ---------------------------------------
+% Polonization of LaTeX document
+% ---------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
+
+
+
+% ---------------------------------------
+% Setting margins
+% ---------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
+
+
+
+% ---------------------------------------
+% Setting vertical spaces in the text
+% ---------------------------------------
+% Setting space between lines
+\renewcommand{\baselinestretch}{1.1}
+
+% Setting space between lines in tables
+\renewcommand{\arraystretch}{1.4}
+
+
+
+% ---------------------------------------
+% Packages for scientific papers
+% ---------------------------------------
+% Switching off \lll symbol, that I guess is representing letter ``Ł''.
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section.
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+
+% ---------------------------------------
+% Defining new environments (?)
+% ---------------------------------------
+% Defining enviroment ``Wniosek''
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------
+% Private packages
+% You need to put them in the same directory as .tex file
+% ------------------------------
+% Contains various command useful for working with a text
+\usepackage{latexgeneralcommands}
+% Contains definitions useful for working with mathematical text
+\usepackage{mathcommands}
+
+
+
+
+
+% ------------------------------
+% Package ``hyperref''
+% ------------------------------
+% It allows you to use hyperlinks in the text.
+% They advised to put it on the end of preambule.
+\usepackage{hyperref}
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------------
+% Tytuł, autor, data
+\title{Fizyka fazy skondensowanej \\
+  {\Large Błędy i~uwagi}}
+
+\author{Kamil Ziemian}
+
+
+% \date{}
+% ---------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% Beginning of the document
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+% Title of the text
+\maketitle
+% ######################################
+
+
+
+
+
+% ######################################
+\section{Józef Spałek \textit{Wstęp do~fizyki materii
+    skondensowanej},
+  \cite{SpalekWstepDoFizykiMateriiSkondensowanej2015}}
+
+\VerSpaceTwo
+% ######################################
+
+\vspace{0em}
+
+
+% ##################
+\CenterBoldFont{Uwagi do~konkretnych stron}
+
+\vspace{0em}
+
+
+\noindent
+\textbf{Str.~8, rysunek~1.1.} Obszar zakreskowany jest tak gęsto,
+że~jeśli nie przyglądnąć~się z~bliska, to wygląda jak jednolicie
+pokryty farbą o~kolorze pomiędzy ciemną czerwienią, a~pomarańczowym.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\noindent
+\textbf{Str.~8, rysunek~1.1.} Jak rozumiem umieszczenie na~osi~$y$
+oznaczenia $V( \vecrbold )$, $\varepsilon$ ma symbolizować, że~na tej osi jest
+obrazowana jednocześnie energia potencjalna $V( \vecrbold )$ i~energia
+elektronu~$\varepsilon$.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\noindent
+\Str{10} Rozróżnienie na~cechy korpuskularne i~falowe, jest nie tylko
+XIX-wieczne, ale też bardzo niewygodne i~problematyczne, przynajmniej
+w~mojej osobistej opinii. Dlatego należałoby je już odrzucić, jako
+przestarzałe, bo jest już wszakże XXI~wiek.
+
+\vspace{\spaceFour}
+
+
+
+
+
+\noindent
+\StrWd{10}{4} Symbol $d / d\veckbold$ należy tu rozumieć w~ten sposób,
+że~jest to gradient funkcji skalarnej zależnej od~$\veckbold$.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% ##################
+\newpage
+
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\ \hline
+    12 & & 8 & (1.13){ }{ }\textit{wymaga} & (1.13) \textit{wymaga} \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\vspace{\spaceTwo}
+
+
+
+
+
+
+% ############################
+
+
+
+
+
+
+
+
+
+
+% #####################################################################
+% #####################################################################
+% Bibliography
+
+\bibliographystyle{plalpha}
+
+\bibliography{}{}
+
+
+
+
+
+% ############################
+% End of the document
+
+\end{document}
