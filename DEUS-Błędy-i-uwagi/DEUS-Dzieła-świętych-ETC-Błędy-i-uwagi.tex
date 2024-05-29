@@ -1,0 +1,987 @@
+% ------------------------------------------------------------------------------------------------------------------
+% Basic configuration and packages
+% ------------------------------------------------------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
+\documentclass[a4paper,11pt]{article}
+
+
+
+% ------------------------------------------------------
+% Packages not tied to particular normal language
+% ------------------------------------------------------
+% This package should improved spaces in the text
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
+
+
+
+% ------------------------------------------------------
+% Polonization of LaTeX document
+% ------------------------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
+
+
+
+% ------------------------------------------------------
+% Setting margins
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
+
+
+
+% ------------------------------------------------------
+% Setting vertical spaces in the text
+% ------------------------------------------------------
+% Setting space between lines
+\renewcommand{\baselinestretch}{1.1}
+
+% Setting space between lines in tables
+\renewcommand{\arraystretch}{1.4}
+
+
+
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{LogikaITeoriaMnogosciBibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------------------------------
+% Private packages
+% You need to put them in the same directory as .tex file
+% ------------------------------------------------------
+% Contains various command useful for working with a text
+\usepackage{latexgeneralcommands}
+% Contains definitions useful for working with mathematical text
+\usepackage{mathcommands}
+
+
+
+
+
+% ------------------------------------------------------
+% Package "hyperref"
+% They advised to put it on the end of preambule
+% ------------------------------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
+
+
+
+
+
+
+
+
+
+
+% ------------------------------------------------------------------------------------------------------------------
+% Title and author of the text
+\title{DEUS: dzieła świętych i~błogosławionych \\
+  {\Large Błędy i~uwagi}}
+
+\author{Kamil Ziemian}
+
+
+% \date{}
+% ------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle
+% ######################################
+
+
+
+
+
+% ######################################
+\section{Sanctae Jan Chryzostom
+  \textit{Homilie na~Księgę Rodzaju (seria pierwsza: Rdz 1--3)},
+  \parencite{SancteJanChryzostomHomKsiegaRodzaju2008}}
+
+% ######################################
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+\vspace{0em}
+
+
+\noindent
+\Str{78} Na~końcu pierwszego akapitu jest jeden nieotwarty
+cudzysłów, nie wiadomo więc, gdzie~się powinien zaczynać, a~gdzie
+kończyć.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{106} Od końca pierwszego akapitu do~końca tej homilii,
+tekst staję~się chaotyczny i~w~pewnym stopniu nielogiczny.
+Należałoby~by sprawdzić, czy~został poprawnie przetłumaczony.
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+\VerSpaceFive
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    73 & & 11 & w pokoju & pokoju \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\VerSpaceTwo
+
+
+% ######################################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Sanctae Jak Klimak \textit{Drabina raju},
+  \parencite{SancteJanKlimakDrabinaRaju2011}}
+
+% ######################################
+
+
+% ##################
+\CenterBoldFont{Uwagi ogólne}
+
+\vspace{0em}
+
+
+\noindent
+W~tym wydaniu przyjęto dziwną regułę, że~liczba odsyłająca do~przypisu nie
+jest zaraz przy wyrazie, lecz znajduje~się między nimi odstęp. Na~przykład
+na stronie~101 jest „głowo $^{ 1 }$”, a~nie „głowo$^{ 1 }$”. Zdecydowanie
+wolę tę drugą konwencję.
+
+
+
+\VerSpaceTwo
+
+
+% ######################################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Sanctae Augustyn z~Hippony
+  \textit{Państw Boże}, \cite{}}
+% ######################################
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+% \vspace{\spaceFive}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    \hphantom{0}51 & \hphantom{0}8 & & zostawia” & zostawia \\
+    \hphantom{0}92 & 16 & & Od & „Od \\
+    122 & \hphantom{0}9 & & punicka. & punicka.” \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\VerSpaceTwo
+% ######################################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\section{Sanctae Tomasz z Akwinu\textit{Suma Teologiczna.
+    Tom~I},
+  \parencite{SancteTomaszZAkwinuSumaTeologicznaTomI1960}}
+
+% ######################################
+
+
+% ##################
+% \CenterBoldFont{Uwagi ogólne}
+
+
+
+
+
+% ##################
+\newpage
+
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+    & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    28 & \hphantom{0}3 & & ( 1 & (1 \\
+    31 & & \hphantom{0}7 & \textit{WIEDZĄ~?} & \textit{WIEDZĄ?} \\
+    32 & & 13 & \textit{WIEDZĄ~?} & \textit{WIEDZĄ?} \\
+    32 & & \hphantom{0}3 & bo-wiem & bowiem \\
+    32 & & \hphantom{0}2 & [Mądrość]dała & [Mądrość] dała \\
+    33 & 12 & & n~i~ż~s~z~e~~władze & n~i~ż~s~z~e\, władze \\
+    33 & 14 & & n~a~d~r~z~ę~d~n~e~j~~władzy
+           & n~a~d~r~z~ę~d~n~e~j\, władzy \\
+    33 & & 11 & \textit{PRAKTYCZNĄ~?} & \textit{PRAKTYCZNĄ?} \\
+    34 & & \hphantom{0}1 & za & ta \\
+    35 & 13 & & ludzkiego”. & ludzkiego. \\
+    35 & & \hphantom{0}9 & \textit{MĄDROŚCIĄ~?} & \textit{MĄDROŚCIĄ?} \\
+    36 & \hphantom{0}3 & & jest & nie jest \\
+    37 & 19 & & \textit{BÓG~?} & \textit{BÓG?} \\
+    37 & & 14 & jest$^{ 2 }$ & jest''$^{ 2 }$ \\
+    37 & \hphantom{0}9 & & n & na \\
+    38 & & 15 & \textit{UZASADNIAĆ~?} & \textit{UZASADNIAĆ~?} \\
+    38 & & 13 & Gdzie & „Gdzie \\
+    38 & & \hphantom{0}3 & biskupie & o~biskupie \\
+    39 & & \hphantom{0}1 & teologii~! & teologii! \\
+    40 & & 16 & \textit{PRZENOŚNI~?} & \textit{PRZENOŚNI?} \\
+    41 & 15 & & niewykształconych”$^{ 5 }$
+           & niewykształconych”$^{ 5 }$) \\
+    41 & 20 & & i~~d~l~a & i{}\, d~l~a \\
+    42 & \hphantom{0}5 & & \textit{ZNACZEŃ~?} & \textit{ZNACZEŃ?} \\
+    44 & \hphantom{0}1 & & \textit{JEST~?} & \textit{JEST~?} \\
+    44 & 17 & & \textit{SIEBIE~?} & \textit{SIEBIE?} \\
+    45 & & \hphantom{0}6 & pond & ponad \\
+    46 & 10 & & \textit{BOGA~?} & \textit{BOGA?} \\
+    47 & & 13 & \textit{ISTNIEJE~?} & \textit{ISTNIEJ?} \\
+    48 & & 16 & druga & Druga \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  \newpage
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    49 & & 14 & poznania,{ }, & poznania, \\
+    60 & & 16 & zak & tak \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\VerSpaceTwo
+
+
+
+% ######################################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Sanctae Tomasz z Akwinu
+  \textit{O~królowaniu~-- królowi Cypru},
+  \parencite{SancteTomaszZAkwinuOKrolowaniu2006}}
+
+% ######################################
+
+
+% ##################
+\CenterBoldFont{Uwagi ogólne}
+
+\vspace{0em}
+
+
+\noindent
+Marginesy od~strony brzegu~są zbyt małe, co często utrudnia czytanie.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% ##################
+\CenterBoldFont{Uwagi do~konkretnych stron}
+
+\vspace{0em}
+
+
+\noindent
+\StrWierszGora{20}{16} Słowa św.~Grzegorza~są tu~przytaczane jako
+\textit{Czymże jest władza na~szczycie, jeśli nie burzą umysłu?},
+podczas gdy~w~paragrafie~10.5 na~stronie 91 brzmią one \textit{Czymże
+  jest burza na~morzu, jeśli nie burzą umysłu?}. Odnośnie tego
+problemu warto zobaczyć komentarze tłumacza na stronach 224--225.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszGora{32}{2} Obecność wcięcia w~tym wierszu, jest zapewne błędem
+składu.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszGora{49}{1} Zdanie „Dalej: rzeczy zgodne z~naturą mają
+w~sobie doskonałość, bowiem natura posługuje~się jednostkami --~i~tak
+jest najlepiej” powinno według mnie brzmieć raczej „Rzeczy zgodne
+z~naturą mają w~sobie doskonałość: natura posługuje~się jednostkami
+i~tak jest najlepiej”. Jednak bez~znajomości łaciny, nie da~się tego
+problemu rozstrzyganą w~sposób merytoryczny. To~samo odnosi~się
+do~wszystkich następnych uwaga o~sposobie tłumaczenie tekstu, chyba
+że~powiedziano inaczej.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{63} Treść tej~strony sprawia dużo problemów. Po~pierwsze
+w~punkcie~6.2 jest mowa o~„dobre tyranii”, a~zgodnie z prowadzoną
+klasyfikacją, nie może być czegoś takiego jak tyrania, która jest
+dobra. Po~drugie, w~tym samym punkcie jest mowa, że~„dobra tyrania”
+nie unicestwia pokoju jaki panuje w~społeczności. Jednak w~punkcie
+4.9~na~stronie~55, pisze św.~Tomasz, że~tyrani dla zachowania władzy
+zasiewają między poddanymi niezgodę, a~tą która już istnieje
+podsycają.
+
+Jak wspomina tłumacz we~„Wstępie”, św.~Tomasz nie ukończył, a~tym
+bardziej nie poprawił dzieła, stąd błędy te mogą być tego wynikiem.
+Inna możliwość jest taka, że~św.~Tomasz wyłożył tu~błędną, wzajemnie
+sprzeczną doktrynę. W~tej sprawie zobacz również uwagi tłumacza
+na~stronie~180.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszDol{89}{3} Wydaj mi~się, że~zamiast „jeśli jest cnotliwe”
+powinno być „jeśli jest własnością cnoty”.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszDol{91}{7} Popierając~się pobieżną i~niefachową analizą tekstu
+łacińskiego, doszedłem do~wniosku, że~zamiast „ten sam porzuca zwyczaj
+czynienia dobrze” powinno być bardziej sensowne w~tym kontekście zdanie
+„ten sam porzuca zwyczaj czynienia dobrze w~czasie zamętu”.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszDol{101}{13} Jestem słaby z~interpunkcji, mimo tego wydaje
+mi~się, że~zamiast „a~kiedy już potrzeba więcej, oni dają królom
+z~własnej woli” powinno być „a~kiedy już potrzeba, więcej oni dają
+królom z~własnej woli”.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszGora{103}{5} Zwykle w~tym wydaniu cytaty łacińskie~są
+albo~przytaczane po łacinie, albo tłumaczone na~polski. W~tej linii jednak,
+cytat jest przytoczony do~połowy po~łacinie, dalej jest tłumaczenie całości
+na~polski.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszGora{107}{6} Sytuacja taka sama jak na stronie~103, z~tym,
+że~teraz po~łacinie przytoczona jest~druga część cytatu.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\textbf{Str.~192, wiersze 15, 14 (od~dołu).} Odstęp między tymi
+liniami jest za~duży.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszGora{260}{15 i~33} Pod~tymi liniami nie powinien znajdować~się
+odstęp.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszGora{267}{10 i~31} Pod~tymi liniami nie powinien znajdować~się
+odstęp.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{309} Począwszy od~następującej strony, brak jest numeracji kolejnych
+stron.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszGora{312}{16} Po~tej linii w~tekście powinien znajdować~się
+odstęp.
+
+\VerSpaceFour
+
+
+
+
+
+% ##################
+\newpage
+
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    \hphantom{0}13 & \hphantom{0}6 & & panowala & pawnowała \\
+    \hphantom{0}23 & & 11 & sądzić & wierzyć \\
+    \hphantom{0}24 & \hphantom{0}8 & & tu & tu to \\
+    \hphantom{0}29 & & 12 & zawartą & zawartej \\
+    \hphantom{0}90 & & 10 & impune & \textit{impune} \\
+    \hphantom{0}91 & & \hphantom{0}1 & impune & \textit{impune} \\
+    109 & & 11 & boskiego) & boskiego \\
+    111 & & \hphantom{0}1 & wszyst & wszyst- \\
+    129 & & 11 & Policraticus & \textit{Policraticus} \\
+    130 & & 19 & \textit{ypocrita} & \textit{hypocrita} \\
+    146 & \hphantom{0}5 & & \textit{politeia} & politeia \\
+    146 & \hphantom{0}6 & & \textit{Politeia}& Politeia \\
+    146 & & \hphantom{0}9 & \textit{politei} & politei \\
+    162 & 11 & & \textit{z~zasady} & z~zasady \\
+    163 & & \hphantom{0}5 & tyranię & w~tyranię \\
+    187 & \hphantom{0}3 & & rozdział , & rozdział, \\
+    189 & & 17 & \textit{Twarda} & Twarda \\
+    209 & & \hphantom{0}9 & civitates & \textit{civitates} \\
+    209 & & \hphantom{0}6 & - \textit{Ibidem.} & \textit{Ibidem.} \\
+    240 & & 17 & \textit{ypocrita} & \textit{hypocrita} \\
+    240 & & \hphantom{0}9 & \textit{ypocrita} & \textit{hypocrita} \\
+    241 & & \hphantom{0}1 & DeMalo & \textit{De malo} \\
+    241 & & \hphantom{0}3 & \textit{DeMalo} & \textit{De malo} \\
+    244 & 12 & & zasłuży. & zasłuży, \\
+    268 & & \hphantom{0}2 & \ldots InSent & InSent \\
+    286 & 12 & & ma~bowiem był~on & jest \\
+    315 & & \hphantom{0}2 & Dzieje Polski w~zarysie
+    & \textit{Dzieje Polski w~zarysie} \\
+    317 & 12 & & Własność & własność \\
+    317 & 12 & & Podatki & podatki \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  \newpage
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    317 & 13 & & Gospodarcza & gospodarcza \\
+    317 & 13 & & Korupcja & korupcja \\
+    317 & 14 & & Granice & granice \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\VerSpaceTwo
+
+
+
+% ######################################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Sancte Franciszek Salezy \textit{Filotea},
+  \parencite{SancteFranciszekSalezyFilotea}}
+
+% ######################################
+
+\vspace{0em}
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+% \vspace{\spaceFive}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    \hphantom{0}10 & \hphantom{0}8 & & prowadzićna & prowadzić na \\
+    \hphantom{0}39 & \hphantom{0}3 & & \textit{we mnie jest}
+    & \textit{we mnie} \\
+    \hphantom{0}39 & & \hphantom{0}7 & rzeź- wić & rzeźwić \\
+    \hphantom{0}40 & 10 & & szystkim & wszystkim \\
+    \hphantom{0}45 & & \hphantom{0}7 & twojemu & ich \\
+    \hphantom{0}56 & & \hphantom{0}9 & Ojczyznę.O, & Ojczyznę. O, \\
+    \hphantom{0}59 & & 11 & światowych. & światowych.” \\
+    185 & & 12 & chciwy1 & chciwy$^{ 1 }$ \\
+    263 & & \hphantom{0}4 & ŚwiętyTomasz & Święty Tomasz \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\VerSpaceTwo
+
+
+% ######################################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Bł. John Henry Newman \textit{Apologia pro vita
+    sua}, \parencite{NewmanApologia2009}}
+
+% ######################################
+
+
+% ##################
+\CenterBoldFont{Uwagi do~konkretnych stron}
+
+\vspace{0em}
+
+
+\noindent
+\StrWierszDol{37}{11} Kiedy ten sam fragment jest cytowany na~stronie~33
+święty Alfons de~Liguori jest tam określany jako święty, tutaj zaś~jako
+błogosławiony. Ponieważ jego kanonizacja odbyła~się w~1849 roku, zapewne
+w~oryginalnej przytaczanego tekstu jest on określany jako święty.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszDol{49}{1} Przez „straszydło na~wróble” to~pewnie tłumaczenie
+angielskiego „straw man”. Jeśli tak należy pamiętać, że~w~języku
+angielskim funkcjonuje „straw man argument”, choć nie wiem, czy był już
+wtedy znany pod tą~nazwą.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{127} Nie jestem w~stanie stwierdzić, co miało znaczyć zdanie „I~przez
+tak długi czas nie było możliwe złamanie go w~tym stanie rzeczy, gdyby
+wielka zmiana nie zaszła w~warunkach ruchu przeciwnego, który już~się
+rozpoczął, aby~mu~stawić opór.”
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszDol{177}{6} Jeśli Churton zmarł w~1792 roku, w~jaki sposób mógł
+być zwolennikiem ruchu oksfordzkiego, który powstał w~XIX~wieku?
+Tu~musi być jakiś błąd.
+
+\VerSpaceFour
+
+
+
+
+
+% ##################
+\newpage
+
+\CenterBoldFont{Błędy}
+
+\VerSpaceFive
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    \hphantom{0}35 & 12 & & \textit{Części} & części \\
+    \hphantom{0}47 & \hphantom{0}3 & & skondensowana & skondensowania \\
+    \hphantom{0}57 & \hphantom{0}7 & & tej & tych \\
+    \hphantom{0}61 & \hphantom{0}7 & & starta & wytarta \\
+    \hphantom{0}88 & & \hphantom{0}8 & pomagającymi & wspomagającymi \\
+    117 & 13 & & 3) A~dalej & A~dalej \\
+    119 & & 12 & 4) & 3) \\
+    122 & & 11 & świat?” & świat? \\
+    122 & & 11 & „Ten & >>Ten \\
+    122 & & 10 & godzien” & godzien<<  % >>
+    \\
+    122 & & 10 & „nauczyć & >>nauczyć \\
+    122 & & \hphantom{0}9 & wyrok” & wyrok<<  % >>
+    \\
+    130 & & \hphantom{0}1 & ukazały, dopóty & ukazały, \\
+    134 & 15 & & działo~się & było \\
+    139 & & 10 & „Mądrości Bożej” & >>Mądrości Bożej<<”  % >>
+    \\
+    145 & \hphantom{0}1 & & fakt; & fakt \\
+    160 & & 11 & co~innego & coś~innego \\
+    160 & & \hphantom{0}9 & znajdziemy & znajdziemy tam \\
+    167 & \hphantom{0}2 & & ustępowałem; & ustępowałem, \\
+    174 & 12 & & uważa & uważam \\
+    176 & \hphantom{0}3 & & praktycznego”\ldots „Bogate
+    & praktycznego”, „Bogate \\
+    176 & & \hphantom{0}5 & przeciwnik & czynnik \\
+    178 & & \hphantom{0}8 & tak & tak~to \\
+    182 & \hphantom{0}9 & & intuicje & intuicje odnośnie \\
+    182 & 13 & & znosić & zaprzeczać \\
+    182 & & 11 & przeciwieństwo & przeciwieństwa \\
+    182 & & \hphantom{0}1 & „tak” & >>tak<<  % >>
+    \\
+    182 & & \hphantom{0}1 & „nie” & >>nie<<”  % >>
+    \\
+    183 & 10 & & życzący & nie życzący \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  \newpage
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    193 & & 11 & dzieciństwem” & dzieciństwem \\
+    194 & & \hphantom{0}8 & punkt & argument \\
+    194 & & \hphantom{0}7 & punktem & argumentem \\
+    194 & & \hphantom{0}7 & punktem & argumentem \\
+    195 & \hphantom{0}3 & & pewien punkt & pewne rzeczy \\
+    199 & 11 & & 1156 & 1556 \\
+    203 & & \hphantom{0}2 & stale & stałe \\
+    221 & & \hphantom{0}5 & puseyizmu”. & puseyizmu. \\
+    224 & & 12 & wnioskiem. & wnioskiem”. \\
+    227 & & 11 & Liście & liście \\
+    250 & \hphantom{0}5 & & nieistniejącego & istniejącego \\
+    254 & \hphantom{0}9 & & więzieniu. & więzieniu.” \\
+    254 & 10 & & Boże & „Boże \\
+    254 & 10 & & „Śniłem & Śniłem \\
+    259 & & \hphantom{0}3 & mnie & niej \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\VerSpaceTwo
+
+
+\noindent
+\StrWierszGora{39}{7--8} \\
+\Jest zdobyła~się jedynie na~słowa \\
+\PowinnoByc usłyszała jedynie słowa \\
+
+
+% ############################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+% Bibliography
+
+\printbibliography
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}

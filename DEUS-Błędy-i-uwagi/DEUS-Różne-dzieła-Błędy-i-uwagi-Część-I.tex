@@ -1,0 +1,664 @@
+% ------------------------------------------------------------------------------------------------------------------
+% Basic configuration and packages
+% ------------------------------------------------------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
+\documentclass[a4paper,11pt]{article}
+
+
+
+% ------------------------------------------------------
+% Packages not tied to particular normal language
+% ------------------------------------------------------
+% This package should improved spaces in the text
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
+
+
+
+% ------------------------------------------------------
+% Polonization of LaTeX document
+% ------------------------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
+
+
+
+% ------------------------------------------------------
+% Setting margins
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
+
+
+
+% ------------------------------------------------------
+% Setting vertical spaces in the text
+% ------------------------------------------------------
+% Setting space between lines
+\renewcommand{\baselinestretch}{1.1}
+
+% Setting space between lines in tables
+\renewcommand{\arraystretch}{1.4}
+
+
+
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{LogikaITeoriaMnogosciBibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------------------------------
+% Private packages
+% You need to put them in the same directory as .tex file
+% ------------------------------------------------------
+% Contains various command useful for working with a text
+\usepackage{latexgeneralcommands}
+% Contains definitions useful for working with mathematical text
+\usepackage{mathcommands}
+
+
+
+
+
+% ------------------------------------------------------
+% Package "hyperref"
+% They advised to put it on the end of preambule
+% ------------------------------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
+
+
+
+
+
+
+
+
+
+
+% ------------------------------------------------------------------------------------------------------------------
+% Title and author of the text
+\title{DEUS: dzieła świętych i~błogosławionych \\
+  {\Large Błędy i~uwagi}}
+
+\author{Kamil Ziemian}
+
+
+% \date{}
+% ------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle
+% ######################################
+
+
+
+
+
+% ######################################
+\section{Sanctae Jan Chryzostom
+  \textit{Homilie na~Księgę Rodzaju (seria pierwsza: Rdz 1--3)},
+  \parencite{SancteJanChryzostomHomKsiegaRodzaju2008}}
+
+% ######################################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Dante \textit{Komedia}, \cite{DAK}}
+
+% ######################################
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+% \vspace{\spaceFive}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % 347 & 21 & & ,,Jestem & Jestem \\
+    350 & & 9 & jed- nak & jednak \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\VerSpaceTwo
+
+
+Piekło, Pieśń IV, 131: \ldots którzy wiedzą, Czyściec, Pieśń 1, 44: by was
+z tej nocy\ldots
+
+
+% ######################################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Elio Guerriero \textit{Hans Urs von Balthasar},
+  \cite{GuerrieroHansUrsVonBalthasarMonografia2004}}
+
+
+% ######################################
+
+
+% ##################
+\CenterBoldFont{Uwagi do~konkretnych stron}
+
+\vspace{0em}
+
+
+\noindent
+\Str{41} Pierwszy akapit na tej kończy się cudzysłowem zamykającym, lecz
+nie ma w nim nigdzie cudzysłowu otwierającego.
+
+\VerSpaceFour
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    \hphantom{0}17 & 12 & & \textit{Karl. Barth.} & \textit{Karl Barth.} \\
+    139 & & \hphantom{0}6 & Tage & \textit{Tage} \\
+    153 & & \hphantom{0}2 & ($^{ 2 }$1988) & (1988) \\
+    153 & & \hphantom{0}4 & (1972);(pol. & (1972); (pol. \\
+    217 & & 14 & eologa & teologa \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+% ############################
+
+
+
+
+
+
+
+
+
+
+
+% % ######################################
+% \newpage
+
+% \section{Święta liturgia}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+
+% % ############################
+% \subsection{Święta liturgia po 1962~r.}
+
+% \vspace{\spaceThree}
+% % ############################
+
+
+
+% ######################################
+\section{Michael Davies \textit{Zniszczenie Mszy Świętej
+    czyli~Godly Order Cranmera},
+  \parencite{DaviesZniszczenieMszySwietej2016} }
+
+% ######################################
+
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+\vspace{0em}
+
+
+\noindent
+Jak wiele książek z~tego wydawnictwa, ta~również ta nie przeszła
+odpowiedniego procesu redakcji i~jest pod~wieloma względami źle zedytowana.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+W~procesie tworzenia wydania polskiego przepadła gdzieś bibliografia
+i~indeks skrótów.
+
+
+
+
+
+% ##################
+\newpage
+
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    15  & \hphantom{0}2 & & z~zbiorach & w~zbiorach \\
+    24  & & \hphantom{0}6 & stad & stąd \\
+    24  & \hphantom{0}2 & & woli” & woli \\
+    33  & \hphantom{0}9 & & ja & ją \\
+    37  & \hphantom{0}5 & & zapomniało waszym & zapomniał o~waszym \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\VerSpaceTwo
+
+
+\noindent
+\textbf{Tylna okładka.} \\
+\Jest  \textit{arcydziełem}”. \\
+\PowinnoByc \textit{arcydziełem} \\
+
+
+% ######################################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Michael Davies
+  \textit{Sobór Papieża Jana. Rewolucja liturgiczna},
+  \parencite{}}
+
+% ######################################
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+\VerSpaceFive
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    \hphantom{0}11 & & \hphantom{0}2 & \textit{musimocna}
+    & \textit{musi mocno} \\
+    \hphantom{0}41 & 10 & & „Patrząc & Patrząc \\
+    \hphantom{0}46 & & \hphantom{0}2 & Westminster & Westminster. \\
+    % 81 & & 17 & ,,wyczuwalny & ,,Wyczuwalny \\
+    \hphantom{0}97 & & \hphantom{0}3 & wprowadzen- ia & wprowadzenia \\
+    176 & & \hphantom{0}9 & presji.„Czy & presji. „Czy \\
+    178 & \hphantom{0}7 & & \textit{Novost}i & \textit{Novosti} \\
+    183 & \hphantom{0}5 & & protestanckich & prawosławnych \\
+    188 & 14 & & wary & wiary \\
+    203 & 14 & & podporządkować. & podporządkować.” \\
+    204 & & 15 & małżeństwa. & małżeństwa.” \\
+    209 & \hphantom{0}3 & & zarazić. & zarazić.” \\
+    209 & \hphantom{0}6 & & pracę.” & pracę. \\
+    243 & & 17 & pominiecie & pominięcie \\
+    245 & \hphantom{0}7 & & dokumentu. & dokumentu.” \\
+    250 & 17 & & nie byłaby & byłaby \\
+    263 & \hphantom{0}8 & & „<<Wzorcowa>>” & ”<<Wzorcowa>> \\
+    265 & 13 & & tam, że & tam \\
+    265 & 15 & & ewolucji, & ewolucji. \\
+    310 & \hphantom{0}5 & & obór & Sobór \\
+    323 & \hphantom{0}3 & & wyobrazili & wyobrażali \\
+    323 & 11 & & nieuzasadnionym & nie uzasadnionym \\
+    325 & & \hphantom{0}8 & Nie & „Nie \\
+    326 & \hphantom{0}7 & & władzę. & władzę.” \\
+    327 & \hphantom{0}3 & & 272 & 322 \\
+    330 & 12 & & Podam -- nawet & Podam nawet \\
+    330 & 13 & & to & jest \\
+    359 & \hphantom{0}3 & & 59\% & 41\% \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\VerSpaceTwo
+
+
+\noindent
+\StrWierszGora{44}{16} \\
+\Jest  uprawnionych do głosowania \\
+\PowinnoByc które można głosować \\
+\StrWierszGora{174}{4} \\
+\Jest  umożliwiaporozumieniezchrześcijaństwem.Strukturalnacałość\textit{DasKapital}
+\\
+\PowinnoByc umożliwia porozumienie z chrześcijaństwem. Strukturalna całość
+\textit{Das Kapital} \\
+
+
+% ######################################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{M. Davies \textit{Sobór Watykański II a~wolność
+    religijna},
+  \parencite{DaviesSoborAWolnoscReligina2002}}
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+% \vspace{\spaceFive}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    \hphantom{0}84 & \hphantom{0}2 & & społeczeństwie” & „społeczeństwie” \\
+    109 & & 15 & nacjonalizmu & racjonalizmu \\
+    118 & & 10 & był & został \\
+    155 & \hphantom{0}9 & & nie & się \\
+    193 & 17 & & nie są & są \\
+    258 & & \hphantom{0}5 & \textit{rolą} & \textit{z rolą} \\
+    262 & 17 & & \textit{upadku} & \textit{upadku.} \\
+    269 & 12 & & \textit{Quanta cura} & \textit{Quas primas} \\
+    269 & 17 & & \textit{Quanta cura} & \textit{Quas primas} \\
+    333 & & 13 & jest & co jest \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+% ######################################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Tracey Rowland \textit{Wiara Ratzingera, teologia
+    Benedykta XVI}, \parencite{RowlandWiaraRatzingera2010}}
+
+\vspace{0em}
+
+
+% ##################
+\CenterBoldFont{Uwagi do~konkretnych stron}
+
+\vspace{0em}
+
+
+\noindent
+\Str{50} Stwierdzenie, że~św. Jan Paweł II doszedł do~teodramatyki poprzez
+tomizm i~fenomenologię, jest mocno wątpliwe. O~ile pamiętam w~pierwszym
+artykule z~\cite{PoslugaMysleniaVolIX2011}, jest podane, że dopiero na
+studiach seminaryjnych poprzez standardowy podręcznik metafizyki~(?), Karol
+Wojtyła zetknął~się z~tomizmem. (Możliwe, że~w~tej pracy podane jest też,
+kiedy pierwszy raz spotkał~się z~fenomenologią.) Natomiast co najmniej od
+lat szkolnych był zafascynowany teatrem, str.~14--15
+\cite{NowakJanPawelIIKronikaZyciaIPontyfikatu2015}. Zanim w~październiku
+1942 r. podjął decyzję o zostaniu kapłanem był m.in.~od~kilku lat
+zaangażowany w~działalność Teatru Rapsodycznego, z~którego twórcą
+i~kierownikiem Mieczysławem Kotlarczykiem prowadził dyskusje, między innymi
+na temat związku religii, filozofii, patriotyzmu i~sztuki, patrz
+np.~str.~19--34 w~\cite{NowakJanPawelIIKronikaZyciaIPontyfikatu2015}.
+Wydaje~się dużo bardziej prawdopodobne, że~właśnie z~jego doświadczeń
+teatralnych wyrosła jego pasja do~teodramatyki.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{52} Choć nie znam twórczości Ryszarda Legutko, wciąż
+wydaje mi~się bardzo wątpliwym stwierdzeniem określenie go mianem
+teologa. Osobną sprawą jest jego związek z~tradycją tomistyczną.
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+% \vspace{\spaceFive}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    21 & 16 & & 1844--1970 & 1844--1900 \\
+    27 & & \hphantom{0}9 & transcendentalne piękno
+    & transcendentalnym pięknem \\
+    46 & & 13 & 1947 & 1847 \\
+    71 & & 11 & „przyjścia & >>przyjścia \\
+    71 & & \hphantom{0}7 & domu” & domu<< \\
+    78 & 12 & & ona z~tego & z~niej \\
+    \hline
+  \end{tabular}
+
+\end{center}
+% ######################################
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{R.M. Wiltgen \textit{Ren wpada do~Tybru},
+  \parencite{WiltgenRenWpadaDoTybru2010}}
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    18  & \hphantom{0}5 & & dwunastu do czterech & dwunastu \\
+    40  & & 16 & te & że \\
+    42  & \hphantom{0}3 & & Kantonu(Dahomej) & Kantonu (Dahomej) \\
+    44  & & \hphantom{0}6 & konferencji,tego & konferencji, tego \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+% ######################################
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+% Bibliography
+
+\printbibliography
+
+
+
+
+
+% ############################
+
+% Koniec dokumentu
+\end{document}
