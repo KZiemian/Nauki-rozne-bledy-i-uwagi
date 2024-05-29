@@ -1,89 +1,136 @@
-% ---------------------------------------------------------------------
-% Podstawowe ustawienia i pakiety
-% ---------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
-% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+% ------------------------------------------------------------------------------------------------------------------
+% Basic configuration and packages
+% ------------------------------------------------------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
 \documentclass[a4paper,11pt]{article}
-% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
-\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
-\usepackage{lmodern} % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
 
 
 
-% ------------------------------
-% Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ------------------------------
-\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
-% \usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
-% % grafiki.
-% \usepackage{verbatim} % Poprawia otoczenie VERBATIME.
-% \usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
-% wprowadzane bezpośrednio w tekście.
-\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
-% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ------------------------------
-% MARGINS
-% ------------------------------
-\setmarginsrb
-{ 0.7in}  % left margin
-{ 0.6in}  % top margin
-{ 0.7in}  % right margin
-{ 0.8in}  % bottom margin
-{  20pt}  % head height
-{0.25in}  % head sep
-{   9pt}  % foot height
-{ 0.3in}  % foot sep
+% ------------------------------------------------------
+% Packages not tied to particular normal language
+% ------------------------------------------------------
+% This package should improved spaces in the text
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
 
 
 
-% ------------------------------
-% Często używane pakiety
-% ------------------------------
-% \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% ------------------------------------------------------
+% Polonization of LaTeX document
+% ------------------------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
 
 
 
-
-
-% ---------------------------------------------------------------------
-% Dodatkowe ustawienia dla języka polskiego
-% ---------------------------------------------------------------------
-\renewcommand{\thesection}{\arabic{section}.}
-% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
-% Brak kropki po numerach podrozdziału
+% ------------------------------------------------------
+% Setting margins
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
 
 
 
-% ------------------------------
-% Pakiety których pliki *.sty mają być w tym samym katalogu co ten plik
-% ------------------------------
-\usepackage{latexgeneralcommands}
-
-
-
-% ------------------------------
-% Ustawienia różnych parametrów tekstu
-% ------------------------------
+% ------------------------------------------------------
+% Setting vertical spaces in the text
+% ------------------------------------------------------
+% Setting space between lines
 \renewcommand{\baselinestretch}{1.1}
 
-\renewcommand{\arraystretch}{1.4} % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+% Setting space between lines in tables
+\renewcommand{\arraystretch}{1.4}
 
 
 
-% ------------------------------
-% Pakiet „hyperref”
-% Polecano by umieszczać go na końcu preambuły
-% ------------------------------
-\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{LogikaITeoriaMnogosciBibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------------------------------
+% Private packages
+% You need to put them in the same directory as .tex file
+% ------------------------------------------------------
+% Contains various command useful for working with a text
+\usepackage{latexgeneralcommands}
+% Contains definitions useful for working with mathematical text
+\usepackage{mathcommands}
+
+
+
+
+
+% ------------------------------------------------------
+% Package "hyperref"
+% They advised to put it on the end of preambule
+% ------------------------------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
 
 
 
@@ -94,16 +141,16 @@
 
 
 
-% ---------------------------------------------------------------------
-% Tytuł, autor, data
-\title{DEUS \\
-  {\Large Błędy i~uwagi, część III}}
+% ------------------------------------------------------------------------------------------------------------------
+% Title and author of the text
+\title{DEUS: dzieła świętych i~błogosławionych \\
+  {\Large Błędy i~uwagi. Część~I}}
 
 \author{Kamil Ziemian}
 
 
 % \date{}
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -131,11 +178,11 @@
 
 
 
-% ######################################
-\section{Święta wiara i~filozofia}
+% % ######################################
+% \section{Święta wiara i~filozofia}
 
-\vspace{\spaceTwo}
-% ######################################
+% \vspace{\spaceTwo}
+% % ######################################
 
 
 
@@ -147,15 +194,15 @@
 
 
 
-% ############################
+% ######################################
 % \newpage
-\Work{ % Autor i tytuł dzieła
-  Dariusz Karłowisz \\
-  \textit{Arcyparadoks śmierci. Męczeństwo jako kategoria filozoficzna~--
-  pytanie o~dowodową wartość męczeństwa},
+\section{Dariusz Karłowisz
+  \textit{Arcyparadoks śmierci. Męczeństwo jako kategoria
+    filozoficzna~-- pytanie o~dowodową wartość męczeństwa},
   \cite{KarlowiczArcyparadoksSmierci2021}}
 
-\vspace{0em}
+
+% ######################################
 
 
 % ##################
@@ -165,12 +212,13 @@
 
 
 \noindent
-\StrWg{20}{1--2} Nie rozumiem czemu w~tym wierszach pisze~się o~„bardziej
+\StrWierszeGora{20}{1--2} Nie rozumiem czemu w~tym wierszach pisze~się
+o~„bardziej
 cnotliwym” i~„doskonale szczęśliwym” życiu. Należałoby~się spodziewać,
 że~tak jak jest mowa o~życiu bardziej cnotliwym, tak samo powinna być mowa
 o~życiu bardziej szczęśliwym.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -241,13 +289,13 @@ o~życiu bardziej szczęśliwym.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
 \textbf{Tylna okładka, wiersz 5.} \\
-\Jest  śmierci \\
-\Powin \textit{śmierci} \\
+\Jest śmierci \\
+\PowinnoByc \textit{śmierci} \\
 
 % ############################
 
@@ -265,17 +313,18 @@ o~życiu bardziej szczęśliwym.
 
 \subsection{Refleksje nad świętą wiarą w~okresie po 1945~r.}
 
-\vspace{\spaceThree}
+\VerSpaceThree
 % ######################################
 
 
 
-% ############################
+% ######################################
 % \newpage
-\Work{ % Autor i tytuł dzieła
-  Romano Amerio \\
-  \textit{Iota unum. Analiza zmian w~Kościele Katolickim},
+\section{Romano Amerio \textit{Iota unum. Analiza zmian
+    w~Kościele Katolickim},
   \cite{AmerioIotaUnum}}
+
+% ######################################
 
 \vspace{0em}
 
@@ -291,57 +340,59 @@ W~tej książce sposób podawania tytułów przywoływanych dzieł
 jest niejednolity. Zamiennie używane~są trzy konwencje: „Tytuł”,
 \textit{Tytuł}, „\textit{Tytuł}”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{168}{10} W~tej linii odstępy między słowami~są zbyt duże.
+\StrWierszDol{168}{10} W~tej linii odstępy między słowami~są zbyt duże.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{180}{12} Tekst zaczynający~się po~myślniku jest odrobinę za~mocno
+\StrWierszDol{180}{12} Tekst zaczynający~się po~myślniku jest odrobinę
+za~mocno
 wcięty.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{231}{2} Nie wiem czy zaznaczanie kursywą pewnych słów
+\StrWierszDol{231}{2} Nie wiem czy zaznaczanie kursywą pewnych słów
 w~zaczynającym~się tu cytacie jest błędem czy nie?
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{310}{5} Użyte tu obraźliwe słowo „lewactwo” tak nie pasuje do stylu
+\StrWierszGora{310}{5} Użyte tu obraźliwe słowo „lewactwo” tak nie pasuje
+do stylu
 reszty książki, że~zapewne jest to efekt niedopuszczalnej swobody tłumacza.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{331}{1} Zdanie „Idea \textit{socjalizmu chrześcijańskiego}
+\StrWierszGora{331}{1} Zdanie „Idea \textit{socjalizmu chrześcijańskiego}
 ma~niewątpliwie swoją rację bytu”, brzmi jakoś dziwnie. Może jego obecna
 forma jest wynikiem pomyłki edytorskiej?
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -354,29 +405,29 @@ sytuacją, gdy dochodzi on do przeciwnego wniosku. W~świetle tego należałoby
 głębiej zbadać dzieła Platona i~inne traktujące o~Sokratesie, by ustalić,
 czy rzeczywiście uważał, iż~o~funkcjonowanie miasta należy pytać polityka.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{439}{2} Po ostatnim słowie greckim powinien być zamykający
+\StrWierszDol{439}{2} Po ostatnim słowie greckim powinien być zamykający
 cudzysłów. W~tym momencie nie umiem pisać w~\LaTeX u~po alfabetem greckim
 w~taki sposób, by napisać to słowo dobrze. Mam problem z czcionką
 i~akcentami.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{440}{1} Poza ostatnim słowem, ta linie jest powtórzenie tekstu
-z~poprzedniej strony.
+\StrWierszGora{440}{1} Poza ostatnim słowem, ta linie jest powtórzenie
+tekstu z~poprzedniej strony.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -386,45 +437,45 @@ z~poprzedniej strony.
 \Str{452} Treść akapitu u~góry strony jest dziwna i~ciężka do~zrozumienia.
 Należałoby dobrze przemyśleć temat, który porusza.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{452}{5} W~tej linii odstępy między wyrazami~są zbyt duże.
+\StrWierszDol{452}{5} W~tej linii odstępy między wyrazami~są zbyt duże.
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{493}{7} W~tej linii odstępy między wyrazami~są zbyt duże.
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{496}{4} Ponownie, użyte tu obraźliwe słowo „lewactwo” tak nie pasuje
-do stylu reszty książki, że~zapewne jest to efekt niedopuszczalnej swobody
-tłumacza.
+\StrWierszDol{493}{7} W~tej linii odstępy między wyrazami~są zbyt duże.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{513}{7} W~tej linii odstępy między wyrazami~są zbyt duże.
+\StrWierszDol{496}{4} Ponownie, użyte tu obraźliwe słowo „lewactwo” tak
+nie pasuje do stylu reszty książki, że~zapewne jest to efekt
+niedopuszczalnej swobody tłumacza.
 
-\vspace{\spaceFour}
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszDol{513}{7} W~tej linii odstępy między wyrazami~są zbyt duże.
+
+\VerSpaceFour
 
 
 
@@ -435,7 +486,7 @@ tłumacza.
 albo dyskusyjne. Przykładem tego jest uznanie tu Alessandro Manzoniego
 za~największego filozofa i~poetę XVII~wieku.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -555,13 +606,13 @@ za~największego filozofa i~poetę XVII~wieku.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
-\StrWg{460}{14} \\
-\Jest  czyniąc z~nadziei córkę wiary \\
-\Powin czyniąc z~wiary córkę nadziei \\
+\StrWierszGora{460}{14} \\
+\Jest czyniąc z~nadziei córkę wiary \\
+\PowinnoByc czyniąc z~wiary córkę nadziei \\
 
 % ############################
 
@@ -574,12 +625,13 @@ za~największego filozofa i~poetę XVII~wieku.
 
 
 
-% ############################
-\newpage
-
-\Work{ % Autor i tytuł dzieła
+% ######################################
+\section{ % Autor i tytuł dzieła
   Dietrich von~Hildebrand \\
-  \textit{Koń trojański w~Mieście Boga}, \cite{HildebrandKonTrojanski2006}}
+  \textit{Koń trojański w~Mieście Boga},
+  \parencite{HildebrandKonTrojanski2006}}
+
+% ######################################
 
 
 % ##################
@@ -587,10 +639,10 @@ za~największego filozofa i~poetę XVII~wieku.
 
 
 \noindent
-\StrWd{80}{5--4} Czy chodzi tu o~to, że~po ogołoceniu z~religii życie
+\StrWierszDol{80}{5--4} Czy chodzi tu o~to, że~po ogołoceniu z~religii życie
 usycha? Czy też, że~po pozbawieniu świętości usycha religia?
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -600,7 +652,7 @@ usycha? Czy też, że~po pozbawieniu świętości usycha religia?
 \Str{104} Nie wiem czy dało~się to zrobić lepiej, ale~strona na~której
 znajduje~się tylko treść jednego przypisu, nie~wygląda dobrze.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -613,7 +665,7 @@ charakter.” Hildebrandowi chodziło chyba o~to, że~jeśli prawda o~istnieniu
 Boga zapanuje w~sferze międzyludzkiej, wówczas to społeczność uzyskuje
 zupełnie nową jakość bycia.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -631,7 +683,7 @@ modlitwy liturgicznej”.
 
 
 % ##################
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \CenterBoldFont{Błędy}
@@ -664,23 +716,21 @@ modlitwy liturgicznej”.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
-\StrWg{241}{2} \\
-\Jest  Hildebrand,\textit{Ethics},Franciscan \\
-\Powin Hildebrand, \textit{Ethics}, Franciscan \\
-\StrWd{297}{4} \\
-\Jest  żywotności,niezależnej od~przypadków,jakie \\
-\Powin żywotności, niezależnej od~przypadków, jakie \\
-\StrWd{297}{3} \\
-\Jest  świecie,przed \\
-\Powin świecie, przed \\
+\StrWierszGora{241}{2} \\
+\Jest Hildebrand,\textit{Ethics},Franciscan \\
+\PowinnoByc Hildebrand, \textit{Ethics}, Franciscan \\
+\StrWierszDol{297}{4} \\
+\Jest żywotności,niezależnej od~przypadków,jakie \\
+\PowinnoByc żywotności, niezależnej od~przypadków, jakie \\
+\StrWierszDol{297}{3} \\
+\Jest świecie,przed \\
+\PowinnoByc świecie, przed \\
 
-% ############################
-
-
+% ######################################
 
 
 
@@ -689,12 +739,15 @@ modlitwy liturgicznej”.
 
 
 
-% ############################
+
+
+% ######################################
 \newpage
 
-\Work{ % Autor i tytuł dzieła
-  Dietrich von~Hildebrand \\
-  \textit{Spustoszona winnica}, \cite{HildebrandSpustoszonaWinnica2006}}
+\section{Dietrich von~Hildebrand \textit{Spustoszona
+    winnica}, \cite{HildebrandSpustoszonaWinnica2006}}
+
+% ######################################
 
 
 % ##################
@@ -702,12 +755,13 @@ modlitwy liturgicznej”.
 
 
 \noindent
-\StrWd{99}{7} Zdanie „Wytrwanie w~miłości do~innego człowieka w~stanie
+\StrWierszDol{99}{7} Zdanie „Wytrwanie w~miłości do~innego człowieka
+w~stanie
 wiecznej niedojrzałości”, nie jest najprostsze do~zrozumienia. Możliwe,
 że~powinno ono brzmieć „Wytrwanie w~miłości do~innego człowieka, będącego
 w~stanie wiecznej niedojrzałości”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -721,7 +775,7 @@ zdanie sprawia wrażenie, że~jest to dopuszczalne. Prawdopodobnie miało ono
 brzmieć „o~ile Stary Testament uznają za~prawdziwe objawienie Boga”,
 są~bowiem żydzi, którzy odrzucają Boga oraz~Stary Testament.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -736,7 +790,7 @@ szczególny od~wszystkich ludzi, którzy są tylko ludźmi i~wynosi
 Go~ponad nich.” brzmi bardzo dziwnie w~zestawieniu z~resztą książki.
 Zapewne został tu~popełniony jakiś błąd.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -747,7 +801,7 @@ Zapewne został tu~popełniony jakiś błąd.
 analizie, jest odrobinę mylące i~należałoby je zmienić w~taki sposób,
 by~stała~się ona jaśniejsza.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -758,7 +812,7 @@ by~stała~się ona jaśniejsza.
 w~dziwny sposób, czyniący go dość niejednoznacznym. Możliwie, że~to wynik
 pomyłki tłumacza.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -806,16 +860,16 @@ rozstrzygnąć, która wersja jest poprawna.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
 \textbf{Grzbiet.} \\
-\Jest  Hildebrand„Spustoszona \\
-\Powin Hildebrand „Spustoszona \\
-\StrWd{215}{3} \\
+\Jest Hildebrand„Spustoszona \\
+\PowinnoByc Hildebrand „Spustoszona \\
+\StrWierszDol{215}{3} \\
 \Jest  Tegoż,\textit{Journuals},TorchBooks/Harper{\&}Row,NewYork(b.d.w.),s.187. \\
-\Powin Tegoż, \textit{Journuals}, Torch Books/Harper \& Row, New York
+\PowinnoByc Tegoż, \textit{Journuals}, Torch Books/Harper \& Row, New York
 (b.d.w.), s. 187. \\
 
 % ############################
@@ -834,7 +888,7 @@ rozstrzygnąć, która wersja jest poprawna.
 
 \section{Święta wiara i~filozofia~-- dzieła podejrzane}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
@@ -842,19 +896,18 @@ rozstrzygnąć, która wersja jest poprawna.
 % ############################
 \subsection{Refleksje nad świętą wiarą po 1945~r.}
 
-\vspace{\spaceThree}
+\VerSpaceThree
 % ############################
 
 
 
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Jacques Maritain \\
-  \textit{Wieśniak znad Garonny. Stary świecki chrześcijanin snuje
+% ######################################
+\section{Jacques Maritain \textit{Wieśniak znad Garonny.
+    Stary świecki chrześcijanin snuje
     refleksje} \`{a}~propos \textit{czasów współczesnych},
   \cite{MaritainWiesniakZnadGaronny2017}}
 
-\vspace{0em}
+% ######################################
 
 
 % ##################
@@ -908,15 +961,15 @@ rozstrzygnąć, która wersja jest poprawna.
 
 \section{Katolickie praktyki i~zwyczaje}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Scott Hahn \\
-  \textit{Znaki życia}, \cite{}}
+% ######################################
+\section{Scott Hahn \textit{Znaki życia}, \parencite{}}
+
+% ######################################
 
 
 % ##################
@@ -926,7 +979,7 @@ rozstrzygnąć, która wersja jest poprawna.
 Str. 75. \ldots aby obyć się bez dokładki.
 
 
-\vspace{\spaceOne}
+\VerSpaceOne
 % ############################
 
 
@@ -944,7 +997,7 @@ Str. 75. \ldots aby obyć się bez dokładki.
 \section{Biografie, autobiografie i~inne działa poświęcone
   różnym postaciom ważnym dla świętej wiary}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
@@ -952,15 +1005,16 @@ Str. 75. \ldots aby obyć się bez dokładki.
 % ############################
 \subsection{XIX i~XX wiek po Chrystusie}
 
-\vspace{\spaceThree}
+\VerSpaceThree
 % ############################
 
 
 
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Dale Ahlquist \\
-  \textit{Apostoł zdrowego rozsądku}, \cite{}}
+% ######################################
+\section{Dale Ahlquist \textit{Apostoł zdrowego rozsądku},
+  \parencite{}}
+
+% ######################################
 
 
 % ##################
@@ -970,7 +1024,7 @@ Str. 75. \ldots aby obyć się bez dokładki.
 Str. 124. Nie można było zagrozić zagłodzeniem\ldots
 
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ############################
 
 
@@ -985,15 +1039,16 @@ Str. 124. Nie można było zagrozić zagłodzeniem\ldots
 % ############################
 \subsection{XX i~XXI wiek po Chrystusie}
 
-\vspace{\spaceThree}
+\VerSpaceThree
 % ############################
 
 
 
-% ############################
-\Work{ % Autorzy i tytuł dzieła
-  Scott i Kimberly Hahn \\
-  \textit{Rome sweet home}, \cite{}}
+% ######################################
+\section{Scott i~Kimberly Hahn \textit{Rome sweet home},
+  \parencite{}}
+
+% ######################################
 
 
 % ##################
@@ -1003,7 +1058,7 @@ Str. 124. Nie można było zagrozić zagłodzeniem\ldots
 Str. 219. \ldots przyciągnąć. -- Chociaż pielęgniarki\ldots
 
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ############################
 
 
@@ -1020,17 +1075,18 @@ Str. 219. \ldots przyciągnąć. -- Chociaż pielęgniarki\ldots
 
 \section{Dzieła na temat świętej wiary, wątpliwej jakości}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
 
 
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Adrienne von Speyr \\
-  \textit{Trzy kobiety i~Pan}, \cite{SpeyrTrzyKobietyIPan1998}}
+% ######################################
+\section{Adrienne von Speyr \textit{Trzy kobiety i~Pan},
+  \cite{SpeyrTrzyKobietyIPan1998}}
+
+% ######################################
 
 % \vspace{0em}
 
@@ -1049,7 +1105,7 @@ Str. 219. \ldots przyciągnąć. -- Chociaż pielęgniarki\ldots
 % ##################
 \CenterBoldFont{Błędy}
 
-\vspace{\spaceFive}
+\VerSpaceFive
 
 
 \begin{center}
@@ -1068,7 +1124,7 @@ Str. 219. \ldots przyciągnąć. -- Chociaż pielęgniarki\ldots
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 % ############################
@@ -1082,13 +1138,11 @@ Str. 219. \ldots przyciągnąć. -- Chociaż pielęgniarki\ldots
 
 
 
-% #####################################################################
-% #####################################################################
-% Bibliografia
+% ####################################################################
+% ####################################################################
+% Bibliography
 
-\bibliographystyle{plalpha}
-
-\bibliography{DEUSBooks}{}
+\printbibliography
 
 
 
