@@ -1,6 +1,6 @@
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 % Basic configuration and packages
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 % Package for discovering wrong and outdated usage of LaTeX.
 % More information to be found in l2tabu English version.
 \RequirePackage[l2tabu, orthodox]{nag}
@@ -9,17 +9,19 @@
 
 
 
-% ---------------------------------------
+% ------------------------------------------------------
 % Packages not tied to particular normal language
-% ---------------------------------------
-% This package should improved spaces in the text.
+% ------------------------------------------------------
+% This package should improved spaces in the text
 \usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
 
 
 
-% ---------------------------------------
+% ------------------------------------------------------
 % Polonization of LaTeX document
-% ---------------------------------------
+% ------------------------------------------------------
 % Basic polonization of the text
 \usepackage[MeX]{polski}
 % Switching on UTF-8 encoding
@@ -31,26 +33,16 @@
 
 
 
-% ---------------------------------------
+% ------------------------------------------------------
 % Setting margins
-% ---------------------------------------
-% Package for easy settings of margins. Unit of measurement is inch.
-\usepackage{vmargin}
-\setmarginsrb
-{ 0.7in}  % left margin
-{ 0.6in}  % top margin
-{ 0.7in}  % right margin
-{ 0.8in}  % bottom margin
-{  20pt}  % head height
-{0.25in}  % head sep
-{   9pt}  % foot height
-{ 0.3in}  % foot sep
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
 
 
 
-% ---------------------------------------
+% ------------------------------------------------------
 % Setting vertical spaces in the text
-% ---------------------------------------
+% ------------------------------------------------------
 % Setting space between lines
 \renewcommand{\baselinestretch}{1.1}
 
@@ -59,12 +51,71 @@
 
 
 
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
 
 
-% ------------------------------
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{LogikaITeoriaMnogosciBibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------------------------------
 % Private packages
 % You need to put them in the same directory as .tex file
-% ------------------------------
+% ------------------------------------------------------
 % Contains various command useful for working with a text
 \usepackage{latexgeneralcommands}
 
@@ -72,10 +123,10 @@
 
 
 
-% ------------------------------
-% Package ``hyperref''
+% ------------------------------------------------------
+% Package "hyperref"
 % They advised to put it on the end of preambule
-% ------------------------------
+% ------------------------------------------------------
 % It allows you to use hyperlinks in the text
 \usepackage{hyperref}
 
@@ -89,7 +140,7 @@
 
 
 % ---------------------------------------------------------------------
-% Defining title and author of the text
+%% Beginning of the document
 \title{Historia Chrześcijaństwa Carrollów \\
   {\Large Błędy i~uwagi}}
 
@@ -109,7 +160,7 @@
 
 
 % ####################################################################
-% Title of the text
+% Beginning of the document
 \begin{document}
 % ####################################################################
 
@@ -202,7 +253,7 @@
 
 
 \noindent
-\StrWierszG{63}{24} Wydaje mi się, że~zaraz przed zdaniem
+\StrWierszGora{63}{24} Wydaje mi się, że~zaraz przed zdaniem
 „Oskarżycielem Mariammy\ldots” powinien znajdować~się tekst mówiący
 o~tym, że~Herodes postawił ją przed sądem. Prawdopodobnie został on
 zgubiony w~trakcie składania książki.
@@ -214,7 +265,7 @@ zgubiony w~trakcie składania książki.
 
 
 \noindent
-\StrWierszG{81}{4} Zdanie „miłość skupia i~uruchamia wszystkie cząstki\ldots”
+\StrWierszGora{81}{4} Zdanie „miłość skupia i~uruchamia wszystkie cząstki\ldots”
 brzmi bardzo niezręcznie i~powinno być jakoś poprawione.
 
 \VerSpaceFour
@@ -224,7 +275,7 @@ brzmi bardzo niezręcznie i~powinno być jakoś poprawione.
 
 
 \noindent
-\StrWierszG{84}{8} Podane tu twierdzenie jest prostym wnioskiem
+\StrWierszGora{84}{8} Podane tu twierdzenie jest prostym wnioskiem
 z~twierdzenia Pitagorasa, więc nie wydaje~się, że~powinno ono uchodzić
 za~jakieś
 szczególnie warte uwagi osiągnięcie Platona. Przynajmniej nie uchodziłoby
@@ -239,9 +290,9 @@ konsekwencji twierdzenia Pitagorasa było bardzo ważnym odkryciem.
 
 
 \noindent
-\StrWierszG{85}{10} Zdanie „przez pomiar kierunków, w~których punkt ten jest
-widziany z~dwóch punktów o~znanych odległościach” brzmi niezręcznie i~chyba
-warto byłoby je poprawione.
+\StrWierszGora{85}{10} Zdanie „przez pomiar kierunków, w~których punkt ten
+jest widziany z~dwóch punktów o~znanych odległościach” brzmi niezręcznie
+i~chyba warto byłoby je poprawione.
 
 \VerSpaceFour
 
@@ -250,7 +301,7 @@ warto byłoby je poprawione.
 
 
 \noindent
-\StrWierszD{95}{5} Nie rozumiem co oznacza przytoczone słowo „kpy”. Może
+\StrWierszDol{95}{5} Nie rozumiem co oznacza przytoczone słowo „kpy”. Może
 jest to błędne zapisane słowo „kiepy”?
 
 \VerSpaceFour
@@ -529,231 +580,232 @@ jest to błędne zapisane słowo „kiepy”?
 
 
 \noindent
-\StrWierszD{18}{3} \\
-\Jest  Dicta. Zbiór łacińskich sentencji, przysłów, zwrotów, powiedzeń
+\StrWierszDol{18}{3} \\
+\Jest Dicta. Zbiór łacińskich sentencji, przysłów, zwrotów, powiedzeń
 z~indeksem osobowym i~tematycznym, zebrał Czesław Michalunio~SJ \\
-\Powin \textit{Dicta. Zbiór łacińskich sentencji, przysłów, zwrotów,
+\PowinnoByc \textit{Dicta. Zbiór łacińskich sentencji, przysłów, zwrotów,
   powiedzeń, z~indeksem osobowym i~tematycznym,
   zebrał Czesław Michalunio~SJ} \\
-\StrWierszD{19}{7} \\
-\Jest  Geneza chrześcijańskiej rachuby lat (Tyniec: Wydawnictwo
+\StrWierszDol{19}{7} \\
+\Jest Geneza chrześcijańskiej rachuby lat (Tyniec: Wydawnictwo
 Benedyktynów, 2000); \\
-\Powin \textit{Geneza chrześcijańskiej rachuby lat}, Tyniec: Wydawnictwo
-Benedyktynów, 2000; \\
-\StrWierszD{37}{6} \\
-\Jest  Religie świata rzymskiego \\
-\Powin \textit{Religie świata rzymskiego} \\
-\StrWierszD{37}{6} \\
-\Jest  Historia wierzeń i~idei religijnych \\
-\Powin \textit{Historia wierzeń i~idei religijnych} \\
-\StrWierszD{37}{5} \\
-\Jest  Historia wierzeń i~idei religijnych \\
-\Powin \textit{Historia wierzeń i~idei religijnych} \\
-\StrWierszD{37}{4} \\
-\Jest  Starożytne cywilizacje. Wierzenia, mitologia, sztuka \\
-\Powin \textit{Starożytne cywilizacje. Wierzenia, mitologia, sztuka} \\
-\StrWierszD{37}{2} \\
-\Jest  Wielki atlas mitów i~legend świata \\
-\Powin \textit{Wielki atlas mitów i~legend świata} \\
-\StrWierszD{51}{2} \\
-\Jest  Starożytne cywilizacje. Wierzenia, mitologia, sztuka \\
-\Powin \textit{Starożytne cywilizacje. Wierzenia, mitologia, sztuka} \\
-\StrWierszD{51}{1} \\
-\Jest  Historia wierzeń i~idei religijnych \\
-\Powin \textit{Historia wierzeń i~idei religijnych} \\
-\StrWierszD{58}{3} \\
-\Jest  Biblia i~starożytny świat \\
-\Powin \textit{Biblia i~starożytny świat} \\
-\StrWierszD{58}{2} \\
-\Jest  Od~Księgi Rodzaju do~Ewangelii \\
-\Powin \textit{Od~Księgi Rodzaju do~Ewangelii} \\
-\StrWierszD{66}{4} \\
+\PowinnoByc \textit{Geneza chrześcijańskiej rachuby lat}, Tyniec:
+Wydawnictwo Benedyktynów, 2000; \\
+\StrWierszDol{37}{6} \\
+\Jest Religie świata rzymskiego \\
+\PowinnoByc \textit{Religie świata rzymskiego} \\
+\StrWierszDol{37}{6} \\
+\Jest Historia wierzeń i~idei religijnych \\
+\PowinnoByc \textit{Historia wierzeń i~idei religijnych} \\
+\StrWierszDol{37}{5} \\
+\Jest Historia wierzeń i~idei religijnych \\
+\PowinnoByc \textit{Historia wierzeń i~idei religijnych} \\
+\StrWierszDol{37}{4} \\
+\Jest Starożytne cywilizacje. Wierzenia, mitologia, sztuka \\
+\PowinnoByc \textit{Starożytne cywilizacje. Wierzenia, mitologia, sztuka} \\
+\StrWierszDol{37}{2} \\
+\Jest Wielki atlas mitów i~legend świata \\
+\PowinnoByc \textit{Wielki atlas mitów i~legend świata} \\
+\StrWierszDol{51}{2} \\
+\Jest Starożytne cywilizacje. Wierzenia, mitologia, sztuka \\
+\PowinnoByc \textit{Starożytne cywilizacje. Wierzenia, mitologia, sztuka} \\
+\StrWierszDol{51}{1} \\
+\Jest Historia wierzeń i~idei religijnych \\
+\PowinnoByc \textit{Historia wierzeń i~idei religijnych} \\
+\StrWierszDol{58}{3} \\
+\Jest Biblia i~starożytny świat \\
+\PowinnoByc \textit{Biblia i~starożytny świat} \\
+\StrWierszDol{58}{2} \\
+\Jest Od~Księgi Rodzaju do~Ewangelii \\
+\PowinnoByc \textit{Od~Księgi Rodzaju do~Ewangelii} \\
+\StrWierszDol{66}{4} \\
 \Jest  Księdze o~narodzinach Świetej Maryi \\
-\Powin \textit{Księdze o~narodzinach Świętej Maryi} \\
-\StrWierszD{70}{4} \\
-\Jest  Mała encyklopedia kultury antycznej \\
-\Powin \textit{Mała encyklopedia kultury antycznej} \\
-\StrWierszD{73}{4} \\
-\Jest  Starożytni Grecy i~Rzymianie w~życiu prywatnym i~państwowym \\
-\Powin \textit{Starożytni Grecy i~Rzymianie w~życiu prywatnym
+\PowinnoByc \textit{Księdze o~narodzinach Świętej Maryi} \\
+\StrWierszDol{70}{4} \\
+\Jest Mała encyklopedia kultury antycznej \\
+\PowinnoByc \textit{Mała encyklopedia kultury antycznej} \\
+\StrWierszDol{73}{4} \\
+\Jest Starożytni Grecy i~Rzymianie w~życiu prywatnym i~państwowym \\
+\PowinnoByc \textit{Starożytni Grecy i~Rzymianie w~życiu prywatnym
   i~państwowym} \\
-\StrWierszD{73}{3} \\
-\Jest  Życie codzienne w~Rzymie \\
-\Powin \textit{Życie codzienne w~Rzymie} \\
-\StrWierszD{73}{2} \\
-\Jest  Census populi. Demografia starożytnego Rzymu \\
-\Powin \textit{Census populi. Demografia starożytnego Rzymu} \\
-\StrWierszD{76}{2} \\
-\Jest  Starożytni Grecy i~Rzymianie w~życiu prywatnym i~państwowym \\
-\Powin \textit{Starożytni Grecy i~Rzymianie w~życiu prywatnym
+\StrWierszDol{73}{3} \\
+\Jest Życie codzienne w~Rzymie \\
+\PowinnoByc \textit{Życie codzienne w~Rzymie} \\
+\StrWierszDol{73}{2} \\
+\Jest Census populi. Demografia starożytnego Rzymu \\
+\PowinnoByc \textit{Census populi. Demografia starożytnego Rzymu} \\
+\StrWierszDol{76}{2} \\
+\Jest Starożytni Grecy i~Rzymianie w~życiu prywatnym i~państwowym \\
+\PowinnoByc \textit{Starożytni Grecy i~Rzymianie w~życiu prywatnym
   i~państwowym} \\
-\StrWierszD{91}{3} \\
-\Jest  O~najwyższy dobru i~złu \\
-\Powin \textit{O~najwyższym dobru i~złu} \\
-\StrWierszD{92}{2} \\
+\StrWierszDol{91}{3} \\
+\Jest O~najwyższy dobru i~złu \\
+\PowinnoByc \textit{O~najwyższym dobru i~złu} \\
+\StrWierszDol{92}{2} \\
+\Jest Grecy o~miłości, szczęściu i~życiu \\
+\PowinnoByc \textit{Grecy o~miłości, szczęściu i~życiu} \\
+\StrWierszDol{96}{3} \\
+\Jest Grecy o~miłości, szczęściu i~życiu \\
+\PowinnoByc \textit{Grecy o~miłości, szczęściu i~życiu} \\
+\StrWierszDol{96}{1} \\
 \Jest  Grecy o~miłości, szczęściu i~życiu \\
-\Powin \textit{Grecy o~miłości, szczęściu i~życiu} \\
-\StrWierszD{96}{3} \\
-\Jest  Grecy o~miłości, szczęściu i~życiu \\
-\Powin \textit{Grecy o~miłości, szczęściu i~życiu} \\
-\StrWierszD{96}{1} \\
-\Jest  Grecy o~miłości, szczęściu i~życiu \\
-\Powin \textit{Grecy o~miłości, szczęściu i~życiu} \\
-\StrWierszD{99}{3} \\
-\Jest  Życie Jezusa Chrystusa \\
-\Powin \textit{Życie Jezusa Chrystus} \\
-\StrWierszD{100}{3} \\
-\Jest  Geneza chrześcijańskiej rachuby lat \\
-\Powin \textit{Geneza chrześcijańskiej rachuby lat} \\
-\StrWierszD{105}{7} \\
-\Jest  Prowincje i~społeczeństwa prowincjonalne we~wschodniej części
+\PowinnoByc \textit{Grecy o~miłości, szczęściu i~życiu} \\
+\StrWierszDol{99}{3} \\
+\Jest Życie Jezusa Chrystusa \\
+\PowinnoByc \textit{Życie Jezusa Chrystus} \\
+\StrWierszDol{100}{3} \\
+\Jest Geneza chrześcijańskiej rachuby lat \\
+\PowinnoByc \textit{Geneza chrześcijańskiej rachuby lat} \\
+\StrWierszDol{105}{7} \\
+\Jest Prowincje i~społeczeństwa prowincjonalne we~wschodniej części
 basenu Morza Śródziemnego w~okresie od~Augusta do~Sewerów
 (31 r.p.n.e. --~235 r.n.e) \\
-\Powin \textit{Prowincje i~społeczeństwa prowincjonalne we~wschodniej
+\PowinnoByc \textit{Prowincje i~społeczeństwa prowincjonalne we~wschodniej
   części basenu Morza Śródziemnego w~okresie od~Augusta do~Sewerów
   (31 r.~p.n.e. -- 235 r.~n.e)} \\
-\StrWierszD{105}{2} \\
-\Jest  Bóstwa, kulty i~rytuały starożytnego Egiptu \\
-\Powin \textit{Bóstwa, kulty i~rytuały starożytnego Egiptu} \\
-\StrWierszD{109}{1} \\
-\Jest  Bóstwa, kulty i~rytuały starożytnego Egiptu \\
-\Powin \textit{Bóstwa, kulty i~rytuały starożytnego Egiptu} \\
-\StrWierszD{110}{3} \\
-\Jest  Bóstwa, kulty i~rytuały starożytnego Egiptu \\
-\Powin \textit{Bóstwa, kulty i~rytuały starożytnego Egiptu} \\
-\StrWierszD{110}{2} \\
-\Jest  Starożytne cywilizacje. Wierzenia, mitologie, sztuka \\
-\Powin \textit{Starożytne cywilizacje. Wierzenia, mitologie, sztuka} \\
-\StrWierszD{110}{2} \\
-\Jest  Wielki atlas mitów i~legend świata \\
-\Powin \textit{Wielki atlas mitów i~legend świata} \\
-\StrWierszD{130}{2} \\
-\Jest  Starożytni Grecy i~Rzymianie \\
-\Powin \textit{Starożytni Grecy i~Rzymianie} \\
-\StrWierszD{134}{3} \\
-\Jest  Historia społeczna starożytnego Rzymu \\
-\Powin \textit{Historia społeczna starożytnego Rzymu} \\
-\StrWierszD{135}{3} \\
-\Jest  Miłość w~starożytnym Rzymie \\
-\Powin \textit{Miłość w~starożytnym Rzymie} \\
-\StrWierszD{150}{2} \\
-\Jest  Grecy o~miłości, szczęściu i~życiu \\
-\Powin \textit{Grecy o~miłości, szczęściu i~życiu} \\
-\StrWierszD{152}{3} \\
-\Jest  Encyklopedia archeologiczna Ziemi Świętej \\
-\Powin \textit{Encyklopedia archeologiczna Ziemi Świętej} \\
-\StrWierszD{174}{3} \\
-\Jest  Historia wychowania w~starożytności \\
-\Powin \textit{Historia wychowania w~starożytności} \\
-\StrWierszD{174}{1} \\
-\Jest  Liryka starożytnej Grecji \\
-\Powin \textit{Liryka starożytnej Grecji} \\
-\StrWierszD{175}{5} \\
-\Jest  Sportowe życie antyczne Grecji \\
-\Powin \textit{Sportowe życie antycznej Grecji} \\
-\StrWierszD{175}{4} \\
-\Jest  Dictionary~of Greek and Roman Antiquities \\
-\Powin \textit{Dictionary~of Greek and Roman Antiquites} \\
-\StrWierszD{199}{2} \\
-\Jest  Historia wychowania w~starożytności \\
-\Powin \textit{Historia wychowania w~starożytności} \\
-\StrWierszD{208}{2} \\
-\Jest  Barwny półświatek starożytnego Rzymu \\
-\Powin \textit{Barwny półświatek starożytnego Rzymu} \\
-\StrWierszD{217}{2} \\
-\Jest  Życie codzienne w~Pompejach \\
-\Powin \textit{Życie codzienne w~Pompejach} \\
-\StrWierszD{226}{3} \\
-\Jest  Buddyzm-dżinizm-religie ludów pierwotnych \\
-\Powin \textit{Buddyzm-dżinizm-religie ludów pierwotnych} \\
-\StrWierszD{230}{3} \\
-\Jest  Życie codzienne Etrusków \\
-\Powin \textit{Życie codzienne Etrusków} \\
+\StrWierszDol{105}{2} \\
+\Jest Bóstwa, kulty i~rytuały starożytnego Egiptu \\
+\PowinnoByc \textit{Bóstwa, kulty i~rytuały starożytnego Egiptu} \\
+\StrWierszDol{109}{1} \\
+\Jest Bóstwa, kulty i~rytuały starożytnego Egiptu \\
+\PowinnoByc \textit{Bóstwa, kulty i~rytuały starożytnego Egiptu} \\
+\StrWierszDol{110}{3} \\
+\Jest Bóstwa, kulty i~rytuały starożytnego Egiptu \\
+\PowinnoByc \textit{Bóstwa, kulty i~rytuały starożytnego Egiptu} \\
+\StrWierszDol{110}{2} \\
+\Jest Starożytne cywilizacje. Wierzenia, mitologie, sztuka \\
+\PowinnoByc \textit{Starożytne cywilizacje. Wierzenia, mitologie, sztuka} \\
+\StrWierszDol{110}{2} \\
+\Jest Wielki atlas mitów i~legend świata \\
+\PowinnoByc \textit{Wielki atlas mitów i~legend świata} \\
+\StrWierszDol{130}{2} \\
+\Jest Starożytni Grecy i~Rzymianie \\
+\PowinnoByc \textit{Starożytni Grecy i~Rzymianie} \\
+\StrWierszDol{134}{3} \\
+\Jest Historia społeczna starożytnego Rzymu \\
+\PowinnoByc \textit{Historia społeczna starożytnego Rzymu} \\
+\StrWierszDol{135}{3} \\
+\Jest Miłość w~starożytnym Rzymie \\
+\PowinnoByc \textit{Miłość w~starożytnym Rzymie} \\
+\StrWierszDol{150}{2} \\
+\Jest Grecy o~miłości, szczęściu i~życiu \\
+\PowinnoByc \textit{Grecy o~miłości, szczęściu i~życiu} \\
+\StrWierszDol{152}{3} \\
+\Jest Encyklopedia archeologiczna Ziemi Świętej \\
+\PowinnoByc \textit{Encyklopedia archeologiczna Ziemi Świętej} \\
+\StrWierszDol{174}{3} \\
+\Jest Historia wychowania w~starożytności \\
+\PowinnoByc \textit{Historia wychowania w~starożytności} \\
+\StrWierszDol{174}{1} \\
+\Jest Liryka starożytnej Grecji \\
+\PowinnoByc \textit{Liryka starożytnej Grecji} \\
+\StrWierszDol{175}{5} \\
+\Jest Sportowe życie antyczne Grecji \\
+\PowinnoByc \textit{Sportowe życie antycznej Grecji} \\
+\StrWierszDol{175}{4} \\
+\Jest Dictionary~of Greek and Roman Antiquities \\
+\PowinnoByc \textit{Dictionary~of Greek and Roman Antiquites} \\
+\StrWierszDol{199}{2} \\
+\Jest Historia wychowania w~starożytności \\
+\PowinnoByc \textit{Historia wychowania w~starożytności} \\
+\StrWierszDol{208}{2} \\
+\Jest Barwny półświatek starożytnego Rzymu \\
+\PowinnoByc \textit{Barwny półświatek starożytnego Rzymu} \\
+\StrWierszDol{217}{2} \\
+\Jest Życie codzienne w~Pompejach \\
+\PowinnoByc \textit{Życie codzienne w~Pompejach} \\
+\StrWierszDol{226}{3} \\
+\Jest Buddyzm-dżinizm-religie ludów pierwotnych \\
+\PowinnoByc \textit{Buddyzm-dżinizm-religie ludów pierwotnych} \\
+\StrWierszDol{230}{3} \\
+\Jest Życie codzienne Etrusków \\
+\PowinnoByc \textit{Życie codzienne Etrusków} \\
 % 236????
-\StrWierszD{236}{2} \\
-\Jest  Starożytni Grecy i~Rzymianie\ldots \\
-\Powin \textit{Starożytni Grecy i~Rzymianie}\ldots \\
-\StrWierszD{242}{2} \\
-\Jest  Liryka Starożytnej Grecji \\
-\Powin \textit{Liryka Starożytnej Grecji} \\
-\StrWierszD{245}{2} \\
-\Jest  Życie codzienne Palestynie w~czasach Chrystusa \\
-\Powin \textit{Życie codzienne w~Palestynie w~czasach Chrystusa} \\
-\StrWierszD{246}{4} \\
-\Jest  Piekło. Oddalenie od~Domu Ojca \\
-\Powin \textit{Piekło. Oddalenie od~Domu Ojca} \\
-\StrWierszD{262}{2} \\
-\Jest  Życie codzienne w~dawnych Indiach \\
-\Powin \textit{Życie codzienne w~dawnych Indiach} \\
-\StrWierszD{273}{23} \\
-\Jest  Religie świata rzymskiego \\
-\Powin \textit{Religie świata rzymskiego} \\
-\StrWierszD{273}{23} \\
-\Jest  Historia wierzeń i~idei religijnych \\
-\Powin \textit{Historia wierzeń i~idei religijnych} \\
-\StrWierszD{274}{2} \\
-\Jest  Historia wierzeń i~idei religijnych \\
-\Powin \textit{Historia wierzeń i~idei religijnych} \\
-\StrWierszD{279}{7} \\
-\Jest  Niezwykła technika starożytności \\
-\Powin \textit{Niezwykła technika starożytności} \\
-\StrWierszD{304}{1} \\
-\Jest  Grecy o~miłości, szczęściu i~życiu \\
-\Powin \textit{Grecy o~miłości, szczęściu i~życiu} \\
-\StrWierszD{312}{5} \\
-\Jest  Rzymska elegia miłosna, Wybór i~przekład Anna Świderska \\
-\Powin \textit{Rzymska elegia miłosna. Wybór i~przekład Anna Świderska} \\
-\StrWierszD{315}{1} \\
-\Jest  Wędrówki po~Helladzie \\
-\Powin \textit{Wędrówki po~Helladzie} \\
-\StrWierszD{315}{1} \\
-\Jest  Starożytni olimpijczycy \\
-\Powin \textit{Starożytni olimpijczycy} \\
-\StrWierszD{332}{3} \\
-\Jest  Grecy o~miłości, szczęściu i~życiu \\
-\Powin \textit{Grecy o~miłości, szczęściu i~życiu} \\
-\StrWierszD{332}{2} \\
-\Jest  Grecy o~miłości, szczęściu i~życiu \\
-\Powin \textit{Grecy o~miłości, szczęściu i~życiu} \\
-\StrWierszD{334}{1} \\
-\Jest  miłości, szczęściu i~życiu \\
-\Powin \textit{miłości, szczęściu i~życiu} \\
-\StrWierszD{336}{4} \\
-\Jest  Liryka starożytnej Grecji \\
-\Powin \textit{Liryka starożytnej Grecji} \\
-\StrWierszD{344}{2} \\
-\Jest  Starożytni Grecy i~Rzymianie \\
-\Powin \textit{Starożytni Grecy i~Rzymianie} \\
-\StrWierszD{364}{2} \\
-\Jest  O~najwyższy dobru i~złu \\
-\Powin \textit{O~najwyższym dobru i~złu} \\
-\StrWierszD{364}{2} \\
-\Jest  Słowo jest cieniem czynu \\
-\Powin \textit{Słowo jest cieniem czynu} \\
-\StrWierszD{366}{1} \\
-\Jest  Grecy o~miłości, szczęściu i~życiu \\
-\Powin \textit{Grecy o~miłości, szczęściu i~życiu} \\
-\StrWierszD{367}{6} \\
-\Jest  Liryka starożytnej Grecji \\
-\Powin \textit{Liryka starożytnej Grecji} \\
-\StrWierszD{367}{4} \\
-\Jest  \textit{Astronomic}a \\
-\Powin \textit{Astronomica} \\
-\StrWierszD{383}{1} \\
-\Jest  Słowo jest cieniem czynu \\
-\Powin \textit{Słowo jest cieniem czynu} \\
-\StrWierszD{387}{2} \\
-\Jest  Słowo jest cieniem czynu \\
-\Powin \textit{Słowo jest cieniem czynu} \\
-\StrWierszD{424}{3} \\
-\Jest  Historia wierzeń i~idei religijnych \\
-\Powin \textit{Historia wierzeń i~idei religijnych} \\
-\StrWierszD{424}{2} \\
-\Jest  Starożytne cywilizacje. Wierzenia, mitologia, sztuka \\
-\Powin \textit{Starożytne cywilizacje. Wierzenia, mitologia, sztuka} \\
-\StrWierszD{424}{2} \\
-\Jest  Wielki atlas mitów i~legend świata \\
-\Powin \textit{Wielki atlas mitów i~legend świata} \\
+\StrWierszDol{236}{2} \\
+\Jest Starożytni Grecy i~Rzymianie\ldots \\
+\PowinnoByc \textit{Starożytni Grecy i~Rzymianie}\ldots \\
+\StrWierszDol{242}{2} \\
+\Jest Liryka Starożytnej Grecji \\
+\PowinnoByc \textit{Liryka Starożytnej Grecji} \\
+\StrWierszDol{245}{2} \\
+\Jest Życie codzienne Palestynie w~czasach Chrystusa \\
+\PowinnoByc \textit{Życie codzienne w~Palestynie w~czasach Chrystusa} \\
+\StrWierszDol{246}{4} \\
+\Jest Piekło. Oddalenie od~Domu Ojca \\
+\PowinnoByc \textit{Piekło. Oddalenie od~Domu Ojca} \\
+\StrWierszDol{262}{2} \\
+\Jest Życie codzienne w~dawnych Indiach \\
+\PowinnoByc \textit{Życie codzienne w~dawnych Indiach} \\
+\StrWierszDol{273}{23} \\
+\Jest Religie świata rzymskiego \\
+\PowinnoByc \textit{Religie świata rzymskiego} \\
+\StrWierszDol{273}{23} \\
+\Jest Historia wierzeń i~idei religijnych \\
+\PowinnoByc \textit{Historia wierzeń i~idei religijnych} \\
+\StrWierszDol{274}{2} \\
+\Jest Historia wierzeń i~idei religijnych \\
+\PowinnoByc \textit{Historia wierzeń i~idei religijnych} \\
+\StrWierszDol{279}{7} \\
+\Jest Niezwykła technika starożytności \\
+\PowinnoByc \textit{Niezwykła technika starożytności} \\
+\StrWierszDol{304}{1} \\
+\Jest Grecy o~miłości, szczęściu i~życiu \\
+\PowinnoByc \textit{Grecy o~miłości, szczęściu i~życiu} \\
+\StrWierszDol{312}{5} \\
+\Jest Rzymska elegia miłosna, Wybór i~przekład Anna Świderska \\
+\PowinnoByc \textit{Rzymska elegia miłosna. Wybór i~przekład Anna
+  Świderska} \\
+\StrWierszDol{315}{1} \\
+\Jest Wędrówki po~Helladzie \\
+\PowinnoByc \textit{Wędrówki po~Helladzie} \\
+\StrWierszDol{315}{1} \\
+\Jest Starożytni olimpijczycy \\
+\PowinnoByc \textit{Starożytni olimpijczycy} \\
+\StrWierszDol{332}{3} \\
+\Jest Grecy o~miłości, szczęściu i~życiu \\
+\PowinnoByc \textit{Grecy o~miłości, szczęściu i~życiu} \\
+\StrWierszDol{332}{2} \\
+\Jest Grecy o~miłości, szczęściu i~życiu \\
+\PowinnoByc \textit{Grecy o~miłości, szczęściu i~życiu} \\
+\StrWierszDol{334}{1} \\
+\Jest miłości, szczęściu i~życiu \\
+\PowinnoByc \textit{miłości, szczęściu i~życiu} \\
+\StrWierszDol{336}{4} \\
+\Jest Liryka starożytnej Grecji \\
+\PowinnoByc \textit{Liryka starożytnej Grecji} \\
+\StrWierszDol{344}{2} \\
+\Jest Starożytni Grecy i~Rzymianie \\
+\PowinnoByc \textit{Starożytni Grecy i~Rzymianie} \\
+\StrWierszDol{364}{2} \\
+\Jest O~najwyższy dobru i~złu \\
+\PowinnoByc \textit{O~najwyższym dobru i~złu} \\
+\StrWierszDol{364}{2} \\
+\Jest Słowo jest cieniem czynu \\
+\PowinnoByc \textit{Słowo jest cieniem czynu} \\
+\StrWierszDol{366}{1} \\
+\Jest Grecy o~miłości, szczęściu i~życiu \\
+\PowinnoByc \textit{Grecy o~miłości, szczęściu i~życiu} \\
+\StrWierszDol{367}{6} \\
+\Jest Liryka starożytnej Grecji \\
+\PowinnoByc \textit{Liryka starożytnej Grecji} \\
+\StrWierszDol{367}{4} \\
+\Jest \textit{Astronomic}a \\
+\PowinnoByc \textit{Astronomica} \\
+\StrWierszDol{383}{1} \\
+\Jest Słowo jest cieniem czynu \\
+\PowinnoByc \textit{Słowo jest cieniem czynu} \\
+\StrWierszDol{387}{2} \\
+\Jest Słowo jest cieniem czynu \\
+\PowinnoByc \textit{Słowo jest cieniem czynu} \\
+\StrWierszDol{424}{3} \\
+\Jest Historia wierzeń i~idei religijnych \\
+\PowinnoByc \textit{Historia wierzeń i~idei religijnych} \\
+\StrWierszDol{424}{2} \\
+\Jest Starożytne cywilizacje. Wierzenia, mitologia, sztuka \\
+\PowinnoByc \textit{Starożytne cywilizacje. Wierzenia, mitologia, sztuka} \\
+\StrWierszDol{424}{2} \\
+\Jest Wielki atlas mitów i~legend świata \\
+\PowinnoByc \textit{Wielki atlas mitów i~legend świata} \\
 
 
 
@@ -777,11 +829,12 @@ basenu Morza Śródziemnego w~okresie od~Augusta do~Sewerów
 
 
 
-% ############################
-{ % Autor i tytuł dzieła
-  Łukasz Czarnecki \\
-  \textit{Konstantynopol~626}, \cite{} % {CzarneckiKonstantynopol626Wyd2017}
-}
+% ######################################
+\section{Łukasz Czarnecki \\
+  \textit{Konstantynopol~626},
+  \parencite{CzarneckiKonstantynopol626Wyd2017}}
+
+% ######################################
 
 \vspace{0em}
 
@@ -791,7 +844,7 @@ basenu Morza Śródziemnego w~okresie od~Augusta do~Sewerów
 
 
 \noindent
-\StrWierszG{58}{18} Mam wątpliwość czy~wszystkie słowa wyróżnione
+\StrWierszGora{58}{18} Mam wątpliwość czy~wszystkie słowa wyróżnione
 tu~kursywą~są częścią cytowanego fragmentu.
 
 \VerSpaceFour
@@ -964,9 +1017,9 @@ tu~kursywą~są częścią cytowanego fragmentu.
 
 
 % % ######################################
-% \section{Dzieła świętych}
+% \section{????}
 
-% \vspace{\spaceTwo}
+% \VerSpaceTWo
 % % ######################################
 
 
@@ -978,9 +1031,9 @@ tu~kursywą~są częścią cytowanego fragmentu.
 
 % % ######################################
 % \newpage
-% \section{Pozostali autorzy}
+% \section{????}
 
-% \vspace{\spaceTwo}
+% \VerSpaceTwo
 % % ######################################
 
 
@@ -992,19 +1045,17 @@ tu~kursywą~są częścią cytowanego fragmentu.
 
 
 
-% #####################################################################
-% #####################################################################
+% ####################################################################
+% ####################################################################
 % Bibliography
 
-\bibliographystyle{plalpha}
-
-\bibliography{DEUSBooks}{}
+\printbibliography
 
 
 
 
 
 % ############################
-
 % End of the document
+
 \end{document}
