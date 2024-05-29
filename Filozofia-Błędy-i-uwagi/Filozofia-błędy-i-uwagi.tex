@@ -1,109 +1,136 @@
-% ---------------------------------------------------------------------
-% Podstawowe ustawienia i pakiety
-% ---------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
-% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+% ------------------------------------------------------------------------------------------------------------------
+% Basic configuration and packages
+% ------------------------------------------------------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
 \documentclass[a4paper,11pt]{article}
-% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
-\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
-\usepackage{lmodern} % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
 
 
 
-% ------------------------------
-% Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ------------------------------
-\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
-% \usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
-% grafiki.
-% \usepackage{verbatim} % Poprawia otoczenie VERBATIME.
-% \usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
-% wprowadzane bezpośrednio w tekście.
-\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
-% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ------------------------------
-% MARGINS
-% ------------------------------
-\setmarginsrb
-{ 0.7in}  % left margin
-{ 0.6in}  % top margin
-{ 0.7in}  % right margin
-{ 0.8in}  % bottom margin
-{  20pt}  % head height
-{0.25in}  % head sep
-{   9pt}  % foot height
-{ 0.3in}  % foot sep
+% ------------------------------------------------------
+% Packages not tied to particular normal language
+% ------------------------------------------------------
+% This package should improved spaces in the text.
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
 
 
 
-% ------------------------------
-% Często używane pakiety
-% ------------------------------
-\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% ------------------------------------------------------
+% Polonization of LaTeX document
+% ------------------------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
 
 
 
-% ------------------------------
-% Pakiety do tekstów z nauk przyrodniczych
-% ------------------------------
-\let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
-% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
-% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
-\usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
-% Mathematical Society (w skrócie AMS)
-\usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
-% \usepackage{siunitx} % Dla prostszego pisania jednostek fizycznych
-\usepackage{upgreek} % Ładniejsze greckie litery
-% Przykładowa składnia: pi = \uppi
-\usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
-\usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
-% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
-% nie wiem.
+% ------------------------------------------------------
+% Setting margins
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
 
 
 
-
-
-% ---------------------------------------------------------------------
-% Dodatkowe ustawienia dla języka polskiego
-% ---------------------------------------------------------------------
-\renewcommand{\thesection}{\arabic{section}.}
-% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
-% Brak kropki po numerach podrozdziału
-
-
-
-% ------------------------------
-% Pakiety których pliki *.sty mają być w tym samym katalogu co ten plik
-% ------------------------------
-\usepackage{latexgeneralcommands}
-\usepackage{mathcommands}
-
-
-
-% ------------------------------
-% Ustawienia różnych parametrów tekstu
-% ------------------------------
+% ------------------------------------------------------
+% Setting vertical spaces in the text
+% ------------------------------------------------------
+% Setting space between lines
 \renewcommand{\baselinestretch}{1.1}
 
-% Ustawienie szerokości odstępów między wierszami w tabelach.
+% Setting space between lines in tables
 \renewcommand{\arraystretch}{1.4}
 
 
 
-% ------------------------------
-% Pakiet „hyperref”
-% Polecano by umieszczać go na końcu preambuły
-% ------------------------------
-\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section.
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII.
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{LogikaITeoriaMnogosciBibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------------------------------
+% Private packages
+% You need to put them in the same directory as .tex file
+% ------------------------------------------------------
+% Contains various command useful for working with a text
+\usepackage{latexgeneralcommands}
+% Contains definitions useful for working with mathematical text
+% \usepackage{mathcommands}
+
+
+
+
+
+% ------------------------------------------------------
+% Package "hyperref"
+% They advised to put it on the end of preambule
+% ------------------------------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
 
 
 
@@ -114,8 +141,8 @@
 
 
 
-% ---------------------------------------------------------------------
-% Tytuł, autor, data
+% ------------------------------------------------------------------------------------------------------------------
+% Title and author of the text
 \title{Filozofia \\
   {\Large Błędy i~uwagi}}
 
@@ -123,7 +150,7 @@
 
 
 % \date{}
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -135,7 +162,7 @@
 
 
 % ####################################################################
-% Początek dokumentu
+% Beginning of the document
 \begin{document}
 % ####################################################################
 
@@ -144,7 +171,7 @@
 
 
 % ######################################
-\maketitle  % Tytuł całego tekstu
+\maketitle
 % ######################################
 
 
@@ -152,31 +179,15 @@
 
 
 % ######################################
-\section{Filozofia wraz z~świętą wiarą}
+\section{Filozofia wraz z~świętą wiarą. Dzieła bliższe Bogu}
 
 % \vspace{\spaceTwo}
 % ######################################
 
 
 
-
-
-
-
-
-
-
-% ######################################
-\subsection{Dzieła bliższe Bogu}
-
-\vspace{\spaceTwo}
-% ######################################
-
-
-
 % ############################
-\Work{ % Autor i tytuł dzieła
-  Jacques Maritain \\
+\subsection{Jacques Maritain
   \textit{Trzej reformatorzy. Luter, Kartezjusz, Rousseau},
   \cite{MaritainTrzejReformatorzy2005}}
 
@@ -190,38 +201,38 @@
 
 
 \noindent
-\StrWd{115}{9} Na~tą linią nie powinno być odstępu w~tekście, zaś~w~niej
-samej brakuje wcięcia akapitu.
+\StrWierszDol{115}{9} Na~tą linią nie powinno być odstępu w~tekście,
+zaś~w~niej samej brakuje wcięcia akapitu.
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWg{119}{12} W~tej linii brakuje wcięcia akapitu.
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{126}{11} W~tej linii brakuje wcięcia akapitu.
+\StrWierszGora{119}{12} W~tej linii brakuje wcięcia akapitu.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{147}{14} Na~tą linią nie powinno być odstępu w~tekście, zaś~w~niej
-samej brakuje wcięcia akapitu.
+\StrWierszDol{126}{11} W~tej linii brakuje wcięcia akapitu.
 
-\vspace{\spaceFour}
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszDol{147}{14} Na~tą linią nie powinno być odstępu w~tekście,
+zaś~w~niej samej brakuje wcięcia akapitu.
+
+\VerSpaceFour
 
 
 
@@ -231,7 +242,7 @@ samej brakuje wcięcia akapitu.
 \Str{160} Przypis (100) prawie na~pewno podaje odniesieni do~nie tych
 źródeł co~trzeba.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -240,328 +251,450 @@ samej brakuje wcięcia akapitu.
 \noindent
 \StrWg{170}{12} W~tej linii brakuje wcięcia akapitu.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{193}{3} W~tej linii brakuje wcięcia akapitu.
+\StrWierszGora{193}{3} W~tej linii brakuje wcięcia akapitu.
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWg{194}{6} W~tej linii brakuje wcięcia akapitu.
-
-\vspace{\spaceFour}
+\VarSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{198}{9} W~tej linii brakuje wcięcia akapitu.
+\StrWierszGora{194}{6} W~tej linii brakuje wcięcia akapitu.
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\Str{209} Przypisy (140) i~(141) są~umieszczone w~taki sposób w~tekście,
-że~wygląda to na~błąd. Nie wiem jednak jaka to~poprawić.
-
-\vspace{\spaceFour}
+\VarSpaceFour
 
 
 
 
 
 \noindent
-\Str{233} Nie jestem w~stanie zrozumieć co~oznacza zdanie
-„Luter do~tego stopnia zapoznaje prawdę, że~miłość jest w~nas wlanym
-uczuciem w~samym życiu Boga i~Chrystusa, które otrzymuje w~zasłudze
-krwi Chrystusowej.”
-
-\vspace{\spaceFour}
-
-
-
-
-
-% ##################
-\newpage
-
-\CenterBoldFont{Błędy}
-
-
-\begin{center}
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    18  & 13 & & JózefTischner & Józef Tischner \\
-    20  & &  9 & dobra & dobra” \\
-        25  & 14 & & że~\ldots~za & że~za \\
-    29  & &  4 & deorsum” & deorsum \\
-    35  & &  4 & słabości\ldots & słabości. \\
-    35  & &  2 & ( dalej & (dalej \\
-    39  &  8 & & stanie & stanu \\
-    40  & &  2 & małżeństwie,1522 & małżeństwie, 1522 \\
-    40  & &  2 & X. & X \\
-    42  & 13 & & świętej\ldots & świętej \\
-    42  & &  1 & WA. & WA \\
-    42  & &  1 & X. & X \\
-    48  & 10 & & teologii?$^{ 27 }$ & teologii$^{ 27 }$? \\
-    49  & &  3 & $^{ ( 16 ) }$Komentarz & $^{ ( 16 ) }$ Komentarz \\
-    49  & &  3 & XL. & XL \\
-    52  & &  1 & \textit{theol.} & \textit{theol.}, \\
-    55  & &  1 & II. --~II & II \\
-    65  & &  4 & VI & \textit{VI} \\
-    66  & &  6 & XL,P & XL, P \\
-    69  &  5 & & wskutek & nie wskutek \\
-    70  & & 12 & --~Wystarczy & Wystarczy \\
-    84  & &  2 & $^{ ( 59 ) }$\hspace{0.3em} Jacques-Benigne
-           & $^{ ( 59 ) }$ Jacques-Benigne \\
-    89  & &  1 & Pochwała Kartezjusza & \textit{Pochwała Kartezjusza} \\
-    104 & &  4 & --~Nie & Nie \\
-    122 & 11 & & niekształtowanej & nieukształtowanej \\
-    133 & &  4 & (Math., IV,3) & Mat. IV, 3 \\
-    133 & &  1 & (Teresa) & Teresa \\
-    135 &  5 & & J & Jest \\
-    136 & 14 & & ono zależne & ona zależna \\
-    \hline
-  \end{tabular}
-
-
+\StrWierszGora{198}{9} W~tej linii brakuje wcięcia akapitu.
 
+\VerSpaceFour
 
-
-  \newpage
 
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    136 & &  9 & niż raczej & raczej niż \\
-    137 & 12 & & \textit{Sturmund} & \textit{Sturm und} \\
-    147 & &  8 & ludzki”$^{ ( 79 ) }$ . & ludzki”$^{ ( 79 ) }$. \\
-    149 & &  1 & Ibid & Ibid. \\
-    150 &  4 & & grobu?$^{ 62 }$. & grobu$^{ 62 }$? \\
-    150 & &  1 & Heloizy” & Heloizy”. \\
-    157 & &  1 & $^{ ( 98 ) }$Jean & $^{ ( 98 ) }$ Jean \\
-    162 &  2 & & żyć & żyć” \\
-    162 &  7 & & wcale: & wcale, \\
-    162 &  7 & & najpierwszym & „najpierwszym \\
-    168 & &  1 & II-II & I-II \\
-    173 & &  8 & kija obręczy & kija lub obręczy \\
-    174 & &  7 & „PIEKNE & <<PIĘKNE  % >>
-    \\
-    174 & &  7 & {\footnotesize MA}” & {\footnotesize MA}>>” \\
-    174 & &  6 & LXXVII. & LXXVII \\
-    174 & &  5 & Seilli\`{e}re,\textit{J.J.}
-           & Seilli\`{e}re, \textit{J.J.} \\
-    178 & &  7 & ludzkości\ldots & ludzkości. \\
-    179 & &  4 & jeśli & „jeśli \\
-    180 & &  1 & \textit{partes}) & \textit{partes}). \\
-    181 & & 13 & pełniona & spełniona \\
-    184 &  6 & & woli\ldots & woli. \\
-    224 &  1 & & sprawiedliwości.”., & sprawiedliwości.”. \\
-    224 &  2 & & Paryż & (Paryż \\
-    224 & 12 & & z~którego & o~którą \\
-    225 &  4 & & X. & X \\
-    229 & 13 & & błyskawicami.. & błyskawicami \\
-    233 & 11 & & XL & XL, \\
-    234 & &  3 & owszem!, & owszem!”, \\
-    236 & 11 & & Dobra & dobra \\
-    243 & &  1 & 1767roku & 1767~roku \\
-    \hline
-  \end{tabular}
 
-\end{center}
 
-\vspace{\spaceTwo}
 
+% \noindent
+% \Str{209} Przypisy (140) i~(141) są~umieszczone w~taki sposób w~tekście,
+% że~wygląda to na~błąd. Nie wiem jednak jaka to~poprawić.
 
-\noindent
-\StrWd{23}{8} \\
-\Jest  Człowiekwspółczesnyszamoczesięwewłasnymwnętrzuniczym \\
-\Powin Człowiek współczesny szamocze się we własnym wnętrzu niczym \\
-\StrWg{143}{6} \\
-\Jest  Dostojewski Andre Gide'a będzie szukał \\
-\Powin Dostojewski i~Andre Gide'a będą szukali \\
-\StrWg{198}{13} \\
-\Jest  romantyczno\dywiz naturalistyczny $^{ 74 }$ \\
-\Powin romantyczno\dywiz naturalistyczny$^{ 74 }$ \\
-\StrWd{223}{9} \\
-\Jest  G{\footnotesize DYBYM NIE BYŁ DOKTOREM} \\
-\Powin Gdybym nie był doktorem \\
-\StrWd{240}{7} \\
-\Jest  ODPOWIEDŹ NA~PIERWSZE \\
-\Powin \textit{Odpowiedź na~pierwsze zarzuty} \\
+% \vspace{\spaceFour}
 
 
-% ############################
 
 
 
+% \noindent
+% \Str{233} Nie jestem w~stanie zrozumieć co~oznacza zdanie
+% „Luter do~tego stopnia zapoznaje prawdę, że~miłość jest w~nas wlanym
+% uczuciem w~samym życiu Boga i~Chrystusa, które otrzymuje w~zasłudze
+% krwi Chrystusowej.”
 
+% \vspace{\spaceFour}
 
 
 
 
 
-
-% ######################################
-\newpage
-
-\subsection{Dzieła obojętne lub~wrogie Bogu}
-
-\vspace{\spaceTwo}
-% ######################################
-
-
-
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Tomasz Herbich \\
-  \textit{Pragnienie Królestwa.} \\
-  \textit{August Cieszkowski, Mikołaj Bierdiajew} \\
-  \textit{i~dwa oblicza mesjanizmu}, \cite{HerbichPragnienieKrolestwa2018}}
-
-\vspace{0em}
-
-
-% ##################
-\CenterBoldFont{Uwagi}
-
-\vspace{0em}
-
-
-\noindent
-\StrWg{54}{9} Nie wiem czy zadanie „Pierwotnie jednak
-Chrześcijaństwo zostało pojęte czysto zaprzeczenie.” zawiera błąd,
-czy też wtedy pisało~się w~takim stylu.
-
-\vspace{\spaceFour}
-
-
-
-
-
-% \start
-
-
-
-
-
-% ##################
-\newpage
-
-\CenterBoldFont{Błędy}
-
-
-\begin{center}
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    & \multicolumn{2}{c|}{} & & \\
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    20  & &  3 & Paprocki,Kęty & Paprocki, Kęty \\
-    % & & & & \\
-    % & & & &  \\
-    43  & 12 & & \textit{nasz}nie & \textit{nasz} nie \\
-    43  & &  8 & Pan!\ldots”$^{ 17 }$ & Pan!\ldots$^{ 17 }$ \\
-    46  & 14 & & tenże,\textit{Augusta} & tenże, \textit{Augusta} \\
-    61  & 13 & & \textit{Bog}a & \textit{Boga} \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-
-\end{center}
-
-\vspace{\spaceTwo}
-
-
-\noindent
-\StrWd{38}{3} \\
-\Jest  Cieszkowskiego$^{ 8 }$.Zdystansowanie \\
-\Powin Cieszkowskiego$^{ 8 }$. Zdystansowanie \\
-
-
-
-
-% ############################
-
-
-
-
-
-
-
-
-
-
-% ######################################
-\newpage
-
-\section{Dzieła konkretnych filozofów}
-
-\vspace{\spaceTwo}
-% ######################################
-
-
-
-
-% ######################################
+% % ##################
 % \newpage
 
-\subsection{Gottlob Frege}
-
-\vspace{\spaceTwo}
-% ######################################
+% \CenterBoldFont{Błędy}
 
 
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Gottlob Frege \\
-  \textit{Pisma semantyczne}, \cite{FregePismaSemantyczne1977}}
+% \begin{center}
 
-\vspace{0em}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     18  & 13 & & JózefTischner & Józef Tischner \\
+%     20  & &  9 & dobra & dobra” \\
+%         25  & 14 & & że~\ldots~za & że~za \\
+%     29  & &  4 & deorsum” & deorsum \\
+%     35  & &  4 & słabości\ldots & słabości. \\
+%     35  & &  2 & ( dalej & (dalej \\
+%     39  &  8 & & stanie & stanu \\
+%     40  & &  2 & małżeństwie,1522 & małżeństwie, 1522 \\
+%     40  & &  2 & X. & X \\
+%     42  & 13 & & świętej\ldots & świętej \\
+%     42  & &  1 & WA. & WA \\
+%     42  & &  1 & X. & X \\
+%     48  & 10 & & teologii?$^{ 27 }$ & teologii$^{ 27 }$? \\
+%     49  & &  3 & $^{ ( 16 ) }$Komentarz & $^{ ( 16 ) }$ Komentarz \\
+%     49  & &  3 & XL. & XL \\
+%     52  & &  1 & \textit{theol.} & \textit{theol.}, \\
+%     55  & &  1 & II. --~II & II \\
+%     65  & &  4 & VI & \textit{VI} \\
+%     66  & &  6 & XL,P & XL, P \\
+%     69  &  5 & & wskutek & nie wskutek \\
+%     70  & & 12 & --~Wystarczy & Wystarczy \\
+%     84  & &  2 & $^{ ( 59 ) }$\hspace{0.3em} Jacques-Benigne
+%            & $^{ ( 59 ) }$ Jacques-Benigne \\
+%     89  & &  1 & Pochwała Kartezjusza & \textit{Pochwała Kartezjusza} \\
+%     104 & &  4 & --~Nie & Nie \\
+%     122 & 11 & & niekształtowanej & nieukształtowanej \\
+%     133 & &  4 & (Math., IV,3) & Mat. IV, 3 \\
+%     133 & &  1 & (Teresa) & Teresa \\
+%     135 &  5 & & J & Jest \\
+%     136 & 14 & & ono zależne & ona zależna \\
+%     \hline
+%   \end{tabular}
 
 
-% ##################
-\CenterBoldFont{Uwagi}
-
-\vspace{0em}
 
 
-\noindent
-W~niektórych miejscach tej książeczki, odstępy w~tekście wydają~się być
-niewłaściwie dobrane. Ze względu na ograniczenia czasowe w~tych notatkach
-będziemy odnotowywać i~poprawiać tylko te z nich, które uznamy, za
-wyjątkowo źle wyglądające.
 
-\vspace{\spaceFour}
+%   \newpage
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     136 & &  9 & niż raczej & raczej niż \\
+%     137 & 12 & & \textit{Sturmund} & \textit{Sturm und} \\
+%     147 & &  8 & ludzki”$^{ ( 79 ) }$ . & ludzki”$^{ ( 79 ) }$. \\
+%     149 & &  1 & Ibid & Ibid. \\
+%     150 &  4 & & grobu?$^{ 62 }$. & grobu$^{ 62 }$? \\
+%     150 & &  1 & Heloizy” & Heloizy”. \\
+%     157 & &  1 & $^{ ( 98 ) }$Jean & $^{ ( 98 ) }$ Jean \\
+%     162 &  2 & & żyć & żyć” \\
+%     162 &  7 & & wcale: & wcale, \\
+%     162 &  7 & & najpierwszym & „najpierwszym \\
+%     168 & &  1 & II-II & I-II \\
+%     173 & &  8 & kija obręczy & kija lub obręczy \\
+%     174 & &  7 & „PIEKNE & <<PIĘKNE  % >>
+%     \\
+%     174 & &  7 & {\footnotesize MA}” & {\footnotesize MA}>>” \\
+%     174 & &  6 & LXXVII. & LXXVII \\
+%     174 & &  5 & Seilli\`{e}re,\textit{J.J.}
+%            & Seilli\`{e}re, \textit{J.J.} \\
+%     178 & &  7 & ludzkości\ldots & ludzkości. \\
+%     179 & &  4 & jeśli & „jeśli \\
+%     180 & &  1 & \textit{partes}) & \textit{partes}). \\
+%     181 & & 13 & pełniona & spełniona \\
+%     184 &  6 & & woli\ldots & woli. \\
+%     224 &  1 & & sprawiedliwości.”., & sprawiedliwości.”. \\
+%     224 &  2 & & Paryż & (Paryż \\
+%     224 & 12 & & z~którego & o~którą \\
+%     225 &  4 & & X. & X \\
+%     229 & 13 & & błyskawicami.. & błyskawicami \\
+%     233 & 11 & & XL & XL, \\
+%     234 & &  3 & owszem!, & owszem!”, \\
+%     236 & 11 & & Dobra & dobra \\
+%     243 & &  1 & 1767roku & 1767~roku \\
+%     \hline
+%   \end{tabular}
+
+% \end{center}
+
+% \vspace{\spaceTwo}
+
+
+% \noindent
+% \StrWd{23}{8} \\
+% \Jest  Człowiekwspółczesnyszamoczesięwewłasnymwnętrzuniczym \\
+% \Powin Człowiek współczesny szamocze się we własnym wnętrzu niczym \\
+% \StrWg{143}{6} \\
+% \Jest  Dostojewski Andre Gide'a będzie szukał \\
+% \Powin Dostojewski i~Andre Gide'a będą szukali \\
+% \StrWg{198}{13} \\
+% \Jest  romantyczno\dywiz naturalistyczny $^{ 74 }$ \\
+% \Powin romantyczno\dywiz naturalistyczny$^{ 74 }$ \\
+% \StrWd{223}{9} \\
+% \Jest  G{\footnotesize DYBYM NIE BYŁ DOKTOREM} \\
+% \Powin Gdybym nie był doktorem \\
+% \StrWd{240}{7} \\
+% \Jest  ODPOWIEDŹ NA~PIERWSZE \\
+% \Powin \textit{Odpowiedź na~pierwsze zarzuty} \\
+
+
+% % ############################
+
+
+
+
+
+
+
+
+
+
+% % ######################################
+% \newpage
+
+% \subsection{Dzieła obojętne lub~wrogie Bogu}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+
+% % ############################
+% \Work{ % Autor i tytuł dzieła
+%   Tomasz Herbich \\
+%   \textit{Pragnienie Królestwa.} \\
+%   \textit{August Cieszkowski, Mikołaj Bierdiajew} \\
+%   \textit{i~dwa oblicza mesjanizmu}, \cite{HerbichPragnienieKrolestwa2018}}
+
+% \vspace{0em}
+
+
+% % ##################
+% \CenterBoldFont{Uwagi}
+
+% \vspace{0em}
+
+
+% \noindent
+% \StrWg{54}{9} Nie wiem czy zadanie „Pierwotnie jednak
+% Chrześcijaństwo zostało pojęte czysto zaprzeczenie.” zawiera błąd,
+% czy też wtedy pisało~się w~takim stylu.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% % \start
+
+
+
+
+
+% % ##################
+% \newpage
+
+% \CenterBoldFont{Błędy}
+
+
+% \begin{center}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     & \multicolumn{2}{c|}{} & & \\
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     20  & &  3 & Paprocki,Kęty & Paprocki, Kęty \\
+%     % & & & & \\
+%     % & & & &  \\
+%     43  & 12 & & \textit{nasz}nie & \textit{nasz} nie \\
+%     43  & &  8 & Pan!\ldots”$^{ 17 }$ & Pan!\ldots$^{ 17 }$ \\
+%     46  & 14 & & tenże,\textit{Augusta} & tenże, \textit{Augusta} \\
+%     61  & 13 & & \textit{Bog}a & \textit{Boga} \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+
+% \end{center}
+
+% \vspace{\spaceTwo}
+
+
+% \noindent
+% \StrWd{38}{3} \\
+% \Jest  Cieszkowskiego$^{ 8 }$.Zdystansowanie \\
+% \Powin Cieszkowskiego$^{ 8 }$. Zdystansowanie \\
+
+
+
+
+% % ############################
+
+
+
+
+
+
+
+
+
+
+% % ######################################
+% \newpage
+
+% \section{Dzieła konkretnych filozofów}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+
+
+% % ######################################
+% % \newpage
+
+% \subsection{Gottlob Frege}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+% % ############################
+% \Work{ % Autor i tytuł dzieła
+%   Gottlob Frege \\
+%   \textit{Pisma semantyczne}, \cite{FregePismaSemantyczne1977}}
+
+% \vspace{0em}
+
+
+% % ##################
+% \CenterBoldFont{Uwagi}
+
+% \vspace{0em}
+
+
+% \noindent
+% W~niektórych miejscach tej książeczki, odstępy w~tekście wydają~się być
+% niewłaściwie dobrane. Ze względu na ograniczenia czasowe w~tych notatkach
+% będziemy odnotowywać i~poprawiać tylko te z nich, które uznamy, za
+% wyjątkowo źle wyglądające.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% % % ##################
+% % \CenterBoldFont{Uwagi do~konkretnych stron}
+
+
+% % \Str{}
+
+% % \vspace{\spaceFour}
+
+
+
+
+
+
+
+
+
+
+% % ##################
+% \newpage
+
+% \CenterBoldFont{Błędy}
+
+
+% \begin{center}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     XXI & \hphantom{0}1 & & przypis 30 & przypis 31 \\
+%     XXV & & \hphantom{0}8 & \raisebox{-0.2em}{j}ako & jako \\
+%     XXX & \hphantom{0}3 & & „ $\vdash \, p$” & „$\vdash \, p$” \\
+%     \hphantom{0}4 & 11 & & $\vdash$ . & $\vdash$. \\
+%     12 & & \hphantom{0}7 & stanowi własność
+%     & nie stanowi własności \\
+%     17 & & 13 & \textit{Wiedererkennungss\"{a}tze},
+%     & \textit{Wiedererkennungss\"{a}tze} \\
+%     %  & &  &  &  \\
+%     % 132 & 15 & & wspierać & wspierać się \\
+%     % 141 & & 16 & f formami & z~formami \\
+%     % 153 & &  3 & wdzięczną & niewdzięczną \\
+%     % 166 & & 15 & ładząca & zaprowadzająca ład \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+
+% \end{center}
+
+% \vspace{\spaceTwo}
+
+
+% \noindent
+% \StrWd{XXXI}{13--14} \\
+% \Jest  zwykłymznakiemjestmniejwięcejtaki,jaknp.między \hspace{-0.5em}
+% wysłanym \\
+% \Powin zwykłym znakiem jest mniej więcej taki, jak np.~między wysłanym \\
+% \textbf{Str.~8, rysunek na dole strony.} \\
+% \Jest  $AB$ \\
+% \Powin $A$ \\
+% % ############################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% % ######################################
+% \newpage
+
+% \subsection{Eric Voegelin}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+
+% % ############################
+% \Work{ % Autor i tytuł dzieła
+%   Eric Voegelin \\
+%   \textit{Nowa nauka polityki}, \cite{VoegelinNowaNaukaPolityki1992}}
+
+% \vspace{0em}
+
+
+% % ##################
+% \CenterBoldFont{Uwagi}
+
+% \vspace{0em}
+
+
+% \noindent
+% Zapomniałem już na której stronie Voegelin wprowadza pojęcie gnostyckiego
+% snu, z~którego tłumaczeniem na język polski jest pewien problem.
+% Po~angielsku „sleep” określa stan człowieka, gdy ten śpi, lecz sny
+% które mogą człowieka najść określa~się słowem „dream”. Z~tego
+% względu w~języku angielskim jest jasne, czy Voegelin mówił o~„gnostic
+% sleep”, czyli stanie w~którym człowiek ma radykalnie osłabiony
+% kontakt z~rzeczywistością, czy też o~„gnostic dream”, czyli życiu
+% w~świecie dzikich fantazji. Tłumacz nie zaznaczając tej ważnej różnicy
+% w~tym wydaniu popełnił bardzo poważny błąd. Korzystając z~Internetu
+% starałem~się sprawdzić która rozumienie jest poprawne, nie mam
+% rozstrzygających informacji, lecz artykuł anglojęzyczny który
+% znalazłem, przywołując tę~myśl Voegelina, używał sformułowania
+% „gnostic dream”.
+
+% \vspace{\spaceFour}
 
 
 
@@ -571,7 +704,22 @@ wyjątkowo źle wyglądające.
 % \CenterBoldFont{Uwagi do~konkretnych stron}
 
 
-% \Str{}
+% \noindent
+% \Str{64} Przeczytałem tłumaczenie tu przywoływanych fragmentów
+% \textit{Państwa} 368 c--d i~nie znalazłem w~nich stwierdzenia,
+% że~\textit{polis} to wielki człowiek, była za to stwierdzenie,
+% iż~jest większe niż człowiek, więc i~sprawiedliwość jest
+% w~nim większa i~łatwiejsza do zauważenia. W~momencie gdy Glaukon mówi,
+% że~w~pierwotnym państwie jest jedzenie który i~świnie jeść by~mogły,
+% Sokrates powiada, że~to jest państwo jakby zdrowe, musimy więc teraz
+% rozważyć państwo w~którym jest bardziej dostatnie, wtedy mówi, że~jest
+% ono jakby w~gorączce. Są~więc obecne metafory \textit{polis} jako czegoś
+% żywego, ale~nie wiem czy można~się posunąć do stwierdzenia, że~jest
+% ono wielki człowiekiem, może jednak coś mi umyka. Opowieść o~państwie
+% jako o~jednym ciele jest jednak znana już w~starożytności, choćby
+% w~postaci bajki
+% \href{https://en.wikipedia.org/wiki/Agrippa_Menenius_Lanatus_(consul_503_BC)}
+% {Menenius Agrypy}.
 
 % \vspace{\spaceFour}
 
@@ -579,57 +727,51 @@ wyjątkowo źle wyglądające.
 
 
 
+% \noindent
+% \StrWd{144}{} Zdanie „W~\textit{Prawach} Platon odsunął prawdę
+% duszy na~odległość jej objawienia w~\textit{Państwie}.” jest tak trudne
+% do~zrozumienia, że~najprawdopodobniej jest to błąd tłumaczenia.
 
 
 
 
 
-% ##################
-\newpage
+% % ##################
+% \newpage
 
-\CenterBoldFont{Błędy}
+% \CenterBoldFont{Błędy}
 
 
-\begin{center}
+% \begin{center}
 
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    XXI & \hphantom{0}1 & & przypis 30 & przypis 31 \\
-    XXV & & \hphantom{0}8 & \raisebox{-0.2em}{j}ako & jako \\
-    XXX & \hphantom{0}3 & & „ $\vdash \, p$” & „$\vdash \, p$” \\
-    \hphantom{0}4 & 11 & & $\vdash$ . & $\vdash$. \\
-    12 & & \hphantom{0}7 & stanowi własność
-    & nie stanowi własności \\
-    17 & & 13 & \textit{Wiedererkennungss\"{a}tze},
-    & \textit{Wiedererkennungss\"{a}tze} \\
-    %  & &  &  &  \\
-    % 132 & 15 & & wspierać & wspierać się \\
-    % 141 & & 16 & f formami & z~formami \\
-    % 153 & &  3 & wdzięczną & niewdzięczną \\
-    % 166 & & 15 & ładząca & zaprowadzająca ład \\
-    % & & & & \\
-    \hline
-  \end{tabular}
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     29  & 13 & & warunkowa & warunkową \\
+%     35  & &  9 & „ Filozof & „Filozof \\
+%     45  & 10 & & sposob & sposób \\
+%     64  & 15 & & do do & do \\
+%     70  &  5 & & ton & Platon \\
+%     113 &  5 & & pierwszy & drugi \\
+%     116 & & 11 & w znaczenie & znaczenie \\
+%     132 & 15 & & wspierać & wspierać się \\
+%     141 & & 16 & f formami & z~formami \\
+%     153 & &  3 & wdzięczną & niewdzięczną \\
+%     166 & & 15 & ładząca & zaprowadzająca ład \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
 
-\end{center}
+% \end{center}
 
-\vspace{\spaceTwo}
+% \vspace{\spaceTwo}
 
 
-\noindent
-\StrWd{XXXI}{13--14} \\
-\Jest  zwykłymznakiemjestmniejwięcejtaki,jaknp.między \hspace{-0.5em}
-wysłanym \\
-\Powin zwykłym znakiem jest mniej więcej taki, jak np.~między wysłanym \\
-\textbf{Str.~8, rysunek na dole strony.} \\
-\Jest  $AB$ \\
-\Powin $A$ \\
-% ############################
 
+% % ############################
 
 
 
@@ -640,868 +782,25 @@ wysłanym \\
 
 
 
+% % ############################
+% \newpage
 
+% \Work{ % Autor i tytuł dzieła
+%   Eric Voegelin \\
+%   \textit{Izrael i~Objawienie}, \cite{VoegelinIzraelIObjawienie2014}}
 
+% \vspace{0em}
 
 
-% ######################################
-\newpage
+% % ##################
+% \CenterBoldFont{Uwagi do~konkretnych stron}
 
-\subsection{Eric Voegelin}
+% \vspace{0em}
 
-\vspace{\spaceTwo}
-% ######################################
 
-
-
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Eric Voegelin \\
-  \textit{Nowa nauka polityki}, \cite{VoegelinNowaNaukaPolityki1992}}
-
-\vspace{0em}
-
-
-% ##################
-\CenterBoldFont{Uwagi}
-
-\vspace{0em}
-
-
-\noindent
-Zapomniałem już na której stronie Voegelin wprowadza pojęcie gnostyckiego
-snu, z~którego tłumaczeniem na język polski jest pewien problem.
-Po~angielsku „sleep” określa stan człowieka, gdy ten śpi, lecz sny
-które mogą człowieka najść określa~się słowem „dream”. Z~tego
-względu w~języku angielskim jest jasne, czy Voegelin mówił o~„gnostic
-sleep”, czyli stanie w~którym człowiek ma radykalnie osłabiony
-kontakt z~rzeczywistością, czy też o~„gnostic dream”, czyli życiu
-w~świecie dzikich fantazji. Tłumacz nie zaznaczając tej ważnej różnicy
-w~tym wydaniu popełnił bardzo poważny błąd. Korzystając z~Internetu
-starałem~się sprawdzić która rozumienie jest poprawne, nie mam
-rozstrzygających informacji, lecz artykuł anglojęzyczny który
-znalazłem, przywołując tę~myśl Voegelina, używał sformułowania
-„gnostic dream”.
-
-\vspace{\spaceFour}
-
-
-
-
-
-% ##################
-\CenterBoldFont{Uwagi do~konkretnych stron}
-
-
-\noindent
-\Str{64} Przeczytałem tłumaczenie tu przywoływanych fragmentów
-\textit{Państwa} 368 c--d i~nie znalazłem w~nich stwierdzenia,
-że~\textit{polis} to wielki człowiek, była za to stwierdzenie,
-iż~jest większe niż człowiek, więc i~sprawiedliwość jest
-w~nim większa i~łatwiejsza do zauważenia. W~momencie gdy Glaukon mówi,
-że~w~pierwotnym państwie jest jedzenie który i~świnie jeść by~mogły,
-Sokrates powiada, że~to jest państwo jakby zdrowe, musimy więc teraz
-rozważyć państwo w~którym jest bardziej dostatnie, wtedy mówi, że~jest
-ono jakby w~gorączce. Są~więc obecne metafory \textit{polis} jako czegoś
-żywego, ale~nie wiem czy można~się posunąć do stwierdzenia, że~jest
-ono wielki człowiekiem, może jednak coś mi umyka. Opowieść o~państwie
-jako o~jednym ciele jest jednak znana już w~starożytności, choćby
-w~postaci bajki
-\href{https://en.wikipedia.org/wiki/Agrippa_Menenius_Lanatus_(consul_503_BC)}
-{Menenius Agrypy}.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{144}{} Zdanie „W~\textit{Prawach} Platon odsunął prawdę
-duszy na~odległość jej objawienia w~\textit{Państwie}.” jest tak trudne
-do~zrozumienia, że~najprawdopodobniej jest to błąd tłumaczenia.
-
-
-
-
-
-% ##################
-\newpage
-
-\CenterBoldFont{Błędy}
-
-
-\begin{center}
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    29  & 13 & & warunkowa & warunkową \\
-    35  & &  9 & „ Filozof & „Filozof \\
-    45  & 10 & & sposob & sposób \\
-    64  & 15 & & do do & do \\
-    70  &  5 & & ton & Platon \\
-    113 &  5 & & pierwszy & drugi \\
-    116 & & 11 & w znaczenie & znaczenie \\
-    132 & 15 & & wspierać & wspierać się \\
-    141 & & 16 & f formami & z~formami \\
-    153 & &  3 & wdzięczną & niewdzięczną \\
-    166 & & 15 & ładząca & zaprowadzająca ład \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-
-\end{center}
-
-\vspace{\spaceTwo}
-
-
-
-% ############################
-
-
-
-
-
-
-
-
-
-
-% ############################
-\newpage
-
-\Work{ % Autor i tytuł dzieła
-  Eric Voegelin \\
-  \textit{Izrael i~Objawienie}, \cite{VoegelinIzraelIObjawienie2014}}
-
-\vspace{0em}
-
-
-% ##################
-\CenterBoldFont{Uwagi do~konkretnych stron}
-
-\vspace{0em}
-
-
-\noindent
-\StrWd{28}{2} Mowa jest tu o~symbolizacja mikroantropicznej, wydaje~się
-jednak, że~Voegelinowi chodziło o~symbolizację makroantropiczną.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\Str{54} W~przytoczonej tu~inskrypcji jest podane, że~„Enlil
-zwrócił oczy kraju [\textit{kalama}] na~siebie”, podczas gdy na dole
-strony Voegelin pisze, że~oczy całego kraju Sumerów zostały skierowane
-na~Lugalzagesi. Czy jest to błąd tłumaczenie, czy~też Voegelin
-pozwolił sobie na~taką interpretację tego fragmentu? Jeśli to drugie,
-to~należy zauważyć, iż~ta interpretacja jest dość odległa od~tekstu,
-choć nie oznacza to, że~jest niepoprawna. Ja~w~każdym razie bym jej
-w~takiej formie nie przyjął.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWg{57}{2} Jest tu mowa, że~przed stworzeniem „niebiańskiej
-ziemi” została stworzona „ziemska ziemia”, jednak kontekst
-sugeruje, że~kolejność powinna być odwrotna.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\Str{127} Na tej stronie pierwszy raz pojawia~się wspomniana
-postać~N, ale~jej imię jest na~przemian pisane „N.” albo~„N” i~nie
-wiadomo która wersja jest poprawna.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\Str{132} Cytowany tu tekst o~N przychodzącym z~Wyspy Sławy,
-wykazuje duże rozbieżność z~brzmieniem, do~którego odwołuje~się
-w~swojej analizie Voegelin. Na przykład w~tekście cytowany jest Wyspa
-Sławy, a~Voegelin pisze o~Wyspie Płomieni.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\Str{147} Na~tej stronie cytowany jest fragment~V omawianego
-tekstu, ale nigdzie nie jest chyba podane, jak ten fragment brzmi.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\Str{180} Ta~strona wprowadziła trochę zamieszania do~mojego
-rozumienia tekstu. Przywoływane~są \textit{Hymny do~Amona}, choć wydaje
-mi~się do~tej pory w~kontekście egipskim była mowa o~\textit{Hymnach
-  do~Atona} (str.~163) i~\textit{Hymnach Echnatona} (str.~171). Poza
-tym, są to zapewne dwie różne nazwy tego samego zbioru tekstów.
-
-Do~tego, tekst zdaje~się mówić, że~nowa forma egipskiej religijność,
-jakoś związana z~\textit{Hymnami do~Amona}, była monoteistyczna, podczas
-gdy na~stronie~173 Voegelin stwierdza, że~nawet stworzenie Atona,
-nadal mieściło~się w~obrębie mitu politeistycznego.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{197}{10} Zdanie „Przestaniemy ufać tablicy~III, lecz
-odsuniemy ją na~bok” brzmi nienaturalnie, to musi być jakaś pomyłka
-tłumacza. Możliwe, że~miało być „Nie~przestaniemy ufać tablicy~III”.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{213}{3} W~wersie tym jest mowa o~autorach badań, lecz
-chodzi raczej o~wynik pracy na Pismem~Św. autorów pracujących po
-niewoli babilońskiej.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{229}{6} Użycie w~tekście polskim angielskiego słowa
-„patchwork” nie pasuje stylu tłumaczenia. Lepiej byłoby znaleźć
-polski odpowiednik tego zwrotu.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWg{241}{12} Rozdział 5~jest wyjątkowo krótki jak na tę
-książkę i~nie dzieli się nad podrozdziały, więc odniesienie do
-podrozdziału 5.2~jest błędne. Nie umiem jednak ustalić poprawnego
-miejsca o~które chodzi Voegelinowi.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWg{312}{5} Po tej linie w~tekście powinie znajdować~się odstęp.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWg{370}{12} Napisane tu jest, że~po teopolis doszło do
-wycofania~się porządku w~formie kosmologicznej, jednak na podstawie
-tego co Voegelin pisał wcześniej logiczniejsza byłoby inne
-stwierdzenie. Mianowicie, że~po okresie teopolis wraz z~ustanowieniem
-królestwa wkracza do~Izraela porządek w~formie kosmologicznej.
-
-
-
-
-
-% ##################
-\newpage
-
-\CenterBoldFont{Błędy}
-
-
-\begin{center}
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    52  & 13 & & 2923 & 2123 \\
-    54  & &  3 & Lugalzaggesi & Lugalzagesi \\
-    56  & 13 & & przepływ & na~przepływ \\
-    98  & &  4 & forma” & „forma” \\
-    139 & &  7 & agnostyczną metafizykę & agnostycznej metafizyce \\
-    165 & & 11 & sa & są \\
-    202 & 12 & & mogła & nie mogła \\
-    207 &  8 & & Izraela & izraelskiego \\
-    278 & &  6 & siedemnastym & dwudziestym pierwszym \\
-    291 & 12 & & 13 & 14 \\
-    303 & &  8 & wydarł & wydarłem \\
-    314 &  6 & & 11.13 & 11, 13 \\
-    316 & &  4 & miał zaś & zaś \\
-    340 & &  6 & 175 & 1175 \\
-    341 &  1 & & wyjaśnić,przyjmując & wyjaśnić, przyjmując \\
-    357 & &  1 & 8.17 & 8, 17 \\
-    365 & &  8 & nie będziecie & będziecie \\
-    375 & 10 & & [zbójeckie]{ } wyprawy & [zbójeckie] wyprawy \\
-    377 & & 14 & zarzadzanie & zarządzanie \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-
-\end{center}
-
-\vspace{\spaceTwo}
-
-
-
-% ############################
-
-
-
-
-
-
-
-
-
-
-% ######################################
-\newpage
-
-\section{Filozofia analityczna}
-
-\vspace{\spaceTwo}
-% ######################################
-
-
-
-% ############################
-\Work{ % Autorzy i tytuł dzieła
-  Gertud Elisabeth M. Anscombe, Peter Thomas Geach \\
-  \textit{Trzej filozofowie}, \cite{AnscombeGeachTrzejFilozofowie1981}}
-
-\vspace{0em}
-
-
-% ##################
-\CenterBoldFont{Uwagi do~konkretnych stron}
-
-\vspace{0em}
-
-
-\noindent
-\StrWg{161}{11} W~tej linii brakuje wcięcia akapitu.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\Str{172--173} Kwestia tego czym jest funkcja wprowadza tu
-pewne zamieszanie. Geach krytykuje tu to, że~Frege mówi o~funkcji
-$2 \cdot \xi^{ 2 } + \xi$, „$2 \cdot \xi^{ 2 } + \xi$” określa jako
-jej nazwę, by~zaraz potem samemu mówić o~„funkcji
-$2 \cdot \xi^{ 2 } + \xi$”. Należałoby tą~kwestię w~jakiś sposób
-wyjaśnić.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\Str{174} Wydaje mi~się, że~twierdzenie „$\vdash 2 \cdot x^{ 2 } + x > -1$”, powinno
-być poprawnie zapisywane jako „$\vdash( 2 \cdot x^{ 2 } + x > -1)$”.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{174}{17} Zdanie „co~Frege miałby błędnie wprowadzić do~liczebnika”
-jest tak trudne do~zrozumienia, że~jest to zapewne błąd tłumaczenia.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{193}{17} Nie jestem pewien, czy~poprawnie powinno tutaj
-być „zwierzęciem lądowym”, jak jest obecnie, czy~„zwierzęciem
-domowym”, co~jest bardziej spójne z~poprzednimi przykładami.
-
-\vspace{\spaceFour}
-
-
-
-
-
-% ##################
-\newpage
-
-\CenterBoldFont{Błędy}
-
-
-\begin{center}
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    15  & & 11 & jak~X & jak~x \\
-    161 & & 12 & $\vdash$({ } jeżeli & $\vdash$(jeżeli \\
-    161 & & 11 & $\vdash$ (nie $m$) & $\vdash$(nie $m$) \\
-    161 & & 11 & $\vdash$ ($m${ } lub $p$) & $\vdash$($m$ lub $p$) \\
-    161 & & 10 & $\vdash$ (jeżeli & $\vdash$(jeżeli \\
-    161 & &  9 & „$\vdash$ ($m$ lub $p$”)
-           & „$\vdash$($m$ lub $p$)” \\
-    162 &  1 & & $\vdash$ (nie & $\vdash$(nie \\
-    162 &  2 & & $\vdash$ (jeżeli & $\vdash$(jeżeli \\
-    162 &  3 & & $\vdash$ (nie & $\vdash$(nie \\
-    162 & 15 & & \textit{znaczenie} * & \textit{znaczenie}* \\
-    162 & & 12 & „$\vdash m$” & „nie ($\vdash m)$” \\
-    162 & &  9 & „$\vdash$ (nie $m$)” & „$\vdash$(nie $m$)” \\
-    163 & & 15 & Przed Fregem & U~Fregego \\
-    169 &  1 & & obowiązywałby & nie obowiązywałby \\
-    169 & 15 & & \textbf{(p}sem & (psem \\
-    172 & & 15 & „$2 \cdot 2^{ 2 } \, +$”
-           & „$2 \cdot ( \:\: )^{ 2 } + ( \:\: )$” \\
-    172 & &  5 & $2 \cdot 7^{ 2 } + 7$” & „$2 \cdot 7^{ 2 } + 7$” \\
-    177 & & 13 & $\bigcirc$ & $0$ \\
-    179 & 21 & & $\textrm{M}_{ \beta }\, \varphi( \beta )$”
-           & „$\textrm{M}_{ \beta }\, \varphi( \beta )$” \\
-    180 &  5 & & $=\!\! X \hat{ \;\, } \alpha'$
-           & $= x \hat{ \;\, } \alpha'$ \\
-    183 &  1 & & (Zdania & Zdania \\
-    184 & 19 & & „$\vdash$ $( 2^{ 4 } = 4^{ 2 })$”
-           & „$\vdash$$( 2^{ 4 } = 4^{ 2 })$” \\
-    184 & & 13 & „$2^{ 4 } = 4^{2}$).” & „$2^{ 4 } = 4^{2}$”. \\
-    191 &  6 & & \ldots” & \ldots”. \\
-    \hline
-  \end{tabular}
-
-\end{center}
-
-\vspace{\spaceTwo}
-
-
-
-% ############################
-
-
-
-
-
-
-
-
-
-
-% ######################################
-\newpage
-
-\section{Historia myśli i~idei}
-
-\vspace{\spaceTwo}
-% ######################################
-
-
-
-% ############################
-\Work{ % Autor i tytuł dzieła
-  R\'{e}mi Brague \\
-  \textit{Mądrość świata. Historia ludzkiego doświadczenia Wszechświata},
-  \cite{BragueMadroscSwiata2021}}
-
-\vspace{0em}
-
-
-% ##################
-\CenterBoldFont{Uwagi do~konkretnych stron}
-
-\vspace{0em}
-
-
-\noindent
-\Str{3} Tytuł książki „Mądrość świata” nie wydrukowała~się
-w~pełni dobrze. Czcionka jest trochę rozmyta.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-Omówienie każde filozofa powinno zawierać listę dzieł
-polecanych do przeczytania, aby~czytelnik wiedział, gdzie najlepiej
-zetknąć~się z~tym wszystkim co~zawiera~się w~sposobie filozofowania
-danego myśliciela. Z~rzeczami takimi jak konkretne sposoby dowodzenia,
-używane argumenty, wplatane anegdoty, żarty, etc.
-
-
-
-
-
-% ##################
-\CenterBoldFont{Błędy}
-
-
-
-
-\vspace{\spaceTwo}
-
-
-\noindent
-\textbf{Grzbiet} \\
-\Jest  R \'{e}mi {\small Brague} \\
-\Powin R\'{e}mi Brague \\
-\textbf{Tylna okładka} \\
-\Jest  R\'{e}mi {\small Brague} \\
-\Powin R\'{e}mi Brague \\
-
-
-% ############################
-
-
-
-
-
-
-
-
-
-
-% ######################################
-\newpage
-
-\section{Filozofia i~naturalny świat}
-
-\vspace{\spaceTwo}
-% ######################################
-
-
-
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Roger Scruton \\
-  \textit{Zielona filozofia. Jak poważnie myśleć o naszej planecie},
-  \cite{ScrutonZielonaFilozofia2017}}
-
-\vspace{0em}
-
-
-% ##################
-\CenterBoldFont{Uwagi do~konkretnych stron}
-
-\vspace{0em}
-
-
-\noindent
-\StrWg{XV}{15} W~tej linii brakuje numeru przypisu. Numerem tym oczywiści
-powinno być „1”.
-
-\vspace{\spaceFour}
-
-
-
-
-
-% ##################
-\newpage
-
-\CenterBoldFont{Błędy}
-
-
-\begin{center}
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    14 & &  9 & \textit{i Agricultural} & \textit{and Agricultural} \\
-    18 & &  1 & tłum.]. & tłum.]). \\
-    %     & & & & \\
-    %     & & & & \\
-    %     & & & & \\
-    %     & & & & \\
-    %     & & & & \\
-    \hline
-  \end{tabular}
-
-\end{center}
-
-\vspace{\spaceTwo}
-
-
-
-% ############################
-
-
-
-
-
-
-
-
-
-
-% ######################################
-\newpage
-
-\section{Filozofia, polityka i~historia}
-
-\vspace{\spaceTwo}
-% ######################################
-
-
-
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Samuel Taylor Coleridge \\
-  \textit{O~konstytucji Kościoła i~państwa. Wybór pism}, \cite{}}
-
-\vspace{0em}
-
-
-% ##################
-\CenterBoldFont{Uwagi do~konkretnych stron}
-
-\vspace{0em}
-
-
-\noindent
-\StrWg{XV}{15} W~tej linii brakuje numeru przypisu. Numerem tym
-oczywiści powinno być „1”.
-
-\vspace{\spaceFour}
-
-
-
-
-
-% ##################
-\newpage
-
-\CenterBoldFont{Błędy}
-
-
-\begin{center}
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    %     & & & & \\
-    %     & & & & \\
-    %     & & & & \\
-    %     & & & & \\
-    %     & & & & \\
-    %     & & & & \\
-    %     & & & & \\
-    \hline
-  \end{tabular}
-
-\end{center}
-
-\vspace{\spaceTwo}
-
-
-% ############################
-
-
-
-
-
-
-
-
-
-
-% ############################
-\newpage
-
-\Work{ % Autor i tytuł dzieła
-  Christian Meier \\
-  \textit{Powstanie polityczności u~Greków},
-  \cite{MeierPowstaniePolitycznosciUGrekow2012}}
-
-\vspace{0em}
-
-
-% ##################
-\CenterBoldFont{Uwagi do konkretnych stron}
-
-\vspace{0em}
-
-
-\noindent
-\Str{39} Na tej stronie brakuje odstępu między tekstem głównym,
-a~przypisami.
-
-\vspace{\spaceFour}
-
-
-
-
-
-% ##################
-\newpage
-
-\CenterBoldFont{Błędy}
-
-
-\begin{center}
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    21  & &  2 & \textit{pism}a & \textit{pisma} \\
-    40  & &  8 & stało & stało~się \\
-    43  & &  7 & inrensywne & intensywne \\
-    73  & &  4 & and & \textit{and} \\
-    76  &  9 & & Odpowiadał~on & Odpowiadała~ona \\
-    80  & &  2 & \textit{Groeth} & \textit{Growth} \\
-    % 87???
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-
-\end{center}
-
-\vspace{\spaceTwo}
-
-
-
-% ############################
-
-
-
-
-
-
-
-
-
-
-% ######################################
-\newpage
-
-\section{Filozofia i~nauki szczegółowe}
-
-\vspace{\spaceTwo}
-% ######################################
-
-
-
-
-
-% ######################################
-\subsection{Filozofia, teologia i~społeczeństwo}
-
-\vspace{\spaceTwo}
-% ######################################
-
-
-
-% ############################
-\Work{ % Autor i tytuł dzieła
-  John Milbank \\
-  \textit{Przekroczyć rozum sekularny. Teologia i~teoria społeczna},
-  \cite{MilbankPrzekroczycRozumSekularny2020}}
-
-\vspace{0em}
-
-
-% ##################
-\CenterBoldFont{Uwagi do~konkretnych stron}
-
-\vspace{0em}
-
-
-\noindent
-\Str{1 i~3} Marginesy tych stron są za małe, tak że tytuł książki
-w~sposób nieprzyjemny zahacza o~brzeg strony.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWg{63}{4} Czy w~tej linii zamiast słowa „response”, nie powinno
-być „reakcje”?
-
-\vspace{\spaceFour}
-
-
-
-
-
-% \start \StrWd{}{}
-
-% \vspace{\spaceFour}
-
-
-
-% \start \StrWg{}{}
+% \noindent
+% \StrWd{28}{2} Mowa jest tu o~symbolizacja mikroantropicznej, wydaje~się
+% jednak, że~Voegelinowi chodziło o~symbolizację makroantropiczną.
 
 % \vspace{\spaceFour}
 
@@ -1509,36 +808,1331 @@ być „reakcje”?
 
 
 
-% ##################
-\newpage
+% \noindent
+% \Str{54} W~przytoczonej tu~inskrypcji jest podane, że~„Enlil
+% zwrócił oczy kraju [\textit{kalama}] na~siebie”, podczas gdy na dole
+% strony Voegelin pisze, że~oczy całego kraju Sumerów zostały skierowane
+% na~Lugalzagesi. Czy jest to błąd tłumaczenie, czy~też Voegelin
+% pozwolił sobie na~taką interpretację tego fragmentu? Jeśli to drugie,
+% to~należy zauważyć, iż~ta interpretacja jest dość odległa od~tekstu,
+% choć nie oznacza to, że~jest niepoprawna. Ja~w~każdym razie bym jej
+% w~takiej formie nie przyjął.
 
-\CenterBoldFont{Błędy}
+% \vspace{\spaceFour}
 
 
-\begin{center}
 
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    23  &  1 & & O’Regana)$^{ 3 }$ & O’Regana$^{ 3 }$) \\
-    25  & &  4 & \textit{theory} & \textit{Theory} \\
-    32  &  8 & & o~nieokreślonych & nieokreślonych \\
-    40  &  2 & & \textit{moralności} ) & \textit{moralności}) \\
-    62  & &  1 & \textit{Cambridge 1996} & Cambridge 1996  \\
-    %  & & &  &  \\
-    %  & &  &  &  \\
-    %  & &  &  &  \\
-    %  & & &  &  \\
-    %  & &  &  &  \\
-    \hline
-  \end{tabular}
 
-\end{center}
 
-\vspace{\spaceTwo}
+% \noindent
+% \StrWg{57}{2} Jest tu mowa, że~przed stworzeniem „niebiańskiej
+% ziemi” została stworzona „ziemska ziemia”, jednak kontekst
+% sugeruje, że~kolejność powinna być odwrotna.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \Str{127} Na tej stronie pierwszy raz pojawia~się wspomniana
+% postać~N, ale~jej imię jest na~przemian pisane „N.” albo~„N” i~nie
+% wiadomo która wersja jest poprawna.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \Str{132} Cytowany tu tekst o~N przychodzącym z~Wyspy Sławy,
+% wykazuje duże rozbieżność z~brzmieniem, do~którego odwołuje~się
+% w~swojej analizie Voegelin. Na przykład w~tekście cytowany jest Wyspa
+% Sławy, a~Voegelin pisze o~Wyspie Płomieni.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \Str{147} Na~tej stronie cytowany jest fragment~V omawianego
+% tekstu, ale nigdzie nie jest chyba podane, jak ten fragment brzmi.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \Str{180} Ta~strona wprowadziła trochę zamieszania do~mojego
+% rozumienia tekstu. Przywoływane~są \textit{Hymny do~Amona}, choć wydaje
+% mi~się do~tej pory w~kontekście egipskim była mowa o~\textit{Hymnach
+%   do~Atona} (str.~163) i~\textit{Hymnach Echnatona} (str.~171). Poza
+% tym, są to zapewne dwie różne nazwy tego samego zbioru tekstów.
+
+% Do~tego, tekst zdaje~się mówić, że~nowa forma egipskiej religijność,
+% jakoś związana z~\textit{Hymnami do~Amona}, była monoteistyczna, podczas
+% gdy na~stronie~173 Voegelin stwierdza, że~nawet stworzenie Atona,
+% nadal mieściło~się w~obrębie mitu politeistycznego.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \StrWd{197}{10} Zdanie „Przestaniemy ufać tablicy~III, lecz
+% odsuniemy ją na~bok” brzmi nienaturalnie, to musi być jakaś pomyłka
+% tłumacza. Możliwe, że~miało być „Nie~przestaniemy ufać tablicy~III”.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \StrWd{213}{3} W~wersie tym jest mowa o~autorach badań, lecz
+% chodzi raczej o~wynik pracy na Pismem~Św. autorów pracujących po
+% niewoli babilońskiej.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \StrWd{229}{6} Użycie w~tekście polskim angielskiego słowa
+% „patchwork” nie pasuje stylu tłumaczenia. Lepiej byłoby znaleźć
+% polski odpowiednik tego zwrotu.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \StrWg{241}{12} Rozdział 5~jest wyjątkowo krótki jak na tę
+% książkę i~nie dzieli się nad podrozdziały, więc odniesienie do
+% podrozdziału 5.2~jest błędne. Nie umiem jednak ustalić poprawnego
+% miejsca o~które chodzi Voegelinowi.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \StrWg{312}{5} Po tej linie w~tekście powinie znajdować~się odstęp.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \StrWg{370}{12} Napisane tu jest, że~po teopolis doszło do
+% wycofania~się porządku w~formie kosmologicznej, jednak na podstawie
+% tego co Voegelin pisał wcześniej logiczniejsza byłoby inne
+% stwierdzenie. Mianowicie, że~po okresie teopolis wraz z~ustanowieniem
+% królestwa wkracza do~Izraela porządek w~formie kosmologicznej.
+
+
+
+
+
+% % ##################
+% \newpage
+
+% \CenterBoldFont{Błędy}
+
+
+% \begin{center}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     52  & 13 & & 2923 & 2123 \\
+%     54  & &  3 & Lugalzaggesi & Lugalzagesi \\
+%     56  & 13 & & przepływ & na~przepływ \\
+%     98  & &  4 & forma” & „forma” \\
+%     139 & &  7 & agnostyczną metafizykę & agnostycznej metafizyce \\
+%     165 & & 11 & sa & są \\
+%     202 & 12 & & mogła & nie mogła \\
+%     207 &  8 & & Izraela & izraelskiego \\
+%     278 & &  6 & siedemnastym & dwudziestym pierwszym \\
+%     291 & 12 & & 13 & 14 \\
+%     303 & &  8 & wydarł & wydarłem \\
+%     314 &  6 & & 11.13 & 11, 13 \\
+%     316 & &  4 & miał zaś & zaś \\
+%     340 & &  6 & 175 & 1175 \\
+%     341 &  1 & & wyjaśnić,przyjmując & wyjaśnić, przyjmując \\
+%     357 & &  1 & 8.17 & 8, 17 \\
+%     365 & &  8 & nie będziecie & będziecie \\
+%     375 & 10 & & [zbójeckie]{ } wyprawy & [zbójeckie] wyprawy \\
+%     377 & & 14 & zarzadzanie & zarządzanie \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+
+% \end{center}
+
+% \vspace{\spaceTwo}
+
+
+
+% % ############################
+
+
+
+
+
+
+
+
+
+
+% % ######################################
+% \newpage
+
+% \section{Filozofia analityczna}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+
+% % ############################
+% \Work{ % Autorzy i tytuł dzieła
+%   Gertud Elisabeth M. Anscombe, Peter Thomas Geach \\
+%   \textit{Trzej filozofowie}, \cite{AnscombeGeachTrzejFilozofowie1981}}
+
+% \vspace{0em}
+
+
+% % ##################
+% \CenterBoldFont{Uwagi do~konkretnych stron}
+
+% \vspace{0em}
+
+
+% \noindent
+% \StrWg{161}{11} W~tej linii brakuje wcięcia akapitu.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \Str{172--173} Kwestia tego czym jest funkcja wprowadza tu
+% pewne zamieszanie. Geach krytykuje tu to, że~Frege mówi o~funkcji
+% $2 \cdot \xi^{ 2 } + \xi$, „$2 \cdot \xi^{ 2 } + \xi$” określa jako
+% jej nazwę, by~zaraz potem samemu mówić o~„funkcji
+% $2 \cdot \xi^{ 2 } + \xi$”. Należałoby tą~kwestię w~jakiś sposób
+% wyjaśnić.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \Str{174} Wydaje mi~się, że~twierdzenie „$\vdash 2 \cdot x^{ 2 } + x > -1$”, powinno
+% być poprawnie zapisywane jako „$\vdash( 2 \cdot x^{ 2 } + x > -1)$”.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \StrWd{174}{17} Zdanie „co~Frege miałby błędnie wprowadzić do~liczebnika”
+% jest tak trudne do~zrozumienia, że~jest to zapewne błąd tłumaczenia.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \StrWd{193}{17} Nie jestem pewien, czy~poprawnie powinno tutaj
+% być „zwierzęciem lądowym”, jak jest obecnie, czy~„zwierzęciem
+% domowym”, co~jest bardziej spójne z~poprzednimi przykładami.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% % ##################
+% \newpage
+
+% \CenterBoldFont{Błędy}
+
+
+% \begin{center}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     15  & & 11 & jak~X & jak~x \\
+%     161 & & 12 & $\vdash$({ } jeżeli & $\vdash$(jeżeli \\
+%     161 & & 11 & $\vdash$ (nie $m$) & $\vdash$(nie $m$) \\
+%     161 & & 11 & $\vdash$ ($m${ } lub $p$) & $\vdash$($m$ lub $p$) \\
+%     161 & & 10 & $\vdash$ (jeżeli & $\vdash$(jeżeli \\
+%     161 & &  9 & „$\vdash$ ($m$ lub $p$”)
+%            & „$\vdash$($m$ lub $p$)” \\
+%     162 &  1 & & $\vdash$ (nie & $\vdash$(nie \\
+%     162 &  2 & & $\vdash$ (jeżeli & $\vdash$(jeżeli \\
+%     162 &  3 & & $\vdash$ (nie & $\vdash$(nie \\
+%     162 & 15 & & \textit{znaczenie} * & \textit{znaczenie}* \\
+%     162 & & 12 & „$\vdash m$” & „nie ($\vdash m)$” \\
+%     162 & &  9 & „$\vdash$ (nie $m$)” & „$\vdash$(nie $m$)” \\
+%     163 & & 15 & Przed Fregem & U~Fregego \\
+%     169 &  1 & & obowiązywałby & nie obowiązywałby \\
+%     169 & 15 & & \textbf{(p}sem & (psem \\
+%     172 & & 15 & „$2 \cdot 2^{ 2 } \, +$”
+%            & „$2 \cdot ( \:\: )^{ 2 } + ( \:\: )$” \\
+%     172 & &  5 & $2 \cdot 7^{ 2 } + 7$” & „$2 \cdot 7^{ 2 } + 7$” \\
+%     177 & & 13 & $\bigcirc$ & $0$ \\
+%     179 & 21 & & $\textrm{M}_{ \beta }\, \varphi( \beta )$”
+%            & „$\textrm{M}_{ \beta }\, \varphi( \beta )$” \\
+%     180 &  5 & & $=\!\! X \hat{ \;\, } \alpha'$
+%            & $= x \hat{ \;\, } \alpha'$ \\
+%     183 &  1 & & (Zdania & Zdania \\
+%     184 & 19 & & „$\vdash$ $( 2^{ 4 } = 4^{ 2 })$”
+%            & „$\vdash$$( 2^{ 4 } = 4^{ 2 })$” \\
+%     184 & & 13 & „$2^{ 4 } = 4^{2}$).” & „$2^{ 4 } = 4^{2}$”. \\
+%     191 &  6 & & \ldots” & \ldots”. \\
+%     \hline
+%   \end{tabular}
+
+% \end{center}
+
+% \vspace{\spaceTwo}
+
+
+
+% % ############################
+
+
+
+
+
+
+
+
+
+
+% % ######################################
+% \newpage
+
+% \section{Historia myśli i~idei}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+
+% % ############################
+% \Work{ % Autor i tytuł dzieła
+%   R\'{e}mi Brague \\
+%   \textit{Mądrość świata. Historia ludzkiego doświadczenia Wszechświata},
+%   \cite{BragueMadroscSwiata2021}}
+
+% \vspace{0em}
+
+
+% % ##################
+% \CenterBoldFont{Uwagi do~konkretnych stron}
+
+% \vspace{0em}
+
+
+% \noindent
+% \Str{3} Tytuł książki „Mądrość świata” nie wydrukowała~się
+% w~pełni dobrze. Czcionka jest trochę rozmyta.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% Omówienie każde filozofa powinno zawierać listę dzieł
+% polecanych do przeczytania, aby~czytelnik wiedział, gdzie najlepiej
+% zetknąć~się z~tym wszystkim co~zawiera~się w~sposobie filozofowania
+% danego myśliciela. Z~rzeczami takimi jak konkretne sposoby dowodzenia,
+% używane argumenty, wplatane anegdoty, żarty, etc.
+
+
+
+
+
+% % ##################
+% \CenterBoldFont{Błędy}
+
+
+
+
+% \vspace{\spaceTwo}
+
+
+% \noindent
+% \textbf{Grzbiet} \\
+% \Jest  R \'{e}mi {\small Brague} \\
+% \Powin R\'{e}mi Brague \\
+% \textbf{Tylna okładka} \\
+% \Jest  R\'{e}mi {\small Brague} \\
+% \Powin R\'{e}mi Brague \\
+
+
+% % ############################
+
+
+
+
+
+
+
+
+
+
+% % ######################################
+% \newpage
+
+% \section{Filozofia i~naturalny świat}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+
+% % ############################
+% \Work{ % Autor i tytuł dzieła
+%   Roger Scruton \\
+%   \textit{Zielona filozofia. Jak poważnie myśleć o naszej planecie},
+%   \cite{ScrutonZielonaFilozofia2017}}
+
+% \vspace{0em}
+
+
+% % ##################
+% \CenterBoldFont{Uwagi do~konkretnych stron}
+
+% \vspace{0em}
+
+
+% \noindent
+% \StrWg{XV}{15} W~tej linii brakuje numeru przypisu. Numerem tym oczywiści
+% powinno być „1”.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% % ##################
+% \newpage
+
+% \CenterBoldFont{Błędy}
+
+
+% \begin{center}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     14 & &  9 & \textit{i Agricultural} & \textit{and Agricultural} \\
+%     18 & &  1 & tłum.]. & tłum.]). \\
+%     %     & & & & \\
+%     %     & & & & \\
+%     %     & & & & \\
+%     %     & & & & \\
+%     %     & & & & \\
+%     \hline
+%   \end{tabular}
+
+% \end{center}
+
+% \vspace{\spaceTwo}
+
+
+
+% % ############################
+
+
+
+
+
+
+
+
+
+
+% % ######################################
+% \newpage
+
+% \section{Filozofia, polityka i~historia}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+
+% % ############################
+% \Work{ % Autor i tytuł dzieła
+%   Samuel Taylor Coleridge \\
+%   \textit{O~konstytucji Kościoła i~państwa. Wybór pism}, \cite{}}
+
+% \vspace{0em}
+
+
+% % ##################
+% \CenterBoldFont{Uwagi do~konkretnych stron}
+
+% \vspace{0em}
+
+
+% \noindent
+% \StrWg{XV}{15} W~tej linii brakuje numeru przypisu. Numerem tym
+% oczywiści powinno być „1”.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% % ##################
+% \newpage
+
+% \CenterBoldFont{Błędy}
+
+
+% \begin{center}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     %     & & & & \\
+%     %     & & & & \\
+%     %     & & & & \\
+%     %     & & & & \\
+%     %     & & & & \\
+%     %     & & & & \\
+%     %     & & & & \\
+%     \hline
+%   \end{tabular}
+
+% \end{center}
+
+% \vspace{\spaceTwo}
+
+
+% % ############################
+
+
+
+
+
+
+
+
+
+
+% % ############################
+% \newpage
+
+% \Work{ % Autor i tytuł dzieła
+%   Christian Meier \\
+%   \textit{Powstanie polityczności u~Greków},
+%   \cite{MeierPowstaniePolitycznosciUGrekow2012}}
+
+% \vspace{0em}
+
+
+% % ##################
+% \CenterBoldFont{Uwagi do konkretnych stron}
+
+% \vspace{0em}
+
+
+% \noindent
+% \Str{39} Na tej stronie brakuje odstępu między tekstem głównym,
+% a~przypisami.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% % ##################
+% \newpage
+
+% \CenterBoldFont{Błędy}
+
+
+% \begin{center}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     21  & &  2 & \textit{pism}a & \textit{pisma} \\
+%     40  & &  8 & stało & stało~się \\
+%     43  & &  7 & inrensywne & intensywne \\
+%     73  & &  4 & and & \textit{and} \\
+%     76  &  9 & & Odpowiadał~on & Odpowiadała~ona \\
+%     80  & &  2 & \textit{Groeth} & \textit{Growth} \\
+%     % 87???
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+
+% \end{center}
+
+% \vspace{\spaceTwo}
+
+
+
+% % ############################
+
+
+
+
+
+
+
+
+
+
+% % ######################################
+% \newpage
+
+% \section{Filozofia i~nauki szczegółowe}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+
+
+
+% % ######################################
+% \subsection{Filozofia, teologia i~społeczeństwo}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+
+% % ############################
+% \Work{ % Autor i tytuł dzieła
+%   John Milbank \\
+%   \textit{Przekroczyć rozum sekularny. Teologia i~teoria społeczna},
+%   \cite{MilbankPrzekroczycRozumSekularny2020}}
+
+% \vspace{0em}
+
+
+% % ##################
+% \CenterBoldFont{Uwagi do~konkretnych stron}
+
+% \vspace{0em}
+
+
+% \noindent
+% \Str{1 i~3} Marginesy tych stron są za małe, tak że tytuł książki
+% w~sposób nieprzyjemny zahacza o~brzeg strony.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \StrWg{63}{4} Czy w~tej linii zamiast słowa „response”, nie powinno
+% być „reakcje”?
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% % \start \StrWd{}{}
+
+% % \vspace{\spaceFour}
+
+
+
+% % \start \StrWg{}{}
+
+% % \vspace{\spaceFour}
+
+
+
+
+
+% % ##################
+% \newpage
+
+% \CenterBoldFont{Błędy}
+
+
+% \begin{center}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     23  &  1 & & O’Regana)$^{ 3 }$ & O’Regana$^{ 3 }$) \\
+%     25  & &  4 & \textit{theory} & \textit{Theory} \\
+%     32  &  8 & & o~nieokreślonych & nieokreślonych \\
+%     40  &  2 & & \textit{moralności} ) & \textit{moralności}) \\
+%     62  & &  1 & \textit{Cambridge 1996} & Cambridge 1996  \\
+%     %  & & &  &  \\
+%     %  & &  &  &  \\
+%     %  & &  &  &  \\
+%     %  & & &  &  \\
+%     %  & &  &  &  \\
+%     \hline
+%   \end{tabular}
+
+% \end{center}
+
+% \vspace{\spaceTwo}
+
+
+
+% % ############################
+
+
+
+
+
+
+
+
+
+
+% % ######################################
+% \newpage
+
+% \section{Analizy filozofii i~kultur}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+
+% % ############################
+% \Work{ % Autor i tytuł dzieła
+%   Reinhart Koselleck \\
+%   \textit{Krytyka i~kryzys. Studium patogenezy świata mieszczańskiego},
+%   \cite{KoselleckKrytykaIKryzys2015}}
+
+% \vspace{0em}
+
+
+% % ##################
+% \CenterBoldFont{Uwagi do~konkretnych stron}
+
+% \vspace{0em}
+
+
+% \noindent
+% \StrWg{5}{4} W~tej linii brakuje liczby 39, oznaczającej stronę
+% na~której rozpoczyna~się wstęp.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \Str{39} Jest tu mowa o~dwóch mocarstwach światowych, Ameryce
+% i~Rosji, lecz~użycie w~tym kontekście tej drugiej nazwy jest
+% problematyczne. O~ile Ameryka to pojęcie używane zamiennie z~Stanami
+% Zjednoczonymi, to~Rosja i~Związek Sowiecki nie~są ze sobą tożsame.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \StrWd{114}{15} Książka Kosellecka została pierwszy raz wydana
+% w~1959, czyli zbyt wcześnie by~mogła cytować wydawnictwo z~1993 roku.
+% Możliwe jednak, że~jest to data publikacji zbioru w~którym praca Tarna
+% o~Aleksandrze Macedońskim ukazała~się w~kolejnym przedruku i~akurat
+% ten odnośnik do~tego artykułu został wybrany w~którymś z~kolejnych
+% wydań. Jednak nie jestem w~stanie rozstrzygnąć tego z~całą pewnością.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \StrWg{116}{10--11} Podzielenie „natury?” na~te dwie linie jest nie tylko
+% niepoprawne, ale~również bardzo źle wygląda.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% % ##################
+% \CenterBoldFont{Błędy}
+
+
+% \begin{center}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     65  & &  5 & dalekowzrocznego działania & działania dalekowzrocznego \\
+%     71  & &  4 & and & \textit{and} \\
+%     110 & & 14 & jdnym & jednym \\
+%     115 &  4 & & występują & występując \\
+%     115 &  5 & & uznając & uznają \\
+%     137 & 15 & & więc na & więc \\
+%     184 & & 11 & Neuf & Les Neuf \\
+%     233 & &  5 & x$\rho\iota\tau\iota\chi\acute{\eta}$ & $\chi\rho\iota\tau\iota\chi\acute{\eta}$ \\
+%     260 & & 11 & z~której & w~której \\
+%     331 & & 12 & wladcy & władcy \\
+%     \hline
+%   \end{tabular}
+
+% \end{center}
+
+% \vspace{\spaceTwo}
+
+
+
+% % ############################
+
+
+
+
+
+
+
+
+
+
+% % ############################
+% \newpage
+
+% \Work{ % Autor i tytuł dzieła
+%   Nakamura Hajime \\
+%   \textit{Systemy myślenia ludów Wschodu} \\
+%   \textit{Indie, Chiny, Tybet, Japonia},
+%   \cite{NakamuraSystemyMysleniaLudowWschodu2005}}
+
+% \vspace{0em}
+
+
+% % ##################
+% \CenterBoldFont{Uwagi do~konkretnych stron}
+
+% \vspace{0em}
+
+
+% \noindent
+% \Str{23} Nakamura powinien tu jawnie napisać, co rozumiem przez
+% „sposoby myślenia” i~„systemy myślenia”.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \StrWd{90}{13} W~polskim tłumaczeniu użyto zwrotu „relacja
+% wyróżniającego~się i~wiedzącego”, który jest dziwny i~trudny
+% do~zrozumienia.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \StrWd{101}{20} Ten fragment pozostawia niejasnym,
+% czy~działanie kogoś innego jest manifestowane, jako przedłużenie
+% czynności własnego „ja” u~ludzi Zachodu czy~u~Indusów.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \StrWg{116}{6} Po~tej linii nie powinno być pionowego odstępu w~tekście.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \StrWg{559}{6} W~tej linii nie~powinno być wcięcia.
+
+
+
+
+
+% % ##################
+% \newpage
+
+% \CenterBoldFont{Błędy}
+
+
+% \begin{center}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     69  & &  2 & jedynie rzeczownikowi & rzeczownikowi \\
+%     106 & 14 & & można & nie można \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     559 & 20 & & naukowego]. & naukowego].] \\
+%     \hline
+%   \end{tabular}
+
+% \end{center}
+
+% \vspace{\spaceTwo}
+
+
+
+
+
+% % ############################
+
+
+
+
+
+
+
+
+
+
+% % ######################################
+% \newpage
+
+% \section{Historia filozofii}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+
+% % ############################
+% \Work{ % Autor i tytuł dzieła
+%   Frederick Copleston S. J. \\
+%   \textit{Historia filozofii. Tom~I: Grecja i~Rzym},
+%   \cite{CoplestonHistoriaFilozofiiVolI2004}}
+
+% \vspace{0em}
+
+
+% % ##################
+% \CenterBoldFont{Uwagi}
+
+% \vspace{0em}
+
+
+% \noindent
+% Omówienie każdego filozofa powinno zawierać listę dzieł
+% polecanych do przeczytania, aby~czytelnik wiedział, gdzie najlepiej
+% zetknąć~się z~tym wszystkim co~zawiera~się w~sposobie filozofowania
+% danego myśliciela. Z~rzeczami takimi jak konkretne sposoby dowodzenia,
+% używane argumenty, wplatane anegdoty, żarty, etc.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% % ##################
+% \CenterBoldFont{Uwagi do~konkretnych stron}
+
+
+% \noindent
+% \Str{32} W~polskiej tłumaczeniu Diogenesa Laertios, opisuje
+% styl Anaksymenesa jako prosty i~niewyszukany, zaś w~wersji angielskiej
+% jako „pure unmixed”, co należałoby by przetłumaczyć raczej jako
+% „czysty i~pozbawiony obcych naleciałości”, jednak to tłumaczenie
+% również jest niesatysfakcjonujące.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \Str{33} Według tego co tu napisano, Anaksymanes uważał,
+% że~istnieje jedne pierścień okalający, zawierający i~ogień i~zimno,
+% wewnątrz niego zaś~jest powietrze. Nie potrafię sobie wyobrazić, jak
+% taki pierścień miałby wyglądać.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \Str{33} Należałoby pójść śladem wydania angielskiego i~ostatni
+% akapit tej strony, który rozpoczyna podsumowanie filozofii jońskiej,
+% oddzielić graficznie od omówienia myśli Anaksymenesa.
+
+
+
+
+
+% % ##################
+% \newpage
+
+% \CenterBoldFont{Błędy}
+
+
+% \begin{center}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     16  & &  3 & poglądów & spojrzenia na świat \\
+%     32  & 16 & & \ldots Mówi & \ldots mówi \\
+%     37  & & 18 & zgodę & niezgodę \\
+%     38  &  5 & & zwykłą & tylko \\
+%     % & & & & \\
+%     % & & & & \\
+%     61 & & 12 & do~Schelling & to~Schelling \\
+%     82 &  8 & & do~kraju & w~kraju \\
+%     % & & & & \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+
+% \end{center}
+
+% \vspace{\spaceTwo}
+
+
+% \noindent
+% \StrWg{11}{17} \\
+% \Jest  że~podmiotu w~nie większym stopniu nie~można sprowadzić
+% do~przedmiotu niż~przedmiotu do~podmiotu \\
+% \Powin że~podmiot nie może być w~większym stopniu sprowadzony
+% do~przedmiotu niż~przedmiot do~podmiotu \\
+% \StrWg{32}{3} \\
+% \Jest  Każdy jest zniszczalny, jednakże, jak~się wydaje, istnieje ich
+% nieograniczone liczba w~tym samy czasie, światów zaczynających istnieć
+% dzięki wiecznemu ruchowi. \\
+% \Powin Każdy jest zniszczalny, jednakże, wydaje~się, że~nieskończona ich
+% liczba istnieje w~tej samej chwili, światów powstających dzięki
+% wiecznemu ruchowi. \\
+% \StrWg{32}{25} \\
+% \Jest  poprzedzając koncepcję \\
+% \Powin dochodząc do koncepcji \\
+% \StrWd{61}{9} \\
+% \Jest  Nie~mógł raczej być utożsamiany z~Jednym, nie~mogło~się też
+% zdarzyć by~ktoś to czynił zbyt dosłownie. \\
+% \Powin Nie może być utożsamiony z~Jednym, nie mogło~się też zdarzyć, by
+% ktoś robił to dosłownie.
+
+
+
+% % ############################
+
+
+
+
+
+
+
+
+
+
+% % ######################################
+% \newpage
+
+% \section{Filozofia nauki i~filozofujący naukowcy}
+
+% \vspace{\spaceTwo}
+% % ######################################
+
+
+
+% % ############################
+% \Work{ % Autor i tytuł dzieła
+%   Roger Penrose \\
+%   \textit{Moda, wiara i~fantazja w~nowej fizyce Wszechświata},
+%   \cite{PenroseModaWiaraIFantazja2017}}
+
+% \vspace{0em}
+
+% % ##################
+% \CenterBoldFont{Uwagi do konkretnych stron}
+
+% \vspace{0em}
+
+
+% \noindent
+% \StrWd{72}{3--2} Ponieważ kwantowa teoria pola zajmuje~się
+% głównie procesami relatywistycznymi, naturalne jest przyjęcie, że~ruch
+% wszystkich rozważanych cząstek~są relatywistyczne. W~takim wypadku nie
+% powinno~się upraszczać sprawy do~tego stopnia, by~przyjmować, iż~pęd
+% to~prędkość cząstki razy jej masa. Rozumiem, że~zapewne Penrose chciał
+% uprościć tekst na~potrzebę niespecjalistów, ale~według mnie poszedł
+% za~daleko.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \Str{78} Należy według mnie zatrzymać~się chwilę nad
+% stwierdzeniem, że~wartość masy „ubranej” cząstki\footnote{Dla
+%   prostoty mówię tu o~masie nie zaś o~ładunku, ale~dla niego
+%   powinno~się dać przeprowadzić analogiczne rozumowanie.}
+% otrzymuje~się doświadczeń, nie zaś z~teorii. Jeśli weźmiemy teorię
+% masywnego pola swobodnego, która nie wymaga renormalizacji, to i~tak
+% zawiera ona parametr masy, który można wyznaczyć tylko z~obserwacji.
+% Problem teorii kryje~się więc gdzieś indziej.
+
+% To~na co liczylibyśmy, to~że znając masę gołej cząstki, jesteśmy
+% w~stanie policzyć masę cząstki „ubranej”, co okazuje~się nieprawdą,
+% musimy więc wziąć~ją z~danych obserwacyjnych. Właśnie porażka w~tym
+% miejscu teorii wywołuje spory niesmak. Drugim powodem do~tego niesmaku
+% jest to, że~należy w~ten sposób zastępować wyrażenia nieskończone,
+% co~jest zdecydowanie bardzo „uwłaczającą” czynnością.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \StrWd{659}{5} Na~podstawie bibliografii nie jestem w~stanie
+% zidentyfikować pozycji kryjącej~się za~akronimem DDR, która
+% wielokrotnie jest przywoływana w~tej książce.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \Str{661} Może to być już przesadny pedantyzm, ale~nie podoba
+% mi~się stwierdzenie, że~aby otrzymać wykres funkcji odwrotnej
+% wystarczy zamienić miejscami osie. Ryzyko niezrozumienia jest według
+% mnie zbyt duże. To co naprawdę trzeba zrobić, to obrócić \textit{cały}
+% wykres w~taki sposób, by osie zamieniły~się miejscami.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \Str{673} Zamiast liczb całkowitych~$\Zbb$ należałoby całą
+% dyskusję oprzeć na~liczbach naturalnych~$\Zbb$. Uczyniłoby to~między
+% innymi Rys.~A-3 bardziej zrozumiałym.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \StrWd{683}{10} Nie powinno~się łamać wzorów matematycznych
+% na~końcu linii w~taki sposób, jak tu zostało złamane wyrażenie
+% $\langle \vecubold | \vecvbold \rangle$.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \Str{718} Rysunek A-26 (b) jest narysowany błędnie. Po~lewej stronie punktu
+% zgięcia wstęgi M\"{o}biusa, który wypada na~poziomie cięcia tożsamościowo
+% równego zeru, widać dwa ciąg przerywanych linii, symbolizujące cięcie.
+% Po~pierwsze nie może być dwóch takich przerywanych linii, bo rysunek
+% zawiera tylko jedno cięcie. Po~drugie, cięcia te opuszczają wstęgę
+% M\"{o}biusa, co jest niemożliwe, bowiem gładkość cięcia tego zabrania,
+% by~powstał taki skok. Po~trzecie, po~lewej stronie punktu zagięcia, wykres
+% cięcia znajduje~się na niewidocznej stronie wstęgi, przysłoniętej przez jej
+% zagięty fragment.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \Str{725} Nie rozumiem, jaka jest logika Penrosa, by~w~tym
+% miejscu powoływać~się na~wzór~$e^{ i \theta }$, skoro w~dodatku~A.9
+% na~stronie~735 będzie tłumaczył zupełnie od~zera co~to są liczby
+% zespolone. Skutkiem tego, osoba, która nie wie czym są liczby
+% zespolone musiałaby czytać, dodatki nie po~kolei. Skoro jednak taka
+% osoba nie wie, czym~są liczby zespolone, zapewne widząc ten wzór nie
+% będzie wiedziała, gdzie szukać jego wyjaśnienia.
+
+% Wystarczyłoby dodać na~końcu tego tekstu uwagę „Po~informacje o~tym
+% wzorze zob.~A.9”\footnote{To~może nie jest najlepsze sformułowanie,
+%   ale~nie wiem jak to~zrobić lepiej.}, ale~niczego takiego tu nie ma.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \noindent
+% \Str{747} Pojęcie \textbf{funkcji holomorficznej} zdaje~się tu
+% pojawiać pierwszy raz, w~skutek czego jest zupełnie niezrozumiałe
+% dla~osoby niezorientowanej w~analizie zespolonej.
+
+
+
+
+
+% % ##################
+% \newpage
+
+% \CenterBoldFont{Błędy}
+
+
+% \begin{center}
+
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+%                               & Powinno być \\ \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
+%     4   &  5 & & \textit{in~the~Universe} & \textit{of~the~Universe} \\
+%     107 & &  7 & mieszczącej~się & mieszczących~się \\
+%     684 &  1 & & $+\, a \langle \vecubold | \vecvbold \rangle$
+%            & $= a \langle \vecubold | \vecvbold \rangle$ \\
+%     686 &  6 & & $\ldots,$ & $\ldots$ \\
+%     688 & &  8 & $i \neq j$ & $i \neq j$, \\
+%     688 & &  3 & $\ldots,$ & $\ldots$ \\
+%     689 & &  4 & $( \vecrhobold_{ 1 },\; \ldots, \vecrhobold_{ n } )$
+%            & $( \vecrhobold_{ 1 }, \ldots, \vecrhobold_{ n } )$ \\
+%     711 & & 10 & A-15(c) & A-15(b) \\
+%     731 &  6 & & płaszczyzny & z~płaszczyzny \\
+%     732 &  2 & & $\infty^{ k \infty }$ & $\infty^{ 2 k \infty }$ \\
+%     733 &  4 & & $\infty^{ k \infty }$ & $\infty^{ 2 k \infty }$ \\
+%     733 &  7 & & $s = 1$ & $s = 2$ \\
+%     733 &  7 & & $s = k$ & $s = 2k$ \\
+%     733 & 11 & & $\Rbb^{ f + k }$ & $\Rbb^{ f + s }$ \\
+%     740 &  7 & & $( z - b_{ 2 } )( z - b_{ n } )$
+%     & $( z - b_{ 2 } ) \cdot \ldots \cdot ( z - b_{ n } )$ \\
+%     % & & & & \\
+%     % & & & & \\
+%     % & & & & \\
+%     \hline
+%   \end{tabular}
+
+% \end{center}
+
+% \vspace{\spaceTwo}
+
+
+% \noindent
+% \StrWg{668}{7} \\
+% \Jest $X_{ i } = x_{ i } + A_{ i } ( i = 1, 2, \ldots, n )$ \\
+% \Powin $X_{ i } = x_{ i } + A_{ i }, \quad i = 1, 2, \ldots, n.$ \\
+% \StrWd{703}{11} \\[0.2em]
+% \Jest $\sqrt{ ( X - x )^{ 2 } + ( Y - y )^{ 2 } + ( Z - z )^{ 2 } .) }$
+% \\[0.4em]
+% \Powin $\sqrt{ ( X - x )^{ 2 } + ( Y - y )^{ 2 } + ( Z - z )^{ 2 } }.)$
 
 
 
@@ -1553,596 +2147,11 @@ być „reakcje”?
 
 
 
-% ######################################
-\newpage
-
-\section{Analizy filozofii i~kultur}
-
-\vspace{\spaceTwo}
-% ######################################
-
-
-
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Reinhart Koselleck \\
-  \textit{Krytyka i~kryzys. Studium patogenezy świata mieszczańskiego},
-  \cite{KoselleckKrytykaIKryzys2015}}
-
-\vspace{0em}
-
-
-% ##################
-\CenterBoldFont{Uwagi do~konkretnych stron}
-
-\vspace{0em}
-
-
-\noindent
-\StrWg{5}{4} W~tej linii brakuje liczby 39, oznaczającej stronę
-na~której rozpoczyna~się wstęp.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\Str{39} Jest tu mowa o~dwóch mocarstwach światowych, Ameryce
-i~Rosji, lecz~użycie w~tym kontekście tej drugiej nazwy jest
-problematyczne. O~ile Ameryka to pojęcie używane zamiennie z~Stanami
-Zjednoczonymi, to~Rosja i~Związek Sowiecki nie~są ze sobą tożsame.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{114}{15} Książka Kosellecka została pierwszy raz wydana
-w~1959, czyli zbyt wcześnie by~mogła cytować wydawnictwo z~1993 roku.
-Możliwe jednak, że~jest to data publikacji zbioru w~którym praca Tarna
-o~Aleksandrze Macedońskim ukazała~się w~kolejnym przedruku i~akurat
-ten odnośnik do~tego artykułu został wybrany w~którymś z~kolejnych
-wydań. Jednak nie jestem w~stanie rozstrzygnąć tego z~całą pewnością.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWg{116}{10--11} Podzielenie „natury?” na~te dwie linie jest nie tylko
-niepoprawne, ale~również bardzo źle wygląda.
-
-\vspace{\spaceFour}
-
-
-
-
-
-% ##################
-\CenterBoldFont{Błędy}
-
-
-\begin{center}
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    65  & &  5 & dalekowzrocznego działania & działania dalekowzrocznego \\
-    71  & &  4 & and & \textit{and} \\
-    110 & & 14 & jdnym & jednym \\
-    115 &  4 & & występują & występując \\
-    115 &  5 & & uznając & uznają \\
-    137 & 15 & & więc na & więc \\
-    184 & & 11 & Neuf & Les Neuf \\
-    233 & &  5 & x$\rho\iota\tau\iota\chi\acute{\eta}$ & $\chi\rho\iota\tau\iota\chi\acute{\eta}$ \\
-    260 & & 11 & z~której & w~której \\
-    331 & & 12 & wladcy & władcy \\
-    \hline
-  \end{tabular}
-
-\end{center}
-
-\vspace{\spaceTwo}
-
-
-
-% ############################
-
-
-
-
-
-
-
-
-
-
-% ############################
-\newpage
-
-\Work{ % Autor i tytuł dzieła
-  Nakamura Hajime \\
-  \textit{Systemy myślenia ludów Wschodu} \\
-  \textit{Indie, Chiny, Tybet, Japonia},
-  \cite{NakamuraSystemyMysleniaLudowWschodu2005}}
-
-\vspace{0em}
-
-
-% ##################
-\CenterBoldFont{Uwagi do~konkretnych stron}
-
-\vspace{0em}
-
-
-\noindent
-\Str{23} Nakamura powinien tu jawnie napisać, co rozumiem przez
-„sposoby myślenia” i~„systemy myślenia”.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{90}{13} W~polskim tłumaczeniu użyto zwrotu „relacja
-wyróżniającego~się i~wiedzącego”, który jest dziwny i~trudny
-do~zrozumienia.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{101}{20} Ten fragment pozostawia niejasnym,
-czy~działanie kogoś innego jest manifestowane, jako przedłużenie
-czynności własnego „ja” u~ludzi Zachodu czy~u~Indusów.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWg{116}{6} Po~tej linii nie powinno być pionowego odstępu w~tekście.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWg{559}{6} W~tej linii nie~powinno być wcięcia.
-
-
-
-
-
-% ##################
-\newpage
-
-\CenterBoldFont{Błędy}
-
-
-\begin{center}
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    69  & &  2 & jedynie rzeczownikowi & rzeczownikowi \\
-    106 & 14 & & można & nie można \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    559 & 20 & & naukowego]. & naukowego].] \\
-    \hline
-  \end{tabular}
-
-\end{center}
-
-\vspace{\spaceTwo}
-
-
-
-
-
-% ############################
-
-
-
-
-
-
-
-
-
-
-% ######################################
-\newpage
-
-\section{Historia filozofii}
-
-\vspace{\spaceTwo}
-% ######################################
-
-
-
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Frederick Copleston S. J. \\
-  \textit{Historia filozofii. Tom~I: Grecja i~Rzym},
-  \cite{CoplestonHistoriaFilozofiiVolI2004}}
-
-\vspace{0em}
-
-
-% ##################
-\CenterBoldFont{Uwagi}
-
-\vspace{0em}
-
-
-\noindent
-Omówienie każdego filozofa powinno zawierać listę dzieł
-polecanych do przeczytania, aby~czytelnik wiedział, gdzie najlepiej
-zetknąć~się z~tym wszystkim co~zawiera~się w~sposobie filozofowania
-danego myśliciela. Z~rzeczami takimi jak konkretne sposoby dowodzenia,
-używane argumenty, wplatane anegdoty, żarty, etc.
-
-\vspace{\spaceFour}
-
-
-
-
-
-% ##################
-\CenterBoldFont{Uwagi do~konkretnych stron}
-
-
-\noindent
-\Str{32} W~polskiej tłumaczeniu Diogenesa Laertios, opisuje
-styl Anaksymenesa jako prosty i~niewyszukany, zaś w~wersji angielskiej
-jako „pure unmixed”, co należałoby by przetłumaczyć raczej jako
-„czysty i~pozbawiony obcych naleciałości”, jednak to tłumaczenie
-również jest niesatysfakcjonujące.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\Str{33} Według tego co tu napisano, Anaksymanes uważał,
-że~istnieje jedne pierścień okalający, zawierający i~ogień i~zimno,
-wewnątrz niego zaś~jest powietrze. Nie potrafię sobie wyobrazić, jak
-taki pierścień miałby wyglądać.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\Str{33} Należałoby pójść śladem wydania angielskiego i~ostatni
-akapit tej strony, który rozpoczyna podsumowanie filozofii jońskiej,
-oddzielić graficznie od omówienia myśli Anaksymenesa.
-
-
-
-
-
-% ##################
-\newpage
-
-\CenterBoldFont{Błędy}
-
-
-\begin{center}
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    16  & &  3 & poglądów & spojrzenia na świat \\
-    32  & 16 & & \ldots Mówi & \ldots mówi \\
-    37  & & 18 & zgodę & niezgodę \\
-    38  &  5 & & zwykłą & tylko \\
-    % & & & & \\
-    % & & & & \\
-    61 & & 12 & do~Schelling & to~Schelling \\
-    82 &  8 & & do~kraju & w~kraju \\
-    % & & & & \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-
-\end{center}
-
-\vspace{\spaceTwo}
-
-
-\noindent
-\StrWg{11}{17} \\
-\Jest  że~podmiotu w~nie większym stopniu nie~można sprowadzić
-do~przedmiotu niż~przedmiotu do~podmiotu \\
-\Powin że~podmiot nie może być w~większym stopniu sprowadzony
-do~przedmiotu niż~przedmiot do~podmiotu \\
-\StrWg{32}{3} \\
-\Jest  Każdy jest zniszczalny, jednakże, jak~się wydaje, istnieje ich
-nieograniczone liczba w~tym samy czasie, światów zaczynających istnieć
-dzięki wiecznemu ruchowi. \\
-\Powin Każdy jest zniszczalny, jednakże, wydaje~się, że~nieskończona ich
-liczba istnieje w~tej samej chwili, światów powstających dzięki
-wiecznemu ruchowi. \\
-\StrWg{32}{25} \\
-\Jest  poprzedzając koncepcję \\
-\Powin dochodząc do koncepcji \\
-\StrWd{61}{9} \\
-\Jest  Nie~mógł raczej być utożsamiany z~Jednym, nie~mogło~się też
-zdarzyć by~ktoś to czynił zbyt dosłownie. \\
-\Powin Nie może być utożsamiony z~Jednym, nie mogło~się też zdarzyć, by
-ktoś robił to dosłownie.
-
-
-
-% ############################
-
-
-
-
-
-
-
-
-
-
-% ######################################
-\newpage
-
-\section{Filozofia nauki i~filozofujący naukowcy}
-
-\vspace{\spaceTwo}
-% ######################################
-
-
-
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Roger Penrose \\
-  \textit{Moda, wiara i~fantazja w~nowej fizyce Wszechświata},
-  \cite{PenroseModaWiaraIFantazja2017}}
-
-\vspace{0em}
-
-% ##################
-\CenterBoldFont{Uwagi do konkretnych stron}
-
-\vspace{0em}
-
-
-\noindent
-\StrWd{72}{3--2} Ponieważ kwantowa teoria pola zajmuje~się
-głównie procesami relatywistycznymi, naturalne jest przyjęcie, że~ruch
-wszystkich rozważanych cząstek~są relatywistyczne. W~takim wypadku nie
-powinno~się upraszczać sprawy do~tego stopnia, by~przyjmować, iż~pęd
-to~prędkość cząstki razy jej masa. Rozumiem, że~zapewne Penrose chciał
-uprościć tekst na~potrzebę niespecjalistów, ale~według mnie poszedł
-za~daleko.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\Str{78} Należy według mnie zatrzymać~się chwilę nad
-stwierdzeniem, że~wartość masy „ubranej” cząstki\footnote{Dla
-  prostoty mówię tu o~masie nie zaś o~ładunku, ale~dla niego
-  powinno~się dać przeprowadzić analogiczne rozumowanie.}
-otrzymuje~się doświadczeń, nie zaś z~teorii. Jeśli weźmiemy teorię
-masywnego pola swobodnego, która nie wymaga renormalizacji, to i~tak
-zawiera ona parametr masy, który można wyznaczyć tylko z~obserwacji.
-Problem teorii kryje~się więc gdzieś indziej.
-
-To~na co liczylibyśmy, to~że znając masę gołej cząstki, jesteśmy
-w~stanie policzyć masę cząstki „ubranej”, co okazuje~się nieprawdą,
-musimy więc wziąć~ją z~danych obserwacyjnych. Właśnie porażka w~tym
-miejscu teorii wywołuje spory niesmak. Drugim powodem do~tego niesmaku
-jest to, że~należy w~ten sposób zastępować wyrażenia nieskończone,
-co~jest zdecydowanie bardzo „uwłaczającą” czynnością.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{659}{5} Na~podstawie bibliografii nie jestem w~stanie
-zidentyfikować pozycji kryjącej~się za~akronimem DDR, która
-wielokrotnie jest przywoływana w~tej książce.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\Str{661} Może to być już przesadny pedantyzm, ale~nie podoba
-mi~się stwierdzenie, że~aby otrzymać wykres funkcji odwrotnej
-wystarczy zamienić miejscami osie. Ryzyko niezrozumienia jest według
-mnie zbyt duże. To co naprawdę trzeba zrobić, to obrócić \textit{cały}
-wykres w~taki sposób, by osie zamieniły~się miejscami.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\Str{673} Zamiast liczb całkowitych~$\Zbb$ należałoby całą
-dyskusję oprzeć na~liczbach naturalnych~$\Zbb$. Uczyniłoby to~między
-innymi Rys.~A-3 bardziej zrozumiałym.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{683}{10} Nie powinno~się łamać wzorów matematycznych
-na~końcu linii w~taki sposób, jak tu zostało złamane wyrażenie
-$\langle \vecubold | \vecvbold \rangle$.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\Str{718} Rysunek A-26 (b) jest narysowany błędnie. Po~lewej stronie punktu
-zgięcia wstęgi M\"{o}biusa, który wypada na~poziomie cięcia tożsamościowo
-równego zeru, widać dwa ciąg przerywanych linii, symbolizujące cięcie.
-Po~pierwsze nie może być dwóch takich przerywanych linii, bo rysunek
-zawiera tylko jedno cięcie. Po~drugie, cięcia te opuszczają wstęgę
-M\"{o}biusa, co jest niemożliwe, bowiem gładkość cięcia tego zabrania,
-by~powstał taki skok. Po~trzecie, po~lewej stronie punktu zagięcia, wykres
-cięcia znajduje~się na niewidocznej stronie wstęgi, przysłoniętej przez jej
-zagięty fragment.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\Str{725} Nie rozumiem, jaka jest logika Penrosa, by~w~tym
-miejscu powoływać~się na~wzór~$e^{ i \theta }$, skoro w~dodatku~A.9
-na~stronie~735 będzie tłumaczył zupełnie od~zera co~to są liczby
-zespolone. Skutkiem tego, osoba, która nie wie czym są liczby
-zespolone musiałaby czytać, dodatki nie po~kolei. Skoro jednak taka
-osoba nie wie, czym~są liczby zespolone, zapewne widząc ten wzór nie
-będzie wiedziała, gdzie szukać jego wyjaśnienia.
-
-Wystarczyłoby dodać na~końcu tego tekstu uwagę „Po~informacje o~tym
-wzorze zob.~A.9”\footnote{To~może nie jest najlepsze sformułowanie,
-  ale~nie wiem jak to~zrobić lepiej.}, ale~niczego takiego tu nie ma.
-
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\Str{747} Pojęcie \textbf{funkcji holomorficznej} zdaje~się tu
-pojawiać pierwszy raz, w~skutek czego jest zupełnie niezrozumiałe
-dla~osoby niezorientowanej w~analizie zespolonej.
-
-
-
-
-
-% ##################
-\newpage
-
-\CenterBoldFont{Błędy}
-
-
-\begin{center}
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    4   &  5 & & \textit{in~the~Universe} & \textit{of~the~Universe} \\
-    107 & &  7 & mieszczącej~się & mieszczących~się \\
-    684 &  1 & & $+\, a \langle \vecubold | \vecvbold \rangle$
-           & $= a \langle \vecubold | \vecvbold \rangle$ \\
-    686 &  6 & & $\ldots,$ & $\ldots$ \\
-    688 & &  8 & $i \neq j$ & $i \neq j$, \\
-    688 & &  3 & $\ldots,$ & $\ldots$ \\
-    689 & &  4 & $( \vecrhobold_{ 1 },\; \ldots, \vecrhobold_{ n } )$
-           & $( \vecrhobold_{ 1 }, \ldots, \vecrhobold_{ n } )$ \\
-    711 & & 10 & A-15(c) & A-15(b) \\
-    731 &  6 & & płaszczyzny & z~płaszczyzny \\
-    732 &  2 & & $\infty^{ k \infty }$ & $\infty^{ 2 k \infty }$ \\
-    733 &  4 & & $\infty^{ k \infty }$ & $\infty^{ 2 k \infty }$ \\
-    733 &  7 & & $s = 1$ & $s = 2$ \\
-    733 &  7 & & $s = k$ & $s = 2k$ \\
-    733 & 11 & & $\Rbb^{ f + k }$ & $\Rbb^{ f + s }$ \\
-    740 &  7 & & $( z - b_{ 2 } )( z - b_{ n } )$
-    & $( z - b_{ 2 } ) \cdot \ldots \cdot ( z - b_{ n } )$ \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    \hline
-  \end{tabular}
-
-\end{center}
-
-\vspace{\spaceTwo}
-
-
-\noindent
-\StrWg{668}{7} \\
-\Jest $X_{ i } = x_{ i } + A_{ i } ( i = 1, 2, \ldots, n )$ \\
-\Powin $X_{ i } = x_{ i } + A_{ i }, \quad i = 1, 2, \ldots, n.$ \\
-\StrWd{703}{11} \\[0.2em]
-\Jest $\sqrt{ ( X - x )^{ 2 } + ( Y - y )^{ 2 } + ( Z - z )^{ 2 } .) }$
-\\[0.4em]
-\Powin $\sqrt{ ( X - x )^{ 2 } + ( Y - y )^{ 2 } + ( Z - z )^{ 2 } }.)$
-
-
-
-% ############################
-
-
-
-
-
-
-
-
-
-
-% #####################################################################
-% #####################################################################
-% Bibliografia
-
-\bibliographystyle{plalpha}
-
-\bibliography{DEUSBooks,PhilBooks}{}
+% ####################################################################
+% ####################################################################
+% Bibliography
+
+\printbibliography
 
 
 

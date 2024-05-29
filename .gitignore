@@ -6,6 +6,10 @@
 *.log
 *.out
 
+# ignore auxiliary files created by Biber
+*.bcf
+*.xml
+
 # ignore auxiliary files created by BibTeX
 *.bbl
 *.blg

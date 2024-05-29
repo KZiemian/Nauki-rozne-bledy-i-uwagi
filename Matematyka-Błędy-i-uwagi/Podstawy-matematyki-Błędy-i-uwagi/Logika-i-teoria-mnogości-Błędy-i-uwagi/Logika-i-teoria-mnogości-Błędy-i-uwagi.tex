@@ -1,6 +1,6 @@
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 % Basic configuration and packages
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 % Package for discovering wrong and outdated usage of LaTeX.
 % More information to be found in l2tabu English version.
 \RequirePackage[l2tabu, orthodox]{nag}
@@ -9,9 +9,9 @@
 
 
 
-% ---------------------------------------
+% ------------------------------------------------------
 % Packages not tied to particular normal language
-% ---------------------------------------
+% ------------------------------------------------------
 % This package should improved spaces in the text.
 \usepackage{microtype}
 % Add few important symbols, like text Celcius degree
@@ -19,9 +19,9 @@
 
 
 
-% ---------------------------------------
+% ------------------------------------------------------
 % Polonization of LaTeX document
-% ---------------------------------------
+% ------------------------------------------------------
 % Basic polonization of the text
 \usepackage[MeX]{polski}
 % Switching on UTF-8 encoding
@@ -33,16 +33,16 @@
 
 
 
-% ---------------------------------------
+% ------------------------------------------------------
 % Setting margins
-% ---------------------------------------
+% ------------------------------------------------------
 \usepackage[a4paper, total={14cm, 25cm}]{geometry}
 
 
 
-% ---------------------------------------
+% ------------------------------------------------------
 % Setting vertical spaces in the text
-% ---------------------------------------
+% ------------------------------------------------------
 % Setting space between lines
 \renewcommand{\baselinestretch}{1.1}
 
@@ -51,9 +51,9 @@
 
 
 
-% ---------------------------------------
+% ------------------------------------------------------
 % Packages for scientific papers
-% ---------------------------------------
+% ------------------------------------------------------
 % Switching off \lll symbol, that I guess is representing letter ``Ł''.
 % It collide with `amsmath' package's command with the same name
 \let\lll\undefined
@@ -81,10 +81,28 @@
 
 
 
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII.
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
 
-% ---------------------------------------
+\addbibresource{LogikaITeoriaMnogosciBibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
 % Defining new environments (?)
-% ---------------------------------------
+% ------------------------------------------------------
 % Defining enviroment ``Wniosek''
 \newtheorem{corollary}{Wniosek}
 \newtheorem{definition}{Definicja}
@@ -94,10 +112,10 @@
 
 
 
-% ------------------------------
+% ------------------------------------------------------
 % Private packages
 % You need to put them in the same directory as .tex file
-% ------------------------------
+% ------------------------------------------------------
 % Contains various command useful for working with a text
 \usepackage{latexgeneralcommands}
 % Contains definitions useful for working with mathematical text
@@ -107,10 +125,10 @@
 
 
 
-% ------------------------------
-% Package ``hyperref''
+% ------------------------------------------------------
+% Package "hyperref"
 % They advised to put it on the end of preambule
-% ------------------------------
+% ------------------------------------------------------
 % It allows you to use hyperlinks in the text
 \usepackage{hyperref}
 
@@ -169,11 +187,10 @@
 
 
 
-% ############################
-% \Work{ % Autor i tytuł dzieła
-Józef W.~Bremer \\
-\textit{Wprowadzenie do~logiki},
-\cite{Bremer-Wprowadzenie-do-logiki-Wyd-2004}
+% ######################################
+\subsection{Józef W.~Bremer \textit{Wprowadzenie do~logiki},
+  \cite{Bremer-Wprowadzenie-do-logiki-Wyd-2004}}
+% ######################################
 
 
 % ##################
@@ -254,7 +271,7 @@ po~pierwszym~$q$. Niestety nie wiem który z nich należy tam umieścić.
 % ######################################
 \newpage
 
-\subsection{Andrzej Grzegorczyk \\
+\section{Andrzej Grzegorczyk \\
   \textit{Zarys logiki matematycznej},
   \cite{Grzegorczyk-Zarys-Logiki-Matematycznej-Wyd-1975}}
 
@@ -262,8 +279,12 @@ po~pierwszym~$q$. Niestety nie wiem który z nich należy tam umieścić.
 % ######################################
 
 
-% ##################
-\CenterBoldFont{Uwagi ogólne}
+
+% ############################
+\subsection{Uwagi ogólne}
+
+\label{ssec:Grzegorczyk-Zarys-ETC-Uwagi-ogolne}
+% ############################
 
 
 \noindent
@@ -283,8 +304,12 @@ $\Qbb$, jednak na dzień dzisiejszy taki wybór uważamy za~optymalny.
 
 
 
-% ##################
-\CenterBoldFont{Uwagi do~konkretnych stron}
+
+% ######################################
+\section{Uwagi do~konkretnych stron}
+
+\label{sec:Grzegorczyk-Zarys-ETC-Uwagi-do-konkretnych-stron}
+% ######################################
 
 
 \noindent
@@ -401,7 +426,7 @@ co zostało powyżej napisane.
 
 
 
-% ############################
+% ######################################
 
 
 
@@ -412,12 +437,11 @@ co zostało powyżej napisane.
 
 
 
-% ############################
+% ######################################
 \newpage
 
-% \Work{ % Autor i tytuł dzieła
-  Willard Van Orman Quine \\
-  \textit{Logika matematyczna}, \cite{Quine-Logika-matematyczna-Wyd-1974}
+\subsection{Willard Van Orman Quine \textit{Logika matematyczna},
+  \cite{Quine-Logika-matematyczna-Wyd-1974}}
 
 
 % ##################
@@ -446,7 +470,8 @@ co zostało powyżej napisane.
 
 \VerSpaceSix
 
-% ############################
+
+% ######################################
 
 
 
@@ -481,9 +506,7 @@ co zostało powyżej napisane.
 % ####################################################################
 % Bibliography
 
-\bibliographystyle{plalpha}
-
-\bibliography{MathematicsBooks}{}
+\printbibliography
 
 
 
