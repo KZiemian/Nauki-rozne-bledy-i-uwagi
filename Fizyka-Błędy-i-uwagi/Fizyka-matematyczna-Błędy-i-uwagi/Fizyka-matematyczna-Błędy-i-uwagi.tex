@@ -1,125 +1,136 @@
-% Autor: Kamil Ziemian
-% Korekta: Wojciech Dyba
-
-% ---------------------------------------------------------------------
-% Podstawowe ustawienia i pakiety
-% ---------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
-% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+% ------------------------------------------------------------------------------------------------------------------
+% Basic configuration and packages
+% ------------------------------------------------------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
 \documentclass[a4paper,11pt]{article}
-% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
-\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
-\usepackage{lmodern} % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
 
 
 
-% ------------------------------
-% Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ------------------------------
-\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
-\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
-% grafiki.
-\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
-\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
-% wprowadzane bezpośrednio w tekście.
-\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
-% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ------------------------------
-% MARGINS
-% ------------------------------
-\setmarginsrb
-{ 0.7in}  % left margin
-{ 0.6in}  % top margin
-{ 0.7in}  % right margin
-{ 0.8in}  % bottom margin
-{  20pt}  % head height
-{0.25in}  % head sep
-{   9pt}  % foot height
-{ 0.3in}  % foot sep
+% ------------------------------------------------------
+% Packages not tied to particular normal language
+% ------------------------------------------------------
+% This package should improved spaces in the text
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
 
 
 
-% ------------------------------
-% Często przydatne pakiety
-% ------------------------------
-\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% ------------------------------------------------------
+% Polonization of LaTeX document
+% ------------------------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
 
 
 
-% ------------------------------
-% Pakiety do tekstów z nauk przyrodniczych
-% ------------------------------
-\let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
-% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
-% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
-\usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
-% Mathematical Society (w skrócie AMS)
-\usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
-% \usepackage{siunitx} % Dla prostszego pisania jednostek fizycznych
-\usepackage{upgreek} % Ładniejsze greckie litery
-% Przykładowa składnia: pi = \uppi
-\usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
-\usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
-% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
-% nie wiem.
+% ------------------------------------------------------
+% Setting margins
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
 
 
 
-% ------------------------------
-% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
-% ------------------------------
-% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
-% matematycznych.
-\newtheorem{theorem}{Twierdzenie}
-% Analogicznie jak powyżej
-\newtheorem{definition}{Definicja}
-\newtheorem{corollary}{Wniosek}
-
-
-
-% ---------------------------------------
-% Pakiety napisane przez użytkownika.
-% Mają być w tym samym katalogu to ten plik .tex
-% ---------------------------------------
-\usepackage{latexgeneralcommands}
-\usepackage{mathcommands}
-% \usepackage{calculuscommands}
-% \usepackage{SchwartzBooksCommands}  % Pakiet napisany m.in. dla tego pliku.
-
-
-
-% ---------------------------------------------------------------------
-% Dodatkowe ustawienia dla języka polskiego
-% ---------------------------------------------------------------------
-\renewcommand{\thesection}{\arabic{section}.}
-% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
-% Brak kropki po numerach podrozdziału
-
-
-
-% ------------------------------
-% Ustawienia różnych parametrów tekstu
-% ------------------------------
+% ------------------------------------------------------
+% Setting vertical spaces in the text
+% ------------------------------------------------------
+% Setting space between lines
 \renewcommand{\baselinestretch}{1.1}
 
-% Ustawienie szerokości odstępów między wierszami w tabelach.
+% Setting space between lines in tables
 \renewcommand{\arraystretch}{1.4}
 
 
 
-% ------------------------------
-% Pakiet „hyperref”
-% Polecano by umieszczać go na końcu preambuły.
-% ------------------------------
-\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki.
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{LogikaITeoriaMnogosciBibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------------------------------
+% Private packages
+% You need to put them in the same directory as .tex file
+% ------------------------------------------------------
+% Contains various command useful for working with a text
+\usepackage{latexgeneralcommands}
+% Contains definitions useful for working with mathematical text
+\usepackage{mathcommands}
+
+
+
+
+
+% ------------------------------------------------------
+% Package "hyperref"
+% They advised to put it on the end of preambule
+% ------------------------------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
 
 
 
@@ -130,16 +141,16 @@
 
 
 
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 % Tytuł, autor, data
 \title{Fizyka matematyczna \\
   {\Large Błędy i~uwagi}}
 
-\author{Kamil Ziemian}
+\author{Kamil Ziemian, korekta Wojciech Dyba}
 
 
 % \date{}
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -166,10 +177,11 @@
 
 
 
-% ####################
-\Work{ % Autorzy i tytuł dziełą
-  R.~Curant, D.~Hilbert \\
-  \textit{Methods~of Mathematical Physics}, \cite{}}
+% ######################################
+\section{R.~Curant, D.~Hilbert \textit{Methods~of
+    Mathematical Physics}, \cite{}}
+
+% ######################################
 
 
 % ##################
@@ -200,13 +212,10 @@
 
 \end{center}
 
-\vspace{\spaceOne}
+\VerSpaceTwo
 
 
-% ############################
-
-
-
+% ######################################
 
 
 
@@ -214,12 +223,16 @@
 
 
 
-% ##############################
-\Work{ % Autor i tytuł dzieła
-  Walter Thirring \\
+
+
+
+% ######################################
+\section{Walter Thirring \\
   \textit{Fizyka matematyczna} \\
   \textit{Tom~I: Klasyczne układy dynamiczne},
   \cite{ThirringFizykaMatematycznaVolI1985}}
+
+% ######################################
 
 \vspace{0em}
 
@@ -233,13 +246,13 @@
 \noindent
 \Str{18} W~definicji (2.1,1) brakuje założenia o~istnieniu wektora zerowego. ?????
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 \noindent
-\StrWg{45}{1} Nie wiem jak w~sposób zgrabny napisać, że~wektor
+\StrWierszGora{45}{1} Nie wiem jak w~sposób zgrabny napisać, że~wektor
 $( 0, 0, \ldots, 0 )$ ma długość $n - 1$.
 
 
@@ -294,31 +307,31 @@ $( 0, 0, \ldots, 0 )$ ma długość $n - 1$.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
-\StrWd{10}{7} \\
-\Jest  $d( a, a ) = 0$, \\[0.1em]
+\StrWierszDol{10}{7} \\
+\Jest $d( a, a ) = 0$, \\[0.1em]
 $d( a,b ) > 0$ dla~$a \neq b$, $d( a, c ) \leq d( a, b ) + d( b,c )$; \\[0.3em]
-\Powin $d( a, a ) = 0$, $d( a,b ) > 0$ dla~$a \neq b$,
+\PowinnoByc $d( a, a ) = 0$, $d( a,b ) > 0$ dla~$a \neq b$,
 $d( a, c ) \leq d( a, b ) + d( b,c )$; \\[0.3em]
-\StrWd{29}{2} \\[0.3em]
-\Jest  $\partial M = \{ a \} \cup \{ b \}$, $U_{ 2 } = ( a, b ]$,
+\StrWierszDol{29}{2} \\[0.3em]
+\Jest $\partial M = \{ a \} \cup \{ b \}$, $U_{ 2 } = ( a, b ]$,
 $\Phi_{ 2 } : x \rightarrow b - a$. \\[0.3em]
-\Powin $U_{ 2 } = ( a, b ]$, $\Phi_{ 2 } : x \rightarrow b - a$,
+\PowinnoByc $U_{ 2 } = ( a, b ]$, $\Phi_{ 2 } : x \rightarrow b - a$,
 $\partial M = \{ a \} \cup \{ b \}$. \\[0.3em]
-\StrWg{38}{14} \\
-\Jest  Wiązka ta jest trywializowalna, jeśli rozmaitość $X$ jest
+\StrWierszGora{38}{14} \\
+\Jest Wiązka ta jest trywializowalna, jeśli rozmaitość $X$ jest
 paralelyzowalna. \\
-\Powin Jeśli wiązka ta jest trywializowalna, to rozmaitość jest
+\PowinnoByc Jeśli wiązka ta jest trywializowalna, to rozmaitość jest
 pralelyzowalna. \\
-\StrWd{43}{9} \\
-\Jest  $\mathbf{ 1 } \, \times$ \textbf{jednostkowy wektor} \\
-\Powin $\mathbf{ 1 } \, \equiv$ \textbf{jednostkowy wektor} \\
-\StrWd{43}{5} \\
-\Jest  $\mathbf{ 1 } \, \times$ wektor jednostkowy \\
-\Powin $\mathbf{ 1 } \equiv$ jednostkowy wektor styczny \\
+\StrWierszDol{43}{9} \\
+\Jest $\mathbf{ 1 } \, \times$ \textbf{jednostkowy wektor} \\
+\PowinnoByc $\mathbf{ 1 } \, \equiv$ \textbf{jednostkowy wektor} \\
+\StrWierszDol{43}{5} \\
+\Jest $\mathbf{ 1 } \, \times$ wektor jednostkowy \\
+\PowinnoByc $\mathbf{ 1 } \equiv$ jednostkowy wektor styczny \\
 
 
 
@@ -336,14 +349,13 @@ pralelyzowalna. \\
 
 
 
-% ##############################
-\newpage
-
-\Work{ % Autor i tytuł dzieła
-  Walter Thirring \\
+% ######################################
+\section{Walter Thirring \\
   \textit{Fizyka matematyczna} \\
   \textit{Tom~III: Mechanika kwantowa atomów} \\
   \textit{i~cząsteczek}, \cite{ThirringFizykaMatematycznaVolIV1987}}
+
+% ######################################
 
 \vspace{0em}
 
@@ -357,7 +369,7 @@ pralelyzowalna. \\
 \noindent
 \Str{18} W~definicji (2.1,1) brakuje założenia o~istnieniu wektora zerowego. ?????
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -394,7 +406,7 @@ pralelyzowalna. \\
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 
@@ -409,19 +421,17 @@ pralelyzowalna. \\
 
 
 
-% #####################################################################
-% #####################################################################
-% Bibliografia
+% ####################################################################
+% ####################################################################
+% Bibliography
 
-\bibliographystyle{plalpha}
-
-\bibliography{PhilNaturBooks}{}
+\printbibliography
 
 
 
 
 
 % ############################
+% End of the document
 
-% Koniec dokumentu
 \end{document}

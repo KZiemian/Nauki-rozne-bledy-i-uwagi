@@ -1,6 +1,6 @@
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 % Basic configuration and packages
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 % Package for discovering wrong and outdated usage of LaTeX.
 % More information to be found in l2tabu English version.
 \RequirePackage[l2tabu, orthodox]{nag}
@@ -9,19 +9,19 @@
 
 
 
-% ---------------------------------------
+% ------------------------------------------------------
 % Packages not tied to particular normal language
-% ---------------------------------------
-% This package should improved spaces in the text.
+% ------------------------------------------------------
+% This package should improved spaces in the text
 \usepackage{microtype}
 % Add few important symbols, like text Celcius degree
 \usepackage{textcomp}
 
 
 
-% ---------------------------------------
+% ------------------------------------------------------
 % Polonization of LaTeX document
-% ---------------------------------------
+% ------------------------------------------------------
 % Basic polonization of the text
 \usepackage[MeX]{polski}
 % Switching on UTF-8 encoding
@@ -33,27 +33,16 @@
 
 
 
-% ---------------------------------------
+% ------------------------------------------------------
 % Setting margins
-% ---------------------------------------
+% ------------------------------------------------------
 \usepackage[a4paper, total={14cm, 25cm}]{geometry}
-% Package for easy settings of margins. Unit of measurement is inch.
-% \usepackage{vmargin}
-% \setmarginsrb
-% { 0.7in}  % left margin
-% { 0.6in}  % top margin
-% { 0.7in}  % right margin
-% { 0.8in}  % bottom margin
-% {  20pt}  % head height
-% {0.25in}  % head sep
-% {   9pt}  % foot height
-% { 0.3in}  % foot sep
 
 
 
-% ---------------------------------------
+% ------------------------------------------------------
 % Setting vertical spaces in the text
-% ---------------------------------------
+% ------------------------------------------------------
 % Setting space between lines
 \renewcommand{\baselinestretch}{1.1}
 
@@ -62,21 +51,24 @@
 
 
 
-% ---------------------------------------
+% ------------------------------------------------------
 % Packages for scientific papers
-% ---------------------------------------
-% Switching off \lll symbol, that I guess is representing letter ``Ł''.
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
 % It collide with `amsmath' package's command with the same name
 \let\lll\undefined
 % Basic package from American Mathematical Society (AMS)
 \usepackage[intlimits]{amsmath}
-% Equations are numbered separately in every section.
+% Equations are numbered separately in every section
 \numberwithin{equation}{section}
 
 % Other very useful packages from AMS
-\usepackage{amsfonts, amssymb, amscd, amsthm}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
 
-% Package with support of physical units
+% Package for writting physical units
 \usepackage{siunitx}
 
 % Package with better looking calligraphy fonts
@@ -92,11 +84,29 @@
 
 
 
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
 
-% ---------------------------------------
+\addbibresource{LogikaITeoriaMnogosciBibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
 % Defining new environments (?)
-% ---------------------------------------
-% Defining enviroment ``Wniosek''
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
 \newtheorem{corollary}{Wniosek}
 \newtheorem{definition}{Definicja}
 \newtheorem{theorem}{Twierdzenie}
@@ -105,10 +115,10 @@
 
 
 
-% ------------------------------
+% ------------------------------------------------------
 % Private packages
 % You need to put them in the same directory as .tex file
-% ------------------------------
+% ------------------------------------------------------
 % Contains various command useful for working with a text
 \usepackage{latexgeneralcommands}
 % Contains definitions useful for working with mathematical text
@@ -118,10 +128,10 @@
 
 
 
-% ------------------------------
-% Package ``hyperref''
+% ------------------------------------------------------
+% Package "hyperref"
 % They advised to put it on the end of preambule
-% ------------------------------
+% ------------------------------------------------------
 % It allows you to use hyperlinks in the text
 \usepackage{hyperref}
 
@@ -134,8 +144,8 @@
 
 
 
-% ---------------------------------------------------------------------
-% Tytuł, autor, data
+% ------------------------------------------------------------------------------------------------------------------
+% Title and author of the text
 \title{Mechanika Newtona \\
   {\Large Błędy i~uwagi}}
 
@@ -143,7 +153,7 @@
 
 
 % \date{}
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -155,6 +165,7 @@
 
 
 % ####################################################################
+% Beginning of the document
 \begin{document}
 % ####################################################################
 
@@ -163,7 +174,7 @@
 
 
 % ######################################
-\maketitle % Tytuł całego tekstu
+\maketitle
 % ######################################
 
 
@@ -1036,17 +1047,17 @@ założenie o~ciągłości $g$ wydaje się bardzo nienaturalne. Wydaje się,
 
 \noindent
 \StrWierszDol{29}{4} \\
-\Jest  tworzy sferę dwuwymiarową. \\
-\Powin można przekształcić w~sferę dwuwymiarową. \\
+\Jest tworzy sferę dwuwymiarową. \\
+\PowinnoByc można przekształcić w~sferę dwuwymiarową. \\
 \StrWierszDol{42}{10} \\
 \Jest  Słońce znajduje~się nie w~centrum \\
-\Powin ale~Słońce nie znajduje~się w~centrum \\
+\PowinnoByc ale~Słońce nie znajduje~się w~centrum \\
 \StrWierszDol{71}{15} \\
-\Jest  do swego\ldots \\
-\Powin dowolnie blisko swego\ldots \\
+\Jest do swego\ldots \\
+\PowinnoByc dowolnie blisko swego\ldots \\
 \StrWierszGora{215}{4} \\
-\Jest  wirowej, a~pole jest bezźródłowe. \\
-\Powin wirowej. \\
+\Jest wirowej, a~pole jest bezźródłowe. \\
+\PowinnoByc wirowej. \\
 
 
 
@@ -1354,8 +1365,8 @@ obliczyć pewne parametry ruchu drugiej.
 
 \noindent
 \StrWierszDol{27}{2} \\
-\Jest  $S = S' + \mu \vecVbold \cdot \vecRbold' + \frac{ 1 }{ 2 } \mu V^{ 2 } t$ \\
-\Powin $S = S' + \mu \vecVbold \cdot \vecRbold'( t ) - \mu \vecVbold
+\Jest $S = S' + \mu \vecVbold \cdot \vecRbold' + \frac{ 1 }{ 2 } \mu V^{ 2 } t$ \\
+\PowinnoByc $S = S' + \mu \vecVbold \cdot \vecRbold'( t ) - \mu \vecVbold
 \cdot \vecRbold'( 0 ) + \frac{ 1 }{ 2 } \mu V^{ 2 } t$ \\
 
 
@@ -2100,7 +2111,7 @@ nałożony na $f^{ -1 }$.
 
 \noindent
 \StrWierszDol{42}{10} \\
-\Jest  Słońce znajduje się nie w centrum \\
+\Jest Słońce znajduje się nie w centrum \\
 \Powin ale Słońce nie znajduje się w centrum \\
 
 
@@ -2115,19 +2126,17 @@ nałożony na $f^{ -1 }$.
 
 
 
-% #####################################################################
-% #####################################################################
-% Bibliografia
+% ####################################################################
+% ####################################################################
+% Bibliography
 
-\bibliographystyle{plalpha}
-
-\bibliography{PhilNaturBooks}{}
+\printbibliography
 
 
 
 
 
 % ############################
+% End of the document
 
-% Koniec dokumentu
 \end{document}

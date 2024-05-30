@@ -1,121 +1,136 @@
-% ---------------------------------------------------------------------
-% Podstawowe ustawienia i pakiety
-% ---------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
-% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+% ------------------------------------------------------------------------------------------------------------------
+% Basic configuration and packages
+% ------------------------------------------------------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
 \documentclass[a4paper,11pt]{article}
-% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
-\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
-\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
 
 
 
-% ------------------------------
-% Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ------------------------------
-\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
-% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
-% grafiki.
-% \usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
-% \usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
-% wprowadzane bezpośrednio w tekście.
-\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
-% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ------------------------------
-% MARGINS
-% ------------------------------
-\setmarginsrb
-{ 0.7in}  % left margin
-{ 0.6in}  % top margin
-{ 0.7in}  % right margin
-{ 0.8in}  % bottom margin
-{  20pt}  % head height
-{0.25in}  % head sep
-{   9pt}  % foot height
-{ 0.3in}  % foot sep
+% ------------------------------------------------------
+% Packages not tied to particular normal language
+% ------------------------------------------------------
+% This package should improved spaces in the text
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
 
 
 
-% ------------------------------
-% Często przydatne pakiety
-% ------------------------------
-% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-% \usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
-% % więcej, ale ja nie potrafię nic o tym powiedzieć).
+% ------------------------------------------------------
+% Polonization of LaTeX document
+% ------------------------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
 
 
 
-% ------------------------------
-% Pakiety do tekstów z nauk przyrodniczych
-% ------------------------------
-\let\lll\undefined  % Amsmath gryzie się z językiem pakietami do języka
-% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
-% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
-\usepackage[intlimits]{amsmath}  % Podstawowe wsparcie od American
-% Mathematical Society (w skrócie AMS)
-\usepackage{amsfonts, amssymb, amscd, amsthm}  % Dalsze wsparcie od AMS
-% \usepackage{siunitx}  % Do prostszego pisania jednostek fizycznych
-\usepackage{upgreek}  % Ładniejsze greckie litery
-% Przykładowa składnia: pi = \uppi
-% \usepackage{slashed}  % Pozwala w prosty sposób pisać slash Feynmana.
-\usepackage{calrsfs}  % Zmienia czcionkę kaligraficzną w \mathcal
-% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
-% nie wiem.
+% ------------------------------------------------------
+% Setting margins
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
 
 
 
-% ------------------------------
-% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
-% ------------------------------
-% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
-% matematycznych.
-\newtheorem{theorem}{Twierdzenie}
-% Analogicznie jak powyżej
-\newtheorem{definition}{Definicja}
-\newtheorem{corollary}{Wniosek}
-
-
-
-% ------------------------------
-% Pakiety napisane przez użytkownika.
-% Mają być w tym samym katalogu to ten plik .tex
-% ------------------------------
-\usepackage{mechanikakwantowa}  % Pakiet napisany konkretnie dla tego pliku.
-\usepackage{latexgeneralcommands}
-\usepackage{mathcommands}
-
-
-
-% ---------------------------------------------------------------------
-% Dodatkowe ustawienia dla języka polskiego
-% ---------------------------------------------------------------------
-\renewcommand{\thesection}{\arabic{section}.}
-% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
-% Brak kropki po numerach podrozdziału
-
-
-
-% ------------------------------
-% Ustawienia różnych parametrów tekstu
-% ------------------------------
+% ------------------------------------------------------
+% Setting vertical spaces in the text
+% ------------------------------------------------------
+% Setting space between lines
 \renewcommand{\baselinestretch}{1.1}
 
-% Ustawienie szerokości odstępów między wierszami w tabelach.
+% Setting space between lines in tables
 \renewcommand{\arraystretch}{1.4}
 
 
 
-% ------------------------------
-% Pakiet „hyperref”
-% Polecano by umieszczać go na końcu preambuły.
-% ------------------------------
-\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki.
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{LogikaITeoriaMnogosciBibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------------------------------
+% Private packages
+% You need to put them in the same directory as .tex file
+% ------------------------------------------------------
+% Contains various command useful for working with a text
+\usepackage{latexgeneralcommands}
+% Contains definitions useful for working with mathematical text
+\usepackage{mathcommands}
+
+
+
+
+
+% ------------------------------------------------------
+% Package "hyperref"
+% They advised to put it on the end of preambule
+% ------------------------------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
 
 
 
@@ -126,7 +141,7 @@
 
 
 
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 % Tytuł tekstu
 \title{Mechanika kwantowa \\
   {\Large Błędy i~uwagi}}
@@ -135,7 +150,7 @@
 
 
 % \date{}
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -165,15 +180,17 @@
 % ######################################
 \section{Mechanika kwantowa}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
+% ######################################
+\section{Ramamurti Shankar \\
+  \textit{Mechanika kwantowa},
+  \parencite{ShankarMechanikaKwantowa2006}}
+
 % ############################
-\Work{ % Autor i tytuł dzieła
-  Ramamurti Shankar \\
-  \textit{Mechanika kwantowa}, \cite{ShankarMechanikaKwantowa2006}}
 
 \vspace{0em}
 
@@ -189,7 +206,7 @@
 pochodnej funkcji Gaussa należy odbić wykres przedstawiony względem osi
 $y = 0$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -230,7 +247,7 @@ $y = 0$.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
@@ -243,9 +260,9 @@ $$\ldots = i \int_{ a }^{ b } \frac{ dg^{ * } }{ dx } f( x ) \dPL x \, .$$
 
 Str. 81.
 $\langle k' | X | k \rangle = \frac{ 1 }{ 2 \pi } \int_{ -\infty
-  }^{ \infty } \e^{ -i k' x } x \e^{ i k x } \dPL x = -i \frac{ d }{ dk } \bigg( \frac{ 1 }{ 2 \pi } \int_{ -\infty }^{ \infty } \e^{ i ( k - k' ) x } \bigg) = -i \delta'( k - k' ) \, .$ Wobec tego, jeśli $| g( k ) \rangle$ jest wektorem, którym w bazie $K$
+  }^{ \infty } e^{ -i k' x } x e^{ i k x } \dPL x = -i \frac{ d }{ dk } \bigg( \frac{ 1 }{ 2 \pi } \int_{ -\infty }^{ \infty } e^{ i ( k - k' ) x } \bigg) = -i \delta'( k - k' ) \, .$ Wobec tego, jeśli $| g( k ) \rangle$ jest wektorem, którym w bazie $K$
  odpowiada funkcja $g( k )$, to
-$X| g( k ) \rangle = \bigg| \frac{ -i \dPL g( k ) }{ \dPL k } \bigg\rangle \, .$
+$X| g( k ) \rangle = \bigg| \frac{ -i d g( k ) }{ d k } \bigg\rangle \, .$
 Podsumujmy: w bazie $X$ operator $X$ działa jak $x$, a operator $K$
 jak $-i d / d x$ (na funkcje $f( x )$), a w bazie $K$ działa jak
 $k$, a operator $X$ jak $-i d / d k$\ldots
@@ -266,12 +283,11 @@ $k$, a operator $X$ jak $-i d / d k$\ldots
 
 
 
-% ############################
-\newpage
+% ######################################
+\section{L.I. Schiff \textit{Mechanika kwantowa},
+  \parencite{SchiffMechanikaKwantowe1987}}
 
-\Work{ % Autorzy i tytuł dzieła
-  L. I. Schiff \\
-  \textit{Mechanika kwantowa}, \cite{SchiffMechanikaKwantowe1987}}
+% ######################################
 
 \vspace{0em}
 
@@ -299,7 +315,7 @@ nieoznaczoności~wynikały~z~jej formalizmu matematycznego. Jak
 zauważył to Konrad Szymański, wynika to po~prostu z~rozciągłości,
 w~szczególnym przypadku, przestrzennej paczki falowej.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -307,7 +323,7 @@ w~szczególnym przypadku, przestrzennej paczki falowej.
 \Str{21} Jak zauważył Paweł Duch, nierówność (3.2)
 nie~może być prawdziwa, bo istnieją stany własne $J_{ z }$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -363,16 +379,16 @@ mówiąc inaczej jeśli w~układzie mamy energię Fermiego.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceFour
 
 
 \noindent
-\StrWg{21}{16} \\
-\Jest  orbity**.Równanie(3.3)implikuje\ldots \\
-\Powin orbity**. Równanie (3.3) implikuje\ldots \\
-\StrWg{54}{18} \\
-\Jest  w~odpowiadających im punktach\ldots  \\
-\Powin w~obszarze przez te ścianki zajętym\ldots \\
+\StrWierszGora{21}{16} \\
+\Jest orbity**.Równanie(3.3)implikuje\ldots \\
+\PowinnoByc orbity**. Równanie (3.3) implikuje\ldots \\
+\StrWierszGora{54}{18} \\
+\Jest w~odpowiadających im punktach\ldots  \\
+\PowinnoByc w~obszarze przez te ścianki zajętym\ldots \\
 
 
 
@@ -387,13 +403,15 @@ mówiąc inaczej jeśli w~układzie mamy energię Fermiego.
 
 
 
-% ############################
+% ######################################
 \newpage
 
-\Work{ % Autorzy i tytuł dzieła
-  Marian Grabowski, Roman S.~Ingarden \\
-  \textit{Mechanika kwantowa. Ujęcie w~przestrzeni Hilberta},
-  \cite{GrabowskiIngardenMechanikaKwantowa1987}}
+\section{Marian Grabowski, Roman S.~Ingarden \\
+  \textit{Mechanika kwantowa. Ujęcie w~przestrzeni
+    Hilberta},
+  \parencite{GrabowskiIngardenMechanikaKwantowa1987}}
+
+% ######################################
 
 \vspace{0em}
 
@@ -410,7 +428,7 @@ wymiarowa podprzestrzeń przestrzeni Hilberta (ogólniej: przestrzeni
 unormowanej), jest domknięta. Wynika to, choćby z tego, że każda
 podprzestrzeń skończenie wymiarowa jest lokalnie zwarta.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -421,7 +439,7 @@ Str. Jest tu przykład rozumowania z ogromną dziurą. Nie możemy
 korzystać z własności przestrzeni Hilberta dopóki nie udowodnimy, że
 jest to przestrzeń Hilberta.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -436,7 +454,7 @@ istnieje alternatywny rzut na te podprzestrzenie. Negatywną odpowiedź
 daje nam fakt iż:
 $\Mcal \cup \Mcal^{ \bot } = \{ \emptyset \}$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -450,7 +468,7 @@ wszystkim z podanej definicji zbioru zupełnego nie wynika, że każdy wektor
 z~$\Hcal$ można przedstawić jako szereg elementów tego zbioru. Stąd właśnie
 Thirring rozróżnia pojęcie totalności i zupełności.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -463,7 +481,7 @@ ortogonalny do jego domknięcia, w dowodzie pierwszego wniosku
 wyrażone słownie, w drugim za pomocą wzorów. Warto byłoby zrobić to
 bardzie elegancko.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -484,7 +502,7 @@ taki $( y_{ 1 }, y_{ 2 } ) \in B_{ 1 } \oplus B_{ 2 }$, że
 $x_{ 1 } + x_{ 2 } = y_{ 1 } + y_{ 2 }$, czyli
 $A_{ 1 } \oplus A_{ 2 }$ nie jest sumą prostą.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -494,7 +512,7 @@ $A_{ 1 } \oplus A_{ 2 }$ nie jest sumą prostą.
 \Str{38} Pojawia się tu pojęcie operatora ograniczonego, które
 jest wprowadzone dopiero na stronie 39.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -508,7 +526,7 @@ pierwszej równości w punkcie a), w istocie udowodniono równość:
   \Vert A \Vert = \sup_{ \Vert \varphi \Vert = 1 } \Vert A \varphi \Vert \, .
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -518,7 +536,7 @@ pierwszej równości w punkcie a), w istocie udowodniono równość:
 \Str{46} Punkty twierdzenia są ustawione w dziwnej kolejności,
 biorąc pod uwagę logikę dowodu.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -528,7 +546,7 @@ biorąc pod uwagę logikę dowodu.
 \Str{48} Z tego, że dana liczba nie należy do widma, nie wynika
 że nie istnieje dla niej rezolwenta.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -538,7 +556,7 @@ biorąc pod uwagę logikę dowodu.
 \Str{49} Drugie stwierdzenie z punktu (\romannumeral4), jest już
   zawarte w punkcie (\romannumeral2).
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -548,7 +566,7 @@ biorąc pod uwagę logikę dowodu.
 \Str{52} Użyte tu pojęcie funkcji charakterystycznej, nie jest
 chyba nigdzie w książce przedstawione.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -560,7 +578,7 @@ operatora, domykalności operatora i jego domknięcia. W~szczególności
 z~twierdzenia o wykresie domkniętym wynika, że~domknięcie operatora jest
 zawsze operatorem ograniczonym.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -570,7 +588,7 @@ zawsze operatorem ograniczonym.
 \Str{58} Uwaga o twierdzeniu II (\romannumeral3) jest zupełnie
 niezrozumiała.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -580,7 +598,7 @@ niezrozumiała.
 \Str{58} Zdefiniowaniu rezolwenty i~widma operatora nieograniczonego powinno
 zostać poświęcone więcej miejsca.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -590,7 +608,7 @@ zostać poświęcone więcej miejsca.
 \Str{58} Nie dodano, że widmo nieograniczonego operatora
 domykalnego, definiujemy jako widmo jego domknięcia.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -599,7 +617,7 @@ domykalnego, definiujemy jako widmo jego domknięcia.
 \noindent
 \Str{58} Jedyność wektora $\eta$ wynika już z~lematu Riesza.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -609,7 +627,7 @@ domykalnego, definiujemy jako widmo jego domknięcia.
 \Str{80} Ustalenie takiej wartości stałej $C$, ani w~ogóle ustalenie jej
 wartości, nie jest potrzebne w rozważanym zagadnieniu.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -620,7 +638,7 @@ wartości, nie jest potrzebne w rozważanym zagadnieniu.
 zbieżne. Osoba znająca teorię całki Lebesgue’a wie, że~wystarczy założyć
 zbieżność punktową, a~nawet tylko zbieżność punktową prawie wszędzie.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -675,7 +693,7 @@ brakuje założenia o~zbieżności rozważanego ciągu funkcji.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceFour
 
 
 \noindent
@@ -691,9 +709,9 @@ brakuje założenia o~zbieżności rozważanego ciągu funkcji.
 \Str{71} \ldots$A^{ * } A = S U^{ * } U S = S E S$\ldots \\
 \Str{74} \ldots interpretacją. Teraz\ldots \\
 \Str{85} $\ldots = -i \frac{ d }{ dx } \frac{ 1 }{ \sqrt{ 2 \pi } }
-\int\limits_{ -\infty }^{ +\infty } ( \e^{ i x s } - 1 ) \varphi( s ) \dPL s \textrm{.}$ \\
+\int\limits_{ -\infty }^{ +\infty } ( e^{ i x s } - 1 ) \varphi( s ) ds \textrm{.}$ \\
 \Str{86} $F^{ -1 } Q \varphi = -i \frac{ d }{ dx } \frac{ 1 }{ \sqrt{ 2 \pi } }
-\int\limits_{ -\infty }^{ +\infty } ( \e^{ i x s } - 1 ) \varphi( s ) \dPL s
+\int\limits_{ -\infty }^{ +\infty } ( e^{ i x s } - 1 ) \varphi( s ) d s
 = \frac{ 1 }{ \hbar } P F^{ -1 } \varphi$ \\
 \Str{311} \ldots dla każdego $i$. Jeżeli\ldots
 
@@ -715,7 +733,7 @@ brakuje założenia o~zbieżności rozważanego ciągu funkcji.
 
 \section{Informatyka kwantowa}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
@@ -727,15 +745,11 @@ brakuje założenia o~zbieżności rozważanego ciągu funkcji.
 
 
 
+% ####################################################################
+% ####################################################################
+% Bibliography
 
-
-% #####################################################################
-% #####################################################################
-% Bibliografia
-
-\bibliographystyle{plalpha}
-
-\bibliography{PhilNaturBooks}{}
+\printbibliography
 
 
 
