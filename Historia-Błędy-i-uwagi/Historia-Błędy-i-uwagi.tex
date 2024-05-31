@@ -1,89 +1,136 @@
-% Autor: Kamil Ziemian
-
-% ---------------------------------------------------------------------
-% Podstawowe ustawienia i pakiety
-% ---------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
-% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+% ------------------------------------------------------------------------------------------------------------------
+% Basic configuration and packages
+% ------------------------------------------------------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
 \documentclass[a4paper,11pt]{article}
-% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
-\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
-\usepackage{lmodern} % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
 
 
 
-% ---------------------------------------
-% Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ---------------------------------------
-\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
-\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
-% wprowadzane bezpośrednio w tekście.
+% ------------------------------------------------------
+% Packages not tied to particular normal language
+% ------------------------------------------------------
+% This package should improved spaces in the text
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
 
 
 
-% ---------------------------------------
-% MARGINS
-% ---------------------------------------
-\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
-% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-\setmarginsrb
-{ 0.7in}  % left margin
-{ 0.6in}  % top margin
-{ 0.7in}  % right margin
-{ 0.8in}  % bottom margin
-{  20pt}  % head height
-{0.25in}  % head sep
-{   9pt}  % foot height
-{ 0.3in}  % foot sep
+% ------------------------------------------------------
+% Polonization of LaTeX document
+% ------------------------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
 
 
 
-% ---------------------------------------
-% Często używane pakiety
-% ---------------------------------------
-% \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-% \usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
-% % więcej, ale ja nie potrafię nic o tym powiedzieć).
+% ------------------------------------------------------
+% Setting margins
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
 
 
 
-% ---------------------------------------
-% Pakiety których pliki *.sty mają być w tym samym katalogu co ten plik
-% ---------------------------------------
-\usepackage{latexgeneralcommands}
-
-
-
-% ---------------------------------------
-% Dodatkowe ustawienia dla języka polskiego
-% ---------------------------------------
-\renewcommand{\thesection}{\arabic{section}.}
-% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
-% Brak kropki po numerach podrozdziału
-
-
-
-% ---------------------------------------
-% Ustawienia różnych parametrów tekstu
-% ---------------------------------------
+% ------------------------------------------------------
+% Setting vertical spaces in the text
+% ------------------------------------------------------
+% Setting space between lines
 \renewcommand{\baselinestretch}{1.1}
 
-\renewcommand{\arraystretch}{1.4} % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+% Setting space between lines in tables
+\renewcommand{\arraystretch}{1.4}
 
 
 
-% ---------------------------------------
-% Pakiet „hyperref”
-% Polecano by umieszczać go na końcu preambuły
-% ---------------------------------------
-\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{LogikaITeoriaMnogosciBibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------------------------------
+% Private packages
+% You need to put them in the same directory as .tex file
+% ------------------------------------------------------
+% Contains various command useful for working with a text
+\usepackage{latexgeneralcommands}
+% Contains definitions useful for working with mathematical text
+\usepackage{mathcommands}
+
+
+
+
+
+% ------------------------------------------------------
+% Package "hyperref"
+% They advised to put it on the end of preambule
+% ------------------------------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
 
 
 
@@ -94,8 +141,8 @@
 
 
 
-% ---------------------------------------------------------------------
-% Tytuł, autor, data
+% ------------------------------------------------------------------------------------------------------------------
+% Title and author of the text
 \title{Historia \\
   {\Large Błędy i~uwagi}}
 
@@ -103,7 +150,7 @@
 
 
 % \date{}
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -115,7 +162,7 @@
 
 
 % ####################################################################
-% Początek dokumentu
+% Beginning of the document
 \begin{document}
 % ####################################################################
 
@@ -124,7 +171,7 @@
 
 
 % ######################################
-\maketitle  % Tytuł całego tekstu
+\maketitle
 % ######################################
 
 
@@ -134,16 +181,17 @@
 % ######################################
 \section{Syntezy historyczne}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Paul Johnson \\
-  \textit{Narodziny nowoczesności},
+% ######################################
+\section{Paul Johnson \textit{Narodziny nowoczesności},
   \cite{JohnsonNarodzinyNowoczesnoci1995}}
+
+
+% ######################################
 
 \vspace{0em}
 
@@ -228,26 +276,26 @@
 
 \end{center}
 
-\vspace{\spaceTwo}
-
-
-% ############################
-
-
-
-
-
-
-
-
-
+\VerSpaceTwo
 
 % ############################
+
+
+
+
+
+
+
+
+
+
+% ######################################
 \newpage
 
-\Work{ % Autor i tytuł dzieła
-  Conrad Totman \\
-  \textit{Historia Japonii}, \cite{TotmanHistoriaJaponii2009}}
+\section{Conrad Totman \textit{Historia Japonii},
+  \cite{TotmanHistoriaJaponii2009}}
+
+% ############################
 
 \vspace{0em}
 
@@ -263,7 +311,7 @@ więc należałoby~się spodziewać, że~do regionu Kinki należą prowincję
 o~numerach 35--40. Zamiast tego stoją tam liczby 36--40, jednak nie wiem jak
 to poprawić. Podobny problem jest z~regionami Kinki i~Shikoku.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -362,7 +410,7 @@ to poprawić. Podobny problem jest z~regionami Kinki i~Shikoku.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 % \noi
@@ -387,7 +435,7 @@ to poprawić. Podobny problem jest z~regionami Kinki i~Shikoku.
 \section{Dzieje świata lat 1789--1914}
 
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
@@ -395,9 +443,8 @@ to poprawić. Podobny problem jest z~regionami Kinki i~Shikoku.
 % ############################
 \newpage
 
-\Work{ % Autor i tytuł dzieła
-  James M. McPherson \\
-  \textit{Battle Cry~of Freedom. Historia Wojny Secesyjnej},
+\section{James M. McPherson \textit{Battle Cry~of Freedom.
+    Historia Wojny Secesyjnej},
   \cite{McPhersonBattleCryOfFreedom2016}}
 
 \vspace{0em}
@@ -413,7 +460,7 @@ W~książce angielskie określenie „Civil War” zostało przełożone jako Wo
 Secesyjna, jednak znacznie lepszym tłumaczeniem jest „Wojna Domowa” i~jej
 będę w~razie potrzeby używał.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -426,7 +473,7 @@ określenia jako „Wojna o~Niepodległość”. Należałoby dosłownie tłumac
 pierwsze określenie jako „Amerykańską Rewolucję”, bądź „Rewolucję
 Amerykańską” i~tej wersji będę w razie potrzeby używał.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -437,7 +484,7 @@ Amerykańską” i~tej wersji będę w razie potrzeby używał.
 
 
 \noindent
-\StrWd{23}{4} Podane tu~stwierdzenie, że~Amerykanie w~1850~r.
+\StrWierszDol{23}{4} Podane tu~stwierdzenie, że~Amerykanie w~1850~r.
 zapełnili imperium nabyte w~1803 od~Napoleona wydaje~się mocno
 przesadzone. Zauważmy, że~zgodnie z~tym co pisze dalej McPherson
 populacja Stanów Zjednoczonych dopiero w~kilka lat później
@@ -449,7 +496,7 @@ z~koloniami, pokazuje to jak małe było wtedy zaludnienie ogromnych
 terenów Ameryki Północnej. Ciężko więc twierdzić, że~ziemie te zostały
 zapełnione, trafniej byłoby powiedzieć, iż~zostały zaludnione.
 
-% \vspace{\spaceFour}
+% \VerSpaceFour
 
 
 
@@ -543,16 +590,16 @@ zapełnione, trafniej byłoby powiedzieć, iż~zostały zaludnione.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
-\StrWd{31}{22} \\
-\Jest  Podczas gdy nie odrzucali tezy \\
-\Powin Nie~odrzucając tezy \\
-\StrWg{35}{13} \\
-\Jest  i~okresami bezrobocia, spowodowanymi recesją \\
-\Powin i~okresów bezrobocia, spowodowanych recesją \\
+\StrWierszDol{31}{22} \\
+\Jest Podczas gdy nie odrzucali tezy \\
+\PowinnoByc Nie~odrzucając tezy \\
+\StrWierszGora{35}{13} \\
+\Jest i~okresami bezrobocia, spowodowanymi recesją \\
+\PowinnoByc i~okresów bezrobocia, spowodowanych recesją \\
 
 
 % ############################
@@ -571,15 +618,14 @@ zapełnione, trafniej byłoby powiedzieć, iż~zostały zaludnione.
 
 \subsection{Dzieje świata po~1914~r.}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
-  Martin Gilbert \\
-  \textit{Pierwsza wojna światowa}, \cite{GilbertPierwszaWojnaSwiatowa2003}}
+\section{Martin Gilbert \textit{Pierwsza wojna światowa},
+  \cite{GilbertPierwszaWojnaSwiatowa2003}}
 
 \vspace{0em}
 
@@ -591,32 +637,32 @@ zapełnione, trafniej byłoby powiedzieć, iż~zostały zaludnione.
 
 
 \noindent
-\StrWg{21}{1} Ponieważ książka ta został pierwotnie wydania w~1994 roku,
+\StrWierszGora{21}{1} Ponieważ książka ta został pierwotnie wydania w~1994 roku,
 przynajmniej prawa autorskie Martina Gilberta zostały wtedy zatwierdzone,
 a~data powstania „Wstępu” to~20~czerwca 1994~roku, pojawia~się problem.
 Przytaczana wypowiedź z~wojny na~terenie Bośni, nie mogła pochodzić z~26
 grudnia 1996~roku. Najpewniej chodzi tu~o~26~grudnia 1993 roku,
 ale~pewności mieć nie~mogę.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{70}{2} Nie wiem kto popełnił błąd, żołnierz, autor czy~tłumacz, ale
+\StrWierszGora{70}{2} Nie wiem kto popełnił błąd, żołnierz, autor czy~tłumacz, ale
 to zdanie o~martwym doboszu jest bez sensu.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{70}{5} To zdanie jest na~pewno źle przetłumaczone, ale~nie~wiem
-jakie je poprawić.
+\StrWierszDol{70}{5} To zdanie jest na~pewno źle przetłumaczone,
+ale~nie~wiem jakie je poprawić.
 
 
 
@@ -653,7 +699,7 @@ jakie je poprawić.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 
@@ -671,7 +717,7 @@ jakie je poprawić.
 % ############################
 \newpage
 
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Paul Johnson \\
   \textit{Historia świata XX wieku, od~Rewolucji Październikowej} \\
   \textit{do~<<Solidarności>>. Tom~I},
@@ -692,7 +738,7 @@ lecz przez jego tłumacza, bądź tłumaczy, na~język angielski. Sam Freud
 używał zwykłych słów z~języka niemieckiego: das~Es, Ich, Uberich. (Powinno
 to być omówione w książce Burzyńskiej i~Markowskiego \cite{BM09}).
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -704,7 +750,7 @@ mogła ukazać~się pod koniec 1917 roku. Najprawdopodobniej chodzi tu
 o~koniec roku 1919. Powinno~się tu też znaleźć obszerniejsze omówienie
 treści tej książki.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -714,7 +760,7 @@ treści tej książki.
 \Str{63} Głosowanie nad traktatem o~którym tu mowa nie~odbyło~się w~marcu
 1919 roku, lecz w~marcu 1920 r.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -727,7 +773,7 @@ wielokrotnie mówił
 \href{https://www.youtube.com/watch?v=yfQ7rpq_irA}{Andrzej Nowak} i~co
 opisał w~„Pierwszej zdradzie zachodu”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -740,7 +786,7 @@ dnia, tego którego Lenin wrócił on do Rosji. Jeśli to prawda powinno to
 zostać lepiej zaznaczone w~tekście, w~chwili obecnej, nie jest to w~pełni
 jasne.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -751,7 +797,7 @@ jasne.
 broni w~I~Wojnie Światowej, powinien być bardziej wyczerpujący, w~tym
 momencie jest zbyt zwięzły, aby był jasny.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -763,7 +809,7 @@ na~członków Ententy. Jest to~chyba anachronizm, którego nie powinno~się
 stosować jako, że~nazwa „Aliantów” jest powszechnie przyjęta dla~sojuszu
 z~II, a~nie z~I, Wojny Światowej.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -774,7 +820,7 @@ z~II, a~nie z~I, Wojny Światowej.
 skonstruowane, nie wiem jednak jak je poprawić. Mimo tego, tego
 jego sens jest jasny.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -785,7 +831,7 @@ jego sens jest jasny.
 w~rządzie Hitlera, powołanym podczas puczu monachijskiego. Warto byłoby
 napisać skąd on~się w~ogóle w~tym miejscu wziął.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -798,7 +844,7 @@ napisać skąd on~się w~ogóle w~tym miejscu wziął.
 manifestował arystokratyczną pogardę dla~wulgarności klasy średniej
 i~francuski brak równowagi emocjonalnej”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -811,7 +857,7 @@ rosła. Problemem jest to, że~rosła ona bardzo słabo w~porównaniu z~innymi
 państwami i~tym samym malał stosunek liczby mieszkańców Francji
 do~mieszkańców innych krajów w~Europie.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -824,7 +870,7 @@ spisku”, którą lepiej byłoby zastąpić przyjętym w~języku polskim termin
 że~jeśli dobrze rozumiem, książkę przetłumaczono jeszcze w~latach 80 XX~w.,
 kiedy nie było jeszcze w~języku polskim ustalonej nazwy na~to~zjawisko.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -833,7 +879,7 @@ kiedy nie było jeszcze w~języku polskim ustalonej nazwy na~to~zjawisko.
 \noindent
 \Str{288}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -847,7 +893,7 @@ wszystkich rzeczy o~jakich mówił, stwierdzenie, że~chrześcijaństwo zostało
 odrzucone w~skutek kłótni misjonarzy, jest gigantycznym uproszczeniem,
 a~może nawet wypaczeniem, historii.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -861,7 +907,7 @@ następca cesarz Yoshihito urodził~się, gdy miał on 27 lat, więc można
 wykluczyć wpływ wieku Meiji na stan zdrowia jego następcy, co ten fragment
 mógł sugerować.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -870,7 +916,7 @@ mógł sugerować.
 \noindent
 \Str{305}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -882,7 +928,7 @@ jest błędny, od 1937~r. prowadziła już drugą wojnę chińsko-japońską, za
 w~grudniu 1941 roku dokonała ataku na Stany Zjednoczone. Jest to zapewne
 kolejna w~tej książce literówka, nie wiem jednak jak~ją poprawić.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -891,7 +937,7 @@ kolejna w~tej książce literówka, nie wiem jednak jak~ją poprawić.
 \noindent
 \Str{345} Brak numeru strony w~prawy górnym rogu.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -902,7 +948,7 @@ kolejna w~tej książce literówka, nie wiem jednak jak~ją poprawić.
 reakcja na~sytuację w~Chinach powinny być przedstawione szerzej. W~obecnej
 chwili przez swoją zwięzłość jest to dosyć niejasne i~chaotyczne.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -913,7 +959,7 @@ chwili przez swoją zwięzłość jest to dosyć niejasne i~chaotyczne.
 jego lewa była uszkodzona. Czy to dlatego, że~nie był w~stanie schować
 lewej ręki za~plecami?
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -922,7 +968,7 @@ lewej ręki za~plecami?
 \noindent
 \Str{457} W~tekście brak odwołania do~przypisu 11.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -931,7 +977,7 @@ lewej ręki za~plecami?
 \noindent
 \Str{459}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -940,7 +986,7 @@ lewej ręki za~plecami?
 \noindent
 \Str{465}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -958,7 +1004,7 @@ lewej ręki za~plecami?
 
 \CenterBoldFont{Błędy}
 
-\vspace{\spaceFive}
+\VerSpaceFive
 
 
 \begin{center}
@@ -1090,19 +1136,19 @@ lewej ręki za~plecami?
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceFour
 
 
 \noindent
 \textbf{Okładka} \\
-\Jest  ”Solidarności” \\
-\Powin „Solidarności” \\
+\Jest ”Solidarności” \\
+\PowinnoByc „Solidarności” \\
 \Str{1} \\
-\Jest  \textbf{Historia świata} \\
-\Powin \textbf{Historia świata XX wieku} \\
+\Jest \textbf{Historia świata} \\
+\PowinnoByc \textbf{Historia świata XX wieku} \\
 \Str{3} \\
-\Jest  \textbf{Historia świata} \\
-\Powin \textbf{Historia świata XX wieku} \\
+\Jest \textbf{Historia świata} \\
+\PowinnoByc \textbf{Historia świata XX wieku} \\
 
 
 % ############################
@@ -1121,14 +1167,14 @@ lewej ręki za~plecami?
 
 \subsection{Świat po~1945~r.}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 % ##################
-\Work{ % Autor i tytuł działa
-  Tony Judt \\
-  \textit{Powojnie. Historia Europy od~roku 1945}, \cite{JudtPowojnie2016}}
+\section{Tony Judt \\
+  \textit{Powojnie. Historia Europy od~roku 1945},
+  \cite{JudtPowojnie2016}}
 
 \vspace{0em}
 
@@ -1147,17 +1193,17 @@ skończyły~się dopiero w~1815 roku, więc chodzi tu o~wydarzenia sprzed
 że~w~XIX wieku taka długa pamięć była czymś niezwykłym. Jeśli to właśnie
 Judy chciał przekazać, to można było to~zdanie sformułować lepiej.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{102}{8} Nie potrafię zrozumieć co~w~tym kontekście miało znaczyć
-zdanie „co~wyjątkowo miało~się okazać nieskuteczne”.
+\StrWierszDol{102}{8} Nie potrafię zrozumieć co~w~tym kontekście miało
+znaczyć zdanie „co~wyjątkowo miało~się okazać nieskuteczne”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1169,17 +1215,17 @@ aby~pozwolić czytelnikom poczuć jej siłę. Kilka zadań podających dokładni
 temperaturę panującą wtedy w~Europie i~czas przez jaki~się utrzymywała,
 byłoby zupełnie wystarczające.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{125}{7} Należałoby podać, w~jakiej walucie~są wyrażone,
+\StrWierszDol{125}{7} Należałoby podać, w~jakiej walucie~są wyrażone,
 przedstawione tu wydatki.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1189,50 +1235,51 @@ przedstawione tu wydatki.
 \Str{131} W~ostatnim akapicie na~tej stronie jest mowa o~frontach ludowych
 i~narodowych w~taki sposób, że~nie można zrozumieć o~co tak naprawdę chodzi.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{150}{20} Zdanie „zbliża~się czas wielkich zawirowań~-- a~tym samym
-konieczność określenia przez Związek Radziecki wynikających z~tego
+\StrWierszDol{150}{20} Zdanie „zbliża~się czas wielkich zawirowań~-- a~tym
+samym konieczność określenia przez Związek Radziecki wynikających z~tego
 korzyści” nie jest zbyt dobrze skonstruowane i~trochę niezrozumiałe.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{159}{20} Zdanie „pozwoli Niemcom gnić, dopóki owoce
+\StrWierszGora{159}{20} Zdanie „pozwoli Niemcom gnić, dopóki owoce
 niemieckiej urazy i~beznadziei nie wpadną mu do~koszyka” nie jest
 ani~zbyt jasne, ani~nie brzmi zbyt dobrze w~języku polskim.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{174}{18} Słowa Milovana Dżilasa warto byłoby opatrzyć komentarzem.
-W~tym momencie ich brzmienie jest trochę dziwne, a~sens niepewny.
+\StrWierszGora{174}{18} Słowa Milovana Dżilasa warto byłoby opatrzyć
+komentarzem. W~tym momencie ich brzmienie jest trochę dziwne, a~sens
+niepewny.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{197}{8} W~tym wierszu jest mowa o~przeżyciu przez Brytyjczyków
-Pierwszej~Wojny Światowej, ale bardzo możliwe, że~jest to~błąd i~tak
-naprawdę chodzi o~Drugą.
+\StrWierszGora{197}{8} W~tym wierszu jest mowa o~przeżyciu przez
+Brytyjczyków Pierwszej~Wojny Światowej, ale bardzo możliwe, że~jest to~błąd
+i~tak naprawdę chodzi o~Drugą.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1243,37 +1290,38 @@ naprawdę chodzi o~Drugą.
 na~końcu zdania w~wierszu 21 od~góry, powinienem znajdować~się na końcu
 zdania w~wierszy drugim od~góry.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{258}{17} Z~kontekstu ciężko wywnioskować, kim było „dwóch lewicowych
-członków ruchu oporu”. Ten fragment powinien być poprawiony.
+\StrWierszGora{258}{17} Z~kontekstu ciężko wywnioskować, kim było „dwóch
+lewicowych członków ruchu oporu”. Ten fragment powinien być poprawiony.
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{282}{3} Na~końcu książki nie ma odniesienia do przypisu z~tej linii.
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{417}{19--18} O~Luckym Luku, czyli na polski Mającym Szczęście
+\StrWierszDol{282}{3} Na~końcu książki nie ma odniesienia do przypisu z~tej
+linii.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszDol{417}{19--18} O~Luckym Luku, czyli na polski Mającym Szczęście
 Łukaszu, można stwierdzić wiele, ale~nie to, że~jest~„nieszczęsny”. Również
 uznanie tego komiksu za belgijski, jest dla mnie kontrowersyjne.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1285,7 +1333,7 @@ w~jednym z~wydań \textit{Opium dla~intelektualistów} napisał, że~książkę
 można traktować jako marksistowską krytykę pewnych zjawisk, jego stosunek
 do~intelektualnego dziedzictwa marksizmu, pozostaje sprawą otwartą.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1299,39 +1347,39 @@ przez władzę cara. Co~zresztą w~1968 roku również brzmiało bardzo
 współcześnie. Należy zaznaczyć, że~trzeciej części „Dziadów” nie można
 sprowadzić tylko do tego wątku, choć jest on jednym z~najważniejszych.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{513}{7} W~1970 roku protesty o~szczególnych konsekwencjach miały
-miejsce w~Szczecinie, nie można więc ich ograniczać tylko do Gdańska.
+\StrWierszGora{513}{7} W~1970 roku protesty o~szczególnych konsekwencjach
+miały miejsce w~Szczecinie, nie można więc ich ograniczać tylko do Gdańska.
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWg{526}{14} Wydaje mi~się, że rozumiem sens zdania o~optymistycznym
-zapatrzeniu w~postindustrialne wyobcowanie i~bezduszność, ale według mnie
-nie powinno~się pisać w~taki przewrotny i~skomplikowany sposób, aby
-czytelnik nie zgubił~się.
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{556}{8} Nie rozumiem co miały znaczyć słowa „dla~obojętnych skrajów
-ruchu robotniczego”.
+\StrWierszGora{526}{14} Wydaje mi~się, że rozumiem sens zdania
+o~optymistycznym zapatrzeniu w~postindustrialne wyobcowanie i~bezduszność,
+ale według mnie nie powinno~się pisać w~taki przewrotny i~skomplikowany
+sposób, aby czytelnik nie zgubił~się.
 
-\vspace{\spaceFour}
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszGora{556}{8} Nie rozumiem co miały znaczyć słowa „dla~obojętnych
+skrajów ruchu robotniczego”.
+
+\VerSpaceFour
 
 
 
@@ -1342,68 +1390,70 @@ ruchu robotniczego”.
 że~Foucault był w~głębi duszy racjonalistą. Możliwe, lecz zapewne była to
 specyficzna odmiana racjonalizmu.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{585}{18} Panków to dzielnica Berlina, gdzie w~początkowym okresie
-istnienia NRD~znajdowały się rezydencje władz tego kraju.
+\StrWierszDol{585}{18} Panków to dzielnica Berlina, gdzie w~początkowym
+okresie istnienia NRD~znajdowały się rezydencje władz tego kraju.
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWg{602}{13} Na~końcu książki nie ma odniesienia do przypisu z~tej linii.
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{655}{16--14} Zdanie „przeczyć fundamentalnemu powinowactwu
+\StrWierszGora{602}{13} Na~końcu książki nie ma odniesienia do przypisu
+z~tej linii.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszDol{655}{16--14} Zdanie „przeczyć fundamentalnemu powinowactwu
 demokratycznego państwa opiekuńczego (bez względu na~to, jak bardzo
 niewystarczająco) z~kolektywistycznym planem komunizmu” jest napisane
 w~niezrozumiały sposób.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{681}{4--3} Nie rozumiem co miało dokładnie znaczyć zdanie „Epoka
-zastoju Leonida Breżniewa (Michaił Gorbaczow) żywiła~się wieloma
+\StrWierszDol{681}{4--3} Nie rozumiem co miało dokładnie znaczyć zdanie
+„Epoka zastoju Leonida Breżniewa (Michaił Gorbaczow) żywiła~się wieloma
 złudzeniami”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{681}{2} W~Polsce przyjęła~się pisonia tego nazwiska „Potiomkin” nie
-jak w~krajach anglojęzycznych „Potemkin”.
+\StrWierszDol{681}{2} W~Polsce przyjęła~się pisonia tego nazwiska
+„Potiomkin” nie jak w~krajach anglojęzycznych „Potemkin”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{693}{16} Na~końcu książki nie ma odniesienia do przypisu z~tej linii.
+\StrWierszDol{693}{16} Na~końcu książki nie ma odniesienia do przypisu
+z~tej linii.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1417,87 +1467,91 @@ młodszy od każdego prezydenta USA do Clintona, bowiem najmłodszym
 prezydentem do roku 2017, jest Theodore Roosevelt który miał tylko 42 lata,
 gdy~objął ten urząd w~1901 roku.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{703}{18} Słowo „niezrównany” brzmi trochę dziwnie w~tym kontekście.
-Może powinno być „nierówny”.
+\StrWierszDol{703}{18} Słowo „niezrównany” brzmi trochę dziwnie w~tym
+kontekście. Może powinno być „nierówny”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{718}{2} Zwrot „bezwarunkowe niezrozumienie” jest dziwny i~ciężki do
+\StrWierszDol{718}{2} Zwrot „bezwarunkowe niezrozumienie” jest dziwny
+i~ciężki do
 zrozumienia. Po~angielsku brzmiał zapewne „unconditional misunderstanding”,
 warto się zastanowić nad jego lepszym tłumaczeniem.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{734}{19} NRD pojawia~się w~tym wersie dość niespodziewanie, może
-chodziło o~Czechosłowację?
+\StrWierszDol{734}{19} NRD pojawia~się w~tym wersie dość niespodziewanie,
+może chodziło o~Czechosłowację?
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{742}{10} Na~końcu książki nie ma odniesienia do przypisu z~tej linii.
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{757}{6--5} Zdanie „którego rządzący byli komunistycznymi satrapami,
+\StrWierszDol{742}{10} Na~końcu książki nie ma odniesienia do przypisu
+z~tej linii.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszDol{757}{6--5} Zdanie „którego rządzący byli komunistycznymi
+satrapami,
 przejęli kontrolę nad tym obszarem”, brzmi jakoś niezręcznie. Może
 dałoby~się je sformułować lepiej?
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{782}{15} Powinno tu być wyjaśnione czym~są prawa ciągnięcia.
+\StrWierszDol{782}{15} Powinno tu być wyjaśnione czym~są prawa ciągnięcia.
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{805}{9} Na~końcu książki nie ma odniesienia do przypisu z~tej linii.
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{823}{12-10} Zdanie „W~kraju było teraz więcej osób mówiących
+\StrWierszDol{805}{9} Na~końcu książki nie ma odniesienia do przypisu z~tej
+linii.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszDol{823}{12-10} Zdanie „W~kraju było teraz więcej osób mówiących
 po~holendersku niż~francusku (w~stosunku trzy do~dwóch), które produkowały
 na~głowę mieszkańca i~zarabiał więcej.” źle brzmi i~nie od razu zrozumiałe.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1507,7 +1561,7 @@ na~głowę mieszkańca i~zarabiał więcej.” źle brzmi i~nie od razu zrozumia
 \textbf{Wkładka~1, str.~6, u~góry.} Dla ułatwienia czytelnikom orientacji,
 warto byłoby napisać, o~jaki akt stworzenia tu chodzi.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1604,25 +1658,25 @@ Attlee co na stronie~127, jednak te dwie wersje nie są identyczne.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
-\StrWd{110}{6} \\
-\Jest  na~samą perspektywę pokoju \\
-\Powin na~samą myśl o~perspektywie pokoju \\
-\StrWg{417}{15} \\
-\Jest  którymi~się w~nich chwalono \\
-\Powin w~których~się nimi chwalono \\
-\StrWg{555}{4} \\
-\Jest  „nowy patriotyzm” za~granicą \\
-\Powin „nowy patriotyzm” \\
-\StrWd{617}{2} \\
-\Jest  w~hiszpańskich przedsiębiorstwach \\
-\Powin hiszpańskich przedsiębiorstw \\
-\StrWd{698}{4} \\
-\Jest  który rozpada~się w~wartości 37~miliardów rozpadów na~sekundę \\
-\Powin w~którym dochodzi do~37~miliardów rozpadów na~sekundę \\
+\StrWierszDol{110}{6} \\
+\Jest na~samą perspektywę pokoju \\
+\PowinnoByc na~samą myśl o~perspektywie pokoju \\
+\StrWierszGora{417}{15} \\
+\Jest którymi~się w~nich chwalono \\
+\PowinnoByc w~których~się nimi chwalono \\
+\StrWierszGora{555}{4} \\
+\Jest „nowy patriotyzm” za~granicą \\
+\PowinnoByc „nowy patriotyzm” \\
+\StrWierszDol{617}{2} \\
+\Jest w~hiszpańskich przedsiębiorstwach \\
+\PowinnoByc hiszpańskich przedsiębiorstw \\
+\StrWierszDol{698}{4} \\
+\Jest który rozpada~się w~wartości 37~miliardów rozpadów na~sekundę \\
+\PowinnoByc w~którym dochodzi do~37~miliardów rozpadów na~sekundę \\
 
 
 
@@ -1642,7 +1696,7 @@ Attlee co na stronie~127, jednak te dwie wersje nie są identyczne.
 
 \section{Świat po~1989~r.}
 
-\vspace{\spaceThree}
+\VerSpaceThree
 % ######################################
 
 
@@ -1650,16 +1704,17 @@ Attlee co na stronie~127, jednak te dwie wersje nie są identyczne.
 % ######################################
 \subsection{Były Blok Sowiecki po~1989~r.}
 
-\vspace{\spaceThree}
+\VerSpaceThree
 % ######################################
 
 
 
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Philipp Ther \\
+% ######################################
+\section{Philipp Ther \\
   \textit{Nowy ład na starym kontynencie} \\
   \textit{Historia neoliberalnej Europy}, \cite{TherNowyLad2015}}
+
+% ######################################
 
 \vspace{0em}
 
@@ -1684,7 +1739,7 @@ przypaść gen.~Wojciechowi Jaruzelskiemu.
 % ##################
 \CenterBoldFont{Błędy}
 
-\vspace{\spaceFive}
+\VerSpaceFive
 
 
 \begin{center}
@@ -1726,13 +1781,13 @@ przypaść gen.~Wojciechowi Jaruzelskiemu.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
-\StrWd{30}{22} \\
-\Jest  metropolii”$^{ 14 }$. Natomiast w~regionalnej \\
-\Powin metropolii”$^{ 14 }$, w~regionalnej \\
+\StrWierszDol{30}{22} \\
+\Jest metropolii”$^{ 14 }$. Natomiast w~regionalnej \\
+\PowinnoByc metropolii”$^{ 14 }$, w~regionalnej \\
 
 
 % ############################
@@ -1749,14 +1804,13 @@ przypaść gen.~Wojciechowi Jaruzelskiemu.
 % ######################################
 \subsection{Różne dzieła historyczne}
 
-\vspace{\spaceThree}
+\VerSpaceThree
 % ######################################
 
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
-  Christopher A. Ferrara \\
+\section{Christopher A. Ferrara
   \textit{Liberty: The God That Failed}, \cite{}}
 
 
@@ -1784,7 +1838,7 @@ przypaść gen.~Wojciechowi Jaruzelskiemu.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 
@@ -1805,16 +1859,16 @@ przypaść gen.~Wojciechowi Jaruzelskiemu.
 \section{Dzieje wschodniej Eurazji}
 
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Andrew Gordon \\
-  \textit{Nowożytna historia Japonii},
+% ######################################
+\section{Andrew Gordon \textit{Nowożytna historia Japonii},
   \cite{GordonNowozytnaHistoriaJaponii2010}}
+
+% ######################################
 
 \vspace{0em}
 
@@ -1825,10 +1879,11 @@ przypaść gen.~Wojciechowi Jaruzelskiemu.
 
 
 \noindent
-\StrWg{46}{3} Jest tu podana ilość mieszkańców Tokio w~1720~r., ale~do
+\StrWierszGora{46}{3} Jest tu podana ilość mieszkańców Tokio w~1720~r.,
+ale~do
 1868~r. to miasto nosiło nazwę~Edo.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1839,17 +1894,17 @@ przypaść gen.~Wojciechowi Jaruzelskiemu.
 przeprowadzona przez \textit{bakufu}, ani czemu wywołało to zwiększenie
 podaży pieniądza i~inflację.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{85}{10} Nie jest napisane kim jest ten potężny reformator i~wróg
-cudzoziemców.
+\StrWierszGora{85}{10} Nie jest napisane kim jest ten potężny reformator
+i~wróg cudzoziemców.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1860,7 +1915,7 @@ cudzoziemców.
 napisane, czy zginął on w~tym zamachu, bądź w~skutek niego. Z~kontekstu
 wynika, że~Iiego zginął.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1871,42 +1926,43 @@ wynika, że~Iiego zginął.
 \textit{bakufu} przetrwał, to w~skutek jego reform powstałby system
 zbliżony do tego, który stworzyła restauracja Meiji.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{134}{13--11} Nie jest wyjaśnione która grupa z~wymienionych grup
-odziedziczyła z~okresu Tokugawów zachowania ksenofobiczne.
+\StrWierszDol{134}{13--11} Nie jest wyjaśnione która grupa z~wymienionych
+grup odziedziczyła z~okresu Tokugawów zachowania ksenofobiczne.
 
-\vspace{\spaceFour}
-
-
-
-
-
-\noindent
-\StrWd{424}{11} Zgodnie z~tym co było napisane na~stronie~417 kobieta ta
-raczej nie fałszowała banknotów, lecz~potwierdzenia depozytu z~lokalnej
-agencji kredytowej.
-
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{425}{5} W~tym miejscu jest mowa o~sytuacji gospodarczej Japonii
-na przełomie lat osiemdziesiątych i~dziewięćdziesiątych~XX wieku, należy
+\StrWierszDol{424}{11} Zgodnie z~tym co było napisane na~stronie~417
+kobieta ta raczej nie fałszowała banknotów, lecz~potwierdzenia depozytu
+z~lokalnej agencji kredytowej.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszGora{425}{5} W~tym miejscu jest mowa o~sytuacji gospodarczej
+Japonii na przełomie lat osiemdziesiątych i~dziewięćdziesiątych~XX wieku,
+należy
 więc zwrócić uwagę, że~Unia Europejska istnieje w~sensie formalnym
 od~1~listopada 1993~roku. Może~się więc zdarzyć, że~podana tu nadwyżka
 handlowa odnosi~się do~czasu, gdy Unia Europejska jeszcze formalnie nie
 istniał i~użycie jej nazwy jest formą skrótu myślowego.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1949,7 +2005,7 @@ by~nie powiedzieć niechlujnym.
 
 \CenterBoldFont{Błędy}
 
-\vspace{\spaceFive}
+\VerSpaceFour
 
 
 \begin{center}
@@ -1990,16 +2046,13 @@ by~nie powiedzieć niechlujnym.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
-\StrWd{240}{7} \\
-\Jest  gospodarczej i~militarnej przewagi \\
-\Powin o~gospodarczą i~militarną przewagę \\
-
-
-% ############################
+\StrWierszDol{240}{7} \\
+\Jest gospodarczej i~militarnej przewagi \\
+\PowinnoByc o~gospodarczą i~militarną przewagę \\
 
 
 
@@ -2013,7 +2066,7 @@ by~nie powiedzieć niechlujnym.
 % ############################
 \newpage
 
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Jakub Polit \\
   \textit{Smutny kontynent} \\
   \textit{Z~dziejów Azji wschodniej w~XX~wieku},
@@ -2034,7 +2087,7 @@ w~1918~r., zaś wycofały~się w~1922, interwencja wojskowa trwała więc
 cztery lata nie siedem. Siedem lat upłynęło między wkroczeniem wojsk,
 a~podpisaniem pekińskiego traktatu japońsko-rosyjskiego w~1925~r.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -2048,26 +2101,26 @@ do~samolotów mieczy, bowiem rozmiary kokpitu na~to nie~pozwalały.
 Zaś~zdjęcia przedstawiające pilotów wsiadających do~swoich maszyn
 z~mieczami były upozowane do~celów propagandowych.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{48}{11} Nie rozumiem, czemu zatopienie przez japońskie
+\StrWierszDol{48}{11} Nie rozumiem, czemu zatopienie przez japońskie
 samoloty dwóch statków na Yangzi, zostało określone jako atak piracki.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{100}{21} „Jan Baptysta” to po polsku „Jan Chrzciciel”.
+\StrWierszDol{100}{21} „Jan Baptysta” to po polsku „Jan Chrzciciel”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -2078,7 +2131,7 @@ samoloty dwóch statków na Yangzi, zostało określone jako atak piracki.
 to~„Douglas MacArthur,Dalekowschodni Generał\ldots”, podczas gdy powinien mieć
 postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -2356,7 +2409,7 @@ postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 % ############################
@@ -2370,14 +2423,16 @@ postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 
 
 
-% ############################
+% ######################################
 \newpage
 
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Jakub Polit \\
   \textit{Smutny kontynent} \\
   \textit{Epizody i~sylwetki z~dziejów Azji Wschodniej w~XX~w.},
   \cite{PolitSmutnyKontynent2021}}
+
+% ######################################
 
 
 % % ##################
@@ -2390,7 +2445,7 @@ postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 % ##################
 \CenterBoldFont{Błędy}
 
-\vspace{\spaceFive}
+\VerSpaceFive
 
 
 \begin{center}
@@ -2468,7 +2523,7 @@ postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 % ############################
@@ -2489,15 +2544,16 @@ postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 \section{Historia Chin}
 
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Jakub Polit \\
-  \textit{Chiny 1946--1949}, \cite{PolitChiny1946Do1949Wyd2010}}
+% ######################################
+\section{Jakub Polit \textit{Chiny 1946--1949},
+  \cite{PolitChiny1946Do1949Wyd2010}}
+
+% ######################################
 
 
 % \CenterTB{Uwagi}
@@ -2509,7 +2565,7 @@ postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 % ##################
 \CenterBoldFont{Błędy}
 
-\vspace{\spaceFive}
+\VerSpaceFive
 
 
 \begin{center}
@@ -2534,7 +2590,7 @@ postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 % ############################
@@ -2554,17 +2610,18 @@ postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 \section{Historia gospodarki, ekonomii i~pieniądza}
 
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ####################################################################
 
 
 
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Niall Ferguson \\
+% ######################################
+\section{Niall Ferguson \\
   \textit{Niebezpieczne związki} \\
   \textit{Pieniądze i~władza w~świecie nowożytnym 1700--2000},
   \cite{FergusonNiebezpieczneZwiazki2015}}
+
+% ######################################
 
 \vspace{0em}
 
@@ -2600,16 +2657,16 @@ postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
-\StrWd{19}{1} \\
-\Jest  Zarys historii gospodarczej XX~wieku \\
-\Powin \textit{Zarys historii gospodarczej XX~wieku}
+\StrWierszDol{19}{1} \\
+\Jest Zarys historii gospodarczej XX~wieku \\
+\PowinnoByc \textit{Zarys historii gospodarczej XX~wieku}
 
 
-% ############################
+% ######################################
 
 
 
@@ -2626,15 +2683,17 @@ postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 \section{Biografie}
 
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
-% ############################
-\Work{ % Autor i tytuł dzieła
-  Sławomir Cenckiewicz \\
-  \textit{Anna Solidarność}, \cite{CenckiewiczAnnaSolidarnosc2010}}
+% ######################################
+\section{Sławomir Cenckiewicz \\
+  \textit{Anna Solidarność},
+  \cite{CenckiewiczAnnaSolidarnosc2010}}
+
+% ######################################
 
 
 % ##################
@@ -2656,7 +2715,7 @@ postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 % ############################
@@ -2670,13 +2729,14 @@ postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 
 
 
-% ############################
+% ######################################
 \newpage
 
-\Work{ % Autorka i tytuł dzieła
-  Masha Gessen \\
+\section{Masha Gessen \\
   \textit{Putin. Człowiek bez twarzy},
   \cite{GessenPutinCzlowiekBezTwarzy2012}}
+
+% ######################################
 
 \vspace{0em}
 
@@ -2687,14 +2747,15 @@ postaci „Douglas MacArthur, Dalekowschodni Generał\ldots”.
 
 
 \noindent
-\StrWd{9}{6} Zamieszczony tu komentarz odnośnie słowa „lustracja”, które ma
+\StrWierszDol{9}{6} Zamieszczony tu komentarz odnośnie słowa „lustracja”,
+które ma
 wedle niego pochodzić z~greki, jest zapewne wynikiem niedbałości tłumacza.
 Polskie słowo „lustracja”, pochodzi najpewniej od słowa „lustro”, które
 wydaje~się w~ogóle nie związane z~greką. Prawdopodobnie ten fragment został
 przetłumaczony mechanicznie, bez~refleksji, że~w~języku polskim,
 w~przeciwieństwie do~oryginału, ten związek etymologiczny nie zachodzi.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -2708,7 +2769,7 @@ pisze, że~wyszedł do owego tłumu na zewnątrz, więc musiał znajdować~się
 w~środku budynku. Nigdzie nie jest napisane, jak i~dlaczego opuścił
 tłum i~wszedł do siedziby Stasi.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -2720,7 +2781,7 @@ więc odpowiednio 68 i~58 lat. Nazwanie Gorbaczowa młody to pewne nadużycie,
 wynikające zapewne z~kontrastu między schorowany, bliski śmierci
 Sacharowem, a~pełnym energii Michaiłem.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -2730,7 +2791,7 @@ Sacharowem, a~pełnym energii Michaiłem.
 \textbf{Str. 101, akapit trzeci.} Powinno tu być jawniej napisane,
 że~wracamy do historii Putina.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -2781,7 +2842,7 @@ Zapewne chodziło o~to, że~wówczas tam mieszkała.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 % ############################
@@ -2796,7 +2857,7 @@ Zapewne chodziło o~to, że~wówczas tam mieszkała.
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   ???? \\
   , \cite{}}
 
@@ -2831,7 +2892,7 @@ Zapewne chodziło o~to, że~wówczas tam mieszkała.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 % ############################
@@ -2848,7 +2909,7 @@ Zapewne chodziło o~to, że~wówczas tam mieszkała.
 % ############################
 \newpage
 
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Charles Moore \\
   \textit{Margaret Thatcher. Autoryzowana biografia~2},
   \cite{MooreMargaretThatcherPLVolII2019}}
@@ -2863,12 +2924,12 @@ Zapewne chodziło o~to, że~wówczas tam mieszkała.
 
 
 \noindent
-\StrWg{989}{14--15} Według mnie tekst „zapobiec degeneracji wolności
+\StrWierszGora{989}{14--15} Według mnie tekst „zapobiec degeneracji wolności
 z~anarchiczną i~destrukcyjną samowolą” jest błędny. Zgaduję, że~poprawna
 jego wersja powinna brzmieć mniej więcej „zapobiec degeneracji wolności
 przez anarchiczną i~destrukcyjną samowolę”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -2914,7 +2975,7 @@ konkretne słowa wypowiedziała ona, a~które~są autorstwa Tomasza Tulejskiego.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 % ############################
@@ -2930,17 +2991,15 @@ konkretne słowa wypowiedziała ona, a~które~są autorstwa Tomasza Tulejskiego.
 
 % ####################################################################
 % ####################################################################
-% Bibliografia
+% Bibliography
 
-\bibliographystyle{plalpha}
-
-\bibliography{HistoryBooks}{}
+\printbibliography
 
 
 
 
 
 % ############################
+% End of the document
 
-% Koniec dokumentu
 \end{document}
