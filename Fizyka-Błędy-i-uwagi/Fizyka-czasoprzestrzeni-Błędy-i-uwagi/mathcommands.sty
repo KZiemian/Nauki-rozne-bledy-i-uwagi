@@ -1,52 +1,134 @@
 % ####################################################################
-% Pakiet z skrótami różnych matematycznych LaTeXa
-
-% Część skrótów nie będzie działało bez pakietów od American Mathematican
-% Society, takich jak "amsmath", "amssym", etc.
+% Commands for writing mathematical text
+%
+% They probably won't work with some packages from AMS, like ``amsmath'',
+% ``amssymb'', etc.
 % ####################################################################
 \ProvidesPackage{mathcommands}
 
 
 
-% ---------------------------------------
-% Command for mathematical mode
-% ---------------------------------------
+% ############################
+% Algebraic symbols
+% ############################
+
+
+\newcommand{\UnitAlg}{\mathbf{1}}
+
+
+
+
+
+% ############################
+% Constants
+% ############################
+
+\newcommand{\const}{\textrm{const}}
+
+
+
+
+
+
+
+
+
+
+% ############################
+% Functions
+% ############################
+
+% Eksperyment
+
+\newcommand{\absOne}[1]{ | \hspace{0.05em} #1 \hspace{0.05em} | }
+
+\newcommand{\absTwo}[1]{ | \hspace{0.05em} #1 \hspace{0.075em} | }
+
+\newcommand{\absThree}[1]{ | \hspace{0.05em} #1 \hspace{0.09em} | }
+
+\newcommand{\absFour}[1]{ | \hspace{0.05em} #1 \hspace{0.11em} | }
+
+\newcommand{\absFive}[1]{ | \hspace{0.05em} #1 \hspace{0.13em} | }
+
+\newcommand{\absSix}[1]{ | \hspace{0.05em} #1 | }
+
+\newcommand{\absBigOne}[1]{ \big| \hspace{0.05em} #1 \hspace{0.05em}
+    \big| }
+
+\newcommand{\absLeftRightOne}[1]{ \left| \hspace{0.05em} #1 \hspace{0.05em}
+  \right| }
+
+\newcommand{\absHorLeftOne}[1]{ | \hspace{0.075em} #1 \hspace{0.05em} | }
+\newcommand{\absHorLeftTwo}[1]{ | \hspace{0.09em} #1 \hspace{0.05em} | }
+
+\newcommand{\absHorRightOne}[1]{ | #1 \hspace{0.05em} | }
+
+
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\ad}{ad}
+
+\DeclareMathOperator{\Arg}{Arg}
+
+
+\DeclareMathOperator{\Diam}{Diam}
+
+
+\DeclareMathOperator{\Imag}{\mathfrak{Im}}
+
+\DeclareMathOperator{\id}{id}
+
+
+\DeclareMathOperator{\Log}{Log}
+
+
+\DeclareMathOperator{\proj}{proj}
+
+
+\DeclareMathOperator{\Real}{\mathfrak{Re}}
+
+
+\DeclareMathOperator{\Tr}{Tr}
+
+
+
+
+
 
 
 
 
 
 % ##################
-% Sets
+% Spaces of functions
 % ##################
 
-
-% Ładniejszy zbiór pusty
-\let\oldemptyset\emptyset
-\let\emptyset\varnothing
-
-
-
-% Wartość bezwzględna i normy
-\providecommand{\abs}[1]{\lvert{ #1 }\rvert}
-
-\newcommand{\absOne}[1]{|\, { #1 } \,|}  % ABSolute value One
-\newcommand{\abstw}[1]{\left| \, { #1 } \, \right|}
-\newcommand{\absth}[1]{\left| { #1 } \right|}
-\newcommand{\absf}[1]{| { #1 } |}
-% \providecommand{\absd}[1]{\left| #1 \right|}
-% Zupełnie nie wiem, czemu to jest \providecommand
-\providecommand{\norm}[1]{\lVert{ #1 }\rVert}
 
 
 
 
 
 % ##################
-% Litery greckie
-% By \lambda była wyświetlana jako Unicode, a dawał znak \uplambda
-\let\oldlambda\Lambda
-\renewcommand{\lambda}{\uplambda}
+% Various useful symbols for functions
+% ##################
+
+\newcommand{\yTilde}{\widetilde{y}}
+
+
+
+
+
+
+
+
+% ############################
+% Letters
+% ############################
+
+
+% ##################
+% Greek letters
+% ##################
+
 
 
 
@@ -54,10 +136,13 @@
 
 % ##################
 % Blackboard bold letters
+% ##################
 
 \newcommand{\Abb}{\mathbb{A}}
 
 \newcommand{\Cbb}{\mathbb{C}}
+
+\newcommand{\Ebb}{\mathbb{E}}
 
 \newcommand{\Fbb}{\mathbb{F}}
 
@@ -80,14 +165,12 @@
 \newcommand{\Zbb}{\mathbb{Z}}
 
 
-\newcommand{\matUnit}{I}
-
-
 
 
 
 % ##################
 % Bold face letters
+% ##################
 
 \newcommand{\Cbold}{\mathbf{C}}
 
@@ -103,6 +186,7 @@
 
 % ##################
 % Calligraphed letters
+% ##################
 
 \newcommand{\Acal}{\mathcal{A}}
 
@@ -115,6 +199,7 @@
 \newcommand{\Ecal}{\mathcal{E}}
 
 \newcommand{\Fcal}{\mathcal{F}}
+% \newcommand{\fcal}{\mathcal{f}}
 
 \newcommand{\Gcal}{\mathcal{G}}
 
@@ -145,6 +230,8 @@
 
 \newcommand{\Ucal}{\mathcal{U}}
 
+\newcommand{\Wcal}{\mathcal{W}}
+
 \newcommand{\Vcal}{\mathcal{V}}
 
 \newcommand{\Xcal}{\mathcal{X}}
@@ -157,8 +244,13 @@
 
 % ##################
 % Fraktur letters
+% ##################
+
+\newcommand{\Bfrak}{\mathfrak{B}}
 
 \newcommand{\Cfrak}{\mathfrak{C}}
+
+\newcommand{\Efrak}{\mathfrak{E}}
 
 \newcommand{\gFrak}{\mathfrak{g}}
 
@@ -174,112 +266,78 @@
 
 
 
-% ##################
-% Functions
-
-\newcommand{\Ad}{\mathrm{Ad}}
-
-\newcommand{\ad}{\mathrm{ad}}
-
-% ????
-\newcommand{\End}{\mathrm{End}}
-
-\newcommand{\Aut}{\mathrm{Aut}}
-
-\newcommand{\id}{\mathrm{id}}
-
-% ????
-\newcommand{\im}{\mathrm{im}}
-% ????
-% \newcommand{\ker}{\mathrm{ker}}
-
-
-% Complex analysis
-\DeclareMathOperator{\Arg}{Arg}
-\DeclareMathOperator{\Imag}{\mathfrak{Im}}
-\DeclareMathOperator{\Log}{Log}
-\DeclareMathOperator{\Real}{\mathfrak{Re}}
-
-
-% Space of functions
-\newcommand{\Hom}{\mathrm{Hom}}
-
-
-
-% ##################
-% Groups
 
 
 
 
 
-
-% ##################
-% Algebra
-
-\DeclareMathOperator{\Tr}{Tr}
-
-
-
-
-
-% #############
-% Algebra liniowa
-
-% Podprzestrzenie i odwzorowania liniowe
-\newcommand{\image}{\textrm{im}}
-
+% ############################
 % Vectors
-\newcommand{\veca}{\vec{ a }}
-
-\newcommand{\vecb}{\vec{ b }}
-
-\newcommand{\vecc}{\vec{ c }}
-
-\newcommand{\vecd}{\vec{ d }}
-
-\newcommand{\vecE}{\vec{ E }}
-\newcommand{\vece}{\vec{ e }}
-
-\newcommand{\vecF}{\vec{ F }}
-\newcommand{\vecf}{\vec{ f }}
-
-\newcommand{\vecg}{\vec{ g }}
-
-\newcommand{\vech}{\vec{ h }}
-
-\newcommand{\veck}{\vec{ k }}
-
-\newcommand{\vecJ}{\vec{ J }}
-
-\newcommand{\vecn}{\vec{ n }}
-
-\newcommand{\vecP}{\vec{ P }}
-\newcommand{\vecp}{\vec{ p }}
-
-\newcommand{\vecq}{\vec{ q }}
-
-\newcommand{\vecr}{\vec{ r }}
-
-\newcommand{\vecX}{\vec{ X }}
-\newcommand{\vecx}{\vec{ x }}
-
-\newcommand{\vecy}{\vec{ y }}
+% ############################
 
 
+% ##################
+% Vectors with arrows
+% ##################
+
+\newcommand{\veca}{\vec{a}}
+
+\newcommand{\vecB}{\vec{B}}
+\newcommand{\vecb}{\vec{b}}
+
+\newcommand{\vecc}{\vec{c}}
+
+\newcommand{\vecd}{\vec{d}}
+
+\newcommand{\vecE}{\vec{E}}
+\newcommand{\vece}{\vec{e}}
+
+\newcommand{\vecF}{\vec{F}}
+\newcommand{\vecf}{\vec{f}}
+
+\newcommand{\vecg}{\vec{g}}
+
+\newcommand{\vech}{\vec{h}}
+
+\newcommand{\veck}{\vec{k}}
+
+\newcommand{\vecJ}{\vec{J}}
+\newcommand{\vecj}{\vec{j}}
+
+\newcommand{\vecn}{\vec{n}}
+
+\newcommand{\vecP}{\vec{P}}
+\newcommand{\vecp}{\vec{p}}
+
+\newcommand{\vecq}{\vec{q}}
+
+\newcommand{\vecr}{\vec{r}}
+
+\newcommand{\vect}{\vec{t}}
+
+\newcommand{\vecv}{\vec{v}}
+
+\newcommand{\vecX}{\vec{X}}
+\newcommand{\vecx}{\vec{x}}
+
+\newcommand{\vecy}{\vec{y}}
+
+\newcommand{\vecZero}{\vec{0}}
 
 
 
 
 
 
-\newcommand{\vecZero}{\vec{ 0 }}
-
-% Funkcje wektorowe
-\newcommand{\vecxt}{\vec{ x }( t )}
 
 
+
+
+% ##################
 % Vectors, bold font
+% ##################
+
+\newcommand{\vecAbold}{\mathbf{A}}
 \newcommand{\vecabold}{\mathbf{a}}
 
 \newcommand{\vecBbold}{\mathbf{B}}
@@ -294,6 +352,7 @@
 
 \newcommand{\vecgbold}{\mathbf{g}}
 
+\newcommand{\vecHbold}{\mathbf{H}}
 \newcommand{\vechbold}{\mathbf{h}}
 
 \newcommand{\vecibold}{\mathbf{i}}
@@ -329,6 +388,7 @@
 \newcommand{\vecybold}{\mathbf{y}}
 
 
+
 \newcommand{\vecalphabold}{\boldsymbol{\alpha}}
 
 \newcommand{\vecrhobold}{\boldsymbol{\rho}}
@@ -338,9 +398,136 @@
 \newcommand{\vecomegabold}{\boldsymbol{\omega}}
 
 
+
 \newcommand{\vecZeroBold}{\mathbf{0}}
 
 \newcommand{\vecOneBold}{\mathbf{1}}
+
+
+
+
+
+
+
+
+
+
+% ############################
+% Sets
+% ############################
+
+
+% Better looking empty set symbol
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
+
+
+
+
+
+
+% ##################
+% Symbols for operations that creates sets
+% ##################
+
+\DeclareMathOperator{\Ker}{Ker}
+
+\DeclareMathOperator{\Ran}{Ran}
+
+\DeclareMathOperator{\supp}{supp}
+
+
+
+
+
+
+
+
+% Wartość bezwzględna i normy
+\providecommand{\abs}[1]{\lvert{ #1 }\rvert}
+
+
+\newcommand{\abstw}[1]{\left| \, { #1 } \, \right|}
+\newcommand{\absth}[1]{\left| { #1 } \right|}
+\newcommand{\absf}[1]{| { #1 } |}
+% \providecommand{\absd}[1]{\left| #1 \right|}
+% Zupełnie nie wiem, czemu to jest \providecommand
+\providecommand{\norm}[1]{\lVert{ #1 }\rVert}
+
+% ##################
+
+
+
+\newcommand{\matUnit}{I}
+
+
+
+
+
+
+
+% ????
+\newcommand{\End}{\mathrm{End}}
+
+\newcommand{\Aut}{\mathrm{Aut}}
+
+
+
+
+
+
+
+% Space of functions
+\newcommand{\Hom}{\mathrm{Hom}}
+
+
+
+
+% ##################
+% Functional analysis
+
+
+
+
+
+% ##################
+
+
+% ##################
+% Groups
+
+
+
+
+
+
+% ##################
+% Algebra
+
+
+
+
+
+
+
+% #############
+% Algebra liniowa
+
+
+
+
+
+
+
+
+% Funkcje wektorowe
+\newcommand{\vecxt}{\vec{x}( t )}
+
+
+
+
+
+
 
 
 
@@ -376,7 +563,6 @@
 
 % #####
 % Oznaczenia do teorii funkcji
-\newcommand{\supp}{\mathrm{supp}\,}
 
 
 
@@ -471,7 +657,8 @@
 % Teoria dystrybucji
 \newcommand{\Pv}{\mathrm{Pv}}
 
-\newcommand{\sd}{\textrm{sd}}  % Stopień skalowania Steinmanna
+% Steinmann scaling degree (pl. stopień skalowania Steinmanna)
+\newcommand{\sd}{\textrm{sd}}
 
 
 
@@ -515,7 +702,7 @@
 
 
 
-\newcommand{\Diam}{\textrm{Diam}}
+
 
 
 \newcommand{\dR}{\textrm{dR}}
@@ -531,4 +718,11 @@
 
 
 % Koniec komend
+% ############################
+
+
+
+
+% ############################
+% Various useful symbols
 % ############################

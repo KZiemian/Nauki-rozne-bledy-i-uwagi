@@ -142,8 +142,8 @@ eprint=true,
 
 
 % ------------------------------------------------------------------------------------------------------------------
-% Title and author of the text
-\title{Termostatyka, termodynamika i~fizyka statystyczna \\
+% Tytuł, autor, data
+\title{Wprowadzenie do~fizyki \\
   {\Large Błędy i~uwagi}}
 
 \author{Kamil Ziemian}
@@ -171,60 +171,35 @@ eprint=true,
 
 
 % ######################################
-\maketitle
+\maketitle % Tytuł całego tekstu
 % ######################################
 
 
 
 
 
-% % ######################################
-% \section{Termostatyka}
+% ######################################
+\section{Feynmana wykłady z~fizyki}
+% Tytuł danego działu
 
-% \VerSpaceTwo
-% % ######################################
+\VerSpaceTwo
+% ######################################
 
 
 
-% ####################
-\section{Józef Werle \textit{Termodynamika fenomenologiczna},
-  \cite{WerleTermodynamikaFenomenologiczna1957}}
+% ######################################
+\section{Richard P.~Feynman, Robert B.~Leighton, Matthew
+  Sands \\
+  \textit{Feynmana wykłady z~fizyki} \\
+  \textit{Tom~I: Mechanika, szczególna teoria względności},
+  \cite{FeynmanEtAlWykladyZFizykiVolI2004}}
+
+% ######################################
 
 \vspace{0em}
 
 
 % ##################
-\CenterBoldFont{Uwagi do~konkretnych stron}
-
-\vspace{0em}
-
-
-\noindent
-\Str{15} Werle wprowadza jak strasznie zamieszanie pojęciowe,
-twierdząc na tej samej stronie, że~objętość jest zarówno parametrem
-wewnętrzny jak i~zewnętrznym. Powinno~się jawnie stwierdzić, że~mogą
-istnieć parametry zarówno wewnętrzne, jak i~zewnętrzne układu,
-albo~że~są to wykluczające~się kategorie i~nigdy nie wprowadzać jednej
-wielkości do~nich obu.
-
-Dobrego wyjaśnienie podał Kacper Zalewski. Zmienne zewnętrzne to takie
-na którymi mamy kontrolę. ????A czy nad objętością metalu mamy
-  kontrolę i tym podobne rozterki? Dokończ.???
-
-\VerSpaceFour
-
-
-
-\noindent
-\Str{17}
-
-
-
-
-
-% ##################
-\noindent
-
 \CenterBoldFont{Błędy}
 
 
@@ -236,10 +211,7 @@ na którymi mamy kontrolę. ????A czy nad objętością metalu mamy
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    5   & &  2 & odwracalnych & nieodwracalnych \\
-    15  & & 13 & lśedzenia & śledzenia \\
-    % & & & & \\
-    % & & & & \\
+    101 & &  8 & \textit{standartowym} & \textit{standardowym} \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -252,9 +224,8 @@ na którymi mamy kontrolę. ????A czy nad objętością metalu mamy
 
 \end{center}
 
+
 \VerSpaceTwo
-
-
 % ############################
 
 
@@ -267,8 +238,12 @@ na którymi mamy kontrolę. ????A czy nad objętością metalu mamy
 
 
 % ######################################
-\section{Kerson Huang \textit{Mechanika statystyczna},
-  \cite{HuangMechanikaStatystyczna1987}}
+\newpage
+
+\section{Richard P.~Feynman, Robert B.~Leighton, Matthew
+  Sands \\
+  \textit{Feynmana wykłady z~fizyki} \\
+  \textit{Tom 2, część~1: }, \cite{}}
 
 % ######################################
 
@@ -276,88 +251,16 @@ na którymi mamy kontrolę. ????A czy nad objętością metalu mamy
 
 
 % ##################
-\CenterBoldFont{Uwagi}
+\CenterBoldFont{Uwagi do~konkretnych stron}
 
 \vspace{0em}
 
 
 \noindent
-???? Brak dyskusji zależności wykładanej teorii od układu odniesienia.
-
-\VerSpaceFour
-
-
-
-
-
-\noindent
-???? Jaka jest struktura matematyczna przestrzeni stanów termodynamicznych
-(krótko: przestrzeni termodynamicznej)?
-
-\VerSpaceFour
-
-
-
-
-
-\noindent
-??? Przedstawiona tu dyskusja termodynamiki zostawia ogromną ilość pytań,
-zarówno fizycznych jak i matematycznych, bez odpowiedzi.
-
-\VerSpaceFour
-
-
-
-
-
-\noindent
-???? Prawdopodobieństwo zaistnienia danego stanu w części poświęconej fizyce
-statystycznej nie zostało wyczerpująco omówione.
-
-
-
-
-
-% ##################
-\CenterBoldFont{Uwagi do~konkretnych stron}
-
-
-\noindent
-\Str{12} To, że równanie
-\begin{equation}
-  \label{eq:Huang-Mechanika-statystyczna-01}
-  f( P, V, T ) = 0
-\end{equation}
-definiuje nam powierzchnię w~$\Rbb^{ 3 }$ jest intuicyjnie jasne. Trzeba by
-oczywiście doprecyzować jakie własności posiada funkcja, czy jest na
-przykład różniczkowalna i~wtedy możemy mówić o~powierzchni różniczkowalnej,
-etc.
-
-Jednak jeden problem wydaje~się być zupełnie nieporuszony. Czy przy
-ustalonej wartości dwóch parametrów, powiedzmy $P_{ 1 }$ i~$V_{ 1 }$ jest
-dopuszczalna więcej niż jedna wartość temperatury $T$? Inaczej mówiąc, czy
-równanie $f( P_{ 1 }, V_{ 1 }, T ) = 0$ dopuszcza tylko jedno rozwiązanie na
-$T$, czy też może ich być więcej: $T_{ 1 }$, $T_{ 2 }$, $T_{ 3 }$, \ldots
-
-Jak powszechnie wiadomo równanie sfery w~trzech wymiarach
-\begin{equation}
-  \label{eq:Huang-Mechanika-statyczna-02}
-  f( x, y, z ) = x^{ 2 } + y^{ 2 } + z^{ 2 } - 1 = 0,
-\end{equation}
-ma dla $x_{ 1 }$, $y_{ 2 }$ spełniających związek
-$( x_{ 1 } )^{ 2 } + ( y_{ 1 } )^{ 2 } = 1$ dokładnie jedno rozwiązanie
-$z = 0$. Jeżeli $( x_{ 1 } )^{ 2 } + ( y_{ 1 } )^{ 2 } < 1$ rozwiązania są
-dokładnie $z = \sqrt{ ( x_{ 1 } )^{ 2 } + ( y_{ 1 } )^{ 2 } }$
-i~$z = -\sqrt{ ( x_{ 1 } )^{ 2 } + ( y_{ 1 } )^{ 2 } }$. W~pozostałych
-przypadkach, $( x_{ 1 } )^{ 2 } + ( y_{ 1 } )^{ 2 } > 1$, nie ma żadnych
-rozwiązań. Przykład ten pokazuje więc, że~kwestia tego jaką powierzchnię
-wyznacza równanie \eqref{eq:Huang-Mechanika-statyczna-01} nie jest wcale
-banalna ani z~matematycznego, ani z~fizycznego punktu widzenia.
-
-
-
-
-
+\Str{65} Stwierdzenie, że pole elektryczne i magnetyczne są niezwiązane
+dopóki ładunki i prądy są statyczne, jest pewnym uproszczeniem. Jakkolwiek
+może być ono pedagogicznie uzasadnione to jednak warto byłoby dodać jakiś
+komentarz dla bardziej dociekliwych czytelników.
 
 
 
@@ -375,95 +278,16 @@ banalna ani z~matematycznego, ani z~fizycznego punktu widzenia.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    12  & & 12 & $f( p, V, T )$ & $f( P, V, T )$ \\
-    %     & & & & \\
-    %     & & & & \\
+    % & & & & \\
+    59 & & 18 & zmieniał & nie zmieniał \\
+    % & & & & \\
+    % & & & & \\
     \hline
   \end{tabular}
 
 \end{center}
 
 \VerSpaceTwo
-
-
-Str. 135-136. dla których gęstość zależy od $( p, q )$ tylko przez
-hamiltonian \\
-
-
-% ############################
-
-
-
-
-
-
-
-
-
-
-% ########################################
-\section{Józef Werle \textit{Termodynamika fenomenologiczna}
-  \cite{Wer57}}
-
-% ########################################
-
-\vspace{0em}
-
-
-% ##################
-\CenterBoldFont{Uwagi do~konkretnych stron}
-
-\vspace{0em}
-
-
-\noindent
-\Str{15} Werle wprowadza jak strasznie zamieszanie pojęciowe,
-twierdząc na tej samej stronie, że~objętość jest zarówno parametrem
-wewnętrzny jak i~zewnętrznym. Powinno~się jawnie stwierdzić, że~mogą
-istnieć parametry zarówno wewnętrzne, jak i~zewnętrzne układu,
-albo~że~są to wykluczające~się kategorie i~nigdy nie wprowadzać
-jednej wielkości do~nich obu.
-
-Trzeba~się zastanowić, jak jest naprawdę. ????Dok
-
-\VerSpaceFour
-
-
-
-
-
-\noindent
-\Str{17}
-
-
-% ##################
-\CenterBoldFont{Błędy}
-
-
-\begin{center}
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-    & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu &  &  \\ \hline
-    5 & & 2 & odwracalnych & nieodwracalnych \\
-    15 & & 13 & lśedzenia & śledzenia \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    & & & & \\ \hline
-  \end{tabular}
-
-\end{center}
-
-\VerSpaceTwo
-
 
 
 
