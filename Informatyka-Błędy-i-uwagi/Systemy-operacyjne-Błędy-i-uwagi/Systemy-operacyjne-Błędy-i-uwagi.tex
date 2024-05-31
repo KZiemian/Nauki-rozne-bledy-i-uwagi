@@ -9,19 +9,19 @@
 
 
 
-% ---------------------------------------
+% ------------------------------------------------------
 % Packages not tied to particular normal language
-% ---------------------------------------
-% This package should improved spaces in the text.
+% ------------------------------------------------------
+% This package should improved spaces in the text
 \usepackage{microtype}
 % Add few important symbols, like text Celcius degree
 \usepackage{textcomp}
 
 
 
-% ---------------------------------------
+% ------------------------------------------------------
 % Polonization of LaTeX document
-% ---------------------------------------
+% ------------------------------------------------------
 % Basic polonization of the text
 \usepackage[MeX]{polski}
 % Switching on UTF-8 encoding
@@ -33,16 +33,16 @@
 
 
 
-% ---------------------------------------
+% ------------------------------------------------------
 % Setting margins
-% ---------------------------------------
+% ------------------------------------------------------
 \usepackage[a4paper, total={14cm, 25cm}]{geometry}
 
 
 
-% ---------------------------------------
+% ------------------------------------------------------
 % Setting vertical spaces in the text
-% ---------------------------------------
+% ------------------------------------------------------
 % Setting space between lines
 \renewcommand{\baselinestretch}{1.1}
 
@@ -51,36 +51,84 @@
 
 
 
-% ---------------------------------------
+% ------------------------------------------------------
 % Packages for scientific papers
-% ---------------------------------------
-% Switching off \lll symbol, that I guess is representing letter ``Ł''.
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
 % It collide with `amsmath' package's command with the same name
 \let\lll\undefined
 % Basic package from American Mathematical Society (AMS)
 \usepackage[intlimits]{amsmath}
-% Equations are numbered separately in every section.
+% Equations are numbered separately in every section
 \numberwithin{equation}{section}
 
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
 
 
 
 
-% ------------------------------
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{Systemy-operacyjne-Bibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------------------------------
 % Private packages
 % You need to put them in the same directory as .tex file
-% ------------------------------
+% ------------------------------------------------------
 % Contains various command useful for working with a text
 \usepackage{latexgeneralcommands}
+% Contains definitions useful for working with mathematical text
+% \usepackage{mathcommands}
 
 
 
 
 
-% ------------------------------
-% Package ``hyperref''
+% ------------------------------------------------------
+% Package "hyperref"
 % They advised to put it on the end of preambule
-% ------------------------------
+% ------------------------------------------------------
 % It allows you to use hyperlinks in the text
 \usepackage{hyperref}
 
@@ -94,7 +142,7 @@
 
 
 % ------------------------------------------------------------------------------------------------------------------
-% Defining title and author of the text
+% Title and author of the text
 \title{Systemy operacyjne \\
   {\Large Błędy i~uwagi}}
 
@@ -198,15 +246,13 @@ przypisem.
 % ####################################################################
 % Bibliography
 
-\bibliographystyle{plalpha}
-
-\bibliography{ComputerScienceBooks}{}
+\printbibliography
 
 
 
 
 
 % ############################
-
 % End of the document
+
 \end{document}
