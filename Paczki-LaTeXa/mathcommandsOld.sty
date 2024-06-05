@@ -402,7 +402,7 @@
 % #############
 % Funkcje
 
-\newcommand{\sgn}{\textrm{sgn}}
+
 
 
 
@@ -712,3 +712,209 @@
 
 % Koniec komend
 % ############################
+
+
+
+% Wartość bezwzględna i normy
+\providecommand{\abs}[1]{\lvert{ #1 }\rvert}
+
+
+\newcommand{\abstw}[1]{\left| \, { #1 } \, \right|}
+\newcommand{\absth}[1]{\left| { #1 } \right|}
+\newcommand{\absf}[1]{| { #1 } |}
+% \providecommand{\absd}[1]{\left| #1 \right|}
+% Zupełnie nie wiem, czemu to jest \providecommand
+\providecommand{\norm}[1]{\lVert{ #1 }\rVert}
+
+
+
+
+
+
+
+
+
+
+
+% ????
+\newcommand{\End}{\mathrm{End}}
+
+\newcommand{\Aut}{\mathrm{Aut}}
+
+
+
+
+
+
+
+% Space of functions
+\newcommand{\Hom}{\mathrm{Hom}}
+
+
+
+
+% ##################
+% Functional analysis
+
+
+
+
+
+% Przestrzenie macierzy
+
+
+
+
+
+
+
+% #############
+% Funkcje
+
+\newcommand{\sgn}{\textrm{sgn}}
+
+
+
+
+
+% #############
+% Analiza matematyczna
+
+% #####
+% Oznaczenia do teorii funkcji
+
+
+
+
+
+
+% ########
+% Różniczkowanie i pochodne
+\newcommand{\dPL}{\mathrm{d}}  % differential PL
+
+
+% #####
+% Różniczkowanie i pochodne anglosaskie (czyli ogólne i światowe)
+\newcommand{\de}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
+% Zwykła pochodna - pierwszy argument rząd pochodnej, drugi funkcja,
+% trzeci zmienna
+
+
+
+% #####
+% Różniczkowanie i pochodne, polskie standardy
+\newcommand{\dePL}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
+
+
+
+% Pochodne cząstkowe
+\newcommand{\partialDerivative}[3]{
+  \frac{ \partial^{ #1 } { #2 } }{ \partial { #3 }^{ #1 } } }
+% Partial Derivative
+\newcommand{\pdo}[1]{\partial_{ #1 }}  % Partial Derivative One -- notacja
+% pochodnej cząstkowej bez ułamka
+\newcommand{\pdtwo}[1]{\partial_{ x^{ #1 } }} % PD two - po x z indeksem "#1"
+\newcommand{\pdth}[3]{\fr{ \partial^{ 2 } #1 }{ { \partial x^{ #2 } }
+    { \partial x^{ #3 } } }}  % PD three - po zmiennych x z indeksami "#1" "#2"
+
+
+
+
+% #############
+% Całki i całkowanie
+\newcommand{\dx}{\difPL x}
+\newcommand{\dend}{\, d}  % Różniczka kończąca (ang. end) całkę
+
+
+
+
+
+% #############
+% Analiza wektorowa
+\newcommand{\divergence}{\textrm{div}}
+
+
+
+
+
+
+
+
+% #############
+% Analiza zespolona
+
+
+
+
+
+
+% #############
+% Analiza funkcjonalna
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ##########
+% Teoria dystrybucji
+\newcommand{\Pv}{\mathrm{Pv}}
+
+% Steinmann scaling degree (pl. stopień skalowania Steinmanna)
+\newcommand{\sd}{\textrm{sd}}
+
+
+
+
+
+% ########################################
+
+
+
+
+
+% ####################
+% Analiza matematyczna
+
+
+
+
+
+
+
+
+% ############################
+% Sprawdź czy się nie powtarzają
+
+\newcommand{\dR}{\textrm{dR}}
+
+\newcommand{\ch}{\textrm{ch}}
+
+\newcommand{\Vect}{\textrm{Vect}}
+
+\newcommand{\opp}{\textrm{opp}}
+
+\newcommand{\vol}{\mathrm{vol}}
+
+
+
+% Koniec komend
+% ############################
+
+
+% \DeclareMathOperator{\csch}{csch}
+% \DeclareMathOperator{\arcsec}{arcsec}
+% \DeclareMathOperator{\arccsc}{arcCsc}
+% \DeclareMathOperator{\arccosh}{arcCosh}
+% \DeclareMathOperator{\arcsinh}{arcsinh}
+
+% \DeclareMathOperator{\arcsech}{arcsech}
+% \DeclareMathOperator{\arccsch}{arcCsch}
