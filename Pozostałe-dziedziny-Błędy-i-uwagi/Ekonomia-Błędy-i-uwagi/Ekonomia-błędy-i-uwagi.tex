@@ -1,90 +1,154 @@
-% ---------------------------------------------------------------------
-% Podstawowe ustawienia i pakiety
-% ---------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
-% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+% ------------------------------------------------------------------------------------------------------------------
+% Basic configuration and packages
+% ------------------------------------------------------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
 \documentclass[a4paper,11pt]{article}
-% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
-\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
-\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
 
 
 
-% ---------------------------------------
-% Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ---------------------------------------
-\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
-% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
-% % grafiki.
-% \usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
-% \usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
-% % wprowadzane bezpośrednio w tekście.
-\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
-% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ---------------------------------------
-% MARGINS
-% ---------------------------------------
-\setmarginsrb
-{ 0.7in}  % left margin
-{ 0.6in}  % top margin
-{ 0.7in}  % right margin
-{ 0.8in}  % bottom margin
-{  20pt}  % head height
-{0.25in}  % head sep
-{   9pt}  % foot height
-{ 0.3in}  % foot sep
+% ------------------------------------------------------
+% Packages not tied to particular normal language
+% ------------------------------------------------------
+% This package should improved spaces in the text
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
 
 
 
-% ---------------------------------------
-% Często używane pakiety
-% ---------------------------------------
-% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor}  % Packages enabling use of many colors model and many
-% additional colors
+% ------------------------------------------------------
+% Polonization of LaTeX document
+% ------------------------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
 
 
 
-% ---------------------------------------
-% Pakiety napisane przez użytkownika.
-% Mają być w tym samym katalogu to ten plik .tex
-% ---------------------------------------
-\usepackage{latexgeneralcommands}
+% ------------------------------------------------------
+% Setting margins
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
 
 
 
-% ---------------------------------------------------------------------
-% Dodatkowe ustawienia dla języka polskiego
-% ---------------------------------------------------------------------
-\renewcommand{\thesection}{\arabic{section}.}
-% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
-% Brak kropki po numerach podrozdziału
-
-
-
-% ---------------------------------------
-% Ustawienia różnych parametrów tekstu
-% ---------------------------------------
+% ------------------------------------------------------
+% Setting vertical spaces in the text
+% ------------------------------------------------------
+% Setting space between lines
 \renewcommand{\baselinestretch}{1.1}
 
-% Ustawienie szerokości odstępów między wierszami w tabelach.
+% Setting space between lines in tables
 \renewcommand{\arraystretch}{1.4}
 
 
 
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
 
 
-% ---------------------------------------
-% Pakiet „hyperref”
-% Polecano by umieszczać go na końcu preambuły.
-% ---------------------------------------
-\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki.
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{Logika-i-teoria-mnogości-Bibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------------------------------
+% Wonderful package PGF/TikZ
+% ------------------------------------------------------
+% \usepackage{tikz}
+
+% % Loading concrete TikZ libraries
+% \usetikzlibrary{decorations.markings}
+
+% % Package with TikZ pics
+% \usepackage{TikZPics}
+
+% % Package with additional TikZ styles
+% \usepackage{TikZStyles}
+
+
+
+
+
+% ------------------------------------------------------
+% Private packages
+% You need to put them in the same directory as .tex file
+% ------------------------------------------------------
+% Contains various command useful for working with a text
+\usepackage{latexgeneralcommands}
+% Contains definitions useful for working with mathematical text
+% \usepackage{mathcommands}
+
+
+
+
+
+% ------------------------------------------------------
+% Package "hyperref"
+% They advised to put it on the end of preambule
+% ------------------------------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
 
 
 
@@ -95,8 +159,8 @@
 
 
 
-% ---------------------------------------------------------------------
-% Tytuł i autor tekstu
+% ------------------------------------------------------------------------------------------------------------------
+% Title and author of the text
 \title{Ekonomia \\
   {\Large Błędy i~uwagi}}
 
@@ -104,7 +168,7 @@
 
 
 % \date{}
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -135,13 +199,13 @@
 % ######################################
 \section{Bardzo wpływowe dzieła}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Adam Smith \\
   \textit{Badania nad naturą i~przyczynami bogactw narodów. Tom~I},
   \cite{} }
@@ -166,7 +230,7 @@
 
 \end{center}
 
-\vspace{\spaceOne}
+\VerSpaceTwo
 
 % ############################
 
@@ -183,13 +247,13 @@
 % ######################################
 \section{Austriacka szkoła ekonomii}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   J\"{o}rg Guido H\"{u}lsmann \\
   \textit{Etyka produkcji pieniądza},
   \cite{HulsmannEtykaProdukcjiPieniadza2014}}
@@ -206,43 +270,45 @@
 \noindent
 \Str{II} Logo firmy NowePrzetargi.pl zostało wydrukowane w słabej jakości.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{XXII}{9--10} Według tego co jest tu napisane, dzieło Habigera na
+\StrWierszDol{XXII}{9--10} Według tego co jest tu napisane, dzieło Habigera na
 temat okresu 1891--1991 ukazało~się w~roku 1990. To zapewne wynik błędu
 drukarskiego.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{4}{9--10} Może wydawać~się dziwne, że w tym kontekście wymienione jest
+\StrWierszGora{4}{9--10} Może wydawać~się dziwne, że w tym kontekście
+wymienione jest
 ósme przykazanie\footnote{Używany jest tu katolicki podział Dekalogu.}. Może
 to być błąd, możliwe też, że~H\"{u}lsmann miał tu na myśli związek jak ma to
 przykazanie z~kwestią produkcji pieniądza, co omówił na stronie 23
 niniejszej książki
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{57}{6} W~tej linii pojawia~się anglicyzm „run na bank”. Jak jest
+\StrWierszGora{57}{6} W~tej linii pojawia~się anglicyzm „run na bank”. Jak
+jest
 wyjaśnione dalej w~tym samym paragrafie pochodzi to od angielskiego „bank
 run”. Wydaje mi~się, że~znacznie lepszym terminem byłby „nalot na bank” albo
 „najazd na bank”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -383,20 +449,20 @@ zbyt duże.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
-\StrWd{13}{17} \\
-\Jest  jako naturalni przywódcy \\
-\Powin jako będący naturalnymi przywódcami \\
-\StrWd{58}{24}
-\Jest  ofiar pokusy zarządców magazynów pieniędzy i~bankierów. \\
-\Powin zarządców magazynów pieniędzy i~bankierów, którzy stali~się ofiarami
-rządy zysku. \\
-\StrWg{59}{6} \\
-\Jest  depozytów otrzymanych w~pożyczkach \\
-\Powin przetrzymywanych depozytów w~pożyczki \\
+\StrWierszDol{13}{17} \\
+\Jest jako naturalni przywódcy \\
+\PowinnoByc jako będący naturalnymi przywódcami \\
+\StrWierszDol{58}{24}
+\Jest ofiar pokusy zarządców magazynów pieniędzy i~bankierów. \\
+\PowinnoByc zarządców magazynów pieniędzy i~bankierów, którzy stali~się
+ofiarami rządy zysku. \\
+\StrWierszGora{59}{6} \\
+\Jest depozytów otrzymanych w~pożyczkach \\
+\PowinnoByc przetrzymywanych depozytów w~pożyczki \\
 % \StrWd{11}{5} \\
 % \Jest   \\
 % \Powin  \\
@@ -447,7 +513,7 @@ rządy zysku. \\
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Murray N. Rothbard \\
   \textit{Złoto, banki, ludzie. Krótka historia pieniądza},
   \cite{RothbardZlotoBankiLudzie2016}}
@@ -600,13 +666,13 @@ rządy zysku. \\
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
-\StrWd{156}{2} \\
-\Jest  Prekursorzy Nowej Lewicy. Studia z~myśli społecznej XIX i~XX wieku \\
-\Powin \textit{Prekursorzy Nowej Lewicy. Studia z~myśli społecznej XIX
+\StrWierszDol{156}{2} \\
+\Jest Prekursorzy Nowej Lewicy. Studia z~myśli społecznej XIX i~XX wieku \\
+\PowinnoByc \textit{Prekursorzy Nowej Lewicy. Studia z~myśli społecznej XIX
   i~XX wieku} \\
 
 
@@ -670,14 +736,14 @@ rządy zysku. \\
 
 \section{Historia ekonomii}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Red. Randall G. Holcombe \\
   \textit{15 wielkich austriackiej szkoły ekonomii},
   \cite{}}
@@ -693,7 +759,7 @@ rządy zysku. \\
 
 Gdzieś powinna być starsza wersja uwag do tej książki.????
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -707,8 +773,9 @@ Gdzieś powinna być starsza wersja uwag do tej książki.????
 
 
 \noindent
-\StrWd{14}{2--3} Należy zwrócić uwagę na to, że~według informacji które można
-znaleźć na~stronie 209 niniejszej książki, wspomniany tu tekst Murray’a N.
+\StrWierszDol{14}{2--3} Należy zwrócić uwagę na to, że~według informacji
+które można znaleźć na~stronie 209 niniejszej książki, wspomniany tu tekst
+Murray’a N.
 Rothbarda \textit{Ludwig von~Mises: Scholar, Creator, Hero}
 w~przeredagowanej wersji został do niej włączony pod tytułem \textit{Ludwig
   von~Mises. Przywódca szkoły austriackiej}.
@@ -829,6 +896,8 @@ w~przeredagowanej wersji został do niej włączony pod tytułem \textit{Ludwig
 
 \end{center}
 
+\VerSpaceTwo
+
 
 \noindent
 % \Jest  Amerian Seafarers Union \\
@@ -872,9 +941,8 @@ w~przeredagowanej wersji został do niej włączony pod tytułem \textit{Ludwig
 % \Jest
 % \Powin
 
-\vspace{\spaceTwo}
-% ############################
 
+% ############################
 
 
 
@@ -885,17 +953,15 @@ w~przeredagowanej wersji został do niej włączony pod tytułem \textit{Ludwig
 
 % ####################################################################
 % ####################################################################
-% Bibliografia
+% Bibliography
 
-\bibliographystyle{plalpha}
-
-\bibliography{VariousFieldsBooks}{}
+\printbibliography
 
 
 
 
 
 % ############################
+% End of the document
 
-% Koniec dokumentu
 \end{document}
