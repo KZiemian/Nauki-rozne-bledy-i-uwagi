@@ -1,52 +1,119 @@
 % ####################################################################
-% Pakiet z skrótami różnych matematycznych LaTeXa
-
-% Część skrótów nie będzie działało bez pakietów od American Mathematican
-% Society, takich jak "amsmath", "amssym", etc.
+% Commands for writing mathematical text
+%
+% They probably won't work with some packages from AMS, like ``amsmath'',
+% ``amssymb'', etc.
 % ####################################################################
 \ProvidesPackage{mathcommands}
 
 
 
-% ---------------------------------------
-% Command for mathematical mode
-% ---------------------------------------
+% ######################################
+% Algebraic symbols
+
+% \newcommand{\mod}{\mathrm{mod}}
+
+\newcommand{\UnitAlg}{\mathbf{1}}
+% ######################################
 
 
+
+% ######################################
+% Cathegory theory notation
+
+\newcommand{\Aut}{\mathrm{Aut}}
+
+\newcommand{\End}{\mathrm{End}}
+
+\newcommand{\Hom}{\mathrm{Hom}}
+% ######################################
+
+
+
+% ######################################
+% Constants
+
+\newcommand{\const}{\textrm{const}}
+% ######################################
+
+
+
+% ######################################
+% Functions
+
+% Eksperyment
+
+\newcommand{\absOne}[1]{ | \hspace{0.05em} #1 \hspace{0.05em} | }
+
+\newcommand{\absTwo}[1]{ | \hspace{0.05em} #1 \hspace{0.075em} | }
+
+\newcommand{\absThree}[1]{ | \hspace{0.05em} #1 \hspace{0.09em} | }
+
+\newcommand{\absFour}[1]{ | \hspace{0.05em} #1 \hspace{0.11em} | }
+
+\newcommand{\absFive}[1]{ | \hspace{0.05em} #1 \hspace{0.13em} | }
+
+\newcommand{\absSix}[1]{ | \hspace{0.05em} #1 | }
+
+\newcommand{\absBigOne}[1]{ \big| \hspace{0.05em} #1 \hspace{0.05em}
+    \big| }
+
+\newcommand{\absLeftRightOne}[1]{ \left| \hspace{0.05em} #1 \hspace{0.05em}
+  \right| }
+
+\newcommand{\absHorLeftOne}[1]{ | \hspace{0.075em} #1 \hspace{0.05em} | }
+\newcommand{\absHorLeftTwo}[1]{ | \hspace{0.09em} #1 \hspace{0.05em} | }
+
+\newcommand{\absHorRightOne}[1]{ | #1 \hspace{0.05em} | }
+
+
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\ad}{ad}
+
+\DeclareMathOperator{\Arg}{Arg}
+
+\DeclareMathOperator{\Diam}{Diam}
+
+\DeclareMathOperator{\Imag}{\mathfrak{Im}}
+
+\DeclareMathOperator{\id}{id}
+
+\DeclareMathOperator{\Log}{Log}
+
+\DeclareMathOperator{\proj}{proj}
+
+\DeclareMathOperator{\Real}{\mathfrak{Re}}
+
+\DeclareMathOperator{\sgn}{sgn}
+
+\DeclareMathOperator{\Tr}{Tr}
 
 
 
 % ##################
-% Sets
-% ##################
-
-
-% Ładniejszy zbiór pusty
-\let\oldemptyset\emptyset
-\let\emptyset\varnothing
-
-
-
-% Wartość bezwzględna i normy
-\providecommand{\abs}[1]{\lvert{ #1 }\rvert}
-
-\newcommand{\absOne}[1]{|\, { #1 } \,|}  % ABSolute value One
-\newcommand{\abstw}[1]{\left| \, { #1 } \, \right|}
-\newcommand{\absth}[1]{\left| { #1 } \right|}
-\newcommand{\absf}[1]{| { #1 } |}
-% \providecommand{\absd}[1]{\left| #1 \right|}
-% Zupełnie nie wiem, czemu to jest \providecommand
-\providecommand{\norm}[1]{\lVert{ #1 }\rVert}
-
-
+% Hyperbolic functions
+\DeclareMathOperator{\artanh}{artanh}
+\DeclareMathOperator{\arcoth}{arcoth}
 
 
 
 % ##################
-% Litery greckie
-% By \lambda była wyświetlana jako Unicode, a dawał znak \uplambda
-\let\oldlambda\Lambda
-\renewcommand{\lambda}{\uplambda}
+% Various auxiliary symbols for functions
+
+\newcommand{\yTilde}{\widetilde{y}}
+% ######################################
+
+
+
+
+
+
+% ######################################
+% Letters
+
+
+% ##################
+% Greek letters
 
 
 
@@ -58,6 +125,8 @@
 \newcommand{\Abb}{\mathbb{A}}
 
 \newcommand{\Cbb}{\mathbb{C}}
+
+\newcommand{\Ebb}{\mathbb{E}}
 
 \newcommand{\Fbb}{\mathbb{F}}
 
@@ -75,12 +144,11 @@
 
 \newcommand{\Rbb}{\mathbb{R}}
 
+\newcommand{\Wbb}{\mathbb{W}}
+
 \newcommand{\Vbb}{\mathbb{V}}
 
 \newcommand{\Zbb}{\mathbb{Z}}
-
-
-\newcommand{\matUnit}{I}
 
 
 
@@ -115,6 +183,7 @@
 \newcommand{\Ecal}{\mathcal{E}}
 
 \newcommand{\Fcal}{\mathcal{F}}
+% \newcommand{\fcal}{\mathcal{f}}
 
 \newcommand{\Gcal}{\mathcal{G}}
 
@@ -145,6 +214,8 @@
 
 \newcommand{\Ucal}{\mathcal{U}}
 
+\newcommand{\Wcal}{\mathcal{W}}
+
 \newcommand{\Vcal}{\mathcal{V}}
 
 \newcommand{\Xcal}{\mathcal{X}}
@@ -158,7 +229,11 @@
 % ##################
 % Fraktur letters
 
+\newcommand{\Bfrak}{\mathfrak{B}}
+
 \newcommand{\Cfrak}{\mathfrak{C}}
+
+\newcommand{\Efrak}{\mathfrak{E}}
 
 \newcommand{\gFrak}{\mathfrak{g}}
 
@@ -169,366 +244,204 @@
 \newcommand{\oFrak}{\mathfrak{o}}
 
 \newcommand{\Ufrak}{\mathfrak{U}}
+% ######################################
 
 
+
+
+
+% ######################################
+% Linear algebra
+
+
+% ##################
+% Matrices
+
+\newcommand{\matUnit}{I}
 
 
 
 % ##################
-% Functions
+% Spaces of matrices
 
-\newcommand{\Ad}{\mathrm{Ad}}
-
-\newcommand{\ad}{\mathrm{ad}}
-
-% ????
-\newcommand{\End}{\mathrm{End}}
-
-\newcommand{\Aut}{\mathrm{Aut}}
-
-\newcommand{\id}{\mathrm{id}}
-
-% ????
-\newcommand{\im}{\mathrm{im}}
-% ????
-% \newcommand{\ker}{\mathrm{ker}}
-
-
-% Complex analysis
-\DeclareMathOperator{\Arg}{Arg}
-\DeclareMathOperator{\Imag}{\mathfrak{Im}}
-\DeclareMathOperator{\Log}{Log}
-\DeclareMathOperator{\Real}{\mathfrak{Re}}
-
-
-% Space of functions
-\newcommand{\Hom}{\mathrm{Hom}}
-
-
-
-% ##################
-% Groups
-
-
-
-
-
-
-% ##################
-% Algebra
-
-\DeclareMathOperator{\Tr}{Tr}
-
-
-
-
-
-% #############
-% Algebra liniowa
-
-% Podprzestrzenie i odwzorowania liniowe
-\newcommand{\image}{\textrm{im}}
-
-% Vectors
-\newcommand{\veca}{\vec{ a }}
-
-\newcommand{\vecb}{\vec{ b }}
-
-\newcommand{\vecc}{\vec{ c }}
-
-\newcommand{\vecd}{\vec{ d }}
-
-\newcommand{\vecE}{\vec{ E }}
-\newcommand{\vece}{\vec{ e }}
-
-\newcommand{\vecF}{\vec{ F }}
-\newcommand{\vecf}{\vec{ f }}
-
-\newcommand{\vecg}{\vec{ g }}
-
-\newcommand{\vech}{\vec{ h }}
-
-\newcommand{\veck}{\vec{ k }}
-
-\newcommand{\vecJ}{\vec{ J }}
-
-\newcommand{\vecn}{\vec{ n }}
-
-\newcommand{\vecP}{\vec{ P }}
-\newcommand{\vecp}{\vec{ p }}
-
-\newcommand{\vecq}{\vec{ q }}
-
-\newcommand{\vecr}{\vec{ r }}
-
-\newcommand{\vecX}{\vec{ X }}
-\newcommand{\vecx}{\vec{ x }}
-
-\newcommand{\vecy}{\vec{ y }}
-
-
-
-
-
-
-
-
-\newcommand{\vecZero}{\vec{ 0 }}
-
-% Funkcje wektorowe
-\newcommand{\vecxt}{\vec{ x }( t )}
-
-
-% Vectors, bold font
-\newcommand{\vecabold}{\mathbf{a}}
-
-\newcommand{\vecBbold}{\mathbf{B}}
-\newcommand{\vecbbold}{\mathbf{b}}
-
-\newcommand{\veccbold}{\mathbf{c}}
-
-\newcommand{\vecdbold}{\mathbf{d}}
-
-\newcommand{\vecEbold}{\mathbf{E}}
-\newcommand{\vecebold}{\mathbf{e}}
-
-\newcommand{\vecgbold}{\mathbf{g}}
-
-\newcommand{\vechbold}{\mathbf{h}}
-
-\newcommand{\vecibold}{\mathbf{i}}
-
-\newcommand{\vecjbold}{\mathbf{j}}
-
-\newcommand{\vecKbold}{\mathbf{K}}
-\newcommand{\veckbold}{\mathbf{k}}
-
-\newcommand{\vecMbold}{\mathbf{M}}
-
-\newcommand{\vecnbold}{\mathbf{n}}
-
-\newcommand{\vecPbold}{\mathbf{P}}
-\newcommand{\vecpbold}{\mathbf{p}}
-
-\newcommand{\vecqbold}{\mathbf{q}}
-
-\newcommand{\vecRbold}{\mathbf{R}}
-\newcommand{\vecrbold}{\mathbf{r}}
-
-\newcommand{\vectbold}{\mathbf{t}}
-
-\newcommand{\vecubold}{\mathbf{u}}
-
-\newcommand{\vecVbold}{\mathbf{V}}
-\newcommand{\vecvbold}{\mathbf{v}}
-
-\newcommand{\vecwbold}{\mathbf{w}}
-
-\newcommand{\vecxbold}{\mathbf{x}}
-
-\newcommand{\vecybold}{\mathbf{y}}
-
-
-\newcommand{\vecalphabold}{\boldsymbol{\alpha}}
-
-\newcommand{\vecrhobold}{\boldsymbol{\rho}}
-
-\newcommand{\vecvarphibold}{\boldsymbol{\varphi}}
-
-\newcommand{\vecomegabold}{\boldsymbol{\omega}}
-
-
-\newcommand{\vecZeroBold}{\mathbf{0}}
-
-\newcommand{\vecOneBold}{\mathbf{1}}
-
-
-
-% Przestrzenie macierzy
 \newcommand{\GL}{\mathrm{GL}}
-\newcommand{\SL}{\mathrm{SL}}
-\newcommand{\SO}{\mathrm{SO}}
-\newcommand{\Sp}{\mathrm{Sp}}
-\newcommand{\SU}{\mathrm{SU}}
 
 \newcommand{\OStraight}{\mathrm{O}}
 \newcommand{\OStraightBold}{\mathbf{\mathrm{O}}}
 
+\newcommand{\SL}{\mathrm{SL}}
+
+\newcommand{\SO}{\mathrm{SO}}
+
 \newcommand{\soFrak}{\mathfrak{so}}
+
+\newcommand{\Sp}{\mathrm{Sp}}
+
 \newcommand{\spFrak}{\mathfrak{sp}}
 
+\newcommand{\SU}{\mathrm{SU}}
+
+
+
+% ######################################
 
 
 
 
 
-% #############
-% Funkcje
+% ######################################
+% Sets
 
-\newcommand{\sgn}{\textrm{sgn}}
-
-
-
-
-
-% #############
-% Analiza matematyczna
-
-% #####
-% Oznaczenia do teorii funkcji
-\newcommand{\supp}{\mathrm{supp}\,}
-
-
-
-
-
-
-% ########
-% Różniczkowanie i pochodne
-\newcommand{\dPL}{\mathrm{d}}  % differential PL
-
-
-% #####
-% Różniczkowanie i pochodne anglosaskie (czyli ogólne i światowe)
-\newcommand{\de}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
-% Zwykła pochodna - pierwszy argument rząd pochodnej, drugi funkcja,
-% trzeci zmienna
-
-
-
-% #####
-% Różniczkowanie i pochodne, polskie standardy
-\newcommand{\dePL}[3]{\fr{ d^{ #1 } { #2 } }{ d { #3 }^{ #1 } }}
-
-
-
-% Pochodne cząstkowe
-\newcommand{\partialDerivative}[3]{
-  \frac{ \partial^{ #1 } { #2 } }{ \partial { #3 }^{ #1 } } }
-% Partial Derivative
-\newcommand{\pdo}[1]{\partial_{ #1 }}  % Partial Derivative One -- notacja
-% pochodnej cząstkowej bez ułamka
-\newcommand{\pdtwo}[1]{\partial_{ x^{ #1 } }} % PD two - po x z indeksem "#1"
-\newcommand{\pdth}[3]{\fr{ \partial^{ 2 } #1 }{ { \partial x^{ #2 } }
-    { \partial x^{ #3 } } }}  % PD three - po zmiennych x z indeksami "#1" "#2"
-
-
-
-
-% #############
-% Całki i całkowanie
-\newcommand{\dx}{\difPL x}
-\newcommand{\dend}{\, d}  % Różniczka kończąca (ang. end) całkę
-
-
-
-
-
-% #############
-% Analiza wektorowa
-\newcommand{\divergence}{\textrm{div}}
+% Better looking empty set symbol
+\let\oldemptyset\emptyset
+\let\emptyset\varnothing
 
 
 
 % ##################
-% Functions
+% Symbols for operations that creates sets
+
+\DeclareMathOperator{\Ker}{Ker}
+
+\DeclareMathOperator{\Ran}{Ran}
+
+\DeclareMathOperator{\supp}{supp}
+% ######################################
+
+
+
+
+
+% ######################################
+% Vectors
+
 % ##################
+% Vectors with arrows
 
+\newcommand{\veca}{\vec{a}}
 
-% \newcommand{\arg}{\textrm{arg}}
+\newcommand{\vecB}{\vec{B}}
+\newcommand{\vecb}{\vec{b}}
 
+\newcommand{\vecc}{\vec{c}}
 
+\newcommand{\vecd}{\vec{d}}
 
+\newcommand{\vecE}{\vec{E}}
+\newcommand{\vece}{\vec{e}}
 
+\newcommand{\vecF}{\vec{F}}
+\newcommand{\vecf}{\vec{f}}
 
-% #############
-% Analiza zespolona
-\newcommand{\Res}{\textrm{Res}}
+\newcommand{\vecg}{\vec{g}}
 
-\newcommand{\Pier}{\textrm{Pier}}  % Otoczenie pierścieniowe
+\newcommand{\vech}{\vec{h}}
 
+\newcommand{\veck}{\vec{k}}
 
+\newcommand{\vecJ}{\vec{J}}
+\newcommand{\vecj}{\vec{j}}
 
+\newcommand{\vecn}{\vec{n}}
 
+\newcommand{\vecP}{\vec{P}}
+\newcommand{\vecp}{\vec{p}}
 
-% #############
-% Analiza funkcjonalna
+\newcommand{\vecq}{\vec{q}}
 
+\newcommand{\vecr}{\vec{r}}
 
+\newcommand{\vect}{\vec{t}}
 
+\newcommand{\vecv}{\vec{v}}
 
+\newcommand{\vecX}{\vec{X}}
+\newcommand{\vecx}{\vec{x}}
 
+\newcommand{\vecy}{\vec{y}}
 
+\newcommand{\vecZero}{\vec{0}}
 
 
 
 
 
+% ##################
+% Vectors, bold font greek latters
+\newcommand{\vecalphaBold}{\boldsymbol{\alpha}}
 
+\newcommand{\vecrhoBold}{\boldsymbol{\rho}}
 
+\newcommand{\vecvarphiBold}{\boldsymbol{\varphi}}
 
-% ##########
-% Teoria dystrybucji
-\newcommand{\Pv}{\mathrm{Pv}}
+\newcommand{\vecomegaBold}{\boldsymbol{\omega}}
 
-\newcommand{\sd}{\textrm{sd}}  % Stopień skalowania Steinmanna
 
 
 
 
+% ##################
+% Vectors, bold font latin latters
 
-% ########################################
+\newcommand{\vecAbold}{\mathbf{A}}
+\newcommand{\vecaBold}{\mathbf{a}}
 
+\newcommand{\vecBbold}{\mathbf{B}}
+\newcommand{\vecbBold}{\mathbf{b}}
 
+\newcommand{\veccBold}{\mathbf{c}}
 
+\newcommand{\vecdBold}{\mathbf{d}}
 
+\newcommand{\vecEbold}{\mathbf{E}}
+\newcommand{\veceBold}{\mathbf{e}}
 
-% ####################
-% Analiza matematyczna
+\newcommand{\vecgBold}{\mathbf{g}}
 
+\newcommand{\vecHbold}{\mathbf{H}}
+\newcommand{\vechBold}{\mathbf{h}}
 
+\newcommand{\veciBold}{\mathbf{i}}
 
+\newcommand{\vecjBold}{\mathbf{j}}
 
+\newcommand{\vecKbold}{\mathbf{K}}
+\newcommand{\veckBold}{\mathbf{k}}
 
+\newcommand{\vecMbold}{\mathbf{M}}
 
+\newcommand{\vecnBold}{\mathbf{n}}
 
+\newcommand{\vecPbold}{\mathbf{P}}
+\newcommand{\vecpBold}{\mathbf{p}}
 
-% ############################
-% Sprawdź czy się nie powtarzają
+\newcommand{\vecqBold}{\mathbf{q}}
 
+\newcommand{\vecRbold}{\mathbf{R}}
+\newcommand{\vecrBold}{\mathbf{r}}
 
+\newcommand{\vectBold}{\mathbf{t}}
 
+\newcommand{\vecuBold}{\mathbf{u}}
 
+\newcommand{\vecVbold}{\mathbf{V}}
+\newcommand{\vecvBold}{\mathbf{v}}
 
-% \DeclareMathOperator{\csch}{csch}
-% \DeclareMathOperator{\arcsec}{arcsec}
-% \DeclareMathOperator{\arccsc}{arcCsc}
-% \DeclareMathOperator{\arccosh}{arcCosh}
-% \DeclareMathOperator{\arcsinh}{arcsinh}
-\DeclareMathOperator{\artanh}{artanh}
-% \DeclareMathOperator{\arcsech}{arcsech}
-% \DeclareMathOperator{\arccsch}{arcCsch}
-\DeclareMathOperator{\arcoth}{arcoth}
+\newcommand{\vecwBold}{\mathbf{w}}
 
+\newcommand{\vecxBold}{\mathbf{x}}
 
+\newcommand{\vecyBold}{\mathbf{y}}
 
 
 
 
-\newcommand{\Diam}{\textrm{Diam}}
 
 
-\newcommand{\dR}{\textrm{dR}}
+% ##################
+% Vectors, bold font numbers
 
-\newcommand{\ch}{\textrm{ch}}
+\newcommand{\vecOneBold}{\mathbf{1}}
 
-\newcommand{\Vect}{\textrm{Vect}}
-
-\newcommand{\opp}{\textrm{opp}}
-
-\newcommand{\vol}{\mathrm{vol}}
-
-
-
-% Koniec komend
-% ############################
+\newcommand{\vecZeroBold}{\mathbf{0}}
+% ######################################

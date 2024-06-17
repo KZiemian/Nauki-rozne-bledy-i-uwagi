@@ -1,0 +1,485 @@
+% ------------------------------------------------------------------------------------------------------------------
+% Basic configuration and packages
+% ------------------------------------------------------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
+\documentclass[a4paper,11pt]{article}
+
+
+
+% ------------------------------------------------------
+% Packages not tied to particular normal language
+% ------------------------------------------------------
+% This package should improved spaces in the text
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
+
+
+
+% ------------------------------------------------------
+% Polonization of LaTeX document
+% ------------------------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
+
+
+
+% ------------------------------------------------------
+% Setting margins
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
+
+
+
+% ------------------------------------------------------
+% Setting vertical spaces in the text
+% ------------------------------------------------------
+% Setting space between lines
+\renewcommand{\baselinestretch}{1.1}
+
+% Setting space between lines in tables
+\renewcommand{\arraystretch}{1.4}
+
+
+
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{Logika-i-teoria-mnogości-Bibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------------------------------
+% Wonderful package PGF/TikZ
+% ------------------------------------------------------
+% \usepackage{tikz}
+
+% % Loading concrete TikZ libraries
+% \usetikzlibrary{decorations.markings}
+
+% % Package with TikZ pics
+% \usepackage{TikZPics}
+
+% % Package with additional TikZ styles
+% \usepackage{TikZStyles}
+
+
+
+
+
+% ------------------------------------------------------
+% Private packages
+% You need to put them in the same directory as .tex file
+% ------------------------------------------------------
+% Contains various command useful for working with a text
+\usepackage{latexgeneralcommands}
+% Contains definitions useful for working with mathematical text
+\usepackage{mathcommands}
+
+
+
+
+
+% ------------------------------------------------------
+% Package "hyperref"
+% They advised to put it on the end of preambule
+% ------------------------------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
+
+
+
+
+
+
+
+
+
+
+% ------------------------------------------------------------------------------------------------------------------
+% Title and author of the text
+\title{Równania różniczkowe zwyczajne \\
+  {\Large Błędy i~uwagi}}
+
+\author{Kamil Ziemian}
+
+
+% \date{}
+% ------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+% ##############################
+\section{
+  Władimir Igoriewicz Arnold \\
+  \textit{Równania różniczkowe zwyczajne},
+  \cite{ArnoldRownaniaRozniczkoweZwyczajne1975}}
+
+
+% ##################
+\newpage
+
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    5   & &  7 & 1968 - 196 & 1968 - 1969 \\
+    11  & 17 & & mechanice klasycznej & mechanice kwantowej \\
+    15  & & 16 & rozdziale 6 & rozdziale 5 \\
+    28  & 15 & & wzór (8) & wzór \\
+    34  &  9 & & $\dot{ x }_{ 1 } = x_{ 2 }$ & $\dot{ x }_{ 1 } = x_{ 1 }$ \\
+    47  & & 12 & $x_{ i } = \varphi_{ i }( x_{ 1 }, \ldots, x_{ n } )$
+           & $x_{ i } = \varphi_{ i }( y_{ 1 }, \ldots, y_{ n } )$ \\
+    53  & & 14 & obrót & obrót krzywych całkowych \\
+    56  & 12 & & osobliwym & nieosobliwym \\
+    61  &  7 & & $\vecxBold$???, $\vecalphaBold_{ 0 }$
+           & $\vecxBold$, $\vecalphaBold$ \\
+    64  & & 11 & ????$\vecgBold( t_{ 2 }, t_{ 1 }, \vecxBold )
+                = \vecgBold^{ t_{ 2 } }_{ t_{ 1 } }( \vecxBold, t_{ 1 } )$
+           & $\vecxBold^{ t_{ 2 } }_{ t_{ 1 } }( \vecxBold, t_{ 1 } )
+             = \vecgBold( t_{ 2 }, t_{ 1 }, \vecxBold )$ \\
+    64  & & 10 & $( \vecvarphiBold( t ), t )$
+           & $( t, \vecvarphiBold( t ) )$ \\[0.3em]
+    66  & 17 & & $\vecvBold( t, \vecxBold, \dot{ \vecalphaBold } )$
+           & $\vecvBold( t, \vecxBold, \vecalphaBold )$??? \\[0.3em]
+    70  & & 13 & $\dot{ p }_{ i } = \frac{ \partial H }{ \partial q_{ i } }$
+           & $\dot{ p }_{ i } = -\frac{ \partial H }{ \partial q_{ i } }$ \\[0.3em]
+    71  & & 15 & $\frac{ \partial \vecvBold_{ 0 } }{ \vecxBold }$
+           & $\frac{ \partial \vecvBold_{ 0 } }{ \partial \vecxBold }$ \\[0.4em]
+    72  &  4 & & „niezaburzonego” & „zaburzonego” \\
+    73  &  5 & & $\vecxBold( 0$ & $\vecxBold( 0 )$ \\
+    90  & &  3 & \textit{wraz z pochodną dla} $x = 0$
+           & \textit{dla} $x = 0$ \\
+    92  &  3 & & $U( x( O ) )$ & $U( x( 0 ) )$ \\[0.3em]
+    123 &  6 & & $^{ \Rbb }A : \Cbb^{ m } \to { }^{ \Rbb } \Cbb^{ n }$
+           & ${ }^{ \Rbb }A : { }^{ \Rbb } \Cbb^{ m }
+             \to { }^{ \Rbb } \Cbb^{ n }$ \\
+    125 &  5 & & $\mathbf{I}$ & $I$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\VerSpaceSix
+
+
+\noindent
+\StrWierszDol{66}{7} \\
+\Jest \textit{tyłu do~brzegu} \\
+\PowinnoByc \textit{tyłu nieograniczenie albo~do~brzegu} \\
+\StrWierszGora{110}{9} \\
+\Jest sumą częściową szeregu --~iloczynu \\
+\PowinnoByc jest sumą części wyrazów iloczynu \\
+
+
+
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\section{ % Autor i tytuł dzieła
+  N. M. Matwiejew \\
+  \textit{Metody całkowania równana różniczkowych zwyczajnych},
+  \cite{MatwiejewMetodyCalkowaniaRownanRozniczkowychZwyczajnych1982}}
+
+\vspace{0em}
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    5   & &  9 & Dodzimy & Dowodzimy \\
+    5   & &  8 & potkowych & początkowych \\
+    5   & &  7 & poąątkowych & początkowych \\
+    10  & & 19 & damy & mamy \\
+    % 15  & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\VerSpaceSix
+
+
+\noindent
+\StrWierszGora{15}{13}
+\Jest w~sensie ustępu \\
+\PowinnoByc w~sensie zdefiniowanym w~ustępie \\
+\StrWierszDol{20}{2} \\
+\Jest i~nie ma rozwiązania określonego w~tym samym przedziale
+nie~identycznego z~rozwiązaniem $y = y( x )$ chociażby w~jednym
+punkcie przedziału $\absOne{ x - x_{ 0 } } \leq h$ różnym
+od~punktu $x = x_{ 0 }$. \\
+\PowinnoByc i~nie istnieje inne rozwiązanie określone w~przedziale
+$\absOne{ x - x_{ 0 } } \leq h_{ 1 } \leq h$ które nie byłoby równe
+rozwiązaniu $y = y( x )$ w~każdym punkcie przedziału
+$\absOne{ x - x_{ 0 } } \leq h_{ 1 }$. \\
+
+
+% ############################
+
+
+
+
+
+
+% ####################
+\section{ % Autor i tytuł dzieła
+  Władimir Igoriewicz Arnold \\
+  ,,Równania różniczkowe zwyczajne'', \cite{} }
+
+
+Błędy
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    11  & 17 & & mechanice klasycznej & mechanice kwantowej \\
+    15  & & 16 & rozdziale 6 & rozdziale 5 \\
+    28  & 15 & & wzór (8) & wzór \\
+    34  &  9 & & $\dot{ x }_{ 1 } = x_{ 2 }$ & $\dot{ x }_{ 1 } = x_{ 1 }$ \\
+    47  & & 12 & $x_{ i } = \varphi_{ i }( x_{ 1 }, \ldots, x_{ n } )$
+           & $x_{ i } = \varphi_{ i }( y_{ 1 }, \ldots, y_{ n } )$ \\
+    53  & & 14 & obrót & obrót krzywych całkowych \\
+    56  & 12 & & osobliwym & nieosobliwym \\
+    61  &  7 & & $\vecxBold$, $\boldsymbol{\alpha}_{ 0 }$
+           & $\vecxBold$, $\boldsymbol{\alpha}$ \\
+    % 64  & & 11 & $\vecgBold( t_{ 2 }, t_{ 1 }, \vecxBold )
+    %             = \vecgBold^{ t_{ 2 } }_{ t_{ 1 } }( \vecxBold, t_{ 1 } )$
+    %        & $\gbf^{ t_{ 2 } }_{ t_{ 1 } }( \xbf, t_{ 1 } )
+    %          = \gbf( t_{ 2 }, t_{ 1 }, \xbf )$ \\
+    % 64  & & 10 & $( \vpb( t ), t )$ & $( t, \vpb( t ) )$ \\
+    % 66  & 17 & & $\vbf( t, \xbf, \dot{ \alb } )$
+    %        & $\vbf( t, \xbf, \alb )$ \\
+    % 70  & & 13 & $\pdot_{ i } = \pd{ }{ H }{ q_{ i } }$
+    %        & $\pdot_{ i } = -\pd{ }{ H }{ q_{ i } }$ \\
+    % 71  & & 15 & $\frac{ \partial \vbf_{ 0 } }{ \xbf }$
+    %        & $\pd{}{ \vbf_{ 0 } }{ \xbf }$ \\
+    % 72  &  4 & & ,,niezaburzonego'' & ,,zaburzonego'' \\
+    % 73  &  5 & & $\xbf( 0$ & $\xbf( 0 )$ \\
+    % 90  & &  3 & \emph{wraz z pochodną dla} $x = 0$ & \emph{dla} $x = 0$ \\
+    % 92  &  3 & & $U( x( O ) )$ & $U( x( 0 ) )$ \\
+    % 123 &  6 & & $^{ \R }A : \C^{ m } \to { }^{ \R }\C^{ n }$
+    %        & ${ }^{ \R }A : { }^{ \R }\C^{ m } \to { }^{ \R }\C^{ n }$ \\
+    % 125 &  5 & & $\mathbf{I}$ & $I$ \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+\noindent
+\StrWierszDol{66}{7} \\
+\Jest \textit{tyłu do~brzegu} \\
+\PowinnoByc \textit{tyłu nieograniczenie albo~do~brzegu} \\
+\StrWierszGora{110}{9} \\
+\Jest sumą częściową szeregu --~iloczynu \\
+\PowinnoByc  jest sumą części wyrazów iloczynu \\
+
+
+
+
+
+% ####################
+\section{
+  N. M. Matwiejew \\
+  ,,Metody całkowania równana różniczkowych zwyczajnych'',
+  \cite{MatwiejewMetodyCalkowaniaRownanRozniczkowychZwyczajnych82} }
+
+
+Uwagi
+
+\Str{15} Równanie (10) zostało bardzo elegancko wyprowadzone,
+przy założeniu, że~funkcja uwikłana dana równaniem (9) spełnia
+równanie różniczkowe (1), nie odpowiada to jednak na pytanie czy jeśli
+funkcja $y( x )$ spełnia równanie (10), to spełnia też interesujące
+nas równanie wyjściowe. Dowód tego twierdzenia jest następujący.
+Załóżmy, że $\Phi_{ y }' \neq 0$, tak by było zapewnione istnienie
+funkcji uwikłanej. Jeżeli teraz spełnione jest równanie (10), to można
+je przekształcić do postaci:
+\begin{equation}
+  -\frac{ \Phi_{ x }' }{ \Phi_{ y }' } = f( x, y ).
+\end{equation}
+Lewa strona tej równości jest równa pochodnej funkcji uwikłanej
+$y( x )$, określonej wzorem (9). \\
+\Str{16}??? \\
+\Str{31} ???
+
+
+Błędy
+\begin{center}
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    & \multicolumn{2}{c|}{} & & \\
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    5   & &  9 & Dodzimy & Dowodzimy \\
+    5   & &  8 & potkowych & początkowych \\
+    5   & &  7 & poąątkowych & początkowych \\
+    10  & & 19 & damy & mamy \\
+    15  & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+\end{center}
+
+\noindent
+\StrWierszGora{15}{13}
+\Jest w~sensie ustępu \\
+\PowinnoByc w~sensie zdefiniowanym w~ustępie \\
+\StrWierszDol{20}{2} \\
+\Jest i~nie ma rozwiązania określonego w~tym samym przedziale
+nie~identycznego z~rozwiązaniem $y = y( x )$ chociażby w~jednym
+punkcie przedziału $\absOne{ x - x_{ 0 } } \leq h$ różnym
+od~punktu $x = x_{ 0 }$. \\
+\PowinnoByc i~nie istnieje inne rozwiązanie określone w~przedziale
+$\absOne{ x - x_{ 0 } } \leq h_{ 1 } \leq h$ które nie byłoby równe
+rozwiązaniu $y = y( x )$ w~każdym punkcie przedziału
+$\absOne{ x - x_{ 0 } } \leq h_{ 1 }$. \\
+
+\VerSpaceTwo
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+% Bibliography
+
+\printbibliography
+
+
+
+
+
+% ############################
+% End of the document
+
+\end{document}

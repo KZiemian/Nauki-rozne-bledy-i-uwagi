@@ -1,125 +1,136 @@
-% ---------------------------------------------------------------------
-% Podstawowe ustawienia i pakiety
-% ---------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
-% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+% ------------------------------------------------------------------------------------------------------------------
+% Basic configuration and packages
+% ------------------------------------------------------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
 \documentclass[a4paper,11pt]{article}
-% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
-\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
-\usepackage{lmodern} % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
 
 
 
-% ------------------------------
-% Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ------------------------------
-\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
-\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
-% grafiki.
-\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
-\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
-% wprowadzane bezpośrednio w tekście.
-\usepackage{vmargin} % Pozwala na prostą kontrolę rozmiaru marginesów,
-% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ------------------------------
-% MARGINS
-% ------------------------------
-\setmarginsrb
-{ 0.7in}  % left margin
-{ 0.6in}  % top margin
-{ 0.7in}  % right margin
-{ 0.8in}  % bottom margin
-{  20pt}  % head height
-{0.25in}  % head sep
-{   9pt}  % foot height
-{ 0.3in}  % foot sep
+% ------------------------------------------------------
+% Packages not tied to particular normal language
+% ------------------------------------------------------
+% This package should improved spaces in the text
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
 
 
 
-% ------------------------------
-% Często przydatne pakiety
-% ------------------------------
-\usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% ------------------------------------------------------
+% Polonization of LaTeX document
+% ------------------------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
 
 
 
-% ------------------------------
-% Pakiety do tekstów z nauk przyrodniczych
-% ------------------------------
-\let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
-% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
-% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
-\usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
-% Mathematical Society (w skrócie AMS)
-\usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
-% \usepackage{siunitx} % Do prostszego pisania jednostek fizycznych
-\usepackage{upgreek} % Ładniejsze greckie litery
-% Przykładowa składnia: pi = \uppi
-\usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
-\usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
-% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
-% nie wiem.
+% ------------------------------------------------------
+% Setting margins
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
 
 
 
-
-% ------------------------------
-% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
-% ------------------------------
-% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
-% matematycznych.
-\newtheorem{theorem}{Twierdzenie}
-% Analogicznie jak powyżej
-\newtheorem{definition}{Definicja}
-\newtheorem{corollary}{Wniosek}
-
-
-
-% ---------------------------------------
-% Pakiety napisane przez użytkownika.
-% Mają być w tym samym katalogu to ten plik .tex
-% ---------------------------------------
-\usepackage{latexgeneralcommands}
-\usepackage{mathcommands}
-% \usepackage{calculuscommands}
-% \usepackage{SchwartzBooksCommands}  % Pakiet napisany m.in. dla tego pliku.
-
-
-
-% ---------------------------------------------------------------------
-% Dodatkowe ustawienia dla języka polskiego
-% ---------------------------------------------------------------------
-\renewcommand{\thesection}{\arabic{section}.}
-% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
-% Brak kropki po numerach podrozdziału
-
-
-
-% ------------------------------
-% Ustawienia różnych parametrów tekstu
-% ------------------------------
+% ------------------------------------------------------
+% Setting vertical spaces in the text
+% ------------------------------------------------------
+% Setting space between lines
 \renewcommand{\baselinestretch}{1.1}
 
-% Ustawienie szerokości odstępów między wierszami w tabelach.
+% Setting space between lines in tables
 \renewcommand{\arraystretch}{1.4}
 
 
 
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
 
 
-% ------------------------------
-% Pakiet „hyperref”
-% Polecano by umieszczać go na końcu preambuły.
-% ------------------------------
-\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki.
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{Systemy-operacyjne-Bibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------------------------------
+% Private packages
+% You need to put them in the same directory as .tex file
+% ------------------------------------------------------
+% Contains various command useful for working with a text
+\usepackage{latexgeneralcommands}
+% Contains definitions useful for working with mathematical text
+\usepackage{mathcommands}
+
+
+
+
+
+% ------------------------------------------------------
+% Package "hyperref"
+% They advised to put it on the end of preambule
+% ------------------------------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
 
 
 
@@ -130,8 +141,8 @@
 
 
 
-% ---------------------------------------------------------------------
-% Tytuł i autor dzieła
+% ------------------------------------------------------------------------------------------------------------------
+% Title and author of the text
 \title{Geometria różniczkowa \\
   {\Large Błędy i~uwagi}}
 
@@ -139,7 +150,7 @@
 
 
 % \date{}
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -168,7 +179,7 @@
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   William M. Boothby \\[0.3em]
   \textit{An~Introduction to~Differentiable Manifolds and~Riemannian
     Geometry}, \cite{BoothbyIntroductionToDifferentiableManifolds1986}}
@@ -183,10 +194,10 @@
 
 
 \noindent
-\StrWd{233}{3} Zamiast $dy/dx$ powinno być $d g( x )/dx$.
+\StrWierszDol{233}{3} Zamiast $dy/dx$ powinno być $d g( x )/dx$.
 To~mogłoby ograniczyć nieporozumienia związane z~tym wzorem.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -215,7 +226,7 @@ To~mogłoby ograniczyć nieporozumienia związane z~tym wzorem.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 
@@ -233,7 +244,7 @@ To~mogłoby ograniczyć nieporozumienia związane z~tym wzorem.
 % ############################
 \newpage
 
-\Work{ % Autorzy i tytuł dzieła
+\section{ % Autorzy i tytuł dzieła
   Jacek Gancarzewicz, Barbara Opozda \\
   \textit{Wstęp do geometrii różniczkowej},
   \cite{GancarzewiczOpozdaWstepDoGeometriiRozniczkowej2003}}
@@ -249,13 +260,13 @@ To~mogłoby ograniczyć nieporozumienia związane z~tym wzorem.
 
 \noindent
 \Str{17} Nazwa \textbf{płaszczyzna styczna} pochodzi stąd,
-że~zawiera ona wektor styczny do krzywej $\vectbold$, ponadto jeśli dana
+że~zawiera ona wektor styczny do krzywej $\vectBold$, ponadto jeśli dana
 krzywa bez punktów wyprostowania jest płaska, to zawiera~się właśnie
 w~tej płaszczyźnie. \textbf{Płaszczyzna prostopadła} jest natomiast
 prostopadła do~wektora stycznego do krzywej. Nie potrafię jednak
 wyjaśnić skąd~się wzięła nazwa \textbf{płaszczyzna prostująca}.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -263,13 +274,13 @@ wyjaśnić skąd~się wzięła nazwa \textbf{płaszczyzna prostująca}.
 
 \noindent
 \Str{31} \textbf{Twierdzenie~3.7.} W~dowodzie faktu, że~z~równości
-typu $\vectbold \cdot \vectbold' = 0$ wynika, iż~moduł $\vectbold$ jest stały,
+typu $\vectBold \cdot \vectBold' = 0$ wynika, iż~moduł $\vectBold$ jest stały,
 oprócz wykorzystania wzorów (3.5) przyjęto chyba milcząco, że~dla każdej
-wartości parametru $s$ wektory $\vectbold$, $\vecnbold$ i~$\vecbbold$ są
+wartości parametru $s$ wektory $\vectBold$, $\vecnBold$ i~$\vecbBold$ są
 ortogonalne, co jednak nie jest udowodnione. Z~dowodem relacji
-ortogonalności sprawa wygląda chyba podobnie. \Dok
+ortogonalności sprawa wygląda chyba podobnie. ????
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -279,9 +290,9 @@ ortogonalności sprawa wygląda chyba podobnie. \Dok
 \Str{35} W~żadnym z~podanych tu przykładów, nie udowodniono,
 że~budowane mapy, jako odwzorowania,~są homomorfizmami między
 odpowiednimi przestrzeniami topologicznymi. Pokazanie tego nie~może
-być jednak trudne. \Dok
+być jednak trudne. ????
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -303,10 +314,10 @@ być jednak trudne. \Dok
     \hline
     19  & 16 & & $\gamma'''( s_{ 0 } )$ & $\gamma^{ (4) }( s_{ 0 } )$ \\
     31  &  3 & & $x_{ o }$ & $x_{ 0 }$ \\
-    37  & & 7 & $\left( \frac{ 4 r u_{ 1 } }{ \norm{ u }^{ 2 } }, \ldots,
-                \frac{ 4 r u_{ n } }{ \norm{ u }^{ 2 } } \right)$
-           & $\left( \frac{ 4 r^{ 2 } u_{ 1 } }{ \norm{ u }^{ 2 } },
-             \ldots, \frac{ 4 r^{ 2 } u_{ n } }{ \norm{ u }^{ 2 } }
+    37  & & 7 & $\left( \frac{ 4 r u_{ 1 } }{ \Vert u \Vert^{ 2 } }, \ldots,
+                \frac{ 4 r u_{ n } }{ \Vert u \Vert^{ 2 } } \right)$
+           & $\left( \frac{ 4 r^{ 2 } u_{ 1 } }{ \Vert u \Vert^{ 2 } },
+             \ldots, \frac{ 4 r^{ 2 } u_{ n } }{ \Vert u \Vert^{ 2 } }
              \right)$ \\
     40  & &  3 & $( \frac { v_{ 1 } }{ u_{ i } }, \ldots,
                  \frac{ v_{ i - 1 } }{ u_{ i } },
@@ -327,7 +338,7 @@ być jednak trudne. \Dok
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 
@@ -347,7 +358,7 @@ być jednak trudne. \Dok
 % ############################
 \newpage
 
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Bogusław Gdowski \\
   \textit{Elementy geometrii różniczkowej z~zadaniami},
   \cite{GdowskiElementGeometriiRozniczkowejZZadaniami1999}}
@@ -367,7 +378,7 @@ przestrzeń euklidesową $E_{ 3 }$ (że~jest ona trójwymiarowa, jest
 tu~kwestią drugorzędną), nie jest od~razu jasne, czym różni~się ona
 od~zbioru wszystkich swoich wektorów $E_{ 3 }^{ \; * }$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -381,7 +392,7 @@ w~przypadku innych zmiennych, nie zaś w~postaci $\boldsymbol{ x } =
 tłumaczyłoby co~się naprawdę dzieje. Wybór takie notacji można jednak
 wytłumaczyć pragnieniem skrócenia zapisu oraz względami zwyczajowymi.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -417,7 +428,7 @@ wytłumaczyć pragnieniem skrócenia zapisu oraz względami zwyczajowymi.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceFour
 
 
 % ############################
@@ -488,7 +499,7 @@ wytłumaczyć pragnieniem skrócenia zapisu oraz względami zwyczajowymi.
 % ############################
 \newpage
 
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Wojciech Wojtyński \\
   \textit{Grupy i~algebry Liego},
   \cite{WojtynskiGrupyIAlgebryLiego1986}}
@@ -515,7 +526,7 @@ pomocą czcionki kaligraficznej. Będziemy więc w~tych notatkach oznaczać
 klasę funkcji różniczkowalnych nie symbolem $C^{ k }$ lecz $\Ccal^{ k }$,
 etc.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -537,7 +548,7 @@ opuścić symbol $\cdot$ pozostają dla mnie zagadką. W~miarę jednak swoich
 możliwości będę starał się wskazać w~tych notatkach, w~których miejscach
 pisownię wzorów należałoby ujednolicić.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -550,7 +561,7 @@ o~zachowaniu tylko skończonej ilości elementów składowych punktu
 $( y_{ \phi } )$. Dałoby~się ją opisać w~sposób bardziej przejrzysty, w~tym
 jednak momencie brakuje mi do tego wiedzy z~topologii.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -564,7 +575,7 @@ została zapisana w~poniższej postaci.
   A \cdot B := \{ x \in X : \exists\, y \in A, \exists\, z \in B,\; x = \mu( y, z ) \}.
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -585,7 +596,7 @@ przyjmujemy
   \Kbb \ni \lambda \mapsto \omega_{ 0 }( \lambda ) \equiv 0 \in A.
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -598,16 +609,16 @@ $| x_{ i } \, y_{ i } |$, jednak bardziej zgodne ze wzorem (1.5) na stronie
 Oczywiście oba te wyrażenia są równe, więc nie chodzi o~poprawność
 podanego wzoru, tylko o~elegancję matematyczną.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWierszeG{21}{12, 13} Wiersze te zostały bardzo brzydko sformatowane.
+\StrWierszeGora{21}{12, 13} Wiersze te zostały bardzo brzydko sformatowane.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -616,7 +627,7 @@ podanego wzoru, tylko o~elegancję matematyczną.
 \noindent
 \Str{22} We wzorze (1.7) jak zwykle musimy przyjąć, że~$\Vert h \Vert \neq 0$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -627,7 +638,7 @@ podanego wzoru, tylko o~elegancję matematyczną.
 została podana definicja przestrzeni lokalnie łukowo spójnej, a~dopiero
 potem lokalnie jednospójnej.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -641,7 +652,7 @@ przestrzeń należy rozumieć przestrzeń macierzy z~zerowymi współczynnikami 
 diagonali. Przez „drugą przestrzeń” należy rozumieć przestrzeń macierz
 z~zerowymi współczynnikami poza diagonalą.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -653,7 +664,7 @@ $\GL( n, \Kbb ) \ni A \mapsto \widetilde{A} \in \GL( n, \Kbb )$ jest izomorfizme
 byłby prostszy, gdyby zostało jawnie powiedziane, że~odwzorowanie to jest
 inwolucją.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -688,7 +699,7 @@ Całe to rozumowanie jest bardzo proste, jednak uznaliśmy, iż warto je
 zapisać w~tak szczegółowy sposób. Czyni to wykład prowadzony w~książce
 trochę bardziej jasnym i~zupełnym.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -698,7 +709,7 @@ trochę bardziej jasnym i~zupełnym.
 \Str{31} Czy warunek $A A^{ T } = \matUnit$ wynika z~warunku
 $A^{ T } A = \matUnit$, jeśli $A$ jest macierzą kwadratową wymiaru~$n$?
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -722,7 +733,7 @@ macierzy unitarnej $A$ zachodzi $\bar{A}^{ T } = A^{ -1 }$. Używając
 operacji sprzężenia hermitowskiego, możemy tę równość zapisać w~bardzie
 popularnej formie $A^{ * } = A^{ -1 }$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -765,7 +776,7 @@ byty matematyczne.
 By uniknąć dalszego zamieszania, wektory należące do
 $\Cbb^{ n }$ będziemy oznaczać czcionką pogrubioną, a~kolumny ich
 współrzędnych w~pewnej bazie, czcionką prostą. Mamy więc
-$\vecxbold, \vecybold, \vecebold_{ 1 }, \vecebold_{ 2 }, \ldots, \vecebold_{ n }
+$\vecxBold, \vecyBold, \veceBold_{ 1 }, \veceBold_{ 2 }, \ldots, \veceBold_{ n }
 \in \Cbb$, oraz
 \begin{equation}
   \label{eq:Wojtynski-09}
@@ -776,21 +787,21 @@ $\vecxbold, \vecybold, \vecebold_{ 1 }, \vecebold_{ 2 }, \ldots, \vecebold_{ n }
     \vdots \\
     x_{ n }
   \end{bmatrix}, \quad
-  \vecxbold = \sum_{ i = 1 }^{ n } x_{ i } \vecebold_{ i }.
+  \vecxBold = \sum_{ i = 1 }^{ n } x_{ i } \veceBold_{ i }.
 \end{equation}
 Wzór \eqref{eq:Wojtynski-07} zapiszemy teraz jako
 \begin{equation}
   \label{eq:Wojtynski-10}
-  \omega( \vecxbold, \vecybold ) = x^{ T } \Omega \, y.
+  \omega( \vecxBold, \vecyBold ) = x^{ T } \Omega \, y.
 \end{equation}
 
-Weźmy teraz $\vecxbold = \vecebold_{ i }$, $\vecybold = \vecebold_{ j }$.
+Weźmy teraz $\vecxBold = \veceBold_{ i }$, $\vecyBold = \veceBold_{ j }$.
 Z~wzoru \eqref{eq:Wojtynski-09} wynika teraz, że~$x_{ l } = \delta^{ l }_{ i }$,
 $y_{ m } = \delta^{ m }_{ j }$ (ta konwekcja zapisu symbolu $\delta^{ i }_{ j }$ została
 wprowadzona na stronie~33 książki Wojtyńskiego) i~tym samym
 \begin{equation}
   \label{eq:Wojtynski-11}
-  \omega( \vecebold_{ i }, \vecebold_{ j } ) = x^{ T } \Omega \, y =
+  \omega( \veceBold_{ i }, \veceBold_{ j } ) = x^{ T } \Omega \, y =
   \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } x_{ l } \, \Omega_{ l m } \, y_{ m } =
   \sum_{ l = 1 }^{ n } \sum_{ m = 1 }^{ n } \delta^{ i }_{ l } \, \Omega_{ l m } \, \delta^{ m }_{ j } =
   \Omega_{ i j },
@@ -800,14 +811,14 @@ $l$-tego wiersza i~$m$-tej kolumny. Tym samym otrzymaliśmy bardzo przydatny
 wzór
 \begin{equation}
   \label{eq:Wojtynski-12}
-  \Omega_{ i j } = \omega( \vecebold_{ i }, \vecebold_{ j } ).
+  \Omega_{ i j } = \omega( \veceBold_{ i }, \veceBold_{ j } ).
 \end{equation}
 
 W~książce Wojtyńskiego i~w~tych notatkach przyjęliśmy następującą linię
 rozumowanie. Przyjmujemy, iż~istnieje macierz $\Omega$ dla której zachodzi wzór
 \eqref{eq:Wojtynski-10} i~na podstawie tego wyprowadziliśmy zależność
 \eqref{eq:Wojtynski-12}. Możemy jednak przyjąć za punkt wyjścia własności
-formy $\omega( \vecxbold, \vecybold )$, by następnie udowodnić, że~zachodzi wzór
+formy $\omega( \vecxBold, \vecyBold )$, by następnie udowodnić, że~zachodzi wzór
 \eqref{eq:Wojtynski-10}, przy czym elementy macierzy $\Omega$ w~nim występującej
 spełniają zależność \eqref{eq:Wojtynski-12}.
 
@@ -818,23 +829,23 @@ algebry liniowej, nie będziemy się tutaj dłużej nad nimi
 zatrzymywać.\footnote{Warto by napisać, w~jakich książkach można znaleźć
   omówienie tych problemów.}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 \noindent
-\StrWd{32}{13} Nie mam pojęcia o~co chodzi w~stwierdzeniu
+\StrWierszDol{32}{13} Nie mam pojęcia o~co chodzi w~stwierdzeniu
 „gdzie $n = \dim \Kbb^{ n }$”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{33}{10} W~niewinnie wyglądającym wzorze $\left(
+\StrWierszDol{33}{10} W~niewinnie wyglądającym wzorze $\left(
   \frac{ e_{ 1 } }{ \sqrt{ \alpha } }, \frac{ e_{ 2 } }{ \sqrt{ \alpha } } \right)$
 ukryta jest trudność, wynikająca z~tego, że~pierwiastek kwadratowy na
 płaszczyźnie zespolonej jest zawsze funkcją
@@ -843,20 +854,20 @@ Trzeba więc przyjąć jakąś konwencję, która będzie nam mówiła, ile dok�
 wynosi $\sqrt{ \alpha }$, gdzie $\alpha \in \Cbb$ i~możemy spokojnie kontynuować
 rozważania.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{33}{5} Podany tu wzór $\dim Y^{ \perp } = n - 2$ jest niewątpliwie
+\StrWierszDol{33}{5} Podany tu wzór $\dim Y^{ \perp } = n - 2$ jest niewątpliwie
 prawdziwy, w~tym jednak momencie nie potrafię zrozumieć dlaczego jego
 dowodu jest poprawny. Do problemu tego należy wrócić, po odświeżeniu sobie
 informacji z~algebry liniowej o~wymiarach przestrzeni wektorowych i~formach
 liniowych.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1133,15 +1144,16 @@ z~reguł 1~i~2 podanych wcześniej.
 Ten przykład powinien dobrze ilustrować, w~jaki sposób działa podany
 algorytm sprowadzania formy symplektycznej do postaci kanonicznej.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{34}{7--8} Znajdujące~się tu zdanie „Formę mającą postać (2.11)
-nazywamy \textit{formą symplektyczną}.” jest niefortunnie sformułowane.
+\StrWierszeGora{34}{7--8} Znajdujące~się tu zdanie „Formę mającą postać
+(2.11) nazywamy \textit{formą symplektyczną}.” jest niefortunnie
+sformułowane.
 W~istocie formę nazywamy formą symplektyczną, jeśli w~pewnej bazie
 przyjmuje postać daną wzorem (2.11).
 
@@ -1154,37 +1166,37 @@ Z~definicji każda form symplektyczna jest formą dwuliniową i~istnieje baza
 przestrzeni $\Cbb^{ n }$, gdzie $n = 2k$, taka że
 \begin{equation}
   \label{eq:Wojtynski-26}
-  \omega( \vecxbold, \vecybold ) =
+  \omega( \vecxBold, \vecyBold ) =
   \sum_{ i = 1 }^{ k } x_{ i } \, y_{ k + i } - y_{ i } \, x_{ k + i }, \qquad
-  \vecxbold = \sum_{ i = 1 }^{ n } x_{ i } \, \vecebold_{ i }, \;\;
-  \vecybold = \sum_{ i = 1 }^{ n } y_{ i } \, \vecebold_{ i }.
+  \vecxBold = \sum_{ i = 1 }^{ n } x_{ i } \, \veceBold_{ i }, \;\;
+  \vecyBold = \sum_{ i = 1 }^{ n } y_{ i } \, \veceBold_{ i }.
 \end{equation}
 Z~tego od razu wynika, że~$\omega$ jest formą antysymetryczna. Teraz wystarczy
-pokazać, że~jeśli $\omega( \vecxbold, \vecybold ) = 0$ dla każdego
-$\vecybold \in \Cbb^{ n }$, to $\vecxbold = \vecZeroBold$. Załóżmy, że~dany
-jest taki $\vecxbold$ i~weźmy $\vecybold = ( \delta^{ i }_{ j } )$, gdzie
+pokazać, że~jeśli $\omega( \vecxBold, \vecyBold ) = 0$ dla każdego
+$\vecyBold \in \Cbb^{ n }$, to $\vecxBold = \vecZeroBold$. Załóżmy, że~dany
+jest taki $\vecxBold$ i~weźmy $\vecyBold = ( \delta^{ i }_{ j } )$, gdzie
 $1 \leq j \leq k$. Obliczmy teraz
 \begin{equation}
   \label{eq:Wojtynski-27}
-  \omega( \vecxbold, \vecybold ) =
+  \omega( \vecxBold, \vecyBold ) =
   \sum_{ i = 1 }^{ k } x_{ i } \, y_{ k + i } - y_{ i } \, x_{ k + i } =
   \sum_{ i = 1 }^{ k } x_{ i } \, \delta^{ k + i }_{ j } - \delta^{ i }_{ j } \, x_{ k + i } =
   -x_{ k + j } = 0.
 \end{equation}
 Widzimy więc, że~$x_{ i } = 0$, dla $k + 1 \leq i \leq n$. Analogicznie biorąc
-$\vecybold = ( \delta^{ i }_{ k + j } )$ przy $1 \leq j \leq k$, dowodzimy,
+$\vecyBold = ( \delta^{ i }_{ k + j } )$ przy $1 \leq j \leq k$, dowodzimy,
 że~$x_{ i } = 0$ dla $1 \leq i \leq k$. Tym samym pokazaliśmy,
-że~$\vecxbold = \vecZeroBold$. To~kończy dowód twierdzenia, iż~każda forma
+że~$\vecxBold = \vecZeroBold$. To~kończy dowód twierdzenia, iż~każda forma
 symplektyczna jest dwuliniową, antysymetryczną i~nieosobliwą.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWierszeD{34}{1--3} Znajdujemy tu informację, że~$n$-tą zespoloną
+\StrWierszeDol{34}{1--3} Znajdujemy tu informację, że~$n$-tą zespoloną
 (rzeczywistą) liniową grupę symplektyczną, którą oznaczamy jako
 $\Sp( n, \Cbb )$ ($\Sp( n, \Rbb )$), definiujemy jako podgrupę
 $\GL( 2n, \Cbb )$ ($\GL( 2n, \Rbb )$) składającą~się z~macierzy
@@ -1216,7 +1228,7 @@ sposobów, choćby modyfikując podany w~tych notatkach dowód tego, że~forma
 symplektyczna, czyli taka która w~pewnej bazie przyjmuje postać
 \eqref{eq:Wojtynski-26}, jest nieosobliwa w~podanym na~32 sensie.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1227,7 +1239,7 @@ symplektyczna, czyli taka która w~pewnej bazie przyjmuje postać
 macierzy brakuje symbolu $0$. Kiedyś można by~się zastanowić nad
 wygenerowaniem w~\LaTeX{} macierzy, która lepiej ilustrowałaby problem.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1239,14 +1251,14 @@ liniowego z~odpowiadającą mu macierzą. W~większości przypadków nie prowadz
 to do nieporozumień, jednak jak pokazują to notatki do strony 34,
 zignorowanie tego rozróżnienia, może prowadzić do poważnych nieporozumień.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWg{34}{8} Aby definicja przestrzeni $\spFrak( n, \Kbb )$ była
+\StrWierszGora{34}{8} Aby definicja przestrzeni $\spFrak( n, \Kbb )$ była
 ścisła, należy doprecyzować czym jest pojawiająca~się w~niej forma $\omega$.
 Należy bowiem przyjąć, że~$\omega$ nie jest dowolną formą symplektyczną, czyli
 taką która w~\textit{pewnej} bazie przyjmuje postać
@@ -1254,17 +1266,17 @@ taką która w~\textit{pewnej} bazie przyjmuje postać
 kanonicznej. Inaczej mówiąc, jeśli
 \begin{equation}
   \label{eq:Wojtynski-30}
-  \vecxbold = ( x_{ 1 }, x_{ 2 }, \ldots, x_{ 2n } ) \in \Kbb^{ 2n }, \quad
-  \vecybold = ( y_{ 1 }, y_{ 2 }, \ldots, y_{ 2n } ) \in \Kbb^{ 2n },
+  \vecxBold = ( x_{ 1 }, x_{ 2 }, \ldots, x_{ 2n } ) \in \Kbb^{ 2n }, \quad
+  \vecyBold = ( y_{ 1 }, y_{ 2 }, \ldots, y_{ 2n } ) \in \Kbb^{ 2n },
 \end{equation}
 to zachodzi
 \begin{equation}
   \label{eq:Wojtynski-31}
-  \omega( \vecxbold, \vecybold ) =
+  \omega( \vecxBold, \vecyBold ) =
   \sum_{ i = 1 }^{ n } x_{ i } \, y_{ n + i } - y_{ i } \, x_{ n + i }.
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1289,13 +1301,13 @@ części notatek, tu zaś poprzestaniemy na wskazaniu, iż~w~tej notacji
 własność jednorodność odwzorowania $A : V \to V$ zapisujemy jako
 \begin{equation}
   \label{eq:Wojtynski-33}
-  A ( \vecvbold \alpha ) = ( A \vecvbold ) \alpha, \quad
-  \alpha \in \Kbb, \, \vecvbold \in V,
+  A ( \vecvBold \alpha ) = ( A \vecvBold ) \alpha, \quad
+  \alpha \in \Kbb, \, \vecvBold \in V,
 \end{equation}
 nie zaś jak w~standardowej notacji
 \begin{equation}
   \label{eq:Wojtynski-34}
-  A \, \alpha \, \vecvbold = \alpha \, A \, \vecvbold.
+  A \, \alpha \, \vecvBold = \alpha \, A \, \vecvBold.
 \end{equation}
 
 Ostatecznie, to czy mnożenie zapisujemy z~lewej czy z~prawej strony jest
@@ -1337,7 +1349,7 @@ warto podać dwa kilka użytecznych wzorów:
 gdzie
 $q = e_{ 0 } \, z_{ 1 } + e_{ 2 } \, z_{ 2 }$, $z, z_{ 1 }, z_{ 2 } \in \Cbb$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1362,7 +1374,7 @@ twierdząca, możemy bowiem skorzystać ze znanych własności wyznacznika.
 Jednak wcale nie jest pewne, że~wszystkie potrzebne własności obowiązują
 dla macierzy o~elementach kwaternionowych.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1397,20 +1409,20 @@ Niech $V$ będzie przestrzenią wektorową na ciałem $\Kbb$, na której jest
 zadane jest działanie wewnętrzne
 \begin{equation}
   \label{eq:Wojtynsi-39}
-  \cdot : V \times V \ni ( \vecvbold, \vecwbold ) \mapsto \vecvbold \cdot \vecwbold \in V.
+  \cdot : V \times V \ni ( \vecvBold, \vecwBold ) \mapsto \vecvBold \cdot \vecwBold \in V.
 \end{equation}
 Rozpatrzmy teraz dwie potencjalne własności tego działania:
 \begin{subequations}
   \begin{align}
     \label{eq:Wojtynski-40-A}
-    &( \alpha \, \vecvbold + \beta \, \vecwbold ) \cdot \vecpbold =
-      \alpha \, ( \vecvbold \cdot \vecpbold ) + \beta \, ( \vecwbold \cdot \vecpbold ), \\
+    &( \alpha \, \vecvBold + \beta \, \vecwBold ) \cdot \vecpBold =
+      \alpha \, ( \vecvBold \cdot \vecpBold ) + \beta \, ( \vecwBold \cdot \vecpBold ), \\
     \label{eq:Wojtynski-40-B}
-    &\vecvbold \cdot ( \alpha \, \vecwbold + \beta \, \vecpbold ) =
-      \alpha \, ( \vecvbold \cdot \vecwbold ) + \beta \, ( \vecvbold \cdot \vecpbold ),
+    &\vecvBold \cdot ( \alpha \, \vecwBold + \beta \, \vecpBold ) =
+      \alpha \, ( \vecvBold \cdot \vecwBold ) + \beta \, ( \vecvBold \cdot \vecpBold ),
   \end{align}
 \end{subequations}
-gdzie $\alpha, \beta \in \Kbb$, $\vecvbold, \vecwbold, \vecpbold \in V$. Jeśli dla
+gdzie $\alpha, \beta \in \Kbb$, $\vecvBold, \vecwBold, \vecpBold \in V$. Jeśli dla
 danej przestrzeni $V$ wzór \eqref{eq:Wojtynski-40-A} zachodzi dla
 wszystkich możliwych przypadków, to~przestrzeń tą nazywamy \textbf{lewą
   półalgebrą}. Definicje \textbf{lewej półalgebry łącznej}, \textbf{lewej
@@ -1432,10 +1444,10 @@ przyjmujemy następującą, prawostronną, konwekcję mnożenia elementów
 $\Kbb^{ n }$ przez elementy z~$\Kbb$
 \begin{equation}
   \label{eq:Wojtynski-41}
-  \vecvbold \alpha = ( v_{ 1 } \, \alpha, v_{ 2 } \, \alpha, \ldots, v_{ n } \, \alpha ), \quad
-  \alpha \in \Kbb, \, \vecvbold \in \Kbb^{ n }.
+  \vecvBold \alpha = ( v_{ 1 } \, \alpha, v_{ 2 } \, \alpha, \ldots, v_{ n } \, \alpha ), \quad
+  \alpha \in \Kbb, \, \vecvBold \in \Kbb^{ n }.
 \end{equation}
-Ponadto dla macierzy $A \in \lFrak( n, \Kbb )$ o~elementach $a_{ ij }$,
+Ponadto dla macierzy $A \in \lFrak( n, \Kbb )$ o~elementach $a_{ i j }$,
 $i, j = 1, 2, \ldots, n$ przyjmujemy dodatkowe oznaczenie
 \begin{equation}
   \label{eq:Wojtynski-42}
@@ -1460,9 +1472,9 @@ Również podążając za Wojtyńskim, działanie macierzy na wektor z~$\Kbb^{ n
 definiujemy jako
 \begin{equation}
   \label{eq:Wojtynski-44}
-  ( A \vecvbold )_{ i } = \sum_{ j = 1 }^{ n } a_{ i j } \, v_{ j },
+  ( A \vecvBold )_{ i } = \sum_{ j = 1 }^{ n } a_{ i j } \, v_{ j },
 \end{equation}
-gdzie $\vecvbold \in \Kbb^{ n }$, $A \in \lFrak( n, \Kbb )$. Teraz operację
+gdzie $\vecvBold \in \Kbb^{ n }$, $A \in \lFrak( n, \Kbb )$. Teraz operację
 mnożenia dwóch macierzy z~$\lFrak( n, \Kbb )$ możemy określić jako
 \begin{equation}
   \label{eq:Wojtynski-45}
@@ -1607,24 +1619,24 @@ z~$\lFrak( n, \Rbb )$ i~$\lFrak( n, \Cbb )$ jest to,
 że~zachodzi
 \begin{equation}
   \label{eq:Wojtynski-56}
-  A ( \vecvbold \, \alpha ) = ( A \vecvbold ) \, \alpha,
+  A ( \vecvBold \, \alpha ) = ( A \vecvBold ) \, \alpha,
 \end{equation}
-gdzie $\alpha \in \Hbb,$ $\vecvbold \in \Hbb^{ n }$, $A \in \lFrak( n, \Hbb )$. Fakt
+gdzie $\alpha \in \Hbb,$ $\vecvBold \in \Hbb^{ n }$, $A \in \lFrak( n, \Hbb )$. Fakt
 ten ponownie wynika z~definicji działań oraz łączności i~rozdzielności
 mnożenia
 względem dodawania w~$\Kbb$. Jednakże
 \begin{equation}
   \label{eq:Wojtynski-57}
-  ( A \, \alpha ) \vecvbold \neq ( A \, \vecvbold ) \, \alpha.
+  ( A \, \alpha ) \vecvBold \neq ( A \, \vecvBold ) \, \alpha.
 \end{equation}
 Prosty przykład dla którego możemy to zobaczyć to $\alpha = e_{ 2 }$,
-$\vecvbold = ( e_{ 3 }, 0, 0, \ldots, 0 )$, $A = \matUnit e_{ 1 }$. Dla
+$\vecvBold = ( e_{ 3 }, 0, 0, \ldots, 0 )$, $A = \matUnit e_{ 1 }$. Dla
 podkreślenia tego,
 jak bardzo „nienaturalną” jest ta ostatnia własność, zapiszemy ją
 w~notacji, w~której mnożenie przez liczby obywa~się z~lewej strony.
 \begin{equation}
   \label{eq:Wojtynski-58}
-  ( \alpha \, A ) \vecvbold \neq A ( \alpha \, \vecvbold ).
+  ( \alpha \, A ) \vecvBold \neq A ( \alpha \, \vecvBold ).
 \end{equation}
 
 W~tym miejscu musimy zwrócić uwagę no to, że~to wzór \eqref{eq:Wojtynski-55}
@@ -1635,7 +1647,7 @@ w~jaki definiujemy działanie macierzy $A$ na wektor $v \in \Hbb^{ n }$ ma
 znaczenie dla naszej teorii. Wojtyński zdefiniował je kładąc
 \begin{equation}
   \label{eq:Wojtynski-59}
-  ( A \, \vecvbold )_{ i } = \sum_{ j }^{ n } a_{ i j } \, v_{ j }, \quad
+  ( A \, \vecvBold )_{ i } = \sum_{ j }^{ n } a_{ i j } \, v_{ j }, \quad
   A = [ a_{ ij } ] \in \lFrak( n, \Hbb ).
 \end{equation}
 Takie określenie odwzorowanie $A$ jest jednorodne, gdy mnożenie wektorów
@@ -1645,7 +1657,7 @@ ciała z~lewej strony, to by działanie macierzy na wektor $v$ było
 jednorodne, musielibyśmy zdefiniować je jako
 \begin{equation}
   \label{eq:Wojtynski-60}
-  ( A \, \vecvbold )_{ i } = \sum_{ j }^{ n } v_{ j } \, a_{ i j }.
+  ( A \, \vecvBold )_{ i } = \sum_{ j }^{ n } v_{ j } \, a_{ i j }.
 \end{equation}
 
 Wiemy już, że~odwzorowanie zadane przez macierz $A \in \lFrak( n, \Kbb )$
@@ -1658,8 +1670,8 @@ jednorodne nad $\Rbb$ i~$\Cbb$, które są podciałami $\Hbb$\footnote{Użyta
 addytywne i~tym samym liniowe. Wykazanie, że
 \begin{equation}
   \label{eq:Wojtynski-61}
-  A ( \vecvbold + \vecwbold ) = A \, \vecvbold + A \, \vecwbold, \quad
-  \vecvbold, \, \vecwbold \in \Hbb^{ n },
+  A ( \vecvBold + \vecwBold ) = A \, \vecvBold + A \, \vecwBold, \quad
+  \vecvBold, \, \vecwBold \in \Hbb^{ n },
 \end{equation}
 przebiega wedle standardowego schematu, z~wykorzystaniem tego, że~w~ciele
 $\Hbb$ dodawania jest rozdzielne względem mnożenia.
@@ -1681,8 +1693,8 @@ zespolonej (rzeczywistej) grupy liniowej wymiaru~$n$: $\GL( n, \Rbb )$
 Niech $f \in \End( \Hbb^{ n } )$. Z~definicji odwzorowania liniowego zachodzi
 \begin{equation}
   \label{eq:Wojtynski-62}
-  f( \vecvbold_{ 1 } \, \alpha + \vecvbold_{ 2 } \, \beta ) =
-  f( \vecvbold_{ 1 } ) \, \alpha + f( \vecvbold_{ 2 } ) \, \beta.
+  f( \vecvBold_{ 1 } \, \alpha + \vecvBold_{ 2 } \, \beta ) =
+  f( \vecvBold_{ 1 } ) \, \alpha + f( \vecvBold_{ 2 } ) \, \beta.
 \end{equation}
 Oznaczmy teraz
 \begin{equation}
@@ -1690,15 +1702,15 @@ Oznaczmy teraz
   \vecEbold_{ i } = ( 0, 0, \ldots, 0, e_{ 0 }, 0, \ldots, 0 ) \in \Hbb^{ n },
 \end{equation}
 gdzie $e_{ 0 }$ znajduje~się na $i$-tej pozycji. Wówczas dla dowolnego
-$\vecvbold \in \Hbb^{ n }$ mamy
+$\vecvBold \in \Hbb^{ n }$ mamy
 \begin{equation}
   \label{eq:Wojtynski-64}
-  \vecvbold = \sum_{ i = 1 }^{ n } \vecEbold_{ i } \, v_{ i }.
+  \vecvBold = \sum_{ i = 1 }^{ n } \vecEbold_{ i } \, v_{ i }.
 \end{equation}
-Obliczmy teraz $f( \vecvbold )$.
+Obliczmy teraz $f( \vecvBold )$.
 \begin{equation}
   \label{eq:Wojtynski-65}
-  f( \vecvbold ) =
+  f( \vecvBold ) =
   f\!\left( \sum_{ j = 1 }^{ n } \vecEbold_{ j } \, v_{ j } \right) =
   \sum_{ j = 1 }^{ n } f( \vecEbold_{ j } ) \, v_{ j }.
 \end{equation}
@@ -1730,31 +1742,31 @@ bardzo nieoczywista. W~używanej notacji fakt, że $f \in \End( \Hbb^{ n } )$
 jest odwzorowanie liniowym zapisujemy jako
 \begin{equation}
   \label{eq:Wojtynski-69}
-  f( \vecvbold \, \alpha + \vecwbold \, \beta ) =
-  f( \vecvbold ) \, \alpha + f( \vecwbold ) \, \beta, \quad
-  \alpha, \beta \in \Hbb, \, \vecvbold, \vecwbold \in \Hbb^{ n }.
+  f( \vecvBold \, \alpha + \vecwBold \, \beta ) =
+  f( \vecvBold ) \, \alpha + f( \vecwBold ) \, \beta, \quad
+  \alpha, \beta \in \Hbb, \, \vecvBold, \vecwBold \in \Hbb^{ n }.
 \end{equation}
 Dodawanie dozorowań liniowych definiujemy w~standardowy sposób.
 \begin{equation}
   \label{eq:Wojtynski-70}
-  ( f + g )( \vecvbold ) = f( \vecvbold ) + g( \vecvbold ), \quad
-  \vecvbold \in \Hbb^{ n }, \, f, g \in \End( \Hbb^{ n } ).
+  ( f + g )( \vecvBold ) = f( \vecvBold ) + g( \vecvBold ), \quad
+  \vecvBold \in \Hbb^{ n }, \, f, g \in \End( \Hbb^{ n } ).
 \end{equation}
 Jak łatwo sprawdzić suma dwóch odwzorowań liniowych jest liniowa.
 Również złożenie odwzorowań liniowych jest liniowe.
 \begin{equation}
   \label{eq:Wojtynski-71}
   \begin{split}
-    ( f \circ g )( \vecvbold \, \alpha + \vecwbold \, \beta )
+    ( f \circ g )( \vecvBold \, \alpha + \vecwBold \, \beta )
     &=
-      f\big( g( \vecvbold \, \alpha + \vecwbold \, \beta ) \big) =
-      f\big( g( \vecvbold ) \, \alpha + g( \vecwbold ) \, \beta \big) =
-      f\big( g( \vecvbold ) \, \alpha \big)
-      + f\big( g( \vecvbold ) \, \beta \big) = \\
+      f\big( g( \vecvBold \, \alpha + \vecwBold \, \beta ) \big) =
+      f\big( g( \vecvBold ) \, \alpha + g( \vecwBold ) \, \beta \big) =
+      f\big( g( \vecvBold ) \, \alpha \big)
+      + f\big( g( \vecvBold ) \, \beta \big) = \\
     &=
-      f\big( g( \vecvbold ) \big) \, \alpha
-      + f\big( g( \vecwbold ) \big) \, \beta =
-      ( f \circ g )( \vecvbold ) \, \alpha + ( f \circ g )( \vecwbold ) \, \beta.
+      f\big( g( \vecvBold ) \big) \, \alpha
+      + f\big( g( \vecwBold ) \big) \, \beta =
+      ( f \circ g )( \vecvBold ) \, \alpha + ( f \circ g )( \vecwBold ) \, \beta.
   \end{split}
 \end{equation}
 
@@ -1763,15 +1775,15 @@ element z~$\Hbb$. Wedle standardowej definicji określamy ten iloczyn
 za~pomocą wzoru
 \begin{equation}
   \label{eq:Wojtynski-72}
-  ( f \, \alpha )( \vecvbold ) = \big( f( \vecvbold ) \big) \, \alpha, \quad
-  \alpha \in \Hbb, \, \vecvbold \in \Hbb^{ n }.
+  ( f \, \alpha )( \vecvBold ) = \big( f( \vecvBold ) \big) \, \alpha, \quad
+  \alpha \in \Hbb, \, \vecvBold \in \Hbb^{ n }.
 \end{equation}
 Okazuje~się, że~$f \, \alpha$ nie jest odwzorowaniem liniowym, bowiem
 \begin{equation}
   \label{eq:Wojtynski-73}
-  ( f \, \alpha )( \vecvbold \, \beta ) = f( \vecvbold \, \beta ) \, \alpha =
-  \big( f( \vecvbold ) \, \beta \big) \, \alpha =
-  f( \vecvbold ) \, ( \beta \, \alpha ),
+  ( f \, \alpha )( \vecvBold \, \beta ) = f( \vecvBold \, \beta ) \, \alpha =
+  \big( f( \vecvBold ) \, \beta \big) \, \alpha =
+  f( \vecvBold ) \, ( \beta \, \alpha ),
 \end{equation}
 gdzie w~ostatnim kroku skorzystaliśmy z własności prawdziwej dla
 wszystkich przestrzeni wektorowych:
@@ -1781,32 +1793,32 @@ kwaternionów. Jeśli $f \, \alpha$ byłoby odwzorowanie liniowym to musiałoby
 zachodzić
 \begin{equation}
   \label{eq:Wojtynski-74}
-  ( f \, \alpha )( \vecvbold \, \beta ) =
-  \big( ( f \, \alpha )( \vecvbold ) \big) \, \beta =
-  \big( f( \vecvbold ) \, \alpha \big) \, \beta =
-  f( \vecvbold ) \, ( \alpha \, \beta ).
+  ( f \, \alpha )( \vecvBold \, \beta ) =
+  \big( ( f \, \alpha )( \vecvBold ) \big) \, \beta =
+  \big( f( \vecvBold ) \, \alpha \big) \, \beta =
+  f( \vecvBold ) \, ( \alpha \, \beta ).
 \end{equation}
 Biorąc $\alpha = e_{ 1 }$, $\beta = e_{ 2 }$ w~równościach \eqref{eq:Wojtynski-73}
 i~\eqref{eq:Wojtynski-74} dostajemy
 \begin{equation}
   \label{eq:Wojtynski-75}
-  f( \vecvbold ) \, ( e_{ 2 } \, e_{ 1 } ) =
-  f( \vecvbold ) \, ( e_{ 1 } \, e_{ 2 } ) =
-  -f( \vecvbold ) \, ( e_{ 2 } \, e_{ 1 } ).
+  f( \vecvBold ) \, ( e_{ 2 } \, e_{ 1 } ) =
+  f( \vecvBold ) \, ( e_{ 1 } \, e_{ 2 } ) =
+  -f( \vecvBold ) \, ( e_{ 2 } \, e_{ 1 } ).
 \end{equation}
 Tę zależność możemy przekształcić do postaci
 \begin{equation}
   \label{eq:Wojtynski-76}
-  f( \vecvbold ) \, 2 ( e_{ 2 } \, e_{ 1 } ) = 0.
+  f( \vecvBold ) \, 2 ( e_{ 2 } \, e_{ 1 } ) = 0.
 \end{equation}
 Mnożąc obie strony przez kwaternion odwrotny do $e_{ 2 } \, e_{ 1 }$
 dostajemy
 \begin{equation}
   \label{eq:Wojtynski-77}
-  f( \vecvbold ) \, 2 = 0.
+  f( \vecvBold ) \, 2 = 0.
 \end{equation}
 Mam więc dwie możliwości. Albo nasze ciało jest charakterystyki 2,
-czyli~$2 = 1 + 1 = 0$, albo $f( \vecvbold ) = 0$. Jak wiemy kwaterniony nie
+czyli~$2 = 1 + 1 = 0$, albo $f( \vecvBold ) = 0$. Jak wiemy kwaterniony nie
 są ciałem o~charakterystyce $\infty$, więc musi zachodzić drugi warunek.
 
 Widzimy więc, że~nieprzemienność mnożenia kwaternionów, sprawia
@@ -1838,13 +1850,13 @@ została podana w~\eqref{eq:Wojtynski-73}. Zgodnie z~obecną definicją
 obecnie przyjętą dla $\alpha \in \Hbb$ i~$A \in \lFrak( n, \Hbb )$ mamy
 \begin{equation}
   \label{eq:Wojtynski-78}
-  \big( ( A \, \alpha ) \, \vecvbold \big)_{ i } =
+  \big( ( A \, \alpha ) \, \vecvBold \big)_{ i } =
   \sum_{ j = 1 } ( a_{ i j } \, \alpha ) \, v_{ j },
 \end{equation}
 podczas, gdy definicja \eqref{eq:Wojtynski-71} prowadziłaby do wzoru
 \begin{equation}
   \label{eq:Wojtynsk-79}
-  \big( ( A \, \alpha ) \, \vecvbold \big)_{ i } =
+  \big( ( A \, \alpha ) \, \vecvBold \big)_{ i } =
   \sum_{ j = 1 }^{ n } a_{ i j } \, v_{ j } \, \alpha.
 \end{equation}
 
@@ -1863,7 +1875,7 @@ macierz jednostkowa, $\cdot$ to działanie mnożenia macierzy określone we~wzor
 na~$\Hbb^{ n }$:
 \begin{equation}
   \label{eq:Wojtynski-80}
-  \id( \vecvbold ) = \vecvbold, \quad \vecvbold \in \Hbb^{ n },
+  \id( \vecvBold ) = \vecvBold, \quad \vecvBold \in \Hbb^{ n },
 \end{equation}
 zaś $\circ$ oznacza operację składania odwzorowań.
 
@@ -1927,7 +1939,7 @@ i~$M : \End( \Hbb^{ n } ) \to \lFrak( n, \Hbb )$ są izomorfizmami monoidów.
 W~tym celu obliczmy $M( \id )$:
 \begin{equation}
   \label{eq:Wojtynski-84}
-  \id( \vecvbold ) =
+  \id( \vecvBold ) =
   \id\left( \sum_{ j = 1 }^{ n } \vecEbold_{ j } \, v_{ j } \right) =
   \sum_{ j = 1 }^{ n } \id( \vecEbold_{ j } ) \, v_{ j } =
   \sum_{ j = 1 }^{ n } \sum_{ i = 1 }^{ n } \vecEbold_{ i } \, e_{ 0 } \,
@@ -1938,7 +1950,7 @@ zbadania $M( f \circ g )$.
 \begin{equation}
   \label{eq:Wojtynski-85}
   \begin{split}
-    ( f \circ g )( \vecvbold )
+    ( f \circ g )( \vecvBold )
     &=
       \sum_{ j = 1 }^{ n } ( f \circ g )( \vecEbold_{ j } ) \, v_{ j } =
       \sum_{ j = 1 }^{ n } f\left(
@@ -2007,13 +2019,13 @@ $a_{ i j } \in \Cbb$, o~wymiarach $2n \times 2n$, należy~się uciec do bezpośr
 rachunków. Do tego celu określamy w~$\Cbb^{ 2n }$ standardową bazę
 \begin{equation}
   \label{eq:Wojtynski-88}
-  \veccbold_{ i } = \big( \delta^{ l }_{ i } \big), \quad
+  \veccBold_{ i } = \big( \delta^{ l }_{ i } \big), \quad
   i = 1, 2, \ldots, 2n.
 \end{equation}
 Analogicznie dla przestrzeni $\Hbb^{ n }$ nad $\Hbb$ określamy bazę
 \begin{equation}
   \label{eq:Wojtynski-89}
-  \vechbold_{ i } = \big( e_{ 0 } \, \delta^{ l }_{ i } \big), \quad
+  \vechBold_{ i } = \big( e_{ 0 } \, \delta^{ l }_{ i } \big), \quad
   i = 1, 2, \ldots, n,
 \end{equation}
 Będziemy również potrzebowali skorzystać z~następującej notacji
@@ -2026,50 +2038,50 @@ Będziemy również potrzebowali skorzystać z~następującej notacji
 Obliczmy teraz
 \begin{equation}
   \label{eq:Wojtynski-91}
-  s^{ -1 }( \veccbold_{ i } ) =
+  s^{ -1 }( \veccBold_{ i } ) =
   \begin{cases}
-    \vechbold_{ i } = ( e_{ 0 } \, \delta^{ l }_{ i } ), &i = 1, 2, \ldots, n \\
-    \vechbold_{ i } \, e_{ 2 } = ( e_{ 2 } \, \delta^{ l }_{ i } ),
+    \vechBold_{ i } = ( e_{ 0 } \, \delta^{ l }_{ i } ), &i = 1, 2, \ldots, n \\
+    \vechBold_{ i } \, e_{ 2 } = ( e_{ 2 } \, \delta^{ l }_{ i } ),
     &i = n + 1, n + 2, \ldots, 2n.
   \end{cases}
 \end{equation}
 Rozpatrzmy przypadek $i = 1, 2, \ldots, n$. Mamy
 \begin{equation}
   \label{eq:Wojtynski-92}
-  \big( A \circ s^{ -1 } \big)( \veccbold_{ i } ) =
-  \sum_{ k = 1 }^{ n } \vechbold_{ k } \sum_{ l = 1 }^{ n }
+  \big( A \circ s^{ -1 } \big)( \veccBold_{ i } ) =
+  \sum_{ k = 1 }^{ n } \vechBold_{ k } \sum_{ l = 1 }^{ n }
   a_{ k l } \, e_{ 0 } \, \delta^{ l }_{ i } =
-  \sum_{ k = 1 }^{ n } \vechbold_{ k } \, a_{ k i }.
+  \sum_{ k = 1 }^{ n } \vechBold_{ k } \, a_{ k i }.
 \end{equation}
 Dla przypadku $i = n + 1, n + 2, \ldots, 2n$ mamy
 \begin{equation}
   \label{eq:Wojtynski-93}
-  \big( A \circ s^{ -1 } \big)( \veccbold_{ i } ) =
-  \sum_{ k = 1 }^{ n } \vechbold_{ k } \sum_{ l = 1 }^{ n }
+  \big( A \circ s^{ -1 } \big)( \veccBold_{ i } ) =
+  \sum_{ k = 1 }^{ n } \vechBold_{ k } \sum_{ l = 1 }^{ n }
   a_{ k l } \, e_{ 2 } \, \delta^{ l }_{ i } =
-  \sum_{ k = 1 }^{ n } \vechbold_{ k } \, a_{ k i } \, e_{ 2 }.
+  \sum_{ k = 1 }^{ n } \vechBold_{ k } \, a_{ k i } \, e_{ 2 }.
 \end{equation}
 Z~definicji $S$ wynika, że
 \begin{equation}
   \label{eq:Wojtynski-94}
-  s( \vechbold_{ i } \, q ) =
-  \veccbold_{ i } \, P_{ 1 }( q ) + \veccbold_{ i + n } \, P_{ 2 }( q ).
+  s( \vechBold_{ i } \, q ) =
+  \veccBold_{ i } \, P_{ 1 }( q ) + \veccBold_{ i + n } \, P_{ 2 }( q ).
 \end{equation}
 Ponieważ $s$ jest funkcją addytywną, możemy teraz obliczyć
 \begin{equation}
   \label{eq:Wojtynski-95}
-  \big( s \circ A \circ s^{ -1 } \big)( \veccbold_{ i } ) =
-  s\left( \sum_{ k = 1 }^{ n } \vechbold_{ k } \, a_{ k i } \right) =
-  \sum_{ k = 1 }^{ n } \big( \veccbold_{ k } \, P_{ 1 }( a_{ k i } )
-  + \veccbold_{ k + n } \, P_{ 2 }( a_{ k i } ) \big),
+  \big( s \circ A \circ s^{ -1 } \big)( \veccBold_{ i } ) =
+  s\left( \sum_{ k = 1 }^{ n } \vechBold_{ k } \, a_{ k i } \right) =
+  \sum_{ k = 1 }^{ n } \big( \veccBold_{ k } \, P_{ 1 }( a_{ k i } ) +
+  \veccBold_{ k + n } \, P_{ 2 }( a_{ k i } ) \big),
 \end{equation}
 dla $i = 1, 2, \ldots, n$. Analogicznie dostajemy
 \begin{equation}
   \label{eq:Wojtynski-96}
-  \big( s \circ A \circ s^{ -1 } \big)( \veccbold_{ i } ) =
-  s\left( \sum_{ k = 1 }^{ n } \vechbold_{ k } \, a_{ k i } \right) =
-  \sum_{ k = 1 }^{ n } \big( \veccbold_{ k } \, P_{ 1 }( a_{ k i } \, e_{ 2 } )
-  + \veccbold_{ k + n } \, P_{ 2 }( a_{ k i } \, e_{ 2 } ) \big),
+  \big( s \circ A \circ s^{ -1 } \big)( \veccBold1_{ i } ) =
+  s\left( \sum_{ k = 1 }^{ n } \vechBold_{ k } \, a_{ k i } \right) =
+  \sum_{ k = 1 }^{ n } \big( \veccBold_{ k } \, P_{ 1 }( a_{ k i } \, e_{ 2 } ) +
+  \veccBold_{ k + n } \, P_{ 2 }( a_{ k i } \, e_{ 2 } ) \big),
 \end{equation}
 dla $i = n + 1, n + 2, \ldots, 2n$. Otrzymujemy tym samym wzór na wyrazy
 $a'_{ i j }$ macierzy $A' = M\!\left( s \circ L( A ) \circ s^{ -1 } \right)$.
@@ -2095,7 +2107,7 @@ nadzieję, że~po podanych tu wyjaśnieniach, rozpoznanie co jest gdzie
 w~rozważaniach mamy odwzorowanie liniowe, a~gdzie odpowiadającą mu macierz,
 nie sprawi problemu.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -2327,27 +2339,28 @@ zaczynającego się na tej stronie.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
-\StrWd{34}{6} \\
-\Jest  \textit{$n$-tą grupą symplektyczną} (oznaczaną $\Sp( n )$)
+\StrWierszDol{34}{6} \\
+\Jest \textit{$n$-tą grupą symplektyczną} (oznaczaną $\Sp( n )$)
 nazywamy \\
-\Powin Przez \textit{$n$-tą grupę symplektyczną} (oznaczaną $\Sp( n )$)
+\PowinnoByc Przez \textit{$n$-tą grupę symplektyczną} (oznaczaną $\Sp( n )$)
 będziemy rozumieć \\
-\StrWd{34}{3} \\
-\Jest  \textit{$N$-tą zespoloną} (rzeczywistą) \textit{liniową grupą
+\StrWierszDol{34}{3} \\
+\Jest \textit{$N$-tą zespoloną} (rzeczywistą) \textit{liniową grupą
   symplektyczną} (oznaczenia $\Sp( n, \Cbb )$, $\Sp( n, \Rbb )$) \\
 nazywamy \\
-\Powin Przez \textit{$n$-tą zespoloną} (rzeczywistą) \textit{liniową grupę
-  symplektyczną} (oznaczenia $\Sp( n, \Cbb )$, $\Sp( n, \Rbb )$) będziemy
+\PowinnoByc Przez \textit{$n$-tą zespoloną} (rzeczywistą) \textit{liniową
+  grupę symplektyczną} (oznaczenia $\Sp( n, \Cbb )$, $\Sp( n, \Rbb )$)
+będziemy
 rozumieć \\
-\StrWd{35}{3} \\
-\Jest  czyli $\bar{A}^{ T } \cdot A = \matUnit$ lub inaczej
+\StrWierszDol{35}{3} \\
+\Jest czyli $\bar{A}^{ T } \cdot A = \matUnit$ lub inaczej
 $\bar{A}^{ T } = A^{ -1 }$, czyli $\widetilde{A} = A^{ -1 }$ \\[0.5em]
-\Powin czyli $\bar{A} = \Big( A^{ T } \Big)^{ -1 }$, co można zapisać jako
-$\widetilde{A} = \bar{A}$ \\
+\PowinnoByc czyli $\bar{A} = \Big( A^{ T } \Big)^{ -1 }$, co można zapisać
+jako $\widetilde{A} = \bar{A}$ \\
 
 % ############################
 
@@ -2362,17 +2375,15 @@ $\widetilde{A} = \bar{A}$ \\
 
 % ####################################################################
 % ####################################################################
-% Bibliografia
+% Bibliography
 
-\bibliographystyle{plalpha}
-
-\bibliography{MathComScienceBooks}{}
+\printbibliography
 
 
 
 
 
 % ############################
+% End of the document
 
-% Koniec dokumentu
 \end{document}

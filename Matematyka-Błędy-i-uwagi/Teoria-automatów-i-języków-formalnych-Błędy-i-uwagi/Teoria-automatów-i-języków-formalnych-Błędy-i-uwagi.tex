@@ -1,128 +1,154 @@
-% ---------------------------------------------------------------------
-% Podstawowe ustawienia i pakiety
-% ---------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag} % Wykrywa przestarzałe i niewłaściwe
-% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+% ------------------------------------------------------------------------------------------------------------------
+% Basic configuration and packages
+% ------------------------------------------------------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
 \documentclass[a4paper,11pt]{article}
-% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski} % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
-\usepackage[utf8]{inputenc} % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
 
-% Umożliwia korzystanie z fontów Latin Modern.
+
+
+% ------------------------------------------------------
+% Packages not tied to particular normal language
+% ------------------------------------------------------
+% This package should improved spaces in the text
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
+
+
+
+% ------------------------------------------------------
+% Polonization of LaTeX document
+% ------------------------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
 \usepackage{lmodern}
-\usepackage[T1]{fontenc} % Potrzebne do używania fontów Latin Modern.
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
 
 
 
-% ------------------------------
-% Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ------------------------------
-\usepackage{microtype} % Twierdzi, że poprawi rozmiar odstępów w tekście.
-\usepackage{graphicx} % Wprowadza bardzo potrzebne komendy do wstawiania
-% grafiki.
-\usepackage{verbatim} % Poprawia otoczenie VERBATIME.
-\usepackage{textcomp} % Dodaje takie symbole jak stopnie Celsiusa,
-% wprowadzane bezpośrednio w tekście.
-% `vmargin' -- paczka pozwalająca na prostą kontrolę marginesów w pliku
-% wyjściowym, za pomocą komend widniejących poniżej. Wielkość marginesu
-% jest mierzona w calach (cal ~ 2.54 cm).
-\usepackage{vmargin}
-% ------------------------------
-% MARGINS
-% ------------------------------
-\setmarginsrb
-{ 0.7in}  % left margin
-{ 0.6in}  % top margin
-{ 0.7in}  % right margin
-{ 0.8in}  % bottom margin
-{  20pt}  % head height
-{0.25in}  % head sep
-{   9pt}  % foot height
-{ 0.3in}  % foot sep
+% ------------------------------------------------------
+% Setting margins
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
 
 
 
-% ------------------------------
-% Często przydatne pakiety
-% ------------------------------
-% \usepackage{csquotes} % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor} % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
-
-
-
-% ------------------------------
-% Pakiety do tekstów z nauk przyrodniczych
-% ------------------------------
-\let\lll\undefined % Amsmath gryzie się z językiem pakietami do języka
-% polskiego, bo oba definiują komendę \lll. Aby rozwiązać ten problem
-% oddefiniowuję tę komendę, ale może tym samym pozbywam się dużego Ł.
-\usepackage[intlimits]{amsmath} % Podstawowe wsparcie od American
-% Mathematical Society (w skrócie AMS)
-\usepackage{amsfonts, amssymb, amscd, amsthm} % Dalsze wsparcie od AMS
-% \usepackage{siunitx} % Dla prostszego pisania jednostek fizycznych
-\usepackage{upgreek} % Ładniejsze greckie litery
-% Przykładowa składnia: pi = \uppi
-\usepackage{slashed} % Pozwala w prosty sposób pisać slash Feynmana.
-% \usepackage{calrsfs} % Zmienia czcionkę kaligraficzną w \mathcal
-% na ładniejszą. Może w innych miejscach robi to samo, ale o tym nic
-% nie wiem.
-
-
-
-% ------------------------------
-% Tworzenie środowisk (?) „Twierdzenie”, „Definicja”, „Lemat”, etc.
-% ------------------------------
-% Komenda wprowadzająca otoczenie „theorem” do pisania twierdzeń
-% matematycznych.
-\newtheorem{theorem}{Twierdzenie}
-% Analogicznie jak powyżej
-\newtheorem{definition}{Definicja}
-\newtheorem{corollary}{Wniosek}
-
-
-
-% ---------------------------------------
-% Pakiety napisane przez użytkownika.
-% Mają być w tym samym katalogu to ten plik .tex
-% ---------------------------------------
-\usepackage{latexgeneralcommands}
-\usepackage{mathcommands}
-\newcommand{\conca}{\textrm{conca}}
-
-
-
-
-% ---------------------------------------------------------------------
-% Dodatkowe ustawienia dla języka polskiego
-% ---------------------------------------------------------------------
-\renewcommand{\thesection}{\arabic{section}.}
-% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
-% Brak kropki po numerach podrozdziału
-
-
-
-% ------------------------------
-% Ustawienia różnych parametrów tekstu
-% ------------------------------
+% ------------------------------------------------------
+% Setting vertical spaces in the text
+% ------------------------------------------------------
+% Setting space between lines
 \renewcommand{\baselinestretch}{1.1}
 
-% Ustawienie szerokości odstępów między wierszami w tabelach.
+% Setting space between lines in tables
 \renewcommand{\arraystretch}{1.4}
 
 
 
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
 
 
-% ------------------------------
-% Pakiet „hyperref”
-% Polecano by umieszczać go na końcu preambuły.
-% ------------------------------
-\usepackage{hyperref} % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki.
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{Logika-i-teoria-mnogości-Bibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------------------------------
+% Wonderful package PGF/TikZ
+% ------------------------------------------------------
+% \usepackage{tikz}
+
+% % Loading concrete TikZ libraries
+% \usetikzlibrary{decorations.markings}
+
+% % Package with TikZ pics
+% \usepackage{TikZPics}
+
+% % Package with additional TikZ styles
+% \usepackage{TikZStyles}
+
+
+
+
+
+% ------------------------------------------------------
+% Private packages
+% You need to put them in the same directory as .tex file
+% ------------------------------------------------------
+% Contains various command useful for working with a text
+\usepackage{latexgeneralcommands}
+% Contains definitions useful for working with mathematical text
+\usepackage{mathcommands}
+
+
+
+
+
+% ------------------------------------------------------
+% Package "hyperref"
+% They advised to put it on the end of preambule
+% ------------------------------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
 
 
 
@@ -133,8 +159,8 @@
 
 
 
-% ---------------------------------------------------------------------
-% Tytuł i autor tekstu
+% ------------------------------------------------------------------------------------------------------------------
+% Title and author of the text
 \title{Teoria automatów i~języków formalnych \\
   {\Large Błędy i~uwagi}}
 
@@ -142,7 +168,7 @@
 
 
 % \date{}
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -170,7 +196,7 @@
 
 
 % ############################
-\Work{ % Autorzy i tytuł dzieła
+\section{ % Autorzy i tytuł dzieła
   Maria Foryś, Wit Foryś \\
   \textit{Teoria automatów i~języków formalnych},
   \cite{ForysForysTeoriaAutomatowIJezykowFormalnych2005}}
@@ -190,12 +216,12 @@ innymi mniejsza, niż kursu online \textit{Języki, automaty
   i~obliczania}, autorstwa, notabene, Marii Foryś, Wita Forysia
 i~Adama Romana. Warto więc przerabiać go równolegle z~tą pozycją. Kurs
 ten można znaleźć pod tym
-\colorhref{https://wazniak.mimuw.edu.pl/index.php?title=J\%C4\%99zyki,\_automaty\_i\_obliczenia}{linkiem}\footnote{Pełna
+???colorhref{https://wazniak.mimuw.edu.pl/index.php?title=J\%C4\%99zyki,\_automaty\_i\_obliczenia}{linkiem}\footnote{Pełna
   forma linku:
   \href{https://wazniak.mimuw.edu.pl/index.php?title=J\%C4\%99zyki,\_automaty\_i\_obliczenia}
   {https://wazniak.mimuw.edu.pl/index.php?title=J\%C4\%99zyki,\_automaty\_i\_obliczenia}.}.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -213,7 +239,7 @@ $\texttt{"} abc \texttt{"}$.
 Więcej o~napisach powiemy przy okazji omawiania wolnych monoidów
 słownych.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -227,7 +253,7 @@ on pisany kursywą, ale poprawka do niego już czcionką
 prostą\footnote{Należy te notatki przejrzeć i~zobaczyć, czy wszędzie
   ta konwencja jest przestrzega.}.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -247,7 +273,7 @@ $\Pcal( M )$.
   A, B, C \in \Pcal( M ).
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -264,7 +290,7 @@ być wynik tej operacji. Mianowicie, dla dowolnego $A \subset M$ ma zachodzić
   \emptyset \cdot A = A \cdot \emptyset := \emptyset.
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -274,7 +300,7 @@ być wynik tej operacji. Mianowicie, dla dowolnego $A \subset M$ ma zachodzić
 \Str{6} Według mnie symbol „$\textrm{mod}_{ 6 }$” wygląda
 znacznie lepiej niż używany w tej książce „$mod_{ 6 }$”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -301,7 +327,7 @@ taki element $y \in M$, że~zachodzi
   x \cdot y = y \cdot x = 1_{ M }.
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -356,7 +382,7 @@ Wszystkie te rozważania moglibyśmy ująć w~sposób bardziej
 sformalizowany, jednak wydaje~się, że~obecna ich forma jest
 wystarczająco precyzyjna.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -367,7 +393,7 @@ wystarczająco precyzyjna.
 „Jeśli $S$ nie jest monoidem, to rozszerzamy go do monoidu, za pomocą
 procedury którą zaprezentujemy poniżej.”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -398,29 +424,29 @@ iniektywne, bez rozszerzania półgrupy $S$ do monoidu $S^{ 1 }$? Nawet
 jeżeli tak, to prostota przeprowadzonego w~książce dowodu sprawia, że
 warto przy nim pozostać.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\Str{7} Tak jak w~przypadku symbolu $\textrm{mod}_{ 6 }$,
-wydaje mi~się, że~lepiej wyglądałby symbol $\textrm{Ker}_{ h }$.
+\Str{7} Tak jak w~przypadku symbolu $\mod_{ 6 }$,
+wydaje mi~się, że~lepiej wyglądałby symbol $\Ker_{ h }$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 
 
 \noindent
-\StrWd{7}{15} Użyty w~podanej tu formule $\rho \subset S^{ 2 }$
+\StrWierszDol{7}{15} Użyty w~podanej tu formule $\rho \subset S^{ 2 }$
 symbol $S^{ 2 }$, jest niejednoznaczny. W~tym kontekście $S^{ 2 }$ nie
 oznacza $S \cdot S$ w~sensie mnożenia w~półgrupie $\Pcal( S )$, ale
 iloczyn kartezjański $S$ z~samym sobą: $S^{ 2 } = S \times S$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -432,7 +458,7 @@ Wystarczy zwrócić uwagę, że~ten sam symbol $h$ znajduje~się na nich
 w~różnych odległości od lewego marginesu, podczas, gdy powinien być
 zawsze w~tej samej odległości.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -576,7 +602,7 @@ wprowadzenia uprzednio tylu pojęć, że~wydaje~się, iż taki wywód nie
 byłby bardziej przejrzysty od tego, a~wiele pojęć tu podanych wciąż
 wymagałoby późniejszego wprowadzenia.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -623,7 +649,7 @@ pokrywają.
 W~świetle powyższych ustaleń wprowadzimy odpowiednie poprawki do tej
 książeczki.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -663,7 +689,7 @@ nierówności
 \end{equation}
 które wynika wprost z~dwóch wspomnianych własności.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -697,7 +723,7 @@ $( \Nbb_{ 0 }, +, 0)$. Ten izomorfizm zadany jest przez relacje
   \end{split}
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -733,7 +759,7 @@ elementów zbioru~$A$. Jeżeli dany monoid jest utworzony nie ze
 wszystkich, lecz tylko~niektórych ciągów elementów zbioru~$A$, to nie
 musi on być monoidem wolny.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -746,7 +772,7 @@ ciągami liter”. Jednak ze względu na wygodę, warto przyjąć, że słowo
 powiedzieć „elementami alfabetu są symbole” i~„słowa są ciągami
 symboli”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -780,7 +806,7 @@ zadane odwzorowanie jest homeomorfizmem jest stosunkowo
 proste\footnote{Jak to niektórzy powiadają: „Nie ma czego dowodzić”.}
 opuścimy dyskusję tego problemu.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -810,7 +836,7 @@ Nie potrafię powiedzieć, czy ten homomorfizm jest kanoniczny w~sensie
 teorii kategorii, jednak w~tym momencie i~tak nie potrafię wymyślić
 dla niego lepszej nazwy.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -872,7 +898,7 @@ kanonicznie izomorficzny z~wolnym monoidem słownym $B^{ * }$. Dla
 monoidu $( \Nbb, +, 0 )$ taki zbiorem jest $B = \{ 1 \}$, więc jest to
 monoid wolny.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -900,7 +926,7 @@ słowny $A^{ * }$ jest kanonicznie izomorficzny
 z~$( \Nbb_{ 0 }, +, 0)$. Ten przykład powinien uczynić zrozumiałymi
 pewne subtelności tej teorii.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -920,7 +946,7 @@ wprowadzamy następującą notację
 Mamy nadzieję, że ta notacja pozwoli w~przejrzysty sposób zapisywać
 pewne dość abstrakcyjne kroki rachunkowe.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -935,7 +961,7 @@ gdyby wzór przedstawiający działania kanonicznego homomorfizmu zapisać jako
   h( \texttt{"} a_{ n } \texttt{"} ) = a_{ 1 } a_{ 2 } \ldots a_{ n }.
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -972,7 +998,7 @@ kanonicznym izomorfizmem odpowiednich monoidów i~niech $m = h( w )$.
 Przez \textbf{długość elementu $m \in M$} rozumiemy liczbę całkowitą
 nieujemną określoną przez wzór \eqref{eq:Forys-Forys-20}.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1040,7 +1066,7 @@ $a, b \in S$ zachodzi $a b = 1_{ M }$. Możemy jednak zauważyć,
 
 
 
-% #############
+% ##################
 \begin{theorem}
   \label{thm:Forys-Forys-01}
 
@@ -1071,7 +1097,7 @@ $a, b \in S$ zachodzi $a b = 1_{ M }$. Możemy jednak zauważyć,
   czyli~$ab \notin S$. Dowód został zakończony.
 
 \end{proof}
-% #############
+% ##################
 
 
 
@@ -1091,7 +1117,7 @@ ale może też istnieć wiele $k > 1$, takich~że
   S^{ k } \nsupseteq S^{ k + 1 }.
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1137,7 +1163,7 @@ Wykazaliśmy nie tylko, że~baza $B$ jest nie tylko najmniejszym
 w~sensie inkluzji zbiorem generatorów wolnego monoidu $M$, ale też,
 że~jest ona wyznaczona jednoznacznie przez warunek $B = S \setminus S^{ 2 }$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1169,7 +1195,7 @@ i~$a^{ 3 }$ nie jest jednoznaczny. Przykładowo
   a^{ 6 } = a^{ 2 } a^{ 2 } a^{ 2 } = a^{ 3 } a^{ 3 }.
 \end{equation}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1357,7 +1383,7 @@ $w \notin S^{ n + 1 }$, więc
 $w \notin \bigcap_{ n \in \Nbb } S^{ n }$. Jest to prawdą dla każdego
 $w \in S$ i~stąd $\bigcap_{ n \in \Nbb } S^{ n } = \emptyset$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -2645,19 +2671,17 @@ słownym~$B^{ * }$, \\
 
 
 
-% #####################################################################
-% #####################################################################
-% Bibliografia
+% ####################################################################
+% ####################################################################
+% Bibliography
 
-\bibliographystyle{plalpha}
-
-\bibliography{MathComScienceBooks}{}
+\printbibliography
 
 
 
 
 
 % ############################
+% End of the document
 
-% Koniec dokumentu
 \end{document}
