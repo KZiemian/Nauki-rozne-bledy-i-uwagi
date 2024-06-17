@@ -1,85 +1,136 @@
-% Autor: Kamil Ziemian
-
-% ---------------------------------------------------------------------
-% Podstawowe ustawienia i pakiety
-% ---------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
-% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+% ------------------------------------------------------------------------------------------------------------------
+% Basic configuration and packages
+% ------------------------------------------------------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
 \documentclass[a4paper,11pt]{article}
-% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
-\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
-\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
 
 
 
-% ------------------------------
-% Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ------------------------------
-\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
-% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
-% % grafiki.
-\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
-% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ------------------------------
-% MARGINS
-% ------------------------------
-\setmarginsrb
-{ 0.7in} % left margin
-{ 0.6in} % top margin
-{ 0.7in} % right margin
-{ 0.8in} % bottom margin
-{  20pt} % head height
-{0.25in} % head sep
-{   9pt} % foot height
-{ 0.3in} % foot sep
+% ------------------------------------------------------
+% Packages not tied to particular normal language
+% ------------------------------------------------------
+% This package should improved spaces in the text
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
 
 
 
-% ------------------------------
-% Często używane pakiety
-% ------------------------------
-\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% ------------------------------------------------------
+% Polonization of LaTeX document
+% ------------------------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
 
 
 
-% ------------------------------
-% Pakiety których pliki *.sty mają być w tym samym katalogu co ten plik
-% ------------------------------
+% ------------------------------------------------------
+% Setting margins
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
+
+
+
+% ------------------------------------------------------
+% Setting vertical spaces in the text
+% ------------------------------------------------------
+% Setting space between lines
+\renewcommand{\baselinestretch}{1.1}
+
+% Setting space between lines in tables
+\renewcommand{\arraystretch}{1.4}
+
+
+
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{LogikaITeoriaMnogosciBibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------------------------------
+% Private packages
+% You need to put them in the same directory as .tex file
+% ------------------------------------------------------
+% Contains various command useful for working with a text
 \usepackage{latexgeneralcommands}
-
-
-
-% ---------------------------------------------------------------------
-% Dodatkowe ustawienia dla języka polskiego
-% ---------------------------------------------------------------------
-\renewcommand{\thesection}{\arabic{section}.}
-% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
-% Brak kropki po numerach podrozdziału
-
-
-
-% ------------------------------
-% Ustawienia różnych parametrów tekstu
-% ------------------------------
-\renewcommand{\arraystretch}{1.2}  % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+% Contains definitions useful for working with mathematical text
+% \usepackage{mathcommands}
 
 
 
 
 
-% ------------------------------
-% Pakiet „hyperref”
-% Polecano by umieszczać go na końcu preambuły
-% ------------------------------
-\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki.
+% ------------------------------------------------------
+% Package "hyperref"
+% They advised to put it on the end of preambule
+% ------------------------------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
 
 
 
@@ -90,13 +141,16 @@
 
 
 
-% ---------------------------------------------------------------------
-% Tytuł, autor, data
-\title{Historia Polski~-- błędy i~uwagi}
+% ------------------------------------------------------------------------------------------------------------------
+% Title and author of the text
+\title{Historia Polski \\
+  {\Large Błędy i~uwagi}}
 
-% \author{}
+\author{Kamil Ziemian}
+
+
 % \date{}
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -108,7 +162,7 @@
 
 
 % ####################################################################
-% Początek dokumentu
+% Beginning of the document
 \begin{document}
 % ####################################################################
 
@@ -117,7 +171,7 @@
 
 
 % ######################################
-\maketitle  % Tytuł całego tekstu
+\maketitle
 % ######################################
 
 
@@ -127,22 +181,21 @@
 % ######################################
 \section{Syntezy historii Polski}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
-  Norman Davies \\
-  „Boże igrzysko. Historia Polski”, \cite{DaviesBozeIgrzysko2010} }
+\section{Norman Davies \textit{Boże igrzysko. Historia
+    Polski}, \cite{DaviesBozeIgrzysko2010}}
 
 
 % ##################
 \CenterBoldFont{Uwagi do konkretnych stron}
 
 
-\start \StrWg{4}{20} Treść tego wersu „[uzupełnić na~ozalidzie]”,
+\StrWierszGora{4}{20} Treść tego wersu „[uzupełnić na~ozalidzie]”,
 to~musi być wynik naprawdę okropnego błędu edytorskiego.
 
 % \vspace{\spaceFour}
@@ -285,30 +338,29 @@ to~musi być wynik naprawdę okropnego błędu edytorskiego.
 
 \end{center}
 
-
-\vspace{\spaceTwo}
-% ############################
-
-
-
-
-
-
-
-
-
+\VerSpaceTwo
 
 % ############################
-\Work{ % Tytuł i autor dzieła
-  Norman Davies \\
-  „Serce Europy”, \cite{DaviesSerceEuropy2014} }
+
+
+
+
+
+
+
+
+
+
+% ############################
+
+\section{Norman Davies \textit{Serce Europy}, \cite{DaviesSerceEuropy2014} }
 
 
 % ##################
 \CenterBoldFont{Uwagi do konkretnych stron}
 
 
-\start \Str{16} Davies pisze tu o~tym, że~rzut trójwymiarowej Ziemi
+\Str{16} Davies pisze tu o~tym, że~rzut trójwymiarowej Ziemi
 na~dwuwymiarową mapę musi pociągać za sobą zniekształcenia
 odwzorowywanego terenu, jednak mnie~się wydaje, że~źle zrozumiał,
 gdzie leży problem. Powierzchnię Ziemi można uważać za dwuwymiarową,
@@ -322,11 +374,13 @@ dwuwymiarowej powierzchni w~inną dwuwymiarową powierzchnię muszą się
 pojawić, jeśli mają one różne krzywizny Gaussa, dla~płaszczyzny zaś
 jest ona równa 0, a~dla sfery $\frac{ 1 }{ r^{ 2 } }$.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWg{17}{12} W~tym miejscu Davies stosuje często spotykany
+
+
+\StrWierszGora{17}{12} W~tym miejscu Davies stosuje często spotykany
 anachronizm pisząc o~Watykanie jako metonimie Ojca Świętego
 i~najwyższych władz Kościoła. Do~czasu zajęcia przez wojska Victora
 Emanuela~II Państwa Kościelnego w~1870~roku, władza doczesna papieża
@@ -334,21 +388,25 @@ nie ograniczała~się tylko do~tej dzielnicy Rzymu, lecz przez wieki
 dotyczyła ogromnych połaci Półwyspu Apenińskiego. Dlatego trafniej
 w~kontekście 1765~r. byłoby pisać o~decyzji Rzymu.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{28} Wydaje mi~się, że~nazwanie wszystkich wymienionych
+
+
+\Str{28} Wydaje mi~się, że~nazwanie wszystkich wymienionych
 tu~przez Davies państw dyktaturami, jest błędne. Państwo Watykańskie
 i~Tybet Dalajlamy nie są demokracjami, ale~to za~mało, aby uznać je
 za~dyktatury, bo~dyktatura jest pojęciem czysto negatywnym
 i~piętnującym.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWg{52}{10} Zostawienie w~tym wersie słowa „Batman”
+
+
+\StrWierszGora{52}{10} Zostawienie w~tym wersie słowa „Batman”
 pisanego z~dużej litery, jest chyba błędem tłumacza. Sugeruje to,
 że~chodzi o~Człowieka-Nietoperza, jednanego z~najbardziej
 znanych superbohaterów amerykańskich, jednak jest bardziej
@@ -382,7 +440,7 @@ prawdopodobne, że~angielskie słowo „batman” występuje to~w~znaczeniu
 % \end{center}
 
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ############################
 
 
@@ -395,9 +453,9 @@ prawdopodobne, że~angielskie słowo „batman” występuje to~w~znaczeniu
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
-  Andrzej Nowak \\
-  „Dzieje Polski. Tom~I do~1202: Skąd nasz ród”,
+\section{ % Autor i tytuł dzieła
+  Andrzej Nowak \textit{Dzieje Polski. Tom~I do~1202: Skąd
+    nasz ród},
   \cite{NowakDziejePolskiVolI2014} }
 
 
@@ -405,23 +463,25 @@ prawdopodobne, że~angielskie słowo „batman” występuje to~w~znaczeniu
 \CenterBoldFont{Uwagi}
 
 
-\start \textbf{Strona tytułowa.} W informacjach o~autorze jest podane,
+\textbf{Strona tytułowa.} W informacjach o~autorze jest podane,
 że~był redaktorem naczelnym „ARCANA” w~latach 1994--2012, lecz
 prawidłowy okresem są chyba lata 1995--2012.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{62} W~ostatnim paragrafie jest mowa o~czterech królów
+
+
+\Str{62} W~ostatnim paragrafie jest mowa o~czterech królów
 Słowian, ale~wymienionych jest tylko trzech.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
 % POPRAW
-\start \StrWg{85}{16} „Nie było innej drogi do~Europy w~końcu X~w.
+\StrWierszGora{85}{16} „Nie było innej drogi do~Europy w~końcu X~w.
 jak poprzez chrzest, nie~było dalej w~Europie innej drogi do humanizmu
 jak poprzez chrześcijaństwo.” To zdanie chyba najlepiej oddaje
 problem z~postrzeganiem chrześcijaństwa nie tylko przez Nowaka,
@@ -433,19 +493,23 @@ humanizmu, nie~zaś wiarą pochodzącą od Boga i~jedyną drogą do życia
 wiecznego. To~zaś zredukowanie Boga i~wiary, do~doczesnych korzyści,
 to~straszliwe zło.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWd{92}{21--20} Nie potrafię zrozumieć, czy chodziło o~to,
+
+
+\StrWierszeDol{92}{21--20} Nie potrafię zrozumieć, czy chodziło o~to,
 że~Otton~II przejściowo zdobył Akwizgran, czy że~miejsce to było
 przejściowo stolicą cesarską.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{96} W~swoim wykładzie z~cyklu
+
+
+\Str{96} W~swoim wykładzie z~cyklu
 \href{https://www.youtube.com/watch?v=QovVLT2fitc}{„Filary Polskości:
   Mieszko i~Bolesław”} Nowak znacznie wyraźniej niż w~tej książce,
 pokazał cały cynizm polityczny Mieszka~I. O~możliwości takiego
@@ -453,19 +517,23 @@ spojrzenia na tego władcę Nowak mówi tam otwarcie jednocześnie,
 zarówno na wykładzie jaki i~książce, próbuje przykryć ten cynizm,
 nazywając działania Mieszka „majstersztykiem polityki polskiej”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWg{144}{24} Jest tu napisane, że~Miecław był cześnikiem,
+
+
+\StrWierszGora{144}{24} Jest tu napisane, że~Miecław był cześnikiem,
 jednak jaka była nadworna funkcja cześnika jest wyjaśnione dopiero
 na~stronie~150.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWd{163}{17--15} Zdanie „Rozpoczyna od~modlitwy
+
+
+\StrWierszeDol{163}{17--15} Zdanie „Rozpoczyna od~modlitwy
 do~św.~Piotra, patrona Stolicy Apostolskiej w~Rzymie i~zarazem
 Gertrudowego syna, jadącego właśnie do~Rzymu, do~papieża.” można
 zrozumieć w~ten sposób, że~Gertruda modli~się do swojego syna, co jest
@@ -504,13 +572,15 @@ syna”, co czyni całe zdanie zrozumiałym i~sensownym.
 
 \end{center}
 
+\VerSpaceTwo
+
 
 \noindent
-\StrWg{61}{8} \\
-\Jest  z~Rocznika kapituły krakowskiej dawnego \\
-\Powin z~dawnego Rocznika kapituły krakowskiej \\
+\StrWierszGora{61}{8} \\
+\Jest z~Rocznika kapituły krakowskiej dawnego \\
+\PowinnoByc z~dawnego Rocznika kapituły krakowskiej \\
 
-\vspace{\spaceTwo}
+
 % ############################
 
 
@@ -526,16 +596,17 @@ syna”, co czyni całe zdanie zrozumiałym i~sensownym.
 \newpage
 \section{Dzieje Polski z lat 1795--1914}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Red. Andrzej Nowak \\
-  „Historie Polski w~XIX wieku. Kominy, ludzie i~obłoki: \\
-  modernizacja i~kultura. Tom~I”, \cite{HistoriaPolskiXIXVolI2013} }
+  \textit{Historie Polski w~XIX wieku. Kominy, ludzie
+    i~obłoki: modernizacja i~kultura. Tom~I},
+  \cite{HistoriaPolskiXIXVolI2013} }
 
 
 % ##################
@@ -561,7 +632,7 @@ syna”, co czyni całe zdanie zrozumiałym i~sensownym.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ############################
 
 
@@ -583,10 +654,9 @@ syna”, co czyni całe zdanie zrozumiałym i~sensownym.
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
-  Paweł Zyzak \\
-  „Efekt domina. Czy Ameryka obaliła komunizm w~Polsce? \\
-  Tom~I”, \cite{ZyzakEfektDominaVolI2016} }
+\section{Paweł Zyzak \textit{Efekt domina. Czy Ameryka
+    obaliła komunizm w~Polsce? Tom~I},
+  \cite{ZyzakEfektDominaVolI2016} }
 
 
 % ##################
@@ -648,74 +718,75 @@ syna”, co czyni całe zdanie zrozumiałym i~sensownym.
 
 \end{center}
 
+\VerSpaceTwo
+
 
 \noindent
 \textbf{Tyla okładka, wiersz 17.} \\
 \Jest Sorosa ,Williama \\
-\Powin Sorosa, Williama \\
-\StrWd{11}{16} \\
-\Jest  Amerian Seafarers Union \\
-\Powin \textit{Amerian Seafarers Union} \\
-\StrWd{11}{5} \\
-\Jest  Council~of Economic Advisers \\
-\Powin \textit{Council~of Economic Advisers} \\
-\StrWd{11}{1} \\
-\Jest  Council on~Foregin Relations \\
-\Powin \textit{Council on~Foregin Relations} \\
-\StrWg{12}{11} \\
-\Jest  \textit{Congress}) --~Kanadyjski Kongres Związków Zawodowych \\
-\Powin \textit{Congress} --~Kanadyjski Kongres Związków Zawodowych) \\
-\StrWd{12}{18} \\
-\Jest  Emergency Committe for~Aid to~Poland \\
-\Powin \textit{Emergency Committe for~Aid to~Poland} \\
-\StrWd{12}{8} \\
-\Jest  (\textit{Froce Ouvri\'{e}re} ) \\
-\Powin (\textit{Froce Ouvri\'{e}re} --~Główna Konfederacja Pracy --~Siły
+\PowinnoByc Sorosa, Williama \\
+\StrWierszDol{11}{16} \\
+\Jest Amerian Seafarers Union \\
+\PowinnoByc \textit{Amerian Seafarers Union} \\
+\StrWierszDol{11}{5} \\
+\Jest Council~of Economic Advisers \\
+\PowinnoByc \textit{Council~of Economic Advisers} \\
+\StrWierszDol{11}{1} \\
+\Jest Council on~Foregin Relations \\
+\PowinnoByc \textit{Council on~Foregin Relations} \\
+\StrWierszGora{12}{11} \\
+\Jest \textit{Congress}) --~Kanadyjski Kongres Związków Zawodowych \\
+\PowinnoByc \textit{Congress} --~Kanadyjski Kongres Związków Zawodowych) \\
+\StrWierszDol{12}{18} \\
+\Jest Emergency Committe for~Aid to~Poland \\
+\PowinnoByc \textit{Emergency Committe for~Aid to~Poland} \\
+\StrWierszDol{12}{8} \\
+\Jest (\textit{Froce Ouvri\'{e}re} ) \\
+\PowinnoByc (\textit{Froce Ouvri\'{e}re} --~Główna Konfederacja Pracy --~Siły
 Pracy) \\
-\StrWg{13}{10} \\
-\Jest  Generalized System~of Preferences \\
-\Powin \textit{Generalized System~of Preferences} \\
-\StrWd{13}{4} \\
-\Jest  \textit{Leuven}) \\
-\Powin \textit{Leuven} --~Kotlicki Ośrodek Dokumentacyjny i~Badań
+\StrWierszGora{13}{10} \\
+\Jest Generalized System~of Preferences \\
+\PowinnoByc \textit{Generalized System~of Preferences} \\
+\StrWierszDol{13}{4} \\
+\Jest \textit{Leuven}) \\
+\PowinnoByc \textit{Leuven} --~Kotlicki Ośrodek Dokumentacyjny i~Badań
 Katolickich Uniwersytetu Leuven \\
-\StrWg{15}{1} \\
-\Jest  Polish American Congress Charitable Foundation \\
-\Powin \textit{Polish American Congress Charitable Foundation} \\
-\StrWg{15}{3} \\
-\Jest  Polish-American Enterprise Fund \\
-\Powin \textit{Polish-American Enterprise Fund} \\
-\StrWg{15}{10} \\
-\Jest  Postal, Telegraph and~Telephone International \\
-\Powin \textit{Postal, Telegraph and~Telephone International} \\
-\StrWg{43}{2} \\
-\Jest  \textit{Univeristy~of Illinois at~Urbana Champaign, 1998} \\
-\Powin Univeristy~of Illinois at~Urbana-Champaign, 1998 \\
-
-\vspace{\spaceTwo}
-% ############################
-
-
-
-
-
-
-
-
+\StrWierszGora{15}{1} \\
+\Jest Polish American Congress Charitable Foundation \\
+\PowinnoByc \textit{Polish American Congress Charitable Foundation} \\
+\StrWierszGora{15}{3} \\
+\Jest Polish-American Enterprise Fund \\
+\PowinnoByc \textit{Polish-American Enterprise Fund} \\
+\StrWierszGora{15}{10} \\
+\Jest Postal, Telegraph and~Telephone International \\
+\PowinnoByc \textit{Postal, Telegraph and~Telephone International} \\
+\StrWierszGora{43}{2} \\
+\Jest \textit{Univeristy~of Illinois at~Urbana Champaign, 1998} \\
+\PowinnoByc Univeristy~of Illinois at~Urbana-Champaign, 1998 \\
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
-  Paweł Zyzak \\
-  „Efekt domina. Czy Ameryka obaliła komunizm w~Polsce? \\
-  Tom~II”, \cite{ZyzakEfektDominaVolII2016} }
+
+
+
+
+
+
+
+
+
+
+% ############################
+\section{Paweł Zyzak \textit{Efekt domina. Czy Ameryka
+    obaliła komunizm w~Polsce? Tom~II},
+  \cite{ZyzakEfektDominaVolII2016} }
 
 
 % ##################
 \CenterBoldFont{Uwagi}
 
 
-\start \StrWg{653}{3} Nie jest podana data wydania książki
+\StrWierszGora{653}{3} Nie jest podana data wydania książki
 Dubinsky'ego i~Raskina. W~skutek tego daty tej brakuje również
 w~pierwszym tomie, str.~39, wiersz ósmy od~dołu.
 
@@ -767,7 +838,7 @@ w~pierwszym tomie, str.~39, wiersz ósmy od~dołu.
 \end{center}
 
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ############################
 
 
@@ -782,15 +853,14 @@ w~pierwszym tomie, str.~39, wiersz ósmy od~dołu.
 % ######################################
 \subsection{Lata 1914--1939}
 
-\vspace{\spaceThree}
+\VerSpaceThree
 % ######################################
 
 
 
 % ############################
-\Work{ % Tytuł i autor dzieła
-  Wojciech Roszkowski \\
-  „Najnowsza historia Polski: 1914--1939”,
+\section{Wojciech Roszkowski \textit{Najnowsza historia
+    Polski: 1914--1939},
   \cite{RoszkowskiNajnowszaHistoriaPolski1914-1939Wyd2011} }
 
 
@@ -798,51 +868,58 @@ w~pierwszym tomie, str.~39, wiersz ósmy od~dołu.
 \CenterBoldFont{Uwagi}
 
 
-\start Karygodną, i~to~niezależnie od uznawanej metodologi pisania
+Karygodną, i~to~niezależnie od uznawanej metodologi pisania
 prac historycznych, cechą całego tego wydania „Najnowszej historii
 Polski”, jest nieumieszczenie w~każdej tomie listy używanych
 skrótów. Należy dodać, że~jeśli skrót został wprowadzony w~jednym
 tomie, to~nie jest już wyjaśniany w~następnych, co~dodatkowo
 komplikuje sprawę.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start Ciekawym wydaje~się zauważanie, że~w~tej książce Roszkowski
+
+
+Ciekawym wydaje~się zauważanie, że~w~tej książce Roszkowski
 zrealizował chyba idealnie, jedno z~założeń zaprojektowanego przez
 piłsudczyków programu edukacji, przyjętego po reformie
 jędrzejewiczowskiej (1932): sprowadzenia lat 1918--1920 wyłączenie
-do~tematu walki o~granice. Więcej na ten temat \\
-w~Andrzej Chojnowski „Kwestia patriotyzmu w~poszukiwaniach
-programowych obozu piłsudczykowskiego”, str.~136
-\cite{RedKloczkowskiPatriotyzmPolakow2006}.
+do~tematu walki o~granice. Więcej na ten temat w~Andrzej Chojnowski
+„Kwestia patriotyzmu w~poszukiwaniach programowych obozu
+piłsudczykowskiego”, str.~136 \cite{RedKloczkowskiPatriotyzmPolakow2006}.
 
-\vspace{\spaceFour}
-
+\VerSpaceFour
 
 
-\start \Str{26} Podany tu opis przyczyn wybuchu I~Wojny Światowej,
+
+
+
+\Str{26} Podany tu opis przyczyn wybuchu I~Wojny Światowej,
 zwłaszcza bardzo silne stwierdzenie, że~Austro-Węgry
 wypowiedziały wojnę Serbii pod naciskiem Niemiec, warto skonfrontować
 z~tym co pisze M. Gilbert w~swojej książce na temat tego przedziwnego
 wydarzenia \cite{GilbertPierwszaWojnaSwiatowa2003}.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWd{78}{4} Cudzysłów otwarty w~tym wierszu nigdy nie został
+
+
+\StrWierszDol{78}{4} Cudzysłów otwarty w~tym wierszu nigdy nie został
 zamknięty, przez co~nie wiadomo, gdzie~się kończy cytat.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWd{425}{6} Przy nazwisku „Unrag Józef” nie ma podanej
+
+
+\StrWierszDol{425}{6} Przy nazwisku „Unrag Józef” nie ma podanej
 strony na~której~się ta postać pojawia.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -1085,13 +1162,15 @@ strony na~której~się ta postać pojawia.
 
 \end{center}
 
+\VerSpaceTwo
+
 
 \noindent
-\StrWd{47}{6} \\
-\Jest  nadchodzącą zimą \\
-\Powin nadchodzącej zimy \\
+\StrWierszDol{47}{6} \\
+\Jest nadchodzącą zimą \\
+\PowinnoByc nadchodzącej zimy \\
 
-\vspace{\spaceTwo}
+
 % ############################
 
 
@@ -1106,16 +1185,17 @@ strony na~której~się ta postać pojawia.
 % ######################################
 \subsection{Lata 1939--1989}
 
-\vspace{\spaceThree}
+\VerSpaceThree
 % ######################################
 
 
 
 % ############################
-\Work{ % Redaktorzy i tytuł dzieła
-  Redakcja i~opracowanie Adam Dziurok, Filip Musiał \\
-  „Instrukcje, wytyczne, pisma Departamentu IV~Ministerstwa Spraw
-  Wewnętrznych z~lat 1962--1989. Wybór dokumentów”,
+\section{ % Redaktorzy i tytuł dzieła
+  Redakcja i~opracowanie Adam Dziurok, Filip Musiał
+  \textit{Instrukcje, wytyczne, pisma Departamentu
+    IV~Ministerstwa Spraw Wewnętrznych z~lat 1962--1989.
+    Wybór dokumentów},
   \cite{RedDziurokMusialInstrukcjeWytycznePisma2017} }
 
 
@@ -1123,12 +1203,12 @@ strony na~której~się ta postać pojawia.
 \CenterBoldFont{Uwagi do konkretnych stron}
 
 
-\start \Str{905} Nazwiska pisane czcionką prostą (antykwą?) należą
+\Str{905} Nazwiska pisane czcionką prostą (antykwą?) należą
 do~bohaterów historii omawianej w~tym tomie, zaś~te pisane kursywą
 do~badaczy i~historyków.
 
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ############################
 
 
@@ -1141,9 +1221,8 @@ do~badaczy i~historyków.
 
 
 % ##############################
-\Work{ % Redaktor i tytuł dzieła
-  Red. Piotr Franaszka \\
-  „Granice kompromisu. Naukowcy wobec aparatu władzy ludowej”,
+\section{Red. Piotr Franaszka \textit{Granice kompromisu.
+    Naukowcy wobec aparatu władzy ludowej},
   \cite{RedFranaszekGraniceKompromisu2015} }
 
 
@@ -1170,23 +1249,22 @@ do~badaczy i~historyków.
 
 \end{center}
 
-
-\vspace{\spaceTwo}
-% ############################
-
-
-
-
-
-
-
-
-
+\VerSpaceTwo
 
 % ############################
-\Work{ % Autor i tytuł dzieła
-  Wojciech Roszkowski \\
-  „Najnowsza historia Polski: 1939--1945”,
+
+
+
+
+
+
+
+
+
+
+% ############################
+\section{Wojciech Roszkowski \textit{Najnowsza historia
+    Polski: 1939--1945},
   \cite{RoszkowskiNajnowszaHistoriaPolski1939-1945Wyd2011} }
 
 
@@ -1219,7 +1297,7 @@ do~badaczy i~historyków.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 
@@ -1227,9 +1305,8 @@ do~badaczy i~historyków.
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
-  Wojciech Roszkowski \\
-  „Najnowsza historia Polski: 1980--1989”,
+\section{Wojciech Roszkowski \textit{Najnowsza historia
+    Polski: 1980--1989},
   \cite{RoszkowskiNajnowszaHistoriaPolski1980-1989Wyd2011} }
 
 
@@ -1237,7 +1314,7 @@ do~badaczy i~historyków.
 \CenterBoldFont{Uwagi}
 
 
-\start \Str{8} Jest to jeden z~największych przykładów straszliwie
+\Str{8} Jest to jeden z~największych przykładów straszliwie
 suchej, pozbawiającej wydarzenia z~przeszłości realności, a~także nie
 pozwalającej~się zorientować w~symbolach o~ogromnej wadze,
 historiografii pozytywistycznej, chyba szkoły niemieckiej, jaką
@@ -1249,28 +1326,34 @@ w~istocie mur, miał miejsce w~opisywanym tu dniu 22~sierpnia 1980~r.
 Wałęsa musiał przeskoczyć ten mur, właśnie dlatego, że~spóźnił~się na
 główne otwarcie stoczni. Tylko pomarzyć jak~by to opisał Paul Johnson.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{16} Choć nie~czytałem poprzednich tomów, i~być może jest
+
+
+\Str{16} Choć nie~czytałem poprzednich tomów, i~być może jest
 tam informacja o~tym kim jest Karol Modzelewski, to w~tym tomie jest
 wymieniony tylko dwa razy, i~z tego powodu powinna być podana jakaś
 informacja o~nim, by~czytelnik wiedział kto jest autorem tak wiele
 znaczącej nazwy jak „Solidarność”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWd{23}{6} Cudzysłów otwarty w~tym wierszu nigdy nie został
+
+
+\StrWierszDol{23}{6} Cudzysłów otwarty w~tym wierszu nigdy nie został
 zamknięty, przez co~nie wiadomo, gdzie~się kończy cytat.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWd{26}{6} Nie jest podane co było tematem omawianej
+
+
+\StrWierszDol{26}{6} Nie jest podane co było tematem omawianej
 tu~narady sztabowej.
 
 
@@ -1288,7 +1371,7 @@ tu~narady sztabowej.
 %   \end{tabular}
 % \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceFour
 % ############################
 
 
@@ -1301,10 +1384,9 @@ tu~narady sztabowej.
 
 
 % ############################
-\Work{ % Redaktorzy i tytuł dzieła
-  Redakcja naukowa Mirosław Sikora; współpraca Piotr Fuglewicz \\
-  „High-tech za~żelazną kurtyną: elektronika, komputery
-  i~systemy sterowania w~PRL”, \cite{SikoraFuglewiczHighTech2017} }
+\section{Redakcja naukowa Mirosław Sikora; współpraca Piotr
+  Fuglewicz \textit{High-tech za~żelazną kurtyną: elektronika, komputery
+  i~systemy sterowania w~PRL}, \cite{SikoraFuglewiczHighTech2017} }
 
 
 % \CenterTB{Uwagi}
@@ -1338,7 +1420,7 @@ tu~narady sztabowej.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ############################
 
 
@@ -1353,15 +1435,14 @@ tu~narady sztabowej.
 % ######################################
 \section{Dzieje Polski po~1989~r.}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
 % ############################
-\Work{ % Autorzy i tytuł dzieła
-  Jan Kofman, Wojciech Roszkowski \\
-  „Transformacja i~postkomunizm”,
+\section{Jan Kofman, Wojciech Roszkowski \\
+  \textit{Transformacja i~postkomunizm},
   \cite{KofmanRoszkowskiTransformacjaIPostkomunizm1999} }
 
 
@@ -1369,14 +1450,14 @@ tu~narady sztabowej.
 \CenterBoldFont{Uwagi}
 
 
-\start \Str{42} Przeliczyłem za~pomocą komputera przytoczone tu~dane
+\Str{42} Przeliczyłem za~pomocą komputera przytoczone tu~dane
 i~otrzymany wynik nie zawsze pokrywał~się z~tym co zostało podane
 w~ostatniej kolumnie. Dokładniej, wyniki różniły~się zawsze, jednak
 w~wielu wypadkach był to zapewne wynik przyjętego sposobu
 zaokrąglania, dlatego w~błędach odnotowałem tylko te przypadki,
 gdy~różnica była rzędu procenta lub~większa.
 
-\vspace{\spaceFour}
+\VerSpaceTwo
 
 
 % ##################
@@ -1412,22 +1493,22 @@ gdy~różnica była rzędu procenta lub~większa.
 
 \end{center}
 
-\vspace{\spaceTwo}
-% ############################
-
-
-
-
-
-
-
-
-
+\VerSpaceTwo
 
 % ############################
-\Work{ % Autor i tytuł dzieła
-  Wojciech Roszkowski \\
-  „Najnowsza historia Polski: 1989--2011”,
+
+
+
+
+
+
+
+
+
+
+% ############################
+\section{Wojciech Roszkowski \textit{Najnowsza historia
+    Polski: 1989--2011},
   \cite{RoszkowskiNajnowszaHistoriaPolski1989-2011Wyd2011} }
 
 
@@ -1466,7 +1547,7 @@ gdy~różnica była rzędu procenta lub~większa.
 \end{center}
 
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ############################
 
 
@@ -1481,15 +1562,14 @@ gdy~różnica była rzędu procenta lub~większa.
 % ######################################
 \section{Historia Polski~-- zbiory artykułów}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
-  Janusz Cisek \\
-  „Oskar Halecki. Historyk~-- Szermierz Wolności”,
+\section{Janusz Cisek \\
+  \textit{Oskar Halecki. Historyk~-- Szermierz Wolności},
   \cite{CisekOskarHalecki2009} }
 
 
@@ -1497,24 +1577,26 @@ gdy~różnica była rzędu procenta lub~większa.
 \CenterBoldFont{Uwagi}
 
 
-\start \Str{5} Tytuł części „Historyk Kościoła” jest trochę
+\Str{5} Tytuł części „Historyk Kościoła” jest trochę
 nieadekwatna, bowiem dwa z~trzech zamieszczonych tu artykułów dotyczą
 historii Kościoła w~Polsce, co jest bardzo małym wycinkiem z~tego
 zagadnienia.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWg{48}{4} Artykuł ten mógł~się rzeczywiście ukazać
+
+
+\StrWierszGora{48}{4} Artykuł ten mógł~się rzeczywiście ukazać
 w~wymienionym tu roku 1963, jednak spodziewałbym~się raczej tego,
 że~został opublikowany w~1966 roku.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWg{70}{7} Słowa „i~jego pielgrzymki” mogą być wynikiem
+\StrWierszGora{70}{7} Słowa „i~jego pielgrzymki” mogą być wynikiem
 błędu, w~poprawnej wersji powinny brzmieć „i~jego pielgrzymi”. Mogą
 też mieć następujący sens. Poeci romantyczni byli „wieszczami”
 narodu, jak i~w~szczególny sposób, czasów jego pielgrzymki.
@@ -1566,7 +1648,7 @@ narodu, jak i~w~szczególny sposób, czasów jego pielgrzymki.
 \end{center}
 
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ############################
 
 
@@ -1580,16 +1662,15 @@ narodu, jak i~w~szczególny sposób, czasów jego pielgrzymki.
 
 % ####################################################################
 % ####################################################################
-% Bibliografia
-\bibliographystyle{plalpha}
+% Bibliography
 
-\bibliography{HistoryBooks,VariousFieldsBooks}{}
+\printbibliography
 
 
 
 
 
 % ############################
+% End of the document
 
-% Koniec dokumentu
 \end{document}
