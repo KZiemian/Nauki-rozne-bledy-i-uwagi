@@ -1,90 +1,154 @@
-% ---------------------------------------------------------------------
-% Podstawowe ustawienia i pakiety
-% ---------------------------------------------------------------------
-\RequirePackage[l2tabu, orthodox]{nag}  % Wykrywa przestarzałe i niewłaściwe
-% sposoby używania LaTeXa. Więcej jest w l2tabu English version.
+% ------------------------------------------------------------------------------------------------------------------
+% Basic configuration and packages
+% ------------------------------------------------------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
 \documentclass[a4paper,11pt]{article}
-% {rozmiar papieru, rozmiar fontu}[klasa dokumentu]
-\usepackage[MeX]{polski}  % Polonizacja LaTeXa, bez niej będzie pracował
-% w języku angielskim.
-\usepackage[utf8]{inputenc}  % Włączenie kodowania UTF-8, co daje dostęp
-% do polskich znaków.
-\usepackage{lmodern}  % Wprowadza fonty Latin Modern.
-\usepackage[T1]{fontenc}  % Potrzebne do używania fontów Latin Modern.
 
 
 
-% ------------------------------
-% Podstawowe pakiety (niezwiązane z ustawieniami języka)
-% ------------------------------
-\usepackage{microtype}  % Twierdzi, że poprawi rozmiar odstępów w tekście.
-% \usepackage{graphicx}  % Wprowadza bardzo potrzebne komendy do wstawiania
-% % grafiki.
-% \usepackage{verbatim}  % Poprawia otoczenie VERBATIME.
-% \usepackage{textcomp}  % Dodaje takie symbole jak stopnie Celsiusa,
-% wprowadzane bezpośrednio w tekście.
-\usepackage{vmargin}  % Pozwala na prostą kontrolę rozmiaru marginesów,
-% za pomocą komend poniżej. Rozmiar odstępów jest mierzony w calach.
-% ------------------------------
-% MARGINS
-% ------------------------------
-\setmarginsrb
-{ 0.7in} % left margin
-{ 0.6in} % top margin
-{ 0.7in} % right margin
-{ 0.8in} % bottom margin
-{  20pt} % head height
-{0.25in} % head sep
-{   9pt} % foot height
-{ 0.3in} % foot sep
+% ------------------------------------------------------
+% Packages not tied to particular normal language
+% ------------------------------------------------------
+% This package should improved spaces in the text
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
 
 
 
-% ------------------------------
-% Często używane pakiety
-% ------------------------------
-% \usepackage{csquotes}  % Pozwala w prosty sposób wstawiać cytaty do tekstu.
-\usepackage{xcolor}  % Pozwala używać kolorowych czcionek (zapewne dużo
-% więcej, ale ja nie potrafię nic o tym powiedzieć).
+% ------------------------------------------------------
+% Polonization of LaTeX document
+% ------------------------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
 
 
 
-
-
-% ---------------------------------------------------------------------
-% Dodatkowe ustawienia dla języka polskiego
-% ---------------------------------------------------------------------
-\renewcommand{\thesection}{\arabic{section}.}
-% Kropki po numerach rozdziału (polski zwyczaj topograficzny)
-\renewcommand{\thesubsection}{\thesection\arabic{subsection}}
-% Brak kropki po numerach podrozdziału
+% ------------------------------------------------------
+% Setting margins
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
 
 
 
-% ------------------------------
-% Pakiety napisane przez użytkownika.
-% Mają być w tym samym katalogu to ten plik .tex
-% ------------------------------
-\usepackage{latexgeneralcommands}
-
-
-
-% ------------------------------
-% Ustawienia różnych parametrów tekstu
-% ------------------------------
+% ------------------------------------------------------
+% Setting vertical spaces in the text
+% ------------------------------------------------------
+% Setting space between lines
 \renewcommand{\baselinestretch}{1.1}
 
-\renewcommand{\arraystretch}{1.4}  % Ustawienie szerokości odstępów między
-% wierszami w tabelach.
+% Setting space between lines in tables
+\renewcommand{\arraystretch}{1.4}
 
 
 
-% ------------------------------
-% Pakiet "hyperref"
-% Polecano by umieszczać go na końcu preambuły.
-% ------------------------------
-\usepackage{hyperref}  % Pozwala tworzyć hiperlinki i zamienia odwołania
-% do bibliografii na hiperlinki.
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{Logika-i-teoria-mnogości-Bibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------------------------------
+% Wonderful package PGF/TikZ
+% ------------------------------------------------------
+% \usepackage{tikz}
+
+% % Loading concrete TikZ libraries
+% \usetikzlibrary{decorations.markings}
+
+% % Package with TikZ pics
+% \usepackage{TikZPics}
+
+% % Package with additional TikZ styles
+% \usepackage{TikZStyles}
+
+
+
+
+
+% ------------------------------------------------------
+% Private packages
+% You need to put them in the same directory as .tex file
+% ------------------------------------------------------
+% Contains various command useful for working with a text
+\usepackage{latexgeneralcommands}
+% Contains definitions useful for working with mathematical text
+% \usepackage{mathcommands}
+
+
+
+
+
+% ------------------------------------------------------
+% Package "hyperref"
+% They advised to put it on the end of preambule
+% ------------------------------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
 
 
 
@@ -95,8 +159,8 @@
 
 
 
-% ---------------------------------------------------------------------
-% Tytuł i autor tekstu
+% ------------------------------------------------------------------------------------------------------------------
+% Title and author of the text
 \title{Kultura \\
   {\Large Błędy i~uwagi}}
 
@@ -104,7 +168,7 @@
 
 
 % \date{}
-% ---------------------------------------------------------------------
+% ------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -135,7 +199,7 @@
 % ######################################
 \section{Kultura od~XVII wieku do~dziś}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
@@ -150,13 +214,13 @@
 % ############################
 \subsection{Kultura XIX i~XX wieku}
 
-\vspace{\spaceThree}
+\VerSpaceTwo
 % ############################
 
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   E. Michael Jones \\
   \textit{Zdeprawowani moderniści},
   \cite{EMichaelJonesZdeprawowaniModernisci2014}}
@@ -240,20 +304,20 @@
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
-\StrWd{17}{10} \\
-\Jest  nieczystości pierworodnej córki jest ślepotą ducha. \\
-\Powin pierworodną córką nieczystości jest ślepota ducha. \\
-\StrWg{201}{8} \\
-\Jest  otorbił~się w~kokonie psychoanalizy samego siebie\ldots \\
-\Powin otorbił samego siebie w~kokonie psychoanalizy\ldots \\
-\StrWg{209}{20} \\
-\Jest  \textit{Gdyby potrafił być perwersyjny, byłby zdrowy, podobnie jak
+\StrWierszDol{17}{10} \\
+\Jest nieczystości pierworodnej córki jest ślepotą ducha. \\
+\PowinnoByc pierworodną córką nieczystości jest ślepota ducha. \\
+\StrWierszGora{201}{8} \\
+\Jest otorbił~się w~kokonie psychoanalizy samego siebie\ldots \\
+\PowinnoByc otorbił samego siebie w~kokonie psychoanalizy\ldots \\
+\StrWierszGora{209}{20} \\
+\Jest \textit{Gdyby potrafił być perwersyjny, byłby zdrowy, podobnie jak
   ojciec$^{ 202 }$}. \\
-\Powin „Gdyby potrafił być perwersyjny, byłby zdrowy,
+\PowinnoByc „Gdyby potrafił być perwersyjny, byłby zdrowy,
 podobnie jak ojciec”$^{ 202 }$. \\
 
 
@@ -274,7 +338,7 @@ podobnie jak ojciec”$^{ 202 }$. \\
 
 \section{Zachodni półwysep Eurazji}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
@@ -282,7 +346,7 @@ podobnie jak ojciec”$^{ 202 }$. \\
 % ############################
 \subsection{Zagadnienia ogólne}
 
-\vspace{\spaceThree}
+\VerSpaceThree
 % ############################
 
 
@@ -297,13 +361,13 @@ podobnie jak ojciec”$^{ 202 }$. \\
 % ############################
 \subsection{Kultura polska i~analizy tego kraju}
 
-\vspace{\spaceThree}
+\VerSpaceThree
 % ############################
 
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Maria Janion \\
   \textit{Niesamowita Słowiańszczyzna. Fantazmaty literatury},
   \cite{JanionNiesamowitaSlowianszczyzna2006} }
@@ -339,13 +403,13 @@ podobnie jak ojciec”$^{ 202 }$. \\
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
-\StrWd{72}{2} \\
-\Jest  Frankreich 1871, Deutschland 1918 \\
-\Powin \textit{Frankreich 1871}, \textit{Deutschland 1918} \\
+\StrWierszDol{72}{2} \\
+\Jest Frankreich 1871, Deutschland 1918 \\
+\PowinnoByc \textit{Frankreich 1871}, \textit{Deutschland 1918} \\
 
 
 
@@ -361,7 +425,7 @@ podobnie jak ojciec”$^{ 202 }$. \\
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Jan Sowa \\
   \textit{Fantomowe ciało króla. Peryferyjne zmagania z~nowoczesną formą},
   \cite{SowaFantomoweCialoKrola2011}}
@@ -376,18 +440,20 @@ podobnie jak ojciec”$^{ 202 }$. \\
 
 
 \noindent
-\StrWg{36}{15} Zdanie „jego aktywność ściśle wiąże~się
+\StrWierszGora{36}{15} Zdanie „jego aktywność ściśle wiąże~się
 związana ze społeczną\ldots”, powinno brzmieć „jego aktywność ściśle
 wiąże~się ze społeczną\ldots” lub „jego aktywność jest ściśle
 związana ze społeczną\ldots”. Choć na podstawie tekstu, nie można
 wybrać wersji zamierzonej przez autora, nie~jest to jednak problemem,
 bo obie przekazują tą samą treść.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWg{63}{5--9} Zawarty tu tekst, jest źle skonstruowany
+
+
+\StrWierszGora{63}{5--9} Zawarty tu tekst, jest źle skonstruowany
 gramatycznie.
 
 
@@ -419,7 +485,7 @@ gramatycznie.
 \end{center}
 
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ############################
 
 
@@ -434,13 +500,13 @@ gramatycznie.
 % ######################################
 \section{Kultura japońska}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Renata Iwicka \\
   \textit{Źródła klasycznej demonologii japońskiej},
   \cite{IwickaZrodlaKlasycznejDemonologiJaponskiej2017}}
@@ -454,21 +520,25 @@ gramatycznie.
 \vspace{0em}
 
 
-\start \Str{26} Zdjęcie na tej stronie powinno być lepiej opisane.
+\Str{26} Zdjęcie na tej stronie powinno być lepiej opisane.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{49} Użyto tu przydomka „Raiko” % Raik\={o}
+
+
+\Str{49} Użyto tu przydomka „Raiko” % Raik\={o}
 by odnieść~się do~postaci Minamoto no~Yorumitsu jednak~to, że~ten
 przydomek odnosi~się do~niego stanie~się jasne dopiero na~stronie~52.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWg{94}{14--15} Według tego co~znalazłem, shamisen
+
+
+\StrWierszGora{94}{14--15} Według tego co~znalazłem, shamisen
 to~podobny do~gitary trójstrunowy instrument\footnote{Jednak nie mogę
   gwarantować, że~jest to poprane wyjaśnienie tej nazwy.}. Myślę,
 że~czym on~jest powinni być tu~wyjaśnione, wszak nie każdy czytelnik
@@ -476,113 +546,139 @@ tej książki, jest takim znawcą kultury japońskiej, by~to wiedzieć.
 A~jak znaleźć wiarygodne źródło w~takiej specjalistycznej sprawie, też
 nie jest całkiem proste.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWd{95}{3} W~tej książce normalnie zapisuje~się nazwę tej
+
+
+\StrWierszDol{95}{3} W~tej książce normalnie zapisuje~się nazwę tej
 wyspy jako „Kyushu”. % Ky\={u}sh\={u}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWg{128}{7} To~zdanie jest sformułowane w~taki sposób,
+
+
+\StrWierszGora{128}{7} To~zdanie jest sformułowane w~taki sposób,
 że~nie rozumiem ani~jak położona jest oś~o~której mowa, ani jak
 nazywają~się leżące na~niej bramy.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWg{129}{12--16} Fragment ten jest napisany w~taki sposób,
+
+
+\StrWierszGora{129}{12--16} Fragment ten jest napisany w~taki sposób,
 że~nie byłem w~stanie zrozumieć z~niego, która pisownia nazwy bramy
 jest pierwotna, a~która powstała później. Z~reszty książki wynika,
 że~pierwotna nazwa to „Rajomon”, % Raj\={o}mon
 późniejsza zaś~to „Rashomon”. % Rash\={o}mon
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWd{139}{15} Aby~zachować płynność przytoczonej
+
+
+\StrWierszDol{139}{15} Aby~zachować płynność przytoczonej
 tu~opowieści, należałoby wcześniej wspomnieć, że~dwa bohaterowie
 dotarli do jakiejś rezydencji.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \textbf{Str. 148, przypis 441.} Jestem przekonany, że~ten przypis
+
+
+\textbf{Str. 148, przypis 441.} Jestem przekonany, że~ten przypis
 zamiast mówić jak obecnie, iż~\textit{Rituale Romanum} było używane prze
 niektórych egzorcystów od~1999, miał stwierdzać, że~był używany
 do~tego roku.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWd{169}{10} Całkiem możliwe, że~zamiast „wykryto dużo
+
+
+\StrWierszDol{169}{10} Całkiem możliwe, że~zamiast „wykryto dużo
 wcześniej” powinno pisać „wykryto bardzo wcześnie”.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWg{170}{} Nie jest dla mnie o~jaki z~wymienionych systemów
+
+
+\StrWierszGora{170}{} Nie jest dla mnie o~jaki z~wymienionych systemów
 jest mowa w~tym zdaniu. Czy chodzi o~\textit{shugendo}, % shugend\={o}
 czy też o~\textit{on'yodo}? % on'y\={o}d\={o}
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{181} Podtytuł rozdziału jest zapisany tu jako „\textit{Tabu
+
+
+\Str{181} Podtytuł rozdziału jest zapisany tu jako „\textit{Tabu
   w}~shinto”, % shint\={o}
 podczas gdy~w~spisie treści na~stronie~6 jako „Tabu
 w~\textit{shinto}”. % shint\={o}
 Warto byłoby ten zapis ujednolicić, choć może to~być sprzeczne
 z~konwencją zapisu tytułów odpowiednich części tekstu.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{187} Drugi paragraf jest nie najlepiej skonstruowany
+
+
+\Str{187} Drugi paragraf jest nie najlepiej skonstruowany
 pod~względem językowym. Jego sens miał być zapewne taki. Gdyby
 przyporządkowanie stron świata i~zwierząt różnym wojownikom bazowało
 na~ich osiągnięciach i~roli odgrywanej w~historii, to podział ten
 wyglądałby inaczej niż ten~który~się przyjął.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{215} Podpis pod tym rysunkiem powinien być obszerniejszy.
-
-\vspace{\spaceFour}
 
 
+\Str{215} Podpis pod tym rysunkiem powinien być obszerniejszy.
 
-\start \StrWd{222}{9} Może zamiast „użył znaku oznaczającego
+\VerSpaceFour
+
+
+
+
+
+\StrWierszDol{222}{9} Może zamiast „użył znaku oznaczającego
 kobietę” powinno być „stworzył znak oznaczający kobietę”?
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWd{222}{2} Według opisu na angielskiej Wikipedii, główny
+
+
+\StrWierszDol{222}{2} Według opisu na angielskiej Wikipedii, główny
 bohater mangi
 \href{https://en.wikipedia.org/wiki/XxxHolic}{\textit{xxxHOLiC}} jest
 nawiedzany przez istoty określane jako \textit{yokai}
 % y\={o}kai
 i~\textit{ayakashi}.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{223} W~książce tej zwykle zapisuje~się nazwę przywoływanej
+
+
+\Str{223} W~książce tej zwykle zapisuje~się nazwę przywoływanej
 tu~wyspy jako „Kyushu”, % Ky\={u}sh\={u}
 nie „Kiusiu”.
 
@@ -628,19 +724,19 @@ nie „Kiusiu”.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
-\StrWg{169}{19} \\
-\Jest  a~zwłaszcza \\
-\Powin których szczególnym uosobieniem w~tym kontekście jest \\
-\StrWg{189}{6} \\
-\Jest  zarysowaną postać \\
-\Powin zarysowanie tej postaci \\
-\StrWg{198}{10} \\
-\Jest  obejmują dokładnie tę~samą kategorię \\
-\Powin są objęte tą~samą kategorią \\
+\StrWierszGora{169}{19} \\
+\Jest a~zwłaszcza \\
+\PowinnoByc których szczególnym uosobieniem w~tym kontekście jest \\
+\StrWierszGora{189}{6} \\
+\Jest zarysowaną postać \\
+\PowinnoByc zarysowanie tej postaci \\
+\StrWierszGora{198}{10} \\
+\Jest obejmują dokładnie tę~samą kategorię \\
+\PowinnoByc są objęte tą~samą kategorią \\
 
 
 
@@ -679,13 +775,13 @@ nie „Kiusiu”.
 
 \section{Kino}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
 % ############################
-\Work{ % Redaktor i tytuł dzieła
+\section{ % Redaktor i tytuł dzieła
   Red. Piotr Kletowski \\
   „Europejskie kino gatunków”,
   \cite{RedKletowskiEuropejskieKinoGatunkow2016}}
@@ -695,7 +791,7 @@ nie „Kiusiu”.
 \CenterBoldFont{Uwagi}
 
 
-\start \StrWd{129}{1} W~filmie templariuszom nie wyłupiono oczu, lecz
+\StrWierszDol{129}{1} W~filmie templariuszom nie wyłupiono oczu, lecz
 stracono i~powieszono na drzewach. Tam dzikie ptaki wyjadły ich oczy.
 
 
@@ -725,13 +821,13 @@ stracono i~powieszono na drzewach. Tam dzikie ptaki wyjadły ich oczy.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 \noindent
-\StrWg{160}{12} \\
-\Jest  \textit{Za kilka dolarów więcej} Monco \\
-\Powin filmu \textit{Dobry, zły i~brzydki} Blondie \\
+\StrWierszGora{160}{12} \\
+\Jest \textit{Za kilka dolarów więcej} Monco \\
+\PowinnoByc filmu \textit{Dobry, zły i~brzydki} Blondie \\
 
 
 
@@ -747,7 +843,7 @@ stracono i~powieszono na drzewach. Tam dzikie ptaki wyjadły ich oczy.
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Tadeusz Szczepański \\
   „Zwierciadło Bergmana”, \cite{SzczepanskiZwierciadloBergmana2007} }
 
@@ -756,45 +852,53 @@ stracono i~powieszono na drzewach. Tam dzikie ptaki wyjadły ich oczy.
 \CenterBoldFont{Uwagi}
 
 
-\start \StrWg{131}{14} Postać pastora zagrał Gunnar Olsson.
+\StrWierszGora{131}{14} Postać pastora zagrał Gunnar Olsson.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWd{132}{17} Protestancki biskup Edvard Verg\'{e}rus
+
+
+\StrWierszDol{132}{17} Protestancki biskup Edvard Verg\'{e}rus
 to~jeden z~bohaterów filmu Bergmana \textit{Fanny i~Aleksander}.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{146} Ponieważ Monika nie tylko udało~się uciec
+
+
+\Str{146} Ponieważ Monika nie tylko udało~się uciec
 z~mieszczańskiej willi, bez żadnych konsekwencji dla jej dalszego
 życia, ale także zdobyć pieczeń po~którą tam poszła,
 uważam~że~nazwanie jej działań „sromotnie nieudanymi”, jest
 co~najmniej nietrafne.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{220} W~samym filmie \textit{Siódma pieczęć} nie znalazłem
+
+
+\Str{220} W~samym filmie \textit{Siódma pieczęć} nie znalazłem
 niczego co~podtrzymywałoby przedstawioną tu interpretację, że~końcowa
 scena z~rodziną kuglarzy rozgrywa~się w~czyjejś wyobraźni. Wręcz
 przeciwnie, cała narracja filmu przekonuje mnie, że~wydarzyło~się
 to~naprawdę.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{247} Na~tym zdjęciu bardzo ciężko dojrzeć, że~malowidło
+
+
+\Str{247} Na~tym zdjęciu bardzo ciężko dojrzeć, że~malowidło
 na~ścianie przedstawie Śmierć z~szachami. Na~szczęście na~następnej
 stronie jest wyjaśnione, iż~przedstawia ono Śmierć z~szachami
 pod~ręką, która prowadzi koński zaprzęg.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -826,7 +930,7 @@ pod~ręką, która prowadzi koński zaprzęg.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 
@@ -846,13 +950,13 @@ pod~ręką, która prowadzi koński zaprzęg.
 \newpage
 \section{Literatura}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Teodor Parnicki \\
   „Szkice literackie”, \cite{ParnickiSzkiceLiterackie1979}}
 
@@ -861,21 +965,23 @@ pod~ręką, która prowadzi koński zaprzęg.
 \CenterBoldFont{Uwagi do~konkretnych stron}
 
 
-\start \Str{88, 220} Na stronie 88 tytuł tej części to „O~humanizmie
+\Str{88, 220} Na stronie 88 tytuł tej części to „O~humanizmie
 katolicyzmu”, zaś na 220 to „O~humanizmie katolickim”. Sens tych dwóch
 tytułów jest oczywiście diametralnie różny. Wydaje się, że~poprawny to
 „O~humanizmie katolickim” bo takie słowa są użyte w~tytule szkicu
 o~Zofii Kossak.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{69} W~zaczynającym się tu szkicu „Aleksander Puszkin
+
+
+\Str{69} W~zaczynającym się tu szkicu „Aleksander Puszkin
 (w~stulecie śmierci)” wyróżniona jest część pierwsza i~trzecia, ale
 nigdzie nie ma drugiej.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
@@ -911,7 +1017,7 @@ nigdzie nie ma drugiej.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 
@@ -933,13 +1039,13 @@ nigdzie nie ma drugiej.
 
 \section{Malarstwo}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Władysław Strzemiński \\
   \textit{Teoria widzenia}, \cite{StrzeminskiTeoriaWidzenia2016}}
 
@@ -948,47 +1054,55 @@ nigdzie nie ma drugiej.
 \CenterBoldFont{Uwagi do~konkretnych stron}
 
 
-\start \StrWg{33}{13} Cudzysłów wystający na~lewy margines wygląd mało
+\StrWierszGora{33}{13} Cudzysłów wystający na~lewy margines wygląd mało
 estetycznie. W~przypadku dłuższych cytatów, których lewy margines jest
 większy, nie~jest to problem.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \StrWd{39}{19} Cudzysłów wystający na~lewy margines wygląd mało
+
+
+\StrWierszDol{39}{19} Cudzysłów wystający na~lewy margines wygląd mało
 estetycznie.
 
-\vspace{\spaceFour}
+\VerSpaceFour
 
 
 
-\start \Str{146} Ponieważ Monika nie tylko udało~się uciec
-z~mieszczańskiej willi, bez żadnych konsekwencji dla jej dalszego
-życia, ale także zdobyć pieczeń po~którą tam poszła,
-uważam~że~nazwanie jej działań ,,sromotnie nieudanymi'', jest
-co~najmniej nietrafne.
-
-\vspace{\spaceFour}
 
 
+% \Str{146} Ponieważ Monika nie tylko udało~się uciec
+% z~mieszczańskiej willi, bez żadnych konsekwencji dla jej dalszego
+% życia, ale także zdobyć pieczeń po~którą tam poszła,
+% uważam~że~nazwanie jej działań ,,sromotnie nieudanymi'', jest
+% co~najmniej nietrafne.
 
-\start \Str{220} W~samym filmie \textit{Siódma pieczęć} nie znalazłem
-niczego co~podtrzymywałoby przedstawioną tu interpretację,
-że~końcowa scena z~rodziną kuglarzy rozgrywa~się w~czyjejś
-wyobraźni. Wręcz przeciwnie, cała narracja filmu przekonuje mnie,
-że~wydarzyło~się to~naprawdę.
-
-\vspace{\spaceFour}
+% \VerSpaceFour
 
 
 
-\start \Str{247} Na~tym zdjęciu bardzo ciężko dojrzeć, że~malowidło
-na~ścianie przedstawie Śmierć z~szachami. Na~szczęście na~następnej
-stronie jest wyjaśnione, iż~przedstawia ono Śmierć z~szachami
-pod~ręką, która prowadzi koński zaprzęg.
 
-\vspace{\spaceFour}
+
+% \start \Str{220} W~samym filmie \textit{Siódma pieczęć} nie znalazłem
+% niczego co~podtrzymywałoby przedstawioną tu interpretację,
+% że~końcowa scena z~rodziną kuglarzy rozgrywa~się w~czyjejś
+% wyobraźni. Wręcz przeciwnie, cała narracja filmu przekonuje mnie,
+% że~wydarzyło~się to~naprawdę.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% \Str{247} Na~tym zdjęciu bardzo ciężko dojrzeć, że~malowidło
+% na~ścianie przedstawie Śmierć z~szachami. Na~szczęście na~następnej
+% stronie jest wyjaśnione, iż~przedstawia ono Śmierć z~szachami
+% pod~ręką, która prowadzi koński zaprzęg.
+
+% \vspace{\spaceFour}
 
 
 
@@ -1020,7 +1134,7 @@ pod~ręką, która prowadzi koński zaprzęg.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 
@@ -1040,13 +1154,13 @@ pod~ręką, która prowadzi koński zaprzęg.
 
 \section{Muzyka}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 % ######################################
 
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Franciszek Wesołowski \\
   \textit{Zasady muzyki}, \cite{WesolowskiZasadyMuzyki2017}}
 
@@ -1080,7 +1194,7 @@ pod~ręką, która prowadzi koński zaprzęg.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 
@@ -1096,7 +1210,7 @@ pod~ręką, która prowadzi koński zaprzęg.
 
 
 % ############################
-\Work{ % Autor i tytuł dzieła
+\section{ % Autor i tytuł dzieła
   Franciszek Wesołowski \\
   \textit{Zasady muzyki},
   \cite{WesolowskiZasadyMuzyki2021}}
@@ -1131,7 +1245,7 @@ pod~ręką, która prowadzi koński zaprzęg.
 
 \end{center}
 
-\vspace{\spaceTwo}
+\VerSpaceTwo
 
 
 
@@ -1148,18 +1262,15 @@ pod~ręką, która prowadzi koński zaprzęg.
 
 % ####################################################################
 % ####################################################################
-% Bibliografia
+% Bibliography
 
-\bibliographystyle{plalpha}
-
-\bibliography{AudiovisualArtsBooks,CivilizationCultureBooks,
-  LiteraryStudiesBooks,MusicBooks,VariousFieldsBooks,VisualArtsBooks}{}
+\printbibliography
 
 
 
 
 
 % ############################
+% End of the document
 
-% Koniec dokumentu
 \end{document}
