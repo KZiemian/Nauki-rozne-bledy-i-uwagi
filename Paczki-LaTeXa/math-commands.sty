@@ -1,5 +1,5 @@
 % ####################################################################
-% Commands for writing mathematical formulas in LaTeX
+% Commands and settings for writing mathematical formulas in LaTeX
 
 % They probably won't work with some packages from AMS, like "amsmath",
 % "amssymb", etc.
@@ -10,8 +10,6 @@
 
 % ######################################
 % Algebraic symbols
-
-% \newcommand{\mod}{\mathrm{mod}}
 
 \newcommand{\UnitAlg}{\mathbf{1}}
 % ######################################
@@ -72,6 +70,10 @@
 
 \DeclareMathOperator{\Arg}{Arg}
 
+\DeclareMathOperator{\artanh}{artanh}
+
+\DeclareMathOperator{\arcoth}{arcoth}
+
 \DeclareMathOperator{\Diam}{Diam}
 
 \DeclareMathOperator{\Imag}{\mathfrak{Im}}
@@ -84,16 +86,12 @@
 
 \DeclareMathOperator{\Real}{\mathfrak{Re}}
 
+\DeclareMathOperator{\Res}{Res}
+
 \DeclareMathOperator{\sgn}{sgn}
 
 \DeclareMathOperator{\Tr}{Tr}
 
-
-
-% ##################
-% Hyperbolic functions
-\DeclareMathOperator{\artanh}{artanh}
-\DeclareMathOperator{\arcoth}{arcoth}
 
 
 
@@ -115,7 +113,7 @@
 % ##################
 % Greek letters
 
-
+% ##################
 
 
 
@@ -149,6 +147,7 @@
 \newcommand{\Vbb}{\mathbb{V}}
 
 \newcommand{\Zbb}{\mathbb{Z}}
+% ##################
 
 
 
@@ -164,6 +163,7 @@
 \newcommand{\Pbold}{\mathbf{P}}
 
 \newcommand{\Tbold}{\mathbf{T}}
+% ##################
 
 
 
@@ -221,6 +221,7 @@
 \newcommand{\Xcal}{\mathcal{X}}
 
 \newcommand{\Zcal}{\mathcal{Z}}
+% ##################
 
 
 
@@ -290,6 +291,18 @@
 
 
 % ######################################
+% Mathematical analysis
+
+% Symbol straight "d" for writing derivatives and integration symbols.
+% This convention is used in some works.
+\newcommand{\dStraight}{\text{d}}
+% ######################################
+
+
+
+
+
+% ######################################
 % Sets
 
 % Better looking empty set symbol
@@ -300,6 +313,8 @@
 
 % ##################
 % Symbols for operations that creates sets
+
+\DeclareMathOperator{\image}{image}
 
 \DeclareMathOperator{\Ker}{Ker}
 

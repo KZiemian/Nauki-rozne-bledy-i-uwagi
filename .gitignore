@@ -4,7 +4,10 @@
 # ignore auxiliary files created by pdfLaTeX
 *.aux
 *.log
+*.nav
 *.out
+*.snm
+*.toc
 
 # ignore auxiliary files created by Biber
 *.bcf
@@ -14,11 +17,17 @@
 *.bbl
 *.blg
 
-# ignore Emacs backup files
-*~
-
 # ignore Emacs auxiliary files
+*~
 .#*
 
-# ignore auxiliary (Emacs?) catalogs
+# ignore Emacs auxiliary directories
 auto/
+
+
+
+
+
+# ignore specific files
+
+# ingore specific directories
