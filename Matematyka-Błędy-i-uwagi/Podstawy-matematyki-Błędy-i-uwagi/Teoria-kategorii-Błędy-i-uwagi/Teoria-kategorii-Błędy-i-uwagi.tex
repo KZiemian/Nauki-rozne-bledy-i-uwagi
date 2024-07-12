@@ -117,27 +117,25 @@ eprint=true,
 % ------------------------------------------------------
 \usepackage{tikz}
 
-% Loading concrete TikZ libraries
-\usetikzlibrary{decorations.markings}
+% Loding TikZ libraries
+% \usetikzlibrary{decorations.markings}
 
-% Package with TikZ pics
-\usepackage{TikZPics}
-
-% Package with additional TikZ styles
-\usepackage{TikZStyles}
+% Styles for drawing diagrams
+\usepackage{PGF-TikZ-Diagram-styles}
 
 
 
 
 
 % ------------------------------------------------------
-% Private packages
+% Local packages
 % You need to put them in the same directory as .tex file
 % ------------------------------------------------------
-% Contains various command useful for working with a text
-\usepackage{latexgeneralcommands}
-% Contains definitions useful for working with mathematical text
-\usepackage{mathcommands}
+% Package containing various command useful for working with a text
+\usepackage{general-commands}
+% Package containing commands and other code useful for working with
+% mathematical text
+\usepackage{math-commands}
 
 
 
@@ -196,11 +194,12 @@ eprint=true,
 
 
 
-% ############################
+% ######################################
 \section{ % Autorzy i tytuł dzieła
   Zbigniew Semadeni, Antoni Wiweger \\
   \textit{Wstęp do~teorii kategorii i~funktorów},
   \cite{SemadeniWiwegerWstepDoTeoriiKategoriiETC1972}}
+% ######################################
 
 \vspace{0em}
 
@@ -250,6 +249,7 @@ ją w~danej sytuacji stosować zostanie to w~jawny sposób zaznaczone.
 
   \label{fig:Semadeni-Wiweger-Wstep-ETC-01}
 
+
   \begin{tikzpicture}
 
     \path (0,0) -- (0,1);
@@ -260,7 +260,7 @@ ją w~danej sytuacji stosować zostanie to w~jawny sposób zaznaczone.
 
     \node (B 1) at (1.75,0) {$B$};
 
-    \draw[diagram arrow 1] (A 1) -- (B 1);
+    \draw[thin diagram arrow] (A 1) -- (B 1);
 
     \node at (0.875,-0.5) {$\alpha$};
 
@@ -268,7 +268,7 @@ ją w~danej sytuacji stosować zostanie to w~jawny sposób zaznaczone.
 
     \node (C 1) at (3.5,0) {$C$};
 
-    \draw[diagram arrow 1] (B 1) -- (C 1);
+    \draw[thin diagram arrow] (B 1) -- (C 1);
 
     \node at (2.625,-0.5) {$\beta$};
 
@@ -276,7 +276,7 @@ ją w~danej sytuacji stosować zostanie to w~jawny sposób zaznaczone.
 
     \node (D 1) at (5.25,0) {$D$};
 
-    \draw[diagram arrow 1] (C 1) -- (D 1);
+    \draw[thin diagram arrow] (C 1) -- (D 1);
 
     \node at (4.375,-0.5) {$\gamma$};
 
@@ -294,7 +294,7 @@ ją w~danej sytuacji stosować zostanie to w~jawny sposób zaznaczone.
 
       \node (B 2) at (1.75,0) {$B$};
 
-      \draw[diagram arrow 1] (B 2) -- (A 2);
+      \draw[thin diagram arrow] (B 2) -- (A 2);
 
       \node at (0.875,-0.5) {$\alpha$};
 
@@ -302,7 +302,7 @@ ją w~danej sytuacji stosować zostanie to w~jawny sposób zaznaczone.
 
       \node (C 2) at (3.5,0) {$C$};
 
-      \draw[diagram arrow 1] (C 2) -- (B 2);
+      \draw[thin diagram arrow] (C 2) -- (B 2);
 
       \node at (2.625,-0.5) {$\beta$};
 
@@ -310,7 +310,7 @@ ją w~danej sytuacji stosować zostanie to w~jawny sposób zaznaczone.
 
       \node (D 2) at (5.25,0) {$D$};
 
-      \draw[diagram arrow 1] (D 2) -- (C 2);
+      \draw[thin diagram arrow] (D 2) -- (C 2);
 
       \node at (4.375,-0.5) {$\gamma$};
 
@@ -323,6 +323,7 @@ ją w~danej sytuacji stosować zostanie to w~jawny sposób zaznaczone.
   \end{tikzpicture}
 
   \caption{Przykłady zapisu składania odwzorowań w~notacji strzałkowej.}
+
 
 \end{figure}
 % ##################

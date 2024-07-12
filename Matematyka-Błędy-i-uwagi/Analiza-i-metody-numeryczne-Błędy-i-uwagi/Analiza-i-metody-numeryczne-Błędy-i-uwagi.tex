@@ -113,13 +113,14 @@ eprint=true,
 
 
 % ------------------------------------------------------
-% Private packages
+% Local packages
 % You need to put them in the same directory as .tex file
 % ------------------------------------------------------
-% Contains various command useful for working with a text
-\usepackage{latexgeneralcommands}
-% Contains definitions useful for working with mathematical text
-\usepackage{mathcommands}
+% Package containing various command useful for working with a text
+\usepackage{general-commands}
+% Package containing commands and other code useful for working with
+% mathematical text
+\usepackage{math-commands}
 
 
 
@@ -212,7 +213,7 @@ eprint=true,
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    14  & 19 & & $x - x^{ ( d ) } |$ & $\abs{ x - x^{ ( d ) } }$ \\
+    14  & 19 & & $x - x^{ ( d ) } |$ & $\absOne{ x - x^{ ( d ) } }$ \\
     14  & 20 & & $x( ^{ -3 } )$ & $x^{ ( -3 ) }$ \\
     14  & 20 & & $x( ^{ -7 } )$ & $x^{ ( -7 ) }$ \\
     % & & & & \\

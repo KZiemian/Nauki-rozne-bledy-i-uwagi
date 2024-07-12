@@ -1,0 +1,24 @@
+% ####################################################################
+% PGF/TikZ's pics for drawning charts
+% ####################################################################
+\ProvidesPackage{PGF-TikZ-Chart-pics}
+
+
+% ############################
+% Pics for drawing ticks on the coordinate axises
+
+\tikzset{
+  % Basic tick with thin width.
+  tick x axis thin/.pic = {
+    \draw[line width=0.4] (0,-0.125) -- (0,0.125);
+  },
+  % Shorter version of tick with thin width.
+  tick x axis thin 1/.pic = {
+    \draw[line width=0.4] (0,-0.09) -- (0,0.09);
+  },
+  % Longer version of tick with thin width.
+  tick x axis thin 2/.pic = {
+    \draw[line width=0.4] (0,-0.2) -- (0,0.2);
+  },
+}
+% ############################

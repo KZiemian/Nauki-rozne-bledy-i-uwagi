@@ -1,0 +1,950 @@
+% ------------------------------------------------------------------------------------------------------------------
+% Basic configuration and packages
+% ------------------------------------------------------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
+\documentclass[a4paper,11pt]{article}
+
+
+
+% ------------------------------------------------------
+% Packages not tied to particular normal language
+% ------------------------------------------------------
+% This package should improved spaces in the text
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
+
+
+
+% ------------------------------------------------------
+% Polonization of LaTeX document
+% ------------------------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
+
+
+
+% ------------------------------------------------------
+% Setting margins
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
+
+
+
+% ------------------------------------------------------
+% Setting vertical spaces in the text
+% ------------------------------------------------------
+% Setting space between lines
+\renewcommand{\baselinestretch}{1.1}
+
+% Setting space between lines in tables
+\renewcommand{\arraystretch}{1.4}
+
+
+
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{Logika-i-teoria-mnogości-Bibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------------------------------
+% Local packages
+% You need to put them in the same directory as .tex file
+% ------------------------------------------------------
+% Package containing various command useful for working with a text
+\usepackage{general-commands}
+% Package containing commands and other code useful for working with
+% mathematical text
+% \usepackage{math-commands}
+
+
+
+
+
+% ------------------------------------------------------
+% Package "hyperref"
+% They advised to put it on the end of preambule
+% ------------------------------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
+
+
+
+
+
+
+
+
+
+
+% ------------------------------------------------------------------------------------------------------------------
+% Title and author of the text
+\title{Ekonomia \\
+  {\Large Błędy i~uwagi}}
+
+\author{Kamil Ziemian}
+
+
+% \date{}
+% ------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% Początek dokumentu
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+% ######################################
+\section{Bardzo wpływowe dzieła}
+
+\VerSpaceTwo
+% ######################################
+
+
+
+% ############################
+\section{ % Autor i tytuł dzieła
+  Adam Smith \\
+  \textit{Badania nad naturą i~przyczynami bogactw narodów. Tom~I},
+  \cite{} }
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    VII & & 1 & (1859) & (1759) \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\VerSpaceTwo
+
+% ############################
+
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{Austriacka szkoła ekonomii}
+
+\VerSpaceTwo
+% ######################################
+
+
+
+% ############################
+\section{ % Autor i tytuł dzieła
+  J\"{o}rg Guido H\"{u}lsmann \\
+  \textit{Etyka produkcji pieniądza},
+  \cite{HulsmannEtykaProdukcjiPieniadza2014}}
+
+\vspace{0em}
+
+
+% ##################
+\CenterBoldFont{Uwagi do~konkretnych stron}
+
+\vspace{0em}
+
+
+\noindent
+\Str{II} Logo firmy NowePrzetargi.pl zostało wydrukowane w słabej jakości.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszDol{XXII}{9--10} Według tego co jest tu napisane, dzieło Habigera na
+temat okresu 1891--1991 ukazało~się w~roku 1990. To zapewne wynik błędu
+drukarskiego.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszGora{4}{9--10} Może wydawać~się dziwne, że w tym kontekście
+wymienione jest
+ósme przykazanie\footnote{Używany jest tu katolicki podział Dekalogu.}. Może
+to być błąd, możliwe też, że~H\"{u}lsmann miał tu na myśli związek jak ma to
+przykazanie z~kwestią produkcji pieniądza, co omówił na stronie 23
+niniejszej książki
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszGora{57}{6} W~tej linii pojawia~się anglicyzm „run na bank”. Jak
+jest
+wyjaśnione dalej w~tym samym paragrafie pochodzi to od angielskiego „bank
+run”. Wydaje mi~się, że~znacznie lepszym terminem byłby „nalot na bank” albo
+„najazd na bank”.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\textbf{Tylna okładka, wiersz 3 od dołu.} Odstępy w tym wierszu są
+zbyt duże.
+
+
+
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    XXIV  & & 20 & pieniędzy & pieniędzy” \\
+    XXIV  & & 20 & s.~160)”. & s.~160). \\
+    XXVII & & 10 & Juan de Mariana: & \textit{Juan de Mariana:} \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  % \begin{tabular}{|c|c|c|c|c|}
+  %   \hline
+  %   & \multicolumn{2}{c|}{} & & \\
+  %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+  %   & Powinno być \\ \cline{2-3}
+  %   & Od góry & Od dołu & & \\
+  %   \hline
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   \hline
+  % \end{tabular}
+
+
+
+
+
+  % \begin{tabular}{|c|c|c|c|c|}
+  %   \hline
+  %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+  %   & Powinno być \\ \cline{2-3}
+  %   & Od góry & Od dołu & & \\
+  %   \hline
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   \hline
+  % \end{tabular}
+
+\end{center}
+
+\VerSpaceTwo
+
+
+\noindent
+\StrWierszDol{13}{17} \\
+\Jest jako naturalni przywódcy \\
+\PowinnoByc jako będący naturalnymi przywódcami \\
+\StrWierszDol{58}{24}
+\Jest ofiar pokusy zarządców magazynów pieniędzy i~bankierów. \\
+\PowinnoByc zarządców magazynów pieniędzy i~bankierów, którzy stali~się
+ofiarami rządy zysku. \\
+\StrWierszGora{59}{6} \\
+\Jest depozytów otrzymanych w~pożyczkach \\
+\PowinnoByc przetrzymywanych depozytów w~pożyczki \\
+% \StrWd{11}{5} \\
+% \Jest   \\
+% \Powin  \\
+% \StrWd{11}{1} \\
+% \Jest   \\
+% \Powin  \\
+% \StrWg{12}{11} \\
+% \Jest   \\
+% \Powin  \\
+% \StrWd{12}{18} \\
+% \Jest   \\
+% \Powin  \\
+% \StrWd{12}{8} \\
+% \Jest  (\textit{Froce Ouvri\'{e}re} ) \\
+% \Powin (\texit{Froce Ouvri\'{e}re} --~Główna Konfederacja Pracy
+% --~Siły
+% Pracy) \\
+% \StrWg{13}{10} \\
+% \Jest   \\
+% \Powin  \\
+% \StrWd{13}{4} \\
+% \Jest   \\
+% \Powin  \\
+% \StrWg{15}{1} \\
+% \Jest  Polish American Congress Charitable Foundation \\
+% \Powin \textit{Polish American Congress Charitable Foundation} \\
+% \StrWg{15}{3} \\
+% \Jest  Polish-American Enterprise Fund \\
+% \Powin \textit{Polish-American Enterprise Fund} \\
+% \StrWg{15}{10} \\
+% \Jest  Postal, Telegraph and~Telephone International \\
+% \Powin \textit{Postal, Telegraph and~Telephone International} \\
+% \StrWg{43}{2} \\
+% \Jest  \textit{Univeristy~of Illinois at~Urbana Champaign, 1998} \\
+% \Powin Univeristy~of Illinois at~Urbana-Champaign, 1998 \\
+
+
+
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ############################
+\section{ % Autor i tytuł dzieła
+  Murray N. Rothbard \\
+  \textit{Złoto, banki, ludzie. Krótka historia pieniądza},
+  \cite{RothbardZlotoBankiLudzie2016}}
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+
+
+
+
+% ##################
+\CenterBoldFont{Uwagi do~konkretnych stron}
+
+
+% \vspace{\spaceFour}
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    157 & 11 & & poprawianym[...] & poprawianym [...] \\
+    159 & & 16 & Busha & H.W. Busha \\
+    159 & &  5 & www.cato.org & www.cato.org. \\
+    % & & & & \\
+    165 & &  6 & 19-29 & 19--29 \\
+    165 & &  1 & (1723-1790) & \textit{(1723--1790)} \\
+    166 & &  1 & 74-80 & 74--80 \\
+    169 & &  3 & Bohm-Bawerka & B\"{o}hm-Bawerka \\
+    170 & &  2 & 1929-1933 & 1929--1933 \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  % \begin{tabular}{|c|c|c|c|c|}
+  %   \hline
+  %   & \multicolumn{2}{c|}{} & & \\
+  %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+  %   & Powinno być \\ \cline{2-3}
+  %   & Od góry & Od dołu & & \\
+  %   \hline
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   \hline
+  % \end{tabular}
+
+
+
+
+
+  % \begin{tabular}{|c|c|c|c|c|}
+  %   \hline
+  %   & \multicolumn{2}{c|}{} & & \\
+  %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+  %   & Powinno być \\ \cline{2-3}
+  %   & Od góry & Od dołu & & \\
+  %   \hline
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   %   & & & & \\
+  %   \hline
+  % \end{tabular}
+
+\end{center}
+
+\VerSpaceTwo
+
+
+\noindent
+\StrWierszDol{156}{2} \\
+\Jest Prekursorzy Nowej Lewicy. Studia z~myśli społecznej XIX i~XX wieku \\
+\PowinnoByc \textit{Prekursorzy Nowej Lewicy. Studia z~myśli społecznej XIX
+  i~XX wieku} \\
+
+
+% \Jest  Amerian Seafarers Union \\
+% \Powin \textit{Amerian Seafarers Union} \\
+
+
+
+% \StrWd{11}{5} \\
+% \Jest  Council~of Economic Advisers \\
+% \Powin \textit{Council~of Economic Advisers} \\
+% \StrWd{11}{1} \\
+% \Jest  Council on~Foregin Relations \\
+% \Powin \textit{Council on~Foregin Relations} \\
+% \StrWg{12}{11} \\
+% \Jest  \textit{Congress}) --~Kanadyjski Kongres Związków Zawodowych \\
+% \Powin \textit{Congress} --~Kanadyjski Kongres Związków Zawodowych) \\
+% \StrWd{12}{18} \\
+% \Jest  Emergency Committe for~Aid to~Poland \\
+% \Powin \textit{Emergency Committe for~Aid to~Poland} \\
+% \StrWd{12}{8} \\
+% \Jest  (\textit{Froce Ouvri\'{e}re} ) \\
+% \Powin (\textit{Froce Ouvri\'{e}re} --~Główna Konfederacja Pracy
+% --~Siły Pracy) \\
+% \StrWg{13}{10} \\
+% \Jest Generalized System~of Preferences \\
+% \Powin  \textit{Generalized System~of Preferences} \\
+% \StrWd{13}{4} \\
+% \Jest
+% \Powin
+% Katolickich Uniwersytetu Leuven \\
+% \StrWg{15}{1} \\
+% \Jest
+% \Powin
+% \StrWg{15}{3} \\
+% \Jest
+% \Powin
+% \StrWg{15}{10} \\
+% \Jest
+% \Powin
+% \StrWg{43}{2} \\
+% \Jest
+% \Powin
+
+
+% ############################
+
+
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\newpage
+
+\section{Historia ekonomii}
+
+\VerSpaceTwo
+% ######################################
+
+
+
+
+% ############################
+\section{ % Autor i tytuł dzieła
+  Red. Randall G. Holcombe \\
+  \textit{15 wielkich austriackiej szkoły ekonomii},
+  \cite{}}
+
+\vspace{0em}
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+\vspace{0em}
+
+
+Gdzieś powinna być starsza wersja uwag do tej książki.????
+
+\VerSpaceFour
+
+
+
+
+
+
+
+
+% ##################
+\CenterBoldFont{Uwagi do~konkretnych stron}
+
+
+\noindent
+\StrWierszDol{14}{2--3} Należy zwrócić uwagę na to, że~według informacji
+które można znaleźć na~stronie 209 niniejszej książki, wspomniany tu tekst
+Murray’a N.
+Rothbarda \textit{Ludwig von~Mises: Scholar, Creator, Hero}
+w~przeredagowanej wersji został do niej włączony pod tytułem \textit{Ludwig
+  von~Mises. Przywódca szkoły austriackiej}.
+
+% \vspace{\spaceFour}
+
+
+
+
+
+
+
+% ##################
+\newpage
+
+\CenterBoldFont{Błędy}
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+    & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    10  & &  4 & należące & nie należące \\
+    12  & &  3 & Rothbard [w:] & Rothbard [w:] \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    %   & & & & \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  %% \begin{tabular}{|c|c|c|c|c|}
+  %%   \hline
+  %%   & \multicolumn{2}{c|}{} & & \\
+  %%   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+  %%   & Powinno być \\ \cline{2-3}
+  %%   & Od góry & Od dołu & & \\
+  %%   \hline
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   %   & & & & \\
+  %%   \hline
+  %% \end{tabular}
+
+\end{center}
+
+\VerSpaceTwo
+
+
+\noindent
+% \Jest  Amerian Seafarers Union \\
+% \Powin \textit{Amerian Seafarers Union} \\
+
+
+
+% \StrWd{11}{5} \\
+% \Jest  Council~of Economic Advisers \\
+% \Powin \textit{Council~of Economic Advisers} \\
+% \StrWd{11}{1} \\
+% \Jest  Council on~Foregin Relations \\
+% \Powin \textit{Council on~Foregin Relations} \\
+% \StrWg{12}{11} \\
+% \Jest  \textit{Congress}) --~Kanadyjski Kongres Związków Zawodowych \\
+% \Powin \textit{Congress} --~Kanadyjski Kongres Związków Zawodowych) \\
+% \StrWd{12}{18} \\
+% \Jest  Emergency Committe for~Aid to~Poland \\
+% \Powin \textit{Emergency Committe for~Aid to~Poland} \\
+% \StrWd{12}{8} \\
+% \Jest  (\textit{Froce Ouvri\'{e}re} ) \\
+% \Powin (\textit{Froce Ouvri\'{e}re} --~Główna Konfederacja Pracy
+% --~Siły Pracy) \\
+% \StrWg{13}{10} \\
+% \Jest Generalized System~of Preferences \\
+% \Powin  \textit{Generalized System~of Preferences} \\
+% \StrWd{13}{4} \\
+% \Jest
+% \Powin
+% Katolickich Uniwersytetu Leuven \\
+% \StrWg{15}{1} \\
+% \Jest
+% \Powin
+% \StrWg{15}{3} \\
+% \Jest
+% \Powin
+% \StrWg{15}{10} \\
+% \Jest
+% \Powin
+% \StrWg{43}{2} \\
+% \Jest
+% \Powin
+
+
+% ############################
+
+
+
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+% Bibliography
+
+\printbibliography
+
+
+
+
+
+% ############################
+% End of the document
+
+\end{document}
