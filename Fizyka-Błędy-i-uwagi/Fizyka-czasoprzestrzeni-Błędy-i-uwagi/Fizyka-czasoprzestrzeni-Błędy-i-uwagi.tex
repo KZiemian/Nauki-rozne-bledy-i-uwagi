@@ -120,13 +120,14 @@ eprint=true,
 
 
 % ------------------------------------------------------
-% Private packages
+% Local packages
 % You need to put them in the same directory as .tex file
 % ------------------------------------------------------
-% Contains various command useful for working with a text
-\usepackage{latexgeneralcommands}
-% Contains definitions useful for working with mathematical text
-\usepackage{mathcommands}
+% Package containing various command useful for working with a text
+\usepackage{general-commands}
+% Package containing commands and other code useful for working with
+% mathematical text
+\usepackage{math-commands}
 
 
 
@@ -294,12 +295,14 @@ Jakieś błędy są na stronach 476, 482, 482, 482, 483
     & Od góry & Od dołu & & \\
     \hline
     % & & & & \\
-    24 & 2 & & w $\Ocal$ & w $\overline{ \Ocal }$ \\
-    24 & 9 & & widzenia $\Ocal$ & widzenia $\overline{ \Ocal }$ \\
-    41 & & 10 & zagara & zegara \\
-    82 & & 1 & $( a \quad b \quad \ldots )$ & $( a \: b \: \ldots )$ \\
-    83 & 2 & & $( a \quad b \quad \ldots )$ & $( a \: b \: \ldots )$ \\
-    143 & & 4 & $B\indices{^\mu_{ v ; \, \beta }}$ & $B\indices{ ^\mu_{ \nu, \, \beta } }$ \\
+    \hphantom{0}24 & \hphantom{0}2 & & w $\Ocal$ & w $\overline{ \Ocal }$ \\
+    \hphantom{0}24 & \hphantom{0}9 & & widzenia $\Ocal$
+    & widzenia $\overline{ \Ocal }$ \\
+    \hphantom{0}41 & & 10 & zagara & zegara \\
+    \hphantom{0}82 & & \hphantom{0}1 & $( a \quad b \quad \ldots )$ & $( a \: b \: \ldots )$ \\
+    \hphantom{0}83 & \hphantom{0}2 & & $( a \quad b \quad \ldots )$ & $( a \: b \: \ldots )$ \\
+    143 & & \hphantom{0}4 & $B\indices{^\mu_{ v ; \, \beta }}$
+    & $B\indices{ ^\mu_{ \nu, \, \beta } }$ \\
     % & & & & \\
     \hline
   \end{tabular}

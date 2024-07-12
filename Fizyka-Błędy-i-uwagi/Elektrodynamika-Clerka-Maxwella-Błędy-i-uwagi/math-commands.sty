@@ -1,10 +1,10 @@
 % ####################################################################
-% Commands for writing mathematical text
-%
-% They probably won't work with some packages from AMS, like ``amsmath'',
-% ``amssymb'', etc.
+% Commands and settings for writing mathematical formulas in LaTeX
+
+% They probably won't work with some packages from AMS, like "amsmath",
+% "amssymb", etc.
+\ProvidesPackage{math-commands}
 % ####################################################################
-\ProvidesPackage{mathcommands}
 
 
 
@@ -12,6 +12,18 @@
 % Algebraic symbols
 
 \newcommand{\UnitAlg}{\mathbf{1}}
+% ######################################
+
+
+
+% ######################################
+% Cathegory theory notation
+
+\newcommand{\Aut}{\mathrm{Aut}}
+
+\newcommand{\End}{\mathrm{End}}
+
+\newcommand{\Hom}{\mathrm{Hom}}
 % ######################################
 
 
@@ -58,6 +70,10 @@
 
 \DeclareMathOperator{\Arg}{Arg}
 
+\DeclareMathOperator{\artanh}{artanh}
+
+\DeclareMathOperator{\arcoth}{arcoth}
+
 \DeclareMathOperator{\Diam}{Diam}
 
 \DeclareMathOperator{\Imag}{\mathfrak{Im}}
@@ -70,16 +86,12 @@
 
 \DeclareMathOperator{\Real}{\mathfrak{Re}}
 
+\DeclareMathOperator{\Res}{Res}
+
 \DeclareMathOperator{\sgn}{sgn}
 
 \DeclareMathOperator{\Tr}{Tr}
 
-
-
-% ##################
-% Hyperbolic functions
-\DeclareMathOperator{\artanh}{artanh}
-\DeclareMathOperator{\arcoth}{arcoth}
 
 
 
@@ -101,7 +113,7 @@
 % ##################
 % Greek letters
 
-
+% ##################
 
 
 
@@ -135,6 +147,7 @@
 \newcommand{\Vbb}{\mathbb{V}}
 
 \newcommand{\Zbb}{\mathbb{Z}}
+% ##################
 
 
 
@@ -150,6 +163,7 @@
 \newcommand{\Pbold}{\mathbf{P}}
 
 \newcommand{\Tbold}{\mathbf{T}}
+% ##################
 
 
 
@@ -207,6 +221,7 @@
 \newcommand{\Xcal}{\mathcal{X}}
 
 \newcommand{\Zcal}{\mathcal{Z}}
+% ##################
 
 
 
@@ -237,13 +252,18 @@
 
 
 % ######################################
-% Matrix
+% Linear algebra
+
+
+% ##################
+% Matrices
 
 \newcommand{\matUnit}{I}
 
 
+
 % ##################
-% Spaces of matricies
+% Spaces of matrices
 
 \newcommand{\GL}{\mathrm{GL}}
 
@@ -261,6 +281,21 @@
 \newcommand{\spFrak}{\mathfrak{sp}}
 
 \newcommand{\SU}{\mathrm{SU}}
+
+
+
+% ######################################
+
+
+
+
+
+% ######################################
+% Mathematical analysis
+
+% Symbol straight "d" for writing derivatives and integration symbols.
+% This convention is used in some works.
+\newcommand{\dStraight}{\text{d}}
 % ######################################
 
 
@@ -278,6 +313,8 @@
 
 % ##################
 % Symbols for operations that creates sets
+
+\DeclareMathOperator{\image}{image}
 
 \DeclareMathOperator{\Ker}{Ker}
 

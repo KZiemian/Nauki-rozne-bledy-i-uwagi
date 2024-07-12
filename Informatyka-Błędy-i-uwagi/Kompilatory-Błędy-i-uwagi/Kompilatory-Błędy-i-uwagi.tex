@@ -113,13 +113,14 @@ eprint=true,
 
 
 % ------------------------------------------------------
-% Private packages
+% Local packages
 % You need to put them in the same directory as .tex file
 % ------------------------------------------------------
-% Contains various command useful for working with a text
-\usepackage{latexgeneralcommands}
-% Contains definitions useful for working with mathematical text
-\usepackage{mathcommands}
+% Package containing various command useful for working with a text
+\usepackage{general-commands}
+% Package containing commands and other code useful for working with
+% mathematical text
+% \usepackage{math-commands}
 
 
 
@@ -191,127 +192,127 @@ eprint=true,
 \vspace{0em}
 
 
-\noindent W~nauce o~algorytmach w~jej dzisiejszym stanie ważne miejsce
-zajmuje badanie następujące pytanie. Jeśli algorytm pobiera $n \in \Nbb$
-danych wejściowych, jak można oszacować od góry i~od dołu ilość operacji
-jaką algorytm wykona by uzyskać pożądanych rezultat? W~innym sformułowaniu
-zamiast pytać~się ilość operacji, pytamy~się o~oszacowanie czasu jaki zajmie
-wykonanie algorytmu, jednak to zagadnienie zwykle jest sprowadzane do tego
-samego problemu matematycznego, który różni~się od poprzedniego tylko
-wartością pewnych stałych liczbowych.
-
-Prowadzi to w~naturalny sposób do badania funkcji typu
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-01}
-  f : \Nbb \to \Rbb.
-\end{equation}
-Ponieważ jednak nie ma sensu mówić, przynajmniej w~normalnych warunkach, ani
-o~ujemnej liczbie kroków jakie wykona algorytm, ani o~ujemny czasie jego
-trwania, więc możemy~się ograniczyć do badania funkcji o~wartościach
-nieujemnych.
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-02}
-  f : \Nbb \to \Rbb_{ + }, \quad
-  \Rbb_{ + } := \{ x \in \Rbb \, | \, x \geq 0 \}.
-\end{equation}
-Przypadek gdy $f( n_{ 0 } ) = 0$, dla pewnego $n_{ 0 }$, czyli algorytm
-w~ogóle nie będzie musiał niczego robić, wydaje~się dziwny, ale~dla
-uproszczenia rozważań warto dopuścić występowanie takich funkcji. Opisują
-one przypadek, gdy rozwiązanie jest od razu dane, więc nie musimy nic robić
-by je uzyskać.
-
-Ze względu na to, że~ilość operacji wykonywanych przez algorytm przy
-dowolnej ilości danych wejściowych, też jest liczbą naturalną,
-a~przynajmniej piszącemu te słowa nie jest znany
-przypadek, gdzie byłoby inaczej, to możemy ograniczyć rozważaną klasę
-funkcji. Mianowicie do funkcji, które są postaci
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-03}
-  f( n ) = C g( n ), \qquad
-  C > 0, \quad
-  g : \Nbb \to \Nbb.
-\end{equation}
-W~szczególności sama $f$ może przyjmować tylko wartości naturalne.
-
-Wydaje~się, że~dla autorów tej książki było tak oczywiste, że~rozważane
-funkcje są nieujemne, iż~zapomnieli oni napisać jawnie, że~należy przyjmować,
-iż~wszystkie rozważane funkcje są nieujemne, chyba że wskazano inaczej. Tym
-samym podają wyniki, które są prawdziwe tylko gdy operujemy funkcjami
-nieujemnymi, ale~nigdzie nie jest to napisane jawnie.
-
-Przyjrzyjmy~się choćby dodatkowi~A w~tej książce. Na jego początku jest mowa
-o~sumach i~szeregach które posiadają wyrazy ujemne, lecz potem prawie bez
-wyjątku analizowane są tylko szeregi o~wyrazach dodatnich. Należałoby
-sprawdzić, czy~któreś z~podanych w~tym rozdziale twierdzeń nie jest
-prawdziwe, tylko dla takich sum oraz szeregów, bo inaczej czytelnik może
-zostać wprowadzony w~błąd.
-
-Warte uwagi jest to, że~w~tym dodatku liczby ujemne prawie~się nie
-pojawiają, a~nawet gdy~się pojawiają, to może to być rezultatem z~rozkładu
-pewnej liczby \textit{dodatniej} na różnicę dwóch liczb. Tak jest na
-stronie~1173, gdzie analizowana jest suma teleskopowa o~wyrazie ogólnym
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-04}
-  a_{ k } = \frac{ 1 }{ k ( k + 1 ) } =
-  \frac{ 1 }{ k } - \frac{ 1 }{ k + 1 }.
-\end{equation}
-
-Innym założeniem które mogło ujść autorom niezauważenie, jest przyjęcie,
-że~dla każdej funkcji $f : \Nbb \to \Rbb_{ + }$ zachodzi
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-05}
-  \forall \, n \in \Nbb, \quad
-  f( n ) \geq 1,
-\end{equation}
-tym samym za pomocą notacji asymptotycznej wprowadzonej na stronie ??? tej
-książki możemy zapisać
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-06}
-  1 = O\left( f( n ) \right).
-\end{equation}
-Założenie to jest naturalne, bowiem należy~się spodziewać, iż dla dowolnej
-ilości danych wyjściowych, może z~wyjątkiem $n = 1$, każdy algorytm wykona
-co najmniej jedną operację. Problem ile zajmie czas wykonanie danego
-algorytmu jest bardziej subtelny, bowiem zależy od tego w~jakich jednostkach
-mierzymy czas wykonania operacji, lecz można przypuszczać, iż~autorzy
-książki i~tutaj przyjęli warunek analogiczny
-do~\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-05}. Po prostu dlatego,
-że~argument „każdy algorytm wykonuje co najmniej jedną operację”, ma tak
-ogromną siłę perswazji.
+% \noindent W~nauce o~algorytmach w~jej dzisiejszym stanie ważne miejsce
+% zajmuje badanie następujące pytanie. Jeśli algorytm pobiera $n \in \Nbb$
+% danych wejściowych, jak można oszacować od góry i~od dołu ilość operacji
+% jaką algorytm wykona by uzyskać pożądanych rezultat? W~innym sformułowaniu
+% zamiast pytać~się ilość operacji, pytamy~się o~oszacowanie czasu jaki zajmie
+% wykonanie algorytmu, jednak to zagadnienie zwykle jest sprowadzane do tego
+% samego problemu matematycznego, który różni~się od poprzedniego tylko
+% wartością pewnych stałych liczbowych.
+
+% Prowadzi to w~naturalny sposób do badania funkcji typu
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-01}
+%   f : \Nbb \to \Rbb.
+% \end{equation}
+% Ponieważ jednak nie ma sensu mówić, przynajmniej w~normalnych warunkach, ani
+% o~ujemnej liczbie kroków jakie wykona algorytm, ani o~ujemny czasie jego
+% trwania, więc możemy~się ograniczyć do badania funkcji o~wartościach
+% nieujemnych.
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-02}
+%   f : \Nbb \to \Rbb_{ + }, \quad
+%   \Rbb_{ + } := \{ x \in \Rbb \, | \, x \geq 0 \}.
+% \end{equation}
+% Przypadek gdy $f( n_{ 0 } ) = 0$, dla pewnego $n_{ 0 }$, czyli algorytm
+% w~ogóle nie będzie musiał niczego robić, wydaje~się dziwny, ale~dla
+% uproszczenia rozważań warto dopuścić występowanie takich funkcji. Opisują
+% one przypadek, gdy rozwiązanie jest od razu dane, więc nie musimy nic robić
+% by je uzyskać.
+
+% Ze względu na to, że~ilość operacji wykonywanych przez algorytm przy
+% dowolnej ilości danych wejściowych, też jest liczbą naturalną,
+% a~przynajmniej piszącemu te słowa nie jest znany
+% przypadek, gdzie byłoby inaczej, to możemy ograniczyć rozważaną klasę
+% funkcji. Mianowicie do funkcji, które są postaci
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-03}
+%   f( n ) = C g( n ), \qquad
+%   C > 0, \quad
+%   g : \Nbb \to \Nbb.
+% \end{equation}
+% W~szczególności sama $f$ może przyjmować tylko wartości naturalne.
+
+% Wydaje~się, że~dla autorów tej książki było tak oczywiste, że~rozważane
+% funkcje są nieujemne, iż~zapomnieli oni napisać jawnie, że~należy przyjmować,
+% iż~wszystkie rozważane funkcje są nieujemne, chyba że wskazano inaczej. Tym
+% samym podają wyniki, które są prawdziwe tylko gdy operujemy funkcjami
+% nieujemnymi, ale~nigdzie nie jest to napisane jawnie.
+
+% Przyjrzyjmy~się choćby dodatkowi~A w~tej książce. Na jego początku jest mowa
+% o~sumach i~szeregach które posiadają wyrazy ujemne, lecz potem prawie bez
+% wyjątku analizowane są tylko szeregi o~wyrazach dodatnich. Należałoby
+% sprawdzić, czy~któreś z~podanych w~tym rozdziale twierdzeń nie jest
+% prawdziwe, tylko dla takich sum oraz szeregów, bo inaczej czytelnik może
+% zostać wprowadzony w~błąd.
+
+% Warte uwagi jest to, że~w~tym dodatku liczby ujemne prawie~się nie
+% pojawiają, a~nawet gdy~się pojawiają, to może to być rezultatem z~rozkładu
+% pewnej liczby \textit{dodatniej} na różnicę dwóch liczb. Tak jest na
+% stronie~1173, gdzie analizowana jest suma teleskopowa o~wyrazie ogólnym
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-04}
+%   a_{ k } = \frac{ 1 }{ k ( k + 1 ) } =
+%   \frac{ 1 }{ k } - \frac{ 1 }{ k + 1 }.
+% \end{equation}
+
+% Innym założeniem które mogło ujść autorom niezauważenie, jest przyjęcie,
+% że~dla każdej funkcji $f : \Nbb \to \Rbb_{ + }$ zachodzi
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-05}
+%   \forall \, n \in \Nbb, \quad
+%   f( n ) \geq 1,
+% \end{equation}
+% tym samym za pomocą notacji asymptotycznej wprowadzonej na stronie ??? tej
+% książki możemy zapisać
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-06}
+%   1 = O\left( f( n ) \right).
+% \end{equation}
+% Założenie to jest naturalne, bowiem należy~się spodziewać, iż dla dowolnej
+% ilości danych wyjściowych, może z~wyjątkiem $n = 1$, każdy algorytm wykona
+% co najmniej jedną operację. Problem ile zajmie czas wykonanie danego
+% algorytmu jest bardziej subtelny, bowiem zależy od tego w~jakich jednostkach
+% mierzymy czas wykonania operacji, lecz można przypuszczać, iż~autorzy
+% książki i~tutaj przyjęli warunek analogiczny
+% do~\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-05}. Po prostu dlatego,
+% że~argument „każdy algorytm wykonuje co najmniej jedną operację”, ma tak
+% ogromną siłę perswazji.
 
-Łatwo jednak podać funkcję, która nie spełnia warunku
-\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-06}. Weźmy
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-07}
-  f( n ) =
-  \begin{cases}
-    1, & n = 0, \\
-    \frac{ 1 }{ n }, & n \geq 1,
-  \end{cases}
-\end{equation}
-dla której mamy
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-08}
-  1 \neq O\!\left( \tfrac{ 1 }{ n } \right), \quad
-  \frac{ 1 }{ n } = O( 1 ).
-\end{equation}
-Dla ścisłości rozważań należy więc warunek
-\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-05} przyjąć jawnie.
+% Łatwo jednak podać funkcję, która nie spełnia warunku
+% \eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-06}. Weźmy
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-07}
+%   f( n ) =
+%   \begin{cases}
+%     1, & n = 0, \\
+%     \frac{ 1 }{ n }, & n \geq 1,
+%   \end{cases}
+% \end{equation}
+% dla której mamy
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-08}
+%   1 \neq O\!\left( \tfrac{ 1 }{ n } \right), \quad
+%   \frac{ 1 }{ n } = O( 1 ).
+% \end{equation}
+% Dla ścisłości rozważań należy więc warunek
+% \eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-05} przyjąć jawnie.
 
-\VerSpaceFour
+% \VerSpaceFour
 
 
 
 
 
-\noindent
-W~tym dziele pojawia~się termin „asymptotycznie dokładne oszacowanie funkcji
-$f( n )$”. Wedle tego co zrozumiałem, znalezienie takiego asymptotycznie
-dokładnego oszacowania takiej funkcji $g( n )$, że~zachodzi
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-09}
-  f( n ) = \Theta\big( g( n ) \big).
-\end{equation}
+% \noindent
+% W~tym dziele pojawia~się termin „asymptotycznie dokładne oszacowanie funkcji
+% $f( n )$”. Wedle tego co zrozumiałem, znalezienie takiego asymptotycznie
+% dokładnego oszacowania takiej funkcji $g( n )$, że~zachodzi
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-09}
+%   f( n ) = \Theta\big( g( n ) \big).
+% \end{equation}
 
 
 
@@ -320,25 +321,25 @@ dokładnego oszacowania takiej funkcji $g( n )$, że~zachodzi
 
 
 
-% ##################
-\CenterBoldFont{Uwagi do~konkretnych stron}
+% % ##################
+% \CenterBoldFont{Uwagi do~konkretnych stron}
 
 
-\noindent
-\StrWierszeGora{4}{7--8} Zbigniew Rudy uświadomił mi, że jest pewien problem
-z~podanym tu stwierdzeniem „algorytm jest ciągiem kroków obliczeniowych
-przekształcających dane wejściowe w~wyjściowe”. Chodzi o~to, że~słowo
-„ciąg” sugeruje, że~kroki obliczeniowe wykonuje~się jeden po drugim
-w~określonej kolejności, co nie jest prawdą dla tak ważnych
-dziś\footnote{Piszę to w~2023 roku.} algorytmów równoległych. W~ich przypadku
-przynajmniej część obliczeń wykonuje~się w~tym samym czasie w~różnych
-jednostkach obliczeniowych. W~szczególności nie jest ustalone, który krok
-obliczeń równoległych wykona~się przed którym. Dodatkowo jeśli przy
-pierwszym wykonywaniu algorytmu równoległego najpierw wykona~się krok~$A$,
-a~potem~$B$, to przy następnym jego wykonywaniu może~się zdarzyć, iż~krok~$B$
-wykona~się przed krokiem $A$.
+% \noindent
+% \StrWierszeGora{4}{7--8} Zbigniew Rudy uświadomił mi, że jest pewien problem
+% z~podanym tu stwierdzeniem „algorytm jest ciągiem kroków obliczeniowych
+% przekształcających dane wejściowe w~wyjściowe”. Chodzi o~to, że~słowo
+% „ciąg” sugeruje, że~kroki obliczeniowe wykonuje~się jeden po drugim
+% w~określonej kolejności, co nie jest prawdą dla tak ważnych
+% dziś\footnote{Piszę to w~2023 roku.} algorytmów równoległych. W~ich przypadku
+% przynajmniej część obliczeń wykonuje~się w~tym samym czasie w~różnych
+% jednostkach obliczeniowych. W~szczególności nie jest ustalone, który krok
+% obliczeń równoległych wykona~się przed którym. Dodatkowo jeśli przy
+% pierwszym wykonywaniu algorytmu równoległego najpierw wykona~się krok~$A$,
+% a~potem~$B$, to przy następnym jego wykonywaniu może~się zdarzyć, iż~krok~$B$
+% wykona~się przed krokiem $A$.
 
-\VerSpaceFour
+% \VerSpaceFour
 
 
 
@@ -359,239 +360,239 @@ wykona~się przed krokiem $A$.
 
 
 
-\noindent
-\Str{1171} Trzeba poważnie przemyśleć co to znaczy, że~w~zależności
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-10}
-  \sum_{ k = 1 }^{ n } \Theta\big( f( k ) \big) =
-  \Theta\left( \sum_{ k = 1 }^{ n } f( k ) \right),
-\end{equation}
-symbol $\Theta$ po lewej stronie oznacza oszacowanie asymptotyczne
-w~zmiennej~$k$, zaś po prawej w~zmiennej $n$. Wydaje mi~się, że~coś jest
-z~tym nie w~porządku.
+% \noindent
+% \Str{1171} Trzeba poważnie przemyśleć co to znaczy, że~w~zależności
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-10}
+%   \sum_{ k = 1 }^{ n } \Theta\big( f( k ) \big) =
+%   \Theta\left( \sum_{ k = 1 }^{ n } f( k ) \right),
+% \end{equation}
+% symbol $\Theta$ po lewej stronie oznacza oszacowanie asymptotyczne
+% w~zmiennej~$k$, zaś po prawej w~zmiennej $n$. Wydaje mi~się, że~coś jest
+% z~tym nie w~porządku.
 
-\VerSpaceFour
+% \VerSpaceFour
 
 
 
 
 
-\noindent
-\Str{1175--1176} Przeanalizujmy jeszcze raz dokładnie, błędny dowód fałszywej
-zależności $\sum_{ k = 1 }^{ n } = O( n )$, zaczynając od ścisłej rachunków.
+% \noindent
+% \Str{1175--1176} Przeanalizujmy jeszcze raz dokładnie, błędny dowód fałszywej
+% zależności $\sum_{ k = 1 }^{ n } = O( n )$, zaczynając od ścisłej rachunków.
 
-Dla $n = 1$ nam
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-11}
-  \sum_{ k = 1 }^{ 1 } = 1,
-\end{equation}
-dla $n = 2$ dostajemy
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-12}
-  \sum_{ k = 1 }^{ 2 } k = \sum_{ k = 1 }^{ 1 } k + 2 = 1 + 2 = 1.5 \cdot 2,
-\end{equation}
-w~trzecim kroku mamy
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-13}
-  \sum_{ k = 1 }^{ 3 } k = \sum_{ k = 1 }^{ 2 } k + 3 = 1.5 \cdot 2 + 3 = 2 \cdot 3,
-\end{equation}
-zaś w~czwartym
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-14}
-  \sum_{ k = 1 }^{ 4 } k = 2 \cdot 3 + 4 = 2.5 \cdot 4.
-\end{equation}
+% Dla $n = 1$ nam
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-11}
+%   \sum_{ k = 1 }^{ 1 } = 1,
+% \end{equation}
+% dla $n = 2$ dostajemy
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-12}
+%   \sum_{ k = 1 }^{ 2 } k = \sum_{ k = 1 }^{ 1 } k + 2 = 1 + 2 = 1.5 \cdot 2,
+% \end{equation}
+% w~trzecim kroku mamy
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-13}
+%   \sum_{ k = 1 }^{ 3 } k = \sum_{ k = 1 }^{ 2 } k + 3 = 1.5 \cdot 2 + 3 = 2 \cdot 3,
+% \end{equation}
+% zaś w~czwartym
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-14}
+%   \sum_{ k = 1 }^{ 4 } k = 2 \cdot 3 + 4 = 2.5 \cdot 4.
+% \end{equation}
 
-Przyjmijmy teraz, że~mamy stałą $c_{ n }$, taką~że zachodzi
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-15}
-  \sum_{ k = 1 }^{ n } k = c_{ n } n.
-\end{equation}
-Stąd dostajemy
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-16}
-  \sum_{ k = 1 }^{ n + 1 } k = \sum_{ k = 1 }^{ n } k + n + 1 = c_{ n } n + n + 1 =
-  \frac{ ( c_{ n } + 1 ) n + 1 }{ n + 1 } ( n + 1 ),
-\end{equation}
-czyli
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-17}
-  c_{ n + 1 } = \frac{ ( c_{ n } + 1 ) n + 1 }{ n + 1 },
-\end{equation}
-przy czym $c_{ 1 } = 1$. Można sprawdzić, że~rozwiązaniem tego problemu,
-dobrze znanym ze wzoru na sumę postępu arytmetycznego, jest
-$c_{ n } = 0.5 ( n + 1 )$, czyli inaczej mówiąc
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-18}
-  c_{ n + 1 } = c_{ n } + 0.5,
-\end{equation}
-co jest zgodne z~wzorami
-\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-11}-\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-14}.
-Widzimy więc, że~nie istnieje taka liczba $C$ by dla każdego $n$ zachodziło
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-19}
-  \sum_{ k = 1 }^{ n } k \leq C n.
-\end{equation}
+% Przyjmijmy teraz, że~mamy stałą $c_{ n }$, taką~że zachodzi
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-15}
+%   \sum_{ k = 1 }^{ n } k = c_{ n } n.
+% \end{equation}
+% Stąd dostajemy
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-16}
+%   \sum_{ k = 1 }^{ n + 1 } k = \sum_{ k = 1 }^{ n } k + n + 1 = c_{ n } n + n + 1 =
+%   \frac{ ( c_{ n } + 1 ) n + 1 }{ n + 1 } ( n + 1 ),
+% \end{equation}
+% czyli
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-17}
+%   c_{ n + 1 } = \frac{ ( c_{ n } + 1 ) n + 1 }{ n + 1 },
+% \end{equation}
+% przy czym $c_{ 1 } = 1$. Można sprawdzić, że~rozwiązaniem tego problemu,
+% dobrze znanym ze wzoru na sumę postępu arytmetycznego, jest
+% $c_{ n } = 0.5 ( n + 1 )$, czyli inaczej mówiąc
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-18}
+%   c_{ n + 1 } = c_{ n } + 0.5,
+% \end{equation}
+% co jest zgodne z~wzorami
+% \eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-11}-\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-14}.
+% Widzimy więc, że~nie istnieje taka liczba $C$ by dla każdego $n$ zachodziło
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-19}
+%   \sum_{ k = 1 }^{ n } k \leq C n.
+% \end{equation}
 
-Co więc było źródłem błędu w~podanym tu niepoprawnym dowodzie? Otóż w~kroku
-indukcyjnym zawsze~dowodzimy naszego twierdzenia $T( n + 1 )$ przy
-założeniu, że~prawdziwe jest twierdzenie $T( n )$, dla pewnego
-\textit{ustalonego}~$n$. Zaś dla ustalonego $n$ zawsze istnieje liczba
-$C \geq 0$, taka~że zachodzi
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-20}
-  \sum_{ k = 1 }^{ n } k \leq C n.
-\end{equation}
-Natomiast notacja asymptotyczna, jak sama nazwa wskazuje, mówi o~zachowaniu
-asymptotycznym funkcji, czyli, że~funkcja spełnia pewną własność dla
-wszystkich $n \geq n_{ 0 }$, gdzie $n_{ 0 }$ jest pewną ustaloną liczbą. Zatem
-gdy dowodzimy kroku indukcyjnego możemy z~twierdzenia $T( n )$ przy
-ustalonym $n$ wywnioskować, że~nierówność typu
-\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-19} jest prawdziwa dla
-ustalonego $n$, ewentualnie dla liczb $0, 1, 2, \ldots, n$, gdzie $n$ jest
-cały czas ustalone. Widzimy więc, że~na podstawie założenie $T( n )$
-w~kroku indukcyjnym nie jesteśmy w~stanie nic powiedzieć o~zachowaniu
-asymptotycznym danej funkcji, a~właśnie takiego rozumowania użyliśmy
-w~przytoczonym tu dowodzie.
+% Co więc było źródłem błędu w~podanym tu niepoprawnym dowodzie? Otóż w~kroku
+% indukcyjnym zawsze~dowodzimy naszego twierdzenia $T( n + 1 )$ przy
+% założeniu, że~prawdziwe jest twierdzenie $T( n )$, dla pewnego
+% \textit{ustalonego}~$n$. Zaś dla ustalonego $n$ zawsze istnieje liczba
+% $C \geq 0$, taka~że zachodzi
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-20}
+%   \sum_{ k = 1 }^{ n } k \leq C n.
+% \end{equation}
+% Natomiast notacja asymptotyczna, jak sama nazwa wskazuje, mówi o~zachowaniu
+% asymptotycznym funkcji, czyli, że~funkcja spełnia pewną własność dla
+% wszystkich $n \geq n_{ 0 }$, gdzie $n_{ 0 }$ jest pewną ustaloną liczbą. Zatem
+% gdy dowodzimy kroku indukcyjnego możemy z~twierdzenia $T( n )$ przy
+% ustalonym $n$ wywnioskować, że~nierówność typu
+% \eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-19} jest prawdziwa dla
+% ustalonego $n$, ewentualnie dla liczb $0, 1, 2, \ldots, n$, gdzie $n$ jest
+% cały czas ustalone. Widzimy więc, że~na podstawie założenie $T( n )$
+% w~kroku indukcyjnym nie jesteśmy w~stanie nic powiedzieć o~zachowaniu
+% asymptotycznym danej funkcji, a~właśnie takiego rozumowania użyliśmy
+% w~przytoczonym tu dowodzie.
 
-Płynie stąd wniosek, że~w~dowodach indukcyjnych najlepiej całkowicie unikać
-notacji asymptotycznej. W~ostateczność, z~dużą dozą ostrożności można
-korzystać w~nich z~relacji asymptotycznych, które zostały udowodnione innymi
-metodami.
+% Płynie stąd wniosek, że~w~dowodach indukcyjnych najlepiej całkowicie unikać
+% notacji asymptotycznej. W~ostateczność, z~dużą dozą ostrożności można
+% korzystać w~nich z~relacji asymptotycznych, które zostały udowodnione innymi
+% metodami.
 
-To co zostało powiedziane powyżej, nie przeczy oczywiście temu, że~stosując
-w~sposób niedozwolony symbole asymptotyczne w~dowodach indukcyjnych otrzymano
-wiele poprawnych twierdzeń. Takie sytuacje zapewne zdarzają~się dość
-często.
+% To co zostało powiedziane powyżej, nie przeczy oczywiście temu, że~stosując
+% w~sposób niedozwolony symbole asymptotyczne w~dowodach indukcyjnych otrzymano
+% wiele poprawnych twierdzeń. Takie sytuacje zapewne zdarzają~się dość
+% często.
 
-\VerSpaceFour
+% \VerSpaceFour
 
 
 
 
 
-\noindent
-\Str{1178} Zatrzymajmy~się na chwilę nad tym w~jaki sposób oszacowano od dołu
-sumę szeregu arytmetycznego dla~$n$ parzystego. Ponieważ wszystkie wyrazy
-rozważanego szeregu są nieujemne, więc będziemy szukać tylko nieujemnej
-funkcji $g( n )$, ograniczającej ją od dołu. By ją znaleźć rozkładamy szereg
-na sumę szeregów:
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-21}
-  \sum_{ k = 1 }^{ n } k =
-  \sum_{ k = 1 }^{ n / 2 } k + \sum_{ k = ( n / 2 ) + 1 }^{ n } k \geq
-  \sum_{ k = 1 }^{ n / 2 } 0 + \sum_{ k = ( n / 2 ) + 1 }^{ n } \frac{ n }{ 2 } =
-  \left( \frac{ n }{ 2 } \right)^{ 2 }.
-\end{equation}
-Zwróćmy uwagę na to, że~oszacowania od dołu \textit{nie} otrzymujemy poprzez
-zastąpienie wyrazów każdej sumy poprzez najmniejszy z~nich. W~takiej
-sytuacji wyrazy pierwszej sumy musielibyśmy ograniczyć przez~$1$,
-zaś drugiej przez $\frac{ n }{ 2 } + 1$, jednak dla wygody rachunkowej
-użyliśmy odpowiednio $0$ i~$\frac{ n }{ 2 }$, czyli wielkości o~jeden
-mniejszych od najmniejszego wyrazów danej sumy. Zwróćmy też uwagę na to,
-że~gdybyśmy ograniczyli wyrazy pierwszej sumy od dołu przez $1$, to
-otrzymalibyśmy oszacowanie
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-22}
-  \sum_{ k = 1 }^{ n } \geq
-  \left( \frac{ n }{ 2 } \right)^{ 2 } + \frac{ n }{ 2 },
-\end{equation}
-które prowadzi do tego samego ograniczenia asymptotycznego $\Omega( n^{ 2 } )$.
+% \noindent
+% \Str{1178} Zatrzymajmy~się na chwilę nad tym w~jaki sposób oszacowano od dołu
+% sumę szeregu arytmetycznego dla~$n$ parzystego. Ponieważ wszystkie wyrazy
+% rozważanego szeregu są nieujemne, więc będziemy szukać tylko nieujemnej
+% funkcji $g( n )$, ograniczającej ją od dołu. By ją znaleźć rozkładamy szereg
+% na sumę szeregów:
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-21}
+%   \sum_{ k = 1 }^{ n } k =
+%   \sum_{ k = 1 }^{ n / 2 } k + \sum_{ k = ( n / 2 ) + 1 }^{ n } k \geq
+%   \sum_{ k = 1 }^{ n / 2 } 0 + \sum_{ k = ( n / 2 ) + 1 }^{ n } \frac{ n }{ 2 } =
+%   \left( \frac{ n }{ 2 } \right)^{ 2 }.
+% \end{equation}
+% Zwróćmy uwagę na to, że~oszacowania od dołu \textit{nie} otrzymujemy poprzez
+% zastąpienie wyrazów każdej sumy poprzez najmniejszy z~nich. W~takiej
+% sytuacji wyrazy pierwszej sumy musielibyśmy ograniczyć przez~$1$,
+% zaś drugiej przez $\frac{ n }{ 2 } + 1$, jednak dla wygody rachunkowej
+% użyliśmy odpowiednio $0$ i~$\frac{ n }{ 2 }$, czyli wielkości o~jeden
+% mniejszych od najmniejszego wyrazów danej sumy. Zwróćmy też uwagę na to,
+% że~gdybyśmy ograniczyli wyrazy pierwszej sumy od dołu przez $1$, to
+% otrzymalibyśmy oszacowanie
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-22}
+%   \sum_{ k = 1 }^{ n } \geq
+%   \left( \frac{ n }{ 2 } \right)^{ 2 } + \frac{ n }{ 2 },
+% \end{equation}
+% które prowadzi do tego samego ograniczenia asymptotycznego $\Omega( n^{ 2 } )$.
 
-Z~naszego punktu widzenia nie ma to znaczenia, czy wyrazy konkretnej sumy
-ograniczamy od dołu przez najmniejszy z~nich, czy przez wyraz mniejszy od
-niego o~ile prowadzi to do zadowalającego dolnego oszacowania zachowania
-szeregu przez funkcję nieujemną.
+% Z~naszego punktu widzenia nie ma to znaczenia, czy wyrazy konkretnej sumy
+% ograniczamy od dołu przez najmniejszy z~nich, czy przez wyraz mniejszy od
+% niego o~ile prowadzi to do zadowalającego dolnego oszacowania zachowania
+% szeregu przez funkcję nieujemną.
 
-\VerSpaceFour
+% \VerSpaceFour
 
 
 
 
 
-\noindent
-\Str{1178} Przeliczmy tutaj oszacowanie od~dołu postępu arytmetycznego
-dla przypadku $n$~nieparzystego. Wówczas $\frac{ n - 1 }{ 2 }$
-i~$\frac{ n + 1 }{ 2 }$ są liczbami naturalnymi, tym samym możemy przepisać
-rozpatrywaną sumę w~następujący sposób.
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-23}
-  \begin{split}
-    \sum_{ k = 1 }^{ n } k
-    &=
-      \sum_{ k = 1 }^{ ( n - 1 ) / 2 } k + \sum_{ k = ( n + 1 ) / 2 }^{ n } k \geq
-      \sum_{ k = 1 }^{ ( n - 1 ) / 2 } 0 + \sum_{ k = ( n + 1 ) / 2 }^{ n } k \geq
-      \sum_{ k = ( n + 1 ) / 2 }^{ n } \frac{ n + 1 }{ 2 } = \\[0.5em]
-    &= \left( \frac{ n + 1 }{ 2 } \right)^{ 2 } =
-      \frac{ n^{ 2 } + 2n + 1 }{ 4 } >
-      \left( \frac{ n }{ 2 } \right )^{ 2 } = \Omega( n^{ 2 } ).
-  \end{split}
-\end{equation}
-Aby otrzymać oszacowanie każdej z~sum z~osobna, w~pierwszej z~nich
-ograniczyliśmy wszystkie jej wyrazy od dołu przez~$0$. Ten wybór oszacowania
-od dołu omówiliśmy już powyżej. W~przypadku drugiej sumy ograniczyliśmy
-od~dołu wszystkie jej wyrazy przez najmniejszy spośród nich, gdyż w~tym
-wypadku nie uznaliśmy to za bardziej naturalny wybór, zaś alternatywne
-oszacowania nie prowadzą do prostszych rachunków.
+% \noindent
+% \Str{1178} Przeliczmy tutaj oszacowanie od~dołu postępu arytmetycznego
+% dla przypadku $n$~nieparzystego. Wówczas $\frac{ n - 1 }{ 2 }$
+% i~$\frac{ n + 1 }{ 2 }$ są liczbami naturalnymi, tym samym możemy przepisać
+% rozpatrywaną sumę w~następujący sposób.
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-23}
+%   \begin{split}
+%     \sum_{ k = 1 }^{ n } k
+%     &=
+%       \sum_{ k = 1 }^{ ( n - 1 ) / 2 } k + \sum_{ k = ( n + 1 ) / 2 }^{ n } k \geq
+%       \sum_{ k = 1 }^{ ( n - 1 ) / 2 } 0 + \sum_{ k = ( n + 1 ) / 2 }^{ n } k \geq
+%       \sum_{ k = ( n + 1 ) / 2 }^{ n } \frac{ n + 1 }{ 2 } = \\[0.5em]
+%     &= \left( \frac{ n + 1 }{ 2 } \right)^{ 2 } =
+%       \frac{ n^{ 2 } + 2n + 1 }{ 4 } >
+%       \left( \frac{ n }{ 2 } \right )^{ 2 } = \Omega( n^{ 2 } ).
+%   \end{split}
+% \end{equation}
+% Aby otrzymać oszacowanie każdej z~sum z~osobna, w~pierwszej z~nich
+% ograniczyliśmy wszystkie jej wyrazy od dołu przez~$0$. Ten wybór oszacowania
+% od dołu omówiliśmy już powyżej. W~przypadku drugiej sumy ograniczyliśmy
+% od~dołu wszystkie jej wyrazy przez najmniejszy spośród nich, gdyż w~tym
+% wypadku nie uznaliśmy to za bardziej naturalny wybór, zaś alternatywne
+% oszacowania nie prowadzą do prostszych rachunków.
 
-By otrzymać ostatnią nierówność
-w~\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-23} skorzystaliśmy ponadto
-z~oczywistego faktu, że~ponieważ $n \geq 1$, to zachodzi
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-24}
-  \frac{ 2n + 1 }{ 4 } \geq \frac{ 3 }{ 4 } > 0.
-\end{equation}
+% By otrzymać ostatnią nierówność
+% w~\eqref{eq:CormenAtAl-WprowadzenieDoAlgorytmow-23} skorzystaliśmy ponadto
+% z~oczywistego faktu, że~ponieważ $n \geq 1$, to zachodzi
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-24}
+%   \frac{ 2n + 1 }{ 4 } \geq \frac{ 3 }{ 4 } > 0.
+% \end{equation}
 
-\VerSpaceFour
+% \VerSpaceFour
 
 
 
 
 
-\noindent
-\Str{1187} Należy nadmienić, że~n-tki są uporządkowane tak samo jak para
-uporządkowana. Tym samym
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-25}
-  \begin{split}
-    &( a_{ 1 }, a_{ 2 }, \ldots, a_{ i - 1 }, a_{ i }, a_{ i + 1 }, \ldots, a_{ j - 1 },
-    a_{ j }, a_{ j + 1 }, \ldots, a_{ n } ) \neq \\
-    &\neq ( a_{ 1 }, a_{ 2 }, \ldots, a_{ i - 1 }, a_{ j }, a_{ i + 1 }, \ldots,
-    a_{ j - 1 }, a_{ i }, a_{ j + 1 }, \ldots, a_{ n } ),
-  \end{split}
-\end{equation}
-jeśli $a_{ i } \neq a_{ j }$.
+% \noindent
+% \Str{1187} Należy nadmienić, że~n-tki są uporządkowane tak samo jak para
+% uporządkowana. Tym samym
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-25}
+%   \begin{split}
+%     &( a_{ 1 }, a_{ 2 }, \ldots, a_{ i - 1 }, a_{ i }, a_{ i + 1 }, \ldots, a_{ j - 1 },
+%     a_{ j }, a_{ j + 1 }, \ldots, a_{ n } ) \neq \\
+%     &\neq ( a_{ 1 }, a_{ 2 }, \ldots, a_{ i - 1 }, a_{ j }, a_{ i + 1 }, \ldots,
+%     a_{ j - 1 }, a_{ i }, a_{ j + 1 }, \ldots, a_{ n } ),
+%   \end{split}
+% \end{equation}
+% jeśli $a_{ i } \neq a_{ j }$.
 
-\VerSpaceFour
+% \VerSpaceFour
 
 
 
 
 
-\noindent
-\Str{1193} Na tej stronie należałoby wspomnieć, że~zarówno dla grafu
-skierowanego jak i~nieskierowanego krawędź łączącą wierzchołki $u, v \in V$
-będziemy oznaczać tym samym symbolem $( u, v )$. Choć na poziomie notacji
-nie rozróżniamy krawędzi tych dwóch typów grafu, należy pamiętać, że~dla
-grafu nieskierowanego zawsze zachodzi
-\begin{equation}
-  \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-26}
-  ( u, v ) \equiv ( v, u ).
-\end{equation}
+% \noindent
+% \Str{1193} Na tej stronie należałoby wspomnieć, że~zarówno dla grafu
+% skierowanego jak i~nieskierowanego krawędź łączącą wierzchołki $u, v \in V$
+% będziemy oznaczać tym samym symbolem $( u, v )$. Choć na poziomie notacji
+% nie rozróżniamy krawędzi tych dwóch typów grafu, należy pamiętać, że~dla
+% grafu nieskierowanego zawsze zachodzi
+% \begin{equation}
+%   \label{eq:CormenAtAl-WprowadzenieDoAlgorytmow-26}
+%   ( u, v ) \equiv ( v, u ).
+% \end{equation}
 
-\VerSpaceFour
+% \VerSpaceFour
 
 
 
 
 
-\noindent
-\Str{1194} Zgodnie z~informacjami podanymi na tej stronie, jeśli w~grafie
-skierowanym istnieje pętla wokół wierzchołka $v \in V$, czyli krawędź
-$( v, v )$, to uwzględniamy ją zarówno przy obliczaniu stopnia wyjściowego
-jak i~stopnia wejściowego tego wierzchołka. Ten fakt nie jest wcale
-oczywisty.
+% \noindent
+% \Str{1194} Zgodnie z~informacjami podanymi na tej stronie, jeśli w~grafie
+% skierowanym istnieje pętla wokół wierzchołka $v \in V$, czyli krawędź
+% $( v, v )$, to uwzględniamy ją zarówno przy obliczaniu stopnia wyjściowego
+% jak i~stopnia wejściowego tego wierzchołka. Ten fakt nie jest wcale
+% oczywisty.
 
-\VerSpaceFour
+% \VerSpaceFour
 
 
 
