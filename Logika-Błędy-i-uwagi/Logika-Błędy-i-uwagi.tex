@@ -117,7 +117,7 @@ eprint=true,
 % You need to put them in the same directory as .tex file
 % ------------------------------------------------------
 % Package containing various command useful for working with a text
-\usepackage{general-commands}
+\usepackage{./Local-packages/general-commands}
 % Package containing commands and other code useful for working with
 % mathematical text
 % \usepackage{math-commands}
@@ -185,10 +185,9 @@ eprint=true,
 % ######################################
 
 
-% ##################
-\CenterBoldFont{Uwagi ogólne}
-
-
+% ######################################
+\subsection{Uwagi do~konkretnych stron}
+% ######################################
 
 
 \noindent
@@ -200,8 +199,9 @@ po~pierwszym~$q$. Niestety nie wiem który z nich należy tam umieścić.
 
 
 
-% ##################
-\CenterBoldFont{Błędy}
+% ######################################
+\subsection{Błędy}
+% ######################################
 
 
 \begin{center}
@@ -268,10 +268,9 @@ po~pierwszym~$q$. Niestety nie wiem który z nich należy tam umieścić.
 
 
 
-% ##################
-\CenterBoldFont{Uwagi do~konkretnych stron}
-
-\vspace{0em}
+% ######################################
+\subsection{Uwagi do~konkretnych stron}
+% ######################################
 
 
 \noindent
@@ -387,10 +386,9 @@ symbol~$\Pr( a )$.
 
 
 
-% ##################
-% \newpage
-
-\CenterBoldFont{Błędy}
+% ######################################
+\subsection{Błędy}
+% ######################################
 
 
 \begin{center}
@@ -406,10 +404,16 @@ symbol~$\Pr( a )$.
     & $| a | \!\! \leq | b |$\textit{:} & $| a | \leq | b |:$ \\
     \hphantom{0}87 & \hphantom{0}9 &
     & $| b | \!\! \leq | a |$\textit{:} & $| b | \leq | a |:$ \\
+    120 & 15 & & 1~oznacza & Zwrócenie w~wyniku~1, oznacza \\
+    130 & 11 & & prawdziwe & nieprawdziwe \\
+    144 & & 16 & w~postaci & za~pomocą \\
     149 & & \hphantom{0}4 & \textit{wygrała nagrodę}
     & \textit{wygrała wyścig} \\
     155 & & 10 & \textit{wygrała nagrodę} & \textit{wygrała wyścig} \\
     156 & & \hphantom{0}1 & $\neg \Diamond b)$ & $\neg \Diamond b$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
     % & & & & \\
     \hline
   \end{tabular}
