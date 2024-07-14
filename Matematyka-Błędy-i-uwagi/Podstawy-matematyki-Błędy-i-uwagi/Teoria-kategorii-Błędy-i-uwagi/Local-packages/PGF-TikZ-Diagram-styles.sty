@@ -1,11 +1,11 @@
 % ####################################################################
 %
 % ####################################################################
-\ProvidesPackage{PGFTikZDigramsStyles}
+\ProvidesPackage{PGF-TikZ-Diagrams-styles}
 
 
 % ##################
-% Importing TikZ's libraries.
+% Importing PGF/TikZ's librarie with arrows
 
 \usetikzlibrary{arrows.meta}
 % ##################
@@ -13,16 +13,17 @@
 
 
 % ############################
-% Styles for writing nodes in diagram.
+% Styles for writing nodes (block) of diagram
 
 \tikzset{
-  % Square node with rounded corners.
+  % Square node with rounded corners
   diagram block/.style={rectangle,rounded corners,
     text centered,minimum height=4.5em,text width=7em,
-    fill=jAxisBlue,text=jMathTextFGStyleDark},
+    fill=jAxisBlue,text=jMathTextFGColorInDarkStyle},
+  % Square node with rounded corners
   diagram square block/.style={rectangle,
     text centered,minimum height=4.5em,text width=7em,
-    fill=brown,text=jMathTextFGStyleDark},
+    fill=brown,text=jMathTextFGColorInDarkStyle},
 }
 % ############################
 
@@ -31,16 +32,16 @@
 
 
 % ############################
-% Styles for drawing arrows on diagrams.
+% Styles for drawing arrows of diagram
 
-% Basic diagram arrow.
 \tikzset{
-  % Strzałka do łączenia wierzchołków diagramów
+  % Thick arrow to connecting diagram
   thick diagram arrow/.style={-{Triangle[scale width=0.6,
-      scale length=0.3]},line width=7.5,color=jNormalTextFGStyleLight},
+      scale length=0.3]},line width=7.5,
+    color=jNormalTextFGColorInLightStyle},
   % Linia do łączenia wierzchołków w diagramach
   thick diagram line/.style={-,line width=7.5,
-    color=jNormalTextFGStyleLight},
+    color=jNormalTextFGColorInLightStyle},
   thin diagram arrow/.style={-{Stealth[scale=1.2]}},
 }
 % ############################
