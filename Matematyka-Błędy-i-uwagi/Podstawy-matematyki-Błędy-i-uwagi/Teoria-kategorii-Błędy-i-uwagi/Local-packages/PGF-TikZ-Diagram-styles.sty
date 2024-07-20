@@ -16,14 +16,20 @@
 % Styles for writing nodes (block) of diagram
 
 \tikzset{
-  % Square node with rounded corners
+  % Blue square node with rounded corners
   diagram block/.style={rectangle,rounded corners,
     text centered,minimum height=4.5em,text width=7em,
-    fill=jAxisBlue,text=jMathTextFGColorInDarkStyle},
-  % Square node with rounded corners
+    fill=jAxisBlue,text=jMathTextFGColorOfStyleDark},
+  small diagram block/.style={rectangle,rounded corners,
+    text centered,minimum height=2em,text width=7em},
+  % ??? rectangle node
   diagram square block/.style={rectangle,
     text centered,minimum height=4.5em,text width=7em,
-    fill=brown,text=jMathTextFGColorInDarkStyle},
+    fill=brown,text=jMathTextFGColorOfStyleDark},
+  % ???
+  small diagram square block/.style={rectangle,
+    text centered,minimum height=4.5em,text width=7em,
+  fill=brown,text=jMathTextFGColorOfStyleDark}
 }
 % ############################
 
@@ -35,13 +41,16 @@
 % Styles for drawing arrows of diagram
 
 \tikzset{
-  % Thick arrow to connecting diagram
+  % Thick arrow to connecting diagram nodes
   thick diagram arrow/.style={-{Triangle[scale width=0.6,
       scale length=0.3]},line width=7.5,
-    color=jNormalTextFGColorInLightStyle},
-  % Linia do łączenia wierzchołków w diagramach
+    color=jNormalTextFGColorOfStyleLight},
+  % Line of thick diagram arrow
   thick diagram line/.style={-,line width=7.5,
-    color=jNormalTextFGColorInLightStyle},
+    color=jNormalTextFGColorOfStyleLight},
+  % Thin arrow to connecting diagram nodes
   thin diagram arrow/.style={-{Stealth[scale=1.2]}},
+  % ??? jaka jest grubość linii w strzałce nad nami?
+  % thin diagram arrow/.style={-{Stealth[scale=1.2]}},
 }
 % ############################
