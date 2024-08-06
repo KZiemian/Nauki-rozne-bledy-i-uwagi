@@ -94,7 +94,7 @@ url=false,
 eprint=true,
 ]{biblatex}
 
-\addbibresource{Systemy-operacyjne-Bibliography.bib}
+\addbibresource{Matematyka-dyskretna-Bibliography.bib}
 
 
 
@@ -117,10 +117,10 @@ eprint=true,
 % You need to put them in the same directory as .tex file
 % ------------------------------------------------------
 % Package containing various command useful for working with a text
-\usepackage{general-commands}
+\usepackage{./Local-packages/general-commands}
 % Package containing commands and other code useful for working with
 % mathematical text
-\usepackage{math-commands}
+\usepackage{./Local-packages/math-commands}
 
 
 
@@ -183,11 +183,11 @@ eprint=true,
 
 
 
-% ######################################
-\section{Oznaczenia i~konwencje}
+% % ######################################
+% \section{Oznaczenia i~konwencje}
 
-\label{sec:Oznaczenia-i-konwencje}
-% ######################################
+% \label{sec:Oznaczenia-i-konwencje}
+% % ######################################
 
 
 
@@ -201,7 +201,7 @@ eprint=true,
 % ######################################
 \section{Ronald L.~Graham, Donald E.~Knuth, Oren Patashniki
   \textit{Matematyka konkretna},
-  \cite{Graham-Knuth-Patashnik-Matematyka-Konkretna-Wyd-2012}}
+  \parencite{Graham-Knuth-Patashnik-Matematyka-Konkretna-Pub-2012}}
 
 \label{sec:Graham-Knuth-Patashnik-Matematyka-konkretna}
 % ######################################
@@ -213,9 +213,10 @@ eprint=true,
 \vspace{0em}
 
 
-Odstępy w~tekście, zwłaszcza po znaku kropki, wydają mi~się często zbyt duże.
-Ten problem pojawia~się jednak tak często, że~nie będę odnotowywał tu
-każdego jego wystąpienia.
+\noindent
+Odstępy w~tekście tej książki, zwłaszcza te występujące po znaku kropki,
+wydają mi~się często zbyt duże. Ten problem pojawia~się jednak tak często,
+że~nie będę odnotowywał tu każdego jego wystąpienia.
 
 
 
@@ -234,8 +235,31 @@ każdego jego wystąpienia.
 
 \noindent
 \StrWierszDol{14}{6} Przed tym wierszem powinien znajdować~się pionowy
-odstęp. Wtedy układ logiczny tekstu będzie bardziej spójny z~jego układem
-graficznym.
+odstęp. Wtedy układ graficzny tekstu będzie bardziej spójny z~jego układem
+logicznym.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszeDol{14}{10 i~11} Odstęp między tymi wierszami powinien być
+mniejszy, tak by Czytelnik od razu zauważył, że~są one częścią objaśnienia
+tego samego symbolu.
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -547,59 +571,35 @@ graficznym.
 
 
 
-  \newpage
+  % \newpage
 
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    % 40  & & 12 & ${ m + 1 \atop n }$ & $\frac{ m + 1 }{ n }$ \\
-    % 44  & & \hphantom{0}4 & $\sqrt{ a x }$ & $\sqrt{ a } x$ \\
-    % 44  & & \hphantom{0}1 & $\sqrt{ a x }$ & $\sqrt{ a } x$ \\
-    % 45  & & 13 & $2 \sqrt{ a } t - b$ & $2 \sqrt{ c } t - b$ \\
-    % 46  & & \hphantom{0}8 & $( 2 a x + b^{ 2 } )$ & $( 2 a x + b )^{ 2 }$ \\
-    % 222 & & \hphantom{0}5 & [9] jest rzeczywiście & jest oczywiście \\
-    % 224 & & 17 & $A'_{ n + m }$ & $A'_{ n - m }$ \\
-    % 226 & & \hphantom{0}7 & $H_{ 2k }$ & $H_{ 2^{ k } }$ \\
-    % 227 & 11 & & $2^{ k + 1 } + 1$ & $2^{ k - 1 } + 1$ \\
-    % 229 & & \hphantom{0}9 & $< \frac{ 1 }{ 2^{ n } }$
-    % & $\leq \frac{ 1 }{ 2^{ n } }$ \\
-    % 231 & \hphantom{0}8 & & $1\; ;$ & $1;$ \\
-    % 233 & & \hphantom{0}5 & $\epsilon = \Ecal - 1$ & $\epsilon < \Ecal - 1$ \\
-    % 233 & & \hphantom{0}5 & $\Ecal - \epsilon = 1$ & $\Ecal - \epsilon > 1$ \\
-    % 234 & 11 & & $\Dcal_{ n } > 1$ & $\Dcal_{ n } \geq 1$ \\
-    % 238 & & \hphantom{0}3 & $( 1 + x )^{ 1 / x } + \ln( 1 + x )$
-    %        & $( 1 + x )^{ 1 / x } \ln( 1 + x )$ \\
-           & & & & \\
-           & & & & \\
-           % & & & & \\
-           % & & & & \\
-           % & & & & \\
-           % & & & & \\
-           % 479 & \hphantom{0}2 & & $\int\limits_{ 0 }^{ +\infty }$
-           % & $\int\limits_{ a }^{ +\infty }$ \\[0.8em]
-           % 479 & \hphantom{0}4 & & $\int\limits_{ a }^{ A } \frac{ dx }{ x }$
-           % & $\int\limits_{ a }^{ A } \frac{ dx }{ x^{ \lambda } }$ \\[0.5em]
-           % 483 & \hphantom{0}4 & & $I^{ 3 }$ & $I^{ 2 }$ \\
-           % 526 & & \hphantom{0}7 & $1 + t)$ & $( 1 + t )$ \\
-    \hline
-  \end{tabular}
+  % \begin{tabular}{|c|c|c|c|c|}
+  %   \hline
+  %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+  %                             & Powinno być \\ \cline{2-3}
+  %   & Od góry & Od dołu & & \\
+  %   \hline
+  %          & & & & \\
+  %          & & & & \\
+  %          % & & & & \\
+  %          % & & & & \\
+  %          % & & & & \\
+  %          % & & & & \\
+  %          % 479 & \hphantom{0}2 & & $\int\limits_{ 0 }^{ +\infty }$
+  %          % & $\int\limits_{ a }^{ +\infty }$ \\[0.8em]
+  %          % 479 & \hphantom{0}4 & & $\int\limits_{ a }^{ A } \frac{ dx }{ x }$
+  %          % & $\int\limits_{ a }^{ A } \frac{ dx }{ x^{ \lambda } }$ \\[0.5em]
+  %          % 483 & \hphantom{0}4 & & $I^{ 3 }$ & $I^{ 2 }$ \\
+  %          % 526 & & \hphantom{0}7 & $1 + t)$ & $( 1 + t )$ \\
+  %   \hline
+  % \end{tabular}
 
 \end{center}
 
 \VerSpaceSix
 
 
-% \StrWd{34}{3} \\
-% \Jest  Zróżniczkujmy (10) obustronnie \\
-% \Powin Wykonując jawnie różniczkowanie w~(10) \\
-% \StrWd{71}{16} \\
-% \Jest  $R\left( x, \sqrt{ a x^{ 4 } + b x^{ 3 } + c x^{ 2 } + d x + e }
-% \right.$ \\
-% \Powin $R\left( x, \sqrt{ a x^{ 4 } + b x^{ 3 } + c x^{ 2 } + d x + e }
-% \right)$ \\
+
 
 
 % ############################
