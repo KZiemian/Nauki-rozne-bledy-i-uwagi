@@ -127,6 +127,27 @@ eprint=true,
 
 
 % ------------------------------------------------------
+% Wonderful package PGF/TikZ
+% ------------------------------------------------------
+\usepackage{tikz}
+
+% Loding TikZ libraries
+% \usetikzlibrary{decorations.markings}
+
+% Pics for drawing charts
+% \usepackage{PGF-TikZ-Chart-pics}
+
+% Pics for drawing geometric objects
+% \usepackage{PGF-TikZ-Geometry-pics}
+
+% Styles for arrows
+% \usepackage{PGF-TikZ-Arrows-styles}
+
+
+
+
+
+% ------------------------------------------------------
 % Package "hyperref"
 % They advised to put it on the end of preambule
 % ------------------------------------------------------
@@ -218,7 +239,75 @@ Odstępy w~tekście tej książki, zwłaszcza te występujące po znaku kropki,
 wydają mi~się często zbyt duże. Ten problem pojawia~się jednak tak często,
 że~nie będę odnotowywał tu każdego jego wystąpienia.
 
+\VerSpaceFour
 
+
+
+
+
+\noindent
+Do tej pory nie udało mi~się znaleźć w~tej książce informacji, czy liczby
+naturalne zawierając~$0$, czy też nie. By uniknąć niedomówień, przyjmujemy,
+że~zbiór liczb naturalny jest postaci
+\begin{equation}
+  \label{eq:1111}
+  \Nbb = \{ 0, 1, 2, 3, \ldots \}.
+\end{equation}
+
+Różnorakie ciągi rozpatrywane w~książce, w~zależności od potrzeby, będą
+zaczynały~się od indeksu $0$ lub~$1$, co oczywiście nie przedstawia żadnego
+problemu. Jednocześnie jednak warto doprecyzować pojęcie sumy~$S_{ n }$,
+oznaczającą sumę początkowych liczb naturalnych. Definiujemy ją jako
+\begin{equation}
+  \label{eq:1112}
+  S_{ n } := \sum_{ i = 0 }^{ n } i.
+\end{equation}
+Zgodnie więc z~definicją $S_{ 0 } = 0$. Natomiast symbol $S_{ n }$ oznacza
+sumę $n + 1$ (!) początkowych liczb naturalnym. Możliwe, że~autorzy
+korzystają z~konwencji, wedle której suma w~$S_{ n }$ przebiega od $i = 1$
+do~$n$, jednak nie powinno to prowadzić do większych problemów w~tych
+notatkach.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+Dla zupełności przedstawimy tutaj indukcyjny dowód dobrze znanego wzoru
+\begin{equation}
+  \label{eq:1113}
+  S_{ n } = \frac{ n ( n + 1 ) }{ 2 }.
+\end{equation}
+Dla bazy indukcyjnej otrzymujemy od razu
+
+\negVerSpaceFour
+
+
+\begin{subequations}
+
+  \begin{align}
+    \label{eq:aa}
+    &\hspace{1em} 0 = 0, \\
+    &\frac{ 0 ( 0 + 1 ) }{ 2 } = 0.
+  \end{align}
+
+\end{subequations}
+
+
+\noindent
+Dla kroku indukcyjnego mamy
+
+\begin{subequations}
+
+  \begin{align}
+    \label{eq:aa}
+    L_{ n - 1 } &= 1 + S_{ n - 1 }, \\
+    L_{ n } = L_{ n - 1 } + n &= 1 + S_{ n - 1 } + n = 1 + S_{ n }.
+  \end{align}
+
+\end{subequations}
 
 
 
@@ -249,12 +338,164 @@ logicznym.
 mniejszy, tak by Czytelnik od razu zauważył, że~są one częścią objaśnienia
 tego samego symbolu.
 
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszDol{18}{12} Czytamy tutaj „Zgadnij postać wyrażenia matematycznego
+opisującego szukaną wartość”. Nawet jeśli to jest poprawne tłumaczenie
+z~angielskiego, to biorąc pod uwagę, że w~punkcie trzecim czytam „Znajdź
+i~udowodnij”, treść omawianego zadania, w~której sporo miejsca poświęcono
+wyprowadzeniu konkretnego wyrażenia oraz sens jaki, w~naszej opinii, tekst
+powinien przekazywać, proponujemy by zmienić ten tekst został zmieniony
+na~„Znajdź postać\ldots”. Postulowaną zmianę umieściliśmy, też w~tabeli w~dziale
+„Błędy”.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{21} Indukcyjny dowód wzoru
+\begin{equation}
+  \label{eq:1111}
+  L_{ n } = \frac{ n ( n + 1 ) }{ 2 } + 1,
+\end{equation}
+można też przeprowadzić w~następujący sposób. Na podstawie „rozwinięcia”
+formuły na $L_{ n }$ postulujemy związek
+\begin{equation}
+  \label{eq:1113}
+  L_{ n } = 1 + S_{ n },
+\end{equation}
+gdzie $S_{ n }$ to suma szeregu kolejnych liczb naturalnych. Baza indukcyjna
+jest spełniona, mamy bowiem
+
+\negVerSpaceFive
+
+
+\begin{subequations}
+
+  \begin{align}
+    \label{eq:1114}
+    L_{ 0 } &= 1, \\
+    1 + S_{ 0 } &= 1 + 0 = 1,
+  \end{align}
+
+\end{subequations}
+
+\noindent
+zgodnie z~tym co powiedziano wcześniej o~definicji symbolu~$S_{ n }$. Gdy
+chodzi o~krok indukcyjny, mamy
+\begin{equation}
+  \label{eq:1115}
+  L_{ n } = L_{ n - 1 } + n = 1 + S_{ n - 1 } + n = 1 + S_{ n }.
+\end{equation}
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+Wkraczając w~sferę przesadnego pedantyzmu, przyjrzyjmy~się podanej tu
+przybliżonej definicji zwartego wyrażenia matematycznego.
+
+
+
+
+% ##################
+\begin{quote}
+
+  Wyrażenie na wartość $f( n )$ jest w~postaci zwartej, jeśli możemy je
+  wyliczyć stosując skończoną, niezależna od~$n$, liczbę „dobrze znanych”
+  działań standardowych.
+
+\end{quote}
+% ##################
+
+
+
+
+
+Autorzy stwierdzają, że~wyrażenie $2^{ n }$ jest w~postaci zwartej, gdyż
+niezależnie od~wartości $n$ obliczenie go sprowadza~się do wykonania jednej
+wartości potęgowania. Tutaj jednak natrafiamy na problem, który autorzy
+omawiają na przykładzie funkcji silnia. Stwierdzają bowiem, że~wyrażenie
+$1 \cdot 2 \cdot 3 \cdot \ldots \cdot n$ nie jest w~postaci zwartej, zaś $n!$ jest, mimo że
+oba są sobie równe. Tak samo, $2^{ n }$ jest przez nich zakwalifikowane jako wyrażenie zwarte, lecz równoważny mu iloczyn
+\begin{equation}
+  \label{eq:aa}
+  \underbrace{2 \cdot 2 \cdot \ldots \cdot 2}_{ n \text{ razy} } = 2^{ n },
+\end{equation}
+już nie możemy być tak zakwalifikowane, bo zawiera $n - 1$ operacji mnożenia.
+
+Jak sami autorzy zaznaczają, definicja ta jest tylko przybliżona, ma pomóc
+nam wyrobić sobie intuicję co to jest wyrażenie w~postaci zwartej, a~nie
+podawać dokładne kryterium. Dlatego te uwagi nie podważają tego co napisano
+w~książce, kierują nas jednak ku konkretnemu problemowi. Czy na to czy dane
+wyrażenie jest zwarte, ma wpływ to, czy istnieje odpowiednio „przyzwoita”
+procedura rachunkowa pozwalające je obliczyć, choćby tylko w~przybliżeniu?
+W~książce znajdujemy stwierdzenie, że~dla silni istnieje wzór Stirlinga,
+który pozwala obliczyć silnię z~dobrą dokładnością, a~który zawiera tylko
+„przyzwoite” operacje, dlatego $n!$ można uważać za wyrażenie w~postaci
+zwartej. Przemawia to na rzecz twierdzącej odpowiedzi na zadane wcześniej
+pytanie.
+
+Zagadnienie to jest niewątpliwie ciekawe, na razie musimy jednak przerwać
+nasze rozważania w~tym miejscu. Zaznaczmy tylko następujące pytanie:
+czy istnieje procedura rachunkowa, która pozwala uznać $2^{ n }$ za
+wyrażenie w~postaci zwartej?
 
 
 
 
 
 
+
+
+% ##################
+\begin{figure}[h]
+
+  \label{fig:Leja-Funkcje-zespolone-01}
+
+  \centering
+
+
+  \begin{tikzpicture}
+
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (4,0);
+    \coordinate (C) at (4,1.5);
+    \coordinate (D) at (0,1.5);
+    \coordinate (center) at (2,0.75);
+
+
+
+    \draw[dotted] (A) -- (center);
+
+    \draw[dotted] (D) -- (center);
+
+    \draw (center) -- (B);
+
+    \draw (center) -- (C);
+
+
+    \node at (3.5,0.75) {1};
+
+  \end{tikzpicture}
+
+  \caption{Obecna wersja rysunku na dole strony 22~(a), proponowana
+    wersja~(b)}
+
+
+\end{figure}
+% ##################
 
 
 
@@ -269,8 +510,6 @@ tego samego symbolu.
 % \begin{theorem}
 %   \label{thm:FichtenholzVolII-01}
 
-%   Każde dwie funkcje pierwotne funkcji $f: I \to \Rbb$ różnią~się
-%   o~funkcje stałą.
 
 % \end{theorem}
 
@@ -278,36 +517,12 @@ tego samego symbolu.
 
 % \begin{proof}
 
-%   Oznaczmy dowolne dwie funkcje pierwotne $f$ przez $F_{ 1 }$
-%   oraz~$F_{ 2 }$ i~oznaczmy $g( x ) := F_{ 1 }( x ) - F_{ 2 }( x )$.
-%   Zachodzi wówczas
-%   \begin{equation}
-%     \label{eq:FichtenholzVolII-06}
-%     \frac{ d g( x ) }{ dx } =
-%     \frac{ d }{ dx } \big( F_{ 1 }( x ) - F_{ 2 }( x ) \big) = 0, \quad
-%     \forall x \in I.
-%   \end{equation}
-%   Rozważmy dwa dowolne punkty $x_{ 1 }, x_{ 2 } \in I$. Wraz z~nimi
-%   w~$I$ ~się cały odcinek $[ x_{ 1 }, x_{ 2 } ]$. Spełnione~są tym
-%   samym założenia twierdzenia o~wartości średniej, na~mocy którego
-%   \begin{equation}
-%     \label{eq:FichtenholzVolII-07}
-%     g( x_{ 2 } ) = g( x_{ 1 } ) + g'( c ) ( x_{ 2 } - x_{ 1 } )
-%     = g( x_{ 1 } ), \quad c \in ( x_{ 1 }, x_{ 2 } ).
-%   \end{equation}
-
 % \end{proof}
 % % #############
 
 
 
 
-
-% Przypomnijmy, że~dowolny zbiór w~$\Rbb$ można rozłożyć na~składowe
-% spójne (jest to szczególny przypadek ogólnego twierdzenia dla
-% przestrzeni topologicznych, zob.~str.~79,
-% \cite{SchwartzKursAnalizyMatematycznejVolI1979}). Wynika stąd
-% następujący wniosek.
 
 
 
@@ -317,28 +532,9 @@ tego samego symbolu.
 % \begin{corollary}
 %   \label{cor:FichtenholzVolII-01}
 
-%   Niech $A = \bigcup_{ \iota \in \Ical } I_{ \iota }$, przy czym każdy
-%   z~przedziałów
-%   $I_{ \iota }$ jest składową spójną $A$ i~niech $f: A \to \Rbb$
-%   będzie różniczkowalna na~każdym $I_{ \iota }$. Wówczas dwie funkcje
-%   pierwotne~$f$ różnią~się o~funkcje schodkową $g( x )$, która jest
-%   stała na~każdym $I_{ \iota }$.
-
-% \end{corollary}
-
-
 
 % \begin{proof}
 
-%   Ponieważ suma dwóch różnych $I_{ \iota }$ nie przedziałem zawartym
-%   w~$A$, pochodna jest dobrze określona w~każdym punkcie tego
-%   zbioru\footnote{W~przeciwnym razie mogłoby dojść do~sytuacji,
-%     że~$I_{ 1 } = (0, 1)$, $I_{ 2 } = [ 1, 2 )$, więc
-%     $( 0, 2 ) \subset A$, lecz funkcja nie jest wszędzie
-%     różniczkowalna, bo~pochodna w~$1$ nie istnieje.}, więc dla każdego
-%   $I_{ \iota }$ można zastosować twierdzenie
-%   \ref{thm:FichtenholzVolII-01}, skąd wynika, że~funkcja $G( x )$ jest
-%   stała na~tym zbiorze.
 
 % \end{proof}
 % % #############
@@ -347,90 +543,11 @@ tego samego symbolu.
 
 
 
-% Podany powyżej kontrprzykład pokazuje, że~silniejszy wynik niż dla
-% funkcji określonej na zbiorze $A$ nie może zachodzić. Widzimy teraz,
-% że~problem jest bardziej złożony, niż~się powszechnie twierdzi. Błąd
-% wynika zapewne stąd, iż~większość osób nie interesuje badanie tak
-% „subtelnego” przypadku, jakim jest dziedzina funkcji bardziej
-% skomplikowana niż~zbiór~$I$, choć przykład funkcji $1 / x$ pokazuje,
-% że~sytuacja ta jest spotykana w~konkretnych, prostych rachunkach.
-
-% Otwartym pozostaje pytanie, czy sam problem można postawić w~bardziej
-% ogólnej postaci? Po pierwsze twierdzenie o~wartości średniej wymaga by
-% funkcja była ciągła na przedziale $[ a, b ]$, a~różniczkowalna tylko
-% w~$( a, b )$ (zob.~punkt~112, str.~196,
-% \cite{FichtenholzRachunekRozniczkowyETCVolI2005}), co~potencjalnie
-% może prowadzić do~uogólnienia pojęcia funkcji pierwotnej. Po~drugie,
-% czy~można zdefiniować w~sposób sensowny pochodną funkcji na~zbiorze,
-% który nie jest postaci $\bigcup_{ \iota \in \Ical } I_{ \iota }$ (przy
-% zadanym ograniczeniu na~sumę dwóch $I_{ \iota }$)? Jeśli by tak było,
-% to pytanie o~postać funkcji pierwotnych jest otwarte, a~wynik ciężki
-% do~przewidzenia.
-
-% \vspace{\spaceFour}
 
 
 
 
 
-% \noindent
-% \Str{34} Nie jestem w~stanie zrozumieć, dlaczego największym
-% wspólnym dzielnikiem wielomianów $Q$ i~$Q'$ jest $Q_{ 1 }$. Może to
-% jakiś znany fakt z~algebry? \Dok
-
-% \vspace{\spaceFour}
-
-
-
-
-
-% \noindent
-% \textbf{Str.~223, punkt [363, 5)].} Problem z~tym przykładem
-% jest taki, że
-% \begin{equation}
-%   \label{eq:FichtenholzVolII-08}
-%   \sum_{ n = 1 }^{ \infty } \frac{ x^{ 2n - 1 } }{ 1 - x^{ 2n } }
-%   \neq \sum_{ n = 1 }^{ \infty } \left( \frac{ 1 }{ 1 - x^{ 2n - 1 } }
-%     - \frac{ 1 }{ 1 - x^{ 2n } } \right).
-% \end{equation}
-% Gdyby tak równość zachodziła, to po pierwsze
-% \begin{equation}
-%   \label{eq:FichtenholzVolII-09}
-%   \begin{split}
-%     \sum_{ i = 1 }^{ n } \frac{ x^{ 2i - 1 } }{ 1 - x^{ 2n } }
-%     &=
-%       \frac{ 1 }{ 1 - x } - \frac{ 1 }{ 1 - x^{ 2 } }
-%       + \frac{ 1 }{ 1 - x^{ 3 } } - \frac{ 1 }{ 1 - x^{ 4 } }
-%       + \ldots + \frac{ 1 }{ 1 - x^{ 2n - 1 } }
-%       - \frac{ 1 }{ 1 - x^{ 2n } } \\
-%     &\neq \frac{ 1 }{ 1 - x } - \frac{ 1 }{ 1 - x^{ 2n } }.
-%   \end{split}
-% \end{equation}
-% Wynika to z~tego, że~z~wyjątkiem $n = 1$
-% \begin{equation}
-%   \label{eq:FichtenholzVolII-10}
-%   \frac{ x^{ 2n - 1 } }{ 1 - x^{ 2n } } \neq
-%   \frac{ 1 }{ 1 - x^{ 2n - 1 } } - \frac{ 1 }{ 1 - x^{ 2n } }.
-% \end{equation}
-% Prawidłowa równość ma~postać
-% \begin{equation}
-%   \label{eq:FichtenholzVolII-11}
-%   \sum_{ n = 1 }^{ \infty } \frac{ x^{ 2n - 1 } ( 1 - x ) }{ ( 1 - x^{ 2n - 1 } )
-%     ( 1 - x^{ 2n } ) }
-%   \neq
-%   \sum_{ n = 1 }^{ \infty } \left( \frac{ 1 }{ 1 - x^{ 2n - 1 } }
-%     - \frac{ 1 }{ 1 - x^{ 2n } } \right),
-% \end{equation}
-% jednak postać wyrazu ogólnego szeregu po~lewej stronie tej równości
-% jest znacznie mniej elegancka i~zwięzła, niż~tego
-% w~\eqref{eq:FichtenholzVolII-08}, wątpliwe więc, że~Fichtenholz chciał
-% podać tu~ten przykład.
-
-% Wydaje mi~się, że~nie jest to kwestia drobnej literówki we~wzorze
-% \eqref{eq:FichtenholzVolII-08}, lecz~został tu~popełniony poważniejszy
-% błąd, którego nie jestem w~stanie poprawić.
-
-% \vspace{\spaceFour}
 
 
 
@@ -529,7 +646,7 @@ tego samego symbolu.
     & Od góry & Od dołu & & \\
     \hline
     11 & \hphantom{0}2 & & jeszcze~? & jeszcze? \\
-           % & & & & \\
+           18 & & 12 & Zgadnij & Znajdź \\
            % & & & & \\
            % & & & & \\
            % & & & & \\
