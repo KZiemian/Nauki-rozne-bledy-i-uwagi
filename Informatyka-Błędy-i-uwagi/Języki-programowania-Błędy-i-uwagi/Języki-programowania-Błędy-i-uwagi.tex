@@ -94,7 +94,7 @@ url=false,
 eprint=true,
 ]{biblatex}
 
-\addbibresource{LogikaITeoriaMnogosciBibliography.bib}
+\addbibresource{Języki-programowania-Bibliography.bib}
 
 
 
@@ -117,7 +117,7 @@ eprint=true,
 % You need to put them in the same directory as .tex file
 % ------------------------------------------------------
 % Package containing various command useful for working with a text
-\usepackage{general-commands}
+\usepackage{./Local-packages/general-commands}
 % Package containing commands and other code useful for working with
 % mathematical text
 % \usepackage{math-commands}
@@ -179,9 +179,59 @@ eprint=true,
 
 
 % ######################################
+\section{Jo Van Hoey
+  \textit{Programowanie w~asemblerze x64. Od~nowicjusza
+    do~znawcy~AVX},
+  \parencite{Hoey-Programowanie-w-asemblerze-x64-ETC-Pub-2024}}
+
+\label{sec:Hoey-Programowania-w-asemblerze-x64}
+% ######################################
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    20 & 11 & & J.J.R. & J.R.R. \\
+    22 & & \hphantom{0}7 & \textsf{'h'} & \textsf{'w'} \\
+    22 & & \hphantom{0}6 & \textsf{'e'} & \textsf{'i'} \\
+    23 & 11 & & \textsf{3.1416} & \textsf{3.1415} \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\VerSpaceSix
+
+
+% ######################################
+
+
+
+
+
+
+
+
+
+
+% ######################################
 \section{B.W. Kernighan, D.M. Ritchie
   \textit{Język ANSI~C},
-  \cite{Kernighan-Ritchie-Jezyk-ANSI-C-Wyd-2001}}
+  \parencite{Kernighan-Ritchie-Jezyk-ANSI-C-Pub-2004}}
 
 \label{sec:Kernighan-Ritchie-Jezyk-ANSI-C}
 % ######################################
@@ -202,9 +252,9 @@ eprint=true,
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    28  & & 13 & +32 767) & +32 767 \\
+    ???28  & & 13 & +32 767) & +32 767 \\
     % & & & & \\
-    211 & 13 & & następnego & danego \\
+    ????211 & 13 & & następnego & danego \\
     % & & & & \\
     \hline
   \end{tabular}
