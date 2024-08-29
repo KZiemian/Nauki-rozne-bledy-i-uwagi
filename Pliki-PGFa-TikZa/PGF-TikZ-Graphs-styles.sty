@@ -1,0 +1,33 @@
+% ####################################################################
+%
+\ProvidesPackage{PGF-TikZ-Diagrams-styles}
+% ####################################################################
+
+
+
+% ##################
+% Importing PGF/TikZ's librarie with arrows
+
+% \usetikzlibrary{arrows.meta}
+
+% Defining distance between bits nodes (with on grid set to false)
+\newcommand{\bitsDistance}{-0.02em}
+
+% ????
+\newcommand{\nodeScaleBigger}{1.2}
+% ##################
+
+
+
+% ############################
+% Styles for drawning numbers as graphs
+
+\tikzset{
+  % Node for drawing single bit
+  bit node/.style={rectangle,scale=\nodeScaleBigger,
+    minimum size=0.9em,draw=black!90!white,thick},
+  % Node for drawing special bit
+  special bit node/.style={rectangle,scale=\nodeScaleBigger,minimum size=1em,
+    fill=jOrange,text=jMathTextFGColorOfStyleDark}
+}
+% ############################
