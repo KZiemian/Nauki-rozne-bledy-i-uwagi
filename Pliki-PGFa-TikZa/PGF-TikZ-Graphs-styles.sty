@@ -11,7 +11,10 @@
 % \usetikzlibrary{arrows.meta}
 
 % Defining distance between bits nodes (with on grid set to false)
-\newcommand{bitsDistance}{0pt}
+\newcommand{\bitsDistance}{-0.02em}
+
+% ????
+\newcommand{\nodeScaleBigger}{1.2}
 % ##################
 
 
@@ -20,40 +23,11 @@
 % Styles for drawning numbers as graphs
 
 \tikzset{
-  %
-  bit node/.style={rectangle,minimum size=1em,draw=black,
-    text=jMathTextFGColorOfStyleDark},
-  % small diagram block/.style={rectangle,rounded corners,
-  %   text centered,minimum height=2em,text width=7em},
-  % % ??? rectangle node
-  % diagram rectangle block/.style={rectangle,
-  %   text centered,minimum height=4.5em,text width=7em,
-  %   fill=brown,text=jMathTextFGColorOfStyleDark},
-  % % ???
-  % small diagram rectangle block/.style={rectangle,
-  %   text centered,minimum height=4.5em,text width=7em,
-  %   fill=brown,text=jMathTextFGColorOfStyleDark}
-}
-% ############################
-
-
-
-
-
-% ############################
-% Styles for drawing arrows of diagram
-
-\tikzset{
-  % % Thick arrow to connecting diagram nodes
-  % thick diagram arrow/.style={-{Triangle[scale width=0.6,
-  %     scale length=0.3]},line width=7.5,
-  %   color=jNormalTextFGColorOfStyleLight},
-  % % Line of thick diagram arrow
-  % thick diagram line/.style={-,line width=7.5,
-  %   color=jNormalTextFGColorOfStyleLight},
-  % % Thin arrow to connecting diagram nodes
-  % thin diagram arrow/.style={-{Stealth[scale=1.2]}},
-  % ??? jaka jest grubość linii w strzałce nad nami?
-  % thin diagram arrow/.style={-{Stealth[scale=1.2]}},
+  % Node for drawing single bit
+  bit node/.style={rectangle,scale=\nodeScaleBigger,
+    minimum size=0.9em,draw=black!90!white,thick},
+  % Node for drawing special bit
+  special bit node/.style={rectangle,scale=\nodeScaleBigger,minimum size=1em,
+    fill=jOrange,text=jMathTextFGColorOfStyleDark}
 }
 % ############################
