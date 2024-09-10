@@ -1,0 +1,45 @@
+% ####################################################################
+% PGF/TikZ's pics for drawning charts
+% ####################################################################
+\ProvidesPackage{PGF-TikZ-Chart-pics}
+
+
+
+% ############################
+% Setting of nodes
+\tikzstyle{number below x axis} = [below]
+
+\tikzstyle{number on the left of y axis} = [left]
+
+\tikzstyle{number on the right and below} = [right]
+
+
+% ############################
+
+
+% ############################
+% Pics for drawing ticks on the coordinate axis
+
+\tikzset{
+  % Basic tick for x axis, thin width
+  tick x axis thin/.pic = {
+    \draw[line width=0.4] (0,-0.125) -- (0,0.125);
+  },
+  % Shorter version of tick for x axis, thin width
+  tick x axis thin 1/.pic = {
+    \draw[line width=0.4] (0,-0.09) -- (0,0.09);
+  },
+  % Longer version of tick for x axis, thin width
+  tick x axis thin 2/.pic = {
+    \draw[line width=0.4] (0,-0.2) -- (0,0.2);
+  },
+  % Basic tick for y axis, thin width
+  tick y axis thin/.pic = {
+    \draw[line width=0.4] (-0.125,0) -- (0.125,0);
+  },
+  % ???
+  tick y axis thin 1/.pic = {
+    \draw[line width=0.4] (-0.09,0) -- (0.09,0);
+  }
+}
+% ############################
