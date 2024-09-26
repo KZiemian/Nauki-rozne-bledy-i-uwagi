@@ -94,7 +94,7 @@ url=false,
 eprint=true,
 ]{biblatex}
 
-\addbibresource{LogikaITeoriaMnogosciBibliography.bib}
+\addbibresource{Historia-nauki-Bibliography.bib}
 
 
 
@@ -168,19 +168,25 @@ eprint=true,
 
 
 
+
+
 % ######################################
 \maketitle % Tytuł całego tekstu
 % ######################################
 
 
 
-% ##################
+
+
+% ######################################
 \section{ % Autor i tytuł dzieła
   Nicolas Bourbaki \\
   \textit{Elementy historii matematyki},
-  \cite{BourbakiElementyHistoriiMatematyki1980}}
+  \parencite{Bourbaki-Elementy-historii-matematyki-Pub-1980}}
 
-\vspace{0em}
+\label{sec:Bourbaki-EHM}
+% ######################################
+
 
 
 % ##################
@@ -235,36 +241,40 @@ naprawić.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    8   & 11 & & metodzie ” & metodzie” \\
-    16  & & 17 & poprzednikom~($^{ 4 }$) & poprzednikom($^{ 4 }$) \\
-    18  & &  3 & „implikuje”) ($^{ 1 }$) & „implikuje”)($^{ 1 }$) \\
-    30  & & & 13) ($^{ 1 }$) & 13)($^{ 1 }$) \\
-    37  & 15 & & [193c]),obejmujący & [193c]), obejmujący \\
-    39  & &  7 & środka & środka” \\
-    41  & 13 & & zdumieniu ($^{ 2 }$) & zdumieniu($^{ 2 }$) \\
-    43  & 12 & & stwierdza & stwierdza też \\
-    43  & &  9 & myśl & pomysł \\
-    44  & & & analizy ($^{ 2 }$) & analizy($^{ 2 }$) \\
-    44  & & 17 & chwili ($^{ 2 }$) & chwili($^{ 2 }$) \\
-    45  & 17 & & 448) & 448)) \\
-    48  & &  9 & potocznym & sformalizowanym \\
-    60  & 18 & & est & jest \\
-    61  & &  4 & matematyków,a & matematyków, a \\
-    65  &  1 & & niepustego & niepustych \\
-    70  &  2 & & zespolonych~($^{ 1 }$) & zespolonych($^{ 1 }$) \\
-    70  &  8 & & wektorów~($^{ 2 }$) & wektorów($^{ 2 }$) \\
-    70  & 15 & & równoważności~($^{ 3 }$) & równoważność($^{ 3 }$) \\
-    71  &  3 & & pierwsza ($^{ 1 }$) & pierwsza($^{ 1 }$) \\
-    71  & 15 & & skończonego ($^{ 2 }$) & skończonego($^{ 2 }$) \\
-    72  &  1 & & jeszcze & wciąż \\
-    72  &  3 & & grup”~($^{ 2 }$) & grup”($^{ 2 }$) \\
-    72  &  9 & & abstrakcyjnej~($^{ 2 }$) & abstrakcyjnej($^{ 2 }$) \\
-    72  & & 16 & 84) ($^{ 3 }$) & 84)($^{ 3 }$) \\
-    73  & 10 & & wieku~($^{ 1 }$) & wieku($^{ 1 }$) \\
-    73  & & 12 & roli; & roli, \\
-    74  & 12 & & Jordana-H\"{o}ldera”~($^{ 1 }$)
+    \hphantom{0}8 & 11 & & metodzie ” & metodzie” \\
+    16 & & 17 & poprzednikom~($^{ 4 }$) & poprzednikom($^{ 4 }$) \\
+    18 & & \hphantom{0}3 & „implikuje”) ($^{ 1 }$) & „implikuje”)($^{ 1 }$) \\
+    30 & & & 13) ($^{ 1 }$) & 13)($^{ 1 }$) \\
+    37 & 15 & & [193c]),obejmujący & [193c]), obejmujący \\
+    39 & & \hphantom{0}7 & środka & środka” \\
+    41 & 13 & & zdumieniu ($^{ 2 }$) & zdumieniu($^{ 2 }$) \\
+    43 & 12 & & stwierdza & stwierdza też \\
+    43 & & \hphantom{0}9 & myśl & pomysł \\
+    44 & & & analizy ($^{ 2 }$) & analizy($^{ 2 }$) \\
+    44 & & 17 & chwili ($^{ 2 }$) & chwili($^{ 2 }$) \\
+    45 & 17 & & 448) & 448)) \\
+    48 & & \hphantom{0}9 & potocznym & sformalizowanym \\
+    60 & 18 & & est & jest \\
+    61 & & \hphantom{0}4 & matematyków,a & matematyków, a \\
+    65 & \hphantom{0}1 & & niepustego & niepustych \\
+    70 & \hphantom{0}2 & & zespolonych~($^{ 1 }$) & zespolonych($^{ 1 }$) \\
+    70 & \hphantom{0}8 & & wektorów~($^{ 2 }$) & wektorów($^{ 2 }$) \\
+    70 & 15 & & równoważności~($^{ 3 }$) & równoważność($^{ 3 }$) \\
+    71 & \hphantom{0}3 & & pierwsza ($^{ 1 }$) & pierwsza($^{ 1 }$) \\
+    71 & 15 & & skończonego ($^{ 2 }$) & skończonego($^{ 2 }$) \\
+    72 & \hphantom{0}1 & & jeszcze & wciąż \\
+    72 & \hphantom{0}3 & & grup”~($^{ 2 }$) & grup”($^{ 2 }$) \\
+    72 & \hphantom{0}9 & & abstrakcyjnej~($^{ 2 }$)
+    & abstrakcyjnej($^{ 2 }$) \\
+    72 & & 16 & 84) ($^{ 3 }$) & 84)($^{ 3 }$) \\
+    73 & 10 & & wieku~($^{ 1 }$) & wieku($^{ 1 }$) \\
+    73 & & 12 & roli; & roli, \\
+    74 & 12 & & Jordana-H\"{o}ldera”~($^{ 1 }$)
     & Jordana-H\"{o}ldera”($^{ 1 }$) \\
-    74  & 15 & & ]139b] & [139b] \\
+    74 & 15 & & ]139b] & [139b] \\
+    82 & & \hphantom{0}9 & \textit{metafizycznego}”;
+    & \textit{metafizycznego}”); \\
+    83 & 12 & & Hamilton ($^{ 1 }$) & Hamilton($^{ 1 }$) \\
     \hline
   \end{tabular}
 
@@ -280,39 +290,46 @@ naprawić.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    82  & &  9 & \textit{metafizycznego}”; & \textit{metafizycznego}”); \\
-    83  & 12 & & Hamilton ($^{ 1 }$) & Hamilton($^{ 1 }$) \\
-    84  & &  6 & a~m.~in. & m.~in. \\
-    85  & & 16 & Jacobi ($^{ 1 }$) & Jacobi($^{ 1 }$) \\
-    86  & & 12 & używali & używają \\
-    89  & &  4 & niezależne, & niezależne; \\
-    90  & & 12 & 193)) & 193) \\
-    90  & &  4 & niekwadratowych ($^{ 1 }$) & niekwadratowych($^{ 1 }$) \\
-    91  &  6 & & niewymierna ($^{ 1 }$) & niewymierna($^{ 1 }$) \\
-    91  & & 17 & okręgi ($^{ 2 }$) & okręgi($^{ 2 }$) \\
-    92  &  1 & & wiemy ($^{ 1 }$) & wiemy($^{ 1 }$) \\
-    92  & 14 & & algebraicznych ($^{ 2 }$) & algebraicznych($^{ 2 }$) \\
-    93  & 10 & & niewiele ($^{ 1 }$) & niewiele($^{ 1 }$) \\
-    93  & 15 & & rachunkach ($^{ 2 }$) & rachunkach($^{ 2 }$) \\
-    93  & & 17 & kopiować analogiczne wzory & szukać analogicznych
-                                              wzorów \\
-    93  & &  3 & skopiowany & wzorowany \\
-    94  & 11 & & mianowicie ($^{ 1 }$) & mianowicie($^{ 1 }$) \\
-    94  & &  9 & w~~którym & z~którego \\
-    95  &  4 & & Algebrze & \textit{Algebrze} \\
-    95  &  8 & & nowoczesnych($^{ 1 }$).Wreszcie
-           & nowoczesnych($^{ 1 }$). Wreszcie \\
-    95  & 10 & & trzeciego ($^{ 2 }$) & trzeciego($^{ 2 }$) \\
-    95  & 16 & & dodatnie ($^{ 3 }$) & dodatnie($^{ 3 }$) \\
-    95  & & 13 & ,meno de & „meno de \\
-    96  & & 17 & 98) ($^{ 1 }$) & 98)($^{ 1 }$) \\
-    99  &  2 & & danego ($^{ 1 }$) & danego($^{ 1 }$) \\
-    99  &  3 & & \textit{metafizykę} ($^{ 2 }$)
-           & \textit{metafizykę}($^{ 2 }$) \\
-    99  &  6 & & wartości ($^{ 3 }$) & wartości($^{ 3 }$) \\
+    \hphantom{0}84 & & \hphantom{0}6 & a~m.~in. & m.~in. \\
+    \hphantom{0}85 & & 16 & Jacobi ($^{ 1 }$) & Jacobi($^{ 1 }$) \\
+    \hphantom{0}86 & & 12 & używali & używają \\
+    \hphantom{0}89 & & \hphantom{0}4 & niezależne, & niezależne; \\
+    \hphantom{0}90 & & 12 & 193)) & 193) \\
+    \hphantom{0}90 & & \hphantom{0}4 & niekwadratowych ($^{ 1 }$)
+    & niekwadratowych($^{ 1 }$) \\
+    \hphantom{0}91 & \hphantom{0}6 & & niewymierna ($^{ 1 }$)
+    & niewymierna($^{ 1 }$) \\
+    \hphantom{0}91 & & 17 & okręgi ($^{ 2 }$) & okręgi($^{ 2 }$) \\
+    \hphantom{0}92 & \hphantom{0}1 & & wiemy ($^{ 1 }$) & wiemy($^{ 1 }$) \\
+    \hphantom{0}92 & 14 & & algebraicznych ($^{ 2 }$)
+    & algebraicznych($^{ 2 }$) \\
+    \hphantom{0}93 & 10 & & niewiele ($^{ 1 }$) & niewiele($^{ 1 }$) \\
+    \hphantom{0}93 & 15 & & rachunkach ($^{ 2 }$) & rachunkach($^{ 2 }$) \\
+    \hphantom{0}93 & & 17 & kopiować analogiczne wzory
+    & szukać analogicznych wzorów \\
+    \hphantom{0}93 & & \hphantom{0}3 & skopiowany & wzorowany \\
+    \hphantom{0}94 & 11 & & mianowicie ($^{ 1 }$) & mianowicie($^{ 1 }$) \\
+    \hphantom{0}94 & & \hphantom{0}9 & w~~którym & z~którego \\
+    \hphantom{0}95 & \hphantom{0}4 & & Algebrze & \textit{Algebrze} \\
+    \hphantom{0}95 & \hphantom{0}8 & & nowoczesnych($^{ 1 }$).Wreszcie
+    & nowoczesnych($^{ 1 }$). Wreszcie \\
+    \hphantom{0}95 & 10 & & trzeciego ($^{ 2 }$) & trzeciego($^{ 2 }$) \\
+    \hphantom{0}95 & 16 & & dodatnie ($^{ 3 }$) & dodatnie($^{ 3 }$) \\
+    \hphantom{0}95 & & 13 & ,meno de & „meno de \\
+    \hphantom{0}96 & & 17 & 98) ($^{ 1 }$) & 98)($^{ 1 }$) \\
+    \hphantom{0}99 & \hphantom{0}2 & & danego ($^{ 1 }$) & danego($^{ 1 }$) \\
+    \hphantom{0}99 & \hphantom{0}3 & & \textit{metafizykę} ($^{ 2 }$)
+    & \textit{metafizykę}($^{ 2 }$) \\
+    \hphantom{0}99 & \hphantom{0}6 & & wartości ($^{ 3 }$)
+    & wartości($^{ 3 }$) \\
     100 & & 18 & pierwiastków ($^{ 1 }$) & pierwiastków($^{ 1 }$) \\
-    101 &  1 & & Gaussa ($^{ 1 }$) & Gaussa($^{ 1 }$) \\
-    101 &  7 & & pierwszego ($^{ 2 }$) & pierwszego($^{ 2 }$) \\
+    101 & \hphantom{0}1 & & Gaussa ($^{ 1 }$) & Gaussa($^{ 1 }$) \\
+    101 & \hphantom{0}7 & & pierwszego ($^{ 2 }$) & pierwszego($^{ 2 }$) \\
+    102 & \hphantom{0}8 & & Abel ($^{ 2 }$) & Abel($^{ 2 }$) \\
+    103 & 10 & & równania) ($^{ 2 }$) & równania)($^{ 2 }$) \\
+    106 & \hphantom{0}1 & & topologicznej ($^{ 1 }$)
+    & topologicznej($^{ 1 }$) \\
+    106 & 12 & & koła ($^{ 2 }$) & koła($^{ 2 }$) \\
     \hline
   \end{tabular}
 
@@ -328,38 +345,46 @@ naprawić.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    102 &  8 & & Abel ($^{ 2 }$) & Abel($^{ 2 }$) \\
-    103 & 10 & & równania) ($^{ 2 }$) & równania)($^{ 2 }$) \\
-    106 &  1 & & topologicznej ($^{ 1 }$) & topologicznej($^{ 1 }$) \\
-    106 & 12 & & koła ($^{ 2 }$) & koła($^{ 2 }$) \\
     106 & & 12 & zespolonych ($^{ 3 }$) & zespolonych($^{ 3 }$) \\
     106 & 16 & & [148a) & [148a] \\
     107 & & 13 & 23) ($^{ 2 }$) & 23)($^{ 2 }$) \\
     109 & 12 & & Euklidesa” ($^{ 1 }$) & Euklidesa”($^{ 1 }$) \\
-    110 &  9 & & ([dane] & [dane] \\
+    110 & \hphantom{0}9 & & ([dane] & [dane] \\
     110 & 15 & & całkowitej ($^{ 1 }$) & całkowitej($^{ 1 }$) \\
     111 & 18 & & kwadratem) ($^{ 2 }$) & kwadratem)($^{ 2 }$) \\
-    112 &  7 & & niewiadomych~~($^{ 1 }$) & niewiadomych($^{ 1 }$) \\
-    113 &  8 & & 373) -- ; & 373); \\
+    112 & \hphantom{0}7 & & niewiadomych~~($^{ 1 }$)
+    & niewiadomych($^{ 1 }$) \\
+    113 & \hphantom{0}8 & & 373) -- ; & 373); \\
     113 & 11 & & $p$-grup ($^{ 2 }$) & $p$-grup($^{ 2 }$) \\
     114 & 18 & & 174) ($^{ 1 }$) & 174)($^{ 1 }$) \\
-    115 &  9 & & rzędu~~($^{ 1 }$) & rzędu($^{ 1 }$) \\
+    115 & \hphantom{0}9 & & rzędu~~($^{ 1 }$) & rzędu($^{ 1 }$) \\
     115 & 18 & & później ($^{ 2 }$) & później($^{ 2 }$) \\
-    116 &  1 & & wieku ($^{ 1 }$) & wieku($^{ 1 }$) \\
+    116 & \hphantom{0}1 & & wieku ($^{ 1 }$) & wieku($^{ 1 }$) \\
     116 & 15 & & jedności ($^{ 2 }$) & jedności($^{ 2 }$) \\
-    117 &  2 & & [150b] ($^{ 1 }$) & [150b]($^{ 1 }$) \\
-    118 & &  9 & algebrze ($^{ 1 }$) & algebrze($^{ 1 }$) \\
-    118 & &  7 & topologia ($^{ 2 }$) & topologia($^{ 2 }$) \\
-    119 &  1 & & jeszcze prawdziwe & prawdziwe \\
+    117 & \hphantom{0}2 & & [150b] ($^{ 1 }$) & [150b]($^{ 1 }$) \\
+    118 & & \hphantom{0}9 & algebrze ($^{ 1 }$) & algebrze($^{ 1 }$) \\
+    118 & & \hphantom{0}7 & topologia ($^{ 2 }$) & topologia($^{ 2 }$) \\
+    119 & \hphantom{0}1 & & jeszcze prawdziwe & prawdziwe \\
     120 & & 13 & 488) ($^{ 1 }$) & 488)($^{ 1 }$) \\
-    121 &  5 & & algebraiczne ($^{ 1 }$) & algebraiczne($^{ 1 }$) \\
-    121 &  3 & & $\Zbb[ i |$ & $\Zbb[ i ]$ \\
-    122 &  3 & & Gaussa ($^{ 1 }$) & Gaussa($^{ 1 }$) \\
-    123 & & 11 & Galoisa ”czynników  & Galoisa ” czynników \\
+    121 & \hphantom{0}5 & & algebraiczne ($^{ 1 }$)
+    & algebraiczne($^{ 1 }$) \\
+    121 & \hphantom{0}3 & & $\Zbb[ i |$ & $\Zbb[ i ]$ \\
+    122 & \hphantom{0}3 & & Gaussa ($^{ 1 }$) & Gaussa($^{ 1 }$) \\
+    123 & & 11 & Galoisa ”czynników  & Galoisa” czynników \\
     % ???????????
     124 & & 10 & \textit{skończona} ($^{ 1 }$)
            & \textit{skończona}($^{ 1 }$) \\
-    125 &  6 & & podstawowe”~~($^{ 1 }$) & podstawowe”($^{ 1 }$) \\
+    125 & \hphantom{0}6 & & podstawowe”~~($^{ 1 }$) & podstawowe”($^{ 1 }$) \\
+    126 & 18 & & 1880 ($^{ 1 }$) & 1880($^{ 1 }$) \\
+    127 & & \hphantom{0}6 & $\Zbb[ \sqrt{ -3 } ]$) ($^{ 1 }$)
+           & $\Zbb[ \sqrt{ -3 } ]$)($^{ 1 }$) \\
+    128 & \hphantom{0}1 & & $\Zbb[ \theta, \theta' ]$ ($^{ 1 }$)
+    & $\Zbb[ \theta, \theta' ]$($^{ 1 }$) \\
+    129 & \hphantom{0}8 & & postacią ($^{ 1 }$) & postacią($^{ 1 }$) \\
+    135 & \hphantom{0}2 & & topologicznych ($^{ 1 }$)
+    & topologicznych($^{ 1 }$) \\
+    138 & \hphantom{0}8 & & \textit{prymarnego} ($^{ 1 }$)
+    & \textit{prymarnego}($^{ 1 }$) \\
     \hline
   \end{tabular}
 
@@ -375,116 +400,115 @@ naprawić.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    126 & 18 & & 1880 ($^{ 1 }$) & 1880($^{ 1 }$) \\
-    127 & &  6 & $\Zbb[ \sqrt{ -3 } ]$) ($^{ 1 }$)
-           & $\Zbb[ \sqrt{ -3 } ]$)($^{ 1 }$) \\
-    128 &  1 & & $\Zbb[ \theta, \theta' ]$ ($^{ 1 }$)
-           & $\Zbb[ \theta, \theta' ]$($^{ 1 }$) \\
-    129 &  8 & & postacią ($^{ 1 }$) & postacią($^{ 1 }$) \\
-    135 &  2 & & topologicznych ($^{ 1 }$) & topologicznych($^{ 1 }$) \\
-    138 &  8 & & \textit{prymarnego} ($^{ 1 }$)
-           & \textit{prymarnego}($^{ 1 }$) \\
     138 & 10 & & wykazuje ($^{ 2 }$) & wykazuje($^{ 2 }$) \\
     138 & 11 & & pierścieniach ($^{ 3 }$) & pierścieniach($^{ 3 }$) \\
-    142 &  5 & & algebraicznej ($^{ 1 }$) & algebraicznej($^{ 1 }$) \\
-    142 & &  7 & wcześniej ($^{ 2 }$) & wcześniej($^{ 2 }$) \\
+    142 & \hphantom{0}5 & & algebraicznej ($^{ 1 }$)
+    & algebraicznej($^{ 1 }$) \\
+    142 & & \hphantom{0}7 & wcześniej ($^{ 2 }$) & wcześniej($^{ 2 }$) \\
     143 & & 16 & lokalnemu ($^{ 2 }$) & lokalnemu($^{ 2 }$) \\
     144 & & 16 & bezwzględnych ($^{ 1 }$) & bezwzględnych($^{ 1 }$) \\
-    146 &  3 & & najogólniejszych ($^{ 1 }$) & najogólniejszych($^{ 1 }$) \\
-    146 &  7 & & normalizacji ($^{ 2 }$) & normalizacji($^{ 2 }$) \\
+    146 & \hphantom{0}3 & & najogólniejszych ($^{ 1 }$)
+    & najogólniejszych($^{ 1 }$) \\
+    146 & \hphantom{0}7 & & normalizacji ($^{ 2 }$)
+    & normalizacji($^{ 2 }$) \\
     149 & & 14 & sformułowań ($^{ 1 }$) & sformułowań($^{ 1 }$) \\
-    150 &  6 & & (31)) ($^{ 1 }$) & (31))($^{ 1 }$) \\
+    150 & \hphantom{0}6 & & (31)) ($^{ 1 }$) & (31))($^{ 1 }$) \\
     150 & 12 & & algebr ($^{ 2 }$) & algebr($^{ 2 }$) \\
-    151 &  8 & & algebry ($^{ 1 }$) & algebry($^{ 1 }$) \\
+    151 & \hphantom{0}8 & & algebry ($^{ 1 }$) & algebry($^{ 1 }$) \\
     151 & & 14 & 274) ($^{ 2 }$) & 274)($^{ 2 }$) \\
     152 & 17 & & nilpotentnego ($^{ 1 }$) & nilpotentnego ($^{ 1 }$) \\
-    154 &  3 & & dalej ($^{ 1 }$) & dalej ($^{ 1 }$) \\
+    154 & \hphantom{0}3 & & dalej ($^{ 1 }$) & dalej ($^{ 1 }$) \\
     154 & 16 & & podstawowego ($^{ 2 }$) & podstawowego ($^{ 2 }$) \\
-    155 &  1 & & 102) ($^{ 1 }$) & 102) ($^{ 1 }$) \\
-    155 &  3 & & centrum ($^{ 2 }$) & centrum($^{ 2 }$) \\
-    155 & &  7 & teorii ($^{ 3 }$) & teorii($^{ 3 }$) \\
-    156 & &  9 & uwagi ($^{ 1 }$) & uwagi($^{ 1 }$) \\
-    157 &  1 & & algebra ($^{ 1 }$) & algebra($^{ 1 }$) \\
-    157 &  3 & & ówdzie ($^{ 2 }$) & ówdzie($^{ 2 }$) \\
+    155 & \hphantom{0}1 & & 102) ($^{ 1 }$) & 102) ($^{ 1 }$) \\
+    155 & \hphantom{0}3 & & centrum ($^{ 2 }$) & centrum($^{ 2 }$) \\
+    155 & & \hphantom{0}7 & teorii ($^{ 3 }$) & teorii($^{ 3 }$) \\
+    156 & & \hphantom{0}9 & uwagi ($^{ 1 }$) & uwagi($^{ 1 }$) \\
+    157 & \hphantom{0}1 & & algebra ($^{ 1 }$) & algebra($^{ 1 }$) \\
+    157 & \hphantom{0}3 & & ówdzie ($^{ 2 }$) & ówdzie($^{ 2 }$) \\
     157 & 13 & & minimalnemu ($^{ 3 }$) & minimalnemu($^{ 3 }$) \\
     157 & 20 & & liniowej ($^{ 4 }$) & liniowej($^{ 4 }$) \\
-    \hline
-  \end{tabular}
-
-
-
-
-
-  \newpage
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
     158 & & 17 & homologicznej ($^{ 1 }$) & homologicznej($^{ 1 }$) \\
     158 & & 15 & minimalnego ($^{ 2 }$) & minimalnego($^{ 2 }$) \\
     159 & 13 & & dydaktycznych ($^{ 1 }$) & dydaktycznych($^{ 1 }$) \\
-    160 &  6 & & euklidesowego~~($^{ 1 }$) & euklidesowego($^{ 1 }$) \\
+    160 & \hphantom{0}6 & & euklidesowego~~($^{ 1 }$)
+    & euklidesowego($^{ 1 }$) \\
     160 & 14 & & odróżnienia ($^{ 2 }$) & odróżnienia($^{ 2 }$) \\
-    162 &  2 & & 249)) & 259) \\
-    162 &  6 & & wieku ($^{ 1 }$) & wieku($^{ 1 }$) \\
+    162 & \hphantom{0}2 & & 249)) & 259) \\
+    162 & \hphantom{0}6 & & wieku ($^{ 1 }$) & wieku($^{ 1 }$) \\
     162 & 12 & & przeciwnego ($^{ 2 }$) & przeciwnego($^{ 2 }$) \\
-    164 &  1 & & niezmiennikiem ($^{ 1 }$) & niezmiennikiem($^{ 1 }$) \\
-    164 &  5 & & oczywistego ($^{ 2 }$) & oczywistego($^{ 2 }$) \\
-    166 &  4 & & 315) ($^{ 1 }$) & 315)($^{ 1 }$) \\
+    \hline
+  \end{tabular}
+
+
+
+
+
+  \newpage
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    164 & \hphantom{0}1 & & niezmiennikiem ($^{ 1 }$)
+    & niezmiennikiem($^{ 1 }$) \\
+    164 & \hphantom{0}5 & & oczywistego ($^{ 2 }$) & oczywistego($^{ 2 }$) \\
+    166 & \hphantom{0}4 & & 315) ($^{ 1 }$) & 315)($^{ 1 }$) \\
     167 & 14 & & algebraicznej ($^{ 1 }$) & algebraicznej($^{ 1 }$) \\
     167 & & 10 & 371) ($^{ 2 }$) & 371)($^{ 2 }$) \\
     168 & 10 & & U~~Ponceleta & U~Ponceleta \\
-    168 & &  9 & rezultatów ($^{ 1 }$) & rezultatów($^{ 1 }$) \\
-    169 &  3 & & 515) ($^{ 1 }$) & 515)($^{ 1 }$) \\
-    170 &  5 & & jej ($^{ 1 }$) & jej($^{ 1 }$) \\
+    168 & & \hphantom{0}9 & rezultatów ($^{ 1 }$) & rezultatów($^{ 1 }$) \\
+    169 & \hphantom{0}3 & & 515) ($^{ 1 }$) & 515)($^{ 1 }$) \\
+    170 & \hphantom{0}5 & & jej ($^{ 1 }$) & jej($^{ 1 }$) \\
     171 & & 13 & podobieństw ($^{ 1 }$) & podobieństw($^{ 1 }$) \\
     173 & 14 & & niezmienników ($^{ 2 }$) & niezmienników($^{ 2 }$) \\
-    182 & &  4 & stwarzając & dające \\
+    182 & & \hphantom{0}4 & stwarzając & dające \\
     187 & 12 & & poprzedników ($^{ 1 }$) & poprzedników($^{ 1 }$) \\
     187 & 14 & & odkrycia ($^{ 2 }$) & odkrycia($^{ 2 }$) \\
     188 & 16 & & jedności ($^{ 1 }$) & jedności($^{ 1 }$) \\
     189 & & 18 & wielkość ($^{ 2 }$) & wielkość($^{ 2 }$) \\
-    190 &  6 & & wygodnej ($^{ 1 }$) & wygodnej($^{ 1 }$) \\
-    191 &  4 & & niewymierność ($^{ 1 }$) & niewymierność($^{ 1 }$) \\
+    190 & \hphantom{0}6 & & wygodnej ($^{ 1 }$) & wygodnej($^{ 1 }$) \\
+    191 & \hphantom{0}4 & & niewymierność ($^{ 1 }$)
+    & niewymierność($^{ 1 }$) \\
     191 & & 11 & geometrycznej ($^{ 3 }$) & geometrycznej($^{ 3 }$) \\
-    194 & 13 & & arytmetyczno-geometrycznej~~($^{ 1 }$)
-           & arytmetyczno-geometrycznej($^{ 1 }$) \\
-    196 & &  8 & rzeczywiste ($^{ 1 }$) & rzeczywiste($^{ 1 }$) \\
-    199 &  9 & & ciągłość) ($^{ 1 }$) & ciągłość)($^{ 1 }$) \\
-    \hline
-  \end{tabular}
-
-
-
-
-
-  \newpage
-
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
-    201 &  8 & & wymiaru) ($^{ 1 }$) & wymiaru)($^{ 1 }$) \\
-    202 &  9 & & płaszczyzny ($^{ 1 }$) & płaszczyzny($^{ 1 }$) \\
-    202 & &  6 & 1764) ($^{ 2 }$) & 1764)($^{ 2 }$) \\
-    203 &  8 & & algebry~~($^{ 1 }$) & algebry($^{ 1 }$) \\
-    208 &  4 & & parazwarta ($^{ 1 }$) & parazwarta($^{ 1 }$) \\
-    215 &  3 & & wierze ($^{ 1 }$) & wierze($^{ 1 }$) \\
-    % & & & & \\
-    227 &  6 & & całkowaniu~~($^{ 1 }$) & całkowaniu($^{ 1 }$) \\
-    242 &  3 & & 599)) & 599) \\
-    % & & & & \\
+    196 & & \hphantom{0}8 & rzeczywiste ($^{ 1 }$) & rzeczywiste($^{ 1 }$) \\
+    199 & \hphantom{0}9 & & ciągłość) ($^{ 1 }$) & ciągłość)($^{ 1 }$) \\
+    201 & \hphantom{0}8 & & wymiaru) ($^{ 1 }$) & wymiaru)($^{ 1 }$) \\
+    202 & \hphantom{0}9 & & płaszczyzny ($^{ 1 }$) & płaszczyzny($^{ 1 }$) \\
+    202 & & \hphantom{0}6 & 1764) ($^{ 2 }$) & 1764)($^{ 2 }$) \\
+    203 & \hphantom{0}8 & & algebry~~($^{ 1 }$) & algebry($^{ 1 }$) \\
+    208 & \hphantom{0}4 & & parazwarta ($^{ 1 }$) & parazwarta($^{ 1 }$) \\
+    215 & \hphantom{0}3 & & wierze ($^{ 1 }$) & wierze($^{ 1 }$) \\
+    227 & \hphantom{0}6 & & całkowaniu~~($^{ 1 }$) & całkowaniu($^{ 1 }$) \\
+    242 & \hphantom{0}3 & & 599)) & 599) \\
     252 & & 12 & Euler czasem nawet & nawet Euler czasem \\
-    % & & & & \\
-    279 &  2 & & rozszerzenia~($^{ 1 }$) & rozszerzenia($^{ 1 }$) \\
-    % & & & & \\
+    279 & \hphantom{0}2 & & rozszerzenia~($^{ 1 }$)
+    & rozszerzenia($^{ 1 }$) \\
     \hline
   \end{tabular}
+
+
+
+
+
+  % \newpage
+
+  % \begin{tabular}{|c|c|c|c|c|}
+  %   \hline
+  %   Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+  %                             & Powinno być \\ \cline{2-3}
+  %   & Od góry & Od dołu & & \\
+  %   \hline
+  %   % & & & & \\
+  %   % & & & & \\
+  %   % & & & & \\
+  %   % & & & & \\
+  %   % & & & & \\
+  %   % & & & & \\
+  %   % & & & & \\
+  %   \hline
+  % \end{tabular}
 
 \end{center}
 
@@ -511,12 +535,15 @@ naprawić.
 \Jest którą bez przerwy zajmować~się będzie prawie wyłącznie przez 25 lat \\
 \PowinnoByc którą będzie zajmował~się prawie wyłącznym i~niemal bez przerwy
 przez 25 lat \\
+\StrWierszGora{194}{13} \\
+\Jest arytmetyczno-geometrycznej~~($^{ 1 }$) \\
+\PowinnoByc arytmetyczno-geometrycznej($^{ 1 }$) \\
 \StrWierszGora{240}{10} \\
 \Jest pytanie takie postawić \\
 \PowinnoByc postawić takie pytanie \\
 
 
-% ############################
+% ######################################
 
 
 
@@ -527,14 +554,15 @@ przez 25 lat \\
 
 
 
-% ############################
+% ######################################
 \newpage
 
-\section{C.B. Boyer\textit{Historia rachunku różniczkowego
-    i~całkowego} \textit{i~rozwój jego pojęć},
-  \cite{BoyerHistoriaRachunkuRozniczkowegoICalkowego1964}}
+\section{C.B. Boyer \textit{Historia rachunku różniczkowego
+    i~całkowego i~rozwój jego pojęć},
+  \parencite{Boyer-Historia-rachunku-rozniczkowego-i-calkowego-Pub-1964}}
 
-\vspace{0em}
+\label{sec:Boyer-Historia-rachunku-etc}
+% ######################################
 
 
 % ##################
@@ -647,7 +675,7 @@ oparta na ścisły pojęciu nieskończenie małych liczb.
 
 
 
-% ############################
+% ######################################
 
 
 
@@ -657,16 +685,65 @@ oparta na ścisły pojęciu nieskończenie małych liczb.
 
 
 
-
-% ############################
+% ######################################
 \newpage
 
-\section{ % Redaktor i tytuł dzieła
-  Red. A.P.~Juszkiewicz \\
-  \textit{Historia matematyki. Tom III: Matematyka XVIII stulecia} \\
-  \cite{RedJuszkiewiczHistoriaMatematykiVolIII1977}}
+\section{Jeremy J.~Gray \textit{The~Hilbert Challenge}
+  \parencite{Gray-The-Hilbert-Challenge-Pub-2000}}
+
+\label{sec:Gray-The-Hilbert-Challenge}
+% ######################################
+
+
+% ##################
+% \newpage
+
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+    & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    5  & &  8 & $6.4$ & $6 \cdot 4$ \\
+    % 42  & 13 & & [402 & [402] \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\VerSpaceTwo
+
+% ######################################
+
+
+
+
+
+
+
+
+
+
+% ######################################
+\newpage
+
+\section{Red. A.P.~Juszkiewicz
+  \textit{Historia matematyki. Tom III: Matematyka XVIII stulecia}
+  \parencite{Red-Juszkiewicz-Historia-matematyki-Vol-III-Pub-1977}}
 
 % \vspace{0em}
+% ######################################
 
 
 % % ##################
@@ -744,7 +821,7 @@ oparta na ścisły pojęciu nieskończenie małych liczb.
 
 
 
-% ############################
+% ######################################
 
 
 
@@ -756,12 +833,15 @@ oparta na ścisły pojęciu nieskończenie małych liczb.
 
 
 
-% ############################
+% ######################################
 \newpage
 
 \section{ % Autor i tytuł dzieła
   R. Rhodes \\
   \textit{Jak powstała bomba atomowa}, \cite{Rhodes00}}
+
+\label{sec:Rhodes-Jak-powstala-etc}
+% ######################################
 
 
 % ##################
@@ -787,7 +867,7 @@ oparta na ścisły pojęciu nieskończenie małych liczb.
 \VerSpaceTwo
 
 
-% ############################
+% ######################################
 
 
 
@@ -798,12 +878,14 @@ oparta na ścisły pojęciu nieskończenie małych liczb.
 
 
 
-% ############################
+% ######################################
 \newpage
 
-\section{ % Autor i tytuł dzieła
-  A. K. Wróblewski \\
-  \textit{Historia fizyki}, \cite{Wroblewski06}}
+\section{A.K. Wróblewski \textit{Historia fizyki},
+  \cite{Wroblewski06}}
+
+\label{sec:Wroblewski-Historia-fizyki}
+% ######################################
 
 
 % ##################
@@ -828,7 +910,7 @@ oparta na ścisły pojęciu nieskończenie małych liczb.
 \VerSpaceTwo
 
 
-% ############################
+% ######################################
 
 
 
