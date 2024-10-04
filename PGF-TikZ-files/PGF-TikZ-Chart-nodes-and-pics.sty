@@ -1,12 +1,45 @@
 % ####################################################################
-% PGF/TikZ's pics for drawning charts
-% ####################################################################
+% Setting of PGF/TikZ nodes and pics for drawning charts
+
 \ProvidesPackage{PGF-TikZ-Chart-pics}
+% ####################################################################
+
+
+
+
+% ############################
+% Scales for nodes
+
+\tikzstyle{node scale small 1} = [scale=0.9]
+\tikzstyle{node scale small 2} = [scale=0.8]
+
+
+% ############################
+
+
+
+% ############################
+% Special symbols for charts
+
+\tikzset{
+  x mark for x axis 1/.pic = {
+    \node at (-0.3,-0.35) {$x$};
+  },
+  y mark for y axis 1/.pic = {
+    \node at (0.35,-0.25) {$y$};
+  },
+}
+
+
+% ############################
+
 
 
 
 % ############################
 % Setting of nodes
+% Not finised!!!!
+
 \tikzstyle{number below x axis} = [below]
 
 \tikzstyle{number on the left of y axis} = [left]
@@ -15,6 +48,9 @@
 
 
 % ############################
+
+
+
 
 
 % ############################
