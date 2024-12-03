@@ -75,7 +75,7 @@
 % Example of use: pi -> \uppi
 \usepackage{upgreek}
 % Improving look of lambda letter
-\let\oldlambda\Lambda
+\let\oldlambda\lambda
 \renewcommand{\lambda}{\uplambda}
 
 
@@ -94,7 +94,7 @@ url=false,
 eprint=true,
 ]{biblatex}
 
-\addbibresource{Systemy-operacyjne-Bibliography.bib}
+\addbibresource{Algebra-Bibliography.bib}
 
 
 
@@ -163,7 +163,7 @@ eprint=true,
 
 
 % ####################################################################
-% Początek dokumentu
+% Beginning of the document
 \begin{document}
 % ####################################################################
 
@@ -172,18 +172,19 @@ eprint=true,
 
 
 % ######################################
-\maketitle % Tytuł całego tekstu
+% Title of the text
+\maketitle
 % ######################################
 
 
 
 
 
-% ############################
+% ######################################
 \section{Andrzej Białynicki-Birula
   \textit{Zarys algebry}, \cite{BialynickiBirulaZarysAlgebry1987}}
 
-\vspace{0em}
+% ######################################
 
 
 % ##################
@@ -482,12 +483,12 @@ Str. 74. (14) $6 \boldsymbol{ \gamma } \, ,$ \\
 
 
 
-% ############################
+% ######################################
 \section{Jacek Gancarzewicz
   \textit{Algebra liniowa i~jej zastosowania},
-  \cite{GancarzewiczAlgebraLiniowa2004}}
+  \parencite{Gancarzewicz-Algebra-liniowa-i-jej-zastosowania-ETC-Pub-2004}}
 
-\vspace{0em}
+% ######################################
 
 
 % ##################
@@ -602,18 +603,19 @@ istnieje 0 punktów afonicznie niezależnych.
                               & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
-    28  & & 13 & $x \neq 0$ & $x \neq y$ \\
-    34  & & 12 & $x ( y y^{ -1 } x^{ -1 }$ & $x ( y y^{ -1 } ) x^{ -1 }$ \\
-    53  &  6 & & $\Real( ( \eta \eta' ) \eta'' ) )$
-           & $\Real\big( ( \eta \eta' ) \eta'' \big)$ \\
-    59  & 16 & & $x_{ 3 }$ & $x_{ 1 }$ \\
+    \hphantom{0}28 & & 13 & $x \neq 0$ & $x \neq y$ \\
+    \hphantom{0}34 & & 12 & $x ( y y^{ -1 } x^{ -1 }$
+    & $x ( y y^{ -1 } ) x^{ -1 }$ \\
+    \hphantom{0}53 & \hphantom{0}6 & & $\Real( ( \eta \eta' ) \eta'' ) )$
+    & $\Real\big( ( \eta \eta' ) \eta'' \big)$ \\
+    59 & 16 & & $x_{ 3 }$ & $x_{ 1 }$ \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
-    % & & & & \\
+    338 & & 14 & $X$ & $\Lambda$ \\
     % & & & & \\
     % & & & & \\
     % & & & & \\

@@ -12,6 +12,7 @@
 
 \tikzstyle{node scale small 1} = [scale=0.9]
 \tikzstyle{node scale small 2} = [scale=0.8]
+\tikzstyle{node scale small 3} = [scale=0.7]
 
 
 % ############################
@@ -69,7 +70,7 @@
   },
   % Shorter version of tick for x axis, thin width
   tick horizontal axis thin 1/.pic = {
-    \draw[line width=0.4] (0,-0.09) -- (0,0.09);
+    \draw[line width=0.4] (0,-0.1) -- (0,0.1);
   },
   % Longer version of tick for x axis, thin width
   tick horizontal axis thin 2/.pic = {
@@ -81,7 +82,10 @@
   },
   % ???
   tick vertical axis thin 1/.pic = {
-    \draw[line width=0.4] (-0.09,0) -- (0.09,0);
-  }
+    \draw[line width=0.4] (-0.1,0) -- (0.1,0);
+  },
+  tick vertical axis thin 2/.pic = {
+    \draw[line width=0.4] (-0.07,0) -- (0.07,0);
+  },
 }
 % ############################
