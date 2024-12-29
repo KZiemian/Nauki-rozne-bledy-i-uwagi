@@ -1,0 +1,128 @@
+% ####################################################################
+% General commands for work with text writen in LaTeXa
+
+\ProvidesPackage{general-commands}
+% ####################################################################
+
+
+
+% ############################
+% Commands for horizontal spaces in the text
+
+\newcommand{\HorSpaceOne}{\hspace{0.05em}}
+\newcommand{\HorSpaceTwo}{\hspace{0.07em}}
+\newcommand{\HorSpaceThree}{\hspace{0.09em}}
+\newcommand{\HorSpaceFour}{\hspace{0.1em}}
+\newcommand{\HorSpaceFive}{\hspace{0.11em}}
+\newcommand{\HorSpaceSix}{\hspace{0.13em}}
+\newcommand{\HorSpaceSeven}{\hspace{0.15em}}
+\newcommand{\HorSpaceEight}{\hspace{0.17em}}
+\newcommand{\HorSpaceNine}{\hspace{0.2em}}
+\newcommand{\HorSpaceTen}{\hspace{0.22em}}
+\newcommand{\HorSpaceEleven}{\hspace{0.25em}}
+\newcommand{\HorSpaceTwelve}{\hspace{0.30em}}
+\newcommand{\HorSpaceThriteen}{\hspace{0.35em}}
+\newcommand{\HorSpaceFourteen}{\hspace{0.4em}}
+\newcommand{\HorSpaceFiveteen}{\hspace{0.5em}}
+\newcommand{\HorSpaceSixteen}{\hspace{0.75em}}
+
+\newcommand{\negHorSpaceOne}{\hspace{-0.05em}}
+\newcommand{\negHorSpaceTwo}{\hspace{-0.07em}}
+\newcommand{\negHorSpaceThree}{\hspace{-0.09em}}
+\newcommand{\negHorSpaceFour}{\hspace{-0.1em}}
+\newcommand{\negHorSpaceFive}{\hspace{-0.11em}}
+\newcommand{\negHorSpaceSix}{\hspace{-0.13em}}
+\newcommand{\negHorSpaceSeven}{\hspace{-0.15em}}
+\newcommand{\negHorSpaceEight}{\hspace{-0.17em}}
+\newcommand{\negHorSpaceNine}{\hspace{-0.2em}}
+\newcommand{\negHorSpaceTen}{\hspace{-0.22em}}
+\newcommand{\negHorSpaceEleven}{\hspace{-0.25em}}
+\newcommand{\negHorSpaceTwelve}{\hspace{-0.3em}}
+\newcommand{\negHorSpaceThirteen}{\hspace{-0.35em}}
+\newcommand{\negHorSpaceFourteen}{\hspace{-0.4em}}
+
+% \newcommand{\smallHorSpaceOne}{\hspace{0.05em}}
+% ############################
+
+
+
+
+
+% ############################
+% Commands for vertical space in the text
+
+\newcommand{\VerSpaceOne}{\vspace{0.1em}}
+\newcommand{\VerSpaceTwo}{\vspace{0.25em}}
+\newcommand{\VerSpaceThree}{\vspace{0.5em}}
+\newcommand{\VerSpaceFour}{\vspace{1em}}
+\newcommand{\VerSpaceFive}{\vspace{1.5em}}
+\newcommand{\VerSpaceSix}{\vspace{2em}}
+
+\newcommand{\negVerSpaceOne}{\vspace{-0.5em}}
+\newcommand{\negVerSpaceTwo}{\vspace{-1em}}
+\newcommand{\negVerSpaceThree}{\vspace{-1.5em}}
+\newcommand{\negVerSpaceFour}{\vspace{-1.75em}}
+\newcommand{\negVerSpaceFive}{\vspace{-2em}}
+% ############################
+
+
+
+
+
+% ############################
+% Commands for numerating pages and lines
+
+\newcommand{\Str}[1]{\textbf{Str.~#1.}}
+\newcommand{\StrWierszGora}[2]{\textbf{Str.~#1, wiersz~#2.}}
+\newcommand{\StrWierszeGora}[2]{\textbf{Str.~#1, wiersze~#2.}}
+\newcommand{\StrWierszDol}[2]{\textbf{Str.~#1, wiersz~#2 od~dołu.}}
+\newcommand{\StrWierszeDol}[2]{\textbf{Str.~#1, wiersze #2 od~dołu.}}
+% ############################
+
+
+
+
+
+% ############################
+% Commands for writting down corrections
+
+\newcommand{\Jest}{\textbf{Jest: }}
+\newcommand{\PowinnoByc}{\textbf{Powinno być: }}
+% ############################
+
+
+
+
+
+% ############################
+% Commands for emphasaising places in the text
+
+\newcommand{\red}[1]{{\color{red} #1}}
+\newcommand{\Dok}{{\color{red} Dokończ.}}
+\newcommand{\Pop}{{\color{red} Popraw.}}
+\newcommand{\Prob}{{\color{red} Problem.}}
+
+\newcommand{\Pyt}{{\color{red} Pytanie.}}
+\newcommand{\Prze}{{\color{red} Przemyśl.}}
+% ############################
+
+
+
+
+
+% ############################
+% Various commands
+
+% Header
+\newcommand{\CenterBoldFont}[1]{\begin{center} \textbf{#1} \end{center}}
+
+% RoMan NUMeral WITH DOT
+\newcommand{\RomanNumWithDot}[1]{\textbf{\romannumeral#1.}}
+
+% Short links for internet pages
+\newcommand{\YouTube}[1]{\href{#1}{\color{DarkOrange} YouTube}}
+\newcommand{\arXiv}[2]{\href{#1}{\color{DarkOrange} arXiv: {#2}}}
+
+% Styles for hyperlinks
+% \newcommand{\colorhref}[2]{\href{#1}{\color{DarkOrange} {#2}}}
+% ############################
