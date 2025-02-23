@@ -114,8 +114,11 @@ eprint=true,
 
 % ------------------------------------------------------
 % Local packages
-% You need to put them in the same directory as .tex file
+% You need to put them in the directory Local-packages
 % ------------------------------------------------------
+% Local configuration of this particular file
+\usepackage{./Local-packages/local-settings}
+
 % Package containing various command useful for working with a text
 \usepackage{./Local-packages/general-commands}
 % Package containing commands and other code useful for working with
@@ -147,7 +150,8 @@ eprint=true,
 \title{Systemy operacyjne \\
   {\Large Błędy i~uwagi}}
 
-\author{Kamil Ziemian}
+\author{Kamil Ziemian \\
+  \email}
 
 
 % \date{}
@@ -216,6 +220,7 @@ przypisem.
     & Powinno być \\ \cline{2-3}
            & Od góry & Od dołu & & \\
     \hline
+    36 & & 13 & martwych zakończeń & ślepych zaułków \\
     39 & & \hphantom{0}2 & częściowych & cząstkowych \\
     44 & 21 & & ciasteczka & bułeczki \\
     66 & & \hphantom{0}9 & próbowanie & sprawdzenie \\

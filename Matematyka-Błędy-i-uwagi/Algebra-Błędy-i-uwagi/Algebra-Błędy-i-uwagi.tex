@@ -114,8 +114,11 @@ eprint=true,
 
 % ------------------------------------------------------
 % Local packages
-% You need to put them in the same directory as .tex file
+% You need to put them in directory Local-packages
 % ------------------------------------------------------
+% Local configuration of this particular file
+\usepackage{./Local-packages/local-settings}
+
 % Package containing various command useful for working with a text
 \usepackage{./Local-packages/general-commands}
 % Package containing commands and other code useful for working with
@@ -147,7 +150,8 @@ eprint=true,
 \title{Algebra \\
   {\Large Błędy i~uwagi}}
 
-\author{Kamil Ziemian}
+\author{Kamil Ziemian \\
+  \email}
 
 
 % \date{}
