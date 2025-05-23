@@ -1,0 +1,590 @@
+% ------------------------------------------------------------------------------------------------------------------
+% Basic configuration and packages
+% ------------------------------------------------------------------------------------------------------------------
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
+\documentclass[a4paper,11pt]{article}
+
+
+
+% ------------------------------------------------------
+% Packages not tied to particular normal language
+% ------------------------------------------------------
+% This package should improved spaces in the text
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
+
+
+
+% ------------------------------------------------------
+% Polonization of LaTeX document
+% ------------------------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
+
+
+
+% ------------------------------------------------------
+% Setting margins
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
+
+
+
+% ------------------------------------------------------
+% Setting vertical spaces in the text
+% ------------------------------------------------------
+% Setting space between lines
+\renewcommand{\baselinestretch}{1.1}
+
+% Setting space between lines in tables
+\renewcommand{\arraystretch}{1.4}
+
+
+
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{Cybernetyka-Bibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------------------------------
+% Local packages
+% You need to put them in the same directory as .tex file
+% ------------------------------------------------------
+% Package containing various command useful for working with a text
+\usepackage{./Local-packages/general-commands}
+% Package containing commands and other code useful for working with
+% mathematical text
+\usepackage{./Local-packages/math-commands}
+
+
+
+
+
+% ------------------------------------------------------
+% Package "hyperref"
+% They advised to put it on the end of preambule
+% ------------------------------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
+
+
+
+
+
+
+
+
+
+
+% ------------------------------------------------------------------------------------------------------------------
+% Title and author of the text
+\title{Cybernetyka \\
+  {\Large Błędy i~uwagi}}
+
+\author{Kamil Ziemian}
+
+
+% \date{}
+% ------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ################################################
+\maketitle % Tytuł całego tekstu
+% ################################################
+
+
+
+
+
+% ######################################
+\section{Norbert Wiener \\
+  \textit{Cybernetics, or~Control and~Communiication~in \\
+    the~Animal and the~Machine},
+  \parencite{Wiener-Cybernetics-Second-edition-Pub-2016}}
+
+\vspace{0em}
+% ######################################
+
+
+% ##################
+\CenterBoldFont{Uwagi do~rozdziałów}
+
+\vspace{0em}
+
+
+\noindent
+\Str{63}
+
+\VerSpaceFour
+
+
+
+
+
+% ##################
+\CenterBoldFont{Uwagi do~konkretnych stron}
+
+\vspace{0em}
+
+
+\noindent
+\StrWierszGora{60}{15} Wiener używa tu nazwy „error~of measurement”, którą
+przetłumaczylibyśmy na „błąd pomiaru”. Jednak znacznie lepiej jest
+używać przyjętej w~nowszej literaturze nazwy „niepewność pomiarowa”,
+po~angielsku „measurement uncertanity”, gdyż lepiej oddaje treść tego
+pojęcia. Dlatego też, w~tych notatkach będziemy zawsze używać tego drugiego
+zwrotu.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszeGora{60}{15--17} Przyjrzyjmy~się zdaniu „uniformly distributed
+error lying over a~range~of length $b_{ 1 } b_{ 2 } \ldots b_{ n }\ldots$, where
+$b_{ \kappa }$ is the~first digit not equal to~$0$”. Prawie na~pewno należy je
+rozumieć w~następujący sposób. Niepewność pomiarowa jest dana przez ułamek
+z~rozwinięciem binarnym $0.b_{ 1 } b_{ 2 } b_{ 3 }\ldots$, gdzie $b_{ i }$,
+$i = 1, 2, 3, \ldots$, to kolejne cyfry binarne tego ułamka. Liczba $\kappa$ to
+najmniejsza liczba naturalna większa od zera, taka że~$b_{ \kappa } \neq 0$.
+Inaczej mówiąc $b_{ \kappa }$ jest pierwszą cyfrą po przecinku, która jest
+równa~$1$.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\textbf{Str.~60, wiersz~1 od dołu, str.~61, wiersz~1.} Wiener pisze,
+że~zakładamy o~zmiennych, iż~mają „fundamental equpartition”. Na podstawie
+dalszego tekstu można wnioskować, że~chodzi mu o~to, iż~zawsze będziemy
+przyjmować, że~funkcje zmiennej~$x$ należy zawsze całkować względem miary
+$dx$, nie zaś miary takiej jak $d\mu( x ) = x^{ 3 } dx$.
+
+\VerSpaceFour
+
+
+
+
+
+% \noindent
+% \Str{10} Na tej stronie możemy zaobserwować, że~w~książeczce użyta jest
+% konwencja wedle której cudzysłów zapisujemy jako ”cytowany tekst”, wydaje
+% mi~się, że~jest to francuska konwencja zapisu. W~naszej ocenie lepiej
+% wygląda stosowana w~Polsce konwencja zapisu: „cytowany tekst”. Z~tego
+% powodu, gdy będziemy poprawiać jakiś fragment tekstu, w~którym znajduje~się
+% cudzysłów, w~poprawionej wersji będziemy stosować tę drugą konwencję.
+
+% \VerSpaceFour
+
+
+
+
+
+% \noindent
+% \StrWierszDol{20}{8} Duży odstęp po tą linią to chyba błąd edytorski.
+
+% \VerSpaceFour
+
+
+
+
+
+% \noindent
+% \Str{20} Podane tu wyjaśnienie definicji rekurencyjnej jest niełatwe
+% w~zrozumieniu i~może nawet nie być poprawne. Warto by ją poprawić.
+
+% \VerSpaceFour
+
+
+
+
+
+% \noindent
+% \Str{23} Na tej stronie podany jest wzór
+% \begin{equation}
+%   \label{eq:Gancarzewicz-Arytmetyka-01}
+%   a_{ n } =
+%   \frac{ 1 }{ \sqrt{ 5 } }
+%   \Big\{ \Big( \frac{ 1 + \sqrt{ 5 } }{ 2 } \Big)^{ n }
+%   - \Big( \frac{ 1 - \sqrt{5} }{ 2 } \Big)^{ n } \Big\}
+% \end{equation}
+% nie wygląda najlepiej, ze względu na to jak wysokość nawiasów ma~się
+% do wysokości zawartych w~nich wyrażeń. Według mnie, znaczniej lepiej
+% wyglądały on, gdyby został zapisany w~następujący sposób
+% \begin{equation}
+%   \label{eq:Gancarzewicz-Arytmetyka-01}
+%   a_{ n } =
+%   \frac{ 1 }{ \sqrt{ 5 } }
+%   \left\{ \left( \frac{ 1 + \sqrt{ 5 } }{ 2 } \right)^{ n }
+%   - \left( \frac{ 1 - \sqrt{5} }{ 2 } \right)^{ n } \right\},
+% \end{equation}
+% ewentualnie
+% \begin{equation}
+%   \label{eq:Gancarzewicz-Arytmetyka-02}
+%   a_{ n } =
+%   \frac{ 1 }{ \sqrt{ 5 } }
+%   \left\{ \left( \tfrac{ 1 + \sqrt{ 5 } }{ 2 } \right)^{ n }
+%   - \left( \tfrac{ 1 - \sqrt{5} }{ 2 } \right)^{ n } \right\}.
+% \end{equation}
+
+% W~dalszych ciągu tych notatek, poza wyjątkowymi sytuacjami nie będziemy
+% odnosić~się do tego typu problemów typograficznych.
+
+% \VerSpaceFour
+
+
+
+
+
+% \noindent
+% \Str{23} W~przeprowadzanym tutaj wyprowadzaniu wzoru (2.6) pojawia się
+% następujący problem. Czy dopuszczamy by zmienne $a$ i~$b$ w~nim występujące
+% mogły przyjmować wartość $0$? Jeśli odpowiedź na to pytanie jest twierdząca,
+% to stajemy przed problemem tego, iż~we wzorze (2.6) pojawiają~się
+% człony $a^{ 0 }$ i~$b^{ 0 }$. Ponieważ jeśli $b = 0$ to poszukiwana zależność
+% redukuje się do wyrażenia $a^{ n }$ (analogicznie dla $a = 0$), proponuję by
+% przyjąć, iż rozważamy tylko sytuację, gdy~$a \neq 0$ i~$b \neq 0$.
+
+% \VerSpaceFour
+
+
+
+
+
+% \Str{25--26} W~opis trójkąta Pascala wkradła się pewna nieścisłość.
+% Mianowicie by
+% narysować pierwszą linię zawierającą tylko symbol $\binom{ 0 }{ 0 }$ musimy
+% wiedzieć
+% ile on wynosi, a~nie jest wcale jasne, czy jego wartość wynika
+% przeprowadzonych
+% do tej pory rozważań. Jeśli nie to należy przyjąć, że~z~definicji
+% \begin{equation}
+%   \label{Gancarzewicz-Arytmetyka-03}
+%   \binom{ 0 }{ 0 } := 1.
+% \end{equation}
+
+% Drugi problem dotyczy stwierdzenia, że~gdy znamy $n$-tą linię, to następną
+% $( n + 1 )$-szą linię budujemy tak, że~dodajemy po dwa kolejne współczynniki
+% z~poprzedniej linii. Bardziej poprawne byłoby stwierdzenie, iż~na początku
+% i~końcu $( n + 1 )$-szej linii zapisujemy wartość symboli
+% $\binom{ n + 1 }{ 0 } = \binom{ n + 1 }{ n + 1 } = 1$, pozostałe zaś
+% współczynniki otrzymujemy dodając dwa kolejne współczynniki z~linii $n$-tej,
+% tak jak pokazano to na rysunku. Kwestia tego, gdzie jest początek i~koniec
+% linii, gdzie musimy wpisać wartości symboli $\binom{ n + 1 }{ 0 }$
+% i~$\binom{ n + 1 }{ n + 1 }$ w~praktyce nie stanowi problemu, dlatego nie
+% będziemy~się w~ten problem zagłębiać.
+
+% \VerSpaceFour
+
+
+
+
+
+% \noindent
+% \Str{26} Przedstawiony tu rysunek z~trójkątem Pascala można by uczynić
+% ładniejszym na wiele różnych sposobów.
+
+% \VerSpaceFour
+
+
+
+
+
+% \noindent
+% \Str{41} Od tego miejsca rozróżnienie między cyfrą, a~liczbą składającą~się
+% z~jednej cyfry zaczyna nabierać specjalnego znaczenia, choć ta książeczka
+% nie poświęca temu wiele miejsca. Oczywiście, często dla wygody nie
+% rozróżnia~się tych dwóch bytów, warto jednak uprzednio przyjrzeć się temu
+% zagadnieniu dokładnie.
+
+% Cyfry to symbole z~pewnego ustalonego zbioru, które będziemy notować
+% w~nawiasach. Czyli „$0$” jest jedną spośród cyfr arabskich. Samym cyfrom
+% nie przypisujemy sensu liczbowego, sens ten posiadają dopiero ciągi cyfr
+% skonstruowane według odpowiednich reguł. Przykładowo, często za ciągi cyfr
+% reprezentujące liczby uważa~się tylko te które zaczynają~się, czytając od
+% lewej do prawej, od cyfry różnej od~„$0$”, z~wyjątkiem ciągu składającego
+% się tylko z~jednego elementu: $0$. Taki ciąg oznacza liczbę zero. Inny
+% przykładem liczby skonstruowanej z~cyfr arabskich jest $17$, która
+% jest dwuelementowym ciągiem cyfr „$1$”, „$7$”.
+
+% Wśród ciągów cyfr występują ciągi o~długości jeden, takie jak wspomniany już
+% ciąg $0$ lub $1$, istnieje jednak różnica między cyfrą „$1$” i~liczbą $1$.
+% Cyfra „$1$” to symbol który nie oznacza żadnej wartości liczbowej, podczas
+% gdy $1$ to jednoelementowy ciąg cyfr oznaczający liczbę jeden.
+
+% W~tych rozważaniach nie zajęliśmy~się problemem, czy dany poprawny ciąg
+% cyfr, powiedzmy $17$, \textit{jest} liczbą siedemnaście, czy
+% \textit{oznacza} liczbę siedemnaście? Jest to ważkie zagadnienie z~zakresu
+% filozofii matematyki i~zapewne innych działów ludzkiej wiedzy, lecz w~tym
+% momencie nasza ignorancja nie pozwala nam zabrać na jego temat głosu.
+
+% \VerSpaceFour
+
+
+
+
+
+% \noindent
+% \StrWierszGora{41}{11} Odwołanie do przypisu w~tej linii wygląda naprawdę
+% brzydko, ale nie wiem jak można byłoby to poprawić.
+
+% \VerSpaceFour
+
+
+
+
+
+% \noindent
+% \Str{42} Według mnie symbol $\mod$ oznaczający \textbf{równość dwóch liczb
+%   modulo $k$} wygląda znacznie lepiej, niż używany w~tej książce symbol
+% $mod$. Dlatego też w~tych notatkach zawsze będę~się posługiwał pierwszą
+% z~podanych wersji.
+
+% \VerSpaceFour
+
+
+
+
+
+% \noindent
+% \Str{43} Kiedy już wiemy, że istnieje jedna i~tylko jedna liczba całkowita
+% $k$, dla której zachodzi
+% \begin{equation}
+%   \label{eq:Gancarzewicz-Arytmetyka-04}
+%   b = k a + r,
+% \end{equation}
+% to możemy określić $r = b - k a$. tylko czy to dowodzi jednoznaczności $r$?
+% Jeśli nawet nie, to łatwo ten fakt udowodnić. Załóżmy, że~zachodzi
+% \begin{subequations}
+%   \begin{align}
+%     \label{eq:Gancarzewicz-Arytmetyka-05-A}
+%     b = k a + r_{ 1 }, \\
+%     \label{eq:Gancarzewicz-Arytmetyka-05-B}
+%     b = k a + r_{ 2 }.
+%   \end{align}
+% \end{subequations}
+% Od~razu otrzymujemy
+% \begin{equation}
+%   \label{eq:Gancarzewicz-Arytmetyka-06}
+%   k a + r_{ 1 } = k a + r_{ 2 } \quad \iff \quad r_{ 1 } = r_{ 2 }.
+% \end{equation}
+
+% \VerSpaceFour
+
+
+
+
+
+% \Str{43} Analiza problemu tego czy liczba $b$ jest podzielna przez
+% liczbę~$a$, który jest podana w~dalszej części książeczki, byłby prostsza,
+% gdyby w~tym miejscu zostało napisane jawnie, że~z~definicji podzielność
+% liczby $b$ przez liczbę $a$ jest równoważna warunkowi
+% \begin{equation}
+%   \label{eq:Gancarzewicz-Arytmetyka-07}
+%   b = 0 ( \mod a ).
+% \end{equation}
+% Ten zaś warunek jest równoważny
+% \begin{equation}
+%   \label{eq:Gancarzewicz-Arytmetyka-08}
+%   0 = b ( \mod a ).
+% \end{equation}
+
+% \VerSpaceFour
+
+
+
+
+
+% \noindent
+% \Str{47} Na tej stronie podana jest informacja, że~za poprawnie
+% skonstruowany ciąg cyfr, który reprezentuje liczbę uznaje~się ciąg, którego
+% pierwsza cyfra, czytając od lewej do prawej jest różna od „$0$”.
+% Dodaje też, że~niekiedy rezygnuje~się z~tego warunku. Pominięto jednak
+% uwagę, że~ciąg jednoelementowy $0$ zawsze uważa~się za poprawny ciąg cyfr,
+% reprezentujący liczbę zero.
+
+% \VerSpaceFour
+
+
+
+
+
+% \noindent
+% \Str{51} Na tej stronie Gancarzewicz pisze o~„alfabecie (staro-)chińskim”.
+% Wydaje mi~się, że~z~punktu widzenia językoznawstwa, nie jest to alfabet,
+% ale pewien system hieroglificzny. Ponieważ jest to jednak książka
+% do~matematyki, nie do językoznawstwa, możemy wybaczyć autorowi ewentualne
+% nieścisłości.
+
+% \VerSpaceFour
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% ##################
+\newpage
+
+\CenterBoldFont{Błędy}
+
+\VerSpaceFive
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+    & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    60 & & \hphantom{0}4 & $f_{ 1 }( x ) \;\: dx$ & $f_{ 1 }( x ) \, dx$ \\
+    60 & & \hphantom{0}4 & $f_{ 2 }( x ) \;\: dx$ & $f_{ 2 }( x ) \, dx$ \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\VerSpaceTwo
+
+
+% \StrWierszeDol{24}{4--5} \\
+% \Jest jeszcze raz zmienić wskaźnik sumacyjny, tym razem $i$ zamieniamy
+% na~$j$, \\
+% \PowinnoByc zmienić nazwę wskaźnika sumacyjnego z~$i$ na~$j$ \\
+% \textbf{Str. 49, trzecia kolumna tabelki, wiersz 7.} \\
+% \Jest $= 1632$ \\
+% \PowinnoByc $= 1642$ \\
+% \StrWierszeDol{54}{14} \\
+% \Jest \textit{są jedną z~następującyc par: $00$, $25$. $50$, $75$} \\
+% \PowinnoByc \textit{tworzą jedną z~następujących liczb: $00$, $25$, $50$,
+%   $75$} \\
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+% Bibliography
+
+\printbibliography
+
+
+
+
+
+% ############################
+% End of the document
+
+\end{document}
