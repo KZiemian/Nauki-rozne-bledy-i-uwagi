@@ -195,9 +195,22 @@ eprint=true,
 
 
 \noindent
-\Str{63}
+
+\textbf{Rozdział~III.} Na stronie 62 wprowadzona jest dość nieszczęśliwy
+sposób numerowania wzorów. Dokładniej oznaczenie „(3.081)” nie oznacza wcale
+wzoru numer~81 w~rozdziale~3, ale \textit{pierwszy} wzór, będący wnioskiem
+lub~komentarze do~wzoru numer~8 w~rozdziale~3. Sens tych oznaczeń byłby
+bardziej zrozumiały, gdyby zostały one zapisane jako „(3.08.1)”. Ze~względu
+na ilość potencjalnych nieporozumień, jakie powoduje stosowana w~książce
+notacja, w~tych notatkach podanym oznaczenia wszystkich problematycznych
+wzorów w~postaci~(X.Y.Z).
 
 \VerSpaceFour
+
+
+
+
+
 
 
 
@@ -207,6 +220,20 @@ eprint=true,
 \CenterBoldFont{Uwagi do~konkretnych stron}
 
 \vspace{0em}
+
+
+\noindent
+\Str{53} Napotykamy tu problem, że~wzory (2.24) i~(2.25) różnią~się tylko
+tym, że~pierwszy zawiera symbol „$\text{l.i.m.}$”, a~w~drugim na jego
+miejscu stoi „$\lim$”. Ponieważ symbol „$\text{l.i.m.}$” nie został
+nigdzie zdefiniowany, nie wiadomo co on oznacza, tym samym nie wiemy, czym
+różnią~się wnioski wynikające z~dwóch twierdzeń ergodycznych. Niestety,
+wyjaśnienie tego problemu przekracza naszą wiedzę z~teorii ergodycznej.
+
+\VerSpaceFour
+
+
+
 
 
 \noindent
@@ -253,34 +280,109 @@ $dx$, nie zaś miary takiej jak $d\mu( x ) = x^{ 3 } dx$.
 
 
 
-% \noindent
-% \Str{10} Na tej stronie możemy zaobserwować, że~w~książeczce użyta jest
-% konwencja wedle której cudzysłów zapisujemy jako ”cytowany tekst”, wydaje
-% mi~się, że~jest to francuska konwencja zapisu. W~naszej ocenie lepiej
-% wygląda stosowana w~Polsce konwencja zapisu: „cytowany tekst”. Z~tego
-% powodu, gdy będziemy poprawiać jakiś fragment tekstu, w~którym znajduje~się
-% cudzysłów, w~poprawionej wersji będziemy stosować tę drugą konwencję.
+\noindent
+\Str{61} Treść tej strony jest wyjątkowo trudna do zrozumienia,
+a~jednocześnie kluczowa dla tego rozdziału, jeśli nie dla całej książki,
+dlatego należy~się ją możliwie dokładnie przeanalizować. Pytanie na które
+Wiener szuka tutaj odpowiedzi, jest następujące. Niech~$f( x )$ będzie
+funkcją gęstości prawdopodobieństwa, określoną na prostej rzeczywistej. Jak
+zmierzyć ilość informacji jaką ta funkcja zawiera?
 
-% \VerSpaceFour
+Zacznijmy od~dyskusji własności, jakie funkcja $f( x )$ ma posiadać. Funkcja
+ta musi być w~odpowiednim sensie całkowalna, jednak dla potrzeb niniejszej
+dyskusji wygodnie jest przyjąć, iż~jest ona ciągła na całym $\Rbb$, poza
+skończoną liczbą punktów. Warunek ten można osłabić i~wyniki wciąż pozostaną
+w~mocy, ale~takie uproszczenie koncepcyjnej strony problemu jest obecnie
+pożądane. Po drugie, funkcja ta musi być unormowana w~następującym sensie
+\begin{equation}
+  \label{eq:Winere-Cybernetics-ETC-01}
+  \int_{ -\infty }^{ +\infty } f( x ) \, dx = 1.
+\end{equation}
+Ponieważ $f( x )$ ma być gęstością prawdopodobieństwa, więc musi być funkcją
+nieujemną $f( x ) \geq 0$.
+
+Przyjrzymy~się teraz słowom „the~average logarithm~of the~breadth
+$f_{ 1 }( x )$ may be~considered as~some sort~of average~of the~height~of
+the~logarithm~of the~reciprocal~of $f_{ 1 }( x )$”. W~naszej ocenie Wiener
+odwołuje~się tutaj do~idei z~teorii informacji, której nie sformułował
+jawnie, która zaś wiąże prawdopodobieństwo zdarzenia z~ilości informacji
+jaką jego zajście nam daje. Ideę tą można wysłowić w~następujący sposób.
 
 
 
 
 
-% \noindent
-% \StrWierszDol{20}{8} Duży odstęp po tą linią to chyba błąd edytorski.
+% ##################
+\begin{quote}
 
-% \VerSpaceFour
+  Im mniej prawdopodobne jest dane wydarzenie, tym więcej informacji jego
+  zajście nam dostarcza. Zajście zdarzenia pewnego posiada zerową ilość
+  informacji, jeśli zaś prawdopodobieństwo zdarzenia monotonicznie malej
+  do zera, to ilość informacji dąży do nieskończoności.
+
+\end{quote}
+% ##################
 
 
 
 
 
-% \noindent
-% \Str{20} Podane tu wyjaśnienie definicji rekurencyjnej jest niełatwe
-% w~zrozumieniu i~może nawet nie być poprawne. Warto by ją poprawić.
+Definicja ta nie jest w~pełni ścisła, lecz jej doprecyzowanie jest dla
+naszych potrzeb zbędne. Jeśli teraz oznaczymy prawdopodobieństwo danego
+zdarzenia przez $P$, to funkcja dana wzorem
+\begin{equation}
+  \label{eq:Winere-Cybernetics-ETC-02}
+  \log_{ 2 }\!\left( \frac{ 1 }{ P } \right) = -\log_{ 2 }( P ),
+\end{equation}
+posiada wszystkie własności, które wedle podanej przed chwilą idei, powinny
+charakteryzować ilość informacji odpowiadającą zdarzeniu~$P$.
+Wzór ten jest w~zasadzie identyczny z~wzorem (3.02) z~książki Wienera
+i~stanowi jedną ze standardowych definicji ilości informacji.
 
-% \VerSpaceFour
+Wróćmy teraz do słów Wienera o~braniu średniej z~logarytmu wyrażenia
+$1 / f( x )$ (używa on tu angielskiego słowa „reciprocal”). Widzimy teraz,
+że~chodzi mu tu~o~ilość informacji przypisaną zdarzeniu o~prawdopodobieństwu
+równemu $f( x )$. Tutaj wchodzi jednak pewien niuans teorii
+prawdopodobieństwa, taki że~samo $f( x )$ nie jest prawdopodobieństwem
+żadnego zdarzenia, gdyż zbiór $\{ x \}$ nie reprezentuje żadnego „sensownego”
+zdarzenia. Dopiero wyrażenie
+\begin{equation}
+  \label{eq:Winere-Cybernetics-ETC-03}
+  f( x ) \, \Delta x,
+\end{equation}
+jest przybliżonym prawdopodobieństwem zdarzenia, polegającym na tym,
+że~zaszło jedno z~„bezsensownych” zdarzeń zawartych w~przedziale
+$[ x, x + \Delta x ]$. Idąc dalej tą drogą wzór
+\begin{equation}
+  \label{eq:Winere-Cybernetics-ETC-04}
+  \log_{ 2 }\!\left( \tfrac{ 1 }{ f( x ) } \right) =
+  -\log_{ 2 }\!\big( f( x ) \big) \, f( x ) \, \Delta x,
+\end{equation}
+interpretujemy jako przybliżoną ilość informacja, którą dostarcza nam
+fakt, że~zaszło zdarzenie $x_{ 1 }$ znajdują~się w~przedziale
+$[ x, x + \Delta x ]$. Z~tego też powodu pełną informację zawartą w~funkcji
+gęstości prawdopodobieństwa $f( x )$ definiujemy jako
+\begin{equation}
+  \label{eq:Winere-Cybernetics-ETC-05}
+  -\int_{ -\infty }^{ +\infty } \log_{ 2 }\!\big( f( x ) \big) \, f( x ) \, dx.
+\end{equation}
+Z~dokładnością do znaku, jest to ten sam wzór na~ilości informacji,
+którego używa Wiener, przy czym zmienna znaku z~plusa na~minus i~odwrotnie,
+nie ma wielkiego znaczenia dla rozwijanej teorii. To co ma znaczenie, to
+fakt, że~aby wzór \eqref{eq:Winere-Cybernetics-ETC-05} mógł być stosowany
+do~szerokiej klasy rozkładów prawdopodobieństwa, musimy przyjąć wcale nie
+oczywistą konwencję
+\begin{equation}
+  \label{eq:Winere-Cybernetics-ETC-06}
+  0 \log_{ 2 }( 0 ) = 0.
+\end{equation}
+
+\VerSpaceFour
+
+
+
+
+
 
 
 
@@ -537,12 +639,20 @@ $dx$, nie zaś miary takiej jak $d\mu( x ) = x^{ 3 } dx$.
     & Powinno być \\ \cline{2-3}
     & Od góry & Od dołu & & \\
     \hline
+    50 & \hphantom{0}5 & & 2.05 & 2.06 \\
     60 & & \hphantom{0}4 & $f_{ 1 }( x ) \;\: dx$ & $f_{ 1 }( x ) \, dx$ \\
     60 & & \hphantom{0}4 & $f_{ 2 }( x ) \;\: dx$ & $f_{ 2 }( x ) \, dx$ \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
+    62 & \hphantom{0}2 & & (3.081) & (3.08.1) \\
+    62 & \hphantom{0}4 & & (3.082) & (3.08.2) \\
+    62 & \hphantom{0}6 & & (3.083) & (3.08.3) \\
+    62 & \hphantom{0}8 & & (3.084) & (3.08.4) \\
+    62 & & \hphantom{0}5
+    & $\exp^{ ( -x^{ 2 } / 2b ) \, dx / \sqrt{ 2 \pi b } }$
+    & $\exp( -x^{ 2 } / 2b ) \frac{ dx }{ \sqrt{ 2 \pi b } }$ \\
+    62 & & \hphantom{0}7
+    & $\exp^{ ( -x^{ 2 } / 2a ) \, dx / \sqrt{ 2 \pi a } }$
+    & $\exp( -x^{ 2 } / 2a ) \frac{ dx }{ \sqrt{ 2 \pi a } }$ \\
+    & \hphantom{0}9 & & (3.091) & (3.09.1) \\
     % & & & & \\
     \hline
   \end{tabular}
