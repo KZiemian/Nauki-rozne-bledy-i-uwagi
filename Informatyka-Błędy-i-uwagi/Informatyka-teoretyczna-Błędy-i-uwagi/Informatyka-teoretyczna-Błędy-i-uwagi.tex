@@ -1,6 +1,6 @@
-% ######################################
+% ####################################################################
 % Basic configuration and packages
-% ######################################
+% ####################################################################
 % Package for discovering wrong and outdated usage of LaTeX.
 % More information to be found in l2tabu English version.
 \RequirePackage[l2tabu, orthodox]{nag}
@@ -9,9 +9,9 @@
 
 
 
-% ##################
+% ############################
 % Packages not tied to particular normal language
-% ##################
+% ############################
 % This package should improved spaces in the text
 \usepackage{microtype}
 % Add few important symbols, like text Celcius degree
@@ -19,9 +19,9 @@
 
 
 
-% ------------------------------------------------------
+% ##################
 % Polonization of LaTeX document
-% ------------------------------------------------------
+% ##################
 % Basic polonization of the text
 \usepackage[MeX]{polski}
 % Switching on UTF-8 encoding
@@ -33,16 +33,16 @@
 
 
 
-% ------------------------------------------------------
+% ##################
 % Setting margins
-% ------------------------------------------------------
+% ##################
 \usepackage[a4paper, total={14cm, 25cm}]{geometry}
 
 
 
-% ------------------------------------------------------
+% ##################
 % Setting vertical spaces in the text
-% ------------------------------------------------------
+% ##################
 % Setting space between lines
 \renewcommand{\baselinestretch}{1.1}
 
@@ -51,9 +51,9 @@
 
 
 
-% ------------------------------------------------------
+% ##################
 % Packages for scientific papers
-% ------------------------------------------------------
+% ##################
 % Switching off \lll symbol, that I guess is representing letter "Ł"
 % It collide with `amsmath' package's command with the same name
 \let\lll\undefined
@@ -81,9 +81,9 @@
 
 
 
-% ------------------------------------------------------
+% ##################
 % BibLaTeX
-% ------------------------------------------------------
+% ##################
 % Package biblatex, with biber as its backend, allow us to handle
 % bibliography entries that use Unicode symbols outside ASCII
 \usepackage[
@@ -94,15 +94,15 @@ url=false,
 eprint=true,
 ]{biblatex}
 
-\addbibresource{Systemy-operacyjne-Bibliography.bib}
+\addbibresource{Informatyka-teoretyczna-Bibliography.bib}
 
 
 
 
 
-% ------------------------------------------------------
+% ##################
 % Defining new environments (?)
-% ------------------------------------------------------
+% ##################
 % Defining enviroment "Wniosek"
 \newtheorem{corollary}{Wniosek}
 \newtheorem{definition}{Definicja}
@@ -112,10 +112,10 @@ eprint=true,
 
 
 
-% ------------------------------------------------------
+% ##################
 % Local packages
 % You need to put them in the directory Local-packages
-% ------------------------------------------------------
+% ##################
 % Local configuration of this particular file
 \usepackage{./Local-packages/local-settings}
 
@@ -123,16 +123,30 @@ eprint=true,
 \usepackage{./Local-packages/general-commands}
 % Package containing commands and other code useful for working with
 % mathematical text
-% \usepackage{math-commands}
+\usepackage{./Local-packages/math-commands}
 
 
 
 
 
-% ------------------------------------------------------
+% ######################################
+% Local macros
+% ######################################
+\newcommand{\rel}{\text{rel}}
+
+\newcommand{\twoAngels}{\langle \hspace{1em} \rangle}
+
+\newcommand{\doKeyword}{\text{\textbf{do}}}
+\newcommand{\untilKeyword}{\text{\textbf{until}}}
+\newcommand{\whileKeyword}{\text{\textbf{while}}}
+
+
+
+
+% ######################################
 % Package "hyperref"
 % They advised to put it on the end of preambule
-% ------------------------------------------------------
+% ######################################
 % It allows you to use hyperlinks in the text
 \usepackage{hyperref}
 
@@ -187,7 +201,7 @@ eprint=true,
 % ######################################
 \section{J.M. Brady \textit{Informatyka teoretyczna w~ujęciu
     programistycznym},
-  \parencite{Tanenbaum-Systemy-operacyjne-Wydanie-III-Pub-2013}}
+  \parencite{Brady-Informatyka-teoretyczna-w-ujeciu-ETC-Pub-1983}}
 
 \label{sec:Brady-Informatyka-teoretyczna-ETC}
 % ######################################
@@ -198,20 +212,172 @@ eprint=true,
 
 
 \noindent
-% \StrWierszeGora{31}{16--17} Stwierdzenie „tom ma 1000 stron (więcej niż ta
-% książka)” odnosi~się zapewne do wydania angielskiego, bo polskie wydanie ma
-% ponad 1200~stron. Szkoda, że~w~wydaniu polskim nie opatrzono tego tekstu
-% przypisem.
+\StrWierszDol{290}{15} Ten wiersz, i~inne podobne do niego, wyglądałby
+lepiej, gdyby zamiast „//zbiór liczb parzystych” był zapisany jako
+„//~zbiór liczb parzystych”.
 
 \VerSpaceFour
 
 
 
 
+
 \noindent
-% \StrWierszeDol{82}{9} Według mojej wiedzy, użyty tu angielski idiom „król
-% wzgórz” (ang. \textit{king~of the~hill}) oznacza osobę, która jest dowódcom
-% lub odniosła duży sukces.
+\StrWierszeDol{292}{3--4} Czytamy tutaj „Nazwa \textit{zbiór potęgowy}
+wywodzi~się nie tyle z~potęgi takiej operacji, ile ze spostrzeżenia, jakie
+poczynimy w~poniższym ćwiczeniu.”. Angielska nazwa tego zbioru to
+\textit{power set}, więc w~oryginalne tekst ten brzmiał prawdopodobnie jakoś
+tak: „The name \textit{power set} comes not from the~power of this
+operation\ldots”. Cały żart w języku angielskim brzmi lepiej, niż po polsku.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszDol{293}{1} Wzór zawarty w~tej linii
+\begin{equation}
+  \label{eq:Brady-Infromatyka-ETC-01}
+  f | U ( u ) = f( u ) \in T,
+\end{equation}
+byłby łatwiejszy w~zrozumieniu, gdyby go zapisać jako
+\begin{equation}
+  \label{eq:Brady-Infromatyka-ETC-02}
+  \big( f | U \big)( u ) = f( u ) \in T,
+\end{equation}
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszDol{295}{6} W~miejscach takich jak to, widać, że~w~tym wydaniu
+funkcja~$g$ obliczana na wartości~$t$ ma zapis graficzny „$g \, ( t )$”.
+Ładniej by wyglądała, gdyby była zapisywana jako~„$g( t )$”.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszGora{296}{10} Do zapisu relacji wprowadzony jest tu symbol
+$- \times$. Można zgadywać, że~tym czego naprawdę pragnął autor, jest strzałka,
+która kończy~się znakiem~$\times$. Można spróbować dodać taką strzałkę
+do~\LaTeX a, jeśli nie jest dostępna w~którejś z~istniejących paczek.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszGora{296}{15} Zostaje tu wprowadzony symbol $rel_{ U }$,
+oznaczający relację zdefiniowaną przez zbiór $U \subseteq S \times T$. Wyglądałby on
+jednak lepiej, gdyby był on zapisywany jako $\rel_{ U }$.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszGora{296}{17} W~tej linii spotykamy wzór $\rel_{ U }( s ) = t$,
+którego sens jest zbyt dwuznaczny. Może on bowiem sugerować, że~$t$ jest
+\textit{jedynym} elementem, który jest w~relacji $\rel_{ U }$
+z~elementem~$s$. Jednak to nie jest to co ten wzór ma oznaczać, gdyż mówi
+on tylko, że~$s$ i~$t$ są w~relacji, co wynika z~tego,
+że~$\rel_{ U }( s ) = t$ wtedy i~tylko wtedy, gdy $( s, t ) \in U$. Z~tego
+powodu symbol ten lepiej by było używać w~innej, rozpowszechnionej
+w~literaturze notacji $s \, \rel_{ U } \, t$.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszGora{297}{18} Funkcje o~nazwach takich jak wprowadzona tu funkcja
+„$nast$”, lepiej byłoby chyba zapisywać jako „$\text{nast}$”.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszGora{301}{2} W~podanym tu zapisie liczby rzeczywistej
+$n \cdot d_{ 1 } d_{ 2 } d_{ 3 }\ldots$, kropka „$\cdot$” oznacza, że~po jej lewej stronie
+znajduje~się symbol liczby całkowitej, a~po jej prawej stronie cyfry
+jej części ułamkowej. Jak tekst wyjaśnia, używana jest tutaj reprezentacja
+dziesiętna, czyli $d_{ i } \in \{ 0, 1, \ldots, 9 \}$.
+
+Autor przeczył chyba przy tym fakt, że~skoro przyjął $n \in \Nbb$, to jego
+definicji obejmuje tylko nieujemne liczby rzeczywiste. Jest to jednak tylko
+drobne potknięcie, bez większego znaczenia.
+
+
+
+
+
+\noindent
+\StrWierszGora{303}{5} Warto doprecyzować, że~w~wyrażenie takie jak
+$1/2 * n * ( n + 1 )$ należy rozumieć jako $( 1 / 2 ) * n * ( n + 1 )$.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszGora{307}{5} W~tej książce przyjęto konwencję, że~kolejne elementy
+ciągu zapisujemy jako $e1, e2, e3, \ldots$, nie zaś jako
+$e_{ 1 }, e_{ 2 }, e_{ 3 }, \ldots${ } Od konwencji tej postanowiono odejść,
+zapisują wyraz o~numerze $n + 1$ jako $e_{ n + 1 }$, jednak dla spójności
+zapisu proponujemy, by trzymać~się uprzedniej i~zapisywać ten wyraz jako
+$e( n + 1 )$.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszGora{309}{19} Instrukcję iteracyjną
+\begin{equation}
+  \label{eq:Brady-Infromatyka-ETC-01}
+  \untilKeyword \;\, ident > v2 \;\, \doKeyword \;\, instrukcja \;\,
+  \twoAngels \;\, ident := ident + 1,
+\end{equation}
+można prościej zapisać jako
+\begin{equation}
+  \label{eq:Brady-Infromatyka-ETC-01}
+  \whileKeyword \;\, ident \leq v2 \;\, \doKeyword \;\, instrukcja \;\,
+  \twoAngels \;\, ident := ident + 1,
+\end{equation}
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszGora{311}{12} Ta pozycja bibliograficzna kończy~się jako
+„\textit{languages, maszyn}”, co wskazuje, że~została błędnie wpisana.
+
+\VerSpaceFour
 
 
 
@@ -238,6 +404,20 @@ eprint=true,
     % & & & & \\
     290 & & 13 & liczb rzeczywistych & dodatnich liczb wymiernych \\
     291 & & \hphantom{0}1 & $\varepsilon$. & $\varepsilon$.” \\
+    299 & \hphantom{0}9 & & dyskusjiz & dyskusji z \\
+    303 & & 11 & $1 \ldots n$ & $1 + \ldots + n$ \\
+    311 & 11 & & in~Programming & \textit{in~Programming} \\
+    311 & & \hphantom{0}2 & theory \textit{Scientific}
+           & theory, \textit{Scientific} \\
+    313 & 16 & & \textit{Springer} & Springer \\
+    314 & & \hphantom{0}7 & (1974):\textit{Mathematical}
+           & (1974): \textit{Mathematical} \\
+    315 & 17 & & \textit{Mass. Inst. Technol.}
+           & Mass. Inst. Technol. \\
+    316 & 15 & & \textit{languages} & \textit{Languages} \\
+    316 & 17 & & 150.{ }{ } Scott & 150. Scott \\
+    316 & & \hphantom{0}4 & Thue{ }{ } A. & Thue A. \\
+    316 & & \hphantom{0}2 & Top\hspace{0.2em}or & Topor \\
     \hline
   \end{tabular}
 
@@ -246,16 +426,21 @@ eprint=true,
 \VerSpaceSix
 
 
-% \noindent
-% \StrWierszeDol{58}{14--15} \\
-% \Jest do~ramienia starego fonografu obracającego~się podczas odtwarzania
-% winylowych płyt z szybkością 33 obrotów na minutę. \\
-% \PowinnoByc jak ramię starego fonografu, które podczas odtwarzania
-% przesuwało~się na płytami winylowymi obracającymi~się z~szybkością
-% 33~obrotów na minutę. \\
 
 
-% ######################################
+
+\noindent
+\StrWierszeDol{310}{6--8} \\
+\Jest Na przykład poniższa funkcja daje w~wyniku albo pierwszą wartość
+większą od $m$, wartości wybranej ze~struktury danych $V$ o~$k$ elementach,
+albo też $0$, jeśli nie ma w~strukturze takiej wartości \\
+\PowinnoByc Dla przykładu rozpatrzmy poniższą funkcję, która operuje
+na strukturze zawierającej $k$~elementów. Funkcja ta zwraca albo pierwszą
+wartość zawartą w~tej strukturze, która jest większa od~$m$, albo też~$0$,
+jeśli struktura nie zawiera takiej wartości. \\
+
+
+% ####################################################################
 
 
 

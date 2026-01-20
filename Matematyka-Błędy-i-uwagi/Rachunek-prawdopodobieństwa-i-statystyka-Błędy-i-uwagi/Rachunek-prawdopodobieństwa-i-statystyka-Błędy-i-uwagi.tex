@@ -1,0 +1,734 @@
+% ####################################################################
+% Basic configuration and packages
+% ####################################################################
+% Package for discovering wrong and outdated usage of LaTeX.
+% More information to be found in l2tabu English version.
+\RequirePackage[l2tabu, orthodox]{nag}
+% Class of LaTeX document: {size of paper, size of font}[document class]
+\documentclass[a4paper,11pt]{article}
+
+
+
+% ------------------------------------------------------
+% Packages not tied to particular normal language
+% ------------------------------------------------------
+% This package should improved spaces in the text
+\usepackage{microtype}
+% Add few important symbols, like text Celcius degree
+\usepackage{textcomp}
+
+
+
+% ------------------------------------------------------
+% Polonization of LaTeX document
+% ------------------------------------------------------
+% Basic polonization of the text
+\usepackage[MeX]{polski}
+% Switching on UTF-8 encoding
+\usepackage[utf8]{inputenc}
+% Adding font Latin Modern
+\usepackage{lmodern}
+% Package is need for fonts Latin Modern
+\usepackage[T1]{fontenc}
+
+
+
+% ------------------------------------------------------
+% Setting margins
+% ------------------------------------------------------
+\usepackage[a4paper, total={14cm, 25cm}]{geometry}
+
+
+
+% ------------------------------------------------------
+% Setting vertical spaces in the text
+% ------------------------------------------------------
+% Setting space between lines
+\renewcommand{\baselinestretch}{1.1}
+
+% Setting space between lines in tables
+\renewcommand{\arraystretch}{1.4}
+
+
+
+% ------------------------------------------------------
+% Packages for scientific papers
+% ------------------------------------------------------
+% Switching off \lll symbol, that I guess is representing letter "Ł"
+% It collide with `amsmath' package's command with the same name
+\let\lll\undefined
+% Basic package from American Mathematical Society (AMS)
+\usepackage[intlimits]{amsmath}
+% Equations are numbered separately in every section
+\numberwithin{equation}{section}
+
+% Other very useful packages from AMS
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amscd}
+\usepackage{amsthm}
+
+% Package with better looking calligraphy fonts
+\usepackage{calrsfs}
+
+% Package with better looking greek letters
+% Example of use: pi -> \uppi
+\usepackage{upgreek}
+% Improving look of lambda letter
+\let\oldlambda\Lambda
+\renewcommand{\lambda}{\uplambda}
+
+
+
+
+% ------------------------------------------------------
+% BibLaTeX
+% ------------------------------------------------------
+% Package biblatex, with biber as its backend, allow us to handle
+% bibliography entries that use Unicode symbols outside ASCII
+\usepackage[
+language=polish,
+backend=biber,
+style=alphabetic,
+url=false,
+eprint=true,
+]{biblatex}
+
+\addbibresource{Rachunek-prawdopodobieństwa-i-statystyka-Bibliography.bib}
+
+
+
+
+
+% ------------------------------------------------------
+% Defining new environments (?)
+% ------------------------------------------------------
+% Defining enviroment "Wniosek"
+\newtheorem{corollary}{Wniosek}
+\newtheorem{definition}{Definicja}
+\newtheorem{theorem}{Twierdzenie}
+
+
+
+
+
+% ------------------------------------------------------
+% Local packages
+% You need to put them in the same directory as .tex file
+% ------------------------------------------------------
+% Package containing various command useful for working with a text
+\usepackage{./Local-packages/general-commands}
+% Package containing commands and other code useful for working with
+% mathematical text
+\usepackage{./Local-packages/math-commands}
+
+
+
+% ------------------------------------------------------
+% Local macros
+% ------------------------------------------------------
+
+
+
+
+
+
+% ------------------------------------------------------
+% Package "hyperref"
+% They advised to put it on the end of preambule
+% ------------------------------------------------------
+% It allows you to use hyperlinks in the text
+\usepackage{hyperref}
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+% Title and author of the text
+\title{Rachunek prawdopodobieństwa \\
+  {\Large Błędy i~uwagi}}
+
+\author{Kamil Ziemian}
+
+
+% \date{}
+% ####################################################################
+
+
+
+
+
+
+
+
+
+
+% ####################################################################
+\begin{document}
+% ####################################################################
+
+
+
+
+
+% ######################################
+\maketitle % Tytuł całego tekstu
+% ######################################
+
+
+
+
+
+% ######################################
+\section{Patrick Billingsley
+  \textit{Prawdopodobieństwo i~miara},
+  \cite{BillingsleyPrawdopodobienstwoIMiara2009}}
+% ############################
+
+\vspace{0em}
+
+
+% ##################
+\CenterBoldFont{Uwagi}
+
+\vspace{0em}
+
+
+\noindent
+Warto byłoby przepisać tę~książkę w~\LaTeX u. Widać bowiem, że~wzory
+matematyczne zostały zapisane w~jakimś, zapewne pochodzącym z~czasów PRLu
+systemie i~symbole są przez to~niskiej jakości, takie pikselowate.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+Pionowe kreski w~wykresach funkcji schodkowych, takich jak
+te~na~stronie 17, powinny być rysowane linią przerywaną, nie zaś jak
+obecnie ciągłą. Stosuje~się to oczywiście do wszystkich funkcji, które
+posiadają nieciągłość w~formie skoku.
+
+\VerSpaceFour
+
+
+
+
+
+% ##################
+\CenterBoldFont{Uwagi do~konkretnych stron}
+
+
+\noindent
+\Str{17} Przez liczbę dwójkowo-wymierną rozumie chyba Billingsley liczbę
+którą da~się zapisać w~postaci $p / 2^{ n }$, $p < 2^{ n }$.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{17} Pojęcie rzędu przedziału może stwarzać problem, bo~wydaje~się,
+że~Billingsley przyjął, iż~liczby $a_{ 0 }, a_{ 1 }, \ldots, a_{ n }$ tworzą
+podział rzędu $n$, jeśli każda z~nich da~się zapisać w~postaci
+$p / 2^{ n }$, niezależnie od~tego, czy jest to forma nieskracalna czy nie.
+Wnioskuję to z~tego, że~ciąg $0, 1/4, 2/4, 3/4, 1$ powinien tworzyć podział
+rzędu 2, jednak $2/4 = 1/2$.
+
+Należałoby więc rząd przedziału zdefiniować w~ten sposób, że~każdą
+z~liczb $a_{ i }$ można zapisać w~postaci $p_{ i } / 2^{ n }$ przy
+czym co~najmniej inna z~nich jest w~postaci nieskracalnej. Tym samym
+pojęcie to~stanie~się jednoznaczne.
+
+\VerSpaceFour
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    %     & & & & \\
+    %     & & & & \\
+    %     & & & & \\
+    %     & & & & \\
+    %     & & & & \\
+    %     & & & & \\
+    %     & & & & \\
+    %     & & & & \\
+    %     & & & & \\
+    %     & & & & \\
+    %     & & & & \\
+    %     & & & & \\
+    %     & & & & \\
+    %     & & & & \\
+    %     & & & & \\
+    %     & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\VerSpaceSix
+
+
+% ############################
+
+
+
+
+
+
+
+
+
+% ######################################
+\section{William Feller \textit{Wstęp do rachunku prawdopodobieństwa. Tom~I},
+  \cite{FellerWstepDoRachunkuPrawdopodobienstwaVolI2006}}
+
+\label{sec:Feller-Wstep-do-rachunku-ETC}
+% ######################################
+
+
+
+% % ######################################
+% \subsection{Uwagi~konkretnych stron}
+
+% \label{subsec:Uwagi-do-konkretnych-stron}
+% % ######################################
+
+
+
+
+% ######################################
+\subsection{Uwagi do~konkretnych stron}
+
+\label{subsec:Uwagi-do-konkretnych-stron}
+% ######################################
+
+
+
+\noindent
+\StrWierszeGora{13}{9--11} Według mnie zdanie „Potrzebujemy ścisłej
+matematycznej teorii opartej na zasadach ogólnie przyjętych w~geometrii
+i~mechanice.”, powinno być zastąpione przez „Potrzebujemy ścisłej
+matematycznej teorii opartej na ogólnych zasadach, jak tych przyjętych
+w~geometrii i~mechanice.”.
+
+{\Large Od strony 17 należy zacząć ponowne czytanie książki.}
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
+                              & Powinno być \\ \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    18 & & 5 & \ldots lub & \ldots{} lub \\
+    19 & & & $- |$ & $- \}$ \\
+    28 & & 9 & wielu sposobami & na wiele sposobów \\
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\VerSpaceSix
+
+
+
+% ############################
+
+
+
+
+
+
+
+
+
+
+% ##########################################################
+\section{Zdzisław Hellwig \textit{Elementy rachunku
+    prawdopodobieństwa i~statystyki matematycznej},
+  \parencite{Hellwig-Elementy-rachunku-prawdopodobienstwa-ETC-Pub-1987}}
+
+\label{sec:Hellwig-Elementy-Rachunku-ETC}
+% ##########################################################
+
+
+
+% ######################################
+\subsection{Uwagi do~konkretnych stron}
+
+\label{subsec:Uwagi-do-konkretnych-stron}
+% ######################################
+
+
+
+\noindent
+\Str{35} Autor rozpoczyna tu dyskusję pojęcia \textit{zdarzenia losowego}
+i~\textit{zdarzenia elementarnego}, które to są fundamentalne dla~całego
+rachunku prawdopodobieństwa. Książka będzie jeszcze wielokrotnie do nich
+wracać i~omawiać je pod różnymi kątami, warto jednak zatrzymać~się już na
+początku tych rozważań i~możliwie dokładnie omówić ich sens. Nim do tego
+przejdziemy, warto zaznaczyć, że~pojęcie „zdarzenia” i~„zdarzenia losowego”
+będziemy traktować jako synonimy, chyba że~powiedziano inaczej.
+
+Nasze rozważania nie będą miały charakteru ściśle formalnego, choć mamy
+nadzieję, że~będzie je cechował wysoki poziom ścisłości. Wybieramy takie
+podejście, gdyż naszym celem nie jest po prostu wprowadzenie matematycznych
+pojęć, lecz wyjaśnienie czemu je wprowadzamy i~jaki jest ich ogólny sens.
+Dlatego też naszym punktem wyjścia jest omówienie omówienia problemu, który
+przenika cały rachunek prawdopodobieństwa.
+
+Problem ten jest następujący. Mamy doświadczenie, które jest powtarzalne
+i~zawsze produkuje jeden
+konkretnych wynik. Na początek przyjmijmy, że~dane doświadczenie może zwrócić
+tylko skończoną liczbę wyników $e_{ 1 }$, $e_{ 2 }$, \ldots, $e_{ n }$. Jest to
+uzasadnione tym, że~zrozumienie wariantu problemu, gdy liczba wyników jest
+skończona, samo w~sobie jest ogromnie ważne. Poza tym, uogólnienie tych
+rozważań na przypadek, gdy doświadczenie może zwrócić jeden z~nieskończonej
+liczby rezultatów jest wyjątkowo trudne.
+
+Był ułatwić nasze rozważania, rozpatrzmy jako model takiego doświadczenie
+problem urny, która zawiera $12$ kul. Pięć z~tych kul jest białych i~każda
+na swej powierzchni zapisany numer od~$1$ do $5$. Pozostałe siedem jest
+czarnych i~ponumerowanych liczbami od $1$ do $7$. Doświadczenie będzie
+polegało na wyciągnięciu jednej kuli z~urny, bez zaglądania do wnętrza urny,
+tak że przed wyciągnięcie kuli, nie znamy ani jej koloru ani numeru.
+Doświadczenie to jest powtarzalne, bo zawsze po wyciągnięciu kuli, możemy ją
+włożyć z~powrotem do urny. Ten model doświadczenia można by dalej
+doprecyzowywać, jednak nie jest to potrzebne, gdyż jest on intuicyjnie prosty
+do zrozumienia.
+
+W~omawianym przypadku, zdarzeniem elementarnym jest wyciągnięci jednej kuli
+z~urny. Można też powiedzieć, że~to pojęcie zdarzenia elementarnego
+powstało po to, by opisać zdarzenia takie jak wyciągnięcie jednej kuli
+z~urny. Przy czym słowa „zdarzenie” użyliśmy tu w~normalny sensie, nie
+zaś jako synonim „zdarzenia losowego”. Zauważmy bowiem, że w~problemach
+z~rachunku prawdopodobieństwa zawsze lub prawie zawsze mamy do czynienia
+z~jakimś doświadczeniem i~dzięki naszemu zrozumieniu
+natury tego doświadczenia, jesteśmy w~stanie powiedzieć, co jest zdarzeniem
+elementarny. Zaś bez zidentyfikowania zdarzeń elementarnych nie jesteśmy
+w~stanie ani poprawnie sformułować, ani rozwiązań większości problemów
+z~rachunku prawdopodobieństwa.
+
+Mówiąc inaczej, w~problemach z~rachunku prawdopodobieństwa prawie zawsze
+mamy podane jakieś doświadczenie powtarzalne, takie jak wyciąganie kul
+z~urny. Dzięki naszemu zrozumieniu tego doświadczenia, potrafimy powiedzieć,
+jaki są możliwe rezultaty jego pojedynczego wykonania. Następnie każdy
+możliwy rezultat tego doświadczenia uznajemy za zdarzenie elementarne.
+Zauważmy, że~do tej pory nic nie mówiliśmy o~prawdopodobieństwie jaką
+posiadają zdarzenia elementarne, na to przyjdzie czas później.
+
+Te rozważania można podsumować mówiąc, że~pojęcie zdarzenia elementarnego
+powstało po to, by opisać pojedynczy wynik powtarzalnego doświadczenia.
+To utożsamienie, które ciągle spotykamy rozwiązując problemy z~rachunku
+prawdopodobieństwa, pozwala nam na podstawie zrozumienie doświadczenia,
+zidentyfikować zdarzenia elementarne.
+
+Rozważmy teraz, jakie problemy możemy rozważać w~kontekście powtarzalnego
+doświadczenie, takiego jak wyciąganie kul z~naszej urny. By uprościć
+rozważania, zdarzenie elementarne
+polegające na wyciągnięciu kuli białej o~numerze $1$ oznaczamy $e_{ 1 }$,
+kuli o~numerze~$2$ oznaczamy $e_{ 2 }$ i~tak do $e_{ 5 }$. Wyciągnięcie kuli
+czarnej o~numerze $1$ oznaczamy przez $e_{ 6 }$, kuli czarnej o~numerze $2$
+przez $e_{ 7 }$, etc., aż do $e_{ 12 }$.
+
+Najprostsze problem jaki możemy w~tym kontekście postawić brzmi następująco.
+Wybieramy jedną kulę, niech będzie to kula biała o~numerze $1$,
+jej wyciągnięciu odpowiada zdarzenie elementarne $e_{ 1 }$. Wyciągamy kulę
+z~urny, czyli zaszło zdarzenie $e_{ j }$, dla $j \in \{ 1, 2, 3, \ldots, 12 \}$. Czy
+wyciągnęliśmy białą kulę o~numerze~$1$? Innymi słowy, czy
+$e_{ j } = e_{ 1 }$? Należy podkreślić, że~wciąż nic nie powiedzieliśmy
+o~prawdopodobieństwie zdarzeń elementarnych, pytamy~się tylko o~to, czy
+w~danym eksperymencie zaszło wybrane zdarzenie, czy nie?
+
+Przykład powyższy pokazuje, czemu w~tego typu problemach wygodne jest
+oznaczanie tym samym symbolem zarówno kuli, jak i~zdarzenia elementarnego
+polegającego na jej wyciągnięciu, co jednak jest bardzo niechlujnym
+postępowaniem. Biała kula o~numerze $1$ jest pewną rzeczą, zaś $e_{ 1 }$ jest
+zdarzeniem polegającym na wyciągnięciu tej kuli z~urny, a~rzeczy i~zdarzenia
+w których biorą udział, to zupełnie inne „obiekty”. Niemniej zdarzenie
+elementarne $e_{ 1 }$, które polega na wyciągnięciu białej kuli
+o~numerze~$1$, jednoznacznie pozwala tę kulę zidentyfikować. Z~tego względu
+niektórzy piszą „Rozważmy kulę $e_{ 1 }$\ldots”, co bardziej precyzyjnie
+wysłowilibyśmy pisząc „Rozważmy kulę, której wyciągnięcie z~urny jest
+zdarzeniem elementarnym oznaczanym przez $e_{ 1 }$\ldots” Pozwolimy sobie
+korzystać z~tego typu skrótów myślowych, jeśli odpowiednio uprości to nasze
+rozważania.
+
+Następny problem jaki możemy postawić w~kontekście tego doświadczenia jest
+następujący. Wyciągamy kulę z~urny, czyli zaszło zdarzenie $e_{ j }$, dla
+$j \in \{ 1, 2, 3,\ldots, 12 \}$. Czy wyciągnęliśmy białą kulę z~numerem~$1$, czy
+czarną kulę z~numerem~$1$? Mówiąc inaczej, czy $e_{ j } = e_{ 1 }$ lub
+$e_{ j } = e_{ 6 }$? To pytanie kieruje nas w~stronę teoriomnogościowego
+sformułowania rachunku prawdopodobieństwa. Problem ten możemy bowiem w~prosty
+sposób sformułować w~języku teorii mnogości. Oznaczmy bowiem
+$A = \{ e_{ 1 }, e_{ 2 } \}$. Wówczas nasz problem redykuje~się do pytanie
+czy $e_{ j } \in A$? Język teorii mnogości okazuje~się wyjątkowo wygodny
+w~formułowaniu tego typu pytań, dlatego będziemy go od teraz normalnie
+używać.
+
+Problem jaki właśnie rozważyliśmy, można uogólnić w~następujący sposób.
+W~tego typu problemie, pytamy nie o~to czy w~danym doświadczeniu
+zaszło zdarzenie elementarne takie jak $e_{ 1 }$, tylko czy
+to zdarzenie, które zaobserwowaliśmy jest jednym ze~zdarzeń elementarnych
+z~pewnego zbioru~$A$. Skoro mówimy o~zbiorach zdarzeń elementarnych, to
+teoria mnogości wskazuje, że~powinniśmy sformułować nas problem
+w~następujący sposób.
+
+Mamy powtarzalne doświadczenie, w~wyniku wykonania którego daje nam jeden
+określony rezultat, który nazywamy zdarzeniem elementarnym. Założyliśmy,
+że~w~rozpatrywanym eksperymencie jest tylko skończona liczba możliwych
+wyników, więc mamy $n$~zdarzeń elementarnych: $e_{ i }$, $i = 1, 2, 3,\ldots, n$.
+Zbiór wszystkich zdarzeń elementarnych nazywamy, zgodnie z~omawianą książką,
+\textit{przestrzenią zdarzeń elementarnych} i~oznaczamy~$E$. Teraz
+wprowadzamy pojęcia \textit{zdarzenia} (\textit{zdarzenia losowego}),
+w~następujący sposób. Niech $A \subseteq E$. Mówimy, że~w~danym eksperymencie
+zaszło zdarzenie~$A$, jeśli zaszło zdarzenie elementarne $e_{ j }$
+i~$e_{ j } \in A$. Każde zdarzenie elementarne $e_{ j }$ możemy teraz utożsamić
+ze zdarzeniem losowym biorąc $A = \{ e_{ j } \}$, pojęcie zdarzenia losowego
+jest więc ogólniejsze.
+
+Widzimy teraz, jak intuicja stoi za~pojęciem ogólnego zdarzenia
+losowego~$A$. Jest nią pytanie, czy w danym doświadczeniu zaszło jedno ze
+zdarzeń elementarnych, które należą do~zbioru~$A$. To jednocześnie tłumaczy
+nam na poziomie koncepcyjnym, różnicę między zdarzeniem elementarnym
+a~ogólnym zdarzeniem losowym.
+
+Potrzebujemy rozpatrzyć jeszcze co najmniej jeden problem. Wróćmy do naszego
+problemu z~urną. Wyciągamy z~niej jedną kulę, następnie ją odkładamy
+z~powrotem do urny, z~której ponownie wyciągamy kulę. Pytamy~się, czy za
+pierwszym razem wyciągnęliśmy białą kulę z~numerem $1$, a~za drugim razem
+czarną kulę z numerem~$1$. Inaczej mówiąc, mamy dwuelementowy ciąg wyników
+kolejnych wykonań naszego doświadczenia, $a_{ i }$, $i \in \{ 1, 2 \}$ i~zadajemy
+sobie pytanie, czy prawdą jest, że~$a_{ 1 } = e_{ 1 }$ i~$a_{ 2 } = e_{ 6 }$?
+W~omawianej książce tego typu ciągi nazywane są \textit{kombinacjami},
+a~dokładniej???? \textit{kombinacjami z~powtórzeniami}.
+
+W~tak postawionym problemie kluczowe jest to, że~uwzględniamy kolejność
+wykonania doświadczeń. Jeśli najpierw zaszło zdarzenie elementarne $e_{ 1 }$,
+a~potem $e_{ 6 }$ to odpowiedź na wcześniej postawiony problem jest
+twierdząca. Jeśli najpierw zaszło zdarzenie $e_{ 6 }$, a~potem $e_{ 1 }$,
+czyli najpierw wyciągnęliśmy czarną kulę o~numerze~$1$, a potem białą
+o~numerze $1$, to odpowiedź jest przecząca. Mówiąc inaczej, w~rozważanym
+teraz problemie, pytamy~się nie po prostu o~to, czy w~dwóch powtórzenia
+doświadczenia zaszły zdarzenie elementarne $e_{ 1 }$ i~$e_{ 6 }$, ale
+czy zaszły one i~to w~zadanej kolejności.
+
+Problem ten natychmiast~się uogólnia. Rozpatrzmy dwa zdarzenia
+$A_{ 1 }, A_{ 2 } \subseteq E$ i~niech $a_{ i }$, $i = \{ 1, 2 \}$ będzie ciągiem wyników
+podwójnego wykonania naszego eksperymentu. Czy jest prawdą,
+że~$a_{ i } \in A_{ i }$?
+
+W~ten sposób omówiliśmy najbardziej podstawowe typy problemów jakie
+napotykamy w~rachunku prawdopodobieństwa. Po ich uogólnieniu, można je
+sprowadzić do dwóch kategorii.
+
+\begin{enumerate}
+
+\item Czy podczas wykonywania doświadczenia zaszło zdarzenie $A$?
+
+\item Czy otrzymany podczas $k$-krotnego powtarzania doświadczenia,
+  otrzymaliśmy ciąg zdarzeń losowych $a_{ i }$, o~własności
+  $a_{ i } \in A_{ i }$? Gdzie $A_{ i }$ to pewien ciąg zdarzeń losowych,
+  $A_{ i } \subseteq E$.
+
+\end{enumerate}
+
+Zanim przejdziemy dalej, zauważmy, że~problemy te można teraz uogólniać na
+wiele sposobów. Po pierwsze możemy, mieć dwa doświadczenia, oznaczmy je
+$D_{ 1 }$ i~$D_{ 2 }$, zaś ich przestrzenie zdarzeń elementarnych przez
+$E_{ 1 }$ i~$E_{ 2 }$. Możemy teraz powstaje pytanie, czy wykonując najpierw
+doświadczenie, a~potem drugie, dostaniemy ciąg wyników $a_{ i }$,
+$i \in \{ 1, 2 \}$, taki że $a_{ i } \in A_{ i }$?
+
+By pokazać, jak naturalny jest tego typu problem, rozważmy następujące
+zadania. Z~omawianej uprzednio urny wyciągamy kulę i~odkładamy na bok,
+następnie wyciągamy drugą kulę. Czy wyciągnęliśmy dwie czarne kule? Ponieważ
+gdy wyciągamy pierwszą kulę w~urnie jest pięć białych kul i~siedem czarnych,
+podczas gdy podczas wyciągania drugiej kuli w~urnie jest $11$ kul, przy czym
+liczba kul białych i~czarnych zależy od tego jaką kulę wyciągnęliśmy
+poprzednio, to z~formalnego punktu widzenia, mamy do czynienie z~dwoma
+różnymi doświadczeniami występującymi po sobie, nie zaś z~jednym powtarzanym
+dwa razy. Stosunkowo rzadko zwracamy uwagę na tego typu subtelności, bo
+zwykle nie przeszkadzają nam rozwiązywać zadań.
+
+Jak można zauważyć, do tej pory nie wspomnieliśmy nic o~prawdopodobieństwie
+zdarzeń, co może~się wydawać dziwne. Uczyniliśmy to z~premedytacją,
+chcieliśmy bowiem skupić~się na wyjaśnieniu sensu takich pojęć jak zdarzenie
+elementarne, czy przestrzeń zdarzeń elementarnych i~wyjaśnić jak problem
+przeprowadzania powtarzalnego motywuje ich wprowadzenie. Jak widać, można to
+zrobić nie korzystając zupełnie z~pojęcia prawdopodobieństwa. Jednocześnie
+taka analiza pokazuje, dlaczego język teorii mnogości jest tak wygodny
+w~rachunku prawdopodobieństwa.
+
+Musimy też zauważyć kolejną ważną rzecz. Z~formalnego punktu widzenia możemy
+teraz odrzucić myślenie o~przeprowadzaniu doświadczeń, zostawiają tylko
+matematyczny rdzeń, czyli ograniczyć nasze myślenie do pewnych zbiorów, ich
+podzbiorów oraz ciągów elementów należących do tych zbiorów. Jakkolwiek jest
+to możliwe, to jest wysoce niewskazane, bowiem gubimy zupełnie z~oczu, czemu
+w~ogóle interesują nas takie właśnie problemy. Co gorsza, gdy już
+wprowadzimy pojęcie prawdopodobieństwa, to bez pamiętania o~problemie
+przeprowadzania powtarzalnego eksperymentu, nie będziemy mogli zrozumieć,
+czemu prawdopodobieństwo ma posiadać takie, a~nie inne własności. To zaś
+może skutkować tylko zamętem i~utrudnieniem nauki tego działu matematyki.
+
+W~tym momencie potrzebujemy teraz zrobić kolejny krok i~wprowadzić pojęcie
+prawdopodobieństwa do rozważanego formalizmu. Choć w~książce Hellwiga
+pojęcie to jest dyskutowane trochę dalej i~to w~interesujący sposób, to my
+przedyskutujemy je już teraz. Inaczej bowiem nasz rozważania byłby bardzo
+niepełne.
+
+Powróćmy do problemu wyciągania kul z~urny. Ponieważ kul czarnych jest
+siedem, a~kul białych tylko pięć, intuicyjnie czujemy, iż~wyciągnięcie kuli
+czarnej powinno być bardziej prawdopodobne, niż wyciągnięcie kuli białej.
+Pojęcie prawdopodobieństwa ma właśnie służyć matematycznemu doprecyzowaniu,
+co to znaczy „bardziej prawdopodobne”. Nie będziemy przy tym dyskutować
+problemu, czy zawsze takie doprecyzowanie jest możliwe, gdyż to zagadnienie
+można omawiać, dopiero po zapoznaniu~się z~podstawami rachunku
+prawdopodobieństwa.
+
+W~przypadku naszego problemu z~urną, prawdopodobieństwo jest funkcją
+$P : \text{Set}( E ) \to \Rbb_{ + }$, gdzie $\text{Set}( E )$ to zbiór
+potęgowy przestrzeni zdarzeń elementarnych,
+a~$\Rbb = \{ x \in \Rbb \, | \, x \geq 0 \}$. Na tę funkcję narzucamy szereg
+warunków, takich jak to, że~dla każdego
+$A \in \text{S}( E )$, $0 \leq P( A ) \leq 1$, jednak w~tym momencie te warunki nie
+są dla nas kluczowe. Jeśli $P( A_{ 1 } ) < P( A_{ 2 } )$ to mówimy,
+że~zdarzenie $A_{ 2 }$ jest bardziej prawdopodobne, niż zdarzenie $A_{ 1 }$.
+Intuicyjnie odpowiada to temu,
+że~jeśli będziemy powtarzać nasze doświadczenie, to zdarzenia elementarne
+należące do zdarzenia $A_{ 2 }$ będziemy widzieć częściej, niż te należące
+do $A_{ 1 }$.
+
+W~przypadku naszej urny, jeśli będziemy ciągle wyjmować z~niej
+kulę i~ponownie ją wkładać, to oczekujemy, iż~częściej wyciągniemy kulę
+czarną niż białą. Osoby znające już trochę rachunek prawdopodobieństwa,
+wiedzą już, że~standardowa metod rozwiązywania tego zadania pozwala mówi,
+że~prawdopodobieństwo wyciągnięcia czarnej kuli to $\frac{ 7 }{ 12 }$,
+zaś kuli białej1 $\frac{ 5 }{ 12 }$.
+
+Bez większego ryzyka można stwierdzić, że~w~rachunku prawdopodobieństwa,
+dużo bardziej interesuje nas funkcja prawdopodobieństwa i~jej własności,
+niż zdarzenia elementarne i~to tej funkcji poświęcamy najwięcej uwagi.
+Przyczyna tego jest dość prosta. Po~wykonaniu doświadczenia możemy
+powiedzieć, czy dane zdarzenie zaszło czy nie, za to prawdopodobieństwo
+pozwala nam coś powiedzieć, jak bardzo należy~się spodziewać zajścia tego
+wydarzenia w~przyszłości, co oczywiście jest dla ludzi bardzo interesujące.
+Jednak w~prezentowanym tu podejściu do prawdopodobieństwa, dopiero po
+ustaleniu przestrzeni zdarzeń elementarnych jest sens mówienia o~funkcji
+prawdopodobieństwa, dlatego potrzebowaliśmy stosunkowo szczegółowo omówić
+te zagadnienia.
+
+Rozwiązując dany problem za pomocą metod rachunku prawdopodobieństwa stajemy,
+musimy znaleźć przestrzeń zdarzeń elementarnych, co jest równoważne
+określeniu wszystkich możliwych zdarzeń elementarnych. Następnie musimy
+wyróżnić wszystkie zdarzenia. Podczas lektury tej książki zobaczymy,
+że~w~przypadku doświadczenia, które ma tylko skończoną liczbę możliwych
+wyników, czyli przestrzeń zdarzeń elementarnych~$E$ ma skończoną moc, każdy
+podzbiór~$E$ można rozumieć jako zdarzenie. W~przypadku przestrzeni zdarzeń
+elementarnych o~nieskończonej mocy problem ten staje~się znacznie bardziej
+skomplikowany i~jest zbyt obszerny by~móc go przedyskutować w~tym miejscu.
+Było to jedną z~przyczyn dla których ograniczyliśmy naszą uwagę, do
+eksperymentu, który ma tylko skończoną liczbę rezultatów.
+
+Nawet gdy przestrzeń $E$ i~wszystkie zdarzenia zostały już zidentyfikowane,
+pozostaje przed nami najtrudniejszy problem: określenie wartości jakie
+funkcji prawdopodobieństwa~$P$ przyjmuje na poszczególnych zdarzeniach.
+Zadanie to już nawet w~przypadku przestrzeni próbek o~skończonej mocy nie
+jest wcale elementarne i~w~dalszym ciągu książki będziemy~się z~nim zmagać
+wielokrotnie. Na tym stwierdzeniu możemy w~zasadzie zakończyć naszą analizę
+problemu.
+
+W~tych rozważaniach często odnosiliśmy~się do intuicji, więc pewne pojęcia
+są w~naturalny sposób niedookreślone. Wydaje~się nam, że~na chwilę podstawowe
+pojęcia rachunku prawdopodobieństwa powinny być na tyle zrozumiałe, żeby
+można było na ich podstawie przejść dalej.
+
+
+
+
+
+
+
+
+
+
+% ##################
+\CenterBoldFont{Błędy}
+
+
+\begin{center}
+
+  \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest & Powinno być \\
+    \cline{2-3}
+    & Od góry & Od dołu & & \\
+    \hline
+    % & & & & \\
+    % & & & & \\
+    % & & & & \\
+    \hline
+  \end{tabular}
+
+\end{center}
+
+\VerSpaceSix
+
+
+
+% ####################################################################
+
+
+
+
+
+
+
+% ####################################################################
+% ####################################################################
+% Bibliography
+
+\printbibliography
+
+
+
+
+
+% ############################
+% End of the document
+
+\end{document}
