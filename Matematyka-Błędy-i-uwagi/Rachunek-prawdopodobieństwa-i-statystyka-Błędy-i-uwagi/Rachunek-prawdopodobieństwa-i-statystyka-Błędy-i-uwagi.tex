@@ -387,44 +387,76 @@ w~geometrii i~mechanice.”.
 
 
 
-% ######################################
+% ################################################
+\subsection{Uwagi}
+
+\label{subsec:Uwagi}
+% ################################################
+
+
+W~rachunku prawdopodobieństwa musimy często rozważać ciągi elementów
+pewnego zbioru $E$, czyli odwzorowania $a : \{ 1, 2,\ldots, n \} \to E$. By praca
+z~nimi była wygodniejsza, przyjmujemy, że~przez $a_{ i }$ będziemy oznaczać
+$i$-ty element danego ciągu, zaś sam ciąg będziemy oznaczać przez
+$( a_{ i } )$. Natomiast zbiór wartości ciągu będziemy oznaczać, przez
+$\{ a_{ i } \}$. W~omawianej książce tego typu ciągi nazywane są
+\textit{kombinacjami},
+a~dokładniej???? \textit{kombinacjami z~powtórzeniami}.
+
+W~książce spotykamy~się też z~następującą sytuacją. Chcemy mieć ciąg,
+powiedzmy, że~dwuelementowy, taki że~$a_{ 1 } \in E_{ 1 }$ i~$a_{ 2 } \in E_{ 2 }$,
+przy czym może zachodzić $E_{ 1 } \nsubseteq E_{ 2 }$ i~$E_{ 2 } \nsubseteq E_{ 1 }$.
+Sformalizowanie takich ciągów jest możliwe, lecz nie będziemy~się tym
+zajmować, gdyż na tym etapie nie przyniesie to wiele korzyści.
+
+
+
+
+
+
+
+
+
+
+% ################################################
 \subsection{Uwagi do~konkretnych stron}
 
 \label{subsec:Uwagi-do-konkretnych-stron}
-% ######################################
+% ################################################
 
 
 
 \noindent
-\Str{35} Autor rozpoczyna tu dyskusję pojęcia \textit{zdarzenia losowego}
-i~\textit{zdarzenia elementarnego}, które to są fundamentalne dla~całego
+\Str{35} Autor rozpoczyna tu dyskusję pojęcia \textbf{zdarzenia losowego}
+i~\textbf{zdarzenia elementarnego}, które to są fundamentalne dla~całego
 rachunku prawdopodobieństwa. Książka będzie jeszcze wielokrotnie do nich
 wracać i~omawiać je pod różnymi kątami, warto jednak zatrzymać~się już na
 początku tych rozważań i~możliwie dokładnie omówić ich sens. Nim do tego
-przejdziemy, warto zaznaczyć, że~pojęcie „zdarzenia” i~„zdarzenia losowego”
+przejdziemy, musimy zaznaczyć, że~pojęcie „zdarzenia” i~„zdarzenia losowego”
 będziemy traktować jako synonimy, chyba że~powiedziano inaczej.
 
 Nasze rozważania nie będą miały charakteru ściśle formalnego, choć mamy
-nadzieję, że~będzie je cechował wysoki poziom ścisłości. Wybieramy takie
-podejście, gdyż naszym celem nie jest po prostu wprowadzenie matematycznych
-pojęć, lecz wyjaśnienie czemu je wprowadzamy i~jaki jest ich ogólny sens.
-Dlatego też naszym punktem wyjścia jest omówienie omówienia problemu, który
-przenika cały rachunek prawdopodobieństwa.
+nadzieję, że~będzie je cechował możliwie wysoki poziom ścisłości. Wybieramy
+takie podejście, gdyż naszym celem nie jest po prostu wprowadzenie
+matematycznych pojęć, lecz wyjaśnienie czemu je wprowadzamy i~jaki jest ich
+ogólny sens. Dlatego też naszym punktem wyjścia jest omówienie problemu,
+który przenika cały rachunek prawdopodobieństwa.
 
 Problem ten jest następujący. Mamy doświadczenie, które jest powtarzalne
-i~zawsze produkuje jeden
-konkretnych wynik. Na początek przyjmijmy, że~dane doświadczenie może zwrócić
-tylko skończoną liczbę wyników $e_{ 1 }$, $e_{ 2 }$, \ldots, $e_{ n }$. Jest to
-uzasadnione tym, że~zrozumienie wariantu problemu, gdy liczba wyników jest
+i~zawsze produkuje pewien konkretnych wynik. Na początek przyjmijmy, że~dane
+doświadczenie może zwrócić tylko skończoną liczbę wyników $e_{ 1 }$,
+$e_{ 2 }$, \ldots, $e_{ n }$. Jest to uzasadnione tym, że~zrozumienie wariantu
+problemu, gdy liczba wyników jest
 skończona, samo w~sobie jest ogromnie ważne. Poza tym, uogólnienie tych
 rozważań na przypadek, gdy doświadczenie może zwrócić jeden z~nieskończonej
 liczby rezultatów jest wyjątkowo trudne.
 
 Był ułatwić nasze rozważania, rozpatrzmy jako model takiego doświadczenie
 problem urny, która zawiera $12$ kul. Pięć z~tych kul jest białych i~każda
-na swej powierzchni zapisany numer od~$1$ do $5$. Pozostałe siedem jest
-czarnych i~ponumerowanych liczbami od $1$ do $7$. Doświadczenie będzie
-polegało na wyciągnięciu jednej kuli z~urny, bez zaglądania do wnętrza urny,
+na swej powierzchni zapisany numer od~$1$ do $5$, pozostałe siedem jest
+czarnych i~ponumerowanych liczbami od $1$ do $7$. Poza tym kule można uważać
+za identyczne. Doświadczenie będzie polegało na wyciągnięciu jednej kuli
+z~urny, bez zaglądania do wnętrza urny,
 tak że przed wyciągnięcie kuli, nie znamy ani jej koloru ani numeru.
 Doświadczenie to jest powtarzalne, bo zawsze po wyciągnięciu kuli, możemy ją
 włożyć z~powrotem do urny. Ten model doświadczenia można by dalej
@@ -435,11 +467,11 @@ W~omawianym przypadku, zdarzeniem elementarnym jest wyciągnięci jednej kuli
 z~urny. Można też powiedzieć, że~to pojęcie zdarzenia elementarnego
 powstało po to, by opisać zdarzenia takie jak wyciągnięcie jednej kuli
 z~urny. Przy czym słowa „zdarzenie” użyliśmy tu w~normalny sensie, nie
-zaś jako synonim „zdarzenia losowego”. Zauważmy bowiem, że w~problemach
+zaś jako synonimu „zdarzenia losowego”. Zauważmy bowiem, że w~problemach
 z~rachunku prawdopodobieństwa zawsze lub prawie zawsze mamy do czynienia
 z~jakimś doświadczeniem i~dzięki naszemu zrozumieniu
 natury tego doświadczenia, jesteśmy w~stanie powiedzieć, co jest zdarzeniem
-elementarny. Zaś bez zidentyfikowania zdarzeń elementarnych nie jesteśmy
+elementarny. Zaś bez określenia zdarzeń elementarnych nie jesteśmy
 w~stanie ani poprawnie sformułować, ani rozwiązań większości problemów
 z~rachunku prawdopodobieństwa.
 
@@ -465,28 +497,29 @@ kuli o~numerze~$2$ oznaczamy $e_{ 2 }$ i~tak do $e_{ 5 }$. Wyciągnięcie kuli
 czarnej o~numerze $1$ oznaczamy przez $e_{ 6 }$, kuli czarnej o~numerze $2$
 przez $e_{ 7 }$, etc., aż do $e_{ 12 }$.
 
-Najprostsze problem jaki możemy w~tym kontekście postawić brzmi następująco.
+Najprostsze problem jaki możemy w~tym kontekście postawić, brzmi następująco.
 Wybieramy jedną kulę, niech będzie to kula biała o~numerze $1$,
 jej wyciągnięciu odpowiada zdarzenie elementarne $e_{ 1 }$. Wyciągamy kulę
 z~urny, czyli zaszło zdarzenie $e_{ j }$, dla $j \in \{ 1, 2, 3, \ldots, 12 \}$. Czy
 wyciągnęliśmy białą kulę o~numerze~$1$? Innymi słowy, czy
 $e_{ j } = e_{ 1 }$? Należy podkreślić, że~wciąż nic nie powiedzieliśmy
 o~prawdopodobieństwie zdarzeń elementarnych, pytamy~się tylko o~to, czy
-w~danym eksperymencie zaszło wybrane zdarzenie, czy nie?
+w~danym eksperymencie zaszło wybrane zdarzenie, czy nie? Mam tu więc do
+czynienia tylko z~identyfikacją wyniku doświadczenia, co nie ma nic wspólnego
+z~szeroko pojętym prawdopodobieństwem.
 
 Przykład powyższy pokazuje, czemu w~tego typu problemach wygodne jest
 oznaczanie tym samym symbolem zarówno kuli, jak i~zdarzenia elementarnego
 polegającego na jej wyciągnięciu, co jednak jest bardzo niechlujnym
 postępowaniem. Biała kula o~numerze $1$ jest pewną rzeczą, zaś $e_{ 1 }$ jest
 zdarzeniem polegającym na wyciągnięciu tej kuli z~urny, a~rzeczy i~zdarzenia
-w których biorą udział, to zupełnie inne „obiekty”. Niemniej zdarzenie
+w których rzeczy biorą udział, to zupełnie inne „obiekty”. Niemniej zdarzenie
 elementarne $e_{ 1 }$, które polega na wyciągnięciu białej kuli
 o~numerze~$1$, jednoznacznie pozwala tę kulę zidentyfikować. Z~tego względu
 niektórzy piszą „Rozważmy kulę $e_{ 1 }$\ldots”, co bardziej precyzyjnie
 wysłowilibyśmy pisząc „Rozważmy kulę, której wyciągnięcie z~urny jest
 zdarzeniem elementarnym oznaczanym przez $e_{ 1 }$\ldots” Pozwolimy sobie
-korzystać z~tego typu skrótów myślowych, jeśli odpowiednio uprości to nasze
-rozważania.
+korzystać z~tego typu skrótów myślowych, jeśli uprości to nasze rozważania.
 
 Następny problem jaki możemy postawić w~kontekście tego doświadczenia jest
 następujący. Wyciągamy kulę z~urny, czyli zaszło zdarzenie $e_{ j }$, dla
@@ -494,7 +527,7 @@ $j \in \{ 1, 2, 3,\ldots, 12 \}$. Czy wyciągnęliśmy białą kulę z~numerem~$
 czarną kulę z~numerem~$1$? Mówiąc inaczej, czy $e_{ j } = e_{ 1 }$ lub
 $e_{ j } = e_{ 6 }$? To pytanie kieruje nas w~stronę teoriomnogościowego
 sformułowania rachunku prawdopodobieństwa. Problem ten możemy bowiem w~prosty
-sposób sformułować w~języku teorii mnogości. Oznaczmy bowiem
+sposób sformułować w~jej języku. Oznaczmy bowiem
 $A = \{ e_{ 1 }, e_{ 2 } \}$. Wówczas nasz problem redykuje~się do pytanie
 czy $e_{ j } \in A$? Język teorii mnogości okazuje~się wyjątkowo wygodny
 w~formułowaniu tego typu pytań, dlatego będziemy go od teraz normalnie
@@ -508,8 +541,9 @@ z~pewnego zbioru~$A$. Skoro mówimy o~zbiorach zdarzeń elementarnych, to
 teoria mnogości wskazuje, że~powinniśmy sformułować nas problem
 w~następujący sposób.
 
-Mamy powtarzalne doświadczenie, w~wyniku wykonania którego daje nam jeden
-określony rezultat, który nazywamy zdarzeniem elementarnym. Założyliśmy,
+Mamy powtarzalne doświadczenie, w~wyniku wykonania którego daje nam pewien
+określony rezultat, każdy taki rezultat nazywamy zdarzeniem elementarnym.
+Założyliśmy,
 że~w~rozpatrywanym eksperymencie jest tylko skończona liczba możliwych
 wyników, więc mamy $n$~zdarzeń elementarnych: $e_{ i }$, $i = 1, 2, 3,\ldots, n$.
 Zbiór wszystkich zdarzeń elementarnych nazywamy, zgodnie z~omawianą książką,
@@ -529,25 +563,22 @@ a~ogólnym zdarzeniem losowym.
 
 Potrzebujemy rozpatrzyć jeszcze co najmniej jeden problem. Wróćmy do naszego
 problemu z~urną. Wyciągamy z~niej jedną kulę, następnie ją odkładamy
-z~powrotem do urny, z~której ponownie wyciągamy kulę. Pytamy~się, czy za
-pierwszym razem wyciągnęliśmy białą kulę z~numerem $1$, a~za drugim razem
-czarną kulę z numerem~$1$. Inaczej mówiąc, mamy dwuelementowy ciąg wyników
+z~powrotem do urny, z~której ponownie wyciągamy jakąś kulę. Pytamy~się, czy
+za pierwszym razem wyciągnęliśmy białą kulę z~numerem $1$, a~za drugim razem
+czarną kulę z~numerem~$1$. Inaczej mówiąc, mamy dwuelementowy ciąg wyników
 kolejnych wykonań naszego doświadczenia, $a_{ i }$, $i \in \{ 1, 2 \}$ i~zadajemy
 sobie pytanie, czy prawdą jest, że~$a_{ 1 } = e_{ 1 }$ i~$a_{ 2 } = e_{ 6 }$?
-W~omawianej książce tego typu ciągi nazywane są \textit{kombinacjami},
-a~dokładniej???? \textit{kombinacjami z~powtórzeniami}.
 
 W~tak postawionym problemie kluczowe jest to, że~uwzględniamy kolejność
 wykonania doświadczeń. Jeśli najpierw zaszło zdarzenie elementarne $e_{ 1 }$,
 a~potem $e_{ 6 }$ to odpowiedź na wcześniej postawiony problem jest
 twierdząca. Jeśli najpierw zaszło zdarzenie $e_{ 6 }$, a~potem $e_{ 1 }$,
-czyli najpierw wyciągnęliśmy czarną kulę o~numerze~$1$, a potem białą
+czyli najpierw wyciągnęliśmy czarną kulę o~numerze~$1$, a~potem białą
 o~numerze $1$, to odpowiedź jest przecząca. Mówiąc inaczej, w~rozważanym
 teraz problemie, pytamy~się nie po prostu o~to, czy w~dwóch powtórzenia
 doświadczenia zaszły zdarzenie elementarne $e_{ 1 }$ i~$e_{ 6 }$, ale
-czy zaszły one i~to w~zadanej kolejności.
-
-Problem ten natychmiast~się uogólnia. Rozpatrzmy dwa zdarzenia
+czy zaszły one i~to w~zadanej kolejności. Problem ten natychmiast~się
+uogólnia. Rozpatrzmy dwa zdarzenia
 $A_{ 1 }, A_{ 2 } \subseteq E$ i~niech $a_{ i }$, $i = \{ 1, 2 \}$ będzie ciągiem wyników
 podwójnego wykonania naszego eksperymentu. Czy jest prawdą,
 że~$a_{ i } \in A_{ i }$?
@@ -555,6 +586,8 @@ podwójnego wykonania naszego eksperymentu. Czy jest prawdą,
 W~ten sposób omówiliśmy najbardziej podstawowe typy problemów jakie
 napotykamy w~rachunku prawdopodobieństwa. Po ich uogólnieniu, można je
 sprowadzić do dwóch kategorii.
+
+
 
 \begin{enumerate}
 
@@ -567,12 +600,68 @@ sprowadzić do dwóch kategorii.
 
 \end{enumerate}
 
-Zanim przejdziemy dalej, zauważmy, że~problemy te można teraz uogólniać na
-wiele sposobów. Po pierwsze możemy, mieć dwa doświadczenia, oznaczmy je
-$D_{ 1 }$ i~$D_{ 2 }$, zaś ich przestrzenie zdarzeń elementarnych przez
-$E_{ 1 }$ i~$E_{ 2 }$. Możemy teraz powstaje pytanie, czy wykonując najpierw
+
+
+Analizując problem z~rachunku prawdopodobieństwa, należy umieć rozróżnić te
+dwie klasy problemów, gdyż pozwala nam to lepiej zrozumieć konkretny
+problem, co sprawia, że~jego rozwiązanie staje~się prostsze. Jednocześnie,
+z~punktu widzenia formalnego, drugą kategorię możemy sprowadzić do pierwszej,
+za pomocą następującego postępowania.
+
+Niech $F^{ k }( E )$ oznacza zbiór wszystkich ciągów o~długości
+$k$~o~wartościach w~$E$. Zbiór ten traktujemy jako przestrzeń zdarzeń
+elementarny, problemu dla którego pojedyncze doświadczenie polega na
+$k$-krotnym wykonaniu jakiegoś powtarzalnego eksperymentu. Należy tutaj
+zauważyć, że~pojęcie „powtarzalnego doświadczenia” nie wymusza na nas tego,
+że~takie doświadczenie ma~się składać z~pojedynczego działania, co oznacza,
+że~również zdarzenie elementarne nie musi być wynikiem pojedynczej czynności.
+
+By to uczynić bardziej zrozumiały, wróćmy do przykładu z~urną. Jeśli
+wyciągamy kulę z~urny, wkładamy ją z~powrotem
+i~ponownie wyciągamy jakąś kulę, to w~zależności od tego jak chcemy opisać
+tą sytuację, możemy mówić, że dwukrotnie wykonano jedno doświadczenie lub
+że~jednokrotnie wykonano doświadczenie polegające na dwukrotnym losowaniu
+kuli z~urny. Inaczej mówiąc, w~zależności od tego jak opisujemy to co~się
+stało, to mamy do czynienia z~dwuelementowym ciągiem zdarzeń elementarnych
+lub \textit{jednym} zdarzeniem elementarnym, które polega na dwukrotnym
+wyciąganiu kuli z~urny.
+
+Ponieważ te kwestie mogą być źródłem wielu nieporozumień, przyjrzymy~się
+im dokładniej. Problemy w~rachunku prawdopodobieństwa mają najczęściej taką
+postać. Mamy jakieś powtarzalne doświadczenie, takie jak wyciąganie kuli
+z~urny. Już teraz widzieliśmy, że~za pomocą pojedynczej urny z~kulami, możemy
+postawić wiele problemów, w~zależności od tego, czy interesuje nas
+wyciągnięcie jednej kuli, dwóch kul w~odpowiedniej kolejność,~etc. Z~tego
+powodu pojęcie „powtarzalnego doświadczenia” musi być na tyle pojemne,
+żeby mogło objąć wszystkie te przypadki. Dlatego możemy zdefiniować takie
+powtarzalne doświadczenie, jako wykonanie jednej czynności, jak wyciągnięcie
+kuli z~urny, lub wykonanie dwóch, czy więcej czynności, jak wyciągnięcie
+dwóch kul z~urny.
+
+Mówiąc inaczej, rachunek prawdopodobieństwa daje nam dużo swobody w~ustaleniu
+co jest, a~co nie jest zdarzeniem elementarnym w~danym problemie. To należy
+uważać, za zaletę tego podejścia. Problemem leży gdzie indziej. Mianowicie
+mając jakąś sytuację, którą chcemy zanalizować za pomocą metod rachunku
+prawdopodobieństwa, musimy umieć poprawnie sformułować problem, który
+nas interesuje i~następnie zidentyfikować jego zdarzenia elementarne.
+Tutaj brak ogólnych reguł postępowania i~każdy nowy przypadek wymaga nowej
+analizy i~przebadania. Książki do rachunku prawdopodobieństwa pełne są
+różnego typu doświadczeń (problemów), które zostały już zbadane
+i~prezentują, lepiej lub gorzej, jak je rozwiązać.
+
+Na stronie $63$ tej książki Hellwig stara~się wyjaśnić, czemu w~książkach
+do rachunku prawdopodobieństwa, tak wiele miejsca poświęcono grom losowym.
+Fakt, że~sformułowanie konkretnych problemów dotyczących takich gier,
+a~następnie zidentyfikowanie zdarzeń elementarnych tychże problemów, jest
+zagadnieniem gruntownie przebadanym, jest na pewno kolejnym argument na
+rzecz tego, iż~wykłady rachunku prawdopodobieństwa powinny je omawiać.
+
+Zauważmy teraz, że~problem z~kategorii numer~$2$ można łatwo uogólnić na
+poziomie koncepcyjnym. Po~pierwsze możemy, mieć dwa doświadczenia, oznaczmy
+je $D_{ 1 }$ i~$D_{ 2 }$, zaś ich przestrzenie zdarzeń elementarnych przez
+$E_{ 1 }$ i~$E_{ 2 }$. Możemy teraz postawić pytanie, czy wykonując najpierw
 doświadczenie, a~potem drugie, dostaniemy ciąg wyników $a_{ i }$,
-$i \in \{ 1, 2 \}$, taki że $a_{ i } \in A_{ i }$?
+$i \in \{ 1, 2 \}$, taki że $a_{ i } \in A_{ i }$, $A_{ i } \subseteq E_{ i }$?
 
 By pokazać, jak naturalny jest tego typu problem, rozważmy następujące
 zadania. Z~omawianej uprzednio urny wyciągamy kulę i~odkładamy na bok,
@@ -583,9 +672,9 @@ liczba kul białych i~czarnych zależy od tego jaką kulę wyciągnęliśmy
 poprzednio, to z~formalnego punktu widzenia, mamy do czynienie z~dwoma
 różnymi doświadczeniami występującymi po sobie, nie zaś z~jednym powtarzanym
 dwa razy. Stosunkowo rzadko zwracamy uwagę na tego typu subtelności, bo
-zwykle nie przeszkadzają nam rozwiązywać zadań.
+zwykle nie przeszkadzają one nam w rozwiązywaniu zadań.
 
-Jak można zauważyć, do tej pory nie wspomnieliśmy nic o~prawdopodobieństwie
+????Jak można zauważyć, do tej pory nie wspomnieliśmy nic o~prawdopodobieństwie
 zdarzeń, co może~się wydawać dziwne. Uczyniliśmy to z~premedytacją,
 chcieliśmy bowiem skupić~się na wyjaśnieniu sensu takich pojęć jak zdarzenie
 elementarne, czy przestrzeń zdarzeń elementarnych i~wyjaśnić jak problem
@@ -677,16 +766,30 @@ są w~naturalny sposób niedookreślone. Wydaje~się nam, że~na chwilę podstaw
 pojęcia rachunku prawdopodobieństwa powinny być na tyle zrozumiałe, żeby
 można było na ich podstawie przejść dalej.
 
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{36}
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\Str{47}
 
 
 
 
 
 
-
-
-
-% ##################
+% ######################################
 \CenterBoldFont{Błędy}
 
 
@@ -705,6 +808,8 @@ można było na ich podstawie przejść dalej.
   \end{tabular}
 
 \end{center}
+
+% ######################################
 
 \VerSpaceSix
 
