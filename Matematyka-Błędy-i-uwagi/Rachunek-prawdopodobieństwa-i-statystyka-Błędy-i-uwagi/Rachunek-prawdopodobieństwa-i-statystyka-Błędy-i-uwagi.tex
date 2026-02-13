@@ -9,9 +9,9 @@
 
 
 
-% ------------------------------------------------------
+% ######################################
 % Packages not tied to particular normal language
-% ------------------------------------------------------
+% ######################################
 % This package should improved spaces in the text
 \usepackage{microtype}
 % Add few important symbols, like text Celcius degree
@@ -19,9 +19,9 @@
 
 
 
-% ------------------------------------------------------
+% ######################################
 % Polonization of LaTeX document
-% ------------------------------------------------------
+% ######################################
 % Basic polonization of the text
 \usepackage[MeX]{polski}
 % Switching on UTF-8 encoding
@@ -124,19 +124,20 @@ eprint=true,
 
 
 
-% ------------------------------------------------------
+% ######################################
 % Local macros
-% ------------------------------------------------------
+% ######################################
+\newcommand{\Orzel}{\text{O}}
+\newcommand{\Reszka}{\text{R}}
 
 
 
 
 
-
-% ------------------------------------------------------
+% ######################################
 % Package "hyperref"
 % They advised to put it on the end of preambule
-% ------------------------------------------------------
+% ######################################
 % It allows you to use hyperlinks in the text
 \usepackage{hyperref}
 
@@ -257,17 +258,17 @@ pojęcie to~stanie~się jednoznaczne.
 
 
 % ##################
-\CenterBoldFont{Błędy}
+% \CenterBoldFont{Błędy}
 
 
-\begin{center}
+% \begin{center}
 
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-                              & Powinno być \\ \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest & Powinno być \\
+%     \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
     %     & & & & \\
     %     & & & & \\
     %     & & & & \\
@@ -284,12 +285,12 @@ pojęcie to~stanie~się jednoznaczne.
     %     & & & & \\
     %     & & & & \\
     %     & & & & \\
-    \hline
-  \end{tabular}
+%     \hline
+%   \end{tabular}
 
-\end{center}
+% \end{center}
 
-\VerSpaceSix
+% \VerSpaceSix
 
 
 % ############################
@@ -302,12 +303,12 @@ pojęcie to~stanie~się jednoznaczne.
 
 
 
-% ######################################
+% ####################################################################
 \section{William Feller \textit{Wstęp do rachunku prawdopodobieństwa. Tom~I},
   \cite{FellerWstepDoRachunkuPrawdopodobienstwaVolI2006}}
 
 \label{sec:Feller-Wstep-do-rachunku-ETC}
-% ######################################
+% ####################################################################
 
 
 
@@ -424,6 +425,10 @@ zajmować, gdyż na tym etapie nie przyniesie to wiele korzyści.
 \label{subsec:Uwagi-do-konkretnych-stron}
 % ################################################
 
+
+
+\noindent
+\Str{???}
 
 
 \noindent
@@ -656,45 +661,68 @@ a~następnie zidentyfikowanie zdarzeń elementarnych tychże problemów, jest
 zagadnieniem gruntownie przebadanym, jest na pewno kolejnym argument na
 rzecz tego, iż~wykłady rachunku prawdopodobieństwa powinny je omawiać.
 
-Zauważmy teraz, że~problem z~kategorii numer~$2$ można łatwo uogólnić na
-poziomie koncepcyjnym. Po~pierwsze możemy, mieć dwa doświadczenia, oznaczmy
-je $D_{ 1 }$ i~$D_{ 2 }$, zaś ich przestrzenie zdarzeń elementarnych przez
-$E_{ 1 }$ i~$E_{ 2 }$. Możemy teraz postawić pytanie, czy wykonując najpierw
-doświadczenie, a~potem drugie, dostaniemy ciąg wyników $a_{ i }$,
-$i \in \{ 1, 2 \}$, taki że $a_{ i } \in A_{ i }$, $A_{ i } \subseteq E_{ i }$?
+Problemy należące do obu wymienionych wyżej kategorii można uogólnić na
+różne sposoby, my musimy wspomnieć przynajmniej o~jednym z~nich. Niech będą
+dane dwa doświadczenia, oznaczmy je $D_{ 1 }$ i~$D_{ 2 }$, zaś ich
+przestrzenie zdarzeń elementarnych przez $E_{ 1 }$ i~$E_{ 2 }$. Możemy teraz postawić pytanie, czy wykonując najpierw doświadczenie, a~potem drugie,
+dostaniemy ciąg wyników $a_{ i }$, $i \in \{ 1, 2 \}$, taki
+że~$a_{ i } \in A_{ i }$, $A_{ i } \subseteq E_{ i }$?
 
 By pokazać, jak naturalny jest tego typu problem, rozważmy następujące
-zadania. Z~omawianej uprzednio urny wyciągamy kulę i~odkładamy na bok,
-następnie wyciągamy drugą kulę. Czy wyciągnęliśmy dwie czarne kule? Ponieważ
+problem. Z~omawianej uprzednio urny wyciągamy kulę i~odkładamy ją na bok,
+następnie wyciągamy drugą kulę. Postawy teraz pytanie, czy za pierwszym
+razem wyciągnęliśmy białą kulę, a~za drugim czarną? Ponieważ
 gdy wyciągamy pierwszą kulę w~urnie jest pięć białych kul i~siedem czarnych,
 podczas gdy podczas wyciągania drugiej kuli w~urnie jest $11$ kul, przy czym
 liczba kul białych i~czarnych zależy od tego jaką kulę wyciągnęliśmy
-poprzednio, to z~formalnego punktu widzenia, mamy do czynienie z~dwoma
-różnymi doświadczeniami występującymi po sobie, nie zaś z~jednym powtarzanym
-dwa razy. Stosunkowo rzadko zwracamy uwagę na tego typu subtelności, bo
-zwykle nie przeszkadzają one nam w rozwiązywaniu zadań.
+poprzednio, to widzimy, że~wyciągnięcie drugiej kuli nie jest prostym
+powtórzeniem pierwszej czynności i~możemy całą sytuację opisać, jako dwa
+następujące po sobie doświadczenia.
 
-????Jak można zauważyć, do tej pory nie wspomnieliśmy nic o~prawdopodobieństwie
-zdarzeń, co może~się wydawać dziwne. Uczyniliśmy to z~premedytacją,
+Rozważając ten problem, zadaliśmy pytanie, czy za pierwszym razem
+wyciągnęliśmy kulę białą, a~za drugim czarną, więc interesuje nas też
+kolejność wyciągania tych kul. Gdybyśmy szukali odpowiedzi na pytanie „Czy
+obie kule są czarne?” kolejność wyciągania nie miałaby znaczenia.
+Zauważmy, że w~przypadku, gdy kolejność uzyskania wyników musi zostać wzięta
+pod uwag, możemy przestrzeń zdarzeń całego elementarnych problemu opisać
+jako iloczyn kartezjański przestrzeni zdarzeń elementarnych pierwszego
+i~drugiego doświadczenia: $E = E_{ 1 } \times E_{ 2 }$. Dlatego w~takiej sytuacji
+możemy mówić o~\textbf{iloczynie kartezjańskim doświadczeń}
+$D_{ 1 } \times D_{ 2 }$. Temat iloczynu kartezjańskiego doświadczeń wymaga
+głębszej dyskusji, której jednak na razie nie będziemy podejmować.
+
+Jednak taka procedura nie przyda nam~się specjalnie w~analizie problemu
+wyciągania dwóch kul, gdyż od tego jaką kulę wyciągnęliśmy za pierwszym
+razem, zależy jakie kule możemy wyciągnąć za drugim razem. Mówiąc inaczej,
+przestrzeń zdarzeń elementarnych drugiego doświadczenia, zależy od wyniku
+pierwszego. Wszystko te rozważania ilustrując, jak trudne potrafi być
+pełne sformalizowanie nawet bardzo prostych do opisania słowami
+eksperymentów. Do problemów tych może wrócimy w~przyszłości.
+
+Jak można zauważyć, do tej pory nie wspomnieliśmy nic o~prawdopodobieństwie
+zdarzeń, co osobom zaznajomiony z~rachunkiem prawdopodobieństwa może
+wydawać~się osobliwą decyzją. Uczyniliśmy to jednak z~premedytacją,
 chcieliśmy bowiem skupić~się na wyjaśnieniu sensu takich pojęć jak zdarzenie
 elementarne, czy przestrzeń zdarzeń elementarnych i~wyjaśnić jak problem
-przeprowadzania powtarzalnego motywuje ich wprowadzenie. Jak widać, można to
-zrobić nie korzystając zupełnie z~pojęcia prawdopodobieństwa. Jednocześnie
-taka analiza pokazuje, dlaczego język teorii mnogości jest tak wygodny
-w~rachunku prawdopodobieństwa.
+przeprowadzania powtarzalnego doświadczenia motywuje ich wprowadzenie. Jak
+widać, do dyskusji tego zagadnienia wystarczy zdolność powiedzenia, czy
+doświadczenia dało dany rezultat czy nie, pojęcie prawdopodobieństwa nie
+jest do tego w~ogóle potrzebne. Jednocześnie taka analiza pokazuje, dlaczego
+język teorii mnogości jest tak wygodny w~rachunku prawdopodobieństwa.
 
 Musimy też zauważyć kolejną ważną rzecz. Z~formalnego punktu widzenia możemy
 teraz odrzucić myślenie o~przeprowadzaniu doświadczeń, zostawiają tylko
-matematyczny rdzeń, czyli ograniczyć nasze myślenie do pewnych zbiorów, ich
-podzbiorów oraz ciągów elementów należących do tych zbiorów. Jakkolwiek jest
-to możliwe, to jest wysoce niewskazane, bowiem gubimy zupełnie z~oczu, czemu
+matematyczny rdzeń, czyli ograniczyć nasze rozważania do operowania
+na określonych zbiorach, ich podzbiorach oraz ciągach elementów należących
+do tych zbiorów. Jakkolwiek jest
+to możliwe, jest to wysoce niewskazane, bowiem gubimy zupełnie z~oczu, czemu
 w~ogóle interesują nas takie właśnie problemy. Co gorsza, gdy już
 wprowadzimy pojęcie prawdopodobieństwa, to bez pamiętania o~problemie
 przeprowadzania powtarzalnego eksperymentu, nie będziemy mogli zrozumieć,
 czemu prawdopodobieństwo ma posiadać takie, a~nie inne własności. To zaś
 może skutkować tylko zamętem i~utrudnieniem nauki tego działu matematyki.
 
-W~tym momencie potrzebujemy teraz zrobić kolejny krok i~wprowadzić pojęcie
+W~tym momencie potrzebujemy zrobić kolejny krok i~wprowadzić pojęcie
 prawdopodobieństwa do rozważanego formalizmu. Choć w~książce Hellwiga
 pojęcie to jest dyskutowane trochę dalej i~to w~interesujący sposób, to my
 przedyskutujemy je już teraz. Inaczej bowiem nasz rozważania byłby bardzo
@@ -709,12 +737,12 @@ problemu, czy zawsze takie doprecyzowanie jest możliwe, gdyż to zagadnienie
 można omawiać, dopiero po zapoznaniu~się z~podstawami rachunku
 prawdopodobieństwa.
 
-W~przypadku naszego problemu z~urną, prawdopodobieństwo jest funkcją
+Dla problemu z~urną, prawdopodobieństwo jest funkcją
 $P : \text{Set}( E ) \to \Rbb_{ + }$, gdzie $\text{Set}( E )$ to zbiór
 potęgowy przestrzeni zdarzeń elementarnych,
 a~$\Rbb = \{ x \in \Rbb \, | \, x \geq 0 \}$. Na tę funkcję narzucamy szereg
 warunków, takich jak to, że~dla każdego
-$A \in \text{S}( E )$, $0 \leq P( A ) \leq 1$, jednak w~tym momencie te warunki nie
+$A \in \text{S}( E )$, $0 \leq P( A ) \leq 1$, jednak w~tym momencie te kwestie nie
 są dla nas kluczowe. Jeśli $P( A_{ 1 } ) < P( A_{ 2 } )$ to mówimy,
 że~zdarzenie $A_{ 2 }$ jest bardziej prawdopodobne, niż zdarzenie $A_{ 1 }$.
 Intuicyjnie odpowiada to temu,
@@ -725,9 +753,9 @@ do $A_{ 1 }$.
 W~przypadku naszej urny, jeśli będziemy ciągle wyjmować z~niej
 kulę i~ponownie ją wkładać, to oczekujemy, iż~częściej wyciągniemy kulę
 czarną niż białą. Osoby znające już trochę rachunek prawdopodobieństwa,
-wiedzą już, że~standardowa metod rozwiązywania tego zadania pozwala mówi,
-że~prawdopodobieństwo wyciągnięcia czarnej kuli to $\frac{ 7 }{ 12 }$,
-zaś kuli białej1 $\frac{ 5 }{ 12 }$.
+wiedzą już, że~standardowa metod rozwiązywania tego zadania pozwala
+stwierdzić, że~prawdopodobieństwo wyciągnięcia czarnej kuli to
+$\frac{ 7 }{ 12 }$, zaś kuli białej $\frac{ 5 }{ 12 }$.
 
 Bez większego ryzyka można stwierdzić, że~w~rachunku prawdopodobieństwa,
 dużo bardziej interesuje nas funkcja prawdopodobieństwa i~jej własności,
@@ -738,15 +766,15 @@ pozwala nam coś powiedzieć, jak bardzo należy~się spodziewać zajścia tego
 wydarzenia w~przyszłości, co oczywiście jest dla ludzi bardzo interesujące.
 Jednak w~prezentowanym tu podejściu do prawdopodobieństwa, dopiero po
 ustaleniu przestrzeni zdarzeń elementarnych jest sens mówienia o~funkcji
-prawdopodobieństwa, dlatego potrzebowaliśmy stosunkowo szczegółowo omówić
-te zagadnienia.
+prawdopodobieństwa, dlatego tak szczegółowo dyskutowaliśmy te zagadnienia.
 
-Rozwiązując dany problem za pomocą metod rachunku prawdopodobieństwa stajemy,
-musimy znaleźć przestrzeń zdarzeń elementarnych, co jest równoważne
-określeniu wszystkich możliwych zdarzeń elementarnych. Następnie musimy
-wyróżnić wszystkie zdarzenia. Podczas lektury tej książki zobaczymy,
-że~w~przypadku doświadczenia, które ma tylko skończoną liczbę możliwych
-wyników, czyli przestrzeń zdarzeń elementarnych~$E$ ma skończoną moc, każdy
+Rozwiązując dany problem za pomocą metod rachunku prawdopodobieństwa,
+musimy najpierw znaleźć przestrzeń zdarzeń elementarnych, co jest równoważne
+określeniu wszystkich zdarzeń elementarnych. Następnie potrzebujemy
+zdefiniować wszystkie możliwe zdarzenia. Podczas lektury tej książki
+zobaczymy, że~w~przypadku doświadczenia, które ma tylko skończoną liczbę
+możliwych wyników, czyli przestrzeń zdarzeń elementarnych~$E$ ma skończoną
+moc, każdy
 podzbiór~$E$ można rozumieć jako zdarzenie. W~przypadku przestrzeni zdarzeń
 elementarnych o~nieskończonej mocy problem ten staje~się znacznie bardziej
 skomplikowany i~jest zbyt obszerny by~móc go przedyskutować w~tym miejscu.
@@ -762,9 +790,9 @@ wielokrotnie. Na tym stwierdzeniu możemy w~zasadzie zakończyć naszą analizę
 problemu.
 
 W~tych rozważaniach często odnosiliśmy~się do intuicji, więc pewne pojęcia
-są w~naturalny sposób niedookreślone. Wydaje~się nam, że~na chwilę podstawowe
-pojęcia rachunku prawdopodobieństwa powinny być na tyle zrozumiałe, żeby
-można było na ich podstawie przejść dalej.
+są w~naturalny sposób niedookreślone. Wydaje~się nam, że~na tę chwilę
+podstawowe pojęcia rachunku prawdopodobieństwa powinny być na tyle
+zrozumiałe, żeby można było na ich podstawie przejść dalej.
 
 \VerSpaceFour
 
@@ -773,7 +801,134 @@ można było na ich podstawie przejść dalej.
 
 
 \noindent
-\Str{36}
+\Str{36} W~tym miejscu autor omawia problem dwukrotnego rzutu monetą,
+by zilustrować, że~iloczyn zdarzeń nie musi oznaczać, iż~oba zdarzenia
+zaszły jednocześnie. Zamieszczanie tego typu przykładów, ma niewątpliwie na
+celu nauczenie czytelnika, jak konkretne doświadczenia powtarzalna można
+opisać za pomocą pojęć rachunku prawdopodobieństwa, to zaś jest wstępem
+do rozwiązania danego problemu za pomocą odpowiednich metod tegoż działu
+matematyki. W~tym konkretnym wypadku, przykład ma służyć wyjaśnieniu,
+że~interpretacja wedle której, iloczyn zdarzeń oznacza, iż~dwa zdarzenia
+musiały zajść w~tym samym czasie, jest błędna.
+
+Wobec tego, zajmujemy~się tutaj dość subtelnym zagadnieniem: jak należy
+rozumieć i~stosować poznane pojęcia rachunku prawdopodobieństwa do opisu
+konkretnego problemu? By uczynić to łatwiejszym do zrozumienie,
+przeanalizujemy teraz problem podwójnego rzutu monetą.
+
+Pojedynczy rzut monetą jest doświadczenie powtarzalnym. Jak to było
+już wcześniej omówione, biorąc za punkt wyjścia takie doświadczenie możemy
+zbadać wiele różnych problemów. W~tym wypadku możemy oczywiście analizować
+pojedynczy rzutu, dwa rzuty następujące po sobie, trzy rzutu następujące po
+sobie,~etc. My ograniczymy~się do problemu dwóch rzutów monetą. Autor, choć
+nie napisał tego jawnie, przyjął, że w~tym kontekście przez
+\textit{pojedyncze} doświadczenie rozumie on podwójnym rzucie monetą. Dla
+uniknięcia niejasności, przez podwójny rzut monetą rozumiemy sytuację,
+w~której najpierw rzucamy monetą, a~potem tę samą monetą rzucamy drugi raz.
+Tym samym wykluczamy z~rozważań problem, który powstaje, gdy dwoma monetami
+rzucamy w~tej samej chwili. Wyjaśnimy dlaczego tak należy rozumieć ten
+fragment książki, po tym jak opiszemy dokładniej problem podwójnego rzutu
+monetą.
+
+Wypadnięcie orła przy rzucie monetą będziemy oznaczać przez $\Orzel$,
+zaś~wypadnięcie reszki przez $\Reszka$. To, że~przy podwójnym rzucie
+najpierw wypadł orzeł, a~potem reszka, będziemy oznaczali przez $\Orzel
+\Reszka$. Analogicznie $\Reszka \Orzel$ oznacza, że~najpierw wypadła reszka,
+a~potem orzeł. Przestrzeń zdarzeń elementarnych takiego doświadczenia
+zawiera~$2^{ 2 } = 4$ elementów, gdyż tyle jest ciągów o~długości dwa,
+przyjmujących wartości w~zbiorze dwuelementowym. Możemy więc wypisać
+wszystkie elementy tej przestrzeni w~sposób jawny:
+\begin{equation}
+  \label{eq:Hellwig-Elementy-ETC-01}
+  E = \{ \Orzel \Orzel, \Orzel \Reszka, \Reszka \Orzel, \Reszka \Reszka \}.
+\end{equation}
+
+Zapytajmy~się teraz, czy można za~pomocą tego co zostało powiedziane opisać
+zdarzenie wypadnięcia orła w~pierwszym rzucie? Odpowiedź jest twierdząca,
+zdarzenie to opisuje zbiór
+\begin{equation}
+  \label{eq:Hellwig-Elementy-02}
+  E_{ 1 } = \{ \Orzel \Orzel, \Orzel \Reszka \}.
+\end{equation}
+Od razu widać, że~$E_{ 1 } \subseteq E$. Wypadnięcie orła w~drugim rzucie opisuje
+zdarzenie
+\begin{equation}
+  \label{eq:Hellwig-Elementy-03}
+  E_{ 1 } = \{ \Orzel \Orzel, \Reszka \Orzel \}.
+\end{equation}
+Widzimy, że~teoriomnogościowy iloczyn tych zdarzeń to
+\begin{equation}
+  \label{eq:Hellwig-Elementy-03}
+  E_{ 1 } \cap E_{ 2 } = \{ \Orzel \Orzel \},
+\end{equation}
+czyli dokładnie to zdarzenie o~które nam chodziło: wypadnięcie orła
+w~pierwszym i~drugim rzucie.
+
+Możemy teraz wyjaśnić, czemu ten problem należy rozumieć w~taki sposób,
+że~zdarzeniem elementarnym jest ciąg dwóch rzutów monetą. Jeśli bowiem chcemy
+opisywać iloczyn zdarzeń za~pomocą teorii mnogości\footnote{Nie będziemy~się
+  wdawać w~dyskusję, czy należy sformalizować rachunek prawdopodobieństwa,
+  bez użycia języka teorii mnogości.}, to należy każde zdarzenie opisać jako
+podzbiór
+przestrzeni zdarzeń elementarnych. W~takiej sytuacji zdarzenie,
+że~w~pierwszym rzucie wypadł orzeł należy rozumieć jako zbiór wszystkich
+możliwych wyników podwójnego rzutu monetą, takich że~w~pierwszym z~nich
+wypadł orzeł. Dokładnie to opisuje zbiór $E_{ 1 }$.
+
+Przyjrzyjmy~się teraz zdaniu, jakie możemy znaleźć w~ostatniej linii
+omawianej strony: „W~przykładzie tym zdarzenia $E_{ 1 }$ i~$E_{ 2 }$ nie
+zachodzą równocześnie.”. Autorowi chodziło o~to, że~gdy rzucam dwa razy
+monetą i~w~obu wypadkach wypada orzeł, to pierwsze wypadnięcie orła
+rozgrywa~się
+wcześniej niż drugie, czyli ewidentnie nie występują one jednocześnie.
+Jednak tutaj pojawia~się następująca subtelność. W~prezentowanym tu
+formalizmie zdarzenia $E_{ 1 }$ i~$E_{ 2 }$ składają~się z~ciągów wyników
+podwójnego rzutu monetą, ciężko więc ich zajściu przypisać \textit{jedną}
+wartość czasu.
+
+W~obecnej sytuacji najbardziej rozsądne jest przyjęcie, że~każdemu zdarzeniu
+$A \subseteq E$ przyporządkowujemy cały okres czasu, jaki potrzebny jest na
+wykonania dwóch rzutów. Wtedy jednak można powiedzieć,
+że~$E_{ 1 }$ i~$E_{ 2 }$ występując
+jednocześnie, gdy ich okresy trwania są identyczne. Pokazuje to, że~ustalenie
+odpowiedniości między intuicyjny pojęciem zdarzenia, a~opartym na teorii
+mnogości sformułowaniem rachunku prawdopodobieństwa kryje wiele subtelności
+i~pułapek.
+
+W~tym momencie najlepiej jest ten zamęt pojęciowy wyjaśnić w~następujący
+sposób. Na omawianej stronie iloczyn zdarzeń jest najpierw ilustrowany przez
+problem wyciągania karty z~talli, dopiero potem przez podwójny rzut monetą,
+dlatego warto zwrócić uwagę co oba te przykłady mają wspólnego, a~co je
+różni. Zacznijmy od problemu wyciągania karty z~tali. Zdarzenie będące
+iloczyny wyciągnięcia koloru kier i~zdarzenia polegającego na
+wyciągnięciu damy, polega na tym, że~karta którą wyciągamy
+jest damą kier. Mówiąc inaczej iloczyn tych dwóch zdarzeń polega na
+wyciągnięciu karty, która jest jednocześnie kartą koloru kier i~damą, więc
+oba te zdarzenia \textit{muszą} zajść jednocześnie.
+
+W~przypadku podwójnego rzutu monetą myślimy o~eksperymencie, który nie
+rozgrywa~się w~jednej chwili, ale potrzebuje dłuższego czasu. W~naszym
+wypadku, niech pierwszy rzut monetą odbywa~się w~chwili $t_{ 1 }$, a~drugi
+w~chwili~$t_{ 2 }$. Zdarzenie $E_{ 1 }$, wyrzucenie orła w~pierwszym rzucie,
+jest wyznaczone przez to co stało~się w~chwili $t_{ 1 }$, zaś zdarzenie
+$E_{ 2 }$ przez wyrzucenie orła w~chwili $t_{ 2 }$. Możemy teraz zapytać~się
+o~iloczyn zdarzeń $E_{ 1 }$ i~$E_{ 2 }$, pomimo tego, że~zdarzenia
+$E_{ 1 }$ i~$E_{ 2 }$ są wyznaczone, przez rzuty monetą, które nie
+rozegrały~się w~tej samej chwili.
+
+To jednak pokazuje jaki jest problem ze zdaniem „W~przykładzie tym zdarzenia
+$E_{ 1 }$ i~$E_{ 2 }$ nie zachodzą równocześnie.”, gdyż mówi ono, że~zdarzenie
+wyrzucenia orła w~pierwszym rzucie i~w~drugim rzucie nie rozgrywają~się
+jednocześnie. Nasza analiza powyżej mówi, że~zdarzeniom tym nie można
+przypisać jednej chwili czasu, a~jeśli przypiszemy im przedział czasu, to
+możemy powiedzieć, że~zachodzą jednocześnie.
+
+Co więcej, problem ten pozostaje aktualny, nawet, gdy nie będziemy używać
+formalizmu rachunku prawdopodobieństwa opartego na teorii mnogości.
+Jeśli~się bowiem zastanowimy, zdarzenie wyrzucenia orła w~drugim rzucie
+oznacza, że~przedtem już wykonaliśmy jakiś rzut monetą i~dał on jakiś wynik.
+To samo jest prawdą o~wyrzuceniu orła w~pierwszym rzucie, nawet jeśli
+zrozumienie tego jest trochę trudniejsze, niż w~poprzednim przypadku.
 
 \VerSpaceFour
 
@@ -790,28 +945,28 @@ można było na ich podstawie przejść dalej.
 
 
 % ######################################
-\CenterBoldFont{Błędy}
+% \CenterBoldFont{Błędy}
 
 
-\begin{center}
+% \begin{center}
 
-  \begin{tabular}{|c|c|c|c|c|}
-    \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest & Powinno być \\
-    \cline{2-3}
-    & Od góry & Od dołu & & \\
-    \hline
+%   \begin{tabular}{|c|c|c|c|c|}
+%     \hline
+%     Strona & \multicolumn{2}{c|}{Wiersz} & Jest & Powinno być \\
+%     \cline{2-3}
+%     & Od góry & Od dołu & & \\
+%     \hline
     % & & & & \\
     % & & & & \\
     % & & & & \\
-    \hline
-  \end{tabular}
+%     \hline
+%   \end{tabular}
 
-\end{center}
+% \end{center}
 
 % ######################################
 
-\VerSpaceSix
+% \VerSpaceSix
 
 
 
