@@ -147,7 +147,7 @@ eprint=true,
 
 % ####################################################################
 % Title and author of the text
-\title{Systemy operacyjne \\
+\title{Historia informatyki \\
   {\Large Błędy i~uwagi}}
 
 \author{Kamil Ziemian \\
@@ -185,10 +185,10 @@ eprint=true,
 
 
 % ######################################
-\section{Andrew S.~Tanenbaum \textit{Systemy operacyjne},
-  \parencite{Tanenbaum-Systemy-operacyjne-Wydanie-III-Pub-2013}}
+\section{Brian W. Kernighan \textit{Jak Unix tworzył historię},
+  \parencite{Kernighan-Jak-Unix-tworzyl-historie-Pub-2021}}
 
-\label{sec:Tanenbaum-Systemy-operacyjne}
+\label{sec:Kernighan-Jak-Unix-tworzył-historię}
 % ######################################
 
 
@@ -196,10 +196,34 @@ eprint=true,
 \CenterBoldFont{Uwagi do~konkretnych stron}
 
 \noindent
-\StrWierszeGora{25}{18--19} Czytamy tutaj, że~ta pozycja jest osiemnastą
-książką Tanenbauma, ale na stronie~$27$, wiersz~$9$ od dołu, czytamy,
-że~jest on autorem lub współautorem pięciu książek. Należałoby sprawdzić,
-która informacja była prawdziwa w~chwili pisania i~wydania tej książki.
+\Str{23} Tutaj pierwszy raz napotykamy~się na problem przeliczenia starych
+jednostek komputerowych na te używane współcześnie. Ze względu na upływ
+czasu nie jest to wcale zadanie proste i~chyba sam Kernighan miał z~tym
+problemy. Wedle tego co napisano na tej stronie, symbol $\text{K}$ oznacza
+$1 \, 024 = 2^{ 10 }$ jednostek, gdyż wtedy $32\text{K}$ to rzeczywiście
+$32 \ 768$ jednostek. Jednak podane tu przeliczenie starych jednostek
+na~kilobajty napotyka pewien problem.
+
+Zacznijmy od tego, że~w~naszej ocenie autor przez kilobajt
+rozumie~$1 \, 024$ bajtów, zaś~pojedynczy bajt to oczywiście $8$~bitów.
+Ile pamięci daje nam $32\text{K}$ słów o~długości $36$~bitów? Ponieważ~$36$
+bitów to $4.5$ bajta, więc $32\text{K}$ taki słów, to $4.5 \cdot 32 = 144$
+kilobajtów, czyli wyraźnie więcej niż podane tutaj $128$ kilobajtów. Jeśli na
+chwilę przyjmiemy, że~autor przez kilobajt rozumie $1 \, 000$ bajtów, to
+wówczas mamy
+\begin{equation}
+  \label{eq:Kernighan-Jak-Unix-etc-01}
+  144 \cdot 1 \, 024 = 144 \cdot 1.024 \cdot 1 \, 000 = 147.456 \cdot 1 \, 000,
+\end{equation}
+znów więcej, niż~$128$ kilobajtów.
+
+Wychodzi więc na to, że~autor pomylił~się, przy przeliczaniu jednych
+jednostek na drugie, co nie jest niczym niezwykłym. Choć w~tej książce
+wielokrotnie pojawiają~się fragmenty, w~których prezentowane są dane
+w~starych jednostkach i~odpowiadające im wartości w~nowych, nie będziemy
+w~każdym z~tych przypadków sprawdzać, czy podane wartości zgadzają~się
+ze sobą. Poprzestaniemy na stwierdzeniu, że~w~każdej z~tych sytuacji należy
+zachować czujność i~ewentualnie przeliczyć te wielkości samemu.
 
 \VerSpaceFour
 
@@ -207,65 +231,49 @@ która informacja była prawdziwa w~chwili pisania i~wydania tej książki.
 
 
 
-\noindent
-\StrWierszeGora{31}{16--17} Stwierdzenie „tom ma 1000 stron (więcej niż ta
-książka)” odnosi~się zapewne do wydania angielskiego, bo polskie wydanie ma
-ponad 1200~stron. Szkoda, że~w~wydaniu polskim nie opatrzono tego tekstu
-przypisem.
+% \noindent
+% \StrWierszeGora{31}{16--17}
 
-\VerSpaceFour
+% \VerSpaceFour
 
 
 
 
 
-\noindent
-\Str{76--77} Na tych stronach do ilustracji działania system plików,
-przedstawiono pewien fikcyjny system pewnego wydziału uczelni wyższej, zaś
-nazwy jego elementów oraz imiona i~nazwiska osób pojawiające w~tym systemie
-zostały spolszczone. Ciekawe jest przy tym to, że~jednocześnie zachowano
-nazwy przedmiotów z~amerykańskiego systemu akademickiego „CS101”, „CS105”,
-które są skrótami od „Computer Science 101” oraz~„Computer Science 105”.
+% \noindent
+% \Str{76--77}
 
-Zwróćmy też uwagę na nazwiska profesorów: Brązowy, Zielony i~Biały. Po
-polsku mogą brzmieć dziwnie, jednak po angielsku są to zupełnie normalne
-nazwiska Brown, Green i~White. Dodatkowo w~wersji angielskiej, na diagramie
-katalogi tych trzech profesorów byłyby ustawione od lewej do prawej
-w~kolejności alfabetycznej.
-
-\VerSpaceFour
+% \VerSpaceFour
 
 
 
 
 
-\noindent
-\StrWierszeDol{82}{9} Według mojej wiedzy, użyty tu angielski idiom „król
-wzgórz” (ang. \textit{king~of the~hill}) oznacza osobę, która jest dowódcom
-lub odniosła duży sukces.
+% \noindent
+% \StrWierszeDol{82}{9}
 
-\VerSpaceFour
+% \VerSpaceFour
 
 
 
 
 
-\noindent
-\Str{91} Przedstawiony tutaj kod w~języku~C nie jest zbyt elegancki, ze
-względu na brak odpowiednich wcięć. Takie wygląd jest jednak
-usprawiedliwiony ograniczoną ilością miejsca na stronie, dlatego
-w~przyszłości nie będziemy więcej komentować tego typu kwestii.
+% \noindent
+% \Str{91} Przedstawiony tutaj kod w~języku~C nie jest zbyt elegancki, ze
+% względu na brak odpowiednich wcięć. Takie wygląd jest jednak
+% usprawiedliwiony ograniczoną ilością miejsca na stronie, dlatego
+% w~przyszłości nie będziemy więcej komentować tego typu kwestii.
 
-\VerSpaceFour
-
-
+% \VerSpaceFour
 
 
 
-\noindent
-\StrWierszDol{127}{17} Angielska nazwa dla procesu z~drugiego planu,n czyli
-\textit{deamon}, zostało tu przetłumaczona jako „demon”. Jednak w~języku
-polskim bardziej poprawny tłumaczeniem tego terminu jest „daimion”.
+
+
+% \noindent
+% \StrWierszDol{127}{17} Angielska nazwa dla procesu z~drugiego planu,n czyli
+% \textit{deamon}, zostało tu przetłumaczona jako „demon”. Jednak w~języku
+% polskim bardziej poprawny tłumaczeniem tego terminu jest „daimion”.
 
 
 
@@ -285,26 +293,9 @@ polskim bardziej poprawny tłumaczeniem tego terminu jest „daimion”.
     & Powinno być \\ \cline{2-3}
            & Od góry & Od dołu & & \\
     \hline
-    \hphantom{0}35 & 15 & & wyjście & wejście \\
-    \hphantom{0}36 & & 13 & martwych zakończeń & ślepych zaułków \\
-    \hphantom{0}39 & & \hphantom{0}2 & częściowych & cząstkowych \\
-    \hphantom{0}41 & \hphantom{0}9 & & peryferii & takich urządzeń \\
-    \hphantom{0}43 & \hphantom{0}6 & & M.I.T. Bell Labs
-           & M.I.T., Bell Labs \\
-    \hphantom{0}44 & 21 & & ciasteczka & bułeczki \\
-    \hphantom{0}48 & & \hphantom{0}5 & duo & Duo \\
-    \hphantom{0}57 & & \hphantom{0}1 & pamięci & energii \\
-    \hphantom{0}65 & & \hphantom{0}8 & w~komputerach & dla komputerów \\
-    \hphantom{0}66 & & \hphantom{0}9 & próbowanie & sprawdzenie \\
-    \hphantom{0}70 & \hphantom{0}5 & & narodowych & krajowych \\
-    \hphantom{0}78 & & \hphantom{0}6 & je & je i~usuwa \\
-    106 & \hphantom{0}6 & & klienty & klienci \\
-    106 & \hphantom{0}7 & & klienty & klienci \\
-    113 & & \hphantom{0}7 & I & i \\
-    126 & & 15 & którym & którym momencie \\
-    % & & & & \\
-    % & & & & \\
-    % & & & & \\
+    \hphantom{0}61 & \hphantom{0}9 & & instrukcji & instrukcji obsługi \\
+    \hphantom{0}78 & & \hphantom{0}5 & funkcjonalne & funkcyjne \\
+    101 & 15 & & 1976 & 1966 \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -317,12 +308,14 @@ polskim bardziej poprawny tłumaczeniem tego terminu jest „daimion”.
 
 
 \noindent
-\StrWierszeDol{58}{14--15} \\
-\Jest do~ramienia starego fonografu obracającego~się podczas odtwarzania
-winylowych płyt z szybkością 33 obrotów na minutę. \\
-\PowinnoByc jak ramię starego fonografu, które podczas odtwarzania
-przesuwało~się na płytami winylowymi, obracającymi~się z~szybkością
-33~obrotów na minutę. \\
+\StrWierszeGora{54}{7--8} \\
+\Jest doktoratu \\
+<< \\
+\PowinnoByc doktoratu<< \\
+\StrWierszeDol{79}{5} \\
+\Jest obsługi skomplikowanego \\
+\PowinnoByc obsługi \\
+
 
 
 % ######################################
