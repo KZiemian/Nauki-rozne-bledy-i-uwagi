@@ -267,7 +267,50 @@ w~przyszłości nie będziemy więcej komentować tego typu kwestii.
 \textit{deamon}, zostało tu przetłumaczona jako „demon”. Jednak w~języku
 polskim bardziej poprawny tłumaczeniem tego terminu jest „daimion”.
 
+\VerSpaceFour
 
+
+
+
+
+\noindent
+\StrWierszDol{155}{14} Termin „scheduler activations” jest tu przetłumaczony
+jako „aktywacja zarządcy”. Jednak ponieważ termin „scheduler” jest w~tej
+książce tłumaczony, jako „program szeregujący”, więc termin ten można by
+przetłumaczyć też jako „aktywacja programu szeregującego”. To tłumaczenie
+jest chyba bardziej precyzyjne, ale też dużo dłuższe, przez co mniej wygodne
+w~użyciu.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszDol{155}{8} Wydaje~się, że~w~tej linii zamiast o~„nieblokujących
+wywołaniach systemowych”, powinna być mowa o~„blokujących wywołaniach
+systemowych”.
+
+\VerSpaceFour
+
+
+
+
+
+\noindent
+\StrWierszeGora{156}{11--12} Na tej stronie czytamy, że~proces może zwrócić
+procesory wirtualne jądru, co jest zrozumiale i~ma sens. Jednak co oznacza
+zdanie, które czytamy tu w~wierszach 11-12? „Jądro może również zwrócić
+wirtualne procesory przydzielone wcześniej, w~celu przypisania ich procesom
+bardziej potrzebującym.” Wydaje~się, że~samo jądro nie używa procesorów
+wirtualnych, a~skoro tak, to nie ma też ich na własność. Jak więc może
+zwrócić takie procesory? Czytamy też tutaj, że~jądro „zwraca przydzielone
+wcześniej procesory”, więc najprawdopodobniej chodzi o~to, że~jądro
+wysyła żądanie do procesów o~zwrot ich procesorów wirtualnych i~te procesory
+przekazuje innym procesom.
+
+\VerSpaceFour
 
 
 
@@ -281,8 +324,7 @@ polskim bardziej poprawny tłumaczeniem tego terminu jest „daimion”.
 
   \begin{tabular}{|c|c|c|c|c|}
     \hline
-    Strona & \multicolumn{2}{c|}{Wiersz} & Jest
-    & Powinno być \\ \cline{2-3}
+    Strona & \multicolumn{2}{c|}{Wiersz} & Jest & Powinno być \\ \cline{2-3}
            & Od góry & Od dołu & & \\
     \hline
     \hphantom{0}35 & 15 & & wyjście & wejście \\
@@ -306,6 +348,14 @@ polskim bardziej poprawny tłumaczeniem tego terminu jest „daimion”.
     141 & \hphantom{0}2 & & strony & stron \\
     142 & & \hphantom{0}7 & gwarantuje & nie gwarantuje \\
     142 & & \hphantom{0}7 & wydajność & wydajności \\
+    147 & 11 & & efekty & ich wpływ \\
+    147 & 12 & & systemowej & systemowe \\
+    152 & 14 & & otrzyma & przejmie \\
+    152 & & \hphantom{0}7 & procesów & wątków \\
+    155 & & \hphantom{0}5 & powinien mieć & powinna istnieć \\
+    156 & \hphantom{0}6 & & na przydzielanie & przydzielanie \\
+    160 & \hphantom{0}4 & & inną & ona inną \\
+    160 & 14 & & jej & zawartych w~niej \\
     % & & & & \\
     % & & & & \\
     % & & & & \\
@@ -330,6 +380,15 @@ przesuwało~się na płytami winylowymi, obracającymi~się z~szybkością
 \StrWierszGora{141}{1} \\
 \Jest żądanie \\
 \PowinnoByc żądanie, pobierając dane \\
+\textbf{Str. 149, listing 2.2, wiersz 10.} \\
+\Jest \texttt{\%d0} \\
+\PowinnoByc \texttt{\%d0"} \\
+\textbf{Str. 149, listing 2.2, wiersz 11 (od dołu).} \\
+\Jest \texttt{\%d0} \\
+\PowinnoByc \texttt{\%d0"} \\
+\textbf{Str. 149, listing 2.2, wiersz 6 (od dołu).} \\
+\Jest \texttt{\%d0} \\
+\PowinnoByc \texttt{\%d0"} \\
 
 % ####################################################################
 
